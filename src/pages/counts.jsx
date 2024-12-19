@@ -4,9 +4,9 @@ export default function MetricsSection() {
             {/* Header Section */}
 
             <div className="grid grid-cols-1  justify-between md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-                <div className="mb-8 gridlar">
+                <div className="gridlar bg-gray-100  py-5 p-3 rounded-lg">
                     <h2 className="text-2xl font-medium text-gray-900 mb-4">Markaz raqamlarda</h2>
-                    <p className="text-gray-600 max-w-2xl">
+                    <p className="text-gray-600 max-w-2xl ">
                         2023-yilda rezident kompaniyalarning o'quv kurslarini 14300 nafardan ziyod o'quvchilar muvaffaqiyatli bitirdilar, chiqarilgan IT-mutaxassislar soni esa 5190 dan ortiqni tashkil etdi. IT Park rezident kompaniyalari 400 dan ortiq IT kurslarini taklif etadilar.
                     </p>
                 </div>
