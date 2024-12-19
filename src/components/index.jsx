@@ -18,27 +18,24 @@ export default class index extends Component {
         <div className="container">
           <EducationalCarousel />
           <Chances />
+        </div>
           <Plan />
           <Compensation />
-        </div>
-        <Plan />
         <Counts />
-        <Plan />
-        <Counts />
+        <Rate />
         <Darection />
 
-        <Rate />
         <div className="container">
           <SuccessHistory />
-          <Join />
         </div>
-        <Footer />
-        <Counts />
-        <Rate />
-        <Darection />
-        <Plan />
+   
+       
+     
+  
 
         <School />
+          <Join />
+        <Footer />
       </div>
     );
   }

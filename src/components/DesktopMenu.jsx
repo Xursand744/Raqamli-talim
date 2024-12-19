@@ -33,7 +33,7 @@ export default function DesktopMenu({ menu }) {
 
   return (
     <motion.li
-      className="group/link"
+      className="group/link "
       onHoverStart={() => {
         toggleHoverMenu();
       }}

@@ -43,7 +43,7 @@ function Carousel({ items = defaultItems }) {
   const carouselItems = Array.isArray(items) ? items : defaultItems;
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4">
+    <div className="w-full max-w-[1500px] mt-[100px] mx-auto px-4">
       <h1 className="text-3xl font-bold text-center mb-8 mt-8">
         Raqamli ta'lim loyihalari
       </h1>

@@ -69,7 +69,7 @@ const regularJobs = [
 
 function App() {
   return (
-    <div className=" p-8">
+    <div className=" p-8 mt-[50px] md:mt-[100px]">
       <div className="container">
         <h1 className="mb-8 text-center text-3xl font-bold text-gray-900">
           Top yo'nalishlar reytingi

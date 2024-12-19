@@ -2,8 +2,8 @@ import { mainLogo } from "../assets/logos/logos";
 
 function Join() {
   return (
-    <section className="mt-[200px] join-section rounded-[27px] mb-[200px]">
-      <div className="container p-10 rounded-[27px]">
+    <section className="my-[50px] md:my-[100px]  rounded-[27px]">
+      <div className="container p-10 rounded-[27px] join-section">
         <div className="flex items-center justify-between">
           <div className="text-white">
             <h2 className="text-[40px] font-semibold">

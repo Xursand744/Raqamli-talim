@@ -63,7 +63,7 @@ function Compensation() {
 
   return (
     <div
-      className="swiper-container overflow-x-scroll"
+      className="swiper-container max-w-[1500px] w-full mx-auto overflow-x-scroll"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

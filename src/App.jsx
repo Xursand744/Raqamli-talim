@@ -8,7 +8,7 @@ import { Eye } from 'lucide-react';
 export default function App() {
   return (
     <div>
-      <header className="h-16 text-[15px] sticky inset-0 flex-center bg-[#fff] ">
+      <header className="h-16 z-[9999] text-[15px] fixed top-0  inset-0 flex-center bg-[#fff] ">
         <nav className=" px-3.5 flex-center-between w-full max-w-7xl mx-auto">
           <div className="flex-center gap-x-3 z-[999] relative">
             <img src={Logo} alt="" className="size-8 w-[200px] h-[50px]" />
