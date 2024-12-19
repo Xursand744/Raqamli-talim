@@ -5,6 +5,7 @@ import Counts from "../pages/counts";
 import EducationalCarousel from "../pages/Carousel";
 import Compensation from "../pages/Compensation";
 import Darection from "../pages/darection";
+import School from "../pages/School";
 import Rate from "../pages/Rate";
 
 export default class index extends Component {
@@ -14,14 +15,15 @@ export default class index extends Component {
         <div className="container">
           <EducationalCarousel />
           <Chances />
+          <Plan />
           <Compensation />
         </div>
-          <Plan />
           <Counts />
-        <Plan />
-          <Darection />
-
         <Rate />
+          <Darection />
+        <Plan />
+
+          <School />
       </div>
     );
   }
