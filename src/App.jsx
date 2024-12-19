@@ -1,5 +1,5 @@
 import { Menus } from "./utils";
-import Logo from "./assets/logo.png";
+import Logo from "./assets/logos/logo.png";
 import DesktopMenu from "./components/DesktopMenu";
 import MobMenu from "./components/MobMenu";
 import { Earth } from 'lucide-react';
