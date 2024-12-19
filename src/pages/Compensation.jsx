@@ -63,13 +63,13 @@ function Compensation() {
 
   return (
     <div
-      className="swiper-container"
+      className="swiper-container overflow-x-scroll"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
-      <div className="swiper-wrapper flex gap-[50px]" ref={containerRef}>
+      <div className="swiper-wrapper flex gap-[50px] w-full" ref={containerRef}>
         {data &&
           data.map((item) => {
             return (

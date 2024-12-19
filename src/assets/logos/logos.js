@@ -4,5 +4,16 @@ import figma from "./figma.svg";
 import shopify from "./shopify.svg";
 import vscode from "./vscode.svg";
 import webflow from "./webflow.svg";
+import mainLogo from "./mainLogo.svg";
+import mainLogo2 from "./mainLogo2.svg";
 
-export { amazon, blender, figma, shopify, vscode, webflow };
+export {
+  amazon,
+  blender,
+  figma,
+  shopify,
+  vscode,
+  webflow,
+  mainLogo,
+  mainLogo2,
+};

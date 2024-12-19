@@ -49,7 +49,11 @@ body {
   background: #555;
 }
 
-.gridlar{
+.gridlar {
   display: grid;
   grid-column: 2 span;
+}
+
+.join-section {
+  background-image: url("./assets/bg.png");
 }

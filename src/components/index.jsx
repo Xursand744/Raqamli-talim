@@ -5,6 +5,9 @@ import Counts from "../pages/counts";
 import EducationalCarousel from "../pages/Carousel";
 import Compensation from "../pages/Compensation";
 import Rate from "../pages/Rate";
+import SuccessHistory from "../pages/SuccessHistory";
+import Join from "../pages/Join";
+import Footer from "../pages/Footer";
 
 export default class index extends Component {
   render() {
@@ -17,8 +20,12 @@ export default class index extends Component {
         </div>
         <Plan />
         <Counts />
-
         <Rate />
+        <div className="container">
+          <SuccessHistory />
+          <Join />
+        </div>
+        <Footer />
       </div>
     );
   }

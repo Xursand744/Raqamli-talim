@@ -9,8 +9,7 @@ function CarouselItem({ title, description, image }) {
         className="absolute bottom-[60px] right-[30px] z-[2]"
       />
 
-      <div className="relative overflow-hidden  text-white rounded-lg">
-        {/* <div className="absolute inset-0 bg-[url('/placeholder.svg?height=400&width=600')] opacity-20" /> */}
+      <div className="relative overflow-hidden  text-white rounded-lg ">
         <div className="relative p-6 flex flex-col md:flex-row gap-6 items-center">
           <div className="w-full md:w-1/2 h-[480px]">
             <img
