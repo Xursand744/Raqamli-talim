@@ -5,6 +5,7 @@ import Counts from "../pages/counts";
 import EducationalCarousel from "../pages/Carousel";
 import Compensation from "../pages/Compensation";
 import Darection from "../pages/darection";
+import School from "../pages/School";
 import Rate from "../pages/Rate";
 import SuccessHistory from "../pages/SuccessHistory";
 import Join from "../pages/Join";
@@ -17,8 +18,10 @@ export default class index extends Component {
         <div className="container">
           <EducationalCarousel />
           <Chances />
+          <Plan />
           <Compensation />
         </div>
+<<<<<<< HEAD
         <Plan />
         <Counts />
         <Plan />
@@ -31,6 +34,14 @@ export default class index extends Component {
           <Join />
         </div>
         <Footer />
+=======
+          <Counts />
+        <Rate />
+          <Darection />
+        <Plan />
+
+          <School />
+>>>>>>> b396a4ea1a0b9fbdbdcc71864e6831f4be585643
       </div>
     );
   }
