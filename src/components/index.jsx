@@ -21,7 +21,6 @@ export default class index extends Component {
           <Plan />
           <Compensation />
         </div>
-<<<<<<< HEAD
         <Plan />
         <Counts />
         <Plan />
@@ -34,14 +33,12 @@ export default class index extends Component {
           <Join />
         </div>
         <Footer />
-=======
-          <Counts />
+        <Counts />
         <Rate />
-          <Darection />
+        <Darection />
         <Plan />
 
-          <School />
->>>>>>> b396a4ea1a0b9fbdbdcc71864e6831f4be585643
+        <School />
       </div>
     );
   }
