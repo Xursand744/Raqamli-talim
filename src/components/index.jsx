@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Chances from "../pages/chances";
 import EducationalCarousel from "../pages/Carousel";
+import Compensation from "../pages/Compensation";
 
 export default class index extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class index extends Component {
         <div className="container">
           <EducationalCarousel />
           <Chances />
+          <Compensation />
         </div>
       </div>
     );
