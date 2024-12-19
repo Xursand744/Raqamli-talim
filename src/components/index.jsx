@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Chances from "../pages/chances";
+import Plan from "../pages/plan";
+import Counts from "../pages/counts";
 
 export default class index extends Component {
   render() {
@@ -8,6 +10,8 @@ export default class index extends Component {
         <div className="container">
           <Chances />
         </div>
+          <Plan />
+          <Counts />
       </div>
     );
   }
