@@ -4,6 +4,7 @@ import Plan from "../pages/plan";
 import Counts from "../pages/counts";
 import EducationalCarousel from "../pages/Carousel";
 import Compensation from "../pages/Compensation";
+import Darection from "../pages/darection";
 
 export default class index extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class index extends Component {
         </div>
           <Plan />
           <Counts />
+          <Darection />
       </div>
     );
   }
