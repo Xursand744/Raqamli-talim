@@ -39,7 +39,7 @@ export default function MobMenu({ Menus }) {
             return (
               <li key={name} className="">
                 <span
-                  className="flex-center-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
+                  className="flex-center-between p-4  hover:bg-white/5 rounded-md cursor-pointer relative"
                   onClick={() => setClicked(isClicked ? null : i)}
                 >
                   {name}

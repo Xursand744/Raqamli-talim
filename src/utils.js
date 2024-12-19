@@ -39,54 +39,20 @@ export const Menus = [
     gridCols: 2,
   },
   {
-    name: "Resources",
-    subMenuHeading: ["Get started", "Programs", "Recent"],
-    subMenu: [
-      {
-        name: "Markplace",
-        desc: "Browse templates",
-        icon: ShoppingBag,
-      },
-      {
-        name: "Meetups",
-        desc: "Upcoming events",
-        icon: MapPin,
-      },
-      {
-        name: "Updates",
-        desc: "Changelog",
-        icon: BellDot,
-      },
-      {
-        name: "Academy",
-        desc: "Watch lessions",
-        icon: Play,
-      },
-      {
-        name: "Blog",
-        desc: "Posts",
-        icon: BookOpenText,
-      },
-      {
-        name: "Figma",
-        desc: "Plugin",
-        icon: Figma,
-      },
-      {
-        name: "Experts",
-        desc: "Jobs",
-        icon: BriefcaseBusiness,
-      },
-      {
-        name: "Gallery",
-        desc: "Images",
-        icon: Images,
-      },
-    ],
-    gridCols: 3,
+    name: "O'quv markazlar",
   },
   {
-    name: "Support",
+    name: "IT universitetlar",
+  },
+  {
+    name: "Yangiliklar",
+  },
+  {
+    name: "IT-maslahatlar",
+  },
+
+  {
+    name: "Markaz haqida",
     subMenu: [
       {
         name: "Help",
@@ -106,37 +72,9 @@ export const Menus = [
     ],
     gridCols: 1,
   },
+
   {
-    name: "Enterprise",
-    subMenuHeading: ["Overview", "Features"],
-    subMenu: [
-      {
-        name: "Enterprise",
-        desc: "Overview",
-        icon: ShieldPlus,
-      },
-      {
-        name: "Collaboration",
-        desc: "Design together",
-        icon: Users,
-      },
-      {
-        name: "Customers",
-        desc: "Stories",
-        icon: Dessert,
-      },
-      {
-        name: "Security",
-        desc: "Your site secured",
-        icon: Lock,
-      },
-    ],
-    gridCols: 2,
+    name: "Bog’lanish",
   },
-  {
-    name: "Pricing",
-  },
-  {
-    name: "Contact",
-  },
+
 ];

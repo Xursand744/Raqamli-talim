@@ -12,7 +12,7 @@ export default {
         md: "720px", // O'rta ekranlar
         lg: "960px", // Katta ekranlar
         xl: "1040px", // Juda katta ekranlar
-        '2xl':'1300px'
+        '2xl':'1200px'
       },
 
     },
