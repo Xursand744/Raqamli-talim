@@ -65,7 +65,7 @@ export default function Chances() {
     <div>
       <h1 className="title mb-[40px]">Maxsus imkoniyalar</h1>
 
-      <div className="flex flex-wrap justify-between gap-[24px]">
+      <div className="flex flex-wrap justify-between gap-[10px]">
         {data &&
           data.map((item) => {
             if (item.type === "wallet") {
