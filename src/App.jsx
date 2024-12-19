@@ -1,5 +1,5 @@
 import { Menus } from "./utils";
-import Logo from "./assets/Logo.png";
+import Logo from "./assets";
 import DesktopMenu from "./components/DesktopMenu";
 import MobMenu from "./components/MobMenu";
 
