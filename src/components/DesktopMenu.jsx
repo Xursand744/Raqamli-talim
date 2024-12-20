@@ -66,22 +66,26 @@ export default function DesktopMenu({ menu }) {
             >
               {hasSubMenu &&
                 menu.subMenu.map((submenu, i) => (
-                  <div className="relative cursor-pointer" key={i}>
-                    {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
-                      <p className="text-sm mb-4 text-gray-500">
-                        {menu?.subMenuHeading?.[i]}
-                      </p>
-                    )}
-                    <div className="flex-center gap-x-4 group/menubox">
-                      <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
-                        {submenu.icon && <submenu.icon />}
-                      </div>
-                      <div>
-                        <h6 className="font-semibold">{submenu.name}</h6>
-                        <p className="text-sm text-gray-400">{submenu.desc}</p>
+                  <NavLink key={i} to={submenu.link}>
+                    <div className="relative cursor-pointer">
+                      {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
+                        <p className="text-sm mb-4 text-gray-500">
+                          {menu?.subMenuHeading?.[i]}
+                        </p>
+                      )}
+                      <div className="flex-center gap-x-4 group/menubox">
+                        <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
+                          {submenu.icon && <submenu.icon />}
+                        </div>
+                        <div>
+                          <h6 className="font-semibold">{submenu.name}</h6>
+                          <p className="text-sm text-gray-400">
+                            {submenu.desc}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </NavLink>
                 ))}
             </div>
           </motion.div>

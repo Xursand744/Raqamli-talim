@@ -5,11 +5,15 @@ import aboutImage from "../assets/about-image.jpg";
 import startVideo from "../assets/startVideoIcon.svg";
 import { about1, about2, about3, about4, about5 } from "../assets";
 import Join from "./Join";
+import BreadCrumps from "../components/BreadCrumps";
 
 function About() {
   return (
     <section className="about mt-[40px]">
       <div className="container">
+        <div className="mt-[100px] mb-[40px]">
+          <BreadCrumps />
+        </div>
         <div className="flex gap-[20px] flex-wrap">
           {aboutFilters &&
             aboutFilters.map((item) => {
