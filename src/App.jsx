@@ -1,40 +1,65 @@
-import { Menus } from "./utils";
-import Logo from "./assets/logos/logo.png";
-import DesktopMenu from "./components/DesktopMenu";
-import MobMenu from "./components/MobMenu";
-import { Earth } from 'lucide-react';
-import { Eye } from 'lucide-react';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
+// layouts
+import RootLayout from "./layouts/RootLayout";
+
+// pages
+import HomePage from "./pages/index";
+import About from "./pages/About";
 
 export default function App() {
-  return (
-    <div>
-      <header className="h-16 z-[9999] text-[15px] fixed top-0  inset-0 flex-center bg-[#fff] ">
-        <nav className=" px-3.5 flex-center-between w-full max-w-7xl mx-auto">
-          <div className="flex-center gap-x-3 z-[999] relative">
-            <img src={Logo} alt="" className="size-8 w-[200px] h-[50px]" />
-          </div>
+  const routes = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      // errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        // {
+        //   path: "contact",
+        //   element: <ContactLayout />,
+        //   children: [
+        //     {
+        //       path: "faq",
+        //       element: <Faq />,
+        //     },
+        //     {
+        //       path: "form",
+        //       element: <Form />,
+        //     },
+        //   ],
+        // },
+        // {
+        //   path: "articles",
+        //   element: <ArticlesLayout />,
+        //   children: [
+        //     {
+        //       index: true,
+        //       element: <Articles />,
+        //     },
+        //     {
+        //       path: ":id",
+        //       element: <ArticleDetail />,
+        //     },
+        //   ],
+        // },
+      ],
+    },
+  ]);
 
-          <ul className="gap-x-1 lg:flex-center hidden text-black">
-            {Menus.map((menu) => (
-              <DesktopMenu menu={menu} key={menu.name} />
-            ))}
-          </ul>
-          <div className="flex-center gap-x-5">
-            {/* <button
-              aria-label="sign-in"
-              className="bg-white/5 z-[999] relative px-3 py-1.5 shadow rounded-xl flex-center"
-            >
-              Sign In
-            </button> */}
-             <Eye className="text-black" />
-            <p className="text-black font-bold">UZ</p>
-            <Earth className="text-black" />
-            <div className="lg:hidden">
-              <MobMenu Menus={Menus} />
-            </div>
-          </div>
-        </nav>
-      </header>
+  return (
+    <div className="App">
+      <RouterProvider router={routes} />
     </div>
   );
+
+  return <Navbar />;
 }

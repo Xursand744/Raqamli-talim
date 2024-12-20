@@ -57,3 +57,18 @@ body {
 .join-section {
   background-image: url("./assets/bg.png");
 }
+
+.about-filter-link.active {
+  @apply bg-[#222] text-white;
+}
+
+.desc {
+  @apply text-[20px] leading-[28px];
+}
+
+.about-count-value {
+  background: var(--grad, linear-gradient(112deg, #0a15db -4.2%, #20f8fa 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
