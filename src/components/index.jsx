@@ -32,13 +32,14 @@ export default class index extends Component {
           <SuccessHistory />
           <Join />
         </div>
-        <Footer />
         <Counts />
         <Rate />
         <Darection />
         <Plan />
 
         <School />
+
+        <Footer />
       </div>
     );
   }
