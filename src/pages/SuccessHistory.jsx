@@ -41,7 +41,7 @@ function SuccessHistory() {
     <div>
       <h1 className="title mb-[40px]">Muvaffaqiyat tarixi</h1>
 
-      <div className="flex justify-between items-center flex-wrap">
+      <div className="flex justify-center  gap-6 lg:gap-0 lg:justify-between items-center flex-wrap">
         {data &&
           data.map((item) => {
             return (

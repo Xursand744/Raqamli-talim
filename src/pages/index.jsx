@@ -9,12 +9,12 @@ import Rate from "./Rate";
 import SuccessHistory from "./SuccessHistory";
 import Join from "./Join";
 import Footer from "./Footer";
-import Test from "./test";
+import Carousel from "./Carousel";
 
 export default function HomePage() {
   return (
     <div>
-        <Test />
+        <Carousel />
       <div className="container">
         <Chances />
       </div>
