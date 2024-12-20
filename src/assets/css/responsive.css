@@ -41,6 +41,27 @@
   }
 }
 
+@media only screen and (max-width: 740px) {
+  .project-section-bottom .container {
+    justify-content: center;
+    text-align: center;
+
+    div {
+      width: 100%;
+    }
+  }
+
+  .project-section-bottom .container > div {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-bottom-image {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 670px) {
   .about-images-section {
     div {

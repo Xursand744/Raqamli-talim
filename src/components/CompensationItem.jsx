@@ -7,7 +7,7 @@ const CompensationBannerItem = ({ title, span, desc, image }) => {
         <div className="text-center sm:text-left">
           <div className="flex flex-col justify-between">
             <div>
-              <h1 className="text-[40px] font-semibold text-blue-600 relative">
+              <h1 className="text-[30px] md:text-[40px] font-semibold text-blue-600 relative">
                 {span} <span className="text-[#222]">{title}?</span>
                 <div className="absolute left-0 bottom-0">
                   <svg

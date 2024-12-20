@@ -4,49 +4,50 @@ import { TriangleAlert } from "lucide-react";
 import { MessageCircle } from "lucide-react";
 import { PanelsTopLeft } from "lucide-react";
 import { PanelTop } from "lucide-react";
+import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 
 export const Menus = [
   {
     name: "Markaz haqida",
-    subMenu: [
-      {
-        name: "Al Xorazmiy",
-        desc: "Haqida",
-        icon: CircleHelp,
-        link: "/about",
-      },
-      {
-        name: "Community",
-        desc: "Project help",
-        icon: MessageCircle,
-        link: "/about2",
-      },
-      {
-        name: "Emergency",
-        desc: "Urgent issues",
-        icon: TriangleAlert,
-      },
-    ],
+    // subMenu: [
+    //   {
+    //     name: "Al Xorazmiy",
+    //     desc: "Haqida",
+    //     icon: CircleHelp,
+    //     link: "/about",
+    //   },
+    //   {
+    //     name: "Community",
+    //     desc: "Project help",
+    //     icon: MessageCircle,
+    //     link: "/about2",
+    //   },
+    //   {
+    //     name: "Emergency",
+    //     desc: "Urgent issues",
+    //     icon: TriangleAlert,
+    //   },
+    // ],
+    link: "/about",
     gridCols: 1,
   },
   {
-    name: "Loyhalar",
-    subMenuHeading: ["Design", "Scale"],
+    name: "Loyihalar",
+    // subMenuHeading: ["Design", "Scale"],
     link: "/projects",
     subMenu: [
       {
-        name: "Design",
-        desc: "Mini loyhalar",
+        name: "Al Xorazmiy Vorislari",
         icon: PanelsTopLeft,
+        link: "/projects/al-xorazmiy-vorislari",
       },
 
-      {
-        name: "Navigation",
-        desc: "",
-        icon: PanelTop,
-      },
+      // {
+      //   name: "Navigation",
+      //   icon: PanelTop,
+      // },
     ],
-    gridCols: 2,
+    gridCols: 1,
   },
   {
     name: "O'quv markazlar",
@@ -122,5 +123,28 @@ export const aboutCounts = [
   {
     value: "5 milliard",
     title: "IT mahsulotlar eksporti \nhajmini 5 milliard dollar qilish",
+  },
+];
+
+export const projectCounts = [
+  {
+    icon: send,
+    value: 13,
+    desc: "Singular",
+  },
+  {
+    icon: Graduation,
+    value: "4,200",
+    desc: "nafar o’quvchi",
+  },
+  {
+    icon: brain,
+    value: 59,
+    desc: "nafar mentor",
+  },
+  {
+    icon: BuildingOffice,
+    value: 42,
+    desc: "ta bino",
   },
 ];
