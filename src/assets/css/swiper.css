@@ -21,4 +21,17 @@
   font-size: 20px;
   border-radius: 8px;
   user-select: none;
+  margin: 50px 0;
+}
+
+
+.swiper-pagination{
+  bottom:10px !Important;
+
+}
+
+.swiper-pagination-bullet{
+  width: 30px !Important;
+  height: 5px !Important;
+  border-radius: 2px !Important;
 }

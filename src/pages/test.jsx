@@ -28,7 +28,6 @@ export default function App() {
         <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>
         <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>
         <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>
-        <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>
       
       </Swiper>
     </>
