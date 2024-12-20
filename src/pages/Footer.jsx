@@ -4,13 +4,17 @@ import { mainLogo2 } from "../assets/logos/logos";
 function Footer() {
   return (
     <footer className="bg-[#06306D]">
-      <div className="container pt-10 pb-8 mt-[50px] md:mt-[100px]">
+      <div className="container pt-10 pb-8 mt-[0px] md:mt-[0px]">
         <div className="flex gap-[50px] items-center md:items-start  flex-col lg:flex-row md:justify-between border-b pb-11">
-          <div className="max-w-[400px] w-full hidden md:block">
-            <img src={map} className="rounded-[30px] w-full mb-5 lg:mb-0 mx-auto" alt="" />
+          <div className="w-full md:block flex">
+            {/* <img
+              src={map}
+              className="rounded-[30px] w-full mb-5 lg:mb-0 mx-auto"
+              alt=""
+            /> */}
             {/* mt-[50px] md:mt-[100px] */}
             <div className="container pt-10 pb-8 ">
-              <div className="flex items-center md:items-start  flex-col lg:flex-row md:justify-between border-b pb-11">
+              <div className="flex items-center md:items-startl flex-row md:justify-between border-b pb-11">
                 <div className="w-full">
                   <img src={map} className="rounded-[30px]" alt="" />
                 </div>
@@ -41,11 +45,14 @@ function Footer() {
                   </div>
 
                   <div className="max-w-[500px] w-full md:hidden">
-                    <img src={map} className=" rounded-[30px] mb-5 lg:mb-0 w-full" alt="" />
+                    <img
+                      src={map}
+                      className=" rounded-[30px] mb-5 lg:mb-0 w-full"
+                      alt=""
+                    />
                   </div>
 
                   <div>
-
                     <ul className=" text-white gap-4 flex items-start flex-col">
                       <li className="text-[#B7B7B7]">O‘quvchilarga</li>
                       <li className="cursor-pointer">Kurslar</li>
