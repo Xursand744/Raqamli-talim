@@ -1,0 +1,26 @@
+@media only screen and (max-width: 1200px) {
+  .about-counts {
+    flex-direction: column;
+
+    .title {
+      width: 100%;
+      text-align: center !important;
+      margin-bottom: 60px;
+    }
+  }
+
+  .about-counts > div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .about-images-section {
+    flex-direction: column;
+    gap: 20px;
+
+    div {
+      flex-direction: row;
+    }
+  }
+}

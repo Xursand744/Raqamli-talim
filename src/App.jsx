@@ -1,3 +1,6 @@
+// css
+import "./assets/css/responsive.css";
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
