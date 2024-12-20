@@ -1,11 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { aboutCounts, aboutFilters } from "../utils";
-import about1 from "../assets/about-1.png";
+import aboutfirst from "../assets/about-1.png";
+import aboutImage from "../assets/about-image.jpg";
+import startVideo from "../assets/startVideoIcon.svg";
+import { about1, about2, about3, about4, about5 } from "../assets";
+import Join from "./Join";
+import BreadCrumps from "../components/BreadCrumps";
 
 function About() {
   return (
     <section className="about mt-[40px]">
       <div className="container">
+        <div className="mt-[100px] mb-[40px]">
+          <BreadCrumps />
+        </div>
         <div className="flex gap-[20px] flex-wrap">
           {aboutFilters &&
             aboutFilters.map((item) => {
@@ -25,9 +33,9 @@ function About() {
             Biz haqimizda
           </h1>
 
-          <div className="flex justify-between gap-[20px]">
+          <div className="flex justify-between gap-[20px] about-main">
             <div className="w-1/2 min-h-[356px]">
-              <img src={about1} alt="" className="w-full h-full" />
+              <img src={aboutfirst} alt="" className="w-full h-full" />
             </div>
             <div className="w-1/2">
               <p className="desc">
@@ -43,7 +51,7 @@ function About() {
           </div>
         </div>
 
-        <div className="flex items-start mt-[100px]">
+        <div className="flex justify-between mt-[100px] about-counts">
           <h1
             className="title w-1/2"
             style={{ textAlign: "left", verticalAlign: "start", marginTop: 0 }}
@@ -66,6 +74,52 @@ function About() {
               })}
           </div>
         </div>
+
+        <div className="mt-[100px] relative">
+          <img
+            className="rounded-[24px] w-full h-full"
+            src={aboutImage}
+            alt=""
+          />
+
+          <img
+            src={startVideo}
+            alt=""
+            className="absolute left-[45%] cursor-pointer top-[40%] z-[10] start-video-icon"
+          />
+
+          <div className="bg-[#222] rounded-[24px] opacity-[0.6] h-full w-full absolute left-0 top-0"></div>
+        </div>
+        <div className="flex justify-center mt-[27px]">
+          <p className="max-w-[790px] desc">
+            Markaz o'z faoliyati davomida  maktab davridan boshlab yoshlarni
+            oliy ta'lim, xususiy IT ta'lim  va ish beruvchi kompaniyalar bilan
+            bog'lash ularni o'z qobilyatlarini aniqlash va kelajak kasblariga
+            tayyorlash uchun kompleks dasturlarni ishlab chiqadi va amaliyotga
+            tadbiq etadi. <br /> <br /> Biz vazirlik o'z oldiga qo'ygan bosh
+            maqsad -- raqamlashtirish orqali insonlar hayotini yaxshilash va
+            aholining qo’shimcha daromad topishiga ko’maklashishdan iborat
+            missiyasiga erishishiga yoshlar o'rtasida IT ta'limni ommalashtirish
+            orqali o'z hissamizni qo'shamiz. <br />
+            <br /> Biz munosib kalajakni yoshlar bilan birgalikda kodlaymiz!
+          </p>
+        </div>
+
+        <div className="flex justify-between items-center mt-[100px] about-images-section">
+          <div className="flex flex-col justify-between gap-[24px]">
+            <img src={about1} alt="" />
+            <img src={about3} alt="" />
+          </div>
+          <div>
+            <img src={about2} alt="" />
+          </div>
+          <div className="flex flex-col justify-between gap-[24px]">
+            <img src={about4} alt="" />
+            <img src={about5} alt="" />
+          </div>
+        </div>
+
+        <Join />
       </div>
     </section>
   );

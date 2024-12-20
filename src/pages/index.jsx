@@ -30,7 +30,6 @@ export default function HomePage() {
 
       <School />
       <Join />
-      <Footer />
     </div>
   );
 }

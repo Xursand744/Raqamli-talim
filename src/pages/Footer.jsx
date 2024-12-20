@@ -51,7 +51,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-white mt-[34px] flex items-center justify-between">
+        <div className="text-white mt-[34px] flex items-center justify-between footer-bottom">
           <div className="flex items-center gap-[52px]">
             <div>
               <h5 className="text-[14px]">

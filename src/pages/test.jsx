@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Items from"../components/CarouselItem"
 import Tessting from"./tesssting"
 
 // Import Swiper styles
@@ -22,7 +21,7 @@ export default function App() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper mt-[100px]"
       >
         <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>
         <SwiperSlide className='bg-[#F8F8F8]'><Tessting /></SwiperSlide>

@@ -1,3 +1,4 @@
+import { link } from "framer-motion/client";
 import { CircleHelp } from "lucide-react";
 import { TriangleAlert } from "lucide-react";
 import { MessageCircle } from "lucide-react";
@@ -7,17 +8,18 @@ import { PanelTop } from "lucide-react";
 export const Menus = [
   {
     name: "Markaz haqida",
-    link: "/about",
     subMenu: [
       {
-        name: "Help",
-        desc: "Center",
+        name: "Al Xorazmiy",
+        desc: "Haqida",
         icon: CircleHelp,
+        link: "/about",
       },
       {
         name: "Community",
         desc: "Project help",
         icon: MessageCircle,
+        link: "/about2",
       },
       {
         name: "Emergency",

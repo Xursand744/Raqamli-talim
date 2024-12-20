@@ -7,9 +7,9 @@ function RootLayout() {
   return (
     <>
       <Navbar />
-      <div className="mt-[100px]">
+      {/* <div className="mt-[100px]">
         <BreadCrumps />
-      </div>
+      </div> */}
       <main>
         <Outlet />
       </main>

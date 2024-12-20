@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import HomeIcon from "../assets/home-icon.svg";
+import { prototype } from "postcss/lib/previous-map";
 
 function capitalizeFirstLetter(str) {
   if (str.length === 0) return str;
