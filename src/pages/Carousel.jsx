@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CarouselItem from "./CarouselItem"
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -32,8 +31,7 @@ export default function App() {
       <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
       <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
       <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-
-    </Swiper >
+      </Swiper>
     </>
   );
 }
