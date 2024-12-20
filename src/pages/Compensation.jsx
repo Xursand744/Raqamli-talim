@@ -106,8 +106,8 @@ function Compensation() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
         slidesPerView={1.5}
-        navigation
-        pagination={{ clickable: true }}
+        // navigation
+        // pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
