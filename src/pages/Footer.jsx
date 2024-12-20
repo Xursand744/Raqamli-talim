@@ -4,7 +4,8 @@ import { mainLogo2 } from "../assets/logos/logos";
 function Footer() {
   return (
     <footer className="bg-[#06306D]">
-      <div className="container pt-10 pb-8 mt-[50px] md:mt-[100px]">
+      {/* mt-[50px] md:mt-[100px] */}
+      <div className="container pt-10 pb-8 ">
         <div className="flex items-center md:items-start  flex-col lg:flex-row md:justify-between border-b pb-11">
           <div className="w-full">
             <img src={map} className="rounded-[30px]" alt="" />

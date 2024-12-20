@@ -14,31 +14,31 @@ import Footer from "../pages/Footer";
 export default class index extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-white">
         <div className="container">
           <EducationalCarousel />
           <Chances />
           <Plan />
           <Compensation />
         </div>
+
         <Plan />
         <Counts />
         <Plan />
         <Counts />
         <Darection />
-
         <Rate />
+
         <div className="container">
           <SuccessHistory />
           <Join />
         </div>
+
         <Counts />
         <Rate />
         <Darection />
         <Plan />
-
         <School />
-
         <Footer />
       </div>
     );

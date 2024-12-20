@@ -76,3 +76,17 @@ body {
 .swiper-scrollbar {
   display: none !important;
 }
+
+.project-title {
+  @apply text-white text-[56px] font-bold leading-[72px];
+}
+
+.project-desc {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.project-body {
+  background: linear-gradient(196deg, #8d00b6 2.23%, #004c6b 80.54%);
+}

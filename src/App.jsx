@@ -10,6 +10,8 @@ import RootLayout from "./layouts/RootLayout";
 // pages
 import HomePage from "./pages/index";
 import About from "./pages/About";
+import Project from "./pages/Project";
+import ProjectLayout from "./layouts/ProjectLayout";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -25,6 +27,19 @@ export default function App() {
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "projects",
+          children: [
+            {
+              index: true,
+              element: <ProjectLayout />,
+            },
+            {
+              path: ":slug",
+              element: <Project />,
+            },
+          ],
         },
         // {
         //   path: "contact",
