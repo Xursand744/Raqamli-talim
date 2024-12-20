@@ -33,22 +33,24 @@ export default function MobMenu({ Menus }) {
         animate={{ x: isOpen ? "0%" : "-100%" }}
       >
         <ul>
-          {Menus.map(({ name, subMenu }, i) => {
+          {Menus.map(({ name, link, subMenu }, i) => {
             const isClicked = clicked === i;
             const hasSubMenu = subMenu?.length;
             return (
-              <li key={name} className="">
-                <span
-                  className="flex-center-between p-4  hover:bg-white/5 rounded-md cursor-pointer relative"
-                  onClick={() => setClicked(isClicked ? null : i)}
+              <li key={name}>
+                
+                <a
+                  href={link}  // Asosiy menyu linki
+                  className="flex-center-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
+                  onClick={() => setClicked(hasSubMenu && isClicked ? null : i)}
                 >
                   {name}
                   {hasSubMenu && (
                     <ChevronDown
-                      className={`ml-auto ${isClicked && "rotate-180"} `}
+                      className={`ml-auto ${isClicked && "rotate-180"}`}
                     />
                   )}
-                </span>
+                </a>
                 {hasSubMenu && (
                   <motion.ul
                     initial="exit"
@@ -56,13 +58,15 @@ export default function MobMenu({ Menus }) {
                     variants={subMenuDrawer}
                     className="ml-5"
                   >
-                    {subMenu.map(({ name, icon: Icon }) => (
-                      <li
-                        key={name}
-                        className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
-                      >
-                        <Icon size={17} />
-                        {name}
+                    {subMenu.map(({ name, link, icon: Icon }) => (
+                      <li key={name}>
+                        <a
+                          href={link}  // Submenu linki
+                          className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                        >
+                          {Icon && <Icon size={17} />} {/* Icon bo'lsa ko'rsatish */}
+                          {name}
+                        </a>
                       </li>
                     ))}
                   </motion.ul>

@@ -34,7 +34,6 @@ export const Menus = [
   {
     name: "Loyihalar",
     // subMenuHeading: ["Design", "Scale"],
-    link: "/projects",
     subMenu: [
       {
         name: "Al Xorazmiy Vorislari",

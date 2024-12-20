@@ -74,6 +74,7 @@ export default function DesktopMenu({ menu }) {
                           {menu?.subMenuHeading?.[i]}
                         </p>
                       )}
+
                       <div className="flex-center gap-x-4 group/menubox">
                         <div className="bg-white w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
                           {submenu.icon && <submenu.icon />}
@@ -85,6 +86,7 @@ export default function DesktopMenu({ menu }) {
                           <p className="text-sm text-white">{submenu.desc}</p>
                         </div>
                       </div>
+
                     </div>
                   </NavLink>
                 ))}
