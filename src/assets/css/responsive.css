@@ -53,6 +53,9 @@
   }
 }
 
+@media only screen and (max-width: 640px) {
+}
+
 @media only screen and (max-width: 600px) {
   .start-video-icon {
     left: 30% !important;
