@@ -33,7 +33,7 @@ function About() {
             Biz haqimizda
           </h1>
 
-          <div className="flex justify-between gap-[20px]">
+          <div className="flex justify-between gap-[20px] about-main">
             <div className="w-1/2 min-h-[356px]">
               <img src={aboutfirst} alt="" className="w-full h-full" />
             </div>
@@ -85,7 +85,7 @@ function About() {
           <img
             src={startVideo}
             alt=""
-            className="absolute left-[45%] cursor-pointer top-[40%] z-[10]"
+            className="absolute left-[45%] cursor-pointer top-[40%] z-[10] start-video-icon"
           />
 
           <div className="bg-[#222] rounded-[24px] opacity-[0.6] h-full w-full absolute left-0 top-0"></div>
