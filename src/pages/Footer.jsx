@@ -4,12 +4,12 @@ import { mainLogo2 } from "../assets/logos/logos";
 function Footer() {
   return (
     <footer className="bg-[#06306D]">
-      <div className="container pt-10 pb-8 mt-[100px]">
-        <div className="flex items-start justify-between border-b pb-11">
-          <div>
+      <div className="container pt-10 pb-8 mt-[50px] md:mt-[100px]">
+        <div className="flex items-center md:items-start  flex-col lg:flex-row md:justify-between border-b pb-11">
+          <div className="w-full">
             <img src={map} className="rounded-[30px]" alt="" />
           </div>
-          <div className="flex items-start gap-[118px]">
+          <div className="flex flex-col md:flex-row  items-center md:items-start md:w-full gap-[50px] md:gap-[118px]">
             <div className="text-white max-w-[200px] w-full">
               <img src={mainLogo2} alt="" />
               <h4 className="flex items-center gap-4 mt-12">
@@ -51,7 +51,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="text-white mt-[34px] flex items-center justify-between">
+        <div className="text-white mt-[34px] flex items-center justify-between footer-bottom">
           <div className="flex items-center gap-[52px]">
             <div>
               <h5 className="text-[14px]">

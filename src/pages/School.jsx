@@ -41,7 +41,7 @@ const centers = [
 
 function School() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto mt-[30px] md:mt-[50px] px-4 py-8">
       <h1 className="text-3xl font-bold text-center mb-8">Top o'quv markazlar</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">

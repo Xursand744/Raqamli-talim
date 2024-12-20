@@ -1,7 +1,6 @@
 export default function MetricsSection() {
     return (
-        <div className="container p-6">
-            {/* Header Section */}
+        <div className="container mt-[50px] md:mt-[100px] p-6">
 
             <div className="grid grid-cols-1  justify-between md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
                 <div className="gridlar bg-gray-100  py-5 p-3 rounded-lg">
@@ -13,13 +12,13 @@ export default function MetricsSection() {
              
                     <div className="bg-blue-50 grid rounded-lg p-6">
                         <div className="flex flex-col items-center justify-center h-full">
-                            <div className="text-4xl font-bold mb-2">7<span className="text-blue-500">ta</span></div>
+                            <div className="text-5xl font-bold mb-2">7<span className="text-blue-500">ta</span></div>
                             <div className="text-gray-600">Aktiv loyihalar</div>
                         </div>
                     </div>
                     <div className="bg-blue-50 rounded-lg p-6">
                         <div className="flex flex-col items-center justify-center h-full">
-                            <div className="text-4xl font-bold">5,012</div>
+                            <div className="text-5xl font-bold">5,012</div>
                             <div className="text-gray-600">IT o'quvchilar</div>
                         </div>
                     </div>
@@ -44,7 +43,7 @@ export default function MetricsSection() {
                 ].map((metric, index) => (
                     <div key={index} className="bg-blue-50 rounded-lg p-6">
                         <div className="flex flex-col items-center justify-center">
-                            <div className="text-3xl font-bold mb-2">{metric.count} <span className="text-blue-500 font-bold">
+                            <div className="text-5xl font-bold mb-2">{metric.count} <span className="text-blue-500 font-bold">
                             {metric.percent}</span></div>
                             <div className="text-gray-600">Ko'rsatgich</div>
                         </div>

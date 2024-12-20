@@ -6,6 +6,7 @@ import vscode from "./vscode.svg";
 import webflow from "./webflow.svg";
 import mainLogo from "./mainLogo.svg";
 import mainLogo2 from "./mainLogo2.svg";
+import blueLogo from "./mainLogoBlue.svg";
 
 export {
   amazon,
@@ -16,4 +17,5 @@ export {
   webflow,
   mainLogo,
   mainLogo2,
+  blueLogo,
 };

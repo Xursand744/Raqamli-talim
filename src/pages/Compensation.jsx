@@ -4,6 +4,15 @@ import CompensationBannerItem from "../components/CompensationItem";
 import React, { useState, useRef } from "react";
 import "../assets/css/swiper.css";
 
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 function Compensation() {
   const data = [
     {
@@ -11,6 +20,18 @@ function Compensation() {
       title: "olmoqchimisiz?",
       desc: "IT sertifikat pullaringizni 100% gacha qaytaring",
       image: walletImage,
+    },
+    {
+      span: "O’quv markaz",
+      title: "ochmoqchimisiz?",
+      desc: "O’z qobilyatlaringni ta’lim kelajak uchun sarfla",
+      image: robotImage,
+    },
+    {
+      span: "O’quv markaz",
+      title: "ochmoqchimisiz?",
+      desc: "O’z qobilyatlaringni ta’lim kelajak uchun sarfla",
+      image: robotImage,
     },
     {
       span: "O’quv markaz",
@@ -61,15 +82,8 @@ function Compensation() {
     containerRef.current.style.transform = `translateX(${snapTranslate}px)`;
   };
 
-  return (
-    <div
-      className="swiper-container overflow-x-scroll"
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-      <div className="swiper-wrapper flex gap-[50px] w-full" ref={containerRef}>
+  {
+    /* <div className="swiper-wrapper flex gap-[50px] w-full" ref={containerRef}>
         {data &&
           data.map((item) => {
             return (
@@ -82,8 +96,45 @@ function Compensation() {
               />
             );
           })}
-      </div>
+      </div> */
+  }
+
+  return (
+    <div className="max-w-[1300px] w-full my-0 mx-auto">
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={20}
+        slidesPerView={1.5}
+        // navigation
+        // pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {data &&
+          data.map((item) => {
+            return (
+              <SwiperSlide style={{ backgroundColor: "#F8F8F8" }}>
+                <CompensationBannerItem
+                  key={item.title}
+                  title={item.title}
+                  span={item.span}
+                  desc={item.desc}
+                  image={item.image}
+                />
+              </SwiperSlide>
+            );
+          })}
+      </Swiper>
     </div>
+    // <Swiper>
+    //   <SwiperSlide>Slide 1</SwiperSlide>
+    //   <SwiperSlide>Slide 2</SwiperSlide>
+    //   <SwiperSlide>Slide 2</SwiperSlide>
+    //   <SwiperSlide>Slide 2</SwiperSlide>
+    //   <SwiperSlide>Slide 2</SwiperSlide>
+    // </Swiper>
   );
 }
 
