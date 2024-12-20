@@ -4,8 +4,8 @@ function Join() {
   return (
     <section className="my-[50px] md:my-[100px]  rounded-[27px]">
       <div className="container p-10 rounded-[27px] join-section">
-        <div className="flex items-center justify-between">
-          <div className="text-white">
+        <div className="flex flex-col-reverse md:flex-row gap-5 md:gap-0 items-center justify-between">
+          <div className="text-white text-center md:text-start">
             <h2 className="text-[40px] font-semibold">
               Raqamli ta’lim jamoasiga qo’shiling!
             </h2>

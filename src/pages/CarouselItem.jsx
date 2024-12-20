@@ -1,10 +1,11 @@
 import React from "react";
 import CarouselImage from "../assets/carousel.jpg";
+import png from"../assets/carouselpng.png"
 
 export default function VRLanding() {
   return (
     <div className="px-2 md:px-0 rounded-lg md:pl-5 flex items-center justify-center overflow-hidden">
-      <div className=" flex flex-col rounded-lg lg:flex-row gap-8 md:gap-16">
+      <div className=" flex flex-col-reverse rounded-lg lg:flex-row gap-8 md:gap-16">
         {/* Image Section */}
 
         {/* Text Section */}
@@ -18,13 +19,17 @@ export default function VRLanding() {
               BEPUL o'quv kurslari
             </p>
           </div>
-          <button
-            className="px-5 sm:px-8 py-2 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full 
-            text-lg font-semibold uppercase tracking-wide transition-all duration-300 
-            transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/50"
-          >
-            Batafsil
-          </button>
+          
+            <div className="flex justify-between items-end w-full">
+              <button
+                className="px-5 sm:px-8 py-2 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full
+                text-lg font-semibold uppercase tracking-wide transition-all duration-300
+                transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/50"
+              >
+                Batafsil
+              </button>
+              <img className="max-w-[200px] w-full" src={png} alt="" />
+            </div>
         </div>
 
         <div className="relative flex-1">
@@ -32,7 +37,7 @@ export default function VRLanding() {
           <img
             src={CarouselImage}
             alt="VR Technology"
-            className="w-full h-auto relative z-[1] rounded-xl"
+            className="max-w-[440px] w-full  relative z-[1] rounded-xl"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(0,100,255,0.3)_0%,rgba(0,0,0,0)_70%)] pointer-events-none" />
         </div>

@@ -45,9 +45,9 @@ export default function schul({ rank, location, studying, graduated, employed, e
           </div>
           <div className="rounded-lg bg-[#E3EEFF] text-center">
             <p className="text-sm text-gray-600  mb-1">IT-Exportchilar</p>
-            <div className="flex items-center justify-around  gap-2">
+            <div className="flex items-center justify-between  gap-2">
               <span className="text-lg font-medium">{exporters}</span>
-              <img src={dicon1} alt="" />
+              <img className="" src={dicon1} alt="" />
             </div>
           </div>
         </div>

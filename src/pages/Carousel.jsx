@@ -21,7 +21,7 @@ export default function App() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper mt-[100px]"
+        className="mySwiper mt-[100px] max-w-[1500px] w-full"
       >
         <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
         <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>

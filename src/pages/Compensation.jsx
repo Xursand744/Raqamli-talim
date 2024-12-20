@@ -128,13 +128,7 @@ function Compensation() {
           })}
       </Swiper>
     </div>
-    // <Swiper>
-    //   <SwiperSlide>Slide 1</SwiperSlide>
-    //   <SwiperSlide>Slide 2</SwiperSlide>
-    //   <SwiperSlide>Slide 2</SwiperSlide>
-    //   <SwiperSlide>Slide 2</SwiperSlide>
-    //   <SwiperSlide>Slide 2</SwiperSlide>
-    // </Swiper>
+    
   );
 }
 

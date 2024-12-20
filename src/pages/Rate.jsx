@@ -9,7 +9,7 @@ import {
 
 function Rate() {
   return (
-    <div className="relative bg-[#F0F3FF] mt-[50px] md:mt-[100px] h-[500px] flex justify-center items-center flex-col">
+    <div className="hidden  relative bg-[#F0F3FF] mt-[50px] md:mt-[100px] h-[500px] md:flex justify-center items-center flex-col">
       <div className="relative z-40">
         <h1 className="title mb-[80px]" style={{ marginTop: 0 }}>
           IT sohasidagi o’z bilimingizni baholang
