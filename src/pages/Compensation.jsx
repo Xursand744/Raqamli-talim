@@ -100,39 +100,34 @@ function Compensation() {
   }
 
   return (
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={0}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {data &&
-        data.map((item) => {
-          return (
-            <SwiperSlide
-              // key={item.title}
-              // title={item.title}
-              // span={item.span}
-              // desc={item.desc}
-              // image={item.image}
-              style={{ backgroundColor: "#F8F8F8" }}
-            >
-              <CompensationBannerItem
-                key={item.title}
-                title={item.title}
-                span={item.span}
-                desc={item.desc}
-                image={item.image}
-              />
-            </SwiperSlide>
-          );
-        })}
-    </Swiper>
+    <div className="max-w-[1300px] w-full my-0 mx-auto">
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={20}
+        slidesPerView={1.5}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {data &&
+          data.map((item) => {
+            return (
+              <SwiperSlide style={{ backgroundColor: "#F8F8F8" }}>
+                <CompensationBannerItem
+                  key={item.title}
+                  title={item.title}
+                  span={item.span}
+                  desc={item.desc}
+                  image={item.image}
+                />
+              </SwiperSlide>
+            );
+          })}
+      </Swiper>
+    </div>
     // <Swiper>
     //   <SwiperSlide>Slide 1</SwiperSlide>
     //   <SwiperSlide>Slide 2</SwiperSlide>

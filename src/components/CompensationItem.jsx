@@ -3,13 +3,13 @@ import React from "react";
 const CompensationBannerItem = ({ title, span, desc, image }) => {
   return (
     <div className="inline">
-      <div className="flex flex-col items-center justify-center p-6 bg-gray-100 rounded-lg shadow-md sm:flex-row sm:justify-between max-w-[1200px] w-full min-h-[300px]">
+      <div className="flex flex-col items-center justify-center p-6 bg-gray-100 rounded-lg shadow-md lg:flex-row sm:justify-between max-w-[1200px] w-full min-h-[300px]">
         <div className="text-center sm:text-left">
           <div className="flex flex-col justify-between">
             <div>
               <h1 className="text-[40px] font-semibold text-blue-600 relative">
                 {span} <span className="text-[#222]">{title}?</span>
-                <div className="absolute right-0 bottom-0">
+                <div className="absolute left-0 bottom-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="338"
