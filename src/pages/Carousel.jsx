@@ -1,15 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import CarouselItem from"./CarouselItem"
+import { Swiper, SwiperSlide } from "swiper/react";
+import CarouselItem from "./CarouselItem";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 
 export default function App() {
   return (
@@ -23,12 +22,21 @@ export default function App() {
         modules={[Pagination]}
         className="mySwiper mt-[100px] max-w-[1500px] w-full"
       >
-        <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-        <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-        <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-        <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-        <SwiperSlide className='bg-[#F8F8F8]'><CarouselItem /></SwiperSlide>
-      
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem />
+        </SwiperSlide>
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem />
+        </SwiperSlide>
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem />
+        </SwiperSlide>
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem />
+        </SwiperSlide>
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem />
+        </SwiperSlide>
       </Swiper>
     </>
   );
