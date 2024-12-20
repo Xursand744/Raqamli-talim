@@ -25,7 +25,7 @@ export default function App() {
           element: <HomePage />,
         },
         {
-          path: "about",
+          path: "/about",
           element: <About />,
         },
         {
