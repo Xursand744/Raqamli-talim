@@ -4,8 +4,8 @@ import png from"../assets/carouselpng.png"
 
 export default function VRLanding() {
   return (
-    <div className="px-2 md:px-0 rounded-lg md:pl-5 flex items-center justify-center overflow-hidden">
-      <div className=" flex flex-col-reverse rounded-lg lg:flex-row gap-8 md:gap-16">
+    <div className="px-2 md:px-0 rounded-lg md:pl-5 flex items-center justify-between overflow-hidden">
+      <div className=" flex flex-col-reverse w-full rounded-lg xl:flex-row gap-8 md:gap-16">
         {/* Image Section */}
 
         {/* Text Section */}
@@ -33,11 +33,11 @@ export default function VRLanding() {
         </div>
 
         <div className="relative flex-1">
-          <div className="absolute inset-0 bg-blue-500/20 rounded-xl z-10" />
+          <div className="absolute  inset-0 bg-blue-500/20 rounded-xl z-10" />
           <img
             src={CarouselImage}
             alt="VR Technology"
-            className="max-w-[440px] w-full  relative z-[1] rounded-xl"
+            className=" w-full h-full relative z-[1] rounded-xl"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(0,100,255,0.3)_0%,rgba(0,0,0,0)_70%)] pointer-events-none" />
         </div>
