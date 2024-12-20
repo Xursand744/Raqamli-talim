@@ -33,6 +33,7 @@ export const Menus = [
   },
   {
     name: "Loyihalar",
+    link: "/projects",
     // subMenuHeading: ["Design", "Scale"],
     subMenu: [
       {
