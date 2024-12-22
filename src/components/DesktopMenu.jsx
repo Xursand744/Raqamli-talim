@@ -57,7 +57,7 @@ export default function DesktopMenu({ menu }) {
                 initial="exit"
                 animate={isHover ? "enter" : "exit"}
                 variants={subMenuAnimate}
-                style={{ background: "#333" }}
+                style={{ background: "white" }}
               >
                 <div
                   className={`grid gap-7 ${
@@ -120,7 +120,7 @@ export default function DesktopMenu({ menu }) {
               initial="exit"
               animate={isHover ? "enter" : "exit"}
               variants={subMenuAnimate}
-              style={{ background: "#333" }}
+              style={{ background: "white" }}
             >
               <div
                 className={`grid gap-7 ${
@@ -133,7 +133,11 @@ export default function DesktopMenu({ menu }) {
               >
                 {hasSubMenu &&
                   menu.subMenu.map((submenu, i) => (
-                    <NavLink key={i} to={submenu.link}>
+                    <NavLink
+                      key={i}
+                      to={submenu.link}
+                      className={`text-[#333] hover:bg-[#333] hover:text-white transition my-[-15px] rounded-[10px] py-[10px] px-[5px] mx-[-5px]`}
+                    >
                       <div className="relative cursor-pointer">
                         {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
                           <p className="text-sm mb-4 text-gray-500">
@@ -146,10 +150,8 @@ export default function DesktopMenu({ menu }) {
                             {submenu.icon && <submenu.icon />}
                           </div>
                           <div>
-                            <h6 className="font-semibold text-white">
-                              {submenu.name}
-                            </h6>
-                            <p className="text-sm text-white">{submenu.desc}</p>
+                            <h6 className="font-semibold ">{submenu.name}</h6>
+                            <p className="text-sm ">{submenu.desc}</p>
                           </div>
                         </div>
                       </div>
