@@ -9,43 +9,58 @@ import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 export const Menus = [
   {
     name: "Markaz haqida",
-    // subMenu: [
-    //   {
-    //     name: "Al Xorazmiy",
-    //     desc: "Haqida",
-    //     icon: CircleHelp,
-    //     link: "/about",
-    //   },
-    //   {
-    //     name: "Community",
-    //     desc: "Project help",
-    //     icon: MessageCircle,
-    //     link: "/about2",
-    //   },
-    //   {
-    //     name: "Emergency",
-    //     desc: "Urgent issues",
-    //     icon: TriangleAlert,
-    //   },
-    // ],
-    link: "/about",
+    subMenu: [
+      {
+        name: "Biz haqimizda",
+        icon: CircleHelp,
+        link: "/about",
+      },
+      {
+        name: "Ochiq ma’lumotlar",
+        icon: CircleHelp,
+        link: "/about1",
+      },
+      {
+        name: "Rahbariyat",
+        icon: CircleHelp,
+        link: "/about2",
+      },
+      {
+        name: "Tuzilma",
+        icon: CircleHelp,
+        link: "/about3",
+      },
+      {
+        name: "Bo’linmalar",
+        icon: CircleHelp,
+        link: "/about4",
+      },
+      {
+        name: "Korrupsiyaga qarshi kurashish",
+        icon: CircleHelp,
+        link: "/about5",
+      },
+      {
+        name: "Yuqori turuvchi tashkilot",
+        icon: CircleHelp,
+        link: "/about6",
+      },
+      {
+        name: "Ochiq ma’lumotlar",
+        icon: CircleHelp,
+        link: "/about7",
+      },
+    ],
     gridCols: 1,
   },
   {
     name: "Loyihalar",
-    // link: "/projects",
-    // subMenuHeading: ["Design", "Scale"],
     subMenu: [
       {
         name: "Al Xorazmiy Vorislari",
         icon: PanelsTopLeft,
         link: "/projects/al-xorazmiy-vorislari",
       },
-
-      // {
-      //   name: "Navigation",
-      //   icon: PanelTop,
-      // },
     ],
     gridCols: 1,
   },
