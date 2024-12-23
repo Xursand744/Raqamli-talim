@@ -177,7 +177,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       onChange={() => handleFilterChange('design')}
                     />
                     <span>Dizayn</span>
-                    <span className="text-gray-500 text-sm">23</span>
+                    <span className="text-gray-500 text-sm">7</span>
                   </label>
                   <label className="flex items-center gap-2">
                     <input
@@ -187,7 +187,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       onChange={() => handleFilterChange('frontend')}
                     />
                     <span>Frontend</span>
-                    <span className="text-gray-500 text-sm">14</span>
+                    <span className="text-gray-500 text-sm">5</span>
                   </label>
                   <label className="flex items-center gap-2">
                     <input
@@ -197,7 +197,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       onChange={() => handleFilterChange('backend')}
                     />
                     <span>Backend</span>
-                    <span className="text-gray-500 text-sm">17</span>
+                    <span className="text-gray-500 text-sm">10</span>
                   </label>
                   <label className="flex items-center gap-2">
                     <input
