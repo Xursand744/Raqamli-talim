@@ -113,7 +113,7 @@ function Study() {
   return (
     <div className=" ">
       {/* Header */}
-      <header className="bg-white  sticky top-0">
+      <header className="bg-white sticky top-0">
         <div className="container px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
@@ -149,14 +149,14 @@ function Study() {
         <div className="flex gap-6">
           {/* Sidebar */}
           <aside className={` border
-            fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r
-            transform transition-transform duration-200 ease-in-out z-40
-            sm:transform-none ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-            sm:translate-x-0 sm:block overflow-y-auto
-          `}>
+fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r
+transform transition-transform duration-200 ease-in-out z-40
+sm:transform-none ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+sm:translate-x-0 sm:block overflow-y-auto
+`}>
             <div className="space-y-6 sticky top-[80px] sm:top-[10px]">
               <div className="flex justify-between border-b pb-5 items-center mb-4">
-              <h3 className='text-[20px] font-medium'>Saralash</h3>
+                <h3 className='text-[20px] font-medium'>Saralash</h3>
                 <button
                   onClick={clearFilters}
                   className="px-3 py-1 text-blue-400 rounded-full text-sm"
@@ -371,4 +371,3 @@ function Study() {
 }
 
 export default Study
-
