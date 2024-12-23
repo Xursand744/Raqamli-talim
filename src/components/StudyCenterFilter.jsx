@@ -1,834 +1,317 @@
-// import { useState, useMemo } from "react";
-// import { Search } from "lucide-react";
-// import PriceRange from "./PriceRange";
-// import CourseItem from "./CourseItem";
-// import CourseItemImage from "../assets/course-item.jpg";
-
-// export default function StudyCenterFilter() {
-//   const [centerSearch, setCenterSearch] = useState("");
-//   const [courseSearch, setCourseSearch] = useState("");
-//   const [selectedCenters, setSelectedCenters] = useState([]);
-//   const [selectedCourses, setSelectedCourses] = useState([]);
-//   const [selectedDurations, setSelectedDurations] = useState([]);
-//   const [selectedFormats, setSelectedFormats] = useState([]);
-//   const [priceRange, setPriceRange] = useState({ min: 0, max: 5000000 });
-
-//   const centers = [
-//     { id: 1, name: "PDP Academy", count: 77 },
-//     { id: 2, name: "Techno World", count: 89 },
-//     { id: 3, name: "Najot ta'lim", count: 42 },
-//     { id: 4, name: "Mohir dev", count: 34 },
-//   ];
-
-//   const courses = [
-//     { id: 1, name: "Dizayn", count: 23 },
-//     { id: 2, name: "Frontend", count: 14 },
-//     { id: 3, name: "Backend", count: 17 },
-//     { id: 4, name: "Project managment", count: 8 },
-//   ];
-
-//   const durations = [
-//     { id: 1, name: "1 oyggacha", count: 12 },
-//     { id: 2, name: "1-3 oy", count: 23 },
-//     { id: 3, name: "3-6 oy", count: 16 },
-//     { id: 4, name: "6 oydan ko'p", count: 8 },
-//   ];
-
-//   const formats = [
-//     { id: 1, name: "Onlayn", count: 12 },
-//     { id: 2, name: "Oflayn", count: 23 },
-//     { id: 3, name: "Gibrid", count: 16 },
-//   ];
-
-//   const allCourses = [
-//     {
-//       id: 1,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: [
-//         "Frontend",
-//         "Backend",
-//         "Data Analytic",
-//         "Design",
-//         "Project managment",
-//       ],
-//     },
-//     {
-//       id: 2,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 3,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 4,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 5,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 6,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 7,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 8,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 9,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 10,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 11,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//     {
-//       id: 12,
-//       title: "Web dasturlash",
-//       center: "PDP Academy",
-//       price: 2500000,
-//       duration: "3 oy",
-//       format: "Onlayn",
-//       name: "Create beautiful websites from the scratch",
-//       image: CourseItemImage,
-//       location: "Tashkent",
-//       fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-//       telegram: "t.me/profiedu.uz",
-//       number: "+998 99 999 99 99",
-//       website: "profiedu.uz",
-//       tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-//     },
-//   ];
-
-//   const filteredCenters = useMemo(() => {
-//     return centers.filter((center) =>
-//       center.name.toLowerCase().includes(centerSearch.toLowerCase())
-//     );
-//   }, [centerSearch]);
-
-//   const filteredCourses = useMemo(() => {
-//     return courses.filter((course) => {
-//       //   console.log(course);
-
-//       return course.name.toLowerCase().includes(courseSearch.toLowerCase());
-//     });
-//   }, [courseSearch]);
-
-//   const filteredAllCourses = useMemo(() => {
-//     return allCourses.filter((course) => {
-//       const centerMatch =
-//         selectedCenters.length === 0 ||
-//         selectedCenters.includes(
-//           centers.find((c) => c.name === course.center)?.id
-//         );
-//       const courseMatch =
-//         selectedCourses.length === 0 ||
-//         selectedCourses.includes(
-//           courses.find((c) => {
-//             console.log(c.name);
-//             console.log(course.tags);
-//             return course.tags.includes(c.name);
-//             // return c.name === course.title.split(" ")[0];
-//           })?.id
-//         );
-//       const durationMatch =
-//         selectedDurations.length === 0 ||
-//         selectedDurations.includes(
-//           durations.find((d) => d.name === course.duration)?.id
-//         );
-//       const formatMatch =
-//         selectedFormats.length === 0 ||
-//         selectedFormats.includes(
-//           formats.find((f) => f.name === course.format)?.id
-//         );
-//       const priceMatch =
-//         course.price >= priceRange.min && course.price <= priceRange.max;
-//       return (
-//         centerMatch && courseMatch && durationMatch && formatMatch && priceMatch
-//       );
-//     });
-//   }, [
-//     selectedCenters,
-//     selectedCourses,
-//     selectedDurations,
-//     selectedFormats,
-//     priceRange,
-//     allCourses,
-//   ]);
-
-//   const handleCenterToggle = (centerId) => {
-//     setSelectedCenters((prev) =>
-//       prev.includes(centerId)
-//         ? prev.filter((id) => id !== centerId)
-//         : [...prev, centerId]
-//     );
-//   };
-
-//   const handleCourseToggle = (courseId) => {
-//     setSelectedCourses((prev) => {
-//       return prev.includes(courseId)
-//         ? prev.filter((id) => {
-//             id !== courseId;
-//           })
-//         : [...prev, courseId];
-//     });
-//   };
-
-//   const handleDurationToggle = (durationId) => {
-//     setSelectedDurations((prev) =>
-//       prev.includes(durationId)
-//         ? prev.filter((id) => id !== durationId)
-//         : [...prev, durationId]
-//     );
-//   };
-
-//   const handleFormatToggle = (formatId) => {
-//     setSelectedFormats((prev) =>
-//       prev.includes(formatId)
-//         ? prev.filter((id) => id !== formatId)
-//         : [...prev, formatId]
-//     );
-//   };
-
-//   return (
-//     <div className="flex gap-8">
-//       <div className="w-full max-w-sm bg-white p-4 rounded-lg shadow">
-//         <div className="space-y-6">
-//           <div className="flex justify-between items-center">
-//             <h2 className="text-[#222] text-[28px] font-medium">Saralash</h2>
-
-//             <p
-//               className="text-[#2675EB] text-[18px] cursor-pointer"
-//               id="clean-filters"
-//               onClick={() => {
-//                 setCenterSearch("");
-//                 setCourseSearch("");
-//                 setSelectedCenters([]);
-//                 setSelectedCourses([]);
-//                 setSelectedDurations([]);
-//                 setSelectedFormats([]);
-//                 setPriceRange({ min: 0, max: 5000000 });
-//               }}
-//             >
-//               Tozalash
-//             </p>
-//           </div>
-
-//           <hr />
-
-//           {/* Course Directions */}
-//           <div>
-//             <h3 className="font-medium mb-2">O'quv kurs yo'nalishi</h3>
-//             <div className="relative mb-2">
-//               <input
-//                 type="text"
-//                 value={courseSearch}
-//                 onChange={(e) => setCourseSearch(e.target.value)}
-//                 placeholder="O'quv kurs"
-//                 className="w-full p-2 pl-8 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
-//               />
-//               <Search className="w-4 h-4 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-//             </div>
-//             <div className="space-y-2">
-//               {filteredCourses.map((course) => (
-//                 <label
-//                   key={course.id}
-//                   className="flex items-center gap-2 cursor-pointer"
-//                 >
-//                   <input
-//                     type="checkbox"
-//                     checked={selectedCourses.includes(course.id)}
-//                     onChange={() => handleCourseToggle(course.id)}
-//                     className="sr-only peer"
-//                   />
-//                   <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-//                     {selectedCourses.includes(course.id) && (
-//                       <svg
-//                         className="w-3 h-3 text-white"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                         fill="none"
-//                         viewBox="0 0 24 24"
-//                         stroke="currentColor"
-//                         strokeWidth={2}
-//                       >
-//                         <path
-//                           strokeLinecap="round"
-//                           strokeLinejoin="round"
-//                           d="M5 13l4 4L19 7"
-//                         />
-//                       </svg>
-//                     )}
-//                   </div>
-//                   <span className="text-sm flex-1">{course.name}</span>
-//                   <span className="text-sm text-gray-500">{course.count}</span>
-//                 </label>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Course Durations */}
-//           <div>
-//             <h3 className="font-medium mb-2">Kurslar davomiyligi</h3>
-//             <div className="space-y-2">
-//               {durations.map((duration) => (
-//                 <label
-//                   key={duration.id}
-//                   className="flex items-center gap-2 cursor-pointer"
-//                 >
-//                   <input
-//                     type="checkbox"
-//                     checked={selectedDurations.includes(duration.id)}
-//                     onChange={() => handleDurationToggle(duration.id)}
-//                     className="sr-only peer"
-//                   />
-//                   <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-//                     {selectedDurations.includes(duration.id) && (
-//                       <svg
-//                         className="w-3 h-3 text-white"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                         fill="none"
-//                         viewBox="0 0 24 24"
-//                         stroke="currentColor"
-//                         strokeWidth={2}
-//                       >
-//                         <path
-//                           strokeLinecap="round"
-//                           strokeLinejoin="round"
-//                           d="M5 13l4 4L19 7"
-//                         />
-//                       </svg>
-//                     )}
-//                   </div>
-//                   <span className="text-sm flex-1">{duration.name}</span>
-//                   <span className="text-sm text-gray-500">
-//                     {duration.count}
-//                   </span>
-//                 </label>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Course Formats */}
-//           <div>
-//             <h3 className="font-medium mb-2">Kurslar formati</h3>
-//             <div className="space-y-2">
-//               {formats.map((format) => (
-//                 <label
-//                   key={format.id}
-//                   className="flex items-center gap-2 cursor-pointer"
-//                 >
-//                   <input
-//                     type="checkbox"
-//                     checked={selectedFormats.includes(format.id)}
-//                     onChange={() => handleFormatToggle(format.id)}
-//                     className="sr-only peer"
-//                   />
-//                   <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-//                     {selectedFormats.includes(format.id) && (
-//                       <svg
-//                         className="w-3 h-3 text-white"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                         fill="none"
-//                         viewBox="0 0 24 24"
-//                         stroke="currentColor"
-//                         strokeWidth={2}
-//                       >
-//                         <path
-//                           strokeLinecap="round"
-//                           strokeLinejoin="round"
-//                           d="M5 13l4 4L19 7"
-//                         />
-//                       </svg>
-//                     )}
-//                   </div>
-//                   <span className="text-sm flex-1">{format.name}</span>
-//                   <span className="text-sm text-gray-500">{format.count}</span>
-//                 </label>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Course List */}
-//       <div className="flex-1">
-//         <h2 className="text-2xl font-bold mb-4">Kurslar</h2>
-//         <div className="flex flex-wrap gap-[10px]">
-//           {filteredAllCourses.map((course) => (
-//             <CourseItem key={course.id} course={course} />
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-import { useState, useMemo } from "react";
-import { Search } from "lucide-react";
-import PriceRange from "./PriceRange";
-import CourseItem from "./CourseItem";
+import React, { useState, useMemo } from "react";
 import CourseItemImage from "../assets/course-item.jpg";
 
+const universities = [
+  {
+    id: 1,
+    title: "Web dasturlash",
+    center: "PDP Academy",
+    price: 2500000,
+    duration: "3 oy",
+    format: "Onlayn",
+    name: "Create beautiful websites from the scratch",
+    image: CourseItemImage,
+    location: "Tashkent",
+    fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
+    telegram: "t.me/profiedu.uz",
+    number: "+998 99 999 99 99",
+    website: "profiedu.uz",
+    programs: [
+      "Frontend",
+      "Backend",
+      "Data Analytic",
+      "Design",
+      "Project managment",
+    ],
+  },
+  {
+    id: 2,
+    title: "Web dasturlash",
+    center: "PDP Academy",
+    price: 2500000,
+    duration: "3 oy",
+    format: "Onlayn",
+    name: "Create beautiful websites from the scratch",
+    image: CourseItemImage,
+    location: "Tashkent",
+    fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
+    telegram: "t.me/profiedu.uz",
+    number: "+998 99 999 99 99",
+    website: "profiedu.uz",
+    programs: ["Frontend", "Backend", "Data Analytic", "Design"],
+  },
+  {
+    id: 3,
+    title: "Web dasturlash",
+    center: "PDP Academy",
+    price: 2500000,
+    duration: "3 oy",
+    format: "Onlayn",
+    name: "Create beautiful websites from the scratch",
+    image: CourseItemImage,
+    location: "Tashkent",
+    fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
+    telegram: "t.me/profiedu.uz",
+    number: "+998 99 999 99 99",
+    website: "profiedu.uz",
+    programs: ["Frontend", "Backend", "Data Analytic", "Design"],
+  },
+];
+
+const filters = [
+  {
+    name: "IT yo'nalishi",
+    items: [
+      { name: "Dizayn", count: 1, key: "Design" },
+      { name: "Frontend", count: 4, key: "Frontend" },
+      { name: "Backend", count: 5, key: "Backend" },
+      { name: "Project management", count: 2, key: "ProjectManagement" },
+    ],
+  },
+  {
+    name: "O'qish davomiyligi",
+    items: [
+      { name: "3 yil", count: 1 },
+      { name: "4 yil", count: 2 },
+      { name: "4 yildan ko'p", count: 0 },
+    ],
+  },
+  {
+    name: "O'qish formati",
+    items: [
+      { name: "Onlayn", count: 1 },
+      { name: "Oflayn", count: 2 },
+      { name: "Gibrid", count: 0 },
+    ],
+  },
+];
+
 export default function StudyCenterFilter() {
-  const [centerSearch, setCenterSearch] = useState("");
-  const [courseSearch, setCourseSearch] = useState("");
-  const [selectedCenters, setSelectedCenters] = useState([]);
-  const [selectedCourses, setSelectedCourses] = useState([]);
-  const [selectedDurations, setSelectedDurations] = useState([]);
-  const [selectedFormats, setSelectedFormats] = useState([]);
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 5000000 });
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedSpecialty, setSelectedSpecialty] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const centers = [
-    { id: 1, name: "PDP Academy", count: 77 },
-    { id: 2, name: "Techno World", count: 89 },
-    { id: 3, name: "Najot ta'lim", count: 42 },
-    { id: 4, name: "Mohir dev", count: 34 },
-  ];
-
-  const courses = [
-    { id: 1, name: "Dizayn", count: 23 },
-    { id: 2, name: "Frontend", count: 14 },
-    { id: 3, name: "Backend", count: 17 },
-    { id: 4, name: "Project managment", count: 8 },
-  ];
-
-  const durations = [
-    { id: 1, name: "1 oyggacha", count: 12 },
-    { id: 2, name: "1-3 oy", count: 23 },
-    { id: 3, name: "3-6 oy", count: 16 },
-    { id: 4, name: "6 oydan ko'p", count: 8 },
-  ];
-
-  const formats = [
-    { id: 1, name: "Onlayn", count: 12 },
-    { id: 2, name: "Oflayn", count: 23 },
-    { id: 3, name: "Gibrid", count: 16 },
-  ];
-
-  const allCourses = [
-    {
-      id: 1,
-      title: "Web dasturlash",
-      center: "PDP Academy",
-      price: 2500000,
-      duration: "3 oy",
-      format: "Onlayn",
-      name: "Create beautiful websites from the scratch",
-      image: CourseItemImage,
-      location: "Tashkent",
-      fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-      telegram: "t.me/profiedu.uz",
-      number: "+998 99 999 99 99",
-      website: "profiedu.uz",
-      tags: [
-        "Frontend",
-        "Backend",
-        "Data Analytic",
-        "Design",
-        "Project managment",
-      ],
-    },
-    {
-      id: 2,
-      title: "Web dasturlash",
-      center: "PDP Academy",
-      price: 2500000,
-      duration: "3 oy",
-      format: "Onlayn",
-      name: "Create beautiful websites from the scratch",
-      image: CourseItemImage,
-      location: "Tashkent",
-      fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-      telegram: "t.me/profiedu.uz",
-      number: "+998 99 999 99 99",
-      website: "profiedu.uz",
-      tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-    },
-    {
-      id: 3,
-      title: "Web dasturlash",
-      center: "PDP Academy",
-      price: 2500000,
-      duration: "3 oy",
-      format: "Onlayn",
-      name: "Create beautiful websites from the scratch",
-      image: CourseItemImage,
-      location: "Tashkent",
-      fullLocation: "Toshkent, Mirzo-Ulugbek, Yassi 11",
-      telegram: "t.me/profiedu.uz",
-      number: "+998 99 999 99 99",
-      website: "profiedu.uz",
-      tags: ["Frontend", "Backend", "Data Analytic", "Design"],
-    },
-  ];
-
-  const filteredAllCourses = useMemo(() => {
-    return allCourses.filter((course) => {
-      // Check if the course's tags include any of the selected course directions (tags)
-      const courseMatch =
-        selectedCourses.length === 0 ||
-        selectedCourses.some(
-          (selectedCourse) => course.tags.includes(selectedCourse) // Check if any tag in selectedCourses matches course's tags
-        );
-
-      // Check other filters
-      const centerMatch =
-        selectedCenters.length === 0 ||
-        selectedCenters.includes(
-          centers.find((c) => c.name === course.center)?.id
-        );
-
-      const durationMatch =
-        selectedDurations.length === 0 ||
-        selectedDurations.includes(
-          durations.find((d) => d.name === course.duration)?.id
-        );
-
-      const formatMatch =
-        selectedFormats.length === 0 ||
-        selectedFormats.includes(
-          formats.find((f) => f.name === course.format)?.id
-        );
-
-      const priceMatch =
-        course.price >= priceRange.min && course.price <= priceRange.max;
-
-      return (
-        centerMatch && courseMatch && durationMatch && formatMatch && priceMatch
-      );
+  const filteredUniversities = useMemo(() => {
+    return universities.filter((university) => {
+      const matchesSearch = university.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      const matchesSpecialty =
+        selectedSpecialty === "" || university.specialty === selectedSpecialty;
+      return matchesSearch && matchesSpecialty;
     });
-  }, [
-    selectedCenters,
-    selectedCourses, // Now filtering based on selected courses (tags)
-    selectedDurations,
-    selectedFormats,
-    priceRange,
-    allCourses,
-  ]);
+  }, [searchQuery, selectedSpecialty]);
 
-  const handleCenterToggle = (centerId) => {
-    setSelectedCenters((prev) =>
-      prev.includes(centerId)
-        ? prev.filter((id) => id !== centerId)
-        : [...prev, centerId]
+  const handleSpecialtyClick = (specialty) => {
+    setSelectedSpecialty((prevSpecialty) =>
+      prevSpecialty === specialty ? "" : specialty
     );
   };
 
-  const handleCourseToggle = (courseTag) => {
-    setSelectedCourses((prev) => {
-      return prev.includes(courseTag)
-        ? prev.filter((tag) => tag !== courseTag)
-        : [...prev, courseTag];
-    });
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-    <div className="flex gap-8">
-      <div className="w-full max-w-sm bg-white p-4 rounded-lg shadow">
-        <div className="space-y-6">
-          <div className="flex justify-between items-center">
-            <h2 className="text-[#222] text-[28px] font-medium">Saralash</h2>
-
-            <p
-              className="text-[#2675EB] text-[18px] cursor-pointer"
-              id="clean-filters"
+    <div className="flex mt-[100px] container bg-gray-50">
+      {/* Sidebar */}
+      <div
+        className={`fixed  inset-y-25 left-0 z-30 w-64 bg-white transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:relative md:translate-x-0`}
+      >
+        <div className="p-4">
+          <div className="flex items-center justify-between mb-6">
+            <h1 className="text-xl font-medium">Saralash</h1>
+            <button
+              className="text-blue-500 hover:text-blue-700"
               onClick={() => {
-                setCenterSearch("");
-                setCourseSearch("");
-                setSelectedCenters([]);
-                setSelectedCourses([]);
-                setSelectedDurations([]);
-                setSelectedFormats([]);
-                setPriceRange({ min: 0, max: 5000000 });
+                setSearchQuery("");
+                setSelectedSpecialty("");
               }}
             >
-              Tozalash
-            </p>
+              <p>Tozalash</p>
+            </button>
+            <button className="text-blue-500 md:hidden" onClick={toggleSidebar}>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
 
-          <hr />
-
-          {/* Course Directions */}
-          <div>
-            <h3 className="font-medium mb-2">O'quv kurs yo'nalishi</h3>
-            <div className="relative mb-2">
-              <input
-                type="text"
-                value={courseSearch}
-                onChange={(e) => setCourseSearch(e.target.value)}
-                placeholder="O'quv kurs"
-                className="w-full p-2 pl-8 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
-              />
-              <Search className="w-4 h-4 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            </div>
-            <div className="space-y-2">
-              {filteredCourses.map((course) => (
-                <label
-                  key={course.id}
-                  className="flex items-center gap-2 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedCourses.includes(course.id)}
-                    onChange={() => handleCourseToggle(course.id)}
-                    className="sr-only peer"
-                  />
-                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                    {selectedCourses.includes(course.id) && (
-                      <svg
-                        className="w-3 h-3 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    )}
-                  </div>
-                  <span className="text-sm flex-1">{course.name}</span>
-                  <span className="text-sm text-gray-500">{course.count}</span>
-                </label>
-              ))}
-            </div>
+          {/* Search in sidebar */}
+          <div className="relative mb-6">
+            <input
+              type="search"
+              placeholder="Yo'nalish"
+              className="w-full px-4 py-2 border rounded-lg"
+            />
+            <span className="absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg
+                className="w-5 h-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </span>
           </div>
 
-          {/* Course Durations */}
-          <div>
-            <h3 className="font-medium mb-2">Kurslar davomiyligi</h3>
-            <div className="space-y-2">
-              {durations.map((duration) => (
-                <label
-                  key={duration.id}
-                  className="flex items-center gap-2 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedDurations.includes(duration.id)}
-                    onChange={() => handleDurationToggle(duration.id)}
-                    className="sr-only peer"
-                  />
-                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                    {selectedDurations.includes(duration.id) && (
-                      <svg
-                        className="w-3 h-3 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    )}
-                  </div>
-                  <span className="text-sm flex-1">{duration.name}</span>
-                  <span className="text-sm text-gray-500">
-                    {duration.count}
-                  </span>
-                </label>
-              ))}
-            </div>
+          {/* Filters */}
+          <div className="space-y-6">
+            {filters.map((section) => (
+              <div key={section.name} className="space-y-2">
+                <h2 className="font-medium">{section.name}</h2>
+                {section.items.map((item) => (
+                  <label
+                    key={item.name}
+                    className="flex items-center space-x-2"
+                  >
+                    <input
+                      type="checkbox"
+                      className="rounded border-gray-300"
+                      checked={selectedSpecialty === item.key}
+                      onChange={() => handleSpecialtyClick(item.key)}
+                    />
+                    <span className="text-sm">{item.name}</span>
+                    <span className="text-sm text-gray-500">
+                      ({item.count})
+                    </span>
+                  </label>
+                ))}
+              </div>
+            ))}
           </div>
 
-          {/* Course Formats */}
-          <div>
-            <h3 className="font-medium mb-2">Kurslar formati</h3>
-            <div className="space-y-2">
-              {formats.map((format) => (
-                <label
-                  key={format.id}
-                  className="flex items-center gap-2 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedFormats.includes(format.id)}
-                    onChange={() => handleFormatToggle(format.id)}
-                    className="sr-only peer"
-                  />
-                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                    {selectedFormats.includes(format.id) && (
-                      <svg
-                        className="w-3 h-3 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    )}
-                  </div>
-                  <span className="text-sm flex-1">{format.name}</span>
-                  <span className="text-sm text-gray-500">{format.count}</span>
-                </label>
-              ))}
-            </div>
-          </div>
+          <button className="w-full py-2 mt-6 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+            {filteredUniversities.length} ta Universitetni ko'rish
+          </button>
         </div>
       </div>
 
-      {/* Course List */}
-      <div className="flex-1">
-        <h2 className="text-2xl font-bold mb-4">Kurslar</h2>
-        <div className="flex flex-wrap gap-[10px]">
-          {filteredAllCourses.map((course) => (
-            <CourseItem key={course.id} course={course} />
+      {/* Main content */}
+      <div className="flex-1 p-4 md:p-6">
+        {/* Mobile sidebar toggle */}
+        <button
+          className="mb-4 p-2 bg-blue-500 text-white rounded-lg md:hidden"
+          onClick={toggleSidebar}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        {/* Top search bar */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 space-y-4 sm:space-y-0">
+          <div className="relative flex-1 w-full sm:max-w-xs">
+            <input
+              type="search"
+              placeholder="Universitet nomi"
+              className="w-full px-4 py-2 border rounded-lg"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <span className="absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg
+                className="w-5 h-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </span>
+          </div>
+          <select className="w-full sm:w-auto px-4 py-2 border rounded-lg">
+            <option>Hudud</option>
+          </select>
+        </div>
+
+        <h2 className="mb-4 text-lg font-semibold">
+          Universitetlar soni: {filteredUniversities.length}
+        </h2>
+
+        {/* University grid */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredUniversities.map((university) => (
+            <div
+              key={university.id}
+              className="overflow-hidden max-w-[282px] w-full bg-white border rounded-lg shadow-sm"
+            >
+              <img src={university.image} alt="" />
+              <div className="relative ">
+                <div className="absolute bottom-2 left-2 ">
+                  <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                    {university.location}
+                  </span>
+                </div>
+                <div className="absolute bottom-2 left-24">
+                  <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
+                    {university.status}
+                  </span>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-8 h-8 bg-gray-200 rounded-full">
+                    <img src={university.image} alt="" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-sm">{university.name}</h3>
+                    <p className="text-xs text-gray-500">
+                      {university.location}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {university.programs.map((program) => (
+                    <span
+                      key={program}
+                      className="px-2 py-1 text-xs bg-gray-100 rounded"
+                    >
+                      {program}
+                    </span>
+                  ))}
+                </div>
+                <div className="text-xs text-gray-500">{university.type}</div>
+                <div className="mt-2 text-sm text-blue-500">
+                  {university.phone}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
