@@ -70,7 +70,7 @@ export const Menus = [
   },
   {
     name: "IT universitetlar",
-    link: "universities",
+    link: "/universities",
   },
   {
     name: "Yangiliklar",

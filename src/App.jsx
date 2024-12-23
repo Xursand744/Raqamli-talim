@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
+import  University  from "./pages/ItUniversitet/Univer";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -28,6 +29,10 @@ export default function App() {
         {
           path: "/about",
           element: <About />,
+        },
+        {
+          path: "/universities",
+          element: <University />,
         },
         {
           path: "projects",
