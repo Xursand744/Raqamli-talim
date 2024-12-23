@@ -13,7 +13,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
-import  University  from "./pages/ItUniversitet/Univer";
+import  University  from "./pages/ItUniversitet/UniversityList";
 
 export default function App() {
   const routes = createBrowserRouter([
