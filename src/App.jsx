@@ -13,7 +13,11 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
+<<<<<<< HEAD
 import  University  from "./pages/ItUniversitet/UniversityList";
+=======
+import StudyCenters from "./pages/StudyCenters";
+>>>>>>> ce1a07b623e6a9f7d2184f179f71625e4df65eaf
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -50,6 +54,10 @@ export default function App() {
         {
           path: "/tips",
           element: <Tips />,
+        },
+        {
+          path: "/study-centers",
+          element: <StudyCenters />,
         },
         // {
         //   path: "contact",
