@@ -3,28 +3,28 @@ import pdp from "../assets/pdp.svg";
 
 export default function CourseItem({ course }) {
   return (
-    <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-      <div class="bg-gradient-to-tr from-blue-0 to-teal-0 ">
-        {/* <img class="w-[500px]" src={course.image} alt="" /> */}
-        <h2 class="text-2xl text-white font-bold font-inter-500">
-          {course.duration}
-        </h2>
-      </div>
-      <div class="p-4">
-        <div class="flex p-[px]">
-          <img src={course.image} alt="" />
+    <div class="max-w-sm mx-auto w-[282px] h-[372px] bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class=" relative bg-gradient-to-tr from-blue-0 to-teal-0">
+        <img class="w-full" src={course.image} alt="" />
+        <div class="p-2">
+          <h2 class="absolute top-[144px] text-sm font-bold px-4 bg-white rounded-2xl text-center">
+            {course.duration}
+          </h2>
         </div>
-        <h3 class="text-xl font-semibold flex gap-[10px]">
-          <img src={pdp} alt="" /> {course.center}
-        </h3>
-        <p class="text-[16px] font-bold">{course.name}</p>
-        <div class="mt-3">
-          <span class="text-2xl font-bold text-blue-600">
+      </div>
+      <div class="p-2">
+        <div class="flex p-[px]">
+          <img src={pdp} alt="" />
+          <h3 class="text-xl font-semibold ml-[10px]">{course.center}</h3>
+        </div>
+        <p class="text-[16px] font-bold mt-[10px]">{course.name}</p>
+        <div class="mt-2">
+          <span class="text-[18px] font-bold text-blue-600">
             {course.price.toLocaleString("uz-UZ")} UZS
           </span>
-          <span class="text-2xl font-bold text-blue-600">/oyiga</span>
+          <span class="text-[18px] font-bold text-blue-600">/oyiga</span>
         </div>
-        <div class="mt-4 flex items-center space-x-4 text-gray-500">
+        <div class="mt-1 flex items-center space-x-4 text-gray-500">
           <div class="flex items-center">
             <i class="bx bx-map"></i>
             <span>{course.location}</span>

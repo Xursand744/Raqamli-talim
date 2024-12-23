@@ -85,6 +85,78 @@ export default function TipsFilter() {
       name: "Create beautiful websites from the scratch",
       image: CourseItemImage,
     },
+
+    {
+      id: 5,
+      title: "Data Science",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
+
+    {
+      id: 6,
+      title: "Data Science",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
+
+    {
+      id: 7,
+      title: "Data Science",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
+
+    {
+      id: 8,
+      title: "Data Science",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
+
+    {
+      id: 9,
+      title: "Data Science",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
+
+    {
+      id: 10,
+      title: "Backend",
+      center: "Mohir dev",
+      price: 4000000,
+      duration: "6 oy",
+      location: "Fergana",
+      format: "Onlayn",
+      name: "Create beautiful websites from the scratch",
+      image: CourseItemImage,
+    },
   ];
 
   const filteredCenters = useMemo(() => {
@@ -172,6 +244,19 @@ export default function TipsFilter() {
     <div className="flex gap-8">
       <div className="w-full max-w-sm bg-white p-4 rounded-lg shadow">
         <div className="space-y-6">
+          <div className="flex justify-between items-center">
+            <h2 className="text-[#222] text-[28px] font-medium">Saralash</h2>
+
+            <p
+              className="text-[#2675EB] text-[18px] cursor-pointer"
+              id="clean-filters"
+            >
+              Tozalash
+            </p>
+          </div>
+
+          <hr />
+
           <PriceRange priceRange={priceRange} setPriceRange={setPriceRange} />
 
           {/* Educational Centers */}
@@ -189,13 +274,34 @@ export default function TipsFilter() {
             </div>
             <div className="space-y-2">
               {filteredCenters.map((center) => (
-                <label key={center.id} className="flex items-center gap-2">
+                <label
+                  key={center.id}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     checked={selectedCenters.includes(center.id)}
                     onChange={() => handleCenterToggle(center.id)}
-                    className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="sr-only peer"
                   />
+                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
+                    {selectedCenters.includes(center.id) && (
+                      <svg
+                        className="w-3 h-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    )}
+                  </div>
                   <span className="text-sm flex-1">{center.name}</span>
                   <span className="text-sm text-gray-500">{center.count}</span>
                 </label>
@@ -218,13 +324,34 @@ export default function TipsFilter() {
             </div>
             <div className="space-y-2">
               {filteredCourses.map((course) => (
-                <label key={course.id} className="flex items-center gap-2">
+                <label
+                  key={course.id}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     checked={selectedCourses.includes(course.id)}
                     onChange={() => handleCourseToggle(course.id)}
-                    className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="sr-only peer"
                   />
+                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
+                    {selectedCourses.includes(course.id) && (
+                      <svg
+                        className="w-3 h-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    )}
+                  </div>
                   <span className="text-sm flex-1">{course.name}</span>
                   <span className="text-sm text-gray-500">{course.count}</span>
                 </label>
@@ -237,13 +364,34 @@ export default function TipsFilter() {
             <h3 className="font-medium mb-2">Kurslar davomiyligi</h3>
             <div className="space-y-2">
               {durations.map((duration) => (
-                <label key={duration.id} className="flex items-center gap-2">
+                <label
+                  key={duration.id}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     checked={selectedDurations.includes(duration.id)}
                     onChange={() => handleDurationToggle(duration.id)}
-                    className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="sr-only peer"
                   />
+                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
+                    {selectedDurations.includes(duration.id) && (
+                      <svg
+                        className="w-3 h-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    )}
+                  </div>
                   <span className="text-sm flex-1">{duration.name}</span>
                   <span className="text-sm text-gray-500">
                     {duration.count}
@@ -258,13 +406,34 @@ export default function TipsFilter() {
             <h3 className="font-medium mb-2">Kurslar formati</h3>
             <div className="space-y-2">
               {formats.map((format) => (
-                <label key={format.id} className="flex items-center gap-2">
+                <label
+                  key={format.id}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <input
                     type="checkbox"
                     checked={selectedFormats.includes(format.id)}
                     onChange={() => handleFormatToggle(format.id)}
-                    className="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    className="sr-only peer"
                   />
+                  <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
+                    {selectedFormats.includes(format.id) && (
+                      <svg
+                        className="w-3 h-3 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    )}
+                  </div>
                   <span className="text-sm flex-1">{format.name}</span>
                   <span className="text-sm text-gray-500">{format.count}</span>
                 </label>
@@ -282,8 +451,6 @@ export default function TipsFilter() {
             <CourseItem key={course.id} course={course} />
           ))}
         </div>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
-        {/* </div> */}
       </div>
     </div>
   );
