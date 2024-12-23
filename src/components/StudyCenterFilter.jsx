@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import pdpImage from "../assets/pdp.svg";
 import CourseItemImage from "../assets/course-item.jpg";
 
 const universities = [
@@ -280,20 +281,31 @@ export default function StudyCenterFilter() {
                 </div>
                 <div className="absolute bottom-2 left-24">
                   <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-                    {university.status}
+                    {university.format}
                   </span>
+                </div>
+                <div className="absolute bottom-[60px] left-[35%]">
+                  <img
+                    src={pdpImage}
+                    alt=""
+                    className="w-[84px] rounded-full"
+                  />
                 </div>
               </div>
               <div className="p-4">
-                <div className="flex items-center space-x-2 mb-2">
-                  <div className="w-8 h-8 bg-gray-200 rounded-full">
-                    <img src={university.image} alt="" />
-                  </div>
+                <div className="flex  flex-col space-x-2 mb-2">
                   <div>
-                    <h3 className="font-medium text-sm">{university.name}</h3>
-                    <p className="text-xs text-gray-500">
-                      {university.location}
+                    <h3 className="font-medium text-[14px]">
+                      {university.center}
+                    </h3>
+                  </div>
+                  <div className="flex items-center ml-[-10px] mt-[10px] gap-[10px]">
+                    <p className="text-[14px] ml-[-5px] text-[#2675EB]">
+                      Kurslar{" "}
                     </p>
+                    <h3 className="text-[14px]">
+                      {university.price.toLocaleString("uz-UZ")} dan boshlab
+                    </h3>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1 mb-2">
