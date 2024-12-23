@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
+import StudyCenters from "./pages/StudyCenters";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -45,6 +46,10 @@ export default function App() {
         {
           path: "/tips",
           element: <Tips />,
+        },
+        {
+          path: "/study-centers",
+          element: <StudyCenters />,
         },
         // {
         //   path: "contact",
