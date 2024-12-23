@@ -250,6 +250,15 @@ export default function TipsFilter() {
             <p
               className="text-[#2675EB] text-[18px] cursor-pointer"
               id="clean-filters"
+              onClick={() => {
+                setCenterSearch("");
+                setCourseSearch("");
+                setSelectedCenters([]);
+                setSelectedCourses([]);
+                setSelectedDurations([]);
+                setSelectedFormats([]);
+                setPriceRange({ min: 0, max: 5000000 });
+              }}
             >
               Tozalash
             </p>
