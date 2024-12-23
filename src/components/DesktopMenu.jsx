@@ -36,7 +36,7 @@ export default function DesktopMenu({ menu }) {
   return (
     <div>
       {!hasSubMenu ? (
-        <NavLink to={menu.link}>
+        <NavLink to={menu.link} className={"nav-item"}>
           <motion.li
             className="group/link "
             onHoverStart={() => {
