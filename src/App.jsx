@@ -14,8 +14,9 @@ import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
 import  University  from "./pages/ItUniversitet/UniversityList";
-import  Analiz  from "./pages/Analitic/Analitic";
 import StudyCenters from "./pages/StudyCenters";
+import  Analiz  from "./pages/Analitic/Analitic";
+import  Fields  from "./pages/ITFields_list/IT_fields_list";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -36,10 +37,10 @@ export default function App() {
           path: "/universities",
           element: <University />,
         },
-        // {
-        //   path: "/News",
-        //   element: new,
-        // },
+        {
+          path: "/new",
+          element: '',
+        },
         {
           path: "projects",
           children: [
