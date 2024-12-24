@@ -13,10 +13,12 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
-import  University  from "./pages/ItUniversitet/UniversityList";
+import University from "./pages/ItUniversitet/UniversityList";
 import StudyCenters from "./pages/StudyCenters";
-import  Analiz  from "./pages/Analitic/Analitic";
-import  Fields  from "./pages/ITFields_list/IT_fields_list";
+import Analiz from "./pages/Analitic/Analitic";
+import Fields from "./pages/ITFields_list/IT_fields_list";
+import JobSearch from "./pages/ITFields_list/IT_fields_list";
+import Dashboard from "./pages/Analitic/Analitic";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -38,8 +40,8 @@ export default function App() {
           element: <University />,
         },
         {
-          path: "/new",
-          element: '',
+          path: "/news",
+          element: <Tips />,
         },
         {
           path: "projects",
@@ -56,7 +58,16 @@ export default function App() {
         },
         {
           path: "/tips",
-          element: <Tips />,
+          children: [
+            {
+              index: true,
+              element: <JobSearch />,
+            },
+            {
+              path: ":slug",
+              element: <Dashboard />,
+            },
+          ],
         },
         {
           path: "/study-centers",
