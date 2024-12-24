@@ -14,6 +14,7 @@ import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tips";
 import  University  from "./pages/ItUniversitet/UniversityList";
+import  Analiz  from "./pages/Analitic/Analitic";
 import StudyCenters from "./pages/StudyCenters";
 
 export default function App() {
@@ -35,6 +36,10 @@ export default function App() {
           path: "/universities",
           element: <University />,
         },
+        // {
+        //   path: "/News",
+        //   element: new,
+        // },
         {
           path: "projects",
           children: [

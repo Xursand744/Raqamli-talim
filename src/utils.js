@@ -74,7 +74,7 @@ export const Menus = [
   },
   {
     name: "Yangiliklar",
-    link: "news",
+    link: "/Analiz",
   },
   {
     name: "IT-maslahatlar",
