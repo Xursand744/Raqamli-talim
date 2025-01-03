@@ -1,4 +1,5 @@
 import { Menus } from "../utils";
+import React from 'react';
 import DesktopMenu from "../components/DesktopMenu";
 import MobMenu from "../components/MobMenu";
 import { Earth } from "lucide-react";
@@ -28,8 +29,10 @@ export default function Navbar() {
           </ul>
           <div className="flex-center gap-x-5">
             <Eye className="text-black" />
-            <p className="text-black font-bold">UZ</p>
-            <Earth className="text-black" />
+            <div className="flex items-center gap-1">
+              <p className="text-black font-bold">UZ</p>
+              <Earth for="cars" className="text-black" />
+            </div>
             <div className="lg:hidden">
               <MobMenu Menus={Menus} />
             </div>
