@@ -70,11 +70,11 @@ export const Menus = [
   },
   {
     name: "IT universitetlar",
-    link: "universities",
+    link: "/universities",
   },
   {
     name: "Yangiliklar",
-    link: "news",
+    link: "/news",
   },
   {
     name: "IT-maslahatlar",
