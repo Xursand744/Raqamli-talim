@@ -12,7 +12,11 @@ import HomePage from "./pages/index";
 import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
+<<<<<<< HEAD
 import Tips from "./pages/Tip";
+=======
+import Tips from "./pages/Tips";
+>>>>>>> 61f1863419538ad801bea25b203eeb84fdcddc97
 
 export default function App() {
   const routes = createBrowserRouter([
