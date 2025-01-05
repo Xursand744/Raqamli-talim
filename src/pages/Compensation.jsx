@@ -1,45 +1,66 @@
+import { useTranslation } from "react-i18next";
 import walletImage from "../assets/chance-1.png";
 import robotImage from "../assets/chance-2.png";
 import CompensationBannerItem from "../components/CompensationItem";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../assets/css/swiper.css";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Cookies from "js-cookie";
 
 function Compensation() {
-  const data = [
-    {
-      span: "Kompensatsiya",
-      title: "olmoqchimisiz?",
-      desc: "IT sertifikat pullaringizni 100% gacha qaytaring",
-      image: walletImage,
-    },
-    {
-      span: "O’quv markaz",
-      title: "ochmoqchimisiz?",
-      desc: "O’z qobilyatlaringni ta’lim kelajak uchun sarfla",
-      image: robotImage,
-    },
-    {
-      span: "O’quv markaz",
-      title: "ochmoqchimisiz?",
-      desc: "O’z qobilyatlaringni ta’lim kelajak uchun sarfla",
-      image: robotImage,
-    },
-    {
-      span: "O’quv markaz",
-      title: "ochmoqchimisiz?",
-      desc: "O’z qobilyatlaringni ta’lim kelajak uchun sarfla",
-      image: robotImage,
-    },
-  ];
+  const { t, i18n } = useTranslation("global");
+  const [lang, setLang] = useState(Cookies.get("lang") || "uz");
+
+  // Update language when cookies change
+  useEffect(() => {
+    const savedLang = Cookies.get("lang") || "uz";
+    i18n.changeLanguage(savedLang);
+    setLang(savedLang);
+  }, [i18n]);
+
+  // Declare data state and set it inside useEffect after translations are ready
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Wait for translations to load before updating data
+    setData([
+      {
+        span: t("compensation.walletTitle"),
+        title: t("compensation.walletQuestion"),
+        desc: t("compensation.walletDesc"),
+        more: t("compensation.more"),
+        image: walletImage,
+      },
+      {
+        span: t("compensation.centerTitle"),
+        title: t("compensation.centerQuestion"),
+        more: t("compensation.more"),
+        desc: t("compensation.centerDesc"),
+        image: robotImage,
+      },
+      {
+        span: t("compensation.centerTitle"),
+        title: t("compensation.centerQuestion"),
+        more: t("compensation.more"),
+        desc: t("compensation.centerDesc"),
+        image: robotImage,
+      },
+      {
+        span: t("compensation.centerTitle"),
+        more: t("compensation.more"),
+        title: t("compensation.centerQuestion"),
+        desc: t("compensation.centerDesc"),
+        image: robotImage,
+      },
+    ]);
+  }, [t]); // This effect runs when the translation context changes
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -82,53 +103,33 @@ function Compensation() {
     containerRef.current.style.transform = `translateX(${snapTranslate}px)`;
   };
 
-  {
-    /* <div className="swiper-wrapper flex gap-[50px] w-full" ref={containerRef}>
-        {data &&
-          data.map((item) => {
-            return (
-              <CompensationBannerItem
-                key={item.title}
-                title={item.title}
-                span={item.span}
-                desc={item.desc}
-                image={item.image}
-              />
-            );
-          })}
-      </div> */
-  }
-
   return (
     <div className="max-w-[1300px] w-full my-0 mx-auto">
       <Swiper
-        // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={20}
         slidesPerView={1.5}
-        // navigation
-        // pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
         {data &&
-          data.map((item) => {
+          data.map((item, index) => {
             return (
-              <SwiperSlide style={{ backgroundColor: "#F8F8F8" }}>
+              <SwiperSlide key={index} style={{ backgroundColor: "#F8F8F8" }}>
                 <CompensationBannerItem
                   key={item.title}
                   title={item.title}
                   span={item.span}
                   desc={item.desc}
                   image={item.image}
+                  more={item.more}
                 />
               </SwiperSlide>
             );
           })}
       </Swiper>
     </div>
-    
   );
 }
 

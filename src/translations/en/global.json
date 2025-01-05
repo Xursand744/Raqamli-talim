@@ -1,1 +1,148 @@
-{}
+{
+  "logoAlt": "Company Logo",
+  "language": {
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "menu": {
+    "center": "About the Center",
+    "aboutUs": "About Us",
+    "openData": "Open Data",
+    "leadership": "Leadership",
+    "structure": "Structure",
+    "departments": "Departments",
+    "antiCorruption": "Anti-Corruption",
+    "higherOrganization": "Higher Organization",
+    "projects": "Projects",
+    "alXorazmiyHeirs": "Al Khwarizmi's Heirs",
+    "studyCenters": "Study Centers",
+    "itUniversities": "IT Universities",
+    "news": "News",
+    "itTips": "IT Tips",
+    "contact": "Contact"
+  },
+  "landing": {
+    "title": "Al-Khwarizmi",
+    "description": "Free courses for talented 7th-11th grade students interested in IT.",
+    "moreDetails": "Learn More",
+    "imageAlt": "Educational Program Icon",
+    "carouselAlt": "Educational Opportunities in IT"
+  },
+  "chances": {
+    "title": "Special Opportunities",
+    "walletTitle": "Get IT Compensation",
+    "walletDesc": "Get back the money you spent on IT",
+    "robotTitle": "Learn IT at School",
+    "robotDesc": "Get back the money you spent on IT"
+  },
+  "events": {
+    "title": "Event Schedule",
+    "innoWomenWeek": "InnoWomenWeek",
+    "date": "19-July, 2024",
+    "description": "6 types of IT project competitions with cash prizes in 6 categories...",
+    "viewMore": "View More",
+    "allEvents": "All Events"
+  },
+  "compensation": {
+    "walletTitle": "Compensation",
+    "walletQuestion": "Do you want to receive it?",
+    "walletDesc": "Get back 100% of your IT certification costs",
+    "centerTitle": "Training Center",
+    "centerQuestion": "Do you want to open it?",
+    "centerDesc": "Invest your skills in education for a better future",
+    "more": "Handbook"
+  },
+  "metrics": {
+    "centerTitle": "The Center in Numbers",
+    "centerDescription": "In 2023, more than 14,300 students successfully completed training courses offered by resident companies, and the number of IT specialists produced exceeded 5,190. IT Park resident companies offer over 400 IT courses.",
+    "activeProjects": "Active Projects",
+    "itStudents": "IT Students",
+    "metricIndicator": "Indicator"
+  },
+  "rate": {
+    "title": "Rate your knowledge in the IT field",
+    "buttonText": "Take the Test"
+  },
+  "topJobs": {
+    "title": "Top Job Rankings",
+    "viewAllButton": "View All"
+  },
+  "jobTitles": {
+    "backend": "Backend Developer",
+    "frontend": "Frontend Developer",
+    "projectManager": "Project Manager",
+    "mobile": "Mobile Developer",
+    "design": "Designer",
+    "smm": "SMM Specialist",
+    "animation3d": "3D Animator"
+  },
+  "jobCourses": {
+    "backendCourses": "123 courses available",
+    "frontendCourses": "Monthly reports",
+    "projectManagerCourses": "Monthly reports",
+    "avgSalaryText": "Avarage salary"
+  },
+  "successHistory": {
+    "title": "Success Stories",
+    "allEvents": "All Events",
+    "abror": {
+      "fullName": "Abror Jurayev",
+      "desc": "How to Become a Senior Developer During Your Student Years"
+    },
+    "mohira": {
+      "fullName": "Mohira To’laganova",
+      "desc": "How to Become a Senior Developer During Your Student Years"
+    },
+    "sevinch": {
+      "fullName": "Sevinch Muqimova",
+      "desc": "How to Become a Senior Developer During Your Student Years"
+    }
+  },
+  "locations": {
+    "andijan": "Andijan",
+    "navoi": "Navoi",
+    "tashkent": "Tashkent"
+  },
+  "roles": {
+    "frontend": "FrontEnd",
+    "backend": "BackEnd",
+    "design": "Design"
+  },
+  "school": {
+    "title": "Top Learning Centers",
+    "viewAll": "View All",
+    "card": {
+      "pdpAcademy": "PDP Academy",
+      "studying": "Currently Studying",
+      "graduated": "Graduated",
+      "employed": "Employed",
+      "exporters": "IT Exporters"
+    }
+  },
+  "join": {
+    "title": "Join the Digital Education Community!",
+    "subtitle": "Use your skills to shape the future of education",
+    "button": "Join the Team",
+    "logoAlt": "Main logo"
+  },
+  "footer": {
+    "mapAlt": "Map",
+    "logoAlt": "Main logo",
+    "phone": "+998 71 203 03 43",
+    "email": "education@digital.uz",
+    "address": "100164 Tashkent city, I.Muminov street, 4",
+    "forStudents": "For Students",
+    "courses": "Courses",
+    "centers": "IT Centers",
+    "programs": "Programs",
+    "aboutUs": "About Us",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "forEntrepreneurs": "For Entrepreneurs",
+    "copyright": "© 2024 MITC. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie Settings"
+  }
+}

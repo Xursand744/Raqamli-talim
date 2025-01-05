@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   amazon,
   blender,
@@ -8,14 +9,16 @@ import {
 } from "../assets/logos/logos";
 
 function Rate() {
+  const { t } = useTranslation("global");
+
   return (
-    <div className="hidden  relative bg-[#F0F3FF] mt-[50px] md:mt-[100px] h-[500px] md:flex justify-center items-center flex-col">
+    <div className="hidden relative bg-[#F0F3FF] mt-[50px] md:mt-[100px] h-[500px] md:flex justify-center items-center flex-col">
       <div className="relative z-40">
         <h1 className="title mb-[80px]" style={{ marginTop: 0 }}>
-          IT sohasidagi o’z bilimingizni baholang
+          {t("rate.title")}
         </h1>
         <button className="btn py-[12px] px-[40px] rounded-[40px] bg-[#222] border-none text-white text-[22px] hover:bg-[#555] transition">
-          Baholashdan o’tish
+          {t("rate.buttonText")}
         </button>
       </div>
 

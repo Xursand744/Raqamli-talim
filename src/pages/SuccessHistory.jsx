@@ -1,29 +1,33 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import SuccessHistory1 from "../assets/success-history-1.jpg";
 import SuccessHistory2 from "../assets/success-history-2.jpg";
 import SuccessHistory3 from "../assets/success-history-3.jpg";
 import SuccessHistoryItem from "../components/SuccessHistoryItem";
 
 function SuccessHistory() {
+  const { t } = useTranslation("global");
+
   const data = [
     {
       studyCenter: "PDP",
-      fullName: "Abror Jurayev",
-      desc: "How to Become a Senior Developer During Your Student Years",
-      tags: ["Andijan", "FrontEnd"],
+      fullName: t("successHistory.abror.fullName"),
+      desc: t("successHistory.abror.desc"),
+      tags: [t("locations.andijan"), t("roles.frontend")],
       image: SuccessHistory1,
     },
     {
       studyCenter: "Mohirdev",
-      fullName: "Mohira To’laganova",
-      desc: "How to Become a Senior Developer During Your Student Years",
-      tags: ["Navoi", "Backend"],
+      fullName: t("successHistory.mohira.fullName"),
+      desc: t("successHistory.mohira.desc"),
+      tags: [t("locations.navoi"), t("roles.backend")],
       image: SuccessHistory2,
     },
     {
       studyCenter: "Alloma",
-      fullName: "Sevinch Muqimova",
-      desc: "How to Become a Senior Developer During Your Student Years",
-      tags: ["Tashkent", "Design"],
+      fullName: t("successHistory.sevinch.fullName"),
+      desc: t("successHistory.sevinch.desc"),
+      tags: [t("locations.tashkent"), t("roles.design")],
       image: SuccessHistory3,
     },
   ];
@@ -39,26 +43,24 @@ function SuccessHistory() {
 
   return (
     <div>
-      <h1 className="title mb-[40px]">Muvaffaqiyat tarixi</h1>
+      <h1 className="title mb-[40px]">{t("successHistory.title")}</h1>
 
       <div className="flex justify-center gap-6 lg:gap-0 lg:justify-between items-center flex-wrap">
-        {data &&
-          data.map((item) => {
-            return (
-              <SuccessHistoryItem
-                studyCenter={item.studyCenter}
-                fullname={item.fullName}
-                desc={item.desc}
-                tags={item.tags}
-                image={item.image}
-              />
-            );
-          })}
+        {data.map((item, index) => (
+          <SuccessHistoryItem
+            key={index}
+            studyCenter={item.studyCenter}
+            fullname={item.fullName}
+            desc={item.desc}
+            tags={item.tags}
+            image={item.image}
+          />
+        ))}
       </div>
 
       <div className="text-center mt-[40px]">
         <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
-          Barcha tadbirlar
+          {t("successHistory.allEvents")}
         </Button>
       </div>
     </div>

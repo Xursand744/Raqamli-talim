@@ -8,53 +8,21 @@ import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 
 export const Menus = [
   {
-    name: "Markaz haqida",
+    name: "menu.center", // Translation key
     subMenu: [
-      {
-        name: "Biz haqimizda",
-        icon: CircleHelp,
-        link: "/about",
-      },
-      {
-        name: "Ochiq ma’lumotlar",
-        icon: CircleHelp,
-        link: "/about1",
-      },
-      {
-        name: "Rahbariyat",
-        icon: CircleHelp,
-        link: "/about2",
-      },
-      {
-        name: "Tuzilma",
-        icon: CircleHelp,
-        link: "/about3",
-      },
-      {
-        name: "Bo’linmalar",
-        icon: CircleHelp,
-        link: "/about4",
-      },
-      {
-        name: "Korrupsiyaga qarshi kurashish",
-        icon: CircleHelp,
-        link: "/about5",
-      },
-      {
-        name: "Yuqori turuvchi tashkilot",
-        icon: CircleHelp,
-        link: "/about6",
-      },
-      {
-        name: "Ochiq ma’lumotlar",
-        icon: CircleHelp,
-        link: "/about7",
-      },
+      { name: "menu.aboutUs", icon: CircleHelp, link: "/about" },
+      { name: "menu.openData", icon: CircleHelp, link: "/about1" },
+      { name: "menu.leadership", icon: CircleHelp, link: "/about2" },
+      { name: "menu.structure", icon: CircleHelp, link: "/about3" },
+      { name: "menu.departments", icon: CircleHelp, link: "/about4" },
+      { name: "menu.antiCorruption", icon: CircleHelp, link: "/about5" },
+      { name: "menu.higherOrganization", icon: CircleHelp, link: "/about6" },
+      { name: "menu.openData", icon: CircleHelp, link: "/about7" },
     ],
     gridCols: 1,
   },
   {
-    name: "Loyihalar",
+    name: "menu.projects", // Translation key
     subMenu: [
       {
         name: "Al Xorazmiy Vorislari",
@@ -64,28 +32,93 @@ export const Menus = [
     ],
     gridCols: 1,
   },
-  {
-    name: "O'quv markazlar",
-    link: "study-centers",
-  },
-  {
-    name: "IT universitetlar",
-    link: "/universities",
-  },
-  {
-    name: "Yangiliklar",
-    link: "/news",
-  },
-  {
-    name: "IT-maslahatlar",
-    link: "/tips",
-  },
-
-  {
-    name: "Bog’lanish",
-    link: "/contact",
-  },
+  { name: "menu.studyCenters", link: "study-centers" },
+  { name: "menu.itUniversities", link: "/universities" },
+  { name: "menu.news", link: "/news" },
+  { name: "menu.itTips", link: "/tips" },
+  { name: "menu.contact", link: "/contact" },
 ];
+
+// export const Menus = [
+//   {
+//     name: "Markaz haqida",
+//     subMenu: [
+//       {
+//         name: "Biz haqimizda",
+//         icon: CircleHelp,
+//         link: "/about",
+//       },
+//       {
+//         name: "Ochiq ma’lumotlar",
+//         icon: CircleHelp,
+//         link: "/about1",
+//       },
+//       {
+//         name: "Rahbariyat",
+//         icon: CircleHelp,
+//         link: "/about2",
+//       },
+//       {
+//         name: "Tuzilma",
+//         icon: CircleHelp,
+//         link: "/about3",
+//       },
+//       {
+//         name: "Bo’linmalar",
+//         icon: CircleHelp,
+//         link: "/about4",
+//       },
+//       {
+//         name: "Korrupsiyaga qarshi kurashish",
+//         icon: CircleHelp,
+//         link: "/about5",
+//       },
+//       {
+//         name: "Yuqori turuvchi tashkilot",
+//         icon: CircleHelp,
+//         link: "/about6",
+//       },
+//       {
+//         name: "Ochiq ma’lumotlar",
+//         icon: CircleHelp,
+//         link: "/about7",
+//       },
+//     ],
+//     gridCols: 1,
+//   },
+//   {
+//     name: "Loyihalar",
+//     subMenu: [
+//       {
+//         name: "Al Xorazmiy Vorislari",
+//         icon: PanelsTopLeft,
+//         link: "/projects/al-xorazmiy-vorislari",
+//       },
+//     ],
+//     gridCols: 1,
+//   },
+//   {
+//     name: "O'quv markazlar",
+//     link: "study-centers",
+//   },
+//   {
+//     name: "IT universitetlar",
+//     link: "/universities",
+//   },
+//   {
+//     name: "Yangiliklar",
+//     link: "/news",
+//   },
+//   {
+//     name: "IT-maslahatlar",
+//     link: "/tips",
+//   },
+
+//   {
+//     name: "Bog’lanish",
+//     link: "/contact",
+//   },
+// ];
 
 export const aboutFilters = [
   {

@@ -3,12 +3,14 @@ import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { div } from "framer-motion/client";
+import { useTranslation } from "react-i18next";
 
 export default function DesktopMenu({ menu }) {
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
     toggleHover(!isHover);
   };
+  const { t, i18n } = useTranslation("global");
 
   const subMenuAnimate = {
     enter: {
@@ -46,7 +48,7 @@ export default function DesktopMenu({ menu }) {
             key={menu.name}
           >
             <span className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
-              {menu.name}
+              {t(menu.name)}
               {hasSubMenu && (
                 <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
               )}
@@ -150,7 +152,9 @@ export default function DesktopMenu({ menu }) {
                             {submenu.icon && <submenu.icon />}
                           </div>
                           <div>
-                            <h6 className="font-semibold ">{submenu.name}</h6>
+                            <h6 className="font-semibold ">
+                              {t(submenu.name)}
+                            </h6>
                             <p className="text-sm ">{submenu.desc}</p>
                           </div>
                         </div>

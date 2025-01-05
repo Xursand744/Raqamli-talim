@@ -1,6 +1,6 @@
 import React from "react";
 
-const CompensationBannerItem = ({ title, span, desc, image }) => {
+const CompensationBannerItem = ({ title, span, desc, image, more }) => {
   return (
     <div className="inline">
       <div className="flex flex-col items-center justify-center p-6 bg-gray-100 rounded-lg shadow-md lg:flex-row sm:justify-between max-w-[1200px] w-full min-h-[300px]">
@@ -31,7 +31,7 @@ const CompensationBannerItem = ({ title, span, desc, image }) => {
 
             <div className="mt-[60px]">
               <button className="px-6 py-2 font-medium text-white transition bg-black rounded-[27px] hover:bg-gray-800">
-                Qo‘llanmaga o‘tish
+                {more}
               </button>
             </div>
           </div>

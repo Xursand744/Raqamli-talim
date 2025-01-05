@@ -1,1 +1,148 @@
-{}
+{
+  "logoAlt": "Company Logo",
+  "language": {
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "menu": {
+    "center": "Markaz haqida",
+    "aboutUs": "Biz haqimizda",
+    "openData": "Ochiq ma’lumotlar",
+    "leadership": "Rahbariyat",
+    "structure": "Tuzilma",
+    "departments": "Bo’linmalar",
+    "antiCorruption": "Korrupsiyaga qarshi kurashish",
+    "higherOrganization": "Yuqori turuvchi tashkilot",
+    "projects": "Loyihalar",
+    "alXorazmiyHeirs": "Al Xorazmiy Vorislari",
+    "studyCenters": "O'quv markazlar",
+    "itUniversities": "IT universitetlar",
+    "news": "Yangiliklar",
+    "itTips": "IT-maslahatlar",
+    "contact": "Bog’lanish"
+  },
+  "landing": {
+    "title": "Al-Xorazmiy",
+    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "moreDetails": "Batafsil ma'lumot",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "chances": {
+    "title": "Maxsus imkoniyatlar",
+    "walletTitle": "IT kompensatsiya ol",
+    "walletDesc": "ITga sarflagan pullaringni qaytarib ol",
+    "robotTitle": "Maktabda ITni o‘rgan",
+    "robotDesc": "ITga sarflagan pullaringni qaytarib ol"
+  },
+  "events": {
+    "title": "Tadbirlar jadvali",
+    "innoWomenWeek": "InnoWomenWeek",
+    "date": "2024-yil 19-iyul",
+    "description": "6 toifadagi IT loyihalar tanlovlari uchun pul mukofotlari...",
+    "viewMore": "Batafsil ko‘rish",
+    "allEvents": "Barcha tadbirlar"
+  },
+  "compensation": {
+    "walletTitle": "Kompensatsiya",
+    "walletQuestion": "Uni olishni xohlaysizmi?",
+    "walletDesc": "IT sertifikatlash xarajatlaringizning 100% ni qaytarib oling",
+    "centerTitle": "O‘quv markazi",
+    "centerQuestion": "Uni ochishni xohlaysizmi?",
+    "centerDesc": "Yaxshi kelajak uchun ta’limga o‘z ko‘nikmalaringizni sarmoya qiling",
+    "more": "Qo‘llanma"
+  },
+  "metrics": {
+    "centerTitle": "Markaz raqamlarda",
+    "centerDescription": "2023-yilda rezident kompaniyalarning o'quv kurslarini 14300 nafardan ziyod o'quvchilar muvaffaqiyatli bitirdilar, chiqarilgan IT-mutaxassislar soni esa 5190 dan ortiqni tashkil etdi. IT Park rezident kompaniyalari 400 dan ortiq IT kurslarini taklif etadilar.",
+    "activeProjects": "Aktiv loyihalar",
+    "itStudents": "IT o'quvchilar",
+    "metricIndicator": "Ko'rsatgich"
+  },
+  "rate": {
+    "title": "IT sohasidagi bilimingizni baholang",
+    "buttonText": "Testni topshiring"
+  },
+  "topJobs": {
+    "title": "Eng yaxshi ishlar reytingi",
+    "viewAllButton": "Hammasini ko‘rish"
+  },
+  "jobTitles": {
+    "backend": "Backend dasturchi",
+    "frontend": "Frontend dasturchi",
+    "projectManager": "Loyiha menejeri",
+    "mobile": "Mobil dasturchi",
+    "design": "Dizayner",
+    "smm": "SMM mutaxassisi",
+    "animation3d": "3D animatsiya ustasi"
+  },
+  "jobCourses": {
+    "backendCourses": "123 ta kurs mavjud",
+    "frontendCourses": "Oylik hisobotlar",
+    "projectManagerCourses": "Oylik hisobotlar",
+    "avgSalaryText": "O'rtacha maosh"
+  },
+  "successHistory": {
+    "title": "Muvaffaqiyat tarixi",
+    "allEvents": "Barcha tadbirlar",
+    "abror": {
+      "fullName": "Abror Jurayev",
+      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+    },
+    "mohira": {
+      "fullName": "Mohira To’laganova",
+      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+    },
+    "sevinch": {
+      "fullName": "Sevinch Muqimova",
+      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+    }
+  },
+  "locations": {
+    "andijan": "Andijon",
+    "navoi": "Navoiy",
+    "tashkent": "Toshkent"
+  },
+  "roles": {
+    "frontend": "FrontEnd",
+    "backend": "BackEnd",
+    "design": "Dizayn"
+  },
+  "school": {
+    "title": "Top o'quv markazlar",
+    "viewAll": "Barchasini ko'rish",
+    "card": {
+      "pdpAcademy": "PDP Akademiyasi",
+      "studying": "O'qiyotganlar",
+      "graduated": "Bitirganlar",
+      "employed": "Ishga kirganlar",
+      "exporters": "IT-Exportchilar"
+    }
+  },
+  "join": {
+    "title": "Raqamli ta’lim jamoasiga qo’shiling!",
+    "subtitle": "Qobilyatingizni ta'lim kelajagi uchun sarflang",
+    "button": "Jamoaga qo’shil",
+    "logoAlt": "Asosiy logotip"
+  },
+  "footer": {
+    "mapAlt": "Xarita",
+    "logoAlt": "Asosiy logotip",
+    "phone": "+998 71 203 03 43",
+    "email": "education@digital.uz",
+    "address": "100164 Toshkent shahri, I.Muminov ko'chasi, 4",
+    "forStudents": "O‘quvchilarga",
+    "courses": "Kurslar",
+    "centers": "IT o‘quv markazlar",
+    "programs": "Dasturlar",
+    "aboutUs": "Biz haqimizda",
+    "contact": "Biz bilan bog‘lanish",
+    "faq": "FAQ",
+    "forEntrepreneurs": "Tadbirkorlarga",
+    "copyright": "© 2024 MITC. Barcha huquqlar himoyalangan.",
+    "privacyPolicy": "Maxfiylik siyosati",
+    "termsOfService": "Xizmat ko‘rsatish shartlari",
+    "cookieSettings": "Cookies sozlamalari"
+  }
+}

@@ -14,7 +14,7 @@ import Carousel from "./Carousel";
 export default function HomePage() {
   return (
     <div>
-        <Carousel />
+      <Carousel />
       <div className="container">
         <Chances />
       </div>

@@ -1,1 +1,148 @@
-{}
+{
+  "logoAlt": "Company Logo",
+  "language": {
+    "uz": "O'zbek",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "menu": {
+    "center": "О центре",
+    "aboutUs": "О нас",
+    "openData": "Открытые данные",
+    "leadership": "Руководство",
+    "structure": "Структура",
+    "departments": "Отделы",
+    "antiCorruption": "Борьба с коррупцией",
+    "higherOrganization": "Вышестоящая организация",
+    "projects": "Проекты",
+    "alXorazmiyHeirs": "Наследники Аль-Хорезми",
+    "studyCenters": "Учебные центры",
+    "itUniversities": "IT университеты",
+    "news": "Новости",
+    "itTips": "IT советы",
+    "contact": "Контакты"
+  },
+  "landing": {
+    "title": "Аль-Хорезми",
+    "description": "Бесплатные курсы для талантливых учеников 7–11 классов, интересующихся ИТ.",
+    "moreDetails": "Подробнее",
+    "imageAlt": "Иконка образовательной программы",
+    "carouselAlt": "Возможности обучения в ИТ"
+  },
+  "chances": {
+    "title": "Особые возможности",
+    "walletTitle": "Получай компенсацию за ИТ",
+    "walletDesc": "Верни деньги, потраченные на ИТ",
+    "robotTitle": "Изучай ИТ в школе",
+    "robotDesc": "Верни деньги, потраченные на ИТ"
+  },
+  "events": {
+    "title": "Расписание мероприятий",
+    "innoWomenWeek": "InnoWomenWeek",
+    "date": "19 июля 2024 года",
+    "description": "6 видов конкурсов ИТ-проектов с денежными призами в 6 категориях...",
+    "viewMore": "Подробнее",
+    "allEvents": "Все мероприятия"
+  },
+  "compensation": {
+    "walletTitle": "Компенсация",
+    "walletQuestion": "Хотите её получить?",
+    "walletDesc": "Верните 100% стоимости сертификации в ИТ",
+    "centerTitle": "Учебный центр",
+    "centerQuestion": "Хотите его открыть?",
+    "centerDesc": "Инвестируйте свои навыки в образование ради лучшего будущего",
+    "more": "Справочник"
+  },
+  "metrics": {
+    "centerTitle": "Центр в цифрах",
+    "centerDescription": "В 2023 году более 14300 учащихся успешно завершили учебные курсы резидентных компаний, а количество подготовленных ИТ-специалистов превысило 5190. Резидентные компании IT Park предлагают более 400 ИТ-курсов.",
+    "activeProjects": "Активные проекты",
+    "itStudents": "ИТ-учащиеся",
+    "metricIndicator": "Показатель"
+  },
+  "rate": {
+    "title": "Оцените свои знания в области ИТ",
+    "buttonText": "Пройти тест"
+  },
+  "topJobs": {
+    "title": "Рейтинг лучших профессий",
+    "viewAllButton": "Смотреть все"
+  },
+  "jobTitles": {
+    "backend": "Backend-разработчик",
+    "frontend": "Frontend-разработчик",
+    "projectManager": "Менеджер проектов",
+    "mobile": "Мобильный разработчик",
+    "design": "Дизайнер",
+    "smm": "SMM-специалист",
+    "animation3d": "3D-аниматор"
+  },
+  "jobCourses": {
+    "backendCourses": "Доступно 123 курса",
+    "frontendCourses": "Месячные отчёты",
+    "projectManagerCourses": "Месячные отчёты",
+    "avgSalaryText": "Средняя зарплата"
+  },
+  "successHistory": {
+    "title": "Истории успеха",
+    "allEvents": "Все события",
+    "abror": {
+      "fullName": "Абрар Жураев",
+      "desc": "Как стать старшим разработчиком во время учебы"
+    },
+    "mohira": {
+      "fullName": "Мохира Тулаганова",
+      "desc": "Как стать старшим разработчиком во время учебы"
+    },
+    "sevinch": {
+      "fullName": "Севинч Мукимова",
+      "desc": "Как стать старшим разработчиком во время учебы"
+    }
+  },
+  "locations": {
+    "andijan": "Андижан",
+    "navoi": "Навои",
+    "tashkent": "Ташкент"
+  },
+  "roles": {
+    "frontend": "Фронтенд",
+    "backend": "Бэкенд",
+    "design": "Дизайн"
+  },
+  "school": {
+    "title": "Лучшие учебные центры",
+    "viewAll": "Посмотреть все",
+    "card": {
+      "pdpAcademy": "Академия PDP",
+      "studying": "Обучающиеся",
+      "graduated": "Выпускники",
+      "employed": "Трудоустроенные",
+      "exporters": "IT-Экспортеры"
+    }
+  },
+  "join": {
+    "title": "Присоединяйтесь к цифровому образовательному сообществу!",
+    "subtitle": "Используйте свои навыки для будущего образования",
+    "button": "Присоединиться к команде",
+    "logoAlt": "Главный логотип"
+  },
+  "footer": {
+    "mapAlt": "Карта",
+    "logoAlt": "Главный логотип",
+    "phone": "+998 71 203 03 43",
+    "email": "education@digital.uz",
+    "address": "100164 г. Ташкент, ул. И.Муминова, 4",
+    "forStudents": "Для студентов",
+    "courses": "Курсы",
+    "centers": "IT Центры",
+    "programs": "Программы",
+    "aboutUs": "О нас",
+    "contact": "Связаться с нами",
+    "faq": "FAQ",
+    "forEntrepreneurs": "Для предпринимателей",
+    "copyright": "© 2024 MITC. Все права защищены.",
+    "privacyPolicy": "Политика конфиденциальности",
+    "termsOfService": "Условия обслуживания",
+    "cookieSettings": "Настройки cookies"
+  }
+}
