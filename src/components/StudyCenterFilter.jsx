@@ -1,29 +1,56 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Search, ChevronDown, ArrowUpDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import res from "../assets/res.png";
-const initialCourses = [
-  ...Array(30)
-    .fill(null)
-    .map((_, index) => ({
-      id: index + 1,
-      title: "PDP Academy",
-      price: "1,500,000 dan boshlab",
-      tags: [
-        "Frontend",
-        "Backend",
-        "Data Analytic",
-        "Design",
-        "Project Management",
-      ]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 2),
-      location: "Tashkent",
-      status: Math.random() > 0.5 ? ["Offline", "Online"] : ["Offline"],
-      design: "+5",
-    })),
-];
+
+// const initialCourses = [
+//   ...Array(30)
+//     .fill(null)
+//     .map((_, index) => ({
+//       id: index + 1,
+//       title: "PDP Academy",
+//       price: "1,500,000 dan boshlab",
+//       tags: [
+//         "Frontend",
+//         "Backend",
+//         "Data Analytic",
+//         "Design",
+//         "Project Management",
+//       ]
+//         .sort(() => 0.5 - Math.random())
+//         .slice(0, 2),
+//       location: "Tashkent",
+//       status: Math.random() > 0.5 ? ["Offline", "Online"] : ["Offline"],
+//       design: "+5",
+//     })),
+// ];
 
 function Study() {
+  const { t } = useTranslation("global");
+
+  const initialCourses = [
+    ...Array(30)
+      .fill(null)
+      .map((_, index) => ({
+        id: index + 1,
+        title: t("pdp_academy"), // Translated title
+        price: t("price_from", { amount: "1,500,000" }), // Translated price
+        tags: [
+          t("frontend"),
+          t("backend"),
+          t("data_analytic"),
+          t("design"),
+          t("project_management"),
+        ]
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 2), // Randomly pick 2 tags
+        location: t("tashkent"), // Translated location
+        status:
+          Math.random() > 0.5 ? [t("offline"), t("online")] : [t("offline")], // Translated status
+        design: "+5",
+      })),
+  ];
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [courses, setCourses] = useState(initialCourses);
   const [searchQuery, setSearchQuery] = useState("");
@@ -134,8 +161,7 @@ function Study() {
   };
 
   return (
-    <div className=" ">
-      {/* Header */}
+    <div className="">
       <header className="bg-white sticky top-0">
         <div className="container px-4">
           <div className="flex items-center justify-between h-16">
@@ -173,7 +199,146 @@ function Study() {
 
       <div className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex gap-6">
-          {/* Sidebar */}
+          <aside
+            className={`border fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r transform transition-transform duration-200 ease-in-out z-40 sm:transform-none ${
+              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            } sm:translate-x-0 sm:block overflow-y-auto`}
+          >
+            <div className="space-y-6 sticky top-[80px] sm:top-[10px]">
+              <div className="flex justify-between border-b pb-5 items-center mb-4">
+                <h3 className="text-[20px] font-medium">{t("sorting")}</h3>
+                <button
+                  onClick={clearFilters}
+                  className="px-3 py-1 text-blue-400 rounded-full text-sm"
+                >
+                  {t("clear")}
+                </button>
+              </div>
+
+              <div>
+                <h2 className="font-medium mb-3">{t("course_type")}</h2>
+                <div className="space-y-2">
+                  {["design", "frontend", "backend", "project_management"].map(
+                    (key) => (
+                      <label className="flex items-center gap-2" key={key}>
+                        <input
+                          type="checkbox"
+                          className="rounded"
+                          checked={filters[key]}
+                          onChange={() => handleFilterChange(key)}
+                        />
+                        <span>{t(key)}</span>
+                        <span className="text-gray-500 text-sm">7</span>
+                      </label>
+                    )
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-medium mb-3">{t("course_duration")}</h2>
+                <div className="space-y-2">
+                  {["duration1", "duration2", "duration3", "duration4"].map(
+                    (key) => (
+                      <label className="flex items-center gap-2" key={key}>
+                        <input
+                          type="checkbox"
+                          className="rounded"
+                          checked={filters[key]}
+                          onChange={() => handleFilterChange(key)}
+                        />
+                        <span>{t(key)}</span>
+                        <span className="text-gray-500 text-sm">12</span>
+                      </label>
+                    )
+                  )}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-medium mb-3">{t("course_format")}</h2>
+                <div className="space-y-2">
+                  {["online", "offline", "hybrid"].map((key) => (
+                    <label className="flex items-center gap-2" key={key}>
+                      <input
+                        type="checkbox"
+                        className="rounded"
+                        checked={filters[key]}
+                        onChange={() => handleFilterChange(key)}
+                      />
+                      <span>{t(key)}</span>
+                      <span className="text-gray-500 text-sm">12</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                onClick={clearFilters}
+                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                {t("view_courses", { count: 64 })}
+              </button>
+            </div>
+          </aside>
+
+          <main className="flex-1 min-w-0">
+            <h2 className="text-lg font-medium mb-4">
+              {t("center_count", { count: courses.length })}
+            </h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+              {courses.map((course) => (
+                <div
+                  key={course.id}
+                  className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
+                    <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
+                      <img className="w-[80px] h-[80%]" src={res} alt="" />
+                    </div>
+                    <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
+                      <div className="absolute bottom-2 left-2">
+                        <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                          {t("tashkent")}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-2 left-20">
+                        <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
+                          {t("offline")}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-medium">{course.title}</h3>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-4">
+                      <span className="text-blue-700">{t("courses")}:</span>{" "}
+                      {course.price}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {course.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-[#F0F3FF] rounded-full text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </main>
+        </div>
+      </div>
+
+      {/* <div className="max-w-[1400px] mx-auto px-4 py-6">
+        <div className="flex gap-6">
           <aside
             className={` border
 fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r
@@ -193,7 +358,6 @@ sm:translate-x-0 sm:block overflow-y-auto
                 </button>
               </div>
 
-              {/* Course Type Filters */}
               <div>
                 <h2 className="font-medium mb-3">O'quv kurs yo'nalishi</h2>
                 <div className="space-y-2">
@@ -240,7 +404,6 @@ sm:translate-x-0 sm:block overflow-y-auto
                 </div>
               </div>
 
-              {/* Duration Filters */}
               <div>
                 <h2 className="font-medium mb-3">Kurslar davomiyligi</h2>
                 <div className="space-y-2">
@@ -287,7 +450,6 @@ sm:translate-x-0 sm:block overflow-y-auto
                 </div>
               </div>
 
-              {/* Format Filters */}
               <div>
                 <h2 className="font-medium mb-3">Kurslar formati</h2>
                 <div className="space-y-2">
@@ -324,7 +486,6 @@ sm:translate-x-0 sm:block overflow-y-auto
                 </div>
               </div>
 
-              {/* View All Courses Button */}
               <button
                 onClick={clearFilters}
                 className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -334,7 +495,6 @@ sm:translate-x-0 sm:block overflow-y-auto
             </div>
           </aside>
 
-          {/* Main Content */}
           <main className="flex-1 min-w-0">
             <h2 className="text-lg font-medium mb-4">
               Markazlar soni: {courses.length}
@@ -391,7 +551,7 @@ sm:translate-x-0 sm:block overflow-y-auto
             </div>
           </main>
         </div>
-      </div>
+      </div> */}
 
       {/* Overlay */}
       {isSidebarOpen && (
