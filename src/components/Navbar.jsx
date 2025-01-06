@@ -186,7 +186,43 @@ export default function LanguageSelector({ onLanguageSelect }) {
               />
             ))}
           </ul>
-          <div className="relative inline-block text-left" ref={dropdownRef}>
+          <div
+            className="relative inline-flex gap-4 text-left"
+            ref={dropdownRef}
+          >
+            <div
+              className="flex items-center gap-2 space-x-2 cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <div className="flex items-center">
+                <Eye className="text-black mr-3" />
+                <span className="text-lg font-medium mr-1">
+                  {selectedLanguage}
+                </span>
+                <Earth className="text-black" />
+              </div>
+            </div>
+            <div className="lg:hidden">
+              <MobMenu Menus={Menus} />
+            </div>
+
+            {isOpen && (
+              <div className="absolute z-10 mt-8 w-24 rounded-md bg-white shadow-lg animate-fade-in">
+                <div className="py-1">
+                  {languages.map((lang) => (
+                    <div
+                      key={lang}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => handleLanguageSelect(lang)}
+                    >
+                      {t(`language.${lang}`)} {/* Translate language names */}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {/* <div className="relative inline-block text-left" ref={dropdownRef}>
             <div
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
@@ -205,13 +241,13 @@ export default function LanguageSelector({ onLanguageSelect }) {
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                       onClick={() => handleLanguageSelect(lang)}
                     >
-                      {t(`language.${lang}`)} {/* Translate language names */}
+                      {t(`language.${lang}`)}
                     </div>
                   ))}
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
         </nav>
       </header>
     </div>

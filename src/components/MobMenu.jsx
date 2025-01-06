@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function MobMenu({ Menus }) {
+  const { t } = useTranslation("global");
+
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(null);
   const toggleDrawer = () => {
@@ -38,13 +41,12 @@ export default function MobMenu({ Menus }) {
             const hasSubMenu = subMenu?.length;
             return (
               <li key={name}>
-                
                 <a
-                  href={link}  // Asosiy menyu linki
+                  href={link} // Asosiy menyu linki
                   className="flex-center-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
                   onClick={() => setClicked(hasSubMenu && isClicked ? null : i)}
                 >
-                  {name}
+                  {t(name)}
                   {hasSubMenu && (
                     <ChevronDown
                       className={`ml-auto ${isClicked && "rotate-180"}`}
@@ -61,11 +63,12 @@ export default function MobMenu({ Menus }) {
                     {subMenu.map(({ name, link, icon: Icon }) => (
                       <li key={name}>
                         <a
-                          href={link}  // Submenu linki
+                          href={link} // Submenu linki
                           className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
                         >
-                          {Icon && <Icon size={17} />} {/* Icon bo'lsa ko'rsatish */}
-                          {name}
+                          {Icon && <Icon size={17} />}{" "}
+                          {/* Icon bo'lsa ko'rsatish */}
+                          {t(name)}
                         </a>
                       </li>
                     ))}
