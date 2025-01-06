@@ -171,5 +171,12 @@
     "home": "Home",
     "about": "About the Center",
     "aboutCenter": "About the Digital Education Center"
-  }
+  },
+  "search_placeholder": "Training center name",
+  "region": "Region",
+  "filter_title": "Filters",
+  "clear": "Clear",
+  "course_type": "Course Type",
+  "design": "Design",
+  "courses_count": "Number of centers: {{count}}"
 }

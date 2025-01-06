@@ -1,22 +1,32 @@
-import React, { useState, useEffect } from 'react'
-import { Menu, X, Search, ChevronDown, ArrowUpDown } from 'lucide-react'
-import res from "../assets/res.png"
+import React, { useState, useEffect } from "react";
+import { Menu, X, Search, ChevronDown, ArrowUpDown } from "lucide-react";
+import res from "../assets/res.png";
 const initialCourses = [
-  ...Array(30).fill(null).map((_, index) => ({
-    id: index + 1,
-    title: "PDP Academy",
-    price: "1,500,000 dan boshlab",
-    tags: ["Frontend", "Backend", "Data Analytic", "Design", "Project Management"].sort(() => 0.5 - Math.random()).slice(0, 2),
-    location: "Tashkent",
-    status: Math.random() > 0.5 ? ["Offline", "Online"] : ["Offline"],
-    design: "+5"
-  }))
-]
+  ...Array(30)
+    .fill(null)
+    .map((_, index) => ({
+      id: index + 1,
+      title: "PDP Academy",
+      price: "1,500,000 dan boshlab",
+      tags: [
+        "Frontend",
+        "Backend",
+        "Data Analytic",
+        "Design",
+        "Project Management",
+      ]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 2),
+      location: "Tashkent",
+      status: Math.random() > 0.5 ? ["Offline", "Online"] : ["Offline"],
+      design: "+5",
+    })),
+];
 
 function Study() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [courses, setCourses] = useState(initialCourses)
-  const [searchQuery, setSearchQuery] = useState('')
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [courses, setCourses] = useState(initialCourses);
+  const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState({
     design: false,
     frontend: false,
@@ -28,69 +38,82 @@ function Study() {
     duration4: false,
     online: false,
     offline: false,
-    hybrid: false
-  })
-  const [sortAscending, setSortAscending] = useState(true)
+    hybrid: false,
+  });
+  const [sortAscending, setSortAscending] = useState(true);
 
   useEffect(() => {
-    let filteredCourses = initialCourses
+    let filteredCourses = initialCourses;
 
     // Apply search filter
     if (searchQuery) {
-      filteredCourses = filteredCourses.filter(course =>
-        course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        course.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
+      filteredCourses = filteredCourses.filter(
+        (course) =>
+          course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          course.tags.some((tag) =>
+            tag.toLowerCase().includes(searchQuery.toLowerCase())
+          )
+      );
     }
 
     // Apply checkbox filters
-    const activeFilters = Object.entries(filters).filter(([key, value]) => value && ['frontend', 'design', 'backend', 'projectManagement'].includes(key))
+    const activeFilters = Object.entries(filters).filter(
+      ([key, value]) =>
+        value &&
+        ["frontend", "design", "backend", "projectManagement"].includes(key)
+    );
 
     if (activeFilters.length > 0) {
       const filterCounts = {
         frontend: 5,
         design: 7,
         backend: 10,
-        projectManagement: 8
-      }
+        projectManagement: 8,
+      };
 
-      let totalCount = activeFilters.reduce((sum, [filter]) => sum + filterCounts[filter], 0)
+      let totalCount = activeFilters.reduce(
+        (sum, [filter]) => sum + filterCounts[filter],
+        0
+      );
 
-      filteredCourses = filteredCourses.filter(course =>
-        activeFilters.some(([filter]) => {
-          if (filter === 'projectManagement') {
-            return course.tags.includes('Project Management')
-          }
-          return course.tags.includes(filter.charAt(0).toUpperCase() + filter.slice(1))
-        })
-      ).slice(0, totalCount)
+      filteredCourses = filteredCourses
+        .filter((course) =>
+          activeFilters.some(([filter]) => {
+            if (filter === "projectManagement") {
+              return course.tags.includes("Project Management");
+            }
+            return course.tags.includes(
+              filter.charAt(0).toUpperCase() + filter.slice(1)
+            );
+          })
+        )
+        .slice(0, totalCount);
     }
 
     // Apply other filters (duration, format)
-    filteredCourses = filteredCourses.filter(course => {
-      const formatMatch = (
+    filteredCourses = filteredCourses.filter((course) => {
+      const formatMatch =
         (filters.online && course.status.includes("Online")) ||
         (filters.offline && course.status.includes("Offline")) ||
         (filters.hybrid && course.status.includes("Hybrid")) ||
-        (!filters.online && !filters.offline && !filters.hybrid)
-      )
+        (!filters.online && !filters.offline && !filters.hybrid);
 
-      return formatMatch
-    })
+      return formatMatch;
+    });
 
     // Apply sorting
     filteredCourses.sort((a, b) => {
       return sortAscending
         ? a.title.localeCompare(b.title)
-        : b.title.localeCompare(a.title)
-    })
+        : b.title.localeCompare(a.title);
+    });
 
-    setCourses(filteredCourses)
-  }, [filters, sortAscending, searchQuery])
+    setCourses(filteredCourses);
+  }, [filters, sortAscending, searchQuery]);
 
   const handleFilterChange = (filter) => {
-    setFilters(prev => ({ ...prev, [filter]: !prev[filter] }))
-  }
+    setFilters((prev) => ({ ...prev, [filter]: !prev[filter] }));
+  };
 
   const clearFilters = () => {
     setFilters({
@@ -104,11 +127,11 @@ function Study() {
       duration4: false,
       online: false,
       offline: false,
-      hybrid: false
-    })
-    setSearchQuery('')
-    setSortAscending(true)
-  }
+      hybrid: false,
+    });
+    setSearchQuery("");
+    setSortAscending(true);
+  };
 
   return (
     <div className=" ">
@@ -134,7 +157,10 @@ function Study() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                <Search
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={20}
+                />
               </div>
               <button className="flex items-center gap-2 px-4 py-2 border rounded-lg">
                 Hudud
@@ -148,15 +174,17 @@ function Study() {
       <div className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex gap-6">
           {/* Sidebar */}
-          <aside className={` border
+          <aside
+            className={` border
 fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r
 transform transition-transform duration-200 ease-in-out z-40
-sm:transform-none ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+sm:transform-none ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
 sm:translate-x-0 sm:block overflow-y-auto
-`}>
+`}
+          >
             <div className="space-y-6 sticky top-[80px] sm:top-[10px]">
               <div className="flex justify-between border-b pb-5 items-center mb-4">
-                <h3 className='text-[20px] font-medium'>Saralash</h3>
+                <h3 className="text-[20px] font-medium">Saralash</h3>
                 <button
                   onClick={clearFilters}
                   className="px-3 py-1 text-blue-400 rounded-full text-sm"
@@ -174,7 +202,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.design}
-                      onChange={() => handleFilterChange('design')}
+                      onChange={() => handleFilterChange("design")}
                     />
                     <span>Dizayn</span>
                     <span className="text-gray-500 text-sm">7</span>
@@ -184,7 +212,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.frontend}
-                      onChange={() => handleFilterChange('frontend')}
+                      onChange={() => handleFilterChange("frontend")}
                     />
                     <span>Frontend</span>
                     <span className="text-gray-500 text-sm">5</span>
@@ -194,7 +222,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.backend}
-                      onChange={() => handleFilterChange('backend')}
+                      onChange={() => handleFilterChange("backend")}
                     />
                     <span>Backend</span>
                     <span className="text-gray-500 text-sm">10</span>
@@ -204,7 +232,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.projectManagement}
-                      onChange={() => handleFilterChange('projectManagement')}
+                      onChange={() => handleFilterChange("projectManagement")}
                     />
                     <span>Project management</span>
                     <span className="text-gray-500 text-sm">8</span>
@@ -221,7 +249,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.duration1}
-                      onChange={() => handleFilterChange('duration1')}
+                      onChange={() => handleFilterChange("duration1")}
                     />
                     <span>1 oygacha</span>
                     <span className="text-gray-500 text-sm">12</span>
@@ -231,7 +259,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.duration2}
-                      onChange={() => handleFilterChange('duration2')}
+                      onChange={() => handleFilterChange("duration2")}
                     />
                     <span>1-3 oy</span>
                     <span className="text-gray-500 text-sm">23</span>
@@ -241,7 +269,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.duration3}
-                      onChange={() => handleFilterChange('duration3')}
+                      onChange={() => handleFilterChange("duration3")}
                     />
                     <span>3-6 oy</span>
                     <span className="text-gray-500 text-sm">16</span>
@@ -251,7 +279,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.duration4}
-                      onChange={() => handleFilterChange('duration4')}
+                      onChange={() => handleFilterChange("duration4")}
                     />
                     <span>6 oydan ko'p</span>
                     <span className="text-gray-500 text-sm">8</span>
@@ -268,7 +296,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.online}
-                      onChange={() => handleFilterChange('online')}
+                      onChange={() => handleFilterChange("online")}
                     />
                     <span>Onlayn</span>
                     <span className="text-gray-500 text-sm">12</span>
@@ -278,7 +306,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.offline}
-                      onChange={() => handleFilterChange('offline')}
+                      onChange={() => handleFilterChange("offline")}
                     />
                     <span>Oflayn</span>
                     <span className="text-gray-500 text-sm">23</span>
@@ -288,7 +316,7 @@ sm:translate-x-0 sm:block overflow-y-auto
                       type="checkbox"
                       className="rounded"
                       checked={filters.hybrid}
-                      onChange={() => handleFilterChange('hybrid')}
+                      onChange={() => handleFilterChange("hybrid")}
                     />
                     <span>Gibrid</span>
                     <span className="text-gray-500 text-sm">18</span>
@@ -308,17 +336,21 @@ sm:translate-x-0 sm:block overflow-y-auto
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            <h2 className="text-lg font-medium mb-4">Markazlar soni: {courses.length}</h2>
+            <h2 className="text-lg font-medium mb-4">
+              Markazlar soni: {courses.length}
+            </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-              {courses.map(course => (
-                <div key={course.id} className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow">
+              {courses.map((course) => (
+                <div
+                  key={course.id}
+                  className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
+                >
                   <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
-                      <img className='w-[80px] h-[80%]' src={res} alt="" />
+                      <img className="w-[80px] h-[80%]" src={res} alt="" />
                     </div>
                     <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
-
                       <div className="absolute bottom-2 left-2 ">
                         <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
                           Toshkent
@@ -329,7 +361,6 @@ sm:translate-x-0 sm:block overflow-y-auto
                           Offline
                         </span>
                       </div>
-
                     </div>
                   </div>
 
@@ -337,9 +368,12 @@ sm:translate-x-0 sm:block overflow-y-auto
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-medium">{course.title}</h3>
                     </div>
-                    <p className="text-sm text-gray-600 mb-4"><span className='text-blue-700'>Kurslar:</span> {course.price}</p>
+                    <p className="text-sm text-gray-600 mb-4">
+                      <span className="text-blue-700">Kurslar:</span>{" "}
+                      {course.price}
+                    </p>
                     <div className="flex flex-wrap gap-2">
-                      {course.tags.map(tag => (
+                      {course.tags.map((tag) => (
                         <span
                           key={tag}
                           className="px-3 py-1 bg-[#F0F3FF] rounded-full text-sm"
@@ -367,7 +401,7 @@ sm:translate-x-0 sm:block overflow-y-auto
         />
       )}
     </div>
-  )
+  );
 }
 
-export default Study
+export default Study;

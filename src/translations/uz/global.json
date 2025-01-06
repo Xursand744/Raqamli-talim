@@ -171,5 +171,12 @@
     "home": "Bosh sahifa",
     "about": "Markaz haqida",
     "aboutCenter": "Raqamli Ta’lim markazi haqida"
-  }
+  },
+  "search_placeholder": "O'quv markaz nomi",
+  "region": "Hudud",
+  "filter_title": "Saralash",
+  "clear": "Tozalash",
+  "course_type": "O'quv kurs yo'nalishi",
+  "design": "Dizayn",
+  "courses_count": "Markazlar soni: {{count}}"
 }
