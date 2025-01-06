@@ -1,24 +1,23 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import HomeIcon from "../assets/home-icon.svg";
-import { prototype } from "postcss/lib/previous-map";
 
 function BreadCrumps() {
   const location = useLocation();
+  const { t } = useTranslation("global"); // Import translation hook
 
   const currentLink = [];
 
   const crumbs = location.pathname
     .split("/")
-    .filter((crumb) => crumb != "")
+    .filter((crumb) => crumb !== "")
     .map((crumb) => {
       currentLink.push(`/${crumb}`);
       if (crumb === "about") {
         return (
           <div className="crumb" key={crumb}>
             <Link to={currentLink.join("")}>
-              {/* {capitalizeFirstLetter( */}
-              Markaz haqida {">"} Raqamli Ta’lim markazi haqida
-              {/* )} */}
+              {t("breadcrumbs.about")} {">"} {t("breadcrumbs.aboutCenter")}
             </Link>
           </div>
         );
@@ -30,7 +29,7 @@ function BreadCrumps() {
       <div className="container flex gap-[10px]">
         <NavLink className={`flex gap-[10px]`} to={"/"}>
           <img src={HomeIcon} alt="" />
-          Bosh sahifa
+          {t("breadcrumbs.home")}
         </NavLink>{" "}
         {">"}
         {crumbs}

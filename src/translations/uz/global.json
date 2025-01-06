@@ -144,5 +144,32 @@
     "privacyPolicy": "Maxfiylik siyosati",
     "termsOfService": "Xizmat ko‘rsatish shartlari",
     "cookieSettings": "Cookies sozlamalari"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "description": "Raqamli ta'limni rivojlantirish markazi vazirlik oldiga qo'ygan missiyalarga erishishda IT iqtidorlar va xususiy IT ta'limni qo'llab-quvvatlash, yoshlarni IT bilimini oshirishda davlat tomonidan moliyalashtiriladigan dasturlarni ishlab chiqish va muvofiqlashtirish, hamda aholi va davlat xizmatchilarining IT savodxonligini oshirish ustida uzoq muddatli strategik faoliyatni olib boradi.",
+    "filters": [
+      "Biz haqimizda",
+      "Ochiq ma’lumotlar",
+      "Rahbariyat",
+      "Tuzilma",
+      "Bo’linmalar",
+      "Korrupsiyaga qarshi kurashish",
+      "Yuqori turuvchi tashkilot",
+      "Ochiq ma’lumotlar"
+    ],
+    "counts": [
+      "IT ta’lim markazlari soni",
+      "IT ta’lim markazlaridagi o'quvchilar soni",
+      "ITda band qilingan yoshlar soni",
+      "IT mahsulotlar eksport hajmini 5 milliard dollar qilish"
+    ],
+    "goal": "Markaz 2030-yilga qadar quyidagi natijalarga erishish ustida ishlaydi",
+    "finalMessage": "Biz yoshlar bilan birgalikda yorqin kelajakni kodlaymiz!"
+  },
+  "breadcrumbs": {
+    "home": "Bosh sahifa",
+    "about": "Markaz haqida",
+    "aboutCenter": "Raqamli Ta’lim markazi haqida"
   }
 }

@@ -144,5 +144,32 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "cookieSettings": "Cookie Settings"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "The Center for Digital Education Development...",
+    "filters": [
+      "About Us",
+      "Open Data",
+      "Leadership",
+      "Structure",
+      "Departments",
+      "Anti-Corruption",
+      "Supervisory Organization",
+      "Open Data"
+    ],
+    "counts": [
+      "Number of IT education centers",
+      "Number of students in IT education centers",
+      "Young people employed in IT",
+      "IT product export volume to reach 5 billion dollars"
+    ],
+    "goal": "The center works to achieve the following results by 2030",
+    "finalMessage": "We are coding a brighter future with the youth!"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "about": "About the Center",
+    "aboutCenter": "About the Digital Education Center"
   }
 }
