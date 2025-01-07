@@ -125,47 +125,47 @@
 //         </div>
 //       </div>
 
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-//         {filteredJobs.map((job) => (
-//           <div
-//             key={job.id}
-//             className="bg-[#F8F9FF] rounded-xl p-4 hover:shadow-lg transition-shadow cursor-pointer"
-//             onClick={() => {
-//               navigate(`${job.id}`);
-//             }}
-//           >
-//             <div className="relative mb-4">
-//               <img
-//                 src={job.image}
-//                 alt={job.title}
-//                 className="w-full h-32 object-cover rounded-lg bg-white"
-//               />
-//               <div className="absolute bottom-1 left-2 bg-white px-2 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-//                 <span className="text-orange-500">👑</span>
-//                 {job.id}
-//               </div>
-//               <div className="absolute bottom-2 left-16 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs">
-//                 {job.price}
-//               </div>
-//             </div>
+      // <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      //   {filteredJobs.map((job) => (
+      //     <div
+      //       key={job.id}
+      //       className="bg-[#F8F9FF] rounded-xl p-4 hover:shadow-lg transition-shadow cursor-pointer"
+      //       onClick={() => {
+      //         navigate(`${job.id}`);
+      //       }}
+      //     >
+      //       <div className="relative mb-4">
+      //         <img
+      //           src={job.image}
+      //           alt={job.title}
+      //           className="w-full h-32 object-cover rounded-lg bg-white"
+      //         />
+      //         <div className="absolute bottom-1 left-2 bg-white px-2 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+      //           <span className="text-orange-500">👑</span>
+      //           {job.id}
+      //         </div>
+      //         <div className="absolute bottom-2 left-16 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs">
+      //           {job.price}
+      //         </div>
+      //       </div>
 
-//             <h3 className="font-semibold text-lg mb-1">{job.title}</h3>
-//             <p className="text-gray-600 text-sm mb-2">{job.description}</p>
-//             <p className="text-gray-500 text-sm mb-4">{job.subtitle}</p>
+      //       <h3 className="font-semibold text-lg mb-1">{job.title}</h3>
+      //       <p className="text-gray-600 text-sm mb-2">{job.description}</p>
+      //       <p className="text-gray-500 text-sm mb-4">{job.subtitle}</p>
 
-//             <div className="flex justify-between items-center">
-//               <div className="bg-blue-500 text-white px-3 py-1 rounded-lg">
-//                 <div className="text-xs">O'rtacha</div>
-//                 <div className="font-medium">{job.avgTime}</div>
-//               </div>
-//               <div className="bg-white border px-3 py-1 rounded-lg">
-//                 <div className="text-xs">Eng kop</div>
-//                 <div className="font-medium">{job.maxTime}</div>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
+      //       <div className="flex justify-between items-center">
+      //         <div className="bg-blue-500 text-white px-3 py-1 rounded-lg">
+      //           <div className="text-xs">O'rtacha</div>
+      //           <div className="font-medium">{job.avgTime}</div>
+      //         </div>
+      //         <div className="bg-white border px-3 py-1 rounded-lg">
+      //           <div className="text-xs">Eng kop</div>
+      //           <div className="font-medium">{job.maxTime}</div>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   ))}
+      // </div>
 //     </div>
 //   );
 // }
@@ -300,7 +300,51 @@ export default function JobSearch() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filteredJobs.map((job) => (
+          <div
+            key={job.id}
+            className="bg-[#F8F9FF] rounded-xl p-4 hover:shadow-lg transition-shadow cursor-pointer"
+            onClick={() => {
+              navigate(`${job.id}`);
+            }}
+          >
+            <div className="relative mb-4">
+              <img
+                src={job.image}
+                alt={t(job.titleKey)}
+                className="w-full h-32 object-cover rounded-lg bg-white"
+              />
+              <div className="absolute bottom-1 left-2 bg-white px-2 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                <span className="text-orange-500">👑</span>
+                {job.id}
+              </div>
+              <div className="absolute bottom-2 left-16 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs">
+                {job.price}
+              </div>
+            </div>
+
+            <h3 className="font-semibold text-lg mb-1">{t(job.titleKey)}</h3>
+            <p className="text-gray-600 text-sm mb-2">{t(job.descriptionKey)}</p>
+            <p className="text-gray-500 text-sm mb-4">{t(job.subtitleKey)}</p>
+
+            <div className="flex justify-between items-center">
+              <div className="bg-blue-500 text-white px-3 py-1 rounded-lg">
+                <div className="text-xs">{t("average")}</div>
+                <div className="font-medium">{job.avgTime}</div>
+              </div>
+              <div className="bg-white border px-3 py-1 rounded-lg">
+                <div className="text-xs">{t("highest")}</div>
+                <div className="font-medium">{job.maxTime}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div> */}
+
+{/* +++++++++++++++++++++++++++++++++++++++++++++++++ */}
+
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredJobs.map((job) => (
           <div
             key={job.id}
@@ -341,6 +385,7 @@ export default function JobSearch() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }
