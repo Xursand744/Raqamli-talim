@@ -5,6 +5,11 @@
     "ru": "Русский",
     "en": "English"
   },
+
+
+
+ 
+  
   "menu": {
     "center": "About the Center",
     "aboutUs": "About Us",
@@ -214,5 +219,22 @@
   "MoreThan4Years": "More than 4 Years",
   "Online": "Online",
   "Offline": "Offline",
-  "Hybrid": "Hybrid"
+  "Hybrid": "Hybrid",
+
+  "job_count": "Number of Directions",
+  "search_placeholder": "Enter job title",
+  "sort_by_rating": "Sort by Rating",
+  "average": "Average",
+  "highest": "Highest",
+  "monthly_info": "Monthly Data",
+  "frontend_dev": "Frontend Development",
+  "web_design": "Web Design",
+  "backend_dev": "Backend Development",
+  "graphic_design": "Graphic Design",
+  "frontend_description": "HTML, CSS, JavaScript, React",
+  "web_design_description": "UI/UX, Figma, Adobe XD",
+  "backend_description": "Node.js, Python, Databases",
+  "graphic_design_description": "Photoshop, Illustrator, InDesign"
+  
 }
+

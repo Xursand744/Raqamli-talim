@@ -5,6 +5,8 @@
     "ru": "Русский",
     "en": "English"
   },
+  
+  
   "menu": {
     "center": "Markaz haqida",
     "aboutUs": "Biz haqimizda",
@@ -214,5 +216,20 @@
   "MoreThan4Years": "4 yildan ko'p",
   "Online": "Onlayn",
   "Offline": "Oflayn",
-  "Hybrid": "Gibrid"
+  "Hybrid": "Gibrid",
+
+  "job_count": "Yo'nalishlar soni",
+  "search_placeholder": "Ish nomini kiriting",
+  "sort_by_rating": "Reyting bo'yicha",
+  "average": "O'rtacha",
+  "highest": "Eng ko'p",
+  "monthly_info": "Oylik ma'lumotlari",
+  "frontend_dev": "Frontend Dasturlash",
+  "web_design": "Veb-Dizayn",
+  "backend_dev": "Backend Dasturlash",
+  "graphic_design": "Grafik Dizayn",
+  "frontend_description": "HTML, CSS, JavaScript, React",
+  "web_design_description": "UI/UX, Figma, Adobe XD",
+  "backend_description": "Node.js, Python, Ma'lumotlar bazalari",
+  "graphic_design_description": "Photoshop, Illustrator, InDesign"
 }
