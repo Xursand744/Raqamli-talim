@@ -109,18 +109,20 @@ export default function CourseFilter() {
             className="w-full pl-10 p-2 border rounded"
           />
         </div>
-        {courses.map((course) => (
-          <label
-            key={course.name}
-            className="flex items-center justify-between py-2"
-          >
-            <div className="flex items-center">
-              <input type="checkbox" className="w-4 h-4 mr-2" />
-              <span>{course.name}</span>
-            </div>
-            <span className="text-gray-500">{course.count}</span>
-          </label>
-        ))}
+        {courses.map((course) => {
+          return (
+            <label
+              key={course.name}
+              className="flex items-center justify-between py-2"
+            >
+              <div className="flex items-center">
+                <input type="checkbox" className="w-4 h-4 mr-2" />
+                <span>{course.name}</span>
+              </div>
+              <span className="text-gray-500">{course.count}</span>
+            </label>
+          );
+        })}
       </div>
 
       <div className="mb-6">

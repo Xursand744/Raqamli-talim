@@ -194,8 +194,8 @@ export default function PriceRange({ priceRange, setPriceRange }) {
             <div
               className="absolute h-1 bg-blue-500 rounded-lg"
               style={{
-                left: `${priceRange.min / 50000}%`,
-                right: `${100 - priceRange.max / 50000}%`,
+                left: `${priceRange / 50000}%`,
+                right: `${100 - priceRange / 50000}%`,
               }}
             />
           </div>
@@ -204,7 +204,7 @@ export default function PriceRange({ priceRange, setPriceRange }) {
             name="min"
             min="0"
             max="5000000"
-            value={priceRange.min}
+            value={priceRange}
             onChange={handleRangeChange}
             className="absolute w-full h-1 -mt-1 bg-transparent appearance-none pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-500 [&::-moz-range-thumb]:cursor-pointer [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:w-4 [&::-ms-thumb]:h-4 [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-blue-500 [&::-ms-thumb]:cursor-pointer"
           />
@@ -213,7 +213,7 @@ export default function PriceRange({ priceRange, setPriceRange }) {
             name="max"
             min="0"
             max="5000000"
-            value={priceRange.max}
+            value={priceRange}
             onChange={handleRangeChange}
             className="absolute w-full h-1 -mt-1 bg-transparent appearance-none pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-500 [&::-moz-range-thumb]:cursor-pointer [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:w-4 [&::-ms-thumb]:h-4 [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-blue-500 [&::-ms-thumb]:cursor-pointer"
           />
@@ -221,10 +221,10 @@ export default function PriceRange({ priceRange, setPriceRange }) {
         <div className="flex gap-4 items-center">
           <input
             type="text"
-            value={formatPrice(priceRange.min)}
+            value={formatPrice(priceRange)}
             onChange={(e) => {
               const value = parseInt(e.target.value.replace(/[^0-9]/g, ""));
-              if (!isNaN(value) && value >= 0 && value <= priceRange.max) {
+              if (!isNaN(value) && value >= 0 && value <= priceRange) {
                 setPriceRange((prev) => ({ ...prev, min: value }));
               }
             }}
@@ -232,14 +232,10 @@ export default function PriceRange({ priceRange, setPriceRange }) {
           />
           <input
             type="text"
-            value={formatPrice(priceRange.max)}
+            value={formatPrice(priceRange)}
             onChange={(e) => {
               const value = parseInt(e.target.value.replace(/[^0-9]/g, ""));
-              if (
-                !isNaN(value) &&
-                value >= priceRange.min &&
-                value <= 5000000
-              ) {
+              if (!isNaN(value) && value >= priceRange && value <= 5000000) {
                 setPriceRange((prev) => ({ ...prev, max: value }));
               }
             }}
@@ -250,3 +246,85 @@ export default function PriceRange({ priceRange, setPriceRange }) {
     </div>
   );
 }
+
+// export default function PriceRange({
+//   priceRange = { min: 0, max: 5000000 },
+//   setPriceRange,
+// }) {
+//   const formatPrice = (price) => {
+//     return new Intl.NumberFormat("uz-UZ").format(price);
+//   };
+
+//   const handleRangeChange = (e) => {
+//     const { name, value } = e.target;
+//     setPriceRange((prev) => ({
+//       ...prev,
+//       [name]: parseInt(value),
+//     }));
+//   };
+
+//   return (
+//     <div>
+//       <h3 className="font-medium mb-2">Kurslar narx oralig'i</h3>
+//       <div className="space-y-2">
+//         <div className="relative pt-1">
+//           <div className="h-1 bg-gray-200 rounded-lg">
+//             <div
+//               className="absolute h-1 bg-blue-500 rounded-lg"
+//               style={{
+//                 left: `${(priceRange.min || 0) / 50000}%`,
+//                 right: `${100 - (priceRange.max || 5000000) / 50000}%`,
+//               }}
+//             />
+//           </div>
+//           <input
+//             type="range"
+//             name="min"
+//             min="0"
+//             max="5000000"
+//             value={priceRange.min || 0}
+//             onChange={handleRangeChange}
+//             className="absolute w-full h-1 -mt-1 bg-transparent appearance-none pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-500 [&::-moz-range-thumb]:cursor-pointer [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:w-4 [&::-ms-thumb]:h-4 [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-blue-500 [&::-ms-thumb]:cursor-pointer"
+//           />
+//           <input
+//             type="range"
+//             name="max"
+//             min="0"
+//             max="5000000"
+//             value={priceRange.max || 5000000}
+//             onChange={handleRangeChange}
+//             className="absolute w-full h-1 -mt-1 bg-transparent appearance-none pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:cursor-pointer [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-blue-500 [&::-moz-range-thumb]:cursor-pointer [&::-ms-thumb]:pointer-events-auto [&::-ms-thumb]:w-4 [&::-ms-thumb]:h-4 [&::-ms-thumb]:appearance-none [&::-ms-thumb]:rounded-full [&::-ms-thumb]:bg-blue-500 [&::-ms-thumb]:cursor-pointer"
+//           />
+//         </div>
+//         <div className="flex gap-4 items-center">
+//           <input
+//             type="text"
+//             value={formatPrice(priceRange.min || 0)}
+//             onChange={(e) => {
+//               const value = parseInt(e.target.value.replace(/[^0-9]/g, ""));
+//               if (!isNaN(value) && value >= 0 && value <= priceRange.max) {
+//                 setPriceRange((prev) => ({ ...prev, min: value }));
+//               }
+//             }}
+//             className="w-full p-2 border rounded-lg text-sm text-center"
+//           />
+//           <input
+//             type="text"
+//             value={formatPrice(priceRange.max || 5000000)}
+//             onChange={(e) => {
+//               const value = parseInt(e.target.value.replace(/[^0-9]/g, ""));
+//               if (
+//                 !isNaN(value) &&
+//                 value >= priceRange.min &&
+//                 value <= 5000000
+//               ) {
+//                 setPriceRange((prev) => ({ ...prev, max: value }));
+//               }
+//             }}
+//             className="w-full p-2 border rounded-lg text-sm text-center"
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
