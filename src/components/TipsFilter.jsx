@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X } from "lucide-react";
 import PriceRange from "./PriceRange";
 import CourseItem from "./CourseItem";
 import CourseItemImage from "../assets/course-item.jpg";
@@ -301,7 +301,9 @@ export default function TipsFilter() {
         >
           <div className="space-y-6 h-full overflow-y-auto">
             <div className="flex justify-between items-center">
-              <h2 className="text-[#222] text-xl md:text-2xl font-medium">Saralash</h2>
+              <h2 className="text-[#222] text-xl md:text-2xl font-medium">
+                Saralash
+              </h2>
               <p
                 className="text-[#2675EB] text-sm md:text-base cursor-pointer"
                 id="clean-filters"
@@ -367,7 +369,9 @@ export default function TipsFilter() {
                       )}
                     </div>
                     <span className="text-sm flex-1">{center.name}</span>
-                    <span className="text-sm text-gray-500">{center.count}</span>
+                    <span className="text-sm text-gray-500">
+                      {center.count}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -417,7 +421,9 @@ export default function TipsFilter() {
                       )}
                     </div>
                     <span className="text-sm flex-1">{course.name}</span>
-                    <span className="text-sm text-gray-500">{course.count}</span>
+                    <span className="text-sm text-gray-500">
+                      {course.count}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -499,7 +505,9 @@ export default function TipsFilter() {
                       )}
                     </div>
                     <span className="text-sm flex-1">{format.name}</span>
-                    <span className="text-sm text-gray-500">{format.count}</span>
+                    <span className="text-sm text-gray-500">
+                      {format.count}
+                    </span>
                   </label>
                 ))}
               </div>
@@ -520,4 +528,3 @@ export default function TipsFilter() {
     </div>
   );
 }
-
