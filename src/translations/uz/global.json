@@ -198,5 +198,21 @@
   "tashkent": "Toshkent",
   "pdp_academy": "PDP Akademiya",
   "price_from": "{{amount}} dan boshlab",
-  "data_analytic": "Ma'lumotlar tahlili"
+  "data_analytic": "Ma'lumotlar tahlili",
+  "Sort": "Saralash",
+  "Clear": "Tozalash",
+  "UniversityCount": "{{count}} ta Universitetlar",
+  "ITSpecialty": "IT yo'nalishi",
+  "StudyDuration": "O'qish davomiyligi",
+  "StudyFormat": "O'qish formati",
+  "Design": "Dizayn",
+  "Frontend": "Frontend",
+  "Backend": "Backend",
+  "ProjectManagement": "Loyiha boshqaruvi",
+  "3Years": "3 yil",
+  "4Years": "4 yil",
+  "MoreThan4Years": "4 yildan ko'p",
+  "Online": "Onlayn",
+  "Offline": "Oflayn",
+  "Hybrid": "Gibrid"
 }

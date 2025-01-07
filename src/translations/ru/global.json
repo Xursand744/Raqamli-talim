@@ -198,5 +198,21 @@
   "tashkent": "Ташкент",
   "pdp_academy": "Академия PDP",
   "price_from": "от {{amount}}",
-  "data_analytic": "Аналитика данных"
+  "data_analytic": "Аналитика данных",
+  "Sort": "Сортировать",
+  "Clear": "Очистить",
+  "UniversityCount": "{{count}} Университетов",
+  "ITSpecialty": "IT Специальность",
+  "StudyDuration": "Продолжительность обучения",
+  "StudyFormat": "Формат обучения",
+  "Design": "Дизайн",
+  "Frontend": "Фронтенд",
+  "Backend": "Бэкенд",
+  "ProjectManagement": "Управление проектами",
+  "3Years": "3 года",
+  "4Years": "4 года",
+  "MoreThan4Years": "Больше 4 лет",
+  "Online": "Онлайн",
+  "Offline": "Офлайн",
+  "Hybrid": "Гибрид"
 }
