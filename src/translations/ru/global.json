@@ -22,6 +22,29 @@
     "itTips": "IT советы",
     "contact": "Контакты"
   },
+  "breadcrumb": {
+    "home": "Главная",
+    "itTips": "IT Советы",
+    "itDirections": "IT Направления",
+    "backend": "Бэкенд"
+  },
+  "backends": {
+    "title": "Бэкенд",
+    "description": "Это скрытая часть программного обеспечения, которую пользователи не видят, но обеспечивает правильное функционирование приложения или сайта.",
+    "rank": "#1",
+    "courses": "123 курса"
+  },
+  "metricse": {
+    "min": "Самая низкая зарплата",
+    "avg": "Средняя зарплата",
+    "max": "Самая высокая зарплата"
+  },
+  "chart": {
+    "title": "График спроса"
+  },
+  "months": [
+    "Ян", "Фев", "Мар", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек"
+  ],
   "landing": {
     "title": "Аль-Хорезми",
     "description": "Бесплатные курсы для талантливых учеников 7–11 классов, интересующихся ИТ.",
@@ -109,8 +132,6 @@
     "backend": "Бэкенд",
     "design": "Дизайн"
   },
-
-  
   "school": {
     "title": "Лучшие учебные центры",
     "viewAll": "Посмотреть все",
@@ -128,7 +149,6 @@
     "button": "Присоединиться к команде",
     "logoAlt": "Главный логотип"
   },
-  
   "footer": {
     "mapAlt": "Карта",
     "logoAlt": "Главный логотип",
@@ -218,20 +238,18 @@
   "Online": "Онлайн",
   "Offline": "Офлайн",
   "Hybrid": "Гибрид",
-
-    "job_count": "Количество направлений",
-    "search_placeholder": "Введите название работы",
-    "sort_by_rating": "Сортировать по рейтингу",
-    "average": "Среднее",
-    "highest": "Максимальное",
-    "monthly_info": "Месячные данные",
-    "frontend_dev": "Фронтенд разработка",
-    "web_design": "Веб-дизайн",
-    "backend_dev": "Бэкенд разработка",
-    "graphic_design": "Графический дизайн",
-    "frontend_description": "HTML, CSS, JavaScript, React",
-    "web_design_description": "UI/UX, Figma, Adobe XD",
-    "backend_description": "Node.js, Python, Базы данных",
-    "graphic_design_description": "Photoshop, Illustrator, InDesign"
-  
+  "job_count": "Количество направлений",
+  "search_placeholder": "Введите название работы",
+  "sort_by_rating": "Сортировать по рейтингу",
+  "average": "Среднее",
+  "highest": "Максимальное",
+  "monthly_info": "Месячные данные",
+  "frontend_dev": "Фронтенд разработка",
+  "web_design": "Веб-дизайн",
+  "backend_dev": "Бэкенд разработка",
+  "graphic_design": "Графический дизайн",
+  "frontend_description": "HTML, CSS, JavaScript, React",
+  "web_design_description": "UI/UX, Figma, Adobe XD",
+  "backend_description": "Node.js, Python, Базы данных",
+  "graphic_design_description": "Photoshop, Illustrator, InDesign"
 }

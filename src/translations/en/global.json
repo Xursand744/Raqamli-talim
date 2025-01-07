@@ -6,7 +6,28 @@
     "en": "English"
   },
 
-
+    "breadcrumb": {
+      "home": "Home",
+      "itTips": "IT Tips",
+      "itDirections": "IT Directions",
+      "backend": "Backend"
+    },
+    "backends": {
+      "title": "Backend",
+      "description": "This is the hidden part of the software that users cannot see but ensures the proper functioning of an application or website.",
+      "rank": "#1",
+      "courses": "123 courses"
+    },
+    "metricse": {
+      "min": "Lowest Salary",
+      "avg": "Average Salary",
+      "max": "Highest Salary"
+    },
+    "chart": {
+      "title": "Demand Graph"
+    },
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  
 
  
   

@@ -24,6 +24,30 @@
     "itTips": "IT-maslahatlar",
     "contact": "Bog’lanish"
   },
+
+  "breadcrumb": {
+    "home": "Bosh sahifa",
+    "itTips": "IT-maslahatlar",
+    "itDirections": "IT yo’nalishlar",
+    "backend": "Backend"
+  },
+  "backends": {
+    "title": "Backend",
+    "description": "bu dasturiy ta’minotning yashirin qismi bo‘lib, foydalanuvchilar ko‘ra olmaydigan, lekin dastur yoki veb-saytning ishlashini ta’minlaydigan mexanizmlarni o‘z ichiga oladi. Backend ma’lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga oshiradi va foydalanuvchi interfeysi (frontend) bilan o‘zaro aloqa qiladi.",
+    "rank": "#1",
+    "courses": "123 ta kurs"
+  },
+  "metricse": {
+    "min": "Eng kam oylik",
+    "avg": "O’rtacha oylik",
+    "max": "Eng ko’p oylik"
+  },
+  "chart": {
+    "title": "Talablar grafigi"
+  },
+  "months": [
+   "Yan", "fev", "mar", "apr", "may", "iyun", "iyul", "avg", "sen", "okt", "noy", "dek"
+  ],
   "landing": {
     "title": "Al-Xorazmiy",
     "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
