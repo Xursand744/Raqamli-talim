@@ -124,7 +124,6 @@ const universities = [
     specialty: "ProjectManagement",
   },
 
-  // Add more universities as needed
 ];
 
 const filters = [
