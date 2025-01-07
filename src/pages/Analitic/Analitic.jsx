@@ -63,13 +63,13 @@
 //   return (
 //     <div
 //       className={`
-//         ${isActive ? "bg-blue-600 text-white" : "bg-gray-50"} 
-//         p-3 sm:p-4 
-//         rounded-lg sm:rounded-xl 
-//         relative 
-//         h-[100px] sm:h-[120px] 
-//         flex 
-//         flex-col 
+//         ${isActive ? "bg-blue-600 text-white" : "bg-gray-50"}
+//         p-3 sm:p-4
+//         rounded-lg sm:rounded-xl
+//         relative
+//         h-[100px] sm:h-[120px]
+//         flex
+//         flex-col
 //         justify-between
 //         overflow-hidden
 //       `}
@@ -291,7 +291,6 @@
 //   );
 // }
 
-
 import { Line } from "react-chartjs-2";
 import imgIcon from "../../assets/3.png";
 import { Crown } from "lucide-react";
@@ -309,13 +308,8 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-<<<<<<< HEAD
 import { ChevronRight, Laptop } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-=======
-import { ChevronRight } from "lucide-react";
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
 
 ChartJS.register(
   CategoryScale,
@@ -329,8 +323,6 @@ ChartJS.register(
 );
 
 const MetricCard = ({ title, value, isActive, data }) => {
-  const { t } = useTranslation("global");
-
   const miniChartData = {
     labels: Array(12).fill(""),
     datasets: [
@@ -365,7 +357,6 @@ const MetricCard = ({ title, value, isActive, data }) => {
 
   return (
     <div
-<<<<<<< HEAD
       className={`
         ${isActive ? "bg-blue-600 text-white" : "bg-gray-50"}
         p-3 sm:p-4
@@ -377,14 +368,13 @@ const MetricCard = ({ title, value, isActive, data }) => {
         justify-between
         overflow-hidden
       `}
-=======
-      className={`${
-        isActive ? "bg-blue-600 text-white" : "bg-gray-50"
-      } p-3 sm:p-4 rounded-lg sm:rounded-xl relative h-[100px] sm:h-[120px] flex flex-col justify-between overflow-hidden`}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
     >
       <div className="relative z-10">
-        <h3 className={`${isActive ? "text-blue-100" : "text-gray-500"} text-xs sm:text-sm mb-1`}>
+        <h3
+          className={`${
+            isActive ? "text-blue-100" : "text-gray-500"
+          } text-xs sm:text-sm mb-1`}
+        >
           {title}
         </h3>
         <p className="text-lg sm:text-2xl font-bold">{value}</p>
@@ -397,7 +387,7 @@ const MetricCard = ({ title, value, isActive, data }) => {
 };
 
 export default function Dashboard() {
-  const { t } = useTranslation('global');
+  const { t } = useTranslation("global");
 
   const months = t("months", { returnObjects: true });
 
@@ -406,21 +396,41 @@ export default function Dashboard() {
       value: "7.3 mln",
       chart: Array(12)
         .fill()
-        .map((_, index) => 361 + 100 + Math.sin(index) * 10 + Math.sin(index * 2) * 5 + Math.sin(index * 50) * 5),
+        .map(
+          (_, index) =>
+            361 +
+            100 +
+            Math.sin(index) * 10 +
+            Math.sin(index * 2) * 5 +
+            Math.sin(index * 50) * 5
+        ),
     },
     avg: {
       value: "14.6 mln",
       chart: Array(12)
         .fill()
-        .map((_, index) => 361 + 100 + Math.sin(index) * 10 + Math.sin(index * 2) * 5 + Math.sin(index * 10) * 5),
+        .map(
+          (_, index) =>
+            361 +
+            100 +
+            Math.sin(index) * 10 +
+            Math.sin(index * 2) * 5 +
+            Math.sin(index * 10) * 5
+        ),
     },
     max: {
       value: "24.5 mln",
       chart: Array(12)
         .fill()
-        .map((_, index) => 361 + 100 + Math.sin(index) * 10 + Math.sin(index * 2) * 5 + Math.sin(index * 30) * 5),
-    
-      },
+        .map(
+          (_, index) =>
+            361 +
+            100 +
+            Math.sin(index) * 10 +
+            Math.sin(index * 2) * 5 +
+            Math.sin(index * 30) * 5
+        ),
+    },
   };
 
   const chartData = {
@@ -429,7 +439,13 @@ export default function Dashboard() {
       {
         data: Array(12)
           .fill()
-          .map((_, index) => 90 + Math.sin(index*5) * 10 + Math.sin(index * 1) * 5 + Math.sin(index * 50) * 50),
+          .map(
+            (_, index) =>
+              90 +
+              Math.sin(index * 5) * 10 +
+              Math.sin(index * 1) * 5 +
+              Math.sin(index * 50) * 50
+          ),
         borderColor: "rgb(59, 130, 246)",
         backgroundColor: (context) => {
           const ctx = context.chart.ctx;
@@ -492,13 +508,10 @@ export default function Dashboard() {
     },
   };
 
-  const { t } = useTranslation("global");
-
   return (
     <div className="max-w-[1280px] w-full mx-auto p-2 sm:p-4 mt-[100px]">
       <nav className="flex flex-wrap items-center gap-1 text-xs sm:text-sm text-gray-600 mb-4 sm:mb-8">
         <a href="#" className="hover:text-blue-600">
-<<<<<<< HEAD
           {t("home")}
         </a>
         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -511,20 +524,6 @@ export default function Dashboard() {
         </a>
         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
         <span className="text-gray-400">{t("Backend")}</span>
-=======
-          {t("breadcrumb.home")}
-        </a>
-        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-        <a href="#" className="hover:text-blue-600">
-          {t("breadcrumb.itTips")}
-        </a>
-        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-        <a href="#" className="hover:text-blue-600">
-          {t("breadcrumb.itDirections")}
-        </a>
-        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-        <span className="text-gray-400">{t("breadcrumb.backend")}</span>
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
       </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
@@ -536,26 +535,15 @@ export default function Dashboard() {
                 <span className="flex items-center gap-2 bg-white text-blue-600 px-2 py-1 rounded-full text-xs sm:text-sm font-medium">
                   <Crown /> {t("backends.rank")}
                 </span>
-<<<<<<< HEAD
                 <span className=" bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs sm:text-sm font-medium">
                   123 {t("course_count")}
-=======
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs sm:text-sm font-medium">
-                  {t("backends.courses")}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
                 </span>
               </div>
             </div>
             <div className="space-y-2 sm:space-y-4 p-3">
-<<<<<<< HEAD
               <h1 className="text-xl sm:text-2xl font-bold">{t("Backend")}</h1>
               <p className="text-sm  sm:text-base text-gray-600 leading-relaxed">
                 {t("description")}
-=======
-              <h1 className="text-xl sm:text-2xl font-bold">{t("backends.title")}</h1>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                {t("backends.description")}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
               </p>
             </div>
           </div>
@@ -564,7 +552,6 @@ export default function Dashboard() {
         <div className="space-y-8">
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
             <MetricCard
-<<<<<<< HEAD
               title={t("min_salary")}
               value="7.3 mln"
               data={Array(12)
@@ -574,30 +561,15 @@ export default function Dashboard() {
             <MetricCard
               title={t("avg_salary")}
               value="14.6 mln"
-=======
-              title={t("metricse.min")}
-              value={metricsData.min.value}
-              data={metricsData.min.chart}
-            />
-            <MetricCard
-              title={t("metricse.avg")}
-              value={metricsData.avg.value}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
               isActive={true}
               data={metricsData.avg.chart}
             />
             <MetricCard
-<<<<<<< HEAD
               title={t("max_salary")}
               value="24.5 mln"
               data={Array(12)
                 .fill()
                 .map(() => Math.random() * 30 + 70)}
-=======
-              title={t("metricse.max")}
-              value={metricsData.max.value}
-              data={metricsData.max.chart}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
             />
           </div>
 

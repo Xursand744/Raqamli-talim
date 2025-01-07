@@ -43,7 +43,18 @@
     "title": "График спроса"
   },
   "months": [
-    "Ян", "Фев", "Мар", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек"
+    "Ян",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Авг",
+    "Сен",
+    "Окт",
+    "Ноя",
+    "Дек"
   ],
   "landing": {
     "title": "Аль-Хорезми",
@@ -132,10 +143,6 @@
     "backend": "Бэкенд",
     "design": "Дизайн"
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
   "school": {
     "title": "Лучшие учебные центры",
     "viewAll": "Посмотреть все",
@@ -153,10 +160,6 @@
     "button": "Присоединиться к команде",
     "logoAlt": "Главный логотип"
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
   "footer": {
     "mapAlt": "Карта",
     "logoAlt": "Главный логотип",
@@ -246,13 +249,8 @@
   "Online": "Онлайн",
   "Offline": "Офлайн",
   "Hybrid": "Гибрид",
-<<<<<<< HEAD
 
   "job_count": "Количество направлений",
-=======
-  "job_count": "Количество направлений",
-  "search_placeholder": "Введите название работы",
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
   "sort_by_rating": "Сортировать по рейтингу",
   "average": "Среднее",
   "highest": "Максимальное",
@@ -264,7 +262,6 @@
   "frontend_description": "HTML, CSS, JavaScript, React",
   "web_design_description": "UI/UX, Figma, Adobe XD",
   "backend_description": "Node.js, Python, Базы данных",
-<<<<<<< HEAD
   "graphic_design_description": "Photoshop, Illustrator, InDesign",
   "filters": {
     "sorting": "Сортировка",
@@ -287,7 +284,3 @@
   "course_count": "курсы",
   "demand_chart": "График спроса"
 }
-=======
-  "graphic_design_description": "Photoshop, Illustrator, InDesign"
-}
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be

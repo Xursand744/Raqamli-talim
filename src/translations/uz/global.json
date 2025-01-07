@@ -45,7 +45,18 @@
     "title": "Talablar grafigi"
   },
   "months": [
-   "Yan", "fev", "mar", "apr", "may", "iyun", "iyul", "avg", "sen", "okt", "noy", "dek"
+    "Yan",
+    "fev",
+    "mar",
+    "apr",
+    "may",
+    "iyun",
+    "iyul",
+    "avg",
+    "sen",
+    "okt",
+    "noy",
+    "dek"
   ],
   "landing": {
     "title": "Al-Xorazmiy",
@@ -251,7 +262,6 @@
   "graphic_design": "Grafik Dizayn",
   "frontend_description": "HTML, CSS, JavaScript, React",
   "web_design_description": "UI/UX, Figma, Adobe XD",
-<<<<<<< HEAD
   "backend_description": "Node.js, Python, Ma'lumotlar bazalari",
   "graphic_design_description": "Photoshop, Illustrator, InDesign",
   "filters": {
@@ -274,8 +284,4 @@
   "max_salary": "Eng ko'p oylik",
   "demand_chart": "Talablar grafigi",
   "course_count": "ta kurs"
-=======
-  "backend_description": "Node.js, Python, Ma'lumotlar",
-  "graphic_design_description": "Photoshop, Illustrator, InDesign"
->>>>>>> aaa3afd7f1eeae967057f556dce62aa3051581be
 }
