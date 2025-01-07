@@ -198,5 +198,21 @@
   "tashkent": "Tashkent",
   "pdp_academy": "PDP Academy",
   "price_from": "From {{amount}}",
-  "data_analytic": "Data Analytics"
+  "data_analytic": "Data Analytics",
+  "Sort": "Sort",
+  "Clear": "Clear",
+  "UniversityCount": "{{count}} Universities",
+  "ITSpecialty": "IT Specialty",
+  "StudyDuration": "Study Duration",
+  "StudyFormat": "Study Format",
+  "Design": "Design",
+  "Frontend": "Frontend",
+  "Backend": "Backend",
+  "ProjectManagement": "Project Management",
+  "3Years": "3 Years",
+  "4Years": "4 Years",
+  "MoreThan4Years": "More than 4 Years",
+  "Online": "Online",
+  "Offline": "Offline",
+  "Hybrid": "Hybrid"
 }
