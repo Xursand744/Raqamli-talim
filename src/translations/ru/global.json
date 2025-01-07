@@ -109,6 +109,8 @@
     "backend": "Бэкенд",
     "design": "Дизайн"
   },
+
+  
   "school": {
     "title": "Лучшие учебные центры",
     "viewAll": "Посмотреть все",
@@ -126,6 +128,7 @@
     "button": "Присоединиться к команде",
     "logoAlt": "Главный логотип"
   },
+  
   "footer": {
     "mapAlt": "Карта",
     "logoAlt": "Главный логотип",
@@ -214,5 +217,21 @@
   "MoreThan4Years": "Больше 4 лет",
   "Online": "Онлайн",
   "Offline": "Офлайн",
-  "Hybrid": "Гибрид"
+  "Hybrid": "Гибрид",
+
+    "job_count": "Количество направлений",
+    "search_placeholder": "Введите название работы",
+    "sort_by_rating": "Сортировать по рейтингу",
+    "average": "Среднее",
+    "highest": "Максимальное",
+    "monthly_info": "Месячные данные",
+    "frontend_dev": "Фронтенд разработка",
+    "web_design": "Веб-дизайн",
+    "backend_dev": "Бэкенд разработка",
+    "graphic_design": "Графический дизайн",
+    "frontend_description": "HTML, CSS, JavaScript, React",
+    "web_design_description": "UI/UX, Figma, Adobe XD",
+    "backend_description": "Node.js, Python, Базы данных",
+    "graphic_design_description": "Photoshop, Illustrator, InDesign"
+  
 }
