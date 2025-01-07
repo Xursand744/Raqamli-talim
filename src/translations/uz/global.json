@@ -5,8 +5,7 @@
     "ru": "Русский",
     "en": "English"
   },
-  
-  
+
   "menu": {
     "center": "Markaz haqida",
     "aboutUs": "Biz haqimizda",
@@ -217,9 +216,7 @@
   "Online": "Onlayn",
   "Offline": "Oflayn",
   "Hybrid": "Gibrid",
-
   "job_count": "Yo'nalishlar soni",
-  "search_placeholder": "Ish nomini kiriting",
   "sort_by_rating": "Reyting bo'yicha",
   "average": "O'rtacha",
   "highest": "Eng ko'p",
@@ -231,5 +228,25 @@
   "frontend_description": "HTML, CSS, JavaScript, React",
   "web_design_description": "UI/UX, Figma, Adobe XD",
   "backend_description": "Node.js, Python, Ma'lumotlar bazalari",
-  "graphic_design_description": "Photoshop, Illustrator, InDesign"
+  "graphic_design_description": "Photoshop, Illustrator, InDesign",
+  "filters": {
+    "sorting": "Saralash",
+    "clean": "Tozalash",
+    "priceRange": "Narx oralig'i",
+    "educationalCenters": "O'quv markazlari",
+    "centerName": "Markaz nomi",
+    "courseDirection": "Kurs yo'nalishi",
+    "courseName": "Kurs nomi",
+    "courseDurations": "Kurs davomiyligi",
+    "courseFormats": "Kurs formati"
+  },
+  "home": "Bosh sahifa",
+  "it_advice": "IT-maslahatlar",
+  "it_directions": "IT yo'nalishlar",
+  "description": "Bu dasturiy ta'minotning yashirin qismi bo'lib, foydalanuvchilar ko'ra olmaydigan, lekin dastur yoki veb-saytning ishlashini ta'minlaydigan mexanizmlarni o'z ichiga oladi. Backend ma'lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga oshiradi va foydalanuvchi interfeysi (frontend) bilan o'zaro aloqa qiladi.",
+  "min_salary": "Eng kam oylik",
+  "avg_salary": "O'rtacha oylik",
+  "max_salary": "Eng ko'p oylik",
+  "demand_chart": "Talablar grafigi",
+  "course_count": "ta kurs"
 }

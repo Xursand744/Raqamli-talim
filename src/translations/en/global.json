@@ -6,10 +6,6 @@
     "en": "English"
   },
 
-
-
- 
-  
   "menu": {
     "center": "About the Center",
     "aboutUs": "About Us",
@@ -222,7 +218,6 @@
   "Hybrid": "Hybrid",
 
   "job_count": "Number of Directions",
-  "search_placeholder": "Enter job title",
   "sort_by_rating": "Sort by Rating",
   "average": "Average",
   "highest": "Highest",
@@ -234,7 +229,25 @@
   "frontend_description": "HTML, CSS, JavaScript, React",
   "web_design_description": "UI/UX, Figma, Adobe XD",
   "backend_description": "Node.js, Python, Databases",
-  "graphic_design_description": "Photoshop, Illustrator, InDesign"
-  
+  "graphic_design_description": "Photoshop, Illustrator, InDesign",
+  "filters": {
+    "sorting": "Sorting",
+    "clean": "Clean",
+    "priceRange": "Price Range",
+    "educationalCenters": "Educational Centers",
+    "centerName": "Center Name",
+    "courseDirection": "Course Direction",
+    "courseName": "Course Name",
+    "courseDurations": "Course Durations",
+    "courseFormats": "Course Formats"
+  },
+  "home": "Home",
+  "it_advice": "IT Advice",
+  "it_directions": "IT Directions",
+  "description": "This is the hidden part of the software that users cannot see but ensures the functioning of an application or website. Backend works with databases, implements business logic, and interacts with the user interface (frontend).",
+  "min_salary": "Minimum Salary",
+  "avg_salary": "Average Salary",
+  "max_salary": "Maximum Salary",
+  "course_count": "cources",
+  "demand_chart": "Demand Chart"
 }
-

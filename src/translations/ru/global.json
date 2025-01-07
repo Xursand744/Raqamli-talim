@@ -110,7 +110,6 @@
     "design": "Дизайн"
   },
 
-  
   "school": {
     "title": "Лучшие учебные центры",
     "viewAll": "Посмотреть все",
@@ -128,7 +127,7 @@
     "button": "Присоединиться к команде",
     "logoAlt": "Главный логотип"
   },
-  
+
   "footer": {
     "mapAlt": "Карта",
     "logoAlt": "Главный логотип",
@@ -219,19 +218,37 @@
   "Offline": "Офлайн",
   "Hybrid": "Гибрид",
 
-    "job_count": "Количество направлений",
-    "search_placeholder": "Введите название работы",
-    "sort_by_rating": "Сортировать по рейтингу",
-    "average": "Среднее",
-    "highest": "Максимальное",
-    "monthly_info": "Месячные данные",
-    "frontend_dev": "Фронтенд разработка",
-    "web_design": "Веб-дизайн",
-    "backend_dev": "Бэкенд разработка",
-    "graphic_design": "Графический дизайн",
-    "frontend_description": "HTML, CSS, JavaScript, React",
-    "web_design_description": "UI/UX, Figma, Adobe XD",
-    "backend_description": "Node.js, Python, Базы данных",
-    "graphic_design_description": "Photoshop, Illustrator, InDesign"
-  
+  "job_count": "Количество направлений",
+  "sort_by_rating": "Сортировать по рейтингу",
+  "average": "Среднее",
+  "highest": "Максимальное",
+  "monthly_info": "Месячные данные",
+  "frontend_dev": "Фронтенд разработка",
+  "web_design": "Веб-дизайн",
+  "backend_dev": "Бэкенд разработка",
+  "graphic_design": "Графический дизайн",
+  "frontend_description": "HTML, CSS, JavaScript, React",
+  "web_design_description": "UI/UX, Figma, Adobe XD",
+  "backend_description": "Node.js, Python, Базы данных",
+  "graphic_design_description": "Photoshop, Illustrator, InDesign",
+  "filters": {
+    "sorting": "Сортировка",
+    "clean": "Очистить",
+    "priceRange": "Ценовой диапазон",
+    "educationalCenters": "Учебные центры",
+    "centerName": "Название центра",
+    "courseDirection": "Направление курса",
+    "courseName": "Название курса",
+    "courseDurations": "Продолжительность курсов",
+    "courseFormats": "Форматы курсов"
+  },
+  "home": "Главная",
+  "it_advice": "Советы по IT",
+  "it_directions": "Направления IT",
+  "description": "Это скрытая часть программного обеспечения, которую пользователи не видят, но которая обеспечивает работу приложения или веб-сайта. Бэкенд работает с базами данных, реализует бизнес-логику и взаимодействует с пользовательским интерфейсом (фронтендом).",
+  "min_salary": "Минимальная зарплата",
+  "avg_salary": "Средняя зарплата",
+  "max_salary": "Максимальная зарплата",
+  "course_count": "курсы",
+  "demand_chart": "График спроса"
 }

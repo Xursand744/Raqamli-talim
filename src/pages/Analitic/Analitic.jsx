@@ -15,6 +15,8 @@ import {
   Filler,
 } from "chart.js";
 import { ChevronRight, Laptop } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -28,6 +30,8 @@ ChartJS.register(
 );
 
 const MetricCard = ({ title, value, isActive, data }) => {
+  const { t } = useTranslation("global");
+
   const miniChartData = {
     labels: Array(12).fill(""),
     datasets: [
@@ -63,13 +67,13 @@ const MetricCard = ({ title, value, isActive, data }) => {
   return (
     <div
       className={`
-        ${isActive ? "bg-blue-600 text-white" : "bg-gray-50"} 
-        p-3 sm:p-4 
-        rounded-lg sm:rounded-xl 
-        relative 
-        h-[100px] sm:h-[120px] 
-        flex 
-        flex-col 
+        ${isActive ? "bg-blue-600 text-white" : "bg-gray-50"}
+        p-3 sm:p-4
+        rounded-lg sm:rounded-xl
+        relative
+        h-[100px] sm:h-[120px]
+        flex
+        flex-col
         justify-between
         overflow-hidden
       `}
@@ -198,23 +202,25 @@ export default function Dashboard() {
     },
   };
 
+  const { t } = useTranslation("global");
+
   return (
     <div className="max-w-[1280px] w-full mx-auto p-2 sm:p-4 mt-[100px]">
       {/* Breadcrumb */}
       <nav className="flex flex-wrap items-center gap-1 text-xs sm:text-sm text-gray-600 mb-4 sm:mb-8">
         <a href="#" className="hover:text-blue-600">
-          Bosh sahifa
+          {t("home")}
         </a>
         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
         <a href="#" className="hover:text-blue-600">
-          IT-maslahatlar
+          {t("it_advice")}
         </a>
         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
         <a href="#" className="hover:text-blue-600">
-          IT yo'nalishlar
+          {t("it_directions")}
         </a>
         <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-        <span className="text-gray-400">Backend</span>
+        <span className="text-gray-400">{t("Backend")}</span>
       </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
@@ -228,19 +234,14 @@ export default function Dashboard() {
                   <Crown /> #1
                 </span>
                 <span className=" bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs sm:text-sm font-medium">
-                  123 ta kurs
+                  123 {t("course_count")}
                 </span>
               </div>
             </div>
             <div className="space-y-2 sm:space-y-4 p-3">
-              <h1 className="text-xl sm:text-2xl font-bold">Backend</h1>
+              <h1 className="text-xl sm:text-2xl font-bold">{t("Backend")}</h1>
               <p className="text-sm  sm:text-base text-gray-600 leading-relaxed">
-                bu dasturiy ta'minotning yashirin qismi bo'lib, foydalanuvchilar
-                ko'ra olmaydigan, lekin dastur yoki veb-saytning ishlashini
-                ta'minlaydigan mexanizmilarni o'z ichiga oladi. Backend
-                ma'lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga
-                oshiradi va foydalanuvchi interfeysi (frontend) bilan o'zaro
-                aloqa qiladi.
+                {t("description")}
               </p>
             </div>
           </div>
@@ -251,14 +252,14 @@ export default function Dashboard() {
           {/* Metrics */}
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
             <MetricCard
-              title="Eng kam oylik"
+              title={t("min_salary")}
               value="7.3 mln"
               data={Array(12)
                 .fill()
                 .map(() => Math.random() * 30 + 50)}
             />
             <MetricCard
-              title="O'rtacha oylik"
+              title={t("avg_salary")}
               value="14.6 mln"
               isActive={true}
               data={Array(12)
@@ -266,7 +267,7 @@ export default function Dashboard() {
                 .map(() => Math.random() * 30 + 60)}
             />
             <MetricCard
-              title="Eng ko'p oylik"
+              title={t("max_salary")}
               value="24.5 mln"
               data={Array(12)
                 .fill()
