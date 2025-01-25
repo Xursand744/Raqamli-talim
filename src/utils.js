@@ -11,13 +11,28 @@ export const Menus = [
     name: "menu.center", // Translation key
     subMenu: [
       { name: "menu.aboutUs", icon: CircleHelp, link: "/about" },
-      { name: "menu.openData", icon: CircleHelp, link: "/about1" },
-      { name: "menu.leadership", icon: CircleHelp, link: "/about2" },
-      { name: "menu.structure", icon: CircleHelp, link: "/about3" },
-      { name: "menu.departments", icon: CircleHelp, link: "/about4" },
-      { name: "menu.antiCorruption", icon: CircleHelp, link: "/about5" },
-      { name: "menu.higherOrganization", icon: CircleHelp, link: "/about6" },
-      { name: "menu.openData", icon: CircleHelp, link: "/about7" },
+      {
+        name: "menu.openData",
+        icon: CircleHelp,
+        link: "/about/open-informations",
+      },
+      { name: "menu.leadership", icon: CircleHelp, link: "/about/leadership" },
+      { name: "menu.structure", icon: CircleHelp, link: "/about/structure" },
+      {
+        name: "menu.departments",
+        icon: CircleHelp,
+        link: "/about/departments",
+      },
+      {
+        name: "menu.antiCorruption",
+        icon: CircleHelp,
+        link: "/about/anti-corruption",
+      },
+      {
+        name: "menu.higherOrganization",
+        icon: CircleHelp,
+        link: "/about/higher-standing-organization",
+      },
     ],
     gridCols: 1,
   },
@@ -40,38 +55,61 @@ export const Menus = [
 ];
 
 export const aboutFilters = [
+  { title: "menu.aboutUs", icon: CircleHelp, link: "/about" },
   {
-    title: "Biz haqimizda",
-    link: "/about",
+    title: "menu.openData",
+    icon: CircleHelp,
+    link: "/about/open-informations",
+  },
+  { title: "menu.leadership", icon: CircleHelp, link: "/about/leadership" },
+  { title: "menu.structure", icon: CircleHelp, link: "/about/structure" },
+  {
+    title: "menu.departments",
+    icon: CircleHelp,
+    link: "/about/departments",
   },
   {
-    title: "Ochiq ma’lumotlar",
-    link: "/about1",
+    title: "menu.antiCorruption",
+    icon: CircleHelp,
+    link: "/about/anti-corruption",
   },
   {
-    title: "Rahbariyat",
-    link: "/about2",
+    title: "menu.higherOrganization",
+    icon: CircleHelp,
+    link: "/about/higher-standing-organization",
   },
-  {
-    title: "Tuzilma",
-    link: "/about3",
-  },
-  {
-    title: "Bo’linmalar",
-    link: "/about4",
-  },
-  {
-    title: "Korrupsiyaga qarshi kurashish",
-    link: "/about5",
-  },
-  {
-    title: "Yuqori turuvchi tashkilot",
-    link: "/about6",
-  },
-  {
-    title: "Ochiq ma’lumotlar",
-    link: "/about7",
-  },
+  // {
+  //   title: "Biz haqimizda",
+  //   link: "/about",
+  // },
+  // {
+  //   title: "Ochiq ma’lumotlar",
+  //   link: "/about1",
+  // },
+  // {
+  //   title: "Rahbariyat",
+  //   link: "/about2",
+  // },
+  // {
+  //   title: "Tuzilma",
+  //   link: "/about3",
+  // },
+  // {
+  //   title: "Bo’linmalar",
+  //   link: "/about4",
+  // },
+  // {
+  //   title: "Korrupsiyaga qarshi kurashish",
+  //   link: "/about5",
+  // },
+  // {
+  //   title: "Yuqori turuvchi tashkilot",
+  //   link: "/about6",
+  // },
+  // {
+  //   title: "Ochiq ma’lumotlar",
+  //   link: "/about7",
+  // },
 ];
 
 export const aboutCounts = [

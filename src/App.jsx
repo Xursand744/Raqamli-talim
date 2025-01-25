@@ -33,7 +33,17 @@ export default function App() {
         },
         {
           path: "/about",
-          element: <About />,
+          children: [
+            {
+              index: true,
+              element: <About />,
+            },
+            // {
+            //   path: "/open-data",
+            // },
+          ],
+          // path: "/about",
+          // element: <About />,
         },
         {
           path: "/universities",
@@ -73,34 +83,6 @@ export default function App() {
           path: "/study-centers",
           element: <StudyCenters />,
         },
-        // {
-        //   path: "contact",
-        //   element: <ContactLayout />,
-        //   children: [
-        //     {
-        //       path: "faq",
-        //       element: <Faq />,
-        //     },
-        //     {
-        //       path: "form",
-        //       element: <Form />,
-        //     },
-        //   ],
-        // },
-        // {
-        //   path: "articles",
-        //   element: <ArticlesLayout />,
-        //   children: [
-        //     {
-        //       index: true,
-        //       element: <Articles />,
-        //     },
-        //     {
-        //       path: ":id",
-        //       element: <ArticleDetail />,
-        //     },
-        //   ],
-        // },
       ],
     },
   ]);
@@ -110,6 +92,4 @@ export default function App() {
       <RouterProvider router={routes} />
     </div>
   );
-
-  return <Navbar />;
 }
