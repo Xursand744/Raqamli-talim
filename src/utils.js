@@ -1,9 +1,5 @@
-import { link } from "framer-motion/client";
 import { CircleHelp } from "lucide-react";
-import { TriangleAlert } from "lucide-react";
-import { MessageCircle } from "lucide-react";
 import { PanelsTopLeft } from "lucide-react";
-import { PanelTop } from "lucide-react";
 import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 
 export const Menus = [
@@ -14,24 +10,24 @@ export const Menus = [
       {
         name: "menu.openData",
         icon: CircleHelp,
-        link: "/about/open-informations",
+        link: "/open-informations",
       },
-      { name: "menu.leadership", icon: CircleHelp, link: "/about/leadership" },
-      { name: "menu.structure", icon: CircleHelp, link: "/about/structure" },
+      { name: "menu.leadership", icon: CircleHelp, link: "/leadership" },
+      { name: "menu.structure", icon: CircleHelp, link: "/structure" },
       {
         name: "menu.departments",
         icon: CircleHelp,
-        link: "/about/departments",
+        link: "/departments",
       },
       {
         name: "menu.antiCorruption",
         icon: CircleHelp,
-        link: "/about/anti-corruption",
+        link: "/anti-corruption",
       },
       {
         name: "menu.higherOrganization",
         icon: CircleHelp,
-        link: "/about/higher-standing-organization",
+        link: "/higher-standing-organization",
       },
     ],
     gridCols: 1,
@@ -55,61 +51,25 @@ export const Menus = [
 ];
 
 export const aboutFilters = [
-  { title: "menu.aboutUs", icon: CircleHelp, link: "/about" },
+  { title: "menu.aboutUs", link: "/about" },
   {
     title: "menu.openData",
-    icon: CircleHelp,
-    link: "/about/open-informations",
+    link: "/open-informations",
   },
-  { title: "menu.leadership", icon: CircleHelp, link: "/about/leadership" },
-  { title: "menu.structure", icon: CircleHelp, link: "/about/structure" },
+  { title: "menu.leadership", link: "/leadership" },
+  { title: "menu.structure", link: "/structure" },
   {
     title: "menu.departments",
-    icon: CircleHelp,
-    link: "/about/departments",
+    link: "/departments",
   },
   {
     title: "menu.antiCorruption",
-    icon: CircleHelp,
-    link: "/about/anti-corruption",
+    link: "/anti-corruption",
   },
   {
     title: "menu.higherOrganization",
-    icon: CircleHelp,
-    link: "/about/higher-standing-organization",
+    link: "/higher-standing-organization",
   },
-  // {
-  //   title: "Biz haqimizda",
-  //   link: "/about",
-  // },
-  // {
-  //   title: "Ochiq ma’lumotlar",
-  //   link: "/about1",
-  // },
-  // {
-  //   title: "Rahbariyat",
-  //   link: "/about2",
-  // },
-  // {
-  //   title: "Tuzilma",
-  //   link: "/about3",
-  // },
-  // {
-  //   title: "Bo’linmalar",
-  //   link: "/about4",
-  // },
-  // {
-  //   title: "Korrupsiyaga qarshi kurashish",
-  //   link: "/about5",
-  // },
-  // {
-  //   title: "Yuqori turuvchi tashkilot",
-  //   link: "/about6",
-  // },
-  // {
-  //   title: "Ochiq ma’lumotlar",
-  //   link: "/about7",
-  // },
 ];
 
 export const aboutCounts = [
@@ -151,5 +111,58 @@ export const projectCounts = [
     icon: BuildingOffice,
     value: 42,
     desc: "ta bino",
+  },
+];
+
+export const openInformations = [
+  {
+    index: 1,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 1,
+  },
+  {
+    index: 2,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 2,
+  },
+  {
+    index: 3,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 3,
+  },
+  {
+    index: 4,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 4,
+  },
+  {
+    index: 5,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 5,
+  },
+  {
+    index: 6,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 6,
+  },
+  {
+    index: 7,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 7,
+  },
+  {
+    index: 8,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 8,
+  },
+  {
+    index: 9,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 9,
+  },
+  {
+    index: 10,
+    desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
+    id: 10,
   },
 ];

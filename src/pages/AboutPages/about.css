@@ -1,0 +1,10 @@
+.about-title {
+  @apply text-[46px] font-bold text-[#222222] text-left;
+}
+
+/* responsive */
+@media only screen and (max-width: 900px) {
+  .open-information-card {
+    width: 100% !important;
+  }
+}

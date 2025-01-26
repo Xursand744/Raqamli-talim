@@ -27,7 +27,7 @@ body {
 
 .title {
   font-family: "Roboto", sans-serif;
-  @apply text-[44px] font-bold text-center mt-[120px];
+  @apply text-[44px] font-bold text-center mt-[120px] text-['#222222'];
 }
 
 ::-webkit-scrollbar {
@@ -113,4 +113,3 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.2s ease-out;
 }
-
