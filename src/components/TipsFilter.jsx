@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from "react";
 import { Search, Menu, X } from "lucide-react";
 import PriceRange from "./PriceRange";
@@ -410,12 +411,12 @@ export default function TipsFilter() {
                         <label className="inline-flex items-center space-x-2">
                           <input
                             type="checkbox"
-                            checked={selectedCenters.includes(course.id)}
-                            onChange={() => handleCenterToggle(course.id)}
+                            checked={selectedCourses.includes(course.id)}
+                            onChange={() => handleCourseToggle(course.id)}
                             className="sr-only peer"
                           />
                           <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                            {selectedCenters.includes(course.id) && (
+                            {selectedCourses.includes(course.id) && (
                               <svg
                                 className="w-3 h-3 text-white"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -436,16 +437,7 @@ export default function TipsFilter() {
                           <span className="text-sm text-gray-500">
                             {course.count}
                           </span>
-                          {/* <input
-                            type="checkbox"
-                            checked={selectedCourses.includes(course.id)}
-                            onChange={() =>
-                              handleToggle(setSelectedCourses, course.id)
-                            }
-                          />
-                          <span>
-                            {course.name} ({course.count})
-                          </span> */}
+                         
                         </label>
                       </li>
                     ))}
@@ -454,226 +446,7 @@ export default function TipsFilter() {
             </div>
           </div>
         </div>
-        {/* <div
-          className={`
-            fixed inset-y-0 left-0 z-40 w-[60%] md:w-[50%] bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out transform
-            ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-            md:relative md:translate-x-0 md:w-1/4 md:min-w-[250px] md:max-w-[300px]
-          `}
-        >
-          <div className="space-y-6 h-full overflow-y-auto">
-            <div className="flex justify-between items-center">
-              <h2 className="text-[#222] text-xl md:text-2xl font-medium">
-                Saralash
-              </h2>
-              <p
-                className="text-[#2675EB] text-sm md:text-base cursor-pointer"
-                id="clean-filters"
-                onClick={() => {
-                  setCenterSearch("");
-                  setCourseSearch("");
-                  setSelectedCenters([]);
-                  setSelectedCourses([]);
-                  setSelectedDurations([]);
-                  setSelectedFormats([]);
-                  setPriceRange({ min: 0, max: 5000000 });
-                }}
-              >
-                Tozalash
-              </p>
-            </div>
 
-            <hr />
-
-            <PriceRange priceRange={priceRange} setPriceRange={setPriceRange} />
-
-            <div>
-              <h3 className="font-medium mb-2">O'quv markaz bo'yicha</h3>
-              <div className="relative mb-2">
-                <input
-                  type="text"
-                  value={centerSearch}
-                  onChange={(e) => setCenterSearch(e.target.value)}
-                  placeholder="O'quv markaz nomi"
-                  className="w-full p-2 pl-8 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
-                />
-                <Search className="w-4 h-4 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              </div>
-              <div className="space-y-2 max-h-40 overflow-y-auto">
-                {filteredCenters.map((center) => (
-                  <label
-                    key={center.id}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedCenters.includes(center.id)}
-                      onChange={() => handleCenterToggle(center.id)}
-                      className="sr-only peer"
-                    />
-                    <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                      {selectedCenters.includes(center.id) && (
-                        <svg
-                          className="w-3 h-3 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                    <span className="text-sm flex-1">{center.name}</span>
-                    <span className="text-sm text-gray-500">
-                      {center.count}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-2">O'quv kurs yo'nalishi</h3>
-              <div className="relative mb-2">
-                <input
-                  type="text"
-                  value={courseSearch}
-                  onChange={(e) => setCourseSearch(e.target.value)}
-                  placeholder="O'quv kurs"
-                  className="w-full p-2 pl-8 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
-                />
-                <Search className="w-4 h-4 absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              </div>
-              <div className="space-y-2 max-h-40 overflow-y-auto">
-                {filteredCourses.map((course) => (
-                  <label
-                    key={course.id}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedCourses.includes(course.id)}
-                      onChange={() => handleCourseToggle(course.id)}
-                      className="sr-only peer"
-                    />
-                    <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                      {selectedCourses.includes(course.id) && (
-                        <svg
-                          className="w-3 h-3 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                    <span className="text-sm flex-1">{course.name}</span>
-                    <span className="text-sm text-gray-500">
-                      {course.count}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-2">Kurslar davomiyligi</h3>
-              <div className="space-y-2">
-                {durations.map((duration) => (
-                  <label
-                    key={duration.id}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedDurations.includes(duration.id)}
-                      onChange={() => handleDurationToggle(duration.id)}
-                      className="sr-only peer"
-                    />
-                    <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                      {selectedDurations.includes(duration.id) && (
-                        <svg
-                          className="w-3 h-3 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                    <span className="text-sm flex-1">{duration.name}</span>
-                    <span className="text-sm text-gray-500">
-                      {duration.count}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-2">Kurslar formati</h3>
-              <div className="space-y-2">
-                {formats.map((format) => (
-                  <label
-                    key={format.id}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={selectedFormats.includes(format.id)}
-                      onChange={() => handleFormatToggle(format.id)}
-                      className="sr-only peer"
-                    />
-                    <div className="w-5 h-5 flex items-center justify-center border-2 border-gray-300 rounded-lg peer-checked:border-blue-500 peer-checked:bg-blue-500 transition">
-                      {selectedFormats.includes(format.id) && (
-                        <svg
-                          className="w-3 h-3 text-white"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                    <span className="text-sm flex-1">{format.name}</span>
-                    <span className="text-sm text-gray-500">
-                      {format.count}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Course List */}
         <div className="flex-1 mt-12 md:mt-0 p-4 md:p-6">
           <h2 className="text-2xl font-bold mb-4">Kurslar</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -686,3 +459,375 @@ export default function TipsFilter() {
     </div>
   );
 }
+
+
+
+
+
+// -------------------------------------------------------
+
+
+
+
+
+
+
+
+// import { useState, useEffect } from "react"
+// import { Search, MapPin, ChevronDown, ChevronUp } from "lucide-react"
+// import CourseItemImage from "../assets/course-item.jpg";
+// import Log from"../assets/res.png" 
+
+// const courses = [
+//   {
+//     id: 1,
+//     title: "Create beautiful websites from the scratch",
+//     price: 90000,
+//     duration: "2 oy",
+//     location: "Tashkent",
+//     category: "Frontend",
+//     institution: "PDP Academy",
+//     rating: 4.8,
+//     format: "Online",
+//   },
+//   {
+//     id: 2,
+//     title: "Data Analytics fundamentals",
+//     price: 5000000,
+//     duration: "2 oy",
+//     location: "Samarkand",
+//     category: "Data Analytics",
+//     institution: "PDP Academy",
+//     rating: 4.7,
+//     format: "Offline",
+//   },
+//   {
+//     id: 3,
+//     title: "Backend development with Node.js",
+//     price: 90000,
+//     duration: "2 oy",
+//     location: "Fergana",
+//     category: "Backend",
+//     institution: "Techno World",
+//     rating: 4.9,
+//     format: "Gibrid",
+//   },
+//   {
+//     id: 4,
+//     title: "Mobile App Development",
+//     price: 5000000,
+//     duration: "3 oy",
+//     location: "Tashkent",
+//     category: "Mobile",
+//     institution: "Najot ta'lim",
+//     rating: 4.6,
+//     format: "Online",
+//   },
+//   {
+//     id: 5,
+//     title: "UI/UX Design Masterclass",
+//     price: 90000,
+//     duration: "2 oy",
+//     location: "Samarkand",
+//     category: "Design",
+//     institution: "PDP Academy",
+//     rating: 4.8,
+//     format: "Offline",
+//   },
+//   {
+//     id: 6,
+//     title: "Python for Data Science",
+//     price: 5000000,
+//     duration: "2 oy",
+//     location: "Fergana",
+//     category: "Data Science",
+//     institution: "Mohir dev",
+//     rating: 4.7,
+//     format: "Online",
+//   },
+//   {
+//     id: 7,
+//     title: "Advanced JavaScript Course",
+//     price: 900000,
+//     duration: "2 oy",
+//     location: "Tashkent",
+//     category: "Frontend",
+//     institution: "PDP Academy",
+//     rating: 4.9,
+//     format: "Gibrid",
+//   },
+//   {
+//     id: 8,
+//     title: "DevOps Engineering",
+//     price: 5000000,
+//     duration: "3 oy",
+//     location: "Samarkand",
+//     category: "DevOps",
+//     institution: "Techno World",
+//     rating: 4.8,
+//     format: "Offline",
+//   },
+//   {
+//     id: 9,
+//     title: "Full Stack Web Development",
+//     price: 5000000,
+//     duration: "6 oy",
+//     location: "Tashkent",
+//     category: "Fullstack",
+//     institution: "PDP Academy",
+//     rating: 4.9,
+//     format: "Gibrid",
+//   },
+// ]
+
+
+
+// export default function CourseListing() {
+//   const [searchQuery, setSearchQuery] = useState("")
+//   const [priceRange, setPriceRange] = useState([2500000, 5000000])
+//   const [selectedInstitutions, setSelectedInstitutions] = useState([])
+//   const [selectedDurations, setSelectedDurations] = useState([])
+//   const [selectedFormats, setSelectedFormats] = useState([])
+//   const [selectedCategories, setSelectedCategories] = useState([])
+//   const [selectedLocations, setSelectedLocations] = useState([])
+//   const [selectedRatings, setSelectedRatings] = useState([])
+//   const [filteredCourses, setFilteredCourses] = useState(courses)
+//   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+//   useEffect(() => {
+//     const filtered = courses.filter((course) => {
+//       const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase())
+//       const matchesPrice = course.price >= priceRange[0] && course.price <= priceRange[1]
+//       const matchesInstitution = selectedInstitutions.length === 0 || selectedInstitutions.includes(course.institution)
+//       const matchesDuration = selectedDurations.length === 0 || selectedDurations.includes(course.duration)
+//       const matchesFormat = selectedFormats.length === 0 || selectedFormats.includes(course.format)
+//       const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(course.category)
+//       const matchesLocation = selectedLocations.length === 0 || selectedLocations.includes(course.location)
+//       const matchesRating =
+//         selectedRatings.length === 0 || selectedRatings.some((rating) => course.rating >= Number.parseFloat(rating))
+
+//       return (
+//         matchesSearch &&
+//         matchesPrice &&
+//         matchesInstitution &&
+//         matchesDuration &&
+//         matchesFormat &&
+//         matchesCategory &&
+//         matchesLocation &&
+//         matchesRating
+//       )
+//     })
+//     setFilteredCourses(filtered)
+//   }, [
+//     searchQuery,
+//     priceRange,
+//     selectedInstitutions,
+//     selectedDurations,
+//     selectedFormats,
+//     selectedCategories,
+//     selectedLocations,
+//     selectedRatings,
+//   ])
+
+//   const toggleSidebar = () => {
+//     setIsSidebarOpen(!isSidebarOpen)
+//   }
+
+//   const handleCategoryChange = (category) => {
+//     setSelectedCategories((prev) =>
+//       prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category],
+//     )
+//   }
+
+//   return (
+//     <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
+//       {/* Sidebar Toggle Button (visible on mobile) */}
+//       <button
+//         className="md:hidden  w-10 h-10 mt-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg"
+//         onClick={toggleSidebar}
+//       >
+//         {isSidebarOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//       </button>
+
+//       {/* Enhanced Sidebar */}
+//       <div
+//         className={`w-full md:w-72 bg-white border-r overflow-y-auto transition-all duration-300 ease-in-out ${isSidebarOpen ? "h-screen fixed z-40" : "h-0 md:h-auto"} md:relative md:h-auto`}
+//       >
+//         <div className="p-6 mt-20 md:mt-0 space-y-6">
+//           {/* Price Range */}
+//           <div className="border-b pb-6">
+//             <h3 className="font-medium mb-3">Kurslar narx oralig'i</h3>
+//             <div className="space-y-4">
+//               <input
+//                 type="range"
+//                 min="2500000"
+//                 max="5000000"
+//                 value={priceRange[1]}
+//                 onChange={(e) => setPriceRange([priceRange[0], Number.parseInt(e.target.value)])}
+//                 className="w-full accent-blue-600"
+//               />
+//               <div className="flex justify-between text-sm">
+//                 <input
+//                   type="text"
+//                   value={priceRange[0].toLocaleString()}
+//                   className="w-24 p-2 border rounded"
+//                   readOnly
+//                 />
+//                 <input
+//                   type="text"
+//                   value={priceRange[1].toLocaleString()}
+//                   className="w-24 p-2 border rounded"
+//                   readOnly
+//                 />
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Institutions */}
+//           <div className="border-b pb-6">
+//             <h3 className="font-medium mb-3">O'quv markazi bo'yicha</h3>
+//             <div className="space-y-2">
+//               <div className="relative">
+//                 <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+//                 <input type="text" placeholder="O'quv markazi nomi" className="pl-9 w-full p-2 border rounded" />
+//               </div>
+//               {["PDP Academy", "Techno World", "Najot ta'lim", "Mohir dev"].map((institution) => (
+//                 <label key={institution} className="flex items-center space-x-2">
+//                   <input
+//                     type="checkbox"
+//                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+//                     onChange={(e) => {
+//                       setSelectedInstitutions((prev) =>
+//                         e.target.checked ? [...prev, institution] : prev.filter((i) => i !== institution),
+//                       )
+//                     }}
+//                     checked={selectedInstitutions.includes(institution)}
+//                   />
+//                   <span>{institution}</span>
+//                 </label>
+//               ))}
+//             </div>
+//           </div>
+
+        
+//           {/* Course Category */}
+//           <div className="border-b pb-6">
+//             <h3 className="font-medium mb-3">Kurs yo'nalishi</h3>
+//             <div className="space-y-2">
+//               {["Frontend", "Backend", "Mobile", "Design", "Project managment" ].map(
+//                 (category) => (
+//                   <label key={category} className="flex items-center space-x-2">
+//                     <input
+//                       type="checkbox"
+//                       className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+//                       onChange={() => handleCategoryChange(category)}
+//                       checked={selectedCategories.includes(category)}
+//                     />
+//                     <span>{category}</span>
+//                   </label>
+//                 ),
+//               )}
+//             </div>
+//           </div>
+
+//             {/* Course Duration */}
+//             <div className="border-b pb-6">
+//             <h3 className="font-medium mb-3">Kurslar davomiyligi</h3>
+//             <div className="space-y-2">
+//               {["1 oygacha", "1-3 oy", "3-6 oy", "6 oydan ko'p"].map((duration) => (
+//                 <label key={duration} className="flex items-center space-x-2">
+//                   <input
+//                     type="checkbox"
+//                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+//                     onChange={(e) => {
+//                       setSelectedDurations((prev) =>
+//                         e.target.checked ? [...prev, duration] : prev.filter((d) => d !== duration),
+//                       )
+//                     }}
+//                     checked={selectedDurations.includes(duration)}
+//                   />
+//                   <span>{duration}</span>
+//                 </label>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Course Format */}
+//           <div className="border-b pb-6">
+//             <h3 className="font-medium mb-3">Kurslar formati</h3>
+//             <div className="space-y-2">
+//               {["Online", "Offline", "Gibrid"].map((format) => (
+//                 <label key={format} className="flex items-center space-x-2">
+//                   <input
+//                     type="checkbox"
+//                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+//                     onChange={(e) => {
+//                       setSelectedFormats((prev) =>
+//                         e.target.checked ? [...prev, format] : prev.filter((f) => f !== format),
+//                       )
+//                     }}
+//                     checked={selectedFormats.includes(format)}
+//                   />
+//                   <span>{format}</span>
+//                 </label>
+//               ))}
+//             </div>
+//           </div>
+
+         
+//         </div>
+//       </div>
+
+//       {/* Main Content */}
+//       <div className="flex-1 p-6">
+//         <div className="mb-6">
+//           <div className="relative">
+//             <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+//             <input
+//               type="text"
+//               placeholder="O'quv kurs nomi"
+//               className="w-full pl-10 p-2.5 bg-white border rounded-lg"
+//               value={searchQuery}
+//               onChange={(e) => setSearchQuery(e.target.value)}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Number of filtered courses */}
+//         <div className="mb-4 text-lg font-semibold">Kurslar soni: {filteredCourses.length}</div>
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+//           {filteredCourses.map((course) => (
+//             <div
+//               key={course.id}
+//               className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+//             >
+//               <div className="relative h-48 bg-gradient-to-r from-blue-500 to-blue-600">
+//                 <img src={CourseItemImage} alt="" />
+//                 <span className="absolute bottom-3 left-3 bg-white/90 px-2 py-1 rounded text-sm">⌚ {course.duration}</span>
+             
+//               </div>
+//               <div className="p-4">
+//                 <div className="flex items-center space-x-2 mb-2">
+//                   <div className="w-6 h-6 bg-gray-200 rounded-full"><img src={Log} alt="" /></div>
+//                   <span className="text-sm font-medium">{course.institution}</span>
+//                 </div>
+//                 <h3 className="font-medium mb-2 line-clamp-2">{course.title}</h3>
+//                 <p className="text-blue-600 font-medium mb-2">
+//                   {course.price.toLocaleString()} Uzs{course.price === 900000 ? "/oyiga" : ""}
+//                 </p>
+//                 <div className="flex items-center text-sm text-gray-600">
+//                   <MapPin className="h-4 w-4 mr-1" />
+//                   <span>{course.location}</span>
+//                   <span className="mx-2">•</span>
+//                   <span>{course.category}</span>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
