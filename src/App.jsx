@@ -20,6 +20,7 @@ import Fields from "./pages/ITFields_list/IT_fields_list";
 import JobSearch from "./pages/ITFields_list/IT_fields_list";
 import Dashboard from "./pages/Analitic/Analitic";
 import OpenInformations from "./pages/AboutPages/OpenInformations";
+import Leadership from "./pages/AboutPages/Leadership";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -40,24 +41,10 @@ export default function App() {
           path: "/open-informations",
           element: <OpenInformations />,
         },
-        // {
-        //   path: "/about",
-        //   children: [
-        //     {
-        //       index: true,
-        //       element: <About />,
-        //     },
-        //     {
-        //       path: "open-informations",
-        //       element: <OpenInformations />,
-        //     },
-        //     // {
-        //     //   path: "/open-data",
-        //     // },
-        //   ],
-        //   // path: "/about",
-        //   // element: <About />,
-        // },
+        {
+          path: "/leadership",
+          element: <Leadership />,
+        },
         {
           path: "/universities",
           element: <University />,
@@ -106,3 +93,22 @@ export default function App() {
     </div>
   );
 }
+
+// {
+//   path: "/about",
+//   children: [
+//     {
+//       index: true,
+//       element: <About />,
+//     },
+//     {
+//       path: "open-informations",
+//       element: <OpenInformations />,
+//     },
+//     // {
+//     //   path: "/open-data",
+//     // },
+//   ],
+//   // path: "/about",
+//   // element: <About />,
+// },

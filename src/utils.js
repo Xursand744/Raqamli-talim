@@ -1,6 +1,7 @@
 import { CircleHelp } from "lucide-react";
 import { PanelsTopLeft } from "lucide-react";
 import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
+import { LeadershipBanner } from "./assets";
 
 export const Menus = [
   {
@@ -164,5 +165,62 @@ export const openInformations = [
     index: 10,
     desc: "Davlat organlari va tashkilotlarining o‘z faoliyatiga oid hisoboti (davlat sirlari va xizmatda foydalanish uchun mo‘ljallangan ma’lumotlar bundan mustasno).",
     id: 10,
+  },
+];
+
+export const leadershipInformations = [
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 1,
+  },
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 2,
+  },
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 3,
+  },
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 4,
+  },
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 5,
+  },
+  {
+    image: LeadershipBanner,
+    fullname: "Shermatov Sherzod Xotamovich",
+    desc: "O‘zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
+    email: "info@digital.uz",
+    number: "+99871 238-41-07",
+    time: "5/2, 9:00 - 18:00",
+    id: 6,
   },
 ];
