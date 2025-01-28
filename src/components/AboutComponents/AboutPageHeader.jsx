@@ -7,7 +7,7 @@ function AboutPageHeader({ title, breadCrumps }) {
   const { t } = useTranslation("global");
 
   return (
-    <div className=" mt-[100px]">
+    <div className="mt-[100px]">
       <div className="breadcrumbs">
         <div className="container flex gap-[10px]">
           <NavLink className={`flex gap-[10px]`} to={"/"}>
@@ -28,7 +28,7 @@ function AboutPageHeader({ title, breadCrumps }) {
         </div>
       </div>
 
-      <div className="flex gap-[20px] flex-wrap mt-[40px]">
+      <div className="flex gap-[20px] flex-wrap mt-[20px]">
         {aboutFilters &&
           aboutFilters.map((item, index) => {
             return (

@@ -22,6 +22,7 @@ import Leadership from "./pages/AboutPages/Leadership";
 import Structure from "./pages/AboutPages/Structure";
 import Departments from "./pages/AboutPages/Departments";
 import AntiCorruption from "./pages/AboutPages/AntiCorruption";
+import HigherStandingOptimization from "./pages/AboutPages/HigherStandingOptimization";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -55,8 +56,12 @@ export default function App() {
           element: <Departments />,
         },
         {
-          path: "anti-corruption",
+          path: "/anti-corruption",
           element: <AntiCorruption />,
+        },
+        {
+          path: "higher-standing-organization",
+          element: <HigherStandingOptimization />,
         },
         {
           path: "/universities",

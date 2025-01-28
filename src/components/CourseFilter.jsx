@@ -18,6 +18,7 @@ export default function CourseFilter() {
     { name: "Frontend", count: 14 },
     { name: "Backend", count: 17 },
     { name: "Project managment", count: 8 },
+    { name: "Web Dasturlash", count: 8 },
   ];
 
   const durations = [
