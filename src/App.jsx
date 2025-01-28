@@ -21,6 +21,7 @@ import JobSearch from "./pages/ITFields_list/IT_fields_list";
 import Dashboard from "./pages/Analitic/Analitic";
 import OpenInformations from "./pages/AboutPages/OpenInformations";
 import Leadership from "./pages/AboutPages/Leadership";
+import Structure from "./pages/AboutPages/Structure";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -40,6 +41,10 @@ export default function App() {
         {
           path: "/open-informations",
           element: <OpenInformations />,
+        },
+        {
+          path: "/structure",
+          element: <Structure />,
         },
         {
           path: "/leadership",

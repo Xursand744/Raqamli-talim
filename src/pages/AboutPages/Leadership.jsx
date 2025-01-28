@@ -25,7 +25,7 @@ function Leadership() {
           breadCrumps={breadCrumps}
         />
 
-        <div className="flex justify-between flex-wrap gap-[20px] mb-[50px]">
+        <div className="flex justify-between flex-wrap gap-[20px] mb-[50px] mt-[40px]">
           {leadershipInformations &&
             leadershipInformations.map((item) => {
               return <LeaderShipCard {...item} />;
