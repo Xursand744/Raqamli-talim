@@ -19,11 +19,11 @@ function AntiCorruption() {
   return (
     <div className="container ">
       <AboutPageHeader
-        title={"Korrupsiyaga qarshi kurashish"}
+        title={t("menu.antiCorruption")}
         breadCrumps={breadCrumps}
       />
 
-      <p className="anti-corruption">
+      <p className="anti-corruption mt-[40px]">
         O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligining korrupsiya
         faktlariga doir murojaatlarni koʻrib chiqish natijalari haqidagi yillik
         hisoboti yuzasidan{" "}

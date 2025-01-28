@@ -27,8 +27,11 @@ export default function Departments() {
 
   return (
     <div className="container mb-[50px]">
-      <AboutPageHeader breadCrumps={breadCrumps} title={"Bo’linmalar"} />
-      <div className="w-full mx-auto space-y-2">
+      <AboutPageHeader
+        breadCrumps={breadCrumps}
+        title={t("menu.departments")}
+      />
+      <div className="w-full mx-auto space-y-2 mt-[20px]">
         {departmentsInformations.map((item) => (
           <div
             key={item.id}
