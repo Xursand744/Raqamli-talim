@@ -2,6 +2,13 @@
   @apply text-[46px] font-bold text-[#222222] text-left;
 }
 
+.anti-corruption a {
+  text-decoration: underline;
+  color: #2575eb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /* responsive */
 @media only screen and (max-width: 900px) {
   .open-information-card {
