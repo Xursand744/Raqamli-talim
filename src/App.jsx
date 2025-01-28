@@ -15,13 +15,12 @@ import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tip";
 import University from "./pages/ItUniversitet/UniversityList";
 import StudyCenters from "./pages/StudyCenters";
-import Analiz from "./pages/Analitic/Analitic";
-import Fields from "./pages/ITFields_list/IT_fields_list";
 import JobSearch from "./pages/ITFields_list/IT_fields_list";
 import Dashboard from "./pages/Analitic/Analitic";
 import OpenInformations from "./pages/AboutPages/OpenInformations";
 import Leadership from "./pages/AboutPages/Leadership";
 import Structure from "./pages/AboutPages/Structure";
+import Departments from "./pages/AboutPages/Departments";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -49,6 +48,10 @@ export default function App() {
         {
           path: "/leadership",
           element: <Leadership />,
+        },
+        {
+          path: "/departments",
+          element: <Departments />,
         },
         {
           path: "/universities",

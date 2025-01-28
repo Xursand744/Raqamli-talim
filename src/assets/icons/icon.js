@@ -6,6 +6,8 @@ import BackgroundIcon from "./project-bottom-icon.svg";
 import clockIcon from "./clock.svg";
 import phnoeIcon from "./phone.svg";
 import emailIcon from "./email.svg";
+import downIcon from "./down-icon.svg";
+import rightIcon from "./right-icon.svg";
 
 export {
   send,
@@ -16,4 +18,6 @@ export {
   clockIcon,
   phnoeIcon,
   emailIcon,
+  downIcon,
+  rightIcon,
 };
