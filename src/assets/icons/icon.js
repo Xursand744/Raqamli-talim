@@ -8,10 +8,12 @@ import phnoeIcon from "./phone.svg";
 import emailIcon from "./email.svg";
 import downIcon from "./down-icon.svg";
 import rightIcon from "./right-icon.svg";
+import eyeIcon from "./eye.svg";
 
 export {
   send,
   brain,
+  eyeIcon,
   Graduation,
   BuildingOffice,
   BackgroundIcon,

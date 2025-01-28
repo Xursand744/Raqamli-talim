@@ -21,6 +21,7 @@ import OpenInformations from "./pages/AboutPages/OpenInformations";
 import Leadership from "./pages/AboutPages/Leadership";
 import Structure from "./pages/AboutPages/Structure";
 import Departments from "./pages/AboutPages/Departments";
+import AntiCorruption from "./pages/AboutPages/AntiCorruption";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -52,6 +53,10 @@ export default function App() {
         {
           path: "/departments",
           element: <Departments />,
+        },
+        {
+          path: "anti-corruption",
+          element: <AntiCorruption />,
         },
         {
           path: "/universities",
