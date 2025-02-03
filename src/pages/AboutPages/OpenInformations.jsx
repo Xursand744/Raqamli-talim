@@ -45,7 +45,7 @@ function OpenInformations() {
         </div>
 
         <div className="mt-[80px]">
-          <h1 className="about-title">Ochiq ma’lumotlar</h1>
+          <h1 className="about-title">{t("menu.openData")}</h1>
         </div>
 
         <div className="mt-[40px] flex justify-between flex-wrap gap-[20px]">

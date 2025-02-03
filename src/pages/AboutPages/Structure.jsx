@@ -19,7 +19,10 @@ export default function Structure() {
   return (
     <>
       <div className="container">
-        <AboutPageHeader title={"Tuzilma"} breadCrumps={breadCrumps} />
+        <AboutPageHeader
+          title={t("menu.structure")}
+          breadCrumps={breadCrumps}
+        />
       </div>
 
       <div className="w-full min-h-screen bg-white  overflow-auto mt-[60px]">

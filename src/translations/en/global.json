@@ -248,5 +248,14 @@
   "avg_salary": "Average Salary",
   "max_salary": "Maximum Salary",
   "course_count": "cources",
-  "demand_chart": "Demand Chart"
+  "demand_chart": "Demand Chart",
+  "project_home": "Home",
+  "projects": "Projects",
+  "project_title": "Muhammad al-Khwarizmi's Heirs",
+  "project_description": "The 'Al-Khwarizmi Heirs' project provides free English and IT lessons for students in grades 7-11.",
+  "project_details": "The 'Muhammad al-Khwarizmi Heirs' project aims to prepare students for high-demand careers in the labor market.",
+  "project_goal": "By 2028, this system will be implemented nationwide in three stages, resulting in 50,000 skilled graduates ready for the job market.",
+  "study_title": "Want to study for free at Al-Khwarizmi?",
+  "study_description": "Join the waiting list for the next admission!",
+  "all_events": "All Events"
 }

@@ -283,5 +283,14 @@
   "avg_salary": "O'rtacha oylik",
   "max_salary": "Eng ko'p oylik",
   "demand_chart": "Talablar grafigi",
-  "course_count": "ta kurs"
+  "course_count": "ta kurs",
+  "project_home": "Bosh sahifa",
+  "projects": "Loyihalar",
+  "project_title": "Muhammad Al-Xorazmiy vorislari",
+  "project_description": "'Al-Xorazmiy vorislari' loyihasi 7-11-sinf o'quvchilari uchun bepul ingliz tili va IT darslarini taqdim etadi.",
+  "project_details": "'Muhammad Al-Xorazmiy vorislari' loyihasi o'quvchilarni mehnat bozorida talab yuqori bo‘lgan kasblarga tayyorlaydi.",
+  "project_goal": "2028-yilgacha bu tizim butun respublika bo'ylab uch bosqichda joriy etiladi, natijada 50 000 malakali bitiruvchi tayyorlanadi.",
+  "study_title": "Al-Xorazmiyda bepul tahsil olmoqchimisiz?",
+  "study_description": "Keyingi qabul kutish ro‘yxatiga qo‘shiling!",
+  "all_events": "Barcha tadbirlar"
 }
