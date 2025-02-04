@@ -6,6 +6,9 @@ import about5 from "./about5.png";
 import LeadershipBanner from "./aboutImages/leadership.png";
 import DepartmentItemBanner from "./aboutImages/department-item-banner.png";
 import DepartmentDirector from "./aboutImages/department-image.png";
+import ProjectBanner from "./projects/project-image.jpg";
+import ItTalentsImage from "./projects/it-talents-image.png";
+import ItTalentsIcon from "./projects/circle.png";
 
 export {
   about1,
@@ -16,4 +19,7 @@ export {
   LeadershipBanner,
   DepartmentItemBanner,
   DepartmentDirector,
+  ProjectBanner,
+  ItTalentsImage,
+  ItTalentsIcon,
 };

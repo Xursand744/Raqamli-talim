@@ -292,5 +292,68 @@
   "project_goal": "2028-yilgacha bu tizim butun respublika bo'ylab uch bosqichda joriy etiladi, natijada 50 000 malakali bitiruvchi tayyorlanadi.",
   "study_title": "Al-Xorazmiyda bepul tahsil olmoqchimisiz?",
   "study_description": "Keyingi qabul kutish ro‘yxatiga qo‘shiling!",
-  "all_events": "Barcha tadbirlar"
+  "all_events": "Barcha tadbirlar",
+  "itTalentBreadcrump": {
+    "home": "Bosh sahifa",
+    "projects": "Loyihalar",
+    "itTalents": "IT Talents dasturi"
+  },
+  "hero": {
+    "title": "\"IT Talents\" dasturi",
+    "description": "“IT talents” dasturi - nodavlat ta’lim tashkilotlariga bitiruvchisi IT-xizmatlarni eksport qiluvchi tashkilotga ishga joylashganda bazaviy hisoblash miqdorining 75 baravarigacha, nogironligi bo‘lgan yosh bitiruvchisi bunday tashkilotga ishga joylashgan hollarda esa 105 baravarigacha bir martalik subsidiya ajratish tizimini nazarda tutuvchi dasturdir"
+  },
+  "decisions": {
+    "title": "Dasturga oid qarorlar",
+    "document1": "O'zbekiston Respublikasi Prezidentining \"Raqamlashtirish sohasida malakali mutaxassislar tayyorlash faoliyatini qo'llab-quvvatlash bo'yicha qo'shimcha chora-tadbirlar to'g'risida\" 2024-yil 1-fevraldagi PQ-51-son qarori",
+    "document2": "O'zbekiston Respublikasi Vazirlar Mahkamasining \"IT-xizmatlar eksporti yo'nalishi bo'yicha malakali mutaxassislarni tayyorlash faoliyatini qo'llab-quvvatlash chora-tadbirlari to'g'risida\" 2024-yil 12-fevraldagi 86-son qarori"
+  },
+  "itTalentsMetrics": {
+    "title": "\"IT Talents\" sonlarda",
+    "residents": "Ta'lim rezidentlar soni",
+    "students": "nafar o'quvchilar",
+    "graduates": "nafar bitiruvchi",
+    "employed": "nafar Ishga joylashgan bitiruvchilar soni",
+    "courses": "O'quv kurslar soni"
+  },
+  "itTalentsStudyCenters": {
+    "title": "O‘quv markazlari reytingi qanday shakllanadi?",
+    "title2": "IT-Park rezidenti bo‘lgan nodavlat ta’lim tashkilotlarining reytingi"
+  },
+  "stats": {
+    "platformCourses": {
+      "title": "Platformadagi kurslar soni",
+      "count": "62 ta",
+      "points": "Har bir kurs 0.10 ball beradi",
+      "total": "Kurslar uchun 6.2 ball"
+    },
+    "platformStudents": {
+      "title": "Platformadagi talabalar soni",
+      "count": "952 nafar",
+      "points": "Har bir talaba 0.10 ball qo'shadi",
+      "total": "Talabalar uchun 95.2 ball"
+    },
+    "graduates": {
+      "title": "Bitiruvchilar soni",
+      "count": "1671 nafar",
+      "points": "Har bir bitiruvchi 0.20 ball qo'shadi",
+      "total": "Bitiruvchilar uchun 334.2 ball"
+    },
+    "employedGraduates": {
+      "title": "Ish bilan ta'minlangan bitiruvchilar",
+      "count": "729 nafar",
+      "points": "Har bir ishga joylashish 0.20 ball qo'shadi",
+      "total": "Ish bilan ta'minlangan bitiruvchilar uchun 145.8 ball"
+    },
+    "itExportGraduates": {
+      "title": "IT eksport kompaniyalariga ishga joylashgan bitiruvchilar",
+      "count": "106 nafar",
+      "points": "Har bir eksport kompaniyalariga ishga joylashganlar uchun 0.40 ball",
+      "total": "Eksport kompaniyalariga ishga joylashganlar uchun 42.4 ball"
+    },
+    "summary": {
+      "text": "Ushbu ko'rsatkichlarning barchasini qo'shib, umumiy ballni olamiz:",
+      "calculation": "6.2 + 95.2 + 334.2 + 145.8 + 42.4 = 623.8",
+      "total": "ball"
+    }
+  }
 }

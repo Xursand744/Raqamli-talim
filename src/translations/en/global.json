@@ -257,5 +257,68 @@
   "project_goal": "By 2028, this system will be implemented nationwide in three stages, resulting in 50,000 skilled graduates ready for the job market.",
   "study_title": "Want to study for free at Al-Khwarizmi?",
   "study_description": "Join the waiting list for the next admission!",
-  "all_events": "All Events"
+  "all_events": "All Events",
+  "itTalentBreadcrump": {
+    "home": "Home",
+    "projects": "Projects",
+    "itTalents": "IT Talents Program"
+  },
+  "hero": {
+    "title": "\"IT Talents\" Program",
+    "description": "The \"IT Talents\" program provides a one-time subsidy system of up to 75 times the base calculation amount when a graduate of a non-governmental educational institution is employed in an IT service-exporting organization, and up to 105 times when a graduate with a disability is employed in such an organization."
+  },
+  "decisions": {
+    "title": "Program-related decisions",
+    "document1": "Decree No. PQ-51 of the President of the Republic of Uzbekistan dated February 1, 2024, \"On additional measures to support the activities of training qualified specialists in the field of digitalization\"",
+    "document2": "Decree No. 86 of the Cabinet of Ministers of the Republic of Uzbekistan dated February 12, 2024, \"On measures to support the activities of training qualified specialists in the field of IT services export\""
+  },
+  "itTalentsMetrics": {
+    "title": "\"IT Talents\" in numbers",
+    "residents": "Number of educational residents",
+    "students": "number of students",
+    "graduates": "number of graduates",
+    "employed": "number of employed graduates",
+    "courses": "number of courses"
+  },
+  "itTalentsStudyCenters": {
+    "title": "How is the ranking of study centers formed?",
+    "title2": "Ranking of non-governmental educational institutions that are IT-Park residents"
+  },
+  "stats": {
+    "platformCourses": {
+      "title": "Number of courses on the platform",
+      "count": "62 courses",
+      "points": "Each course is 0.10 points",
+      "total": "Total points for courses: 6.2"
+    },
+    "platformStudents": {
+      "title": "Number of students on the platform",
+      "count": "952 students",
+      "points": "Each student is 0.10 points",
+      "total": "Total points for students: 95.2"
+    },
+    "graduates": {
+      "title": "Number of graduates",
+      "count": "1671 graduates",
+      "points": "Each graduate is 0.20 points",
+      "total": "Total points for graduates: 334.2"
+    },
+    "employedGraduates": {
+      "title": "Employed graduates",
+      "count": "729 people",
+      "points": "Each employed graduate is 0.20 points",
+      "total": "Total points for employed graduates: 145.8"
+    },
+    "itExportGraduates": {
+      "title": "IT export company employees",
+      "count": "106 people",
+      "points": "Each export company employee is 0.40 points",
+      "total": "Total points for export employees: 42.4"
+    },
+    "summary": {
+      "text": "Adding up all these indicators, the total score is:",
+      "calculation": "6.2 + 95.2 + 334.2 + 145.8 + 42.4 = 623.8",
+      "total": "points"
+    }
+  }
 }

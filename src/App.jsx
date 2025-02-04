@@ -23,6 +23,7 @@ import Structure from "./pages/AboutPages/Structure";
 import Departments from "./pages/AboutPages/Departments";
 import AntiCorruption from "./pages/AboutPages/AntiCorruption";
 import HigherStandingOptimization from "./pages/AboutPages/HigherStandingOptimization";
+import ItTalents from "./pages/Projects/ItTalents";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -72,17 +73,12 @@ export default function App() {
           element: <Tips />,
         },
         {
-          path: "projects",
-          children: [
-            {
-              index: true,
-              element: <ProjectLayout />,
-            },
-            {
-              path: ":slug",
-              element: <Project />,
-            },
-          ],
+          path: "/projects/al-xorazmiy-vorislari",
+          element: <Project />,
+        },
+        {
+          path: "/projects/it-talents-dasturi",
+          element: <ItTalents />,
         },
         {
           path: "/tips",
