@@ -1,7 +1,11 @@
 import { CircleHelp } from "lucide-react";
 import { PanelsTopLeft } from "lucide-react";
 import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
-import { DepartmentDirector, LeadershipBanner } from "./assets";
+import {
+  DepartmentDirector,
+  DepartmentImage,
+  LeadershipBanner,
+} from "./assets";
 
 export const Menus = [
   {
@@ -232,95 +236,76 @@ export const leadershipInformations = [
 
 export const departmentsInformations = [
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 1,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 2,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 3,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 4,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 5,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 6,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
   {
-    title:
-      "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirishbo'limi",
-    content: {
-      name: "Shermatov Sherzod Xotamovich",
-      position:
-        "O'zbekiston Respublikasi raqamli texnologiyalar vaziri - Bosh Axborot Direktori (CIO)",
-      phone: "+99871 238-41-07",
-      email: "info@digital.uz",
-      image: DepartmentDirector,
-    },
-    id: 7,
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
+  },
+  {
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
+  },
+  {
+    image: DepartmentImage,
+    fullname: "Saidmurod Abdujabborov",
+    position:
+      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    email: "education@digital.uz",
+    number: "+998 71 203 03 43 (109)",
   },
 ];
 

@@ -20,6 +20,10 @@
   .department-item-flex {
     flex-direction: column !important;
   }
+
+  .deparment-items {
+    justify-content: center !important;
+  }
 }
 
 @media only screen and (max-width: 1300px) {

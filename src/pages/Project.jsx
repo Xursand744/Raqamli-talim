@@ -14,7 +14,7 @@ function Project() {
   const { slug } = useParams();
   const { t } = useTranslation("global");
 
-  const text = slugToText(slug);
+  // const text = slugToText(slug);
 
   const Button = ({ children, className, ...props }) => (
     <button
@@ -35,7 +35,8 @@ function Project() {
           </NavLink>{" "}
           {" >"} <NavLink to={"/projects"}>{t("projects")}</NavLink> {" >"}{" "}
           <NavLink to={`/projects/${slug}`}>
-            {capitalizeFirstLetter(text)}
+            Al Xorazmiy Vorislari
+            {/* {capitalizeFirstLetter(text)} */}
           </NavLink>
         </div>
 
