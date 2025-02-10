@@ -80,10 +80,8 @@ function App() {
         </h1>
 
         <div className="space-y-6">
-          {/* Top 3 jobs */}
           <div className="grid gap-6 md:grid-cols-4">
             {topJobs.map((job) => {
-              console.log("job", t(job.coursesKey));
               return (
                 <div
                   key={job.id}
@@ -111,7 +109,6 @@ function App() {
             ))}
           </div>
 
-          {/* View All Button */}
           <div className="text-center">
             <button className="rounded-full bg-blue-500 px-8 py-3 text-white hover:bg-blue-600 transition-colors">
               {t("topJobs.viewAllButton")}

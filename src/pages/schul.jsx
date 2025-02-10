@@ -36,7 +36,7 @@ export default function schul({
           </p>
           <div className="flex items-center gap-2 justify-between">
             <span className="text-lg font-medium ml-[12px]">{studying}</span>
-            <img className="mr-[12px]" src={dicon} alt="" />
+            <img className="" src={dicon} alt="" />
           </div>
         </div>
         <div className="bg-slate-100 rounded-lg">
@@ -45,7 +45,7 @@ export default function schul({
           </p>
           <div className="flex items-center gap-2 justify-between">
             <span className="text-lg font-medium ml-[12px]">{graduated}</span>
-            <img className="mr-[12px]" src={dicon3} alt="" />
+            <img className="" src={dicon3} alt="" />
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function schul({
           </p>
           <div className="flex items-center gap-2 justify-between">
             <span className="text-lg font-medium ml-[12px]">{employed}</span>
-            <img className="mr-[12px]" src={dicon2} alt="" />
+            <img className="" src={dicon2} alt="" />
           </div>
         </div>
         <div className="rounded-lg bg-[#E3EEFF] text-center">
@@ -66,7 +66,7 @@ export default function schul({
           </p>
           <div className="flex items-center gap-2 justify-between">
             <span className="text-lg font-medium ml-[12px]">{exporters}</span>
-            <img className="mr-[12px]" src={dicon1} alt="" />
+            <img className="" src={dicon1} alt="" />
           </div>
         </div>
       </div>

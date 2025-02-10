@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 
 export default function Chances() {
-  const { t, i18n } = useTranslation("global"); // Translation hook from i18n
+  const { t, i18n } = useTranslation("global");
   const [lang, setLang] = useState(Cookies.get("lang") || "uz");
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Chances() {
         title: t("chances.robotTitle"),
         desc: t("chances.robotDesc"),
         type: "robot",
-        image: ChanceImage2,
+        image: ChanceImage,
       },
       {
         title: t("chances.walletTitle"),
@@ -42,7 +42,7 @@ export default function Chances() {
         title: t("chances.robotTitle"),
         desc: t("chances.robotDesc"),
         type: "robot",
-        image: ChanceImage2,
+        image: ChanceImage,
       },
       {
         title: t("chances.walletTitle"),
@@ -54,7 +54,7 @@ export default function Chances() {
         title: t("chances.robotTitle"),
         desc: t("chances.robotDesc"),
         type: "robot",
-        image: ChanceImage2,
+        image: ChanceImage,
       },
       {
         title: t("chances.walletTitle"),
@@ -65,7 +65,7 @@ export default function Chances() {
       {
         title: t("chances.robotTitle"),
         desc: t("chances.robotDesc"),
-        image: ChanceImage2,
+        image: ChanceImage,
         type: "robot",
       },
       {
@@ -78,27 +78,14 @@ export default function Chances() {
   }, 1000);
 
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
         {t("chances.title")}
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-[15px]">
         {data &&
           data.map((item, index) => {
-            console.log(item);
-
-            if (item.type === "wallet") {
-              return (
-                <Chance
-                  key={index}
-                  title={t(item.title)}
-                  desc={t(item.desc)}
-                  image={item.image}
-                />
-              );
-            }
-
             return (
               <ChanceRobot
                 key={index}

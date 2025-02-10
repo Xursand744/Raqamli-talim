@@ -10,8 +10,6 @@ export default function Chance({ title, desc, image }) {
     i18n.changeLanguage(savedLang); // Change i18n language
   }, [i18n]);
 
-  console.log(title, desc);
-
   return (
     <div className="max-w-[354px] w-full min-h-[180px] overflow-hidden flex justify-between rounded-[12px] relative border-[1px] border-[#C0C0C0] p-[20px]">
       <div className="w-[60%] flex flex-col justify-between">

@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <div>
       <Carousel />
-      <div className="container">
+      <div className="max-w-[1440px] mx-auto">
         <Chances />
       </div>
       <Plan />

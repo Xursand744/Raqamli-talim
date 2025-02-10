@@ -63,12 +63,10 @@ export default function MobMenu({ Menus }) {
                     {subMenu.map(({ name, link, icon: Icon }) => (
                       <li key={name}>
                         <a
-                          href={link} // Submenu linki
-                          className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer"
+                          href={link}
+                          className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer font-medium"
                         >
-                          {Icon && <Icon size={17} />}{" "}
-                          {/* Icon bo'lsa ko'rsatish */}
-                          {t(name)}
+                          {Icon && <Icon size={17} />} {t(name)}
                         </a>
                       </li>
                     ))}

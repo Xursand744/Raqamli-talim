@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import foto1 from "../assets/image1.png";
 import foto2 from "../assets/image2.png";
@@ -9,11 +9,11 @@ export default function EventsSection() {
   const { t, i18n } = useTranslation("global");
   const [lang, setLang] = useState(Cookies.get("lang") || "uz");
 
-  useEffect(() => {
+  useMemo(() => {
     const savedLang = Cookies.get("lang") || "uz";
     i18n.changeLanguage(savedLang);
     setLang(savedLang);
-  }, [i18n]);
+  }, []);
 
   const [events, setEvents] = useState(null);
 
@@ -54,7 +54,7 @@ export default function EventsSection() {
 
   const Card = ({ children, className, ...props }) => (
     <div
-      className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`}
+      className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition ${className}`}
       {...props}
     >
       {children}
@@ -72,7 +72,6 @@ export default function EventsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {events &&
               events.map((event) => {
-                console.log(event.title);
                 return (
                   <Card key={event.id}>
                     <div className="relative h-48">
