@@ -36,6 +36,10 @@ body {
   @apply text-[44px] font-bold text-center mt-[120px] text-['#222222'];
 }
 
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+
 .rate-section {
   font-family: "Roboto", sans-serif;
 }

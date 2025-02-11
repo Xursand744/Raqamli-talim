@@ -13,6 +13,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 export default function App() {
   return (
     <>
+      <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] mt-[100px]">
+        Raqamli ta’lim loyihalari
+      </h1>
       <Swiper
         autoplay={{
           delay: 3000,
@@ -24,7 +27,7 @@ export default function App() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper mt-[100px] max-w-[1900px] pl-[200px] w-full"
+        className="mySwiper max-w-[1900px] pl-[200px] w-full"
       >
         <SwiperSlide className="bg-[#F8F8F8]">
           <CarouselItem />

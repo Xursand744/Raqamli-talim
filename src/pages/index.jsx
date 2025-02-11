@@ -8,14 +8,13 @@ import School from "./School";
 import Rate from "./Rate";
 import SuccessHistory from "./SuccessHistory";
 import Join from "./Join";
-import Footer from "./Footer";
 import Carousel from "./Carousel";
 
 export default function HomePage() {
   return (
     <div>
       <Carousel />
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[1440px] mx-auto mt-[100px]">
         <Chances />
       </div>
       <Plan />
