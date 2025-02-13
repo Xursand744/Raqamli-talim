@@ -5,6 +5,7 @@ import {
   DepartmentDirector,
   DepartmentImage,
   LeadershipBanner,
+  newsImage,
 } from "./assets";
 
 export const Menus = [
@@ -441,5 +442,121 @@ export const studyCentersStandings = [
     col2: 32,
     col3: 50,
     score: "91 Ball",
+  },
+];
+
+export const news = [
+  {
+    id: 1,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 2,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 3,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 4,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 5,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 6,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 7,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 8,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 9,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+];
+
+export const newsBigCard = [
+  {
+    image: newsImage,
+    title: "IT xizmatlarni online rasmiylashtirin",
+    description:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    tags: ["IT", "Shaharcha"],
+    date: "18-iyul, 2024",
+  },
+];
+
+export const newsBigCardRight = [
+  {
+    id: 1,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
+  },
+  {
+    id: 2,
+    image: newsImage,
+    date: "18-iyul, 2024",
+    title: "O’zbekiston IT bozorida yangilik",
+    description:
+      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
+    tags: ["IT", "Shaharcha"],
   },
 ];

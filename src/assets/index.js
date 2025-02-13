@@ -10,6 +10,8 @@ import ProjectBanner from "./projects/project-image.jpg";
 import ItTalentsImage from "./projects/it-talents-image.png";
 import ItTalentsIcon from "./projects/circle.png";
 import DepartmentImage from "./aboutImages/department.png";
+import newsImage from "./news/news-image.png";
+import newsBannerImage from "./news/banner-image.png";
 
 export {
   about1,
@@ -24,4 +26,6 @@ export {
   ItTalentsImage,
   ItTalentsIcon,
   DepartmentImage,
+  newsImage,
+  newsBannerImage,
 };

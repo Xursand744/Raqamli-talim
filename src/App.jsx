@@ -24,6 +24,7 @@ import Departments from "./pages/AboutPages/Departments";
 import AntiCorruption from "./pages/AboutPages/AntiCorruption";
 import HigherStandingOptimization from "./pages/AboutPages/HigherStandingOptimization";
 import ItTalents from "./pages/Projects/ItTalents";
+import News from "./pages/News/News";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -69,7 +70,7 @@ export default function App() {
           element: <University />,
         },
         {
-          path: "/news",
+          path: "/contact",
           element: <Tips />,
         },
         {
@@ -96,6 +97,10 @@ export default function App() {
         {
           path: "/study-centers",
           element: <StudyCenters />,
+        },
+        {
+          path: "/news",
+          element: <News />,
         },
       ],
     },
