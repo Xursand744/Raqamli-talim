@@ -518,15 +518,6 @@ export const news = [
       "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
     tags: ["IT", "Shaharcha"],
   },
-  {
-    id: 9,
-    image: newsImage,
-    date: "18-iyul, 2024",
-    title: "O’zbekiston IT bozorida yangilik",
-    description:
-      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
-    tags: ["IT", "Shaharcha"],
-  },
 ];
 
 export const newsBigCard = [
