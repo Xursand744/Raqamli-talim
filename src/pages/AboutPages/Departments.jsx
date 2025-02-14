@@ -20,7 +20,7 @@ export default function Departments() {
   ];
 
   return (
-    <div className="container mb-[50px]">
+    <div className="max-w-[1230px] mx-auto mb-[50px]">
       <AboutPageHeader
         breadCrumps={breadCrumps}
         title={t("menu.departments")}
