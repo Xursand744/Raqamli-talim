@@ -15,6 +15,9 @@ import newsBannerImage from "./news/banner-image.png";
 import singleNewsImage from "./news/single-news.jpg";
 import ProjectImage from "./project-image.png";
 import ItTalentsProjectImage from "./projects/project-image.jpg";
+import LeadershipImage1 from "./aboutImages/leadership-1.png";
+import LeadershipImage2 from "./aboutImages/leadership-2.png";
+import LeadershipImage3 from "./aboutImages/leadership-3.png";
 
 export {
   about1,
@@ -34,4 +37,7 @@ export {
   singleNewsImage,
   ProjectImage,
   ItTalentsProjectImage,
+  LeadershipImage1,
+  LeadershipImage2,
+  LeadershipImage3,
 };

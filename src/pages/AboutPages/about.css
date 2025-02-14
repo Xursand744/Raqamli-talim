@@ -10,9 +10,10 @@
 }
 
 /* responsive */
-@media only screen and (max-width: 900px) {
-  .open-information-card {
-    width: 100% !important;
+@media only screen and (max-width: 1300px) {
+  .main-line {
+    left: 52.1% !important;
+    width: 1206px !important;
   }
 }
 
@@ -26,9 +27,18 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
-  .main-line {
-    left: 52.1% !important;
-    width: 1206px !important;
+@media only screen and (max-width: 900px) {
+  .open-information-card {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-director-image-wrapper {
+    width: 100% !important;
+  }
+
+  .leadership-card-image-wrapper {
+    max-height: 400px !important;
   }
 }

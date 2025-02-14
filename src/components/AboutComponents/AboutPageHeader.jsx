@@ -9,22 +9,20 @@ function AboutPageHeader({ title, breadCrumps }) {
   return (
     <div className="mt-[100px]">
       <div className="breadcrumbs">
-        <div className="container flex gap-[10px]">
-          <NavLink className={`flex gap-[10px]`} to={"/"}>
+        <div className="container flex gap-[10px] items-center">
+          <NavLink className={`flex gap-[10px] items-center`} to={"/"}>
             <img src={HomeIcon} alt="" />
             {t("breadcrumbs.home")}
-          </NavLink>{" "}
+          </NavLink>
           {breadCrumps &&
-            breadCrumps.map((item) => {
+            breadCrumps.map((item, index) => {
               return (
-                <>
-                  {">"}
+                <div key={index} className="flex items-center gap-[10px]">
+                  <span className="text-gray-500">{">"}</span>
                   <NavLink to={item.link}>{item.name}</NavLink>
-                </>
+                </div>
               );
             })}
-          {/*{">"}
-            <NavLink to={"/open-informations"}>{t("menu.openData")}</NavLink> */}
         </div>
       </div>
 
