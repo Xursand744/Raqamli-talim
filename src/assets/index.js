@@ -12,6 +12,7 @@ import ItTalentsIcon from "./projects/circle.png";
 import DepartmentImage from "./aboutImages/department.png";
 import newsImage from "./news/news-image.png";
 import newsBannerImage from "./news/banner-image.png";
+import singleNewsImage from "./news/single-news.jpg";
 
 export {
   about1,
@@ -28,4 +29,5 @@ export {
   DepartmentImage,
   newsImage,
   newsBannerImage,
+  singleNewsImage,
 };

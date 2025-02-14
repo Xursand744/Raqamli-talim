@@ -25,6 +25,8 @@ import AntiCorruption from "./pages/AboutPages/AntiCorruption";
 import HigherStandingOptimization from "./pages/AboutPages/HigherStandingOptimization";
 import ItTalents from "./pages/Projects/ItTalents";
 import News from "./pages/News/News";
+import ProjectsOverview from "./pages/Projects/ProjectsOverview";
+import NewsSinglePage from "./pages/News/NewsSinglePage";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -74,12 +76,18 @@ export default function App() {
           element: <Tips />,
         },
         {
-          path: "/projects/al-xorazmiy-vorislari",
-          element: <Project />,
-        },
-        {
-          path: "/projects/it-talents-dasturi",
-          element: <ItTalents />,
+          path: "/projects",
+          element: <ProjectsOverview />,
+          children: [
+            {
+              path: "/projects/al-xorazmiy-vorislari",
+              element: <Project />,
+            },
+            {
+              path: "/projects/it-talents-dasturi",
+              element: <ItTalents />,
+            },
+          ],
         },
         {
           path: "/tips",
@@ -100,7 +108,16 @@ export default function App() {
         },
         {
           path: "/news",
-          element: <News />,
+          children: [
+            {
+              index: true,
+              element: <News />,
+            },
+            {
+              path: ":id",
+              element: <NewsSinglePage />,
+            },
+          ],
         },
       ],
     },

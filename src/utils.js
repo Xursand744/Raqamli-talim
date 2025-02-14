@@ -39,7 +39,8 @@ export const Menus = [
     gridCols: 1,
   },
   {
-    name: "menu.projects", // Translation key
+    name: "menu.projects",
+    link: "/projects",
     subMenu: [
       {
         name: "Al Xorazmiy Vorislari",
