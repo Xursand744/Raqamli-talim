@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { div } from "framer-motion/client";
 import { useTranslation } from "react-i18next";
 
 export default function DesktopMenu({ menu }) {
+  const navigate = useNavigate();
   const [isHover, toggleHover] = useState(false);
   const toggleHoverMenu = () => {
     toggleHover(!isHover);
@@ -103,12 +104,13 @@ export default function DesktopMenu({ menu }) {
         </NavLink>
       ) : (
         <motion.li
-          className="group/link "
+          className="group/link cursor-pointer"
           onHoverStart={() => {
             toggleHoverMenu();
           }}
           onHoverEnd={toggleHoverMenu}
           key={menu.name}
+          // onClick={() => navigate(menu.link)}
         >
           <span className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
             {menu.name}

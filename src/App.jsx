@@ -77,14 +77,17 @@ export default function App() {
         },
         {
           path: "/projects",
-          element: <ProjectsOverview />,
           children: [
             {
-              path: "/projects/al-xorazmiy-vorislari",
+              index: true,
+              element: <ProjectsOverview />,
+            },
+            {
+              path: "muhammad-al-xorazmiy-vorislari",
               element: <Project />,
             },
             {
-              path: "/projects/it-talents-dasturi",
+              path: "it-talents-dasturi",
               element: <ItTalents />,
             },
           ],

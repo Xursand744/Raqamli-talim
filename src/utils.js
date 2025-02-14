@@ -6,6 +6,9 @@ import {
   DepartmentImage,
   LeadershipBanner,
   newsImage,
+  ProjectBanner,
+  ProjectImage as AlKhorezmiyImage,
+  ItTalentsProjectImage,
 } from "./assets";
 
 export const Menus = [
@@ -41,18 +44,18 @@ export const Menus = [
   {
     name: "menu.projects",
     link: "/projects",
-    subMenu: [
-      {
-        name: "Al Xorazmiy Vorislari",
-        icon: PanelsTopLeft,
-        link: "/projects/al-xorazmiy-vorislari",
-      },
-      {
-        name: "IT Talents dasturi",
-        icon: PanelsTopLeft,
-        link: "/projects/it-talents-dasturi",
-      },
-    ],
+    // subMenu: [
+    //   {
+    //     name: "Al Xorazmiy Vorislari",
+    //     icon: PanelsTopLeft,
+    //     link: "/projects/al-xorazmiy-vorislari",
+    //   },
+    //   {
+    //     name: "IT Talents dasturi",
+    //     icon: PanelsTopLeft,
+    //     link: "/projects/it-talents-dasturi",
+    //   },
+    // ],
     gridCols: 1,
   },
   { name: "menu.studyCenters", link: "study-centers" },
@@ -550,5 +553,62 @@ export const newsBigCardRight = [
     description:
       "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
     tags: ["IT", "Shaharcha"],
+  },
+];
+
+export const projectsOverview = [
+  {
+    id: 1,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: AlKhorezmiyImage,
+    link: "muhammad-al-xorazmiy-vorislari",
+  },
+  {
+    id: 2,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: ItTalentsProjectImage,
+    link: "it-talents-dasturi",
+  },
+  {
+    id: 3,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: AlKhorezmiyImage,
+    link: "muhammad-al-xorazmiy-vorislari",
+  },
+  {
+    id: 4,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    link: "it-talents-dasturi",
+    image: ItTalentsProjectImage,
+  },
+  {
+    id: 5,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: AlKhorezmiyImage,
+    link: "muhammad-al-xorazmiy-vorislari",
+  },
+  {
+    id: 6,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    link: "it-talents-dasturi",
+    image: ItTalentsProjectImage,
+  },
+  {
+    id: 7,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: AlKhorezmiyImage,
+    link: "muhammad-al-xorazmiy-vorislari",
+  },
+  {
+    id: 8,
+    link: "it-talents-dasturi",
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: ItTalentsProjectImage,
+  },
+  {
+    id: 9,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: AlKhorezmiyImage,
+    link: "muhammad-al-xorazmiy-vorislari",
   },
 ];

@@ -13,6 +13,8 @@ import DepartmentImage from "./aboutImages/department.png";
 import newsImage from "./news/news-image.png";
 import newsBannerImage from "./news/banner-image.png";
 import singleNewsImage from "./news/single-news.jpg";
+import ProjectImage from "./project-image.png";
+import ItTalentsProjectImage from "./projects/project-image.jpg";
 
 export {
   about1,
@@ -30,4 +32,6 @@ export {
   newsImage,
   newsBannerImage,
   singleNewsImage,
+  ProjectImage,
+  ItTalentsProjectImage,
 };
