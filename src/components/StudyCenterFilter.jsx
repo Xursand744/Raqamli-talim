@@ -3,53 +3,37 @@ import { Menu, X, Search, ChevronDown, ArrowUpDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import res from "../assets/res.png";
 
-// const initialCourses = [
-//   ...Array(30)
-//     .fill(null)
-//     .map((_, index) => ({
-//       id: index + 1,
-//       title: "PDP Academy",
-//       price: "1,500,000 dan boshlab",
-//       tags: [
-//         "Frontend",
-//         "Backend",
-//         "Data Analytic",
-//         "Design",
-//         "Project Management",
-//       ]
-//         .sort(() => 0.5 - Math.random())
-//         .slice(0, 2),
-//       location: "Tashkent",
-//       status: Math.random() > 0.5 ? ["Offline", "Online"] : ["Offline"],
-//       design: "+5",
-//     })),
-// ];
-
 function Study() {
   const { t } = useTranslation("global");
 
-  const initialCourses = [
-    ...Array(30)
-      .fill(null)
-      .map((_, index) => ({
-        id: index + 1,
-        title: t("pdp_academy"), // Translated title
-        price: t("price_from", { amount: "1,500,000" }), // Translated price
-        tags: [
-          t("frontend"),
-          t("backend"),
-          t("data_analytic"),
-          t("design"),
-          t("project_management"),
-        ]
-          .sort(() => 0.5 - Math.random())
-          .slice(0, 2), // Randomly pick 2 tags
-        location: t("tashkent"), // Translated location
-        status:
-          Math.random() > 0.5 ? [t("offline"), t("online")] : [t("offline")], // Translated status
-        design: "+5",
-      })),
-  ];
+  const [initialCourses, setInitialCourses] = useState([]);
+
+  useEffect(() => {
+    const initialCourses = [
+      ...Array(30)
+        .fill(null)
+        .map((_, index) => ({
+          id: index + 1,
+          title: t("pdp_academy"),
+          price: t("price_from", { amount: "1,500,000" }),
+          tags: [
+            t("frontend"),
+            t("backend"),
+            t("data_analytic"),
+            t("design"),
+            t("project_management"),
+          ]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 2),
+          location: t("tashkent"),
+          status:
+            Math.random() > 0.5 ? [t("offline"), t("online")] : [t("offline")],
+          design: "+5",
+        })),
+    ];
+
+    setInitialCourses(initialCourses);
+  }, []);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [courses, setCourses] = useState(initialCourses);
@@ -70,10 +54,10 @@ function Study() {
   const [sortAscending, setSortAscending] = useState(true);
 
   useEffect(() => {
-    let filteredCourses = initialCourses;
+    let filteredCourses = [...initialCourses];
 
     // Apply search filter
-    if (searchQuery) {
+    if (searchQuery.trim()) {
       filteredCourses = filteredCourses.filter(
         (course) =>
           course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -83,60 +67,58 @@ function Study() {
       );
     }
 
-    // Apply checkbox filters
-    const activeFilters = Object.entries(filters).filter(
+    // Apply tag filters
+    const activeTagFilters = Object.entries(filters).filter(
       ([key, value]) =>
         value &&
         ["frontend", "design", "backend", "projectManagement"].includes(key)
     );
 
-    if (activeFilters.length > 0) {
-      const filterCounts = {
-        frontend: 5,
-        design: 7,
-        backend: 10,
-        projectManagement: 8,
-      };
-
-      let totalCount = activeFilters.reduce(
-        (sum, [filter]) => sum + filterCounts[filter],
-        0
+    if (activeTagFilters.length > 0) {
+      filteredCourses = filteredCourses.filter((course) =>
+        activeTagFilters.some(([filter]) => {
+          const filterTag =
+            filter === "projectManagement"
+              ? t("project_management")
+              : t(filter);
+          return course.tags.includes(filterTag);
+        })
       );
-
-      filteredCourses = filteredCourses
-        .filter((course) =>
-          activeFilters.some(([filter]) => {
-            if (filter === "projectManagement") {
-              return course.tags.includes("Project Management");
-            }
-            return course.tags.includes(
-              filter.charAt(0).toUpperCase() + filter.slice(1)
-            );
-          })
-        )
-        .slice(0, totalCount);
     }
 
-    // Apply other filters (duration, format)
-    filteredCourses = filteredCourses.filter((course) => {
-      const formatMatch =
-        (filters.online && course.status.includes("Online")) ||
-        (filters.offline && course.status.includes("Offline")) ||
-        (filters.hybrid && course.status.includes("Hybrid")) ||
-        (!filters.online && !filters.offline && !filters.hybrid);
+    // Apply format filters
+    const activeFormatFilters = ["online", "offline", "hybrid"].filter(
+      (format) => filters[format]
+    );
 
-      return formatMatch;
-    });
+    if (activeFormatFilters.length > 0) {
+      filteredCourses = filteredCourses.filter((course) =>
+        activeFormatFilters.some((format) => course.status.includes(t(format)))
+      );
+    }
+
+    // Apply duration filters
+    const activeDurationFilters = Object.entries(filters).filter(
+      ([key, value]) => value && key.startsWith("duration")
+    );
+
+    if (activeDurationFilters.length > 0) {
+      // Here you would filter based on actual course duration data
+      // For now just reducing results as example
+      filteredCourses = filteredCourses.slice(
+        0,
+        Math.floor(filteredCourses.length / 2)
+      );
+    }
 
     // Apply sorting
     filteredCourses.sort((a, b) => {
-      return sortAscending
-        ? a.title.localeCompare(b.title)
-        : b.title.localeCompare(a.title);
+      const comparison = a.title.localeCompare(b.title);
+      return sortAscending ? comparison : -comparison;
     });
 
     setCourses(filteredCourses);
-  }, [filters, sortAscending, searchQuery]);
+  }, [filters, sortAscending, searchQuery, t]);
 
   const handleFilterChange = (filter) => {
     setFilters((prev) => ({ ...prev, [filter]: !prev[filter] }));
@@ -162,7 +144,7 @@ function Study() {
 
   return (
     <div className="">
-      <header className="bg-white sticky top-0">
+      <header className="bg-white sticky top-0 z-50">
         <div className="container px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
@@ -178,7 +160,7 @@ function Study() {
               <div className="relative hidden sm:block">
                 <input
                   type="text"
-                  placeholder="O'quv markaz nomi"
+                  placeholder={t("search_placeholder")}
                   className="w-[300px] md:w-[400px] pl-10 pr-4 py-2 border rounded-lg"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -188,9 +170,12 @@ function Study() {
                   size={20}
                 />
               </div>
-              <button className="flex items-center gap-2 px-4 py-2 border rounded-lg">
-                Hudud
-                <ChevronDown size={20} />
+              <button
+                onClick={() => setSortAscending(!sortAscending)}
+                className="flex items-center gap-2 px-4 py-2 border rounded-lg"
+              >
+                {t("sort_by_name")}
+                <ArrowUpDown size={20} />
               </button>
             </div>
           </div>
@@ -200,12 +185,12 @@ function Study() {
       <div className="max-w-[1400px] mx-auto px-4 py-6">
         <div className="flex gap-6">
           <aside
-            className={`border fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r transform transition-transform duration-200 ease-in-out z-40 sm:transform-none ${
+            className={`border fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r transform transition-transform duration-200 ease-in-out z-40  ${
               isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            } sm:translate-x-0 sm:block overflow-y-auto`}
+            } sm:translate-x-0  overflow-y-auto`}
           >
-            <div className="space-y-6 sticky top-[80px] sm:top-[10px]">
-              <div className="flex justify-between border-b pb-5 items-center mb-4">
+            <div className="space-y-6 sticky">
+              <div className="justify-between border-b pb-5 items-center mb-4 block">
                 <h3 className="text-[20px] font-medium">{t("sorting")}</h3>
                 <button
                   onClick={clearFilters}
@@ -218,7 +203,7 @@ function Study() {
               <div>
                 <h2 className="font-medium mb-3">{t("course_type")}</h2>
                 <div className="space-y-2">
-                  {["design", "frontend", "backend", "project_management"].map(
+                  {["design", "frontend", "backend", "projectManagement"].map(
                     (key) => (
                       <label className="flex items-center gap-2" key={key}>
                         <input
@@ -227,8 +212,13 @@ function Study() {
                           checked={filters[key]}
                           onChange={() => handleFilterChange(key)}
                         />
-                        <span>{t(key)}</span>
-                        <span className="text-gray-500 text-sm">7</span>
+                        <span>
+                          {t(
+                            key === "projectManagement"
+                              ? "project_management"
+                              : key
+                          )}
+                        </span>
                       </label>
                     )
                   )}
@@ -248,7 +238,6 @@ function Study() {
                           onChange={() => handleFilterChange(key)}
                         />
                         <span>{t(key)}</span>
-                        <span className="text-gray-500 text-sm">12</span>
                       </label>
                     )
                   )}
@@ -267,7 +256,6 @@ function Study() {
                         onChange={() => handleFilterChange(key)}
                       />
                       <span>{t(key)}</span>
-                      <span className="text-gray-500 text-sm">12</span>
                     </label>
                   ))}
                 </div>
@@ -277,7 +265,7 @@ function Study() {
                 onClick={clearFilters}
                 className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                {t("view_courses", { count: 64 })}
+                {t("view_courses", { count: courses.length })}
               </button>
             </div>
           </aside>
@@ -298,16 +286,17 @@ function Study() {
                       <img className="w-[80px] h-[80%]" src={res} alt="" />
                     </div>
                     <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
-                      <div className="absolute bottom-2 left-2">
-                        <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
-                          {t("tashkent")}
+                      <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                        {course.location}
+                      </span>
+                      {course.status.map((status, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
+                        >
+                          {status}
                         </span>
-                      </div>
-                      <div className="absolute bottom-2 left-20">
-                        <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-                          {t("offline")}
-                        </span>
-                      </div>
+                      ))}
                     </div>
                   </div>
 
@@ -337,223 +326,6 @@ function Study() {
         </div>
       </div>
 
-      {/* <div className="max-w-[1400px] mx-auto px-4 py-6">
-        <div className="flex gap-6">
-          <aside
-            className={` border
-fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r
-transform transition-transform duration-200 ease-in-out z-40
-sm:transform-none ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-sm:translate-x-0 sm:block overflow-y-auto
-`}
-          >
-            <div className="space-y-6 sticky top-[80px] sm:top-[10px]">
-              <div className="flex justify-between border-b pb-5 items-center mb-4">
-                <h3 className="text-[20px] font-medium">Saralash</h3>
-                <button
-                  onClick={clearFilters}
-                  className="px-3 py-1 text-blue-400 rounded-full text-sm"
-                >
-                  Tozalash
-                </button>
-              </div>
-
-              <div>
-                <h2 className="font-medium mb-3">O'quv kurs yo'nalishi</h2>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.design}
-                      onChange={() => handleFilterChange("design")}
-                    />
-                    <span>Dizayn</span>
-                    <span className="text-gray-500 text-sm">7</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.frontend}
-                      onChange={() => handleFilterChange("frontend")}
-                    />
-                    <span>Frontend</span>
-                    <span className="text-gray-500 text-sm">5</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.backend}
-                      onChange={() => handleFilterChange("backend")}
-                    />
-                    <span>Backend</span>
-                    <span className="text-gray-500 text-sm">10</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.projectManagement}
-                      onChange={() => handleFilterChange("projectManagement")}
-                    />
-                    <span>Project management</span>
-                    <span className="text-gray-500 text-sm">8</span>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="font-medium mb-3">Kurslar davomiyligi</h2>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.duration1}
-                      onChange={() => handleFilterChange("duration1")}
-                    />
-                    <span>1 oygacha</span>
-                    <span className="text-gray-500 text-sm">12</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.duration2}
-                      onChange={() => handleFilterChange("duration2")}
-                    />
-                    <span>1-3 oy</span>
-                    <span className="text-gray-500 text-sm">23</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.duration3}
-                      onChange={() => handleFilterChange("duration3")}
-                    />
-                    <span>3-6 oy</span>
-                    <span className="text-gray-500 text-sm">16</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.duration4}
-                      onChange={() => handleFilterChange("duration4")}
-                    />
-                    <span>6 oydan ko'p</span>
-                    <span className="text-gray-500 text-sm">8</span>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="font-medium mb-3">Kurslar formati</h2>
-                <div className="space-y-2">
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.online}
-                      onChange={() => handleFilterChange("online")}
-                    />
-                    <span>Onlayn</span>
-                    <span className="text-gray-500 text-sm">12</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.offline}
-                      onChange={() => handleFilterChange("offline")}
-                    />
-                    <span>Oflayn</span>
-                    <span className="text-gray-500 text-sm">23</span>
-                  </label>
-                  <label className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      className="rounded"
-                      checked={filters.hybrid}
-                      onChange={() => handleFilterChange("hybrid")}
-                    />
-                    <span>Gibrid</span>
-                    <span className="text-gray-500 text-sm">18</span>
-                  </label>
-                </div>
-              </div>
-
-              <button
-                onClick={clearFilters}
-                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                64 ta kursni ko'rish
-              </button>
-            </div>
-          </aside>
-
-          <main className="flex-1 min-w-0">
-            <h2 className="text-lg font-medium mb-4">
-              Markazlar soni: {courses.length}
-            </h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-              {courses.map((course) => (
-                <div
-                  key={course.id}
-                  className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
-                >
-                  <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
-                    <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
-                      <img className="w-[80px] h-[80%]" src={res} alt="" />
-                    </div>
-                    <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
-                      <div className="absolute bottom-2 left-2 ">
-                        <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
-                          Toshkent
-                        </span>
-                      </div>
-                      <div className="absolute bottom-2 left-20">
-                        <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-                          Offline
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-medium">{course.title}</h3>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-4">
-                      <span className="text-blue-700">Kurslar:</span>{" "}
-                      {course.price}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {course.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-[#F0F3FF] rounded-full text-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      <span className="px-3 py-1 bg-[#F0F3FF] rounded-full text-sm">
-                        Design {course.design}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </main>
-        </div>
-      </div> */}
-
-      {/* Overlay */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-30 sm:hidden"
