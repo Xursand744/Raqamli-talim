@@ -27,6 +27,7 @@ import ItTalents from "./pages/Projects/ItTalents";
 import News from "./pages/News/News";
 import ProjectsOverview from "./pages/Projects/ProjectsOverview";
 import NewsSinglePage from "./pages/News/NewsSinglePage";
+import Contact from "./pages/Contact/Contact";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -73,7 +74,7 @@ export default function App() {
         },
         {
           path: "/contact",
-          element: <Tips />,
+          element: <Contact />,
         },
         {
           path: "/projects",
