@@ -4,7 +4,12 @@ function AboutDepartment({ image, fullname, position, email, number }) {
   return (
     <div className="max-w-[382px] w-full mb-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]">
       <div>
-        <img src={image} alt="" className="rounded-t-[12px]" />
+        <img
+          src={image}
+          alt=""
+          className="rounded-t-[12px] max-h-[280px] w-full object-cover object-top"
+          style={{ objectPosition: "0 -20px" }}
+        />
       </div>
 
       <div className="p-[16px] flex flex-col gap-[12px]">
