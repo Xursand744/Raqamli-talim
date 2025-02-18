@@ -564,9 +564,9 @@ export const projectsOverview = [
   },
   {
     id: 3,
-    title: "Muhammad Al-Xorazmiy vorislari",
+    title: "Bir million dasturchi loyihasi (Coursera)",
     image: AlKhorezmiyImage,
-    link: "muhammad-al-xorazmiy-vorislari",
+    link: "bir-million-dasturchi-loyihasi",
   },
   {
     id: 4,

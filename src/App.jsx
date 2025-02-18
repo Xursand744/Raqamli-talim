@@ -28,6 +28,7 @@ import ProjectsOverview from "./pages/Projects/ProjectsOverview";
 import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
 import Schul from "./pages/schul";
+import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -94,6 +95,10 @@ export default function App() {
             {
               path: "it-talents-dasturi",
               element: <ItTalents />,
+            },
+            {
+              path: "bir-million-dasturchi-loyihasi",
+              element: <OneMillionUzbekCoders />,
             },
           ],
         },
