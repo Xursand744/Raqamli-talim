@@ -12,13 +12,13 @@ import "./about.css";
 
 const Leadership = () => {
   const mainProfile = {
-    name: "Shuxrat Sattorov",
+    name: "Azamat Eshankulov",
     title: "Direktor",
     description:
       "2012-yildan IT va axborot texnologiyalari sohasida faoliyat yuritib kelmaqda. 2023-yilning 16-noyabridan Raqamli texnologiyalar vazirligi huzuridagi Raqamli ta'limni rivojlantirish markazi direktori lavozimida...",
     fullDescription:
       "2012-yildan IT va axborot texnologiyalari sohasida faoliyat yuritib kelmaqda. 2023-yilning 16-noyabridan Raqamli texnologiyalar vazirligi huzuridagi Raqamli ta'limni rivojlantirish markazi direktori lavozimida ishlab kelmoqda. Shuxrat Sattorov raqamli texnologiyalar sohasida katta tajribaga ega bo'lib, bir qator muhim loyihalarni muvaffaqiyatli amalga oshirgan. U o'z faoliyati davomida zamonaviy ta'lim tizimini rivojlantirish va raqamlashtirish bo'yicha innovatsion g'oyalarni ilgari surgan.",
-    email: "sh.sattorov@digital.uz",
+    email: "a.eshankulov@digital.uz",
     phone: "+998 71 203 03 43 (101)",
     hours: "Juma 9:00-11:00",
     image: LeadershipImage1,
@@ -37,7 +37,7 @@ const Leadership = () => {
     {
       name: "Davronbek Adilbekov",
       title: "Direktor o'rinbosari",
-      email: "rustamjon@digital.uz",
+      email: "d.adilbekov@digital.uz",
       phone: "+998 71 203 03 43 (103)",
       hours: "Chorshanba 9:00-11:00",
       image: LeadershipImage2,

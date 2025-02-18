@@ -14,11 +14,11 @@ export default function App() {
   return (
     <>
       <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] mt-[100px]">
-        Raqamli ta’lim loyihalari
+        Raqamli ta'lim loyihalari
       </h1>
       <Swiper
         autoplay={{
-          delay: 3000,
+          delay: 1000, // Changed from 3000 to 1000 for 1 second delay
           disableOnInteraction: false,
         }}
         slidesPerView={1.5}
@@ -28,6 +28,7 @@ export default function App() {
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper max-w-[1900px] pl-[200px] w-full"
+        loop={true}
       >
         <SwiperSlide className="bg-[#F8F8F8]">
           <CarouselItem />
