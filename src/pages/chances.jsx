@@ -79,7 +79,7 @@ export default function Chances() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mt-10 mb-10">
         {t("chances.title")}
       </h1>
 
