@@ -9,11 +9,15 @@ import Rate from "./Rate";
 import SuccessHistory from "./SuccessHistory";
 import Join from "./Join";
 import Carousel from "./Carousel";
+import JobAnalytics from "./Home/JobAnalytics";
 
 export default function HomePage() {
   return (
     <div>
       <Carousel />
+      <div className="w-full">
+        <JobAnalytics />
+      </div>
       <div className="max-w-[1440px] mx-auto mt-[100px]">
         <Chances />
       </div>
