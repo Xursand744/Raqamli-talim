@@ -9,11 +9,22 @@ import {
   ProjectBanner,
   ProjectImage as AlKhorezmiyImage,
   ItTalentsProjectImage,
+  VacancyImage,
 } from "./assets";
+import {
+  DeparmentImage10,
+  DeparmentImage11,
+  DeparmentImage12,
+  DeparmentImage13,
+  DeparmentImage14,
+  DeparmentImage16,
+  DeparmentImage7,
+  DeparmentImage8,
+} from "./assets/deparment";
 
 export const Menus = [
   {
-    name: "menu.center", // Translation key
+    name: "menu.center",
     subMenu: [
       { name: "menu.aboutUs", icon: CircleHelp, link: "/about" },
       {
@@ -44,24 +55,13 @@ export const Menus = [
   {
     name: "menu.projects",
     link: "/projects",
-    // subMenu: [
-    //   {
-    //     name: "Al Xorazmiy Vorislari",
-    //     icon: PanelsTopLeft,
-    //     link: "/projects/al-xorazmiy-vorislari",
-    //   },
-    //   {
-    //     name: "IT Talents dasturi",
-    //     icon: PanelsTopLeft,
-    //     link: "/projects/it-talents-dasturi",
-    //   },
-    // ],
     gridCols: 1,
   },
   { name: "menu.studyCenters", link: "study-centers" },
   { name: "menu.itUniversities", link: "/universities" },
   { name: "menu.news", link: "/news" },
-  { name: "menu.itTips", link: "/tips" },
+  { name: "menu.courses", link: "/courses" },
+  // { name: "menu.itTips", link: "/tips" },
   { name: "menu.contact", link: "/contact" },
 ];
 
@@ -241,7 +241,7 @@ export const leadershipInformations = [
 
 export const departmentsInformations = [
   {
-    image: DepartmentImage,
+    image: DeparmentImage11,
     fullname: "Saidmurod Abdujabborov",
     position:
       '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
@@ -249,68 +249,61 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (109)",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage12,
+    fullname: "Alisher Rapiyev",
+    position: "Ta'lim tashkilotlari bilan ishlash bo‘limi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (104) ",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage7,
+    fullname: "Farrux Boltayev",
+    position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (888)",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage14,
+    fullname: "Muhlisa Xudayberganova",
+    position: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo‘limi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (111)",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
+    image: DeparmentImage10,
+    fullname: "Mirabbos Anvarov ",
     position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+      "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (112) ",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage16,
+    fullname: "Farrux Abduvohidov",
+    position: "Investitsiya loyiha ofisi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (117) ",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage13,
+    fullname: "Moxira Nurullayeva",
+    position: "Marketing va PR bo‘limi boshlig‘i",
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (107)",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
-    email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    image: VacancyImage,
+    fullname: "Vakant",
+    position: "Ma’lumot kutilmoqda..., card tashlab ketilsin",
+    email: "",
+    number: "",
   },
   {
-    image: DepartmentImage,
-    fullname: "Saidmurod Abdujabborov",
-    position:
-      '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
+    image: DeparmentImage8,
+    fullname: "Akbarxo‘ja Anvarxonov",
+    position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',
     email: "education@digital.uz",
-    number: "+998 71 203 03 43 (109)",
+    number: "+998 71 203 03 43 (117) ",
   },
 ];
 

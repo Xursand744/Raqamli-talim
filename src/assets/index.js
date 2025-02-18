@@ -18,6 +18,7 @@ import ItTalentsProjectImage from "./projects/project-image.jpg";
 import LeadershipImage1 from "./aboutImages/leadership-1.png";
 import LeadershipImage2 from "./aboutImages/leadership-2.png";
 import LeadershipImage3 from "./aboutImages/leadership-3.png";
+import VacancyImage from "./vacancy-image.png";
 
 export {
   about1,
@@ -40,4 +41,5 @@ export {
   LeadershipImage1,
   LeadershipImage2,
   LeadershipImage3,
+  VacancyImage,
 };

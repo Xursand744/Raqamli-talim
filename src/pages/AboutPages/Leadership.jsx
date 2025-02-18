@@ -4,6 +4,7 @@ import {
   LeadershipImage1,
   LeadershipImage2,
   LeadershipImage3,
+  VacancyImage,
 } from "../../assets";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -27,12 +28,11 @@ const Leadership = () => {
   const teamMembers = [
     {
       name: "Vakant",
-      title: "Vakant",
-      email: "vakant",
-      phone: "+998 99 888 77 22",
-      hours: "--:-- - --:--",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLvhqO-EXy2Yq-Ue1hUKJXNgzaLZGozvK4KA&s",
+      title: "Direktorning birinchi o‘rinbosari",
+      email: "",
+      phone: "",
+      hours: "",
+      image: VacancyImage,
     },
     {
       name: "Davronbek Adilbekov",
@@ -155,8 +155,8 @@ const Leadership = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white rounded-lg overflow-hidden border border-[#ccc] shadow-xl">
-                <div className="aspect-w-4 aspect-h-3 max-h-[300px] overflow-hidden leadership-card-image-wrapper">
+              <div className="bg-white rounded-lg overflow-hidden border border-[#ccc] shadow-xl h-[520px]">
+                <div className="aspect-w-4 aspect-h-3 max-h-[300px] min-h-[280px] overflow-hidden leadership-card-image-wrapper">
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
