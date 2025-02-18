@@ -13,7 +13,7 @@ import {
 
 export const Menus = [
   {
-    name: "menu.center", // Translation key
+    name: "menu.center",
     subMenu: [
       { name: "menu.aboutUs", icon: CircleHelp, link: "/about" },
       {
@@ -44,24 +44,13 @@ export const Menus = [
   {
     name: "menu.projects",
     link: "/projects",
-    // subMenu: [
-    //   {
-    //     name: "Al Xorazmiy Vorislari",
-    //     icon: PanelsTopLeft,
-    //     link: "/projects/al-xorazmiy-vorislari",
-    //   },
-    //   {
-    //     name: "IT Talents dasturi",
-    //     icon: PanelsTopLeft,
-    //     link: "/projects/it-talents-dasturi",
-    //   },
-    // ],
     gridCols: 1,
   },
   { name: "menu.studyCenters", link: "study-centers" },
   { name: "menu.itUniversities", link: "/universities" },
   { name: "menu.news", link: "/news" },
-  { name: "menu.itTips", link: "/tips" },
+  { name: "menu.courses", link: "/courses" },
+  // { name: "menu.itTips", link: "/tips" },
   { name: "menu.contact", link: "/contact" },
 ];
 

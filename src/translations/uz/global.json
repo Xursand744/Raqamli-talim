@@ -5,7 +5,6 @@
     "ru": "Русский",
     "en": "English"
   },
-
   "menu": {
     "center": "Markaz haqida",
     "aboutUs": "Biz haqimizda",
@@ -21,6 +20,7 @@
     "itUniversities": "IT universitetlar",
     "news": "Yangiliklar",
     "itTips": "IT-maslahatlar",
+    "courses": "Kurslar",
     "contact": "Bog’lanish"
   },
   "sort_by_name": "Ism bo'yicha",

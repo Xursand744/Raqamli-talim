@@ -2,7 +2,6 @@
 import "./assets/css/responsive.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";
@@ -28,6 +27,7 @@ import News from "./pages/News/News";
 import ProjectsOverview from "./pages/Projects/ProjectsOverview";
 import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
+import Schul from "./pages/schul";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -75,6 +75,10 @@ export default function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/courses",
+          element: <Tips />,
         },
         {
           path: "/projects",
