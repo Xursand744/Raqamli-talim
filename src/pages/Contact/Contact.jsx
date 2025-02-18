@@ -91,8 +91,8 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <div className="pt-[40px]">
-                  <button>Yuborish</button>
+                <div className="pt-[40px] flex justify-center">
+                  <button className="px-[40px] py-[12px] bg-[#2675EB] font-medium text-[20px] text-white rounded-[27px]">Yuborish</button>
                 </div>
               </div>
             </div>
