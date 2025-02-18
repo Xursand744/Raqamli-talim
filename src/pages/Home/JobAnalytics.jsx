@@ -1,6 +1,6 @@
 function JobAnalytics() {
   return (
-    <div className="max-w-[1300px] mx-auto w-full max-h-[700px]">
+    <div className="max-w-[1300px] mx-auto w-full h-[700px]">
       <h1 className="block mb-6 text-xl font-bold mt-[50px]  uppercase sm:text-3xl sm:text-left text-primary-600  text-left text-[#0284C7]">
         Xalqaro mehnat bozorida talabgir IT-yo’nalishlarning kunlik tahlili -
         🟢live update
