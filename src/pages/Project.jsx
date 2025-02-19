@@ -14,8 +14,6 @@ function Project() {
   const { slug } = useParams();
   const { t } = useTranslation("global");
 
-  // const text = slugToText(slug);
-
   const Button = ({ children, className, ...props }) => (
     <button
       className={`px-4 py-2 rounded font-semibold ${className}`}
@@ -34,10 +32,7 @@ function Project() {
             {t("project_home")}
           </NavLink>{" "}
           {" >"} <NavLink to={"/projects"}>{t("projects")}</NavLink> {" >"}{" "}
-          <NavLink to={`/projects/${slug}`}>
-            Al Xorazmiy Vorislari
-            {/* {capitalizeFirstLetter(text)} */}
-          </NavLink>
+          <NavLink to={`/projects/${slug}`}>Al Xorazmiy Vorislari</NavLink>
         </div>
 
         <h1 className="project-title mt-[80px]">{t("project_title")}</h1>
@@ -96,7 +91,7 @@ function Project() {
       </div>
 
       <div className="bg-[#174078] w-full py-[40px] project-section-bottom">
-        <div className="container">
+        <div className="max-w-[1230px] mx-auto">
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
               <h1 className="text-white font-bold text-[40px]">
