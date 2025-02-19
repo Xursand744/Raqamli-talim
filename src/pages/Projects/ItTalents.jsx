@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../index.css'
+import "../../index.css";
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "react-feather";
 import { ItTalentsIcon, ItTalentsImage, ProjectBanner } from "../../assets";
@@ -7,8 +7,8 @@ import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import { ChevronLeft } from "lucide-react";
 import { studyCentersStandings } from "../../utils";
-import Sl from '../../assets/s_left.png'
-import Sr from '../../assets/s-right.png'
+import Sl from "../../assets/s_left.png";
+import Sr from "../../assets/s-right.png";
 
 const Breadcrumb = () => {
   const { t } = useTranslation("global");
@@ -190,8 +190,8 @@ export default function ItTalents() {
   );
 
   return (
-    <div className="bg-gray-50">
-      <div className=" max-w-[1200px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
+    <div className="">
+      <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumb />
 
         <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
@@ -235,30 +235,38 @@ export default function ItTalents() {
           </div>
         </div>
 
-        <section className="pt-[100px] px-4">
-  <div className="bg container mx-auto relative flex flex-col justify-center items-center rounded-[20px] bg-[#F8F8F8] 
-    w-full max-w-[1200px] md:max-w-[1000px] sm:max-w-[90%] max-sm:max-w-[80%] h-[300px] max-sm:h-auto py-8">
-    
-    <img className="absolute left-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden" src={Sl} alt="" />
-    <img className="absolute right-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden" src={Sr} alt="" />
+        <section className="pt-[100px] px-4 max-w-[1230px] mx-auto">
+          <div
+            className="bg max-w-[1230px] mx-auto relative flex flex-col justify-center items-center rounded-[20px] bg-[#F8F8F8] 
+    w-full h-[300px] max-sm:h-auto py-8"
+          >
+            <img
+              className="absolute left-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden"
+              src={Sl}
+              alt=""
+            />
+            <img
+              className="absolute right-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden"
+              src={Sr}
+              alt=""
+            />
 
-    <h1 className="font-semibold text-[40px] md:text-[36px] sm:text-[28px] max-sm:text-[22px] text-[#222222] pb-[16px] text-center">
-      O‘quv yo‘nalishlar ro‘yxati
-    </h1>
-    
-    <p className="font-medium w-[80%] max-w-[500px] sm:max-w-[90%] max-sm:max-w-[95%] text-center pb-[16px] text-[18px] md:text-[16px] sm:text-[14px] max-sm:text-[12px]">
-      Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
-    </p>
-    
-    <button className="px-[50px] py-[14px] border border-[#222222] font-medium text-[18px] rounded-[27px] 
-      md:px-[40px] md:py-[12px] sm:px-[30px] sm:py-[10px] sm:text-[14px] max-sm:px-[24px] max-sm:py-[8px] max-sm:text-[12px]">
-      Yuklab olish
-    </button>
-  </div>
-</section>
+            <h1 className="font-semibold text-[40px] md:text-[36px] sm:text-[28px] max-sm:text-[22px] text-[#222222] pb-[16px] text-center">
+              O‘quv yo‘nalishlar ro‘yxati
+            </h1>
 
+            <p className="font-medium w-[80%] max-w-[500px] sm:max-w-[90%] max-sm:max-w-[95%] text-center pb-[16px] text-[18px] md:text-[16px] sm:text-[14px] max-sm:text-[12px]">
+              Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
+            </p>
 
-
+            <button
+              className="px-[50px] py-[14px] border border-[#222222] font-medium text-[18px] rounded-[27px] 
+      md:px-[40px] md:py-[12px] sm:px-[30px] sm:py-[10px] sm:text-[14px] max-sm:px-[24px] max-sm:py-[8px] max-sm:text-[12px]"
+            >
+              Yuklab olish
+            </button>
+          </div>
+        </section>
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
@@ -298,10 +306,7 @@ export default function ItTalents() {
           </div>
         </section>
 
-
-      
-
-        <section>
+        {/* <section>
           <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
             {t("itTalentsStudyCenters.title2")}
           </h1>
@@ -373,10 +378,8 @@ export default function ItTalents() {
               {renderPaginationNumbers()}
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
-
-     
     </div>
   );
 }

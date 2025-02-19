@@ -72,13 +72,24 @@
     "robotTitle": "Maktabda ITni o‘rgan",
     "robotDesc": "ITga sarflagan pullaringni qaytarib ol"
   },
-  "events": {
-    "title": "Tadbirlar jadvali",
+  "events1": {
+    "title": "ITea: Let's talk IT over tea",
+    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+    "date": "February 22, 2025",
     "innoWomenWeek": "InnoWomenWeek",
-    "date": "2024-yil 19-iyul",
-    "description": "6 toifadagi IT loyihalar tanlovlari uchun pul mukofotlari...",
-    "viewMore": "Batafsil ko‘rish",
-    "allEvents": "Barcha tadbirlar"
+    "viewMore": "View More",
+    "allEvents": "All Events"
+  },
+  "events": {
+    "title": "Tadbirlar rejasi"
+  },
+  "events2": {
+    "title": "ICT4Girls Olympiad for Female Students in Informatics in Uzbekistan",
+    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+    "date": "March-May, 2025",
+    "innoWomenWeek": "InnoWomenWeek",
+    "viewMore": "View More",
+    "allEvents": "All Events"
   },
   "compensation": {
     "walletTitle": "Kompensatsiya",

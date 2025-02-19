@@ -37,13 +37,24 @@
     "robotTitle": "Learn IT at School",
     "robotDesc": "Get back the money you spent on IT"
   },
-  "events": {
-    "title": "Event Schedule",
+  "events1": {
+    "title": "ITea: Let's talk IT over tea",
+    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+    "date": "February 22, 2025",
     "innoWomenWeek": "InnoWomenWeek",
-    "date": "19-July, 2024",
-    "description": "6 types of IT project competitions with cash prizes in 6 categories...",
     "viewMore": "View More",
     "allEvents": "All Events"
+  },
+  "events2": {
+    "title": "ICT4Girls Olympiad for Female Students in Informatics in Uzbekistan",
+    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+    "date": "March-May, 2025",
+    "innoWomenWeek": "InnoWomenWeek",
+    "viewMore": "View More",
+    "allEvents": "All Events"
+  },
+  "events": {
+    "title": "Events Schedule"
   },
   "compensation": {
     "walletTitle": "Compensation",

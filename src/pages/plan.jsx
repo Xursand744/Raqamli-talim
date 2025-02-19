@@ -4,6 +4,7 @@ import foto1 from "../assets/image1.png";
 import foto2 from "../assets/image2.png";
 import foto3 from "../assets/image3.png";
 import Cookies from "js-cookie";
+import { Event1, Event2 } from "../assets/home";
 
 export default function EventsSection() {
   const { t, i18n } = useTranslation("global");
@@ -21,25 +22,25 @@ export default function EventsSection() {
     setEvents([
       {
         id: 1,
-        title: t("events.innoWomenWeek"),
-        date: t("events.date"),
-        description: t("events.description"),
-        image: foto3,
+        title: t("events1.title"),
+        date: t("events1.date"),
+        description: t("events1.description"),
+        image: Event1,
       },
       {
         id: 2,
-        title: t("events.innoWomenWeek"),
-        date: t("events.date"),
-        description: t("events.description"),
-        image: foto2,
+        title: t("events2.title"),
+        date: t("events2.date"),
+        description: t("events2.description"),
+        image: Event2,
       },
-      {
-        id: 3,
-        title: t("events.innoWomenWeek"),
-        date: t("events.date"),
-        description: t("events.description"),
-        image: foto1,
-      },
+      // {
+      //   id: 3,
+      //   title: t("events.innoWomenWeek"),
+      //   date: t("events.date"),
+      //   description: t("events.description"),
+      //   image: foto1,
+      // },
     ]);
   }, 1000);
 
@@ -92,7 +93,7 @@ export default function EventsSection() {
                     </div>
                     <div className="px-6 pb-6">
                       <Button className="border rounded-3xl border-gray-300 text-gray-700 hover:bg-gray-50">
-                        {t("events.viewMore")}
+                        {t("events1.viewMore")}
                       </Button>
                     </div>
                   </Card>
@@ -102,7 +103,7 @@ export default function EventsSection() {
 
           <div className="text-center">
             <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
-              {t("events.allEvents")}
+              {t("events1.allEvents")}
             </Button>
           </div>
         </div>
