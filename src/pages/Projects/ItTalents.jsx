@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../../index.css'
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "react-feather";
 import { ItTalentsIcon, ItTalentsImage, ProjectBanner } from "../../assets";
@@ -6,6 +7,8 @@ import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import { ChevronLeft } from "lucide-react";
 import { studyCentersStandings } from "../../utils";
+import Sl from '../../assets/s_left.png'
+import Sr from '../../assets/s-right.png'
 
 const Breadcrumb = () => {
   const { t } = useTranslation("global");
@@ -216,6 +219,47 @@ export default function ItTalents() {
           </div>
         </section>
 
+        <div className="w-full flex justify-center items-center pt-[100px]">
+          <div className="max-w-[792px] w-full h-[420px] relative">
+            <img
+              src={ItTalentsImage}
+              alt="it-talents-image"
+              className="w-full rounded-[30px] h-full object-cover"
+            />
+
+            <div className="bg-[#222] opacity-[.6] rounded-[30px] w-full h-full absolute left-0 top-0"></div>
+
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img src={ItTalentsIcon} alt="" className="w-[160px] h-[160px]" />
+            </div>
+          </div>
+        </div>
+
+        <section className="pt-[100px] px-4">
+  <div className="bg container mx-auto relative flex flex-col justify-center items-center rounded-[20px] bg-[#F8F8F8] 
+    w-full max-w-[1200px] md:max-w-[1000px] sm:max-w-[90%] max-sm:max-w-[80%] h-[300px] max-sm:h-auto py-8">
+    
+    <img className="absolute left-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden" src={Sl} alt="" />
+    <img className="absolute right-0 bottom-0 w-[150px] md:w-[120px] sm:w-[100px] max-sm:hidden" src={Sr} alt="" />
+
+    <h1 className="font-semibold text-[40px] md:text-[36px] sm:text-[28px] max-sm:text-[22px] text-[#222222] pb-[16px] text-center">
+      O‘quv yo‘nalishlar ro‘yxati
+    </h1>
+    
+    <p className="font-medium w-[80%] max-w-[500px] sm:max-w-[90%] max-sm:max-w-[95%] text-center pb-[16px] text-[18px] md:text-[16px] sm:text-[14px] max-sm:text-[12px]">
+      Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
+    </p>
+    
+    <button className="px-[50px] py-[14px] border border-[#222222] font-medium text-[18px] rounded-[27px] 
+      md:px-[40px] md:py-[12px] sm:px-[30px] sm:py-[10px] sm:text-[14px] max-sm:px-[24px] max-sm:py-[8px] max-sm:text-[12px]">
+      Yuklab olish
+    </button>
+  </div>
+</section>
+
+
+
+
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
@@ -254,118 +298,8 @@ export default function ItTalents() {
           </div>
         </section>
 
-        <div className="w-full flex justify-center items-center">
-          <div className="max-w-[792px] w-full h-[420px] relative">
-            <img
-              src={ItTalentsImage}
-              alt="it-talents-image"
-              className="w-full rounded-[30px] h-full object-cover"
-            />
 
-            <div className="bg-[#222] opacity-[.6] rounded-[30px] w-full h-full absolute left-0 top-0"></div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={ItTalentsIcon} alt="" className="w-[160px] h-[160px]" />
-            </div>
-          </div>
-        </div>
-
-        <section>
-          <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
-            {t("itTalentsStudyCenters.title")}
-          </h1>
-
-          <div className=" p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <StatCard number="1">
-                <p className="font-medium">
-                  {t("stats.platformCourses.title")}:{" "}
-                  {t("stats.platformCourses.count")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.platformCourses.points")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.platformCourses.total")}.
-                </p>
-              </StatCard>
-
-              <StatCard number="4">
-                <p className="font-medium">
-                  {t("stats.employedGraduates.title")}:{" "}
-                  {t("stats.employedGraduates.count")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.employedGraduates.points")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.employedGraduates.total")}.
-                </p>
-              </StatCard>
-
-              <StatCard number="2">
-                <p className="font-medium">
-                  {t("stats.platformStudents.title")}:{" "}
-                  {t("stats.platformStudents.count")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.platformStudents.points")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.platformStudents.total")}.
-                </p>
-              </StatCard>
-
-              <StatCard number="5">
-                <p className="font-medium">
-                  {t("stats.itExportGraduates.title")}:{" "}
-                  {t("stats.itExportGraduates.count")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.itExportGraduates.points")}.
-                </p>
-                <p className="text-gray-600">
-                  {t("stats.itExportGraduates.total")}.
-                </p>
-              </StatCard>
-
-              <StatCard number="3">
-                <p className="font-medium">
-                  {t("stats.graduates.title")}: {t("stats.graduates.count")}.
-                </p>
-                <p className="text-gray-600">{t("stats.graduates.points")}.</p>
-                <p className="text-gray-600">{t("stats.graduates.total")}.</p>
-              </StatCard>
-
-              <div className="bg-blue-500 text-white rounded-lg p-6">
-                <div className="flex items-start gap-2">
-                  <div className="mt-1">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <p>{t("stats.summary.text")}</p>
-                    <p className="font-bold mt-2">
-                      {t("stats.summary.calculation")}{" "}
-                      {t("stats.summary.total")}.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      
 
         <section>
           <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
@@ -442,28 +376,7 @@ export default function ItTalents() {
         </section>
       </div>
 
-      <div className="bg-[#174078] w-full py-[40px] project-section-bottom">
-        <div className="container">
-          <div className="flex justify-between gap-[20px] ">
-            <div className="w-2/3 flex flex-col gap-[20px]">
-              <h1 className="text-white font-bold text-[40px]">
-                {t("study_title")}
-              </h1>
-              <p className="text-white text-[20px]">{t("study_description")}</p>
-
-              <div>
-                <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
-                  {t("all_events")}
-                </Button>
-              </div>
-            </div>
-
-            <div className="w-1/3 project-bottom-image">
-              <img src={BackgroundIcon} alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 }

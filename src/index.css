@@ -140,3 +140,16 @@ body {
 .counts-section {
   font-family: "Archivo", sans-serif;
 }
+
+
+@media (max-width: 1315px) {
+  .element {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1315px) {
+  .bg {
+    width: 600px;
+  }
+}

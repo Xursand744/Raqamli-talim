@@ -59,7 +59,7 @@ const OneMillionUzbekCoders = () => {
         >
           {slides.map((slide, index) => (
            <SwiperSlide key={index}>
-           <div className="w-full h-auto flex flex-col md:flex-row items-center justify-center border border-[#E0E0E0] rounded-[8px] overflow-hidden p-4">
+           <div className="w-full flex flex-col md:flex-row items-center justify-center border border-[#E0E0E0] rounded-[8px] overflow-hidden p-4">
              <img className="w-full md:w-1/2 h-[250px] md:h-full object-cover" src={slide.img} alt="Slide image" />
              <div className="w-full md:w-1/2 p-4 flex flex-col justify-between">
                <h1 className="text-[18px] lg:text-[34px] font-medium pb-[20px] w-full lg:w-[462px] text-center md:text-left">
