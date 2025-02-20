@@ -1,6 +1,6 @@
 import React from "react";
 
-function AboutDepartment({ image, fullname, position, email, number }) {
+function AboutDepartment({ image, fullname, position, email, number, idx }) {
   return (
     <div className="max-w-[382px] w-full mb-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]">
       <div>
@@ -8,7 +8,9 @@ function AboutDepartment({ image, fullname, position, email, number }) {
           src={image}
           alt=""
           className="rounded-t-[12px] max-h-[280px] w-full object-cover object-top"
-          style={{ objectPosition: "0 -20px" }}
+          style={{
+            objectPosition: `${idx === 5 || idx === 7 ? "0 0px" : "0 -70px"}`,
+          }}
         />
       </div>
 

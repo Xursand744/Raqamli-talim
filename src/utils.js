@@ -245,36 +245,36 @@ export const departmentsInformations = [
     fullname: "Saidmurod Abdujabborov",
     position:
       '"Muhammad al-Xorazmiy vorislari" tizimini joriy etishni muvofiqlashtirish bo‘limi boshlig‘i',
-    email: "education@digital.uz",
+    email: "s.abdujabborov@digital.uz",
     number: "+998 71 203 03 43 (109)",
   },
   {
     image: DeparmentImage12,
     fullname: "Alisher Rapiyev",
     position: "Ta'lim tashkilotlari bilan ishlash bo‘limi boshlig‘i",
-    email: "education@digital.uz",
+    email: "a.rapiyev@digital.uz",
     number: "+998 71 203 03 43 (104) ",
   },
   {
     image: DeparmentImage7,
     fullname: "Farrux Boltayev",
     position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
-    email: "education@digital.uz",
+    email: "f.boltayev@digital.uz",
     number: "+998 71 203 03 43 (888)",
   },
   {
     image: DeparmentImage14,
     fullname: "Muhlisa Xudayberganova",
     position: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo‘limi boshlig‘i",
-    email: "education@digital.uz",
+    email: "m.xudayberganova@digital.uz",
     number: "+998 71 203 03 43 (111)",
   },
   {
     image: DeparmentImage10,
-    fullname: "Mirabbos Anvarov ",
+    fullname: "Mirabbos Anvarov",
     position:
       "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
-    email: "education@digital.uz",
+    email: "m.anvarov@digital.uz",
     number: "+998 71 203 03 43 (112) ",
   },
   {
@@ -288,7 +288,7 @@ export const departmentsInformations = [
     image: DeparmentImage13,
     fullname: "Moxira Nurullayeva",
     position: "Marketing va PR bo‘limi boshlig‘i",
-    email: "education@digital.uz",
+    email: "m.nurullayeva@digital.uz",
     number: "+998 71 203 03 43 (107)",
   },
   {
@@ -302,7 +302,7 @@ export const departmentsInformations = [
     image: DeparmentImage8,
     fullname: "Akbarxo‘ja Anvarxonov",
     position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',
-    email: "education@digital.uz",
+    email: "a.anvarxonov@digital.uz",
     number: "+998 71 203 03 43 (117) ",
   },
 ];

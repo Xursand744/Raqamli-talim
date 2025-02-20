@@ -28,8 +28,8 @@ export default function Departments() {
 
       <div className="flex gap-[10px] flex-wrap justify-between deparment-items">
         {departmentsInformations &&
-          departmentsInformations.map((info) => {
-            return <AboutDepartment {...info} />;
+          departmentsInformations.map((info, idx) => {
+            return <AboutDepartment {...info} idx={idx} />;
           })}
       </div>
     </div>

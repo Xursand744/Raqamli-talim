@@ -18,6 +18,7 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
+import ItTalentsDocs from "../../assets/it-talents-docs";
 
 const Breadcrumb = () => {
   const { t } = useTranslation("global");
@@ -181,9 +182,13 @@ export default function ItTalents() {
                 <p className="text-sm md:text-base text-gray-600">
                   Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
                 </p>
-                <button className="mt-4 md:mt-6 px-6 md:px-8 py-2 bg-white border border-gray-300 rounded-full text-gray-700 hover:bg-gray-50 transition-colors">
+                <a
+                  href={ItTalentsDocs}
+                  download
+                  className="mt-4 md:mt-6 px-6 md:px-8 py-2 bg-white border border-gray-300 rounded-full text-gray-700 hover:bg-gray-50 transition-colors inline-block"
+                >
                   Yuklab olish
-                </button>
+                </a>
               </div>
 
               <div className="max-w-[231px] absolute bottom-0 right-0 max-[830px]:hidden">
@@ -257,7 +262,15 @@ export default function ItTalents() {
                     IT Park tomonidan taqdim etilgan yagona reyestr
                   </p>
                   <div>
-                    <button className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]">
+                    <button
+                      onClick={() =>
+                        window.open(
+                          "https://it-park.uz/ru/itpark/residents/itpark-residents",
+                          "_blank"
+                        )
+                      }
+                      className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]"
+                    >
                       Havolaga o'tish
                     </button>
                   </div>
@@ -283,28 +296,10 @@ export default function ItTalents() {
               <h1 className="text-[#222] font-bold text-[40px]">
                 Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro‘yxatdan
                 o‘tish bo‘yicha yo‘riqnoma:
-                {/* <div
-                
-                  // dangerouslySetInnerHTML={{
-                  //   __html: t("one_million_uzbek_coders_title"),
-                  // }}
-                /> */}
               </h1>
               <p className="text-[#222] text-[20px]">
                 Quyidagi qo‘llanmamiz siz uchun
-                {/* <div
-                  dangerouslySetInnerHTML={{
-                    __html: t("one_million_uzbek_coders_description"),
-                  }}
-                /> */}
               </p>
-              {/* <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: t("one_million_uzbek_coders_events"),
-                    }}
-                  />
-                </Button> */}
 
               <div>
                 <div className="flex gap-4">
