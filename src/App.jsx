@@ -29,6 +29,7 @@ import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
 import Schul from "./pages/schul";
 import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
+import SingleArticle from "./pages/Articles/SingleArticle";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -131,6 +132,10 @@ export default function App() {
               element: <NewsSinglePage />,
             },
           ],
+        },
+        {
+          path: "articles/:idx",
+          element: <SingleArticle />,
         },
       ],
     },

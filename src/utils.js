@@ -1,12 +1,8 @@
 import { CircleHelp } from "lucide-react";
-import { PanelsTopLeft } from "lucide-react";
 import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 import {
-  DepartmentDirector,
-  DepartmentImage,
   LeadershipBanner,
   newsImage,
-  ProjectBanner,
   ProjectImage as AlKhorezmiyImage,
   ItTalentsProjectImage,
   VacancyImage,
@@ -21,6 +17,13 @@ import {
   DeparmentImage7,
   DeparmentImage8,
 } from "./assets/deparment";
+import First from "./assets/1.jpg";
+import Second from "./assets/2.jpg";
+import Third from "./assets/3.jpg";
+import Fourth from "./assets/4.jpg";
+import Fifth from "./assets/5.jpg";
+import Sixth from "./assets/6.jpg";
+import Seventh from "./assets/7.jpg";
 
 export const Menus = [
   {
@@ -603,5 +606,70 @@ export const projectsOverview = [
     title: "Muhammad Al-Xorazmiy vorislari",
     image: AlKhorezmiyImage,
     link: "muhammad-al-xorazmiy-vorislari",
+  },
+];
+
+export const oneMillionUzbekCodersCards = [
+  {
+    img: First,
+    text: "Bir milliondan oshiq yoshlar bepul oʻqitiladi",
+    description:
+      "Loyiha doirasida 5 ta bepul kursda yoshlarga bepul ta’lim olish imkoni yaratiladi. ",
+  },
+  {
+    img: Second,
+    text: "Yoshlar xalqaro it sertifikatlariga oʻqitiladi",
+    description: ` “Bir Million o‘zbek dasturchilari” loyihasi doirasida yangi Imkoniyatlar! Raqamli Texnologiyalar Vazirligi tomonidan "Bir million o‘zbek dasturchilari" loyihasi doirasida 30 ming nafardan ziyod yoshlarni professional IT sertifikatlarga ega qilish tashabbusi boshlanganini e’lon qilamiz!
+Nega bu imkoniyatdan foydalanish kerak? Bepul IT ta’lim: Coursera va boshqa xalqaro ta’lim platformalarida yo’lga qo’yilgan, shu bilan birgalikda it-istedod.uz platformasida nom va yo’nalishlari qayd etilgan zamonaviy IT yo‘nalishlarida ta’lim olish imkoniyati. Xalqaro darajadagi sertifikatlar: Dunyoda tan olingan sertifikatlar sizning malakangizni tasdiqlaydi va global IT bozorida ishga joylashishingizni osonlashtiradi. Keng imkoniyatlar: Ushbu loyiha nafaqat texnik ko‘nikmalaringizni, balki muloqot, loyihalarni boshqarish va kreativ fikrlash qobiliyatingizni ham rivojlantiradi.
+Nimalarni o‘rganasiz? Dasturlash tillari (Python, Java, C++) Ma’lumotlar tahlili va sun’iy intellekt Veb va mobil ilovalar ishlab chiqish Kiberxavfsizlik va axborot texnologiyalari Loyihalarni boshqarish va IT startaplar yaratish va boshqalar. Batafsil ro’yxat: it-istedod.uz platformasida Kimlar ishtirok etishi mumkin? O’zbekiston Respublikasining 16-30 yosh oralig’ida bo’lgan va IT sohasi bo‘yicha ta’lim olishni xohlovchi barcha fuqarolar.
+Qanday qatnashish mumkin? Ro‘yxatdan o‘ting: it-istedod.uz platformasidan o’zingiz mos kurs yo’nalishini tanlang va xalqaro onlayn platformalarda bu yo’nalishda sertifikatni qo’lga kiriting. Olgan sertifikat uchun xarajatlaringizni qoplash uchun ariza yuboring.
+Kelajak imkoniyatlari IT sohasidagi yuqori daromadli ish joylariga ega bo‘lish. O‘z startapingizni yaratish yoki xalqaro kompaniyalarda faoliyat yuritish. Raqamli iqtisodiyotda yetakchi mutaxassis sifatida o‘z o‘rningizni topish.
+Zamonaviy texnologiyalar olamini zabt eting! Bugundan boshlang! `,
+  },
+  {
+    img: Third,
+    text: "100 nafar oʻqituvchilarga 10 mln soʻmdan pul mukofotlari",
+    description:
+      "Loyiha doirasida 5 ta bepul kursda yoshlarga bepul ta’lim olish imkoni yaratiladi.",
+  },
+  {
+    img: Fourth,
+    text: "Eng yaxshi 10 nafar o‘qituvchiga chet-elga sayohat",
+    description: ` O‘qituvchilarga xorijiy sayohat yo‘llanmasiga imkoniyati! Hurmatli umumiy o‘rta ta’lim maktablari o‘qituvchilari! Raqamli texnologiyalar vazirligi "Bir million o‘zbek dasturchilari" loyihasi doirasida Coursera platformasida yuqori natijalar ko‘rsatgan 10 nafar o‘qituvchini rag‘batlantirish maqsadida xorijga sayohat yo‘llanmasi taqdim etilishini e’lon qiladi.
+Kimlar qatnashishi mumkin? O‘zbekistonning umumiy o‘rta ta’lim maktablarida faoliyat yurituvchi o‘qituvchilar. Coursera platformasida IT va boshqa zamonaviy yo‘nalishlarda muvaffaqiyatli o‘quv kurslarini tamomlagan o‘qituvchilar.
+Mukofot olish shartlari: Coursera platformasida o‘qing: IT, dasturlash yoki boshqa zamonaviy yo‘nalishlardagi kurslarni tanlab o‘qing. Kurslarni muvaffaqiyatli yakunlang: Kurs davomida bilimlaringizni namoyish etib, sertifikatga ega bo‘ling. Faol bo‘ling: Ta’lim olish jarayonida muntazam qatnashish va yuqori natijalar ko‘rsatish muhim. Natijalarni taqdim eting: Sertifikat va natijalaringizni loyiha platformasiga topshiring. *qo’shimcha mezonlar alohida e’lon qilinadi.
+Nega ishtirok etishingiz kerak? Xorijga sayohat: G‘oliblar zamonaviy texnologiya va ta’lim sohasidagi ilg‘or tajribalarni o‘rganish uchun xorijga sayohat qilish imkoniyatiga ega bo‘ladi. Professional rivojlanish: Coursera kurslari orqali yangi bilimlar va ko‘nikmalarga ega bo‘lasiz. Maktabingizning nufuzi: Sizning yutuqlaringiz o‘qituvchilar jamoasiga ilhom beradi va ta’lim sifatini oshirishga yordam beradi.
+Qanday ishtirok etish mumkin? Ro‘yxatdan o‘ting: "Bir million o‘zbek dasturchilari" loyihasi doirasida ro‘yxatdan o‘ting. Coursera platformasiga kirib o‘qing: IT, texnologiya va boshqa fanlar bo‘yicha kurslarni tanlab o‘qing. Sertifikat oling: Kurslarni muvaffaqiyatli yakunlab, sertifikatlarga ega bo‘ling. Natijalaringizni topshiring: Sertifikatlaringizni va o‘qish davomida erishilgan yutuqlaringizni taqdim eting.
+Muhim ma’lumotlar: G‘oliblar soni: 10 nafar eng faol va muvaffaqiyatli o‘qituvchi. Mukofot: Xorijga sayohat yo‘llanmasi. Muddat: Kurslarni belgilangan vaqt ichida yakunlash lozim.
+Ta’lim olish va xorijiy tajribaga ega bo‘lish uchun ushbu noyob imkoniyatdan foydalaning! `,
+  },
+  {
+    img: Fifth,
+    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
+    description: `"Bir million o‘zbek dasturchilari" loyihasida qatnashib, sovg‘alarni qo‘lga kiriting! Hurmatli yoshlar va IT sohasiga qiziquvchilar! Raqamli texnologiyalar vazirligi tomonidan "Bir million o‘zbek dasturchilari" loyihasi doirasida yoshlarni IT yo‘nalishida qo‘llab-quvvatlash va rag‘batlantirish maqsadida, Coursera platformasida muvaffaqiyatli natijalar ko‘rsatgan o‘quvchilar uchun qimmatbaho sovg‘alar va noutbuklar ajratilishi e’lon qilindi.
+Kimlar qatnashishi mumkin? "Bir million o‘zbek dasturchilari" loyihasida ro‘yxatdan o‘tgan; Coursera platformasi orqali IT va shaxsiy rivojlanish yo‘nalishidagi kurslarni muvaffaqiyatli yakunlagan; Platformada yuqori natija ko’rsatgan va sertifikatga ega bo‘lgan yurtimizdagi umumta’lim maktablarining barcha o’quvchilari.
+Sovg‘alar va rag‘batlantirish imkoniyatlari: Noutbuklar: IT va shaxsiy rivojlanish yo’lida bilim olishni davom ettirishingiz uchun rag’bat. Qimmatbaho sovg‘alar: O‘quv faoliyatingizni qo‘llab-quvvatlovchi zamonaviy gadjetlar. Sertifikatlar va imkoniyatlar: Eng yaxshi natija ko‘rsatganlar maxsus mukofotlar bilan taqdirlanadi.
+Qanday ishtirok etish mumkin? Ro‘yxatdan o‘ting: "Bir million o‘zbek dasturchilari" loyihasida ro‘yxatdan o‘tishingiz kerak. Coursera platformasida o‘qing: IT, dasturlash, data science yoki boshqa zamonaviy IT yo‘nalishlarini, shuningdek o’zingizni qiziqtirgan shaxsiy rivojlanish kurslarida o‘rganing. Kurslarni yakunlang: Kursni muvaffaqiyatli tamomlab, sertifikatga ega bo‘ling. Natijalarni taqdim eting: Olingan sertifikat va muvaffaqiyatlaringizni loyiha doirasida taqdim eting. Bu bo’yicha batafsil ma’lumotlar taqdim etiladi.
+Nima uchun bu loyihada qatnashish kerak? Mutaxassislikka tayyorgarlik: Zamonaviy kasblarni o‘rganish imkoniyati sizni istiqbolda o’z yo’nalishingizda yetakchi mutaxassisga aylantiradi. Rag‘bat: Sovg‘alar va qo‘shimcha imkoniyatlar orqali o‘zingizga yanada motivatsiya va ilhom bering. Yorqin kelajak: O‘rganilgan bilimlar global va mahalliy IT bozorida va boshqa sohalarda ishlash uchun eshiklarni ochadi.
+Muhim sanalar: Kurslarni tamomlash uchun oxirgi muddat: 2025-yilning avgust oyi Natijalarni topshirish: 2025-yilning sentyabr oyi
+Siz ham imkoniyatdan foydalaning! O‘qing, rivojlaning va mukofotga ega bo‘ling!
+Qo‘shimcha ma’lumot uchun: Telegram tarmog’ida bizni kuzatib boring 👉 https://t.me/digitaledu_uz `,
+  },
+  {
+    img: Sixth,
+    text: "Eng yaxshi 3 oliy ta’lim muassasalariga pul mukofotlari beriladi",
+    description: `Universitetingizning g‘alabasiga hissa qo‘shing va yutuqlaringizni namoyish eting! Hurmatli talaba va professor-o‘qituvchilar! Raqamli texnologiyalar vazirligi tomonidan "Bir million o‘zbek dasturchilari" loyihasi doirasida O‘zbekistonning talabalari uchun katta imkoniyat e’lon qilindi. Coursera platformasida talabalari eng yaxshi natijalarni ko‘rsatgan 3 ta universitet qimmatbaho pul mukofotlari bilan taqdirlanadi!
+Mukofot miqdorlari: 1-o‘rin: 100 million so‘m 2-o‘rin: 50 million so‘m 3-o‘rin: 25 million so‘m Universitetlarning umumiy natijalari talabalarning Coursera platformasidagi faoliyatiga asoslanadi, shu jumladan: Kurslarni muvaffaqiyatli tamomlash. Sertifikat olish natijalari. O‘qish jarayonida ko‘rsatilgan faollik va davomiylik. *qo’shimcha mezonlar alohida e’lon qilinadi.
+Talabalarga yo‘riqnoma: Qanday qilib universitetingizni g’oliblar safiga olib chiqishingiz mumkin? Ro‘yxatdan o‘ting: "Bir million o‘zbek dasturchilari" loyihasida ro‘yxatdan o‘ting. Coursera platformasida o‘qing: IT va shaxsiy rivojlanish yo‘nalishida taklif etilgan kurslarni tanlang. Kurslarni o‘z vaqtida va muvaffaqiyatli yakunlang. Faol bo‘ling: Har kuni platformadan foydalaning. Kurslar davomida faol qatnashish va topshiriqlarni o‘z vaqtida bajarish universitetingiz reytingini oshiradi. Sertifikatga ega bo‘ling: Sertifikatlar nafaqat sizning shaxsiy muvaffaqiyatingiz, balki universitetingizga ham katta hissa qo‘shadi.
+Nega bu muhim? Universitet yutug‘i: Universitetingizning IT-ta’lim va boshqa zamonaviy bilimlarni berish bo’yicha muvaffaqiyatlari e’tirof etiladi. Shaxsiy rivojlanish: Coursera platformasidagi kurslar sizning kasbiy ko‘nikmalaringizni oshirish va kelajakdagi IT bozorida muvaffaqiyatli bo‘lishingizga yordam beradi. Milliy rivojlanishga hissa: Sizning natijalaringiz O‘zbekistonning raqamli salohiyatini oshiradi.
+Qanday foyda ko‘rasiz? Siz egallagan bilimlar sizni IT sohasida yetakchi mutaxassisga aylantiradi. Universitetingizning sovrindor bo‘lishiga hissa qo‘shganingiz uchun nufuz va faxr hissi sizga bir umrlik ilhom va motivatsiya beradi.
+Muddatni o‘tkazib yubormang! Tengdoshlaringizni o‘qishga jalb eting va universitetingizni mukofot egasi qiling!
+👉 https://t.me/digitaledu_uz `,
+  },
+  {
+    img: Seventh,
+    text: "Eng faol maktablarga Prezident sovg‘asi",
+    description:
+      "“Bir million o‘zbek dasturchilari” loyihasi doirasida eng faol maktablkarga Prezident sovg‘asi sifatida elektromobil taqdim etiladi O‘zbekiston Respublikasi Prezidenti tomonidan tashabbus qilingan “Bir million o‘zbek dasturchilari” loyihasi mamlakatimizda IT-ta’limni rivojlantirish, yoshlar orasida raqamli texnologiyalarni ommalashtirish va mustaqil o‘qishni rag‘batlantirishga qaratilgan muhim dastur hisoblanadi. Ushbu loyiha doirasida yangi rag‘batlantiruvchi tashabbus e’lon qilindi. Eng faol maktablarga Prezident sovg‘asi Loyiha doirasida Coursera onlayn platformasida o’quvchilari faol ta'lim olib, eng yuqori natijalarni qo‘lga kiritgan 2 ta umumiy o‘rta ta’lim maktabiga Prezident sovg‘asi sifatida elektromobillar topshirilishi e’lon qilindi. Ushbu mukofot, avvalo, mustaqil ta’limning ahamiyatini yuksaltirish va yoshlarni global raqamli ta’lim platformalaridan foydalanishga ilhomlantirishga qaratilgan. Ta'limda innovatsiyalarni rag‘batlantirish Ushbu tashabbus IT-ta’lim tizimini rivojlantirishda va mamlakatimiz yoshlarining innovatsion yondashuvlarni egallashida muhim qadam bo‘lib xizmat qiladi. Shuningdek, bosh mukofot bilan birga, o’qituvchilar va o’quvchilar uchun yana ko’plab qo’shimcha sovrin va mukofotlar joriy qilingan. Ushbu tashabbus o‘zbek yoshlari orasida mustaqil ta’lim olishning yangi davrini boshlab beradi va mamlakatimizni global raqamli maydonda yanada yuqori pog‘onaga ko‘tarishga xizmat qiladi.",
   },
 ];

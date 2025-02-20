@@ -21,6 +21,8 @@ import { rightIcon } from "../../assets/icons/icon";
 import Contact from "../Contact/Contact";
 import { useTranslation } from "react-i18next";
 import { BackgroundIcon } from "../../assets/icons/icon";
+import { oneMillionUzbekCodersCards } from "../../utils";
+import { useNavigate } from "react-router-dom";
 
 function Courses() {
   const courses = [
@@ -95,39 +97,9 @@ const Button = ({ children, className, ...props }) => (
   </button>
 );
 
-const slides = [
-  {
-    img: First,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Second,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Third,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Fourth,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Fifth,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Sixth,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-  {
-    img: Seventh,
-    text: "14 ta hududda eng yuqori natija ko'rsatgan o'quvchilarga noutbuk va qimmatbaho sovg'alar",
-  },
-];
-
 const OneMillionUzbekCoders = () => {
   const { t } = useTranslation("global");
+  const navigate = useNavigate();
 
   return (
     <div className="overflow-hidden">
@@ -173,7 +145,7 @@ const OneMillionUzbekCoders = () => {
           className="mySwiper max-w-[1900px] pl-[200px] w-full"
           loop={true}
         >
-          {slides.map((slide, index) => (
+          {oneMillionUzbekCodersCards.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="w-full flex flex-col md:flex-row items-center justify-center border border-[#E0E0E0] rounded-[8px] overflow-hidden p-4">
                 <img
@@ -186,7 +158,10 @@ const OneMillionUzbekCoders = () => {
                     {slide.text}
                   </h1>
                   <div className="flex justify-center md:justify-start">
-                    <button className="px-6 py-2 font-medium rounded-[24px] border border-[#2F2F2F] hover:bg-[#2F2F2F] hover:text-white transition-all w-max">
+                    <button
+                      onClick={() => navigate(`/articles/${index + 1}`)}
+                      className="px-6 py-2 font-medium rounded-[24px] border border-[#2F2F2F] hover:bg-[#2F2F2F] hover:text-white transition-all w-max"
+                    >
                       Batafsil
                     </button>
                   </div>
