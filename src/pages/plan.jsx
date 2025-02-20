@@ -34,6 +34,13 @@ export default function EventsSection() {
         description: t("events2.description"),
         image: Event2,
       },
+      {
+        id: 3,
+        title: t("events1.title"),
+        date: t("events1.date"),
+        description: t("events1.description"),
+        image: Event1,
+      },
       // {
       //   id: 3,
       //   title: t("events.innoWomenWeek"),
