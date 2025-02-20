@@ -254,31 +254,31 @@ export const departmentsInformations = [
   {
     image: DeparmentImage12,
     fullname: "Alisher Rapiyev",
-    position: "Ta'lim tashkilotlari bilan ishlash bo‘limi boshlig‘i",
     email: "a.rapiyev@digital.uz",
     number: "+998 71 203 03 43 (104) ",
+    position: "Ta'lim tashkilotlari bilan ishlash bo‘limi boshlig‘i",
   },
   {
+    position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
     image: DeparmentImage7,
     fullname: "Farrux Boltayev",
-    position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
     email: "f.boltayev@digital.uz",
     number: "+998 71 203 03 43 (888)",
   },
   {
     image: DeparmentImage14,
     fullname: "Muhlisa Xudayberganova",
-    position: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo‘limi boshlig‘i",
     email: "m.xudayberganova@digital.uz",
     number: "+998 71 203 03 43 (111)",
+    position: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo‘limi boshlig‘i",
   },
   {
     image: DeparmentImage10,
     fullname: "Mirabbos Anvarov",
-    position:
-      "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
     email: "m.anvarov@digital.uz",
     number: "+998 71 203 03 43 (112) ",
+    position:
+      "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
   },
   {
     image: DeparmentImage16,
@@ -302,9 +302,9 @@ export const departmentsInformations = [
     number: "",
   },
   {
+    position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',
     image: DeparmentImage8,
     fullname: "Akbarxo‘ja Anvarxonov",
-    position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',
     email: "a.anvarxonov@digital.uz",
     number: "+998 71 203 03 43 (117) ",
   },

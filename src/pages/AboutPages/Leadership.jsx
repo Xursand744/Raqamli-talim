@@ -39,16 +39,16 @@ const Leadership = () => {
       title: "Direktor o'rinbosari",
       email: "d.adilbekov@digital.uz",
       phone: "+998 71 203 03 43 (103)",
-      hours: "Chorshanba 9:00-11:00",
       image: LeadershipImage2,
+      hours: "Chorshanba 9:00-11:00",
     },
     {
-      name: "Jasur Askarov",
       title: "Direktor o'rinbosari",
+      name: "Jasur Askarov",
       email: "invest@digital.uz",
       phone: "+998 78 238-41-76",
-      hours: "Payshanba 9:00-11:00",
       image: LeadershipImage3,
+      hours: "Payshanba 9:00-11:00",
     },
   ];
 

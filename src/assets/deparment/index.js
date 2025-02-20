@@ -14,6 +14,11 @@ import DeparmentImage13 from "./013.png";
 import DeparmentImage14 from "./014.png";
 import DeparmentImage15 from "./015.png";
 import DeparmentImage16 from "./016.jpg";
+import DeparmentImage17 from "./017.jpg";
+import DeparmentImage18 from "./018.jpg";
+import DeparmentImage19 from "./019.jpg";
+import DeparmentImage20 from "./020.jpg";
+import DeparmentImage21 from "./021.jpg";
 
 export {
   DeparmentImage1,
@@ -32,4 +37,9 @@ export {
   DeparmentImage14,
   DeparmentImage15,
   DeparmentImage16,
+  DeparmentImage17,
+  DeparmentImage18,
+  DeparmentImage19,
+  DeparmentImage20,
+  DeparmentImage21,
 };

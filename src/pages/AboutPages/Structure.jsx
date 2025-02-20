@@ -3,7 +3,24 @@ import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 import "./about.css";
 import { useState, useEffect, useRef } from "react";
 import { Clock, Mail, Phone, X } from "lucide-react";
-import { DeparmentImage15 } from "../../assets/deparment";
+import {
+  DeparmentImage10,
+  DeparmentImage11,
+  DeparmentImage12,
+  DeparmentImage13,
+  DeparmentImage14,
+  DeparmentImage15,
+  DeparmentImage16,
+  DeparmentImage17,
+  DeparmentImage18,
+  DeparmentImage19,
+  DeparmentImage20,
+  DeparmentImage21,
+  DeparmentImage7,
+  DeparmentImage8,
+} from "../../assets/deparment";
+import { LeadershipImage2, LeadershipImage3, VacancyImage } from "../../assets";
+import { motion } from "framer-motion";
 
 export default function Structure() {
   const { t } = useTranslation("global");
@@ -15,7 +32,7 @@ export default function Structure() {
 
   const [modalContent, setModalContent] = useState({
     title: "",
-    image: DeparmentImage15,
+    image: "",
     fullname: "",
     phone: "",
     email: "",
@@ -65,16 +82,15 @@ export default function Structure() {
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  const handleDivClick = (title) => {
+  const handleDivClick = (item) => {
     if (!isDragging) {
       setModalContent({
-        ...modalContent,
-        title,
-        // image,
-        // fullname,
-        // phone,
-        // email,
-        // time,
+        title: item.title,
+        image: item.image || VacancyImage,
+        fullname: item.fullname || "Vakant",
+        phone: item.number || "",
+        email: item.email || "",
+        time: item.time || "",
       });
       setShowModal(true);
     }
@@ -91,28 +107,66 @@ export default function Structure() {
     },
   ];
 
-  const topManagement = [{ title: "Direktor" }, { title: "Maslahatchi" }];
+  const topManagement = [
+    {
+      title: "Direktor",
+      fullname: "Azamat Eshankulov",
+      email: "education@digital.uz",
+      number: "+998 71 203 03 43 (101)",
+      time: "Juma, 9:00-11:00",
+      image: DeparmentImage15,
+    },
+    {
+      title: "Maslahatchi",
+      fullname: "Vakant",
+      image: VacancyImage,
+    },
+  ];
 
   const departments = [
     {
       title:
         "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirish bo'limi",
       isHeader: true,
+      image: DeparmentImage11,
+      fullname: "Saidmurod Abdujabborov",
+      email: "s.abdujabborov@digital.uz",
+      number: "+998 71 203 03 43 (109)",
     },
     {
       title: "Raqamli ko'nikmalarni shakllantirish bo'limi",
+      fullname: "Vakant",
+      email: "",
+      number: "",
+      image: VacancyImage,
     },
     {
       title: "Kadrlar bo'lim",
+      fullname: "Akmal Yoqubov",
+      email: "a.yoqubov@digital.uz",
+      number: "+998 71 203 03 43 (105)",
+      image: DeparmentImage17,
     },
     {
       title: "Bosh yuristkonsult",
+      fullname: "Karimov MuhammadSodiq",
+      number: "+998 71 203 03 43 (110)",
+      email: "",
+      image: DeparmentImage18,
     },
     {
       title: "Ijro intizomi va murojatlar bo'yicha bosh mutaxassis",
+      fullname: "Feruza Nematxonova",
+      email: "feruzamaxmudova26@gmail.com",
+      number: "+998 71 203 03 43 (116)",
+      image: DeparmentImage19,
     },
     {
       title: "Marketing va PR bo'limi",
+      fullname: "Moxira Nurullayeva",
+      email: "m.nurullayeva@digital.uz",
+      number: "+998 71 203 03 43 (107)",
+      image: DeparmentImage13,
     },
   ];
 
@@ -120,22 +174,46 @@ export default function Structure() {
     {
       title: "Direktorning birinchi o'rinbosari",
       isHeader: true,
+      fullname: "Vakant",
+      email: "",
+      number: "",
+      image: VacancyImage,
     },
     {
       title: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo'limi",
+      fullname: "Muhlisa Xudayberganova",
+      email: "m.xudayberganova@digital.uz",
+      number: "+998 71 203 03 43 (111)",
+      image: DeparmentImage14,
     },
     {
       title: "Ta'lim tashkilotlari bilan ishlash bo'limi",
+      image: DeparmentImage12,
+      fullname: "Alisher Rapiyev",
+      email: "a.rapiyev@digital.uz",
+      number: "+998 71 203 03 43 (104) ",
     },
     {
       title:
         "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo'limi",
+      image: DeparmentImage10,
+      fullname: "Mirabbos Anvarov",
+      email: "m.anvarov@digital.uz",
+      number: "+998 71 203 03 43 (112) ",
     },
     {
       title: "Raqamli texnologiyalar bo'limi",
+      image: DeparmentImage7,
+      fullname: "Farrux Boltayev",
+      email: "f.boltayev@digital.uz",
+      number: "+998 71 203 03 43 (888)",
     },
     {
       title: '"IT shaharcha"lar faoliyatini tashkil etish boshqarmasi',
+      image: DeparmentImage8,
+      fullname: "Akbarxo'ja Anvarxonov",
+      email: "a.anvarxonov@digital.uz",
+      number: "+998 71 203 03 43 (117) ",
     },
   ];
 
@@ -143,12 +221,24 @@ export default function Structure() {
     {
       title: "Direktor o'rinbosari",
       isHeader: true,
+      fullname: "Davronbek Adilbekov",
+      email: "d.adilbekov@digital.uz",
+      number: "+998 71 203 03 43 (103)",
+      image: LeadershipImage2,
     },
     {
       title: "Iqtisodiyot va moliya bo'limi",
+      fullname: "Soliyev Odiljon",
+      email: "o.soliyev@digital.uz",
+      number: "+998 71 203 03 43 (114)",
+      image: DeparmentImage20,
     },
     {
       title: "Buxgalteriya bo'limi",
+      fullname: "Boymatov Zafar",
+      email: "z.boymatov@digital.uz",
+      number: "+998 71 203 03 43 (115)",
+      image: DeparmentImage21,
     },
   ];
 
@@ -156,9 +246,17 @@ export default function Structure() {
     {
       title: "Direktor o'rinbosari",
       isHeader: true,
+      fullname: "Jasur Askarov",
+      email: "invest@digital.uz",
+      number: "+998 78 238-41-76",
+      image: LeadershipImage3,
     },
     {
       title: "Investitsiya loyiha ofisi",
+      fullname: "Farrux Abduvohidov",
+      email: "invest@digital.uz",
+      number: "+998 78 238 41 76",
+      image: DeparmentImage16,
     },
   ];
 
@@ -168,21 +266,32 @@ export default function Structure() {
 
       {showModal && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300"
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           onClick={(e) => {
             if (e.target === e.currentTarget) {
               setShowModal(false);
             }
           }}
         >
-          <div className="h-[408px] flex items-center justify-center p-4">
-            <div className="bg-white rounded-2xl shadow-xl max-w-2xl w-full overflow-hidden relative">
+          <motion.div
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-100%", opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="h-[408px] flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white rounded-2xl shadow-xl max-w-2xl w-full overflow-hidden relative"
+            >
               <button className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 transition-colors">
                 <X size={24} onClick={() => setShowModal(false)} />
               </button>
 
               <div className="flex flex-col md:flex-row">
-                {/* Image section */}
                 <div className="w-full md:w-1/3 h-64 md:h-auto relative">
                   <img
                     src={modalContent.image}
@@ -191,130 +300,52 @@ export default function Structure() {
                   />
                 </div>
 
-                {/* Content section */}
                 <div className="w-full md:w-2/3 p-6 md:p-8">
                   <div className="space-y-6">
                     <div className="mb-[100px]">
                       <h2 className="text-2xl font-bold text-gray-800">
-                        Azamat Eshankulov
+                        {modalContent.fullname}
                       </h2>
                       <p className="text-gray-600 mt-1">{modalContent.title}</p>
                     </div>
 
                     <div className="space-y-4">
-                      <div className="flex items-center space-x-3 text-gray-700">
-                        <Mail className="text-blue-400" size={20} />
-                        <a
-                          href="mailto:education@digital.uz"
-                          className="hover:text-blue-500"
-                        >
-                          education@digital.uz
-                        </a>
-                      </div>
+                      {modalContent.email && (
+                        <div className="flex items-center space-x-3 text-gray-700">
+                          <Mail className="text-blue-400" size={20} />
+                          <a
+                            href={`mailto:${modalContent.email}`}
+                            className="hover:text-blue-500"
+                          >
+                            {modalContent.email}
+                          </a>
+                        </div>
+                      )}
 
-                      <div className="flex items-center space-x-3 text-gray-700">
-                        <Phone className="text-blue-400" size={20} />
-                        <a
-                          href="tel:+998712030343"
-                          className="hover:text-blue-500"
-                        >
-                          +998 71 203 03 43 (101)
-                        </a>
-                      </div>
+                      {modalContent.phone && (
+                        <div className="flex items-center space-x-3 text-gray-700">
+                          <Phone className="text-blue-400" size={20} />
+                          <a
+                            href={`tel:${modalContent.phone}`}
+                            className="hover:text-blue-500"
+                          >
+                            {modalContent.phone}
+                          </a>
+                        </div>
+                      )}
 
-                      <div className="flex items-center space-x-3 text-gray-700">
-                        <Clock className="text-blue-400" size={20} />
-                        <span>Juma, 9:00-11:00</span>
-                      </div>
+                      {modalContent.time && (
+                        <div className="flex items-center space-x-3 text-gray-700">
+                          <Clock className="text-blue-400" size={20} />
+                          <span>{modalContent.time}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          {/* <div className="bg-white rounded-lg max-w-md w-full transition-all duration-300 transform">
-            <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-lg font-medium">{modalContent.title}</h3>
-              <button
-                onClick={() => setShowModal(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ×
-              </button>
-            </div>
-            <div className="flex p-6">
-              <img
-                src={modalContent.image}
-                alt={modalContent.title}
-                className="w-32 h-32 object-cover rounded-lg"
-              />
-              <div className="ml-4">
-                <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-gray-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <span className="text-sm text-gray-600">
-                      {modalContent.email}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-gray-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    <span className="text-sm text-gray-600">
-                      {modalContent.phone}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-gray-500"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm text-gray-600">
-                      {modalContent.time}
-                    </span>
-                  </div>
-                </div>
-                <style>
-                  {`
-                    @keyframes modalSlide {
-                      from {
-                        opacity: 0;
-                        transform: scale(0.95) translateY(-20px);
-                      }
-                      to {
-                        opacity: 1;
-                        transform: scale(1) translateY(0);
-                      }
-                    }
-                  `}
-                </style>
-                <div className="mt-4">
-                  <p className="text-gray-600">{modalContent.description}</p>
-                </div>
-              </div>
-            </div>
-          </div> */}
+            </motion.div>
+          </motion.div>
         </div>
       )}
 
@@ -333,7 +364,7 @@ export default function Structure() {
             {topManagement.map((item, index) => (
               <div
                 key={index}
-                onClick={() => handleDivClick(item.title)}
+                onClick={() => handleDivClick(item)}
                 className="px-6 py-2 rounded-md border border-blue-500 bg-white text-center z-10 cursor-pointer hover:bg-blue-50"
               >
                 {item.title}
@@ -359,7 +390,7 @@ export default function Structure() {
               {departments.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => handleDivClick(item.title)}
+                  onClick={() => handleDivClick(item)}
                   className={`p-4 ${
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
@@ -375,16 +406,7 @@ export default function Structure() {
               {firstDeputyDepartments.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() =>
-                    handleDivClick(
-                      item.title,
-                      DeparmentImage15,
-                      item.title,
-                      item.phone,
-                      item.email,
-                      item.time
-                    )
-                  }
+                  onClick={() => handleDivClick(item)}
                   className={`p-4 ${
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
@@ -400,7 +422,7 @@ export default function Structure() {
               {deputyDepartments.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => handleDivClick(item.title)}
+                  onClick={() => handleDivClick(item)}
                   className={`p-4 ${
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
@@ -416,7 +438,7 @@ export default function Structure() {
               {secondDeputyDepartments.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => handleDivClick(item.title)}
+                  onClick={() => handleDivClick(item)}
                   className={`p-4 ${
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
