@@ -127,7 +127,6 @@ export default function Structure() {
     {
       title:
         "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirish bo'limi",
-      isHeader: true,
       image: DeparmentImage11,
       fullname: "Saidmurod Abdujabborov",
       email: "s.abdujabborov@digital.uz",
@@ -173,7 +172,6 @@ export default function Structure() {
   const firstDeputyDepartments = [
     {
       title: "Direktorning birinchi o'rinbosari",
-      isHeader: true,
       fullname: "Vakant",
       email: "",
       number: "",
@@ -220,7 +218,6 @@ export default function Structure() {
   const deputyDepartments = [
     {
       title: "Direktor o'rinbosari",
-      isHeader: true,
       fullname: "Davronbek Adilbekov",
       email: "d.adilbekov@digital.uz",
       number: "+998 71 203 03 43 (103)",
@@ -245,7 +242,6 @@ export default function Structure() {
   const secondDeputyDepartments = [
     {
       title: "Direktor o'rinbosari",
-      isHeader: true,
       fullname: "Jasur Askarov",
       email: "invest@digital.uz",
       number: "+998 78 238-41-76",
@@ -395,7 +391,7 @@ export default function Structure() {
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
                       : "border border-blue-500 hover:bg-blue-50"
-                  } rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                 >
                   {item.title}
                 </div>
@@ -411,7 +407,7 @@ export default function Structure() {
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
                       : "border border-blue-500 hover:bg-blue-50"
-                  } rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                 >
                   {item.title}
                 </div>
@@ -427,7 +423,7 @@ export default function Structure() {
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
                       : "border border-blue-500 hover:bg-blue-50"
-                  } rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                 >
                   {item.title}
                 </div>
@@ -443,7 +439,7 @@ export default function Structure() {
                     item.isHeader
                       ? "bg-blue-500 text-white hover:bg-blue-600"
                       : "border border-blue-500 hover:bg-blue-50"
-                  } rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                 >
                   {item.title}
                 </div>
