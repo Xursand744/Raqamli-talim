@@ -281,7 +281,7 @@ export const departmentsInformations = [
     image: DeparmentImage16,
     fullname: "Farrux Abduvohidov",
     position: "Investitsiya loyiha ofisi boshlig‘i",
-    email: "education@digital.uz",
+    email: "invest@digital.uz",
     number: "+998 71 203 03 43 (117) ",
   },
   {
