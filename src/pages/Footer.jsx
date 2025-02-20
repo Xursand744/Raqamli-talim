@@ -15,11 +15,20 @@ function Footer() {
               <div className="flex items-center md:items-start flex-row md:justify-between border-b pb-11">
                 <div className="flex flex-col md:flex-row items-start w-full gap-3 sm:gap-[40px] md:gap-[80px] footer-bottom-links-image">
                   <div>
-                    <img
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.462986299251!2d69.3368565!3d41.3422894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5a58c63cbfd%3A0xcb882f0ad7acf773!2sRaqamli%20texnologiyalar%20vazirligi!5e0!3m2!1sru!2s!4v1740069542648!5m2!1sru!2s"
+                      width="384"
+                      height="224"
+                      style={{ border: 0 }}
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                    {/* <img
                       src={map}
                       className="rounded-[30px] mb-5 lg:mb-0 w-full"
                       alt={t("footer.mapAlt")}
-                    />
+                    /> */}
                   </div>
                   <div className="flex justify-between w-full footer-bottom-links flex-wrap">
                     <div className="text-white flex gap-5 md:flex-col max-w-[200px] w-full">
