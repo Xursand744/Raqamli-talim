@@ -94,7 +94,7 @@ const Leadership = () => {
 
   return (
     <motion.div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-[1230px] mx-auto mb-8">
         <AboutPageHeader
           breadCrumps={breadCrumps}
           title={t("menu.leadership")}

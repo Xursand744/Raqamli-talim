@@ -18,7 +18,7 @@ function HigherStandingOptimization() {
   ];
 
   return (
-    <div className="container">
+    <div className="max-w-[1230px] mx-auto mb-8">
       <AboutPageHeader
         title={t("menu.higherOrganization")}
         breadCrumps={breadCrumps}

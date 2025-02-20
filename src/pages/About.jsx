@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { aboutCounts, aboutFilters } from "../utils";
 import aboutfirst from "../assets/about-1.png";
@@ -7,37 +6,28 @@ import aboutImage from "../assets/about-image.jpg";
 import startVideo from "../assets/startVideoIcon.svg";
 import { about1, about2, about3, about4, about5 } from "../assets";
 import Join from "./Join";
-import BreadCrumps from "../components/BreadCrumps";
+import AboutPageHeader from "../components/AboutComponents/AboutPageHeader";
 
 function About() {
   const { t } = useTranslation("global");
 
+  const breadCrumps = [
+    {
+      link: "/about",
+      name: t("menu.center"),
+    },
+    {
+      link: "/anti-corruption",
+      name: t("menu.aboutUs"),
+    },
+  ];
+
   return (
     <section className="about mt-[40px]">
-      <div className="container">
-        <div className="mt-[100px] mb-[40px]">
-          <BreadCrumps />
-        </div>
-        <div className="flex gap-[20px] flex-wrap">
-          {aboutFilters &&
-            aboutFilters.map((item, index) => {
-              return (
-                <NavLink
-                  key={index}
-                  to={`${item.link}`}
-                  className="py-[8px] px-[32px] rounded-[27px] border-[1px] border-[#B7B7B7] bg-[#F8F8F8] about-filter-link"
-                >
-                  {t(`about.filters.${index}`)}
-                </NavLink>
-              );
-            })}
-        </div>
+      <div className="max-w-[1230px] mx-auto">
+        <AboutPageHeader breadCrumps={breadCrumps} title={t("about.title")} />
 
         <div>
-          <h1 className="title mb-[20px]" style={{ textAlign: "left" }}>
-            {t("about.title")}
-          </h1>
-
           <div className="flex justify-between gap-[20px] about-main">
             <div className="w-1/2 min-h-[356px]">
               <img src={aboutfirst} alt="" className="w-full h-full" />
