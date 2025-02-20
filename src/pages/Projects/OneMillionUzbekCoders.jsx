@@ -174,22 +174,25 @@ const OneMillionUzbekCoders = () => {
           loop={true}
         >
           {slides.map((slide, index) => (
-           <SwiperSlide key={index}>
-           <div className="w-full flex flex-col md:flex-row items-center justify-center border border-[#E0E0E0] rounded-[8px] overflow-hidden p-4">
-             <img className="w-full md:w-1/2 h-[250px] md:h-full object-cover" src={slide.img} alt="Slide image" />
-             <div className="w-full md:w-1/2 p-4 flex flex-col justify-between">
-               <h1 className="text-[18px] lg:text-[34px] font-medium pb-[20px] w-full lg:w-[462px] text-center md:text-left">
-                 {slide.text}
-               </h1>
-               <div className="flex justify-center md:justify-start">
-                 <button className="px-6 py-2 font-medium rounded-[24px] border border-[#2F2F2F] hover:bg-[#2F2F2F] hover:text-white transition-all w-max">
-                   Batafsil
-                 </button>
-               </div>
-             </div>
-           </div>
-         </SwiperSlide>
-         
+            <SwiperSlide key={index}>
+              <div className="w-full flex flex-col md:flex-row items-center justify-center border border-[#E0E0E0] rounded-[8px] overflow-hidden p-4">
+                <img
+                  className="w-full md:w-1/2 h-[250px] md:h-full object-cover"
+                  src={slide.img}
+                  alt="Slide image"
+                />
+                <div className="w-full md:w-1/2 p-4 flex flex-col justify-between">
+                  <h1 className="text-[18px] font-medium pb-[20px] w-full text-left">
+                    {slide.text}
+                  </h1>
+                  <div className="flex justify-center md:justify-start">
+                    <button className="px-6 py-2 font-medium rounded-[24px] border border-[#2F2F2F] hover:bg-[#2F2F2F] hover:text-white transition-all w-max">
+                      Batafsil
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>
