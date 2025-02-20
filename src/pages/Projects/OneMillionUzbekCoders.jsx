@@ -23,6 +23,7 @@ import { useTranslation } from "react-i18next";
 import { BackgroundIcon } from "../../assets/icons/icon";
 import { oneMillionUzbekCodersCards } from "../../utils";
 import { useNavigate } from "react-router-dom";
+import { Autoplay } from "swiper/modules";
 
 function Courses() {
   const courses = [
@@ -136,7 +137,10 @@ const OneMillionUzbekCoders = () => {
         <Swiper
           autoplay={{
             delay: 1000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
+          modules={[Autoplay]}
           slidesPerView={1.5}
           spaceBetween={30}
           pagination={{
