@@ -257,8 +257,13 @@ export default function Structure() {
   ];
 
   return (
-    <div className="max-w-[1230px] mx-auto select-none">
-      <AboutPageHeader title={t("menu.structure")} breadCrumps={breadCrumps} />
+    <div className="select-none">
+      <div className="max-w-[1230px] mx-auto ">
+        <AboutPageHeader
+          title={t("menu.structure")}
+          breadCrumps={breadCrumps}
+        />
+      </div>
 
       {showModal && (
         <div
@@ -347,13 +352,13 @@ export default function Structure() {
 
       <div
         ref={containerRef}
-        className="w-full min-h-screen bg-white overflow-auto mt-[60px] cursor-grab active:cursor-grabbing"
+        className="w-full min-h-screen flex  bg-white overflow-auto mt-[60px] cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <div className="min-w-[1400px] mx-[20px] relative">
+        <div className="min-w-[1400px] mx-auto px-[20px] relative">
           <div className="absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
 
           <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
@@ -369,7 +374,7 @@ export default function Structure() {
           </div>
 
           <div className="absolute top-[36px] left-1/2 w-[2px] h-[40px] bg-blue-500 -translate-x-1/2" />
-          <div className="absolute top-[75px] left-[52.1%] w-[1206px] h-[2px] bg-blue-500 -translate-x-1/2 main-line" />
+          <div className="absolute top-[75px] left-[735px] w-[1197px] h-[2px] bg-blue-500 -translate-x-1/2 main-line" />
           <div className="absolute top-[75px] left-[9%] w-[2px] h-[40px] bg-blue-500" />
           <div className="absolute top-[75px] left-[550px] w-[2px] h-[40px] bg-blue-500" />
           <div className="absolute top-[75px] left-[900px] w-[2px] h-[40px] bg-blue-500" />
