@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Contact = () => {
+const Contact = ({ title = "Biz bilan bog'laning" }) => {
   const [phone, setPhone] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [name, setName] = useState("");
@@ -46,7 +46,7 @@ const Contact = () => {
           <div className="max-w-[1230px] mx-auto">
             <div className="flex justify-center">
               <h1 className="pb-[40px] font-bold text-[44px] leading-[64px] text-[#222222]">
-                Biz bilan bog'laning
+                {title}
               </h1>
             </div>
 
