@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { aboutCounts, aboutFilters } from "../utils";
-import aboutfirst from "../assets/about-1.png";
-import aboutImage from "../assets/about-image.jpg";
-import startVideo from "../assets/startVideoIcon.svg";
-import { about1, about2, about3, about4, about5 } from "../assets";
-import Join from "./Join";
-import AboutPageHeader from "../components/AboutComponents/AboutPageHeader";
+import { aboutCounts, aboutFilters } from "../../utils";
+import aboutfirst from "../../assets/about-1.png";
+import aboutImage from "../../assets/about-image.jpg";
+import startVideo from "../../assets/startVideoIcon.svg";
+import { about1, about2, about3, about4, about5 } from "../../assets";
+import Join from "../Home/Join";
+import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 
 function About() {
   const { t } = useTranslation("global");

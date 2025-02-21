@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import SuccessHistory1 from "../assets/success-history-1.jpg";
-import SuccessHistory2 from "../assets/success-history-2.jpg";
-import SuccessHistory3 from "../assets/success-history-3.jpg";
-import SuccessHistoryItem from "../components/SuccessHistoryItem";
+import SuccessHistory1 from "../../assets/success-history-1.jpg";
+import SuccessHistory2 from "../../assets/success-history-2.jpg";
+import SuccessHistory3 from "../../assets/success-history-3.jpg";
+import SuccessHistoryItem from "../../components/SuccessHistoryItem";
 
 function SuccessHistory() {
   const { t } = useTranslation("global");

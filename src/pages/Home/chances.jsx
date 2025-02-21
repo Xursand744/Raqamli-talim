@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import ChanceImage from "../assets/chance-1.png";
-import ChanceImage2 from "../assets/chance-2.png";
-import Chance from "../components/chance";
-import ChanceRobot from "../components/chanceRobot";
+import ChanceImage from "../../assets/chance-1.png";
+import ChanceImage2 from "../../assets/chance-2.png";
+import Chance from "../../components/chance";
+import ChanceRobot from "../../components/chanceRobot";
 import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 

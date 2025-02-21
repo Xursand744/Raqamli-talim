@@ -7,8 +7,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 
 // pages
-import HomePage from "./pages/index";
-import About from "./pages/About";
+import HomePage from "./pages/Home/index";
+import About from "./pages/AboutPages/About";
 import Project from "./pages/Project";
 import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tip";
@@ -27,7 +27,6 @@ import News from "./pages/News/News";
 import ProjectsOverview from "./pages/Projects/ProjectsOverview";
 import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
-import Schul from "./pages/schul";
 import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
 import SingleArticle from "./pages/Articles/SingleArticle";
 

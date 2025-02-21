@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { mainLogo } from "../assets/logos/logos";
+import { mainLogo } from "../../assets/logos/logos";
 
 function Join() {
   const { t } = useTranslation("global");

@@ -5,11 +5,11 @@ import Counts from "./counts";
 import Compensation from "./Compensation";
 import Darection from "./darection";
 import School from "./School";
-import Rate from "./Rate";
+import Rate from "../Rate";
 import SuccessHistory from "./SuccessHistory";
 import Join from "./Join";
-import Carousel from "./Carousel";
-import JobAnalytics from "./Home/JobAnalytics";
+import Carousel from "../Carousel";
+import JobAnalytics from "./JobAnalytics";
 
 export default function HomePage() {
   return (

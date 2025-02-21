@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import { Fragment } from "react";
 import JobCard from "./JobCard";
 import TopJobCard from "./TopJobCard";
-import icon1 from "../assets/icon.png";
-import icon2 from "../assets/icon1.png";
-import icon3 from "../assets/icon2.png";
-import icon4 from "../assets/icon3.png";
+import icon1 from "../../assets/icon.png";
+import icon2 from "../../assets/icon1.png";
+import icon3 from "../../assets/icon2.png";
+import icon4 from "../../assets/icon3.png";
 
 const topJobs = [
   {

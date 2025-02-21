@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import walletImage from "../assets/chance-1.png";
-import robotImage from "../assets/chance-2.png";
-import CompensationBannerItem from "../components/CompensationItem";
+import walletImage from "../../assets/chance-1.png";
+import robotImage from "../../assets/chance-2.png";
+import CompensationBannerItem from "../../components/CompensationItem";
 import React, { useState, useRef, useEffect } from "react";
-import "../assets/css/swiper.css";
+import "../../assets/css/swiper.css";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";

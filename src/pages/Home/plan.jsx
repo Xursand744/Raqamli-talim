@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import foto1 from "../assets/image1.png";
-import foto2 from "../assets/image2.png";
-import foto3 from "../assets/image3.png";
+import foto1 from "../../assets/image1.png";
+import foto2 from "../../assets/image2.png";
+import foto3 from "../../assets/image3.png";
 import Cookies from "js-cookie";
-import { Event1, Event2 } from "../assets/home";
+import { Event1, Event2 } from "../../assets/home";
 
 export default function EventsSection() {
   const { t, i18n } = useTranslation("global");

@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import rec from "../assets/res.png";
-import dicon from "../assets/DIcon.png";
-import dicon3 from "../assets/DIcon3.png";
-import dicon2 from "../assets/DIcon2.png";
-import dicon1 from "../assets/Vector.png";
+import rec from "../../assets/res.png";
+import dicon from "../../assets/DIcon.png";
+import dicon3 from "../../assets/DIcon3.png";
+import dicon2 from "../../assets/DIcon2.png";
+import dicon1 from "../../assets/Vector.png";
 
 export default function schul({
   rank,
