@@ -140,7 +140,7 @@ export default function DesktopMenu({ menu }) {
                     <NavLink
                       key={i}
                       to={submenu.link}
-                      className={`text-[#333] hover:bg-[#333] hover:text-white transition my-[-15px] rounded-[10px] py-[10px] px-[5px] mx-[-5px]`}
+                      className={`text-[#333] hover:bg-[#2675EB] hover:text-white transition my-[-5px] rounded-[10px] py-[10px] px-[15px] mx-[-5px]`}
                     >
                       <div className="relative cursor-pointer">
                         {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
@@ -150,9 +150,9 @@ export default function DesktopMenu({ menu }) {
                         )}
 
                         <div className="flex-center gap-x-4 group/menubox">
-                          <div className="bg-white w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
+                          {/* <div className="bg-white w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
                             {submenu.icon && <submenu.icon />}
-                          </div>
+                          </div> */}
                           <div>
                             <h6 className="font-semibold ">
                               {t(submenu.name)}

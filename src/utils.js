@@ -29,27 +29,39 @@ export const Menus = [
   {
     name: "menu.center",
     subMenu: [
-      { name: "menu.aboutUs", icon: CircleHelp, link: "/about" },
+      {
+        name: "menu.aboutUs",
+        // icon: CircleHelp,
+        link: "/about",
+      },
       {
         name: "menu.openData",
-        icon: CircleHelp,
+        // icon: CircleHelp,
         link: "/open-informations",
       },
-      { name: "menu.leadership", icon: CircleHelp, link: "/leadership" },
-      { name: "menu.structure", icon: CircleHelp, link: "/structure" },
+      {
+        name: "menu.leadership",
+        // icon: CircleHelp,
+        link: "/leadership",
+      },
+      {
+        name: "menu.structure",
+        // icon: CircleHelp,
+        link: "/structure",
+      },
       {
         name: "menu.departments",
-        icon: CircleHelp,
+        // icon: CircleHelp,
         link: "/departments",
       },
       {
         name: "menu.antiCorruption",
-        icon: CircleHelp,
+        // icon: CircleHelp,
         link: "/anti-corruption",
       },
       {
         name: "menu.higherOrganization",
-        icon: CircleHelp,
+        // icon: CircleHelp,
         link: "/higher-standing-organization",
       },
     ],
