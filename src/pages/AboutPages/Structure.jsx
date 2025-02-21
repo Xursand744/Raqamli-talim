@@ -352,14 +352,14 @@ export default function Structure() {
 
       <div
         ref={containerRef}
-        className="w-full min-h-screen flex  bg-white overflow-auto mt-[60px] cursor-grab active:cursor-grabbing"
+        className="max-w-[1400px] mx-auto flex bg-white overflow-auto mt-[60px] cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        <div className="min-w-[1400px] mx-auto px-[20px] relative">
-          <div className="absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
+        <div className=" mx-auto px-[20px] relative">
+          <div className="max-w-[1400px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
 
           <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
             {topManagement.map((item, index) => (
