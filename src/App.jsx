@@ -29,6 +29,7 @@ import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
 import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
 import SingleArticle from "./pages/Articles/SingleArticle";
+import JoinTeam from "./pages/AboutPages/JoinTeam";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -80,6 +81,10 @@ export default function App() {
         {
           path: "/courses",
           element: <Tips />,
+        },
+        {
+          path: "/join-team",
+          element: <JoinTeam />,
         },
         {
           path: "/projects",

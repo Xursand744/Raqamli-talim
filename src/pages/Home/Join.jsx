@@ -1,9 +1,11 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { mainLogo } from "../../assets/logos/logos";
+import { useNavigate } from "react-router-dom";
 
 function Join() {
   const { t } = useTranslation("global");
+
+  const navigate = useNavigate();
 
   return (
     <section className="my-[50px] md:my-[100px] rounded-[27px]">
@@ -12,7 +14,10 @@ function Join() {
           <div className="text-white text-center md:text-start">
             <h2 className="text-[40px] font-semibold">{t("join.title")}</h2>
             <h4 className="text-[24px] mt-5 mb-[60px]">{t("join.subtitle")}</h4>
-            <button className="py-3 px-6 text-[#2675EB] rounded-[27px] bg-white hover:bg-[#2675EB] hover:text-white transition">
+            <button
+              className="py-3 px-6 text-[#2675EB] rounded-[27px] bg-white hover:bg-[#2675EB] hover:text-white transition"
+              onClick={() => navigate("/join-team")}
+            >
               {t("join.button")}
             </button>
           </div>

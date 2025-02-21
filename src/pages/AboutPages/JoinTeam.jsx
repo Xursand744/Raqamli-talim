@@ -1,7 +1,7 @@
-import { Contact } from "../Contact/Contact";
+import Contact from "../Contact/Contact";
 
 function JoinTeam() {
-  return <Contact title={"Bizning jamozga qo'shiling"} />;
+  return <Contact title={"Bizning jamoaga qo'shiling"} />;
 }
 
 export default JoinTeam;
