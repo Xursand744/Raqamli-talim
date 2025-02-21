@@ -4,6 +4,7 @@ import "./about.css";
 import { useState, useEffect, useRef } from "react";
 import { Clock, Mail, Phone, X } from "lucide-react";
 import {
+  DeparmentImage1,
   DeparmentImage10,
   DeparmentImage11,
   DeparmentImage12,
@@ -14,8 +15,10 @@ import {
   DeparmentImage17,
   DeparmentImage18,
   DeparmentImage19,
+  DeparmentImage2,
   DeparmentImage20,
   DeparmentImage21,
+  DeparmentImage3,
   DeparmentImage7,
   DeparmentImage8,
 } from "../../assets/deparment";
@@ -221,7 +224,7 @@ export default function Structure() {
       fullname: "Davronbek Adilbekov",
       email: "d.adilbekov@digital.uz",
       number: "+998 71 203 03 43 (103)",
-      image: LeadershipImage2,
+      image: DeparmentImage3,
     },
     {
       title: "Iqtisodiyot va moliya bo'limi",
@@ -245,7 +248,7 @@ export default function Structure() {
       fullname: "Jasur Askarov",
       email: "invest@digital.uz",
       number: "+998 78 238-41-76",
-      image: LeadershipImage3,
+      image: DeparmentImage2,
     },
     {
       title: "Investitsiya loyiha ofisi",
