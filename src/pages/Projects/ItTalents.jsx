@@ -19,6 +19,7 @@ import {
   UserVerify,
 } from "../../assets/it-talents-images";
 import ItTalentsDocs from "../../assets/it-talents-docs";
+import { useNavigate } from "react-router-dom";
 
 const Breadcrumb = () => {
   const { t } = useTranslation("global");
@@ -76,6 +77,8 @@ const Button = ({ children, className, ...props }) => (
 
 export default function ItTalents() {
   const { t } = useTranslation("global");
+  const navigate = useNavigate();
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const totalPages = 34;
@@ -303,10 +306,20 @@ export default function ItTalents() {
 
               <div>
                 <div className="flex gap-4">
-                  <button className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium">
+                  <button
+                    className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"
+                    onClick={() =>
+                      navigate("https://crm.digital.uz/login?redirect_url=/")
+                    }
+                  >
                     O'zbek tilida
                   </button>
-                  <button className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium">
+                  <button
+                    className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"
+                    onClick={() =>
+                      navigate("https://crm.digital.uz/login?redirect_url=/")
+                    }
+                  >
                     Rus tilida
                   </button>
                 </div>
