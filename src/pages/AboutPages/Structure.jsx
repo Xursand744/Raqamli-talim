@@ -413,7 +413,7 @@ export default function Structure() {
                 <TransformComponent>
                   <div className="flex justify-center w-full">
                     <div className="relative">
-                      <div className="min-w-[1400px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
+                      <div className="min-w-[100px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
 
                       <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
                         {topManagement.map((item, index) => (
