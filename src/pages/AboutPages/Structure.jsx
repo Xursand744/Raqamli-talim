@@ -24,6 +24,43 @@ import {
 } from "../../assets/deparment";
 import { LeadershipImage2, LeadershipImage3, VacancyImage } from "../../assets";
 import { motion } from "framer-motion";
+import {
+  TransformWrapper,
+  TransformComponent,
+  useControls,
+} from "react-zoom-pan-pinch";
+import { div } from "framer-motion/client";
+
+const Controls = () => {
+  const { zoomIn, zoomOut, resetTransform } = useControls();
+
+  return (
+    <div className="absolute right-0 top-0">
+      <div className="flex flex-col items-center gap-2">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => zoomIn()}
+            className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
+          >
+            +
+          </button>
+          <button
+            onClick={() => zoomOut()}
+            className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
+          >
+            -
+          </button>
+        </div>
+        <button
+          onClick={() => resetTransform()}
+          className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
+        >
+          O'z holiga qaytarish
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default function Structure() {
   const { t } = useTranslation("global");
@@ -353,107 +390,127 @@ export default function Structure() {
         </div>
       )}
 
-      <div
-        ref={containerRef}
-        className="max-w-[1400px] mx-auto flex bg-white overflow-auto mt-[60px] cursor-grab active:cursor-grabbing"
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
-        <div className=" mx-auto px-[20px] relative">
-          <div className="max-w-[1400px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
-
-          <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
-            {topManagement.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => handleDivClick(item)}
-                className="px-6 py-2 rounded-md border border-blue-500 bg-white text-center z-10 cursor-pointer hover:bg-blue-50"
-              >
-                {item.title}
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute top-[36px] left-1/2 w-[2px] h-[40px] bg-blue-500 -translate-x-1/2" />
-          <div className="absolute top-[75px] left-[735px] w-[1197px] h-[2px] bg-blue-500 -translate-x-1/2 main-line" />
-          <div className="absolute top-[75px] left-[9%] w-[2px] h-[40px] bg-blue-500" />
-          <div className="absolute top-[75px] left-[550px] w-[2px] h-[40px] bg-blue-500" />
-          <div className="absolute top-[75px] left-[900px] w-[2px] h-[40px] bg-blue-500" />
-          <div className="absolute top-[75px] left-[1333px] w-[2px] h-[40px] bg-blue-500" />
-
-          <div
-            className="grid grid-cols-4 gap-4 relative"
-            style={{
-              gridTemplateColumns: "300px 300px 300px 300px",
-              columnGap: "100px",
-            }}
+      <div className="mx-[100px]">
+        <div
+          // ref={containerRef}
+          // active:cursor-grabbing
+          className="max-w-[1400px] mx-auto justify-center mb-[50px] flex bg-white overflow-auto mt-[60px] cursor-grab "
+          // onMouseDown={handleMouseDown}
+          // onMouseLeave={handleMouseLeave}
+          // onMouseUp={handleMouseUp}
+          // onMouseMove={handleMouseMove}
+        >
+          <TransformWrapper
+            initialScale={1}
+            initialPositionX={200}
+            initialPositionY={100}
           >
-            <div className="flex flex-col gap-4">
-              {departments.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleDivClick(item)}
-                  className={`p-4 ${
-                    item.isHeader
-                      ? "bg-blue-500 text-white hover:bg-blue-600"
-                      : "border border-blue-500 hover:bg-blue-50"
-                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
+            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+              <>
+                {/* <div className="relative mx-auto">
+                  <Controls />
+                </div> */}
+                <TransformComponent>
+                  <div className="flex justify-center w-full">
+                    <div className="relative">
+                      <div className="min-w-[1400px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
 
-            <div className="flex flex-col gap-4">
-              {firstDeputyDepartments.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleDivClick(item)}
-                  className={`p-4 ${
-                    item.isHeader
-                      ? "bg-blue-500 text-white hover:bg-blue-600"
-                      : "border border-blue-500 hover:bg-blue-50"
-                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
+                      <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
+                        {topManagement.map((item, index) => (
+                          <div
+                            key={index}
+                            onClick={() => handleDivClick(item)}
+                            className="px-6 py-2 rounded-md border border-blue-500 bg-white text-center z-10 cursor-pointer hover:bg-blue-50"
+                          >
+                            {item.title}
+                          </div>
+                        ))}
+                      </div>
 
-            <div className="flex flex-col gap-4">
-              {deputyDepartments.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleDivClick(item)}
-                  className={`p-4 ${
-                    item.isHeader
-                      ? "bg-blue-500 text-white hover:bg-blue-600"
-                      : "border border-blue-500 hover:bg-blue-50"
-                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
+                      <div className="absolute top-[36px] left-1/2 w-[2px] h-[40px] bg-blue-500 -translate-x-1/2" />
+                      <div className="absolute top-[75px] left-[735px] w-[1197px] h-[2px] bg-blue-500 -translate-x-1/2 main-line" />
+                      <div className="absolute top-[75px] left-[9%] w-[2px] h-[40px] bg-blue-500" />
+                      <div className="absolute top-[75px] left-[550px] w-[2px] h-[40px] bg-blue-500" />
+                      <div className="absolute top-[75px] left-[900px] w-[2px] h-[40px] bg-blue-500" />
+                      <div className="absolute top-[75px] left-[1333px] w-[2px] h-[40px] bg-blue-500" />
 
-            <div className="flex flex-col gap-4">
-              {secondDeputyDepartments.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleDivClick(item)}
-                  className={`p-4 ${
-                    item.isHeader
-                      ? "bg-blue-500 text-white hover:bg-blue-600"
-                      : "border border-blue-500 hover:bg-blue-50"
-                  } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
-                >
-                  {item.title}
-                </div>
-              ))}
-            </div>
-          </div>
+                      <div
+                        className="grid grid-cols-4 gap-4 relative"
+                        style={{
+                          gridTemplateColumns: "300px 300px 300px 300px",
+                          columnGap: "100px",
+                        }}
+                      >
+                        <div className="flex flex-col gap-4">
+                          {departments.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => handleDivClick(item)}
+                              className={`p-4 ${
+                                item.isHeader
+                                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                                  : "border border-blue-500 hover:bg-blue-50"
+                              } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                            >
+                              {item.title}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          {firstDeputyDepartments.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => handleDivClick(item)}
+                              className={`p-4 ${
+                                item.isHeader
+                                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                                  : "border border-blue-500 hover:bg-blue-50"
+                              } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                            >
+                              {item.title}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          {deputyDepartments.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => handleDivClick(item)}
+                              className={`p-4 ${
+                                item.isHeader
+                                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                                  : "border border-blue-500 hover:bg-blue-50"
+                              } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                            >
+                              {item.title}
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          {secondDeputyDepartments.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => handleDivClick(item)}
+                              className={`p-4 ${
+                                item.isHeader
+                                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                                  : "border border-blue-500 hover:bg-blue-50"
+                              } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                            >
+                              {item.title}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TransformComponent>
+              </>
+            )}
+          </TransformWrapper>
         </div>
       </div>
     </div>
