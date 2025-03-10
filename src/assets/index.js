@@ -19,6 +19,7 @@ import LeadershipImage1 from "./aboutImages/leadership-1.png";
 import LeadershipImage2 from "./aboutImages/leadership-2.png";
 import LeadershipImage3 from "./aboutImages/leadership-3.png";
 import VacancyImage from "./vacancy-image.png";
+import MapOfUzbekistan from "./projects/map-of-uzbekistan.svg";
 
 export {
   about1,
@@ -42,4 +43,5 @@ export {
   LeadershipImage2,
   LeadershipImage3,
   VacancyImage,
+  MapOfUzbekistan,
 };

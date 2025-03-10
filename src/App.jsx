@@ -30,6 +30,7 @@ import Contact from "./pages/Contact/Contact";
 import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
 import SingleArticle from "./pages/Articles/SingleArticle";
 import JoinTeam from "./pages/AboutPages/JoinTeam";
+import ProjectStudyCenters from "./pages/Projects/StudyCenters";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -104,6 +105,10 @@ export default function App() {
             {
               path: "bir-million-dasturchi-loyihasi",
               element: <OneMillionUzbekCoders />,
+            },
+            {
+              path: "study-centers",
+              element: <ProjectStudyCenters />,
             },
           ],
         },

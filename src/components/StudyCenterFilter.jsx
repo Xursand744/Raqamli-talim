@@ -53,6 +53,8 @@ function Study() {
   });
   const [sortAscending, setSortAscending] = useState(true);
 
+  console.log(courses);
+
   useEffect(() => {
     let filteredCourses = [...initialCourses];
 
