@@ -573,7 +573,7 @@ export const projectsOverview = [
   },
   {
     id: 2,
-    title: "Muhammad Al-Xorazmiy vorislari",
+    title: "It Talents dasturi",
     image: ItTalentsProjectImage,
     link: "it-talents-dasturi",
   },
@@ -591,9 +591,9 @@ export const projectsOverview = [
   },
   {
     id: 5,
-    title: "Muhammad Al-Xorazmiy vorislari",
+    title: "Universitetlar",
     image: AlKhorezmiyImage,
-    link: "muhammad-al-xorazmiy-vorislari",
+    link: "universities",
   },
   {
     id: 6,

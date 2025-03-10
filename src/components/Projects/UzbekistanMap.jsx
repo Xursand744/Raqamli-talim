@@ -1,6 +1,6 @@
 import { MapOfUzbekistan } from "../../assets";
 
-function UzbekistanMap() {
+function UzbekistanMap({ title = "Hudud bo'yicha o'quv markazlar" }) {
   const regions = [
     { name: "Qoraqalpog'iston Respublikasi", count: 73 },
     { name: "Andijon", count: 23 },
@@ -23,7 +23,7 @@ function UzbekistanMap() {
   return (
     <div className="bg-[#222222] p-4">
       <h1 className="text-center text-2xl font-bold text-white py-4 ">
-        Hudud bo'yicha o'quv markazlar
+        {title}
       </h1>
       <div className="flex justify-center items-center max-w-[1440px] w-full mb-[40px]">
         <div className="flex flex-col md:flex-row gap-8 justify-between">

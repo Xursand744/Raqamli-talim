@@ -31,6 +31,7 @@ import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
 import SingleArticle from "./pages/Articles/SingleArticle";
 import JoinTeam from "./pages/AboutPages/JoinTeam";
 import ProjectStudyCenters from "./pages/Projects/StudyCenters";
+import Universities from "./pages/Projects/Universities";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -109,6 +110,10 @@ export default function App() {
             {
               path: "study-centers",
               element: <ProjectStudyCenters />,
+            },
+            {
+              path: "universities",
+              element: <Universities />,
             },
           ],
         },
