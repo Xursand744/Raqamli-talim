@@ -1,6 +1,5 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
-import SuccessHistory1 from "../../assets/success-history-1.jpg";
+import SuccessHistory1 from "../../assets/success-history-1.png";
 import SuccessHistory2 from "../../assets/success-history-2.jpg";
 import SuccessHistory3 from "../../assets/success-history-3.jpg";
 import SuccessHistoryItem from "../../components/SuccessHistoryItem";
@@ -45,7 +44,7 @@ function SuccessHistory() {
     <div>
       <h1 className="title mb-[40px]">{t("successHistory.title")}</h1>
 
-      <div className="flex justify-center gap-6 lg:gap-0 lg:justify-between items-center flex-wrap">
+      <div className="flex justify-center gap-6 lg:gap-0 lg:justify-between flex-wrap">
         {data.map((item, index) => (
           <SuccessHistoryItem
             key={index}

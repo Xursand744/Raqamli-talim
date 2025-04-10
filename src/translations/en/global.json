@@ -23,8 +23,15 @@
     "itTips": "IT Tips",
     "contact": "Contact"
   },
-  "landing": {
+  "landing-1": {
     "title": "Al-Khwarizmi",
+    "description": "Free courses for talented 7th-11th grade students interested in IT.",
+    "moreDetails": "Learn More",
+    "imageAlt": "Educational Program Icon",
+    "carouselAlt": "Educational Opportunities in IT"
+  },
+  "landing-2": {
+    "title": "It-Village",
     "description": "Free courses for talented 7th-11th grade students interested in IT.",
     "moreDetails": "Learn More",
     "imageAlt": "Educational Program Icon",

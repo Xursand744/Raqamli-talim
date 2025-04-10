@@ -83,12 +83,12 @@ export default function LanguageSelector({ onLanguageSelect }) {
               className="flex items-center gap-2 space-x-2 cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <div className="flex items-center">
-                <Eye className="text-black mr-5" />
-                <span className="text-lg font-semibold mr-1">
+              <div className="flex items-center gap-x-2">
+                {/* <Eye className="text-black" /> */}
+                <span className="text-md font-semibold">
                   {selectedLanguage}
                 </span>
-                <Globe className="text-black ml-1" />
+                <Globe className="text-black" />
               </div>
             </div>
             <div className="lg:hidden">

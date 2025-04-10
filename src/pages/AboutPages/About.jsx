@@ -1,9 +1,6 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
-import { aboutCounts, aboutFilters } from "../../utils";
+import { aboutCounts } from "../../utils";
 import aboutfirst from "../../assets/about-1.png";
-import aboutImage from "../../assets/about-image.jpg";
-import startVideo from "../../assets/startVideoIcon.svg";
 import { about1, about2, about3, about4, about5 } from "../../assets";
 import Join from "../Home/Join";
 import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
@@ -65,19 +62,13 @@ function About() {
         </div>
 
         <div className="mt-[100px] relative">
-          <img
-            className="rounded-[24px] w-full h-full"
-            src={aboutImage}
-            alt=""
-          />
-
-          <img
-            src={startVideo}
-            alt=""
-            className="absolute left-[45%] cursor-pointer top-[40%] z-[10] start-video-icon"
-          />
-
-          <div className="bg-[#222] rounded-[24px] opacity-[0.6] h-full w-full absolute left-0 top-0"></div>
+          <iframe
+            width="1230"
+            height="584"
+            src="https://www.youtube.com/embed/WnpNnjPjpcQ"
+            title="Raqamli taʼlimni rivojlantirish markazining bir yillik natijalari sarhisobi bilan tanishing"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
         <div className="flex justify-center mt-[27px]">
           <p className="max-w-[790px] desc">{t("about.finalMessage")}</p>

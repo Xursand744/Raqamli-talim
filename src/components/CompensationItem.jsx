@@ -20,8 +20,8 @@ const CompensationBannerItem = ({ title, span, desc, image, more }) => {
                     <path
                       d="M336.405 2.46431C327.341 5.36208 318.006 6.08499 308.648 7.52637C294.333 9.73146 279.945 10.9573 265.566 12.653C214.847 18.6344 163.871 15.0188 113.034 12.6325C82.0605 11.1785 50.5814 10.9207 19.8885 6.92608C13.9427 6.15225 8.00764 5.25997 2.00969 5.18612"
                       stroke="#69A5FF"
-                      stroke-width="3"
-                      stroke-linecap="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
                     />
                   </svg>
                 </div>

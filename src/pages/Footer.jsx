@@ -20,9 +20,9 @@ function Footer() {
                       width="384"
                       height="224"
                       style={{ border: 0 }}
-                      allowfullscreen=""
+                      allowFullScreen=""
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
+                      referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                     {/* <img
                       src={map}

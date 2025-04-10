@@ -1,7 +1,7 @@
 function SuccessHistoryItem({ studyCenter, fullname, desc, tags, image }) {
   return (
     <div>
-      <div className="max-w-[384px] min-h-[232px]">
+      <div className="max-w-[384px] max-h-[200px]">
         <img
           src={image}
           className="w-full h-full"
@@ -19,13 +19,13 @@ function SuccessHistoryItem({ studyCenter, fullname, desc, tags, image }) {
           padding: "16px",
         }}
       >
-        <p className="text-[14px]">{studyCenter}</p>
+        {/* <p className="text-[14px]">{studyCenter}</p> */}
         <h2 className="text-[#222] text-[20px] font-medium mt-[8px] mb-[12px]">
           {fullname}
         </h2>
         <p className="mb-[24px]">{desc}</p>
         <div className="flex gap-[12px]">
-          {tags.map((tag) => {
+          {/* {tags.map((tag) => {
             return (
               <span
                 key={tag}
@@ -34,7 +34,7 @@ function SuccessHistoryItem({ studyCenter, fullname, desc, tags, image }) {
                 <span className="text-[#2675EB]">#</span> {tag}
               </span>
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>

@@ -58,8 +58,22 @@
     "noy",
     "dek"
   ],
-  "landing": {
+  "landing-1": {
     "title": "Al-Xorazmiy",
+    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "moreDetails": "Batafsil ma'lumot",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-2": {
+    "title": "IT-shaharcha",
+    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "moreDetails": "Batafsil ma'lumot",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-3": {
+    "title": "IT-Talents",
     "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
     "moreDetails": "Batafsil ma'lumot",
     "imageAlt": "Ta'lim dasturi belgisi",
@@ -134,16 +148,16 @@
     "title": "Muvaffaqiyat tarixi",
     "allEvents": "Barcha tadbirlar",
     "abror": {
-      "fullName": "Abror Jurayev",
-      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+      "fullName": "Shohrux",
+      "desc": "Coursera platformasidagi Python bo'yicha onlayn o'quv kursini tugatib, xalqaro IT sertifikat qo'lga kiritdi va u xarajatlarini qoplab berish uchun murojaat qildi. Unda IELTS B2 sertifikati ham mavjudligi bois uning xalqaro IT sertifikat bilan bog'liq xarajatlari 100% qoplab berildi."
     },
     "mohira": {
-      "fullName": "Mohira To’laganova",
-      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+      "fullName": "Zarnigor Raximova",
+      "desc": "Zarnigor Raximova 'Eng yaxshi dasturchi' Respublika tanlovi gʻolibi boʻldi"
     },
     "sevinch": {
-      "fullName": "Sevinch Muqimova",
-      "desc": "Talabalik davrida Senior dasturchi bo'lish sirlari"
+      "fullName": "Biybinaz Turemuratova",
+      "desc": "Zulfiya” nomidagi davlat mukofoti bilan taqdirlandi. Biybinaz 2024-yilda o’zining “DATA SOFT ACADEMY” kompaniyasiga asos solgan va hozirgi kunda uning rahbari sifatida faoliyat yuritmoqda."
     }
   },
   "locations": {

@@ -108,11 +108,11 @@ export default function EventsSection() {
               })}
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
               {t("events1.allEvents")}
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

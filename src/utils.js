@@ -595,30 +595,30 @@ export const projectsOverview = [
     image: AlKhorezmiyImage,
     link: "universities",
   },
-  {
-    id: 6,
-    title: "Muhammad Al-Xorazmiy vorislari",
-    link: "it-talents-dasturi",
-    image: ItTalentsProjectImage,
-  },
-  {
-    id: 7,
-    title: "Muhammad Al-Xorazmiy vorislari",
-    image: AlKhorezmiyImage,
-    link: "muhammad-al-xorazmiy-vorislari",
-  },
-  {
-    id: 8,
-    link: "it-talents-dasturi",
-    title: "Muhammad Al-Xorazmiy vorislari",
-    image: ItTalentsProjectImage,
-  },
-  {
-    id: 9,
-    title: "Muhammad Al-Xorazmiy vorislari",
-    image: AlKhorezmiyImage,
-    link: "muhammad-al-xorazmiy-vorislari",
-  },
+  // {
+  //   id: 6,
+  //   title: "Muhammad Al-Xorazmiy vorislari",
+  //   link: "it-talents-dasturi",
+  //   image: ItTalentsProjectImage,
+  // },
+  // {
+  //   id: 7,
+  //   title: "Muhammad Al-Xorazmiy vorislari",
+  //   image: AlKhorezmiyImage,
+  //   link: "muhammad-al-xorazmiy-vorislari",
+  // },
+  // {
+  //   id: 8,
+  //   link: "it-talents-dasturi",
+  //   title: "Muhammad Al-Xorazmiy vorislari",
+  //   image: ItTalentsProjectImage,
+  // },
+  // {
+  //   id: 9,
+  //   title: "Muhammad Al-Xorazmiy vorislari",
+  //   image: AlKhorezmiyImage,
+  //   link: "muhammad-al-xorazmiy-vorislari",
+  // },
 ];
 
 export const oneMillionUzbekCodersCards = [

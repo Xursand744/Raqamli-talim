@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import CarouselImage from "../assets/carousel.jpg";
+import CarouselImage2 from "../assets/landing/carousel/carousel-2.png";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import CarouselItem from "./CarouselItem";
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <>
       <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] mt-[100px]">
-        Raqamli ta'lim loyihalari
+        Raqamli ta&apos;lim loyihalari
       </h1>
       <Swiper
         autoplay={{
@@ -31,6 +32,15 @@ export default function App() {
         loop={true}
       >
         <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem landingIndex={1} image={CarouselImage} />
+        </SwiperSlide>
+          <SwiperSlide className="bg-[#F8F8F8]">
+            <CarouselItem landingIndex={2} image={CarouselImage} />
+          </SwiperSlide>
+        <SwiperSlide className="bg-[#F8F8F8]">
+          <CarouselItem landingIndex={3} image={CarouselImage} />
+        </SwiperSlide>
+        {/* <SwiperSlide className="bg-[#F8F8F8]">
           <CarouselItem />
         </SwiperSlide>
         <SwiperSlide className="bg-[#F8F8F8]">
@@ -38,13 +48,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide className="bg-[#F8F8F8]">
           <CarouselItem />
-        </SwiperSlide>
-        <SwiperSlide className="bg-[#F8F8F8]">
-          <CarouselItem />
-        </SwiperSlide>
-        <SwiperSlide className="bg-[#F8F8F8]">
-          <CarouselItem />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );
