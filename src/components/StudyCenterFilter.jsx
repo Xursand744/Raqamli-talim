@@ -1,162 +1,59 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Search, ChevronDown, ArrowUpDown } from "lucide-react";
+import { Menu, X, Search, ArrowUpDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 import res from "../assets/res.png";
 
 function Study() {
   const { t } = useTranslation("global");
 
-  const [initialCourses, setInitialCourses] = useState([]);
-
-  useEffect(() => {
-    const initialCourses = [
-      ...Array(30)
-        .fill(null)
-        .map((_, index) => ({
-          id: index + 1,
-          title: t("pdp_academy"),
-          price: t("price_from", { amount: "1,500,000" }),
-          tags: [
-            t("frontend"),
-            t("backend"),
-            t("data_analytic"),
-            t("design"),
-            t("project_management"),
-          ]
-            .sort(() => 0.5 - Math.random())
-            .slice(0, 2),
-          location: t("tashkent"),
-          status:
-            Math.random() > 0.5 ? [t("offline"), t("online")] : [t("offline")],
-          design: "+5",
-        })),
-    ];
-
-    setInitialCourses(initialCourses);
-  }, []);
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [courses, setCourses] = useState(initialCourses);
+  const [centers, setCenters] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filters, setFilters] = useState({
-    design: false,
-    frontend: false,
-    backend: false,
-    projectManagement: false,
-    duration1: false,
-    duration2: false,
-    duration3: false,
-    duration4: false,
-    online: false,
-    offline: false,
-    hybrid: false,
-  });
   const [sortAscending, setSortAscending] = useState(true);
-
-  console.log(courses);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    let filteredCourses = [...initialCourses];
+    const fetchCenters = async () => {
+      setIsLoading(true);
+      try {
+        const res = await axios.get(
+          `https://api.crm.digital.uz/v1/centers?page=${currentPage}`
+        );
+        setCenters(res.data.data);
+        setTotalPages(res.data.meta.last_page);
+      } catch (error) {
+        console.error("Ошибка при загрузке центров:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-    // Apply search filter
-    if (searchQuery.trim()) {
-      filteredCourses = filteredCourses.filter(
-        (course) =>
-          course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          course.tags.some((tag) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-      );
-    }
+    fetchCenters();
+  }, [currentPage]);
 
-    // Apply tag filters
-    const activeTagFilters = Object.entries(filters).filter(
-      ([key, value]) =>
-        value &&
-        ["frontend", "design", "backend", "projectManagement"].includes(key)
-    );
-
-    if (activeTagFilters.length > 0) {
-      filteredCourses = filteredCourses.filter((course) =>
-        activeTagFilters.some(([filter]) => {
-          const filterTag =
-            filter === "projectManagement"
-              ? t("project_management")
-              : t(filter);
-          return course.tags.includes(filterTag);
-        })
-      );
-    }
-
-    // Apply format filters
-    const activeFormatFilters = ["online", "offline", "hybrid"].filter(
-      (format) => filters[format]
-    );
-
-    if (activeFormatFilters.length > 0) {
-      filteredCourses = filteredCourses.filter((course) =>
-        activeFormatFilters.some((format) => course.status.includes(t(format)))
-      );
-    }
-
-    // Apply duration filters
-    const activeDurationFilters = Object.entries(filters).filter(
-      ([key, value]) => value && key.startsWith("duration")
-    );
-
-    if (activeDurationFilters.length > 0) {
-      // Here you would filter based on actual course duration data
-      // For now just reducing results as example
-      filteredCourses = filteredCourses.slice(
-        0,
-        Math.floor(filteredCourses.length / 2)
-      );
-    }
-
-    // Apply sorting
-    filteredCourses.sort((a, b) => {
-      const comparison = a.title.localeCompare(b.title);
+  const filteredCenters = centers
+    .filter((center) =>
+      center.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      const comparison = a.name.localeCompare(b.name);
       return sortAscending ? comparison : -comparison;
     });
-
-    setCourses(filteredCourses);
-  }, [filters, sortAscending, searchQuery, t]);
-
-  const handleFilterChange = (filter) => {
-    setFilters((prev) => ({ ...prev, [filter]: !prev[filter] }));
-  };
-
-  const clearFilters = () => {
-    setFilters({
-      design: false,
-      frontend: false,
-      backend: false,
-      projectManagement: false,
-      duration1: false,
-      duration2: false,
-      duration3: false,
-      duration4: false,
-      online: false,
-      offline: false,
-      hybrid: false,
-    });
-    setSearchQuery("");
-    setSortAscending(true);
-  };
 
   return (
     <div className="">
       <header className="bg-white sticky top-0 z-50">
         <div className="container px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="sm:hidden"
-              >
-                {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="sm:hidden"
+            >
+              {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
 
             <div className="flex items-center gap-4">
               <div className="relative hidden sm:block">
@@ -185,155 +82,130 @@ function Study() {
       </header>
 
       <div className="max-w-[1400px] mx-auto px-4 py-6">
-        <div className="flex gap-6">
-          <aside
-            className={`border fixed sm:relative top-0 lg:-top-[77px] left-0 h-[calc(100vh-64px)] sm:h-auto w-64 bg-white p-4 border-r transform transition-transform duration-200 ease-in-out z-40  ${
-              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-            } sm:translate-x-0  overflow-y-auto`}
-          >
-            <div className="space-y-6 sticky">
-              <div className="justify-between border-b pb-5 items-center mb-4 block">
-                <h3 className="text-[20px] font-medium">{t("sorting")}</h3>
-                <button
-                  onClick={clearFilters}
-                  className="px-3 py-1 text-blue-400 rounded-full text-sm"
-                >
-                  {t("clear")}
-                </button>
-              </div>
+        <h2 className="text-lg font-medium mb-4">
+          {t("center_count", { count: filteredCenters.length })}
+        </h2>
 
-              <div>
-                <h2 className="font-medium mb-3">{t("course_type")}</h2>
-                <div className="space-y-2">
-                  {["design", "frontend", "backend", "projectManagement"].map(
-                    (key) => (
-                      <label className="flex items-center gap-2" key={key}>
-                        <input
-                          type="checkbox"
-                          className="rounded"
-                          checked={filters[key]}
-                          onChange={() => handleFilterChange(key)}
-                        />
-                        <span>
-                          {t(
-                            key === "projectManagement"
-                              ? "project_management"
-                              : key
-                          )}
-                        </span>
-                      </label>
-                    )
-                  )}
-                </div>
-              </div>
-
-              <div>
-                <h2 className="font-medium mb-3">{t("course_duration")}</h2>
-                <div className="space-y-2">
-                  {["duration1", "duration2", "duration3", "duration4"].map(
-                    (key) => (
-                      <label className="flex items-center gap-2" key={key}>
-                        <input
-                          type="checkbox"
-                          className="rounded"
-                          checked={filters[key]}
-                          onChange={() => handleFilterChange(key)}
-                        />
-                        <span>{t(key)}</span>
-                      </label>
-                    )
-                  )}
-                </div>
-              </div>
-
-              <div>
-                <h2 className="font-medium mb-3">{t("course_format")}</h2>
-                <div className="space-y-2">
-                  {["online", "offline", "hybrid"].map((key) => (
-                    <label className="flex items-center gap-2" key={key}>
-                      <input
-                        type="checkbox"
-                        className="rounded"
-                        checked={filters[key]}
-                        onChange={() => handleFilterChange(key)}
-                      />
-                      <span>{t(key)}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                onClick={clearFilters}
-                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        {isLoading ? (
+          <p className="text-center">Загрузка...</p>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+            {filteredCenters.map((center) => (
+              <div
+                key={center.id}
+                className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
               >
-                {t("view_courses", { count: courses.length })}
-              </button>
-            </div>
-          </aside>
-
-          <main className="flex-1 min-w-0">
-            <h2 className="text-lg font-medium mb-4">
-              {t("center_count", { count: courses.length })}
-            </h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-              {courses.map((course) => (
-                <div
-                  key={course.id}
-                  className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
-                >
-                  <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
-                    <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
-                      <img className="w-[80px] h-[80%]" src={res} alt="" />
-                    </div>
-                    <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
-                      <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
-                        {course.location}
-                      </span>
-                      {course.status.map((status, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
-                        >
-                          {status}
-                        </span>
-                      ))}
-                    </div>
+                <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
+                  <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
+                    <img
+                      className="w-[80px] h-[80%] object-contain"
+                      src={center.logo || res}
+                      alt={center.name}
+                    />
                   </div>
-
-                  <div className="p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-medium">{course.title}</h3>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-4">
-                      <span className="text-blue-700">{t("courses")}:</span>{" "}
-                      {course.price}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {course.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-[#F0F3FF] rounded-full text-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
+                    <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                      {t("courses")}: {center.courses_count}
+                    </span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </main>
+
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-medium text-sm md:text-base">
+                      {center.name}
+                    </h3>
+                  </div>
+                  {center.phone && (
+                    <p className="text-sm text-gray-600 mb-1">
+                      {t("phone")}: {center.phone}
+                    </p>
+                  )}
+                  {center.website && (
+                    <p className="text-sm text-gray-600">
+                      {t("website")}: {center.website}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        <div className="flex justify-center items-center mt-8 space-x-2">
+          <button
+            className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+          >
+            <i className="bx bx-chevron-left text-xl"></i>
+            <span>Предыдущая</span>
+          </button>
+          
+          <div className="flex items-center space-x-2">
+            {currentPage > 3 && (
+              <>
+                <button
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                  onClick={() => setCurrentPage(1)}
+                >
+                  1
+                </button>
+                {currentPage > 4 && <span className="text-gray-400">...</span>}
+              </>
+            )}
+
+            {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              let page;
+              if (totalPages <= 5) {
+                page = i + 1;
+              } else if (currentPage <= 3) {
+                page = i + 1;
+              } else if (currentPage >= totalPages - 2) {
+                page = totalPages - 4 + i;
+              } else {
+                page = currentPage - 2 + i;
+              }
+              
+              return (
+                <button
+                  key={page}
+                  className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-200 ${
+                    currentPage === page
+                      ? "bg-blue-600 text-white"
+                      : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
+                  }`}
+                  onClick={() => setCurrentPage(page)}
+                >
+                  {page}
+                </button>
+              );
+            })}
+
+            {currentPage < totalPages - 2 && (
+              <>
+                {currentPage < totalPages - 3 && <span className="text-gray-400">...</span>}
+                <button
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                  onClick={() => setCurrentPage(totalPages)}
+                >
+                  {totalPages}
+                </button>
+              </>
+            )}
+          </div>
+
+          <button
+            className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+            onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+            disabled={currentPage === totalPages}
+          >
+            <span>Следующая</span>
+            <i className="bx bx-chevron-right text-xl"></i>
+          </button>
         </div>
       </div>
-
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 sm:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
     </div>
   );
 }
