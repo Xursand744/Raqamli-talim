@@ -212,19 +212,15 @@ const OneMillionUzbekCoders = () => {
 
       <div className="mb-[-120px]">
         <div className="w-full flex justify-center items-center mt-[100px]">
-          <div className="max-w-[800px] w-full h-[420px] relative">
-            <img
-              src={ItTalentsImage}
-              alt="it-talents-image"
-              className="w-full rounded-[30px] h-full object-cover"
-            />
-
-            <div className="bg-[#222] opacity-[.6] rounded-[30px] w-full h-full absolute left-0 top-0"></div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={ItTalentsIcon} alt="" className="w-[160px] h-[160px]" />
-            </div>
-          </div>
+        <iframe
+          width="670"
+          height="370"
+          src="https://www.youtube.com/embed/svH6zUSfads"
+          title="Uzbekcoders.Uz"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
         </div>
 
         <div>
