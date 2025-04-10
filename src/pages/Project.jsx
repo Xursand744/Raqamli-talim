@@ -72,17 +72,7 @@ function Project() {
         </div>
 
         <div className="mt-[100px] relative">
-          <img
-            className="rounded-[24px] w-full h-full"
-            src={projectImage2}
-            alt=""
-          />
-          <img
-            src={startVideo}
-            alt=""
-            className="absolute left-[40%] cursor-pointer top-[30%] z-[10] start-video-icon"
-          />
-          <div className="bg-[#222] rounded-[24px] opacity-[0.6] h-full w-full absolute left-0 top-0"></div>
+        <iframe width="790" height="584" src="https://www.youtube.com/embed/fAGF06nLaWw" title="Al-Xorazmiy vorislari loyihasi oʻquvchilari muvaffaqiyati haqida" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
         <div className="mt-[40px]">
