@@ -80,7 +80,7 @@
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
   "chances": {
-    "title": "Maxsus imkoniyatlar",
+    "title": "Yoshlar uchun yaratilingan imkoniyatlar",
     "walletTitle": "IT kompensatsiya ol",
     "walletDesc": "ITga sarflagan pullaringni qaytarib ol",
     "robotTitle": "Maktabda ITni o‘rgan",
@@ -107,10 +107,10 @@
   },
   "compensation": {
     "walletTitle": "Kompensatsiya",
-    "walletQuestion": "Uni olishni xohlaysizmi?",
+    "walletQuestion": "olishni xohlaysizmi?",
     "walletDesc": "IT sertifikatlash xarajatlaringizning 100% ni qaytarib oling",
     "centerTitle": "O‘quv markazi",
-    "centerQuestion": "Uni ochishni xohlaysizmi?",
+    "centerQuestion": "ochishni xohlaysizmi?",
     "centerDesc": "Yaxshi kelajak uchun ta’limga o‘z ko‘nikmalaringizni sarmoya qiling",
     "more": "Qo’llanmaga o’tish"
   },

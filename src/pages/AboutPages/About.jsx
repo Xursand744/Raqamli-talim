@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { aboutCounts } from "../../utils";
 import aboutfirst from "../../assets/about-1.png";
 import { about1, about2, about3, about4, about5 } from "../../assets";
-import Join from "../Home/Join";
+// import Join from "../Home/Join";
 import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 
 function About() {
@@ -88,7 +88,7 @@ function About() {
           </div>
         </div>
 
-        <Join />
+        {/* <Join /> */}
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ChanceImage from "../../assets/chance-1.png";
-import ChanceImage2 from "../../assets/chance-2.png";
-import Chance from "../../components/chance";
 import ChanceRobot from "../../components/chanceRobot";
 import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
@@ -37,42 +35,6 @@ export default function Chances() {
         desc: t("chances.walletDesc"),
         image: ChanceImage,
         type: "wallet",
-      },
-      {
-        title: t("chances.robotTitle"),
-        desc: t("chances.robotDesc"),
-        type: "robot",
-        image: ChanceImage,
-      },
-      {
-        title: t("chances.walletTitle"),
-        desc: t("chances.walletDesc"),
-        image: ChanceImage,
-        type: "wallet",
-      },
-      {
-        title: t("chances.robotTitle"),
-        desc: t("chances.robotDesc"),
-        type: "robot",
-        image: ChanceImage,
-      },
-      {
-        title: t("chances.walletTitle"),
-        desc: t("chances.walletDesc"),
-        image: ChanceImage,
-        type: "wallet",
-      },
-      {
-        title: t("chances.robotTitle"),
-        desc: t("chances.robotDesc"),
-        image: ChanceImage,
-        type: "robot",
-      },
-      {
-        title: t("chances.walletTitle"),
-        desc: t("chances.walletDesc"),
-        type: "wallet",
-        image: ChanceImage,
       },
     ]);
   }, 1000);
