@@ -67,14 +67,14 @@
   },
   "landing-2": {
     "title": "IT-shaharcha",
-    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "description": "O'z hududingizdan chiqmastan turib IT kasblarni organing",
     "moreDetails": "Batafsil ma'lumot",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
   "landing-3": {
     "title": "IT-Talents",
-    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "description": " Zamonaviy loyihalarda ishtirok eting, faol bo‘ling!",
     "moreDetails": "Batafsil ma'lumot",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
@@ -109,7 +109,7 @@
     "walletTitle": "Kompensatsiya",
     "walletQuestion": "olishni xohlaysizmi?",
     "walletDesc": "IT sertifikatlash xarajatlaringizning 100% ni qaytarib oling",
-    "centerTitle": "O‘quv markazi",
+    "centerTitle": "O'quv markaz",
     "centerQuestion": "ochishni xohlaysizmi?",
     "centerDesc": "Yaxshi kelajak uchun ta’limga o‘z ko‘nikmalaringizni sarmoya qiling",
     "more": "Qo’llanmaga o’tish"
@@ -383,5 +383,6 @@
   },
   "one_million_uzbek_coders_title": "O‘z o‘quv markazingizni ochib, <br /> dasturda ishtirok eting",
   "one_million_uzbek_coders_description": "Quyidagi qo‘llanmamiz siz uchun",
-  "one_million_uzbek_coders_events": "Yuklash"
+  "one_million_uzbek_coders_events": "Yuklash",
+  "moreDetails": "Batafsil ma'lumot"
 }
