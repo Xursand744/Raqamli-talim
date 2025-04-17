@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import walletImage from "../../assets/chance-1.png";
 import robotImage from "../../assets/chance-2.png";
+import pdfFile from "../../assets/docs/it-markaz.pdf";
 import CompensationBannerItem from "../../components/CompensationItem";
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../../assets/css/swiper.css";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -32,28 +33,16 @@ function Compensation() {
         span: t("compensation.walletTitle"),
         title: t("compensation.walletQuestion"),
         desc: t("compensation.walletDesc"),
-        more: t("compensation.more"),
+        more: t("moreDetails"),
+        link: "https://www.it-istedod.uz/",
         image: walletImage,
       },
       {
         span: t("compensation.centerTitle"),
         title: t("compensation.centerQuestion"),
-        more: t("compensation.more"),
+        more: t("moreDetails"),
         desc: t("compensation.centerDesc"),
-        image: robotImage,
-      },
-      {
-        span: t("compensation.centerTitle"),
-        title: t("compensation.centerQuestion"),
-        more: t("compensation.more"),
-        desc: t("compensation.centerDesc"),
-        image: robotImage,
-      },
-      {
-        span: t("compensation.centerTitle"),
-        more: t("compensation.more"),
-        title: t("compensation.centerQuestion"),
-        desc: t("compensation.centerDesc"),
+        link: pdfFile,
         image: robotImage,
       },
     ]);
@@ -74,12 +63,7 @@ function Compensation() {
             return (
               <SwiperSlide key={index} style={{ backgroundColor: "#F8F8F8" }}>
                 <CompensationBannerItem
-                  key={item.title}
-                  title={item.title}
-                  span={item.span}
-                  desc={item.desc}
-                  image={item.image}
-                  more={item.more}
+                  data={item}
                 />
               </SwiperSlide>
             );

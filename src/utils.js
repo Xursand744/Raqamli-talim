@@ -1,4 +1,3 @@
-import { CircleHelp } from "lucide-react";
 import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 import {
   LeadershipBanner,
@@ -14,7 +13,9 @@ import {
   DeparmentImage13,
   DeparmentImage14,
   DeparmentImage16,
-  DeparmentImage7,
+  DeparmentImage20,
+  DeparmentImage18,
+  DeparmentImage21,
   DeparmentImage8,
 } from "./assets/deparment";
 import First from "./assets/1.jpg";
@@ -272,9 +273,9 @@ export const departmentsInformations = [
   },
   {
     position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
-    image: DeparmentImage7,
-    fullname: "Farrux Boltayev",
-    email: "f.boltayev@digital.uz",
+    image: VacancyImage,
+    fullname: "Vakant",
+    email: "",
     number: "+998 71 203 03 43 (888)",
   },
   {
@@ -309,7 +310,7 @@ export const departmentsInformations = [
   {
     image: VacancyImage,
     fullname: "Vakant",
-    position: "Ma’lumot kutilmoqda..., card tashlab ketilsin",
+    position: "Ma’lumot kutilmoqda...",
     email: "",
     number: "",
   },
@@ -319,6 +320,27 @@ export const departmentsInformations = [
     fullname: "Akbarxo‘ja Anvarxonov",
     email: "a.anvarxonov@digital.uz",
     number: "+998 71 203 03 43 (117) ",
+  },
+  {
+    position: 'Iqtisodiyot va moliya bo’limi boshlig‘i',
+    image: DeparmentImage20,
+    fullname: "Odil Soliyev",
+    email: "o.soliyev@digital.uz",
+    number: "+998 71 203 03 43 (112) ",
+  },
+  {
+    position: 'Bosh yuristkonsult',
+    image: DeparmentImage18,
+    fullname: "Karimov Muhammadsodiq",
+    email: "m.karimov@digital.uz",
+    number: "+998 71 203 03 43 (118) ",
+  },
+  {
+    position: 'Buxgalteriya bo’limi boshlig‘i',
+    image: DeparmentImage21,
+    fullname: "Zafar Boymatov",
+    email: "z.boymatov@digital.uz",
+    number: "+998 71 203 03 43 (119) ",
   },
 ];
 
@@ -582,18 +604,6 @@ export const projectsOverview = [
     title: "Bir million dasturchi loyihasi (Coursera)",
     image: AlKhorezmiyImage,
     link: "bir-million-dasturchi-loyihasi",
-  },
-  {
-    id: 4,
-    title: "O'quv markazlar",
-    link: "study-centers",
-    image: ItTalentsProjectImage,
-  },
-  {
-    id: 5,
-    title: "Universitetlar",
-    image: AlKhorezmiyImage,
-    link: "universities",
   },
   // {
   //   id: 6,

@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../index.css";
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "react-feather";
-import { ItTalentsIcon, ItTalentsImage, ProjectBanner } from "../../assets";
+import { ProjectBanner } from "../../assets";
 import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
-import { CheckIcon, ChevronLeft, ClockIcon, UserIcon } from "lucide-react";
-import { studyCentersStandings } from "../../utils";
 import Sl from "../../assets/s_left.png";
 import Sr from "../../assets/s-right.png";
+import Video from "../../assets/videos/it-talents.mp4";
 import {
   Document,
   MoneyBag,
@@ -152,7 +151,10 @@ export default function ItTalents() {
         </section>
 
         <div className="w-full flex justify-center items-center pt-[100px]">
-        <iframe width="1038" height="584" src="https://www.youtube.com/embed/azvvQL1k4ew" title="Poytaxtning ilgʻor IT-ta’lim markazlari «IT-iste’dod» dasturi haqida oʻz mulohazalarini bildirishdi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <video width="1038" height="584" controls>
+            <source src={Video} type="video/mp4" />
+            <source src={Video} type="video/ogg" />
+          </video>
         </div>
 
         <div className="h-[300px] bg-gray-50 flex items-center justify-center px-4 relative mt-[100px]">

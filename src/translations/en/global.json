@@ -25,17 +25,24 @@
   },
   "landing-1": {
     "title": "Al-Khwarizmi",
-    "description": "Free courses for talented 7th-11th grade students interested in IT.",
-    "moreDetails": "Learn More",
-    "imageAlt": "Educational Program Icon",
-    "carouselAlt": "Educational Opportunities in IT"
+    "description": "Free courses for talented 7th–11th grade students interested in the IT field.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
   },
   "landing-2": {
-    "title": "It-Village",
-    "description": "Free courses for talented 7th-11th grade students interested in IT.",
-    "moreDetails": "Learn More",
-    "imageAlt": "Educational Program Icon",
-    "carouselAlt": "Educational Opportunities in IT"
+    "title": "IT Town",
+    "description": "Learn IT professions without leaving your region",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-3": {
+    "title": "IT-Talents",
+    "description": "Participate in modern projects, be active!",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
   },
   "chances": {
     "title": "Special opportunities for youth",

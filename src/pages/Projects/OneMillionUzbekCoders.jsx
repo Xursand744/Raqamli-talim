@@ -1,22 +1,12 @@
-import React from "react";
 import Blue from "../../assets/blue.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import First from "../../assets/1.jpg";
-import Second from "../../assets/2.jpg";
-import Third from "../../assets/3.jpg";
-import Fourth from "../../assets/4.jpg";
-import Fifth from "../../assets/5.jpg";
-import Sixth from "../../assets/6.jpg";
-import Seventh from "../../assets/7.jpg";
 import Courser from "../../assets/coursera.png";
 import It from "../../assets/it.png";
 import Talim from "../../assets/talim.png";
 import Texno from "../../assets/texno.png";
 import Brain from "../../assets/brain.png";
 import Office from "../../assets/office.png";
-import { ItTalentsIcon, ItTalentsImage } from "../../assets";
-import { ChevronRight } from "lucide-react";
 import { rightIcon } from "../../assets/icons/icon";
 import Contact from "../Contact/Contact";
 import { useTranslation } from "react-i18next";
@@ -24,6 +14,8 @@ import { BackgroundIcon } from "../../assets/icons/icon";
 import { oneMillionUzbekCodersCards } from "../../utils";
 import { useNavigate } from "react-router-dom";
 import { Autoplay } from "swiper/modules";
+
+import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 
 function Courses() {
   const courses = [
@@ -212,15 +204,10 @@ const OneMillionUzbekCoders = () => {
 
       <div className="mb-[-120px]">
         <div className="w-full flex justify-center items-center mt-[100px]">
-        <iframe
-          width="670"
-          height="370"
-          src="https://www.youtube.com/embed/svH6zUSfads"
-          title="Uzbekcoders.Uz"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
+          <video width="670" controls>
+            <source src={Video} type="video/mp4" />
+            <source src={Video} type="video/ogg" />
+          </video>
         </div>
 
         <div>

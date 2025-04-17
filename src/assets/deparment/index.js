@@ -1,10 +1,9 @@
-import DeparmentImage1 from "./001.png";
+
 import DeparmentImage2 from "./002.png";
 import DeparmentImage3 from "./003.png";
 import DeparmentImage4 from "./004.png";
 import DeparmentImage5 from "./005.png";
 import DeparmentImage6 from "./006.png";
-import DeparmentImage7 from "./007.png";
 import DeparmentImage8 from "./008.png";
 import DeparmentImage9 from "./009.png";
 import DeparmentImage10 from "./010.png";
@@ -21,13 +20,11 @@ import DeparmentImage20 from "./020.jpg";
 import DeparmentImage21 from "./021.jpg";
 
 export {
-  DeparmentImage1,
   DeparmentImage2,
   DeparmentImage3,
   DeparmentImage4,
   DeparmentImage5,
   DeparmentImage6,
-  DeparmentImage7,
   DeparmentImage8,
   DeparmentImage9,
   DeparmentImage10,

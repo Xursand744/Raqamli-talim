@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { departmentsInformations } from "../../utils";
 import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 import { useTranslation } from "react-i18next";
@@ -29,7 +28,7 @@ export default function Departments() {
       <div className="flex gap-[10px] flex-wrap justify-between deparment-items">
         {departmentsInformations &&
           departmentsInformations.map((info, idx) => {
-            return <AboutDepartment {...info} idx={idx} />;
+            return <AboutDepartment key={idx} {...info} idx={idx} />;
           })}
       </div>
     </div>

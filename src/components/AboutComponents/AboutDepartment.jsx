@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 
 function AboutDepartment({ image, fullname, position, email, number, idx }) {
   return (
@@ -9,7 +9,7 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
           alt=""
           className="rounded-t-[12px] max-h-[280px] w-full object-cover object-top"
           style={{
-            objectPosition: `${idx === 5 || idx === 7 ? "0 0px" : "0 -70px"}`,
+            objectPosition: `${idx === 4 || idx === 2 || idx === 7 ? "0 0px" : "0 -70px"}`,
           }}
         />
       </div>
@@ -57,5 +57,14 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
     </div>
   );
 }
+
+AboutDepartment.propTypes = {
+  image: PropTypes.string.isRequired,
+  fullname: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  idx: PropTypes.number.isRequired,
+};
 
 export default AboutDepartment;

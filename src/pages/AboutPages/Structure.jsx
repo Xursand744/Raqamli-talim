@@ -4,7 +4,6 @@ import "./about.css";
 import { useState, useEffect, useRef } from "react";
 import { Clock, Mail, Phone, X } from "lucide-react";
 import {
-  DeparmentImage1,
   DeparmentImage10,
   DeparmentImage11,
   DeparmentImage12,
@@ -19,10 +18,9 @@ import {
   DeparmentImage20,
   DeparmentImage21,
   DeparmentImage3,
-  DeparmentImage7,
   DeparmentImage8,
 } from "../../assets/deparment";
-import { LeadershipImage2, LeadershipImage3, VacancyImage } from "../../assets";
+import { VacancyImage } from "../../assets";
 import { motion } from "framer-motion";
 import {
   TransformWrapper,
@@ -239,13 +237,13 @@ export default function Structure() {
       email: "m.anvarov@digital.uz",
       number: "+998 71 203 03 43 (112) ",
     },
-    {
-      title: "Raqamli texnologiyalar bo'limi",
-      image: DeparmentImage7,
-      fullname: "Farrux Boltayev",
-      email: "f.boltayev@digital.uz",
-      number: "+998 71 203 03 43 (888)",
-    },
+    // {
+    //   title: "Raqamli texnologiyalar bo'limi",
+    //   image: DeparmentImage7,
+    //   fullname: "Farrux Boltayev",
+    //   email: "f.boltayev@digital.uz",
+    //   number: "+998 71 203 03 43 (888)",
+    // },
     {
       title: '"IT shaharcha"lar faoliyatini tashkil etish boshqarmasi',
       image: DeparmentImage8,

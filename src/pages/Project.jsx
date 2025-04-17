@@ -1,14 +1,11 @@
 import { NavLink, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import HomeIcon from "../assets/home-icon-white.svg";
-import slugToText from "../lib/slugToText";
-import capitalizeFirstLetter from "../lib/capitalizeFirstLetter";
 import ProjectImage from "../assets/project-image.png";
 import { projectCounts } from "../utils";
-import projectImage2 from "../assets/project-image-2.png";
-import startVideo from "../assets/startVideoIcon.svg";
 import { BackgroundIcon } from "../assets/icons/icon";
 import "../assets/css/responsive.css";
+import Video from "../assets/videos/al_xorazmiy.mp4";
 
 function Project() {
   const { slug } = useParams();
@@ -72,7 +69,10 @@ function Project() {
         </div>
 
         <div className="mt-[100px] relative">
-        <iframe width="790" height="584" src="https://www.youtube.com/embed/fAGF06nLaWw" title="Al-Xorazmiy vorislari loyihasi oʻquvchilari muvaffaqiyati haqida" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <video width="790" height="584" controls>
+            <source src={Video} type="video/mp4" />
+            <source src={Video} type="video/ogg" />
+          </video>
         </div>
 
         <div className="mt-[40px]">
