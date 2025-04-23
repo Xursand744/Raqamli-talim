@@ -28,7 +28,7 @@ function OpenInformations() {
   return (
     <div className="mt-[100px]">
       <div className="max-w-[1230px] mx-auto">
-        <AboutPageHeader breadCrumps={breadCrumps} title={t("about.title")} />
+        <AboutPageHeader breadCrumps={breadCrumps} title={t("menu.openData")} />
 
         <div className="mt-[40px] flex justify-between flex-wrap gap-[20px]">
           {openInformations &&
