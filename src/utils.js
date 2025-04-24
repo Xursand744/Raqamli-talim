@@ -13,8 +13,9 @@ import {
   DeparmentImage13,
   DeparmentImage14,
   DeparmentImage16,
-  DeparmentImage20,
+  DeparmentImage17,
   DeparmentImage18,
+  DeparmentImage20,
   DeparmentImage21,
   DeparmentImage8,
 } from "./assets/deparment";
@@ -302,6 +303,14 @@ export const departmentsInformations = [
     position: "Investitsiya loyiha ofisi boshlig‘i",
     email: "invest@digital.uz",
     number: "+998 71 203 03 43 (117) ",
+  },
+
+  {
+    image: DeparmentImage17,
+    fullname: "Akmal Yoqubov",
+    position: "Kadrlar bo‘limi boshlig‘i",
+    email: "a.yoqubov@digital.uz",
+    number: "+998 71 203 03 43 (105)",
   },
   {
     image: DeparmentImage13,
