@@ -26,6 +26,8 @@ import Fifth from "./assets/5.jpg";
 import Sixth from "./assets/6.jpg";
 import Seventh from "./assets/7.jpg";
 
+import doc from "./assets/docs/ijtimoiy_ahamiyatga_oid_malumotlar.pdf";
+
 export const Menus = [
   {
     name: "menu.center",
@@ -60,6 +62,7 @@ export const Menus = [
         // icon: CircleHelp,
         link: "/anti-corruption",
       },
+      { name: "menu.significantDatasets", link: doc },
       {
         name: "menu.higherOrganization",
         // icon: CircleHelp,
@@ -74,7 +77,7 @@ export const Menus = [
     gridCols: 1,
   },
   { name: "menu.studyCenters", link: "study-centers" },
-  { name: "menu.itUniversities", link: "/universities" },
+  // { name: "menu.itUniversities", link: "/universities" },
   { name: "menu.news", link: "/news" },
   { name: "menu.courses", link: "/courses" },
   // { name: "menu.itTips", link: "/tips" },
@@ -310,9 +313,9 @@ export const departmentsInformations = [
   {
     image: VacancyImage,
     fullname: "Vakant",
-    position: "Ma’lumot kutilmoqda...",
+    position: "Frilanserlar bilan ishlash bo‘limi boshlig‘i",
     email: "",
-    number: "",
+    number: "+998 71 203 03 43",
   },
   {
     position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',

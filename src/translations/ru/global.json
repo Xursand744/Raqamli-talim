@@ -21,7 +21,8 @@
     "news": "Новости",
     "courses": "Курсы",
     "itTips": "IT советы",
-    "contact": "Контакты"
+    "contact": "Контакты",
+    "significantDatasets": "Информация социального значения"
   },
   "sort_by_name": "Сортировать по имени",
   "breadcrumb": {
