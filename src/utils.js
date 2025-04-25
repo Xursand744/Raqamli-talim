@@ -2,10 +2,11 @@ import { brain, BuildingOffice, Graduation, send } from "./assets/icons/icon";
 import {
   LeadershipBanner,
   newsImage,
-  ProjectImage as AlKhorezmiyImage,
-  ItTalentsProjectImage,
   VacancyImage,
 } from "./assets";
+import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
+import talent from "./assets/images/projects/talent_1.jpg";
+import coding from "./assets/images/projects/coder_1.jpg";
 import {
   DeparmentImage10,
   DeparmentImage11,
@@ -602,19 +603,19 @@ export const projectsOverview = [
   {
     id: 1,
     title: "Muhammad Al-Xorazmiy vorislari",
-    image: AlKhorezmiyImage,
+    image: xorazmiy,
     link: "muhammad-al-xorazmiy-vorislari",
   },
   {
     id: 2,
     title: "It Talents dasturi",
-    image: ItTalentsProjectImage,
+    image: talent,
     link: "it-talents-dasturi",
   },
   {
     id: 3,
     title: "Bir million dasturchi loyihasi (Coursera)",
-    image: AlKhorezmiyImage,
+    image: coding,
     link: "bir-million-dasturchi-loyihasi",
   },
   // {

@@ -13,7 +13,7 @@ import DepartmentImage from "./aboutImages/department.png";
 import newsImage from "./news/news-image.png";
 import newsBannerImage from "./news/banner-image.png";
 import singleNewsImage from "./news/single-news.jpg";
-import ProjectImage from "./project-image.png";
+import ProjectImage from "./images/projects/xorazmiy_1.jpg";
 import ItTalentsProjectImage from "./projects/project-image.jpg";
 import LeadershipImage1 from "./aboutImages/leadership-1.png";
 import LeadershipImage2 from "./aboutImages/leadership-2.png";

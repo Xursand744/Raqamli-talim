@@ -1,8 +1,8 @@
-import { useState } from "react";
 import "../../index.css";
 import { useTranslation } from "react-i18next";
 import { ChevronRight } from "react-feather";
-import { ProjectBanner } from "../../assets";
+import PropTypes from "prop-types";
+import talent from "../../assets/images/projects/talent_2.jpg";
 import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import Sl from "../../assets/s_left.png";
@@ -48,11 +48,15 @@ const DocumentCard = ({ children }) => (
   </div>
 );
 
+DocumentCard.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 const MetricsCard = ({ icon, value, label, isActive }) => (
   <div
     className={`${
       isActive ? "bg-[#2675EB]" : "bg-white"
-    } rounded-lg  p-6 shadow-sm hover:shadow-md transition-shadow`}
+    } rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
   >
     <img src={icon || "/placeholder.svg"} alt="" className="w-[48px] mb-4" />
     <div
@@ -68,19 +72,20 @@ const MetricsCard = ({ icon, value, label, isActive }) => (
   </div>
 );
 
-const Button = ({ children, className, ...props }) => (
-  <button className={`px-4 py-2 rounded font-semibold ${className}`} {...props}>
-    {children}
-  </button>
-);
+MetricsCard.propTypes = {
+  icon: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
+};
+
+MetricsCard.defaultProps = {
+  isActive: false,
+};
 
 export default function ItTalents() {
   const { t } = useTranslation("global");
   const navigate = useNavigate();
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
-  const totalPages = 34;
 
   const metrics = [
     {
@@ -111,7 +116,7 @@ export default function ItTalents() {
     {
       icon: MoneyBag,
       value: 0,
-      label: "To‘lov jarayonida",
+      label: "To&apos;lov jarayonida",
     },
     {
       icon: Document,
@@ -131,9 +136,9 @@ export default function ItTalents() {
 
         <div className="relative mb-12">
           <img
-            src={ProjectBanner}
+            src={talent}
             alt="IT Talents"
-            className="w-full h-[400px] object-cover rounded-lg"
+            className="w-full h-[600px] object-cover rounded-lg"
           />
         </div>
 
@@ -170,7 +175,7 @@ export default function ItTalents() {
 
               <div className="text-center space-y-3 md:space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900">
-                  O'quv yo'nalishlar ro'yxati
+                  O&apos;quv yo&apos;nalishlar ro&apos;yxati
                 </h1>
                 <p className="text-sm md:text-base text-gray-600">
                   Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
@@ -203,35 +208,26 @@ export default function ItTalents() {
               {t("itTalentsMetrics.title")}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {metrics.map((metric, index) => {
-                if (index < 4) {
-                  return (
-                    <MetricsCard
-                      key={index}
-                      icon={metric.icon}
-                      value={metric.value}
-                      label={metric.label}
-                    />
-                  );
-                }
-              })}
+              {metrics.slice(0, 4).map((metric, index) => (
+                <MetricsCard
+                  key={index}
+                  icon={metric.icon}
+                  value={metric.value}
+                  label={metric.label}
+                />
+              ))}
             </div>
             <div className="w-full flex gap-[20px] mt-[20px]">
-              {metrics.map((metric, index) => {
-                if (index > 3) {
-                  return (
-                    <div className="w-1/2">
-                      <MetricsCard
-                        key={index}
-                        icon={metric.icon}
-                        value={metric.value}
-                        label={metric.label}
-                        isActive={index === 6}
-                      />
-                    </div>
-                  );
-                }
-              })}
+              {metrics.slice(4).map((metric, index) => (
+                <div key={index + 4} className="w-1/2">
+                  <MetricsCard
+                    icon={metric.icon}
+                    value={metric.value}
+                    label={metric.label}
+                    isActive={index + 4 === 6}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -264,7 +260,7 @@ export default function ItTalents() {
                       }
                       className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]"
                     >
-                      Havolaga o'tish
+                      Havolaga o&apos;tish
                     </button>
                   </div>
                 </div>
@@ -287,11 +283,11 @@ export default function ItTalents() {
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
               <h1 className="text-[#222] font-bold text-[40px]">
-                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro‘yxatdan
-                o‘tish bo‘yicha yo‘riqnoma:
+                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro&apos;yxatdan
+                o&apos;tish bo&apos;yicha yo&apos;riqnoma:
               </h1>
               <p className="text-[#222] text-[20px]">
-                Quyidagi qo‘llanmamiz siz uchun
+                Quyidagi qo&apos;llanmamiz siz uchun
               </p>
 
               <div>
@@ -302,7 +298,7 @@ export default function ItTalents() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    O'zbek tilida
+                    O&apos;zbek tilida
                   </button>
                   <button
                     className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"

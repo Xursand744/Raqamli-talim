@@ -1,6 +1,7 @@
-import Blue from "../../assets/blue.png";
+import coding from "../../assets/images/projects/coder_2.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import PropTypes from "prop-types";
 import Courser from "../../assets/coursera.png";
 import It from "../../assets/it.png";
 import Talim from "../../assets/talim.png";
@@ -17,44 +18,44 @@ import { Autoplay } from "swiper/modules";
 
 import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 
-function Courses() {
-  const courses = [
-    {
-      id: 1,
-      title: "Data Science Math Skills",
-    },
-    {
-      id: 2,
-      title: "Code yourself",
-    },
-    {
-      id: 3,
-      title: "Excel Fundamentals for Data Analysis",
-    },
-    {
-      id: 4,
-      title: "Introduction to Generative AI",
-    },
-    {
-      id: 5,
-      title: "Introduction to User Experience Design",
-    },
-  ];
+const courses = [
+  {
+    id: 1,
+    title: "Data Science Math Skills",
+  },
+  {
+    id: 2,
+    title: "Code yourself",
+  },
+  {
+    id: 3,
+    title: "Excel Fundamentals for Data Analysis",
+  },
+  {
+    id: 4,
+    title: "Introduction to Generative AI",
+  },
+  {
+    id: 5,
+    title: "Introduction to User Experience Design",
+  },
+];
 
+function Courses() {
   return (
     <div className="max-w-[1300px] mx-auto px-4 py-8 sm:py-12">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-        Yo'nalishlar
+        Yo&apos;nalishlar
       </h2>
       <p className="mb-6 sm:mb-8 text-gray-600 text-sm sm:text-base md:text-base">
-        Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
+        Loyihada yosh chegarasi mavjud emas barcha o&apos;qish istagida bo&apos;lganlar
+        uchun. Loyiha doirasida yoshlar 5 ta yo&apos;nalish bo&apos;yicha dunyoning
+        yetakchi mentorlaridan bilim olishlari mumkin bo&apos;ladi.
       </p>
 
       <div className="flex flex-col gap-3 sm:gap-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          {courses.slice(0, 3).map((course, index) => (
+          {courses.slice(0, 3).map((course) => (
             <div
               key={course.id}
               className="p-3 sm:p-4 md:p-6 rounded-lg border border-gray-200 hover:border-blue-500 cursor-pointer transition-all duration-300"
@@ -67,7 +68,7 @@ function Courses() {
           ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          {courses.slice(3, 5).map((course, index) => (
+          {courses.slice(3, 5).map((course) => (
             <div
               key={course.id}
               className="p-3 sm:p-4 md:p-6 rounded-lg border border-gray-200 hover:border-blue-500 cursor-pointer transition-all duration-300"
@@ -90,6 +91,15 @@ const Button = ({ children, className, ...props }) => (
   </button>
 );
 
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
+Button.defaultProps = {
+  className: "",
+};
+
 const OneMillionUzbekCoders = () => {
   const { t } = useTranslation("global");
   const navigate = useNavigate();
@@ -105,14 +115,14 @@ const OneMillionUzbekCoders = () => {
 
         <div className="flex flex-col items-center max-w-full">
           <img
-            src={Blue}
+            src={coding}
             className="rounded-[18px] w-full"
             alt="Coursera Project"
           />
           <h1 className="pt-[40px] pb-[100px] font-semibold text-[18px]">
-            O‘zbekiston Respublikasida yoshlarni “Bir million dasturchi”
-            loyihasining navbatdagi bosqichi sifatida “Coursera” onlayn
-            platformasida o‘qitish maqsad qilingan.
+            O&apos;zbekiston Respublikasida yoshlarni &quot;Bir million dasturchi&quot;
+            loyihasining navbatdagi bosqichi sifatida &quot;Coursera&quot; onlayn
+            platformasida o&apos;qitish maqsad qilingan.
           </h1>
         </div>
       </div>
@@ -186,7 +196,7 @@ const OneMillionUzbekCoders = () => {
             1,000,000+
           </h1>
           <p className="font-medium text-[16px] text-[#222222]">
-            Ro'yxatdan o'tganlar soni
+            Ro&apos;yxatdan o&apos;tganlar soni
           </p>
         </div>
         <div className="w-[384] py-[22px] px-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]">
@@ -219,9 +229,9 @@ const OneMillionUzbekCoders = () => {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <p className="text-gray-800 text-sm sm:text-base">
-                  "Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida
+                  &quot;Ma&apos;muriy islohotlar doirasida raqamli texnologiyalar sohasida
                   davlat boshqaruvini samarali tashkil etish chora-tadbirlari
-                  to'g'risida"gi PF-75-son farmoni
+                  to&apos;g&apos;risida&quot;gi PF-75-son farmoni
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">
@@ -232,9 +242,9 @@ const OneMillionUzbekCoders = () => {
 
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <p className="text-gray-800 text-sm sm:text-base">
-                  "Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha,
+                  &quot;Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha,
                   tarmoq va hududlarda raqamli transformatsiya qilish
-                  chora-tadbirlari to'g'risida"gi PQ-182-son qarori
+                  chora-tadbirlari to&apos;g&apos;risida&quot;gi PQ-182-son qarori
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">
