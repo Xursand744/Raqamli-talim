@@ -79,7 +79,7 @@ export const Menus = [
   },
   { name: "menu.studyCenters", link: "study-centers" },
   // { name: "menu.itUniversities", link: "/universities" },
-  { name: "menu.news", link: "/news" },
+  // { name: "menu.news", link: "/news" },
   { name: "menu.courses", link: "/courses" },
   // { name: "menu.itTips", link: "/tips" },
   { name: "menu.contact", link: "/contact" },
