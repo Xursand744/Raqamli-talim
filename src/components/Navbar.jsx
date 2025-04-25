@@ -78,10 +78,21 @@ function LanguageSelector({ onLanguageSelect }) {
 
 export default function Navbar() {
   const { t } = useTranslation("global");
+
+  const { i18n } = useTranslation("global");
+
+  const messages = {
+    ru: "⚠️ Внимание! Сайт работает в тестовом режиме. Информация может быть неактуальной.",
+    uz: "⚠️ Diqqat! Sayt sinov rejimida ishlamoqda. Ma'lumotlar o'zgarishi mumkin.",
+    en: "⚠️ Attention! This website is running in test mode. Information may be outdated.",
+  };
   
   return (
     <div>
-      <header className="py-[18px] z-[9999] text-[15px] fixed top-0 w-full justify-between items-center flex-center bg-[#fff]">
+      <div className="w-full bg-blue-500/80 text-white text-sm text-center py-2 px-4 font-medium z-[99999] fixed top-0 left-0">
+        {messages[i18n.language]}
+      </div>
+      <header className="py-[18px] z-[9999] text-[15px] fixed top-[36px] w-full justify-between items-center flex-center bg-[#fff]">
         <nav className="px-3.5 flex-center-between w-full max-w-7xl mx-auto">
           <NavLink to="/" className="cursor-pointer">
             <div className="flex-center gap-x-3 z-[999] relative">

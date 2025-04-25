@@ -119,8 +119,11 @@
     "centerTitle": "Markaz raqamlarda",
     "centerDescription": "2023-yilda rezident kompaniyalarning o'quv kurslarini 14300 nafardan ziyod o'quvchilar muvaffaqiyatli bitirdilar, chiqarilgan IT-mutaxassislar soni esa 5190 dan ortiqni tashkil etdi. IT Park rezident kompaniyalari 400 dan ortiq IT kurslarini taklif etadilar.",
     "activeProjects": "Aktiv loyihalar",
-    "itStudents": "IT o'quvchilar",
-    "metricIndicator": "Ko'rsatgich"
+    "itStudents": "Bitiruvchilar",
+    "employedStudents": "Ishga joylashgan bitiruvchilar soni",
+    "employedStudents2ForeignCompany": "Eksport qiluvchi kompaniyaga joylashgan bitiruvchilar soni",
+    "males": "Erkak bitiruvchilar",
+    "females": "Ayol bitiruvchilar"
   },
   "rate": {
     "title": "IT sohasidagi bilimingizni baholang",

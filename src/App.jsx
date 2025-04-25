@@ -10,7 +10,6 @@ import RootLayout from "./layouts/RootLayout";
 import HomePage from "./pages/Home/index";
 import About from "./pages/AboutPages/About";
 import Project from "./pages/Project";
-import ProjectLayout from "./layouts/ProjectLayout";
 import Tips from "./pages/Tip";
 import University from "./pages/ItUniversitet/UniversityList";
 import StudyCenters from "./pages/StudyCenters";
@@ -161,22 +160,3 @@ export default function App() {
     </div>
   );
 }
-
-// {
-//   path: "/about",
-//   children: [
-//     {
-//       index: true,
-//       element: <About />,
-//     },
-//     {
-//       path: "open-informations",
-//       element: <OpenInformations />,
-//     },
-//     // {
-//     //   path: "/open-data",
-//     // },
-//   ],
-//   // path: "/about",
-//   // element: <About />,
-// },
