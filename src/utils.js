@@ -604,7 +604,7 @@ export const projectsOverview = [
     id: 1,
     title: "Muhammad Al-Xorazmiy vorislari",
     image: xorazmiy,
-    link: "muhammad-al-xorazmiy-vorislari",
+    link: "al-xorazmiy",
   },
   {
     id: 2,

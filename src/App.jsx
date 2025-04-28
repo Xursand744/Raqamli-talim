@@ -95,7 +95,7 @@ export default function App() {
               element: <ProjectsOverview />,
             },
             {
-              path: "muhammad-al-xorazmiy-vorislari",
+              path: "al-xorazmiy",
               element: <Project />,
             },
             {
