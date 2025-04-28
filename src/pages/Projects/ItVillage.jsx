@@ -8,20 +8,12 @@ import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 
 // Courses data
 const courses = [
-  { id: 1, title: "Kompyuter savodxonligi" },
-  { id: 2, title: "Dasturlash asoslari, algoritmika asoslari" },
-  { id: 3, title: "Dasturlash tillari (Frontend)" },
-  { id: 4, title: "Grafik dizayn" },
-  { id: 5, title: "Ingliz tili" },
-  { id: 6, title: "Yumshoq ko&apos;nikmalar (liderlik, taym-menejment, kommunikatsiya va boshqa ko&apos;nikmalar)" },
-  { id: 7, title: "Elektron tijorat" },
-  { id: 8, title: "Ekologiya va barqaror rivojlanish" },
-  { id: 9, title: "Energiya resurslari va tabiiy boyliklardan oqilona foydalanish" },
-  { id: 10, title: "SMM (ijtimoiy media marketing)" },
-  { id: 11, title: "Fotografiya" },
-  { id: 12, title: "Mobilografiya" },
-  { id: 13, title: "Yagona interaktiv davlat xizmatlari portalidan (MyGov.uz) foydalanish" },
-];
+    { id: 1, title: "Axborot texnologiyalari (IT)" },
+    { id: 2, title: "Chet tillari" },
+    { id: 3, title: "Shaxsiy rivojlanish va biznes ko‘nikmalari" },
+    { id: 4, title: "Zamonaviy amaliy kasblar" },
+    { id: 5, title: "Davlat xizmatlaridan foydalanish" },
+  ];
 
 // Reusable Button Component
 const Button = ({ children, className = "", ...props }) => (
