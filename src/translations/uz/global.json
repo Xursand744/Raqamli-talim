@@ -80,6 +80,13 @@
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
+  "landing-4": {
+    "title": "Uzbekcoders",
+    "description": "Talabgir sohani bepul o'rganing",
+    "moreDetails": "Batafsil ma'lumot",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
   "chances": {
     "title": "Yoshlar uchun yaratilingan imkoniyatlar",
     "walletTitle": "IT kompensatsiya ol",
@@ -88,20 +95,28 @@
     "robotDesc": "ITga sarflagan pullaringni qaytarib ol"
   },
   "events1": {
-    "title": "ITea: Let's talk IT over tea",
-    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
-    "date": "February 22, 2025",
+    "title": "ITea: Choy ustida IT haqida gaplashaylik",
+    "description": "ITga qiziqqan yoshlar uchun malakali mutaxassislar bilan mentorlik sessiyalari",
+    "date": "22 fevral 2025",
     "innoWomenWeek": "InnoWomenWeek",
-    "viewMore": "View More",
-    "allEvents": "All Events"
+    "viewMore": "Batafsil",
+    "allEvents": "Barcha tadbirlar"
   },
   "events": {
     "title": "Tadbirlar rejasi"
   },
   "events2": {
-    "title": "ICT4Girls Olympiad for Female Students in Informatics in Uzbekistan",
-    "description": "Mentoring sessions with qualified specialists for youth interested in IT",
-    "date": "March-May, 2025",
+    "title": "O‘zbekistonda informatika fanidan qizlar o‘rtasida ICT4Girls olimpiadasi",
+    "description": "ITga qiziqqan yoshlar uchun malakali mutaxassislar bilan mentorlik sessiyalari",
+    "date": "2025 yil mart–may",
+    "innoWomenWeek": "InnoWomenWeek",
+    "viewMore": "Batafsil",
+    "allEvents": "Barcha tadbirlar"
+  },
+  "events3": {
+    "title": "DevOpsDays xalqaro forumi",
+    "description": "Joriy yilning 24-may kuni Toshkentda DevOpsDays xalqaro forumi boʻlib oʻtadi. Forumda 10 ga yaqin xorijiy davlatlardan kelgan mutaxassislar ishtirok etishi va oʻz bilimlarini boʻlishishi kutilmoqda.",
+    "date": "May 24, 2025",
     "innoWomenWeek": "InnoWomenWeek",
     "viewMore": "View More",
     "allEvents": "All Events"

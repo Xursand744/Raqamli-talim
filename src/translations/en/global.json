@@ -45,6 +45,13 @@
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
+  "landing-4": {
+    "title": "Uzbekcoders",
+    "description": "Learn IT for free in the field of IT",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
   "chances": {
     "title": "Special opportunities for youth",
     "walletTitle": "Get IT Compensation",
@@ -64,6 +71,14 @@
     "title": "ICT4Girls Olympiad for Female Students in Informatics in Uzbekistan",
     "description": "Mentoring sessions with qualified specialists for youth interested in IT",
     "date": "March-May, 2025",
+    "innoWomenWeek": "InnoWomenWeek",
+    "viewMore": "View More",
+    "allEvents": "All Events"
+  },
+  "events3": {
+    "title": "DevOpsDays International Forum",
+    "description": "On May 24, 2025, the DevOpsDays international forum will take place in Tashkent. Specialists from around 10 foreign countries are expected to participate and share their knowledge.",
+    "date": "May 24, 2025",
     "innoWomenWeek": "InnoWomenWeek",
     "viewMore": "View More",
     "allEvents": "All Events"
