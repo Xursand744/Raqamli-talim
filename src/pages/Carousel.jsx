@@ -21,25 +21,29 @@ export default function App() {
       title: t(`landing-1.title`),
       description: t(`landing-1.description`),
       buttonText: t(`landing-1.moreDetails`),
-      image: xorazmiy
+      image: xorazmiy,
+      link: "al-xorazmiy",
     },
     {
       title: t(`landing-2.title`),
       description: t(`landing-2.description`),
       buttonText: t(`landing-2.moreDetails`),
-      image: talent
+      image: talent,
+      link: "it-village",
     },
     {
       title: t(`landing-3.title`),
       description: t(`landing-3.description`),
       buttonText: t(`landing-3.moreDetails`),
-      image: CarouselImage
+      image: CarouselImage,
+      link: "it-talents-dasturi",
     },
     {
       title: t(`landing-4.title`),
       description: t(`landing-4.description`),
       buttonText: t(`landing-4.moreDetails`),
-      image: coding
+      image: coding,
+      link: "bir-million-dasturchi-loyihasi",
     }
   ];
 
@@ -69,6 +73,7 @@ export default function App() {
               description={item.description}
               buttonText={item.buttonText}
               image={item.image}
+              link={item.link}
             />
           </SwiperSlide>
         ))}

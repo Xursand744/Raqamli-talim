@@ -1,13 +1,16 @@
 import png from "../assets/carouselpng.png";
 import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
 
 const CarouselItem = ({ 
   title, 
   description, 
   buttonText = "More Details", 
   image, 
-  imageAlt = "Carousel image" 
+  imageAlt = "Carousel image",
+  link
 }) => {
+  const navigate = useNavigate();
   return (
     <div className="px-2 md:px-0 rounded-lg md:pl-5 flex items-center justify-between overflow-hidden">
       <div className="flex flex-col-reverse w-full rounded-lg xl:flex-row gap-8 md:gap-16">
@@ -25,8 +28,9 @@ const CarouselItem = ({
           <div className="flex justify-between items-end w-full">
             <button
               className="px-5 sm:px-8 py-2 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full
-              text-lg font-semibold uppercase tracking-wide transition-all duration-300
+              text-lg font-semibold tracking-wide transition-all duration-300
               transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/50"
+              onClick={() => navigate(`/projects/${link}`)}
             >
               {buttonText}
             </button>
@@ -59,6 +63,7 @@ CarouselItem.propTypes = {
   buttonText: PropTypes.string,
   image: PropTypes.string.isRequired,
   imageAlt: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default CarouselItem;
