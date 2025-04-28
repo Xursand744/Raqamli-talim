@@ -5,7 +5,7 @@ import {
   VacancyImage,
 } from "./assets";
 import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
-import talent from "./assets/images/projects/talent_1.jpg";
+import CarouselImage from "./assets/carousel.jpg";
 import coding from "./assets/images/projects/coder_1.jpg";
 import {
   DeparmentImage10,
@@ -609,7 +609,7 @@ export const projectsOverview = [
   {
     id: 2,
     title: "It Talents dasturi",
-    image: talent,
+    image: CarouselImage,
     link: "it-talents-dasturi",
   },
   {

@@ -27,13 +27,13 @@ export default function App() {
       title: t(`landing-2.title`),
       description: t(`landing-2.description`),
       buttonText: t(`landing-2.moreDetails`),
-      image: CarouselImage
+      image: talent
     },
     {
       title: t(`landing-3.title`),
       description: t(`landing-3.description`),
       buttonText: t(`landing-3.moreDetails`),
-      image: talent
+      image: CarouselImage
     },
     {
       title: t(`landing-4.title`),

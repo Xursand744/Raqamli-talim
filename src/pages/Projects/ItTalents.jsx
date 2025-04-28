@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ChevronRight } from "react-feather";
 import PropTypes from "prop-types";
 import talent from "../../assets/images/projects/talent_2.jpg";
+import CarouselImage from "../../assets/carousel.jpg";
 import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import Sl from "../../assets/s_left.png";
@@ -136,7 +137,7 @@ export default function ItTalents() {
 
         <div className="relative mb-12">
           <img
-            src={talent}
+            src={CarouselImage}
             alt="IT Talents"
             className="w-full h-[600px] object-cover rounded-lg"
           />
