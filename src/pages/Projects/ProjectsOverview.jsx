@@ -5,7 +5,7 @@ function ProjectsOverview() {
   return (
     <div className="max-w-[1230px] mx-auto mt-[100px] mb-[50px]">
       <h1 className="font-medium text-[20px] mb-[30px]">Loyihalar</h1>
-      <div className="flex justify-between items-center flex-wrap">
+      <div className="flex justify-between items-center flex-wrap gap-[30px]">
         {projectsOverview &&
           projectsOverview.map((item) => (
             <OverviewProject

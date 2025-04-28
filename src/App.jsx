@@ -27,6 +27,7 @@ import ProjectsOverview from "./pages/Projects/ProjectsOverview";
 import NewsSinglePage from "./pages/News/NewsSinglePage";
 import Contact from "./pages/Contact/Contact";
 import OneMillionUzbekCoders from "./pages/Projects/OneMillionUzbekCoders";
+import ItVillage from "./pages/Projects/ItVillage";
 import SingleArticle from "./pages/Articles/SingleArticle";
 import JoinTeam from "./pages/AboutPages/JoinTeam";
 import ProjectStudyCenters from "./pages/Projects/StudyCenters";
@@ -105,6 +106,10 @@ export default function App() {
             {
               path: "bir-million-dasturchi-loyihasi",
               element: <OneMillionUzbekCoders />,
+            },
+            {
+              path: "it-village",
+              element: <ItVillage />,
             },
             {
               path: "study-centers",

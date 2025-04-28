@@ -7,6 +7,8 @@ import {
 import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
 import CarouselImage from "./assets/carousel.jpg";
 import coding from "./assets/images/projects/coder_1.jpg";
+import ItVillageImage from "./assets/images/projects/LOGO_D.png";
+
 import {
   DeparmentImage10,
   DeparmentImage11,
@@ -617,6 +619,12 @@ export const projectsOverview = [
     title: "Bir million dasturchi loyihasi (Coursera)",
     image: coding,
     link: "bir-million-dasturchi-loyihasi",
+  },
+  {
+    id: 4,
+    title: "It Village",
+    image: ItVillageImage,
+    link: "it-village",
   },
   // {
   //   id: 6,
