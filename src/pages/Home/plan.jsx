@@ -7,7 +7,7 @@ import { Event1, Event2, Event3 } from "../../assets/home";
 // Extract Card and Button components for better organization
 const Button = ({ children, className, ...props }) => (
   <button
-    className={`px-4 py-2 rounded font-semibold ${className}`}
+    className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${className}`}
     {...props}
   >
     {children}
@@ -21,7 +21,7 @@ Button.propTypes = {
 
 const Card = ({ children, className, ...props }) => (
   <div
-    className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition ${className}`}
+    className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${className}`}
     {...props}
   >
     {children}
@@ -73,34 +73,40 @@ export default function EventsSection() {
   }, [t, lang]); // Only update when language or translations change
 
   return (
-    <div className="bg-gray-50 my-[50px] md:my-[90px] lg:my-[120px]">
-      <section className="py-12 px-4 md:px-6">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+    <div className="bg-gradient-to-b from-gray-50 to-white my-[50px] md:my-[90px] lg:my-[120px]">
+      <section className="py-16 px-4 md:px-6">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             {t("events.title")}
           </h2>
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            {t("events.subtitle")}
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {events.map((event) => (
-              <Card key={event.id}>
-                <div className="relative h-48">
+              <Card key={event.id} className="group">
+                <div className="relative h-56 overflow-hidden">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-xl mb-2">
+                  <h3 className="font-bold text-xl mb-2 text-gray-800">
                     {event.title}
                   </h3>
-                  <p className="text-sm text-blue-600 mb-3">{event.date}</p>
-                  <p className="text-gray-600 text-sm overflow-hidden line-clamp-2">
+                  <p className="text-sm text-blue-600 font-medium mb-3">
+                    {event.date}
+                  </p>
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {event.description}
                   </p>
                 </div>
                 <div className="px-6 pb-6">
-                  <Button className="border rounded-3xl border-gray-300 text-gray-700 hover:bg-gray-50">
+                  <Button className="w-full border-2 border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300">
                     {t("events1.viewMore")}
                   </Button>
                 </div>
@@ -108,8 +114,26 @@ export default function EventsSection() {
             ))}
           </div>
 
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-16">
+            <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=digitaldeveducation%40gmail.com&ctz=Asia%2FSamarkand"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                }}
+                frameBorder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+          </div>
+
           {/* <div className="text-center">
-            <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 shadow-lg hover:shadow-xl">
               {t("events1.allEvents")}
             </Button>
           </div> */}
