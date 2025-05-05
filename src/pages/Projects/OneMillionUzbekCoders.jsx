@@ -109,7 +109,7 @@ const OneMillionUzbekCoders = () => {
       <div className="max-w-[1230px] mx-auto">
         <div className="flex justify-center mt-[100px]">
           <h1 className="font-bold text-[56px] text-[#222222] mb-[40px] w-[792px] text-center">
-            Bir million dasturchi loyihasi (Coursera)
+            Bir million dasturchi loyihasi
           </h1>
         </div>
 

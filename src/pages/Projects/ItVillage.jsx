@@ -1,4 +1,4 @@
-import ItVillageImage from "../../assets/images/projects/LOGO_D.png";
+import talent from "../../assets/images/projects/talent_2.jpg";
 import "swiper/css";
 import PropTypes from "prop-types";
 import { rightIcon } from "../../assets/icons/icon";
@@ -95,7 +95,7 @@ const HeroSection = () => (
 
     <div className="flex flex-col items-center">
       <img
-        src={ItVillageImage}
+        src={talent}
         className="rounded-2xl w-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
         alt="IT Village Project"
       />

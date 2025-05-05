@@ -7,8 +7,7 @@ import {
 import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
 import CarouselImage from "./assets/carousel.jpg";
 import coding from "./assets/images/projects/coder_1.jpg";
-import ItVillageImage from "./assets/images/projects/LOGO_D.png";
-
+import talent from "./assets/images/projects/talent_1.jpg";
 import {
   DeparmentImage10,
   DeparmentImage11,
@@ -33,6 +32,15 @@ import Seventh from "./assets/7.jpg";
 import doc from "./assets/docs/ijtimoiy_ahamiyatga_oid_malumotlar.pdf";
 
 export const Menus = [
+  {
+    name: "menu.projects",
+    link: "/projects",
+    gridCols: 1,
+  },
+  { name: "menu.studyCenters", link: "study-centers" },
+  // { name: "menu.itUniversities", link: "/universities" },
+  // { name: "menu.news", link: "/news" },
+  { name: "menu.courses", link: "/courses" },
   {
     name: "menu.center",
     subMenu: [
@@ -75,15 +83,6 @@ export const Menus = [
     ],
     gridCols: 1,
   },
-  {
-    name: "menu.projects",
-    link: "/projects",
-    gridCols: 1,
-  },
-  { name: "menu.studyCenters", link: "study-centers" },
-  // { name: "menu.itUniversities", link: "/universities" },
-  // { name: "menu.news", link: "/news" },
-  { name: "menu.courses", link: "/courses" },
   // { name: "menu.itTips", link: "/tips" },
   { name: "menu.contact", link: "/contact" },
 ];
@@ -616,14 +615,14 @@ export const projectsOverview = [
   },
   {
     id: 3,
-    title: "Bir million dasturchi loyihasi (Coursera)",
+    title: "Bir million dasturchi loyihasi",
     image: coding,
     link: "bir-million-dasturchi-loyihasi",
   },
   {
     id: 4,
     title: "It Village",
-    image: ItVillageImage,
+    image: talent,
     link: "it-village",
   },
   // {
