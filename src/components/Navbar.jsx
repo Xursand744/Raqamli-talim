@@ -91,6 +91,9 @@ function AccessibilityControls() {
 
   return (
     <div className="relative inline-flex gap-4 text-left" ref={dropdownRef}>
+      <div className="flex items-center gap-2">
+        <div className="text-sm font-semibold">Maxsus imkoniyatlar</div>
+      </div>
       <button
         className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100"
         onClick={() => setIsOpen(!isOpen)}
