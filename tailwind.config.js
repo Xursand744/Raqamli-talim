@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class', // Enable dark mode with class strategy
   theme: {
     container: {
       center: true,
@@ -14,7 +18,20 @@ export default {
         "2xl": "1200px",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        // Add any custom colors here
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.2s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+    },
   },
   plugins: [],
 };

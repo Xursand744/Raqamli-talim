@@ -8,10 +8,10 @@
   "menu": {
     "center": "Markaz haqida",
     "aboutUs": "Biz haqimizda",
-    "openData": "Ochiq ma’lumotlar",
+    "openData": "Ochiq ma'lumotlar",
     "leadership": "Rahbariyat",
     "structure": "Tuzilma",
-    "departments": "Bo’linmalar",
+    "departments": "Bo'linmalar",
     "antiCorruption": "Korrupsiyaga qarshi kurashish",
     "higherOrganization": "Yuqori turuvchi tashkilot",
     "projects": "Loyihalar",
@@ -21,26 +21,26 @@
     "news": "Yangiliklar",
     "itTips": "IT-maslahatlar",
     "courses": "Kurslar",
-    "contact": "Bog’lanish",
-    "significantDatasets": "Ijtimoiy ahamiyatga oid ma’lumotlar"
+    "contact": "Bog'lanish",
+    "significantDatasets": "Ijtimoiy ahamiyatga oid ma'lumotlar"
   },
   "sort_by_name": "Ism bo'yicha",
   "breadcrumb": {
     "home": "Bosh sahifa",
     "itTips": "IT-maslahatlar",
-    "itDirections": "IT yo’nalishlar",
+    "itDirections": "IT yo'nalishlar",
     "backend": "Backend"
   },
   "backends": {
     "title": "Backend",
-    "description": "bu dasturiy ta’minotning yashirin qismi bo‘lib, foydalanuvchilar ko‘ra olmaydigan, lekin dastur yoki veb-saytning ishlashini ta’minlaydigan mexanizmlarni o‘z ichiga oladi. Backend ma’lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga oshiradi va foydalanuvchi interfeysi (frontend) bilan o‘zaro aloqa qiladi.",
+    "description": "bu dasturiy ta'minotning yashirin qismi bo'lib, foydalanuvchilar ko'ra olmaydigan, lekin dastur yoki veb-saytning ishlashini ta'minlaydigan mexanizmlarni o'z ichiga oladi. Backend ma'lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga oshiradi va foydalanuvchi interfeysi (frontend) bilan o'zaro aloqa qiladi.",
     "rank": "#1",
     "courses": "123 ta kurs"
   },
   "metricse": {
     "min": "Eng kam oylik",
-    "avg": "O’rtacha oylik",
-    "max": "Eng ko’p oylik"
+    "avg": "O'rtacha oylik",
+    "max": "Eng ko'p oylik"
   },
   "chart": {
     "title": "Talablar grafigi"
@@ -61,7 +61,7 @@
   ],
   "landing-1": {
     "title": "Al-Xorazmiy",
-    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o‘quvchilari uchun bepul kurslar.",
+    "description": "IT sohasiga qiziquvchi iste'dodli 7–11-sinf o'quvchilari uchun bepul kurslar.",
     "moreDetails": "Batafsil",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
@@ -75,7 +75,7 @@
   },
   "landing-3": {
     "title": "IT-Talents",
-    "description": " Zamonaviy loyihalarda ishtirok eting, faol bo‘ling!",
+    "description": " Zamonaviy loyihalarda ishtirok eting, faol bo'ling!",
     "moreDetails": "Batafsil",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
@@ -91,7 +91,7 @@
     "title": "Yoshlar uchun yaratilingan imkoniyatlar",
     "walletTitle": "IT kompensatsiya ol",
     "walletDesc": "ITga sarflagan pullaringni qaytarib ol",
-    "robotTitle": "Maktabda ITni o‘rgan",
+    "robotTitle": "Maktabda ITni o'rgan",
     "robotDesc": "ITga sarflagan pullaringni qaytarib ol"
   },
   "events1": {
@@ -106,7 +106,7 @@
     "title": "Tadbirlar rejasi"
   },
   "events2": {
-    "title": "O‘zbekistonda informatika fanidan qizlar o‘rtasida ICT4Girls olimpiadasi",
+    "title": "O'zbekistonda informatika fanidan qizlar o'rtasida ICT4Girls olimpiadasi",
     "description": "ITga qiziqqan yoshlar uchun malakali mutaxassislar bilan mentorlik sessiyalari",
     "date": "2025 yil mart–may",
     "innoWomenWeek": "InnoWomenWeek",
@@ -127,8 +127,8 @@
     "walletDesc": "IT sertifikatlash xarajatlaringizning 100% ni qaytarib oling",
     "centerTitle": "O'quv markaz",
     "centerQuestion": "ochishni xohlaysizmi?",
-    "centerDesc": "Yaxshi kelajak uchun ta’limga o‘z ko‘nikmalaringizni sarmoya qiling",
-    "more": "Qo’llanmaga o’tish"
+    "centerDesc": "Yaxshi kelajak uchun ta'limga o'z ko'nikmalaringizni sarmoya qiling",
+    "more": "Qo'llanmaga o'tish"
   },
   "metrics": {
     "centerTitle": "Markaz raqamlarda",
@@ -146,7 +146,7 @@
   },
   "topJobs": {
     "title": "Eng yaxshi ishlar reytingi",
-    "viewAllButton": "Hammasini ko‘rish"
+    "viewAllButton": "Hammasini ko'rish"
   },
   "jobTitles": {
     "backend": "Backend dasturchi",
@@ -176,7 +176,7 @@
     },
     "sevinch": {
       "fullName": "Biybinaz Turemuratova",
-      "desc": "Zulfiya” nomidagi davlat mukofoti bilan taqdirlandi. Biybinaz 2024-yilda o’zining “DATA SOFT ACADEMY” kompaniyasiga asos solgan va hozirgi kunda uning rahbari sifatida faoliyat yuritmoqda."
+      "desc": "'Zulfiya' nomidagi davlat mukofoti bilan taqdirlandi. Biybinaz 2024-yilda o'zining 'DATA SOFT ACADEMY' kompaniyasiga asos solgan va hozirgi kunda uning rahbari sifatida faoliyat yuritmoqda."
     }
   },
   "locations": {
@@ -201,9 +201,9 @@
     }
   },
   "join": {
-    "title": "Raqamli ta’lim jamoasiga qo’shiling!",
+    "title": "Raqamli ta'lim jamoasiga qo'shiling!",
     "subtitle": "Qobilyatingizni ta'lim kelajagi uchun sarflang",
-    "button": "Jamoaga qo’shil",
+    "button": "Jamoaga qo'shil",
     "logoAlt": "Asosiy logotip"
   },
   "footer": {
@@ -212,17 +212,17 @@
     "phone": "+998 71 203 03 43",
     "email": "education@digital.uz",
     "address": "100164 Toshkent shahri, I.Muminov ko'chasi, 4",
-    "forStudents": "O‘quvchilarga",
+    "forStudents": "O'quvchilarga",
     "courses": "Kurslar",
-    "centers": "IT o‘quv markazlar",
+    "centers": "IT o'quv markazlar",
     "programs": "Dasturlar",
     "aboutUs": "Biz haqimizda",
-    "contact": "Biz bilan bog‘lanish",
+    "contact": "Biz bilan bog'lanish",
     "faq": "FAQ",
     "forEntrepreneurs": "Tadbirkorlarga",
     "copyright": "© 2024 MITC. Barcha huquqlar himoyalangan.",
     "privacyPolicy": "Maxfiylik siyosati",
-    "termsOfService": "Xizmat ko‘rsatish shartlari",
+    "termsOfService": "Xizmat ko'rsatish shartlari",
     "cookieSettings": "Cookies sozlamalari"
   },
   "about": {
@@ -230,17 +230,17 @@
     "description": "Raqamli ta'limni rivojlantirish markazi vazirlik oldiga qo'ygan missiyalarga erishishda IT iqtidorlar va xususiy IT ta'limni qo'llab-quvvatlash, yoshlarni IT bilimini oshirishda davlat tomonidan moliyalashtiriladigan dasturlarni ishlab chiqish va muvofiqlashtirish, hamda aholi va davlat xizmatchilarining IT savodxonligini oshirish ustida uzoq muddatli strategik faoliyatni olib boradi.",
     "filters": [
       "Biz haqimizda",
-      "Ochiq ma’lumotlar",
+      "Ochiq ma'lumotlar",
       "Rahbariyat",
       "Tuzilma",
-      "Bo’linmalar",
+      "Bo'linmalar",
       "Korrupsiyaga qarshi kurashish",
       "Yuqori turuvchi tashkilot",
-      "Ochiq ma’lumotlar"
+      "Ochiq ma'lumotlar"
     ],
     "counts": [
-      "IT ta’lim markazlari soni",
-      "IT ta’lim markazlaridagi o'quvchilar soni",
+      "IT ta'lim markazlari soni",
+      "IT ta'lim markazlaridagi o'quvchilar soni",
       "ITda band qilingan yoshlar soni",
       "IT mahsulotlar eksport hajmini 5 milliard dollar qilish"
     ],
@@ -250,7 +250,7 @@
   "breadcrumbs": {
     "home": "Bosh sahifa",
     "about": "Markaz haqida",
-    "aboutCenter": "Raqamli Ta’lim markazi haqida"
+    "aboutCenter": "Raqamli Ta'lim markazi haqida"
   },
   "search_placeholder": "O'quv markaz nomi",
   "region": "Hudud",
@@ -332,10 +332,10 @@
   "projects": "Loyihalar",
   "project_title": "Muhammad Al-Xorazmiy vorislari",
   "project_description": "'Al-Xorazmiy vorislari' loyihasi 7-11-sinf o'quvchilari uchun bepul ingliz tili va IT darslarini taqdim etadi.",
-  "project_details": "'Muhammad Al-Xorazmiy vorislari' loyihasi o'quvchilarni mehnat bozorida talab yuqori bo‘lgan kasblarga tayyorlaydi.",
+  "project_details": "'Muhammad Al-Xorazmiy vorislari' loyihasi o'quvchilarni mehnat bozorida talab yuqori bo'lgan kasblarga tayyorlaydi.",
   "project_goal": "2028-yilgacha bu tizim butun respublika bo'ylab uch bosqichda joriy etiladi, natijada 50 000 malakali bitiruvchi tayyorlanadi.",
   "study_title": "Al-Xorazmiyda bepul tahsil olmoqchimisiz?",
-  "study_description": "Keyingi qabul kutish ro‘yxatiga qo‘shiling!",
+  "study_description": "Keyingi qabul kutish ro'yxatiga qo'shiling!",
   "all_events": "Barcha tadbirlar",
   "itTalentBreadcrump": {
     "home": "Bosh sahifa",
@@ -344,7 +344,7 @@
   },
   "hero": {
     "title": "\"IT Talents\" dasturi",
-    "description": "“IT talents” dasturi - nodavlat ta’lim tashkilotlariga bitiruvchisi IT-xizmatlarni eksport qiluvchi tashkilotga ishga joylashganda bazaviy hisoblash miqdorining 75 baravarigacha, nogironligi bo‘lgan yosh bitiruvchisi bunday tashkilotga ishga joylashgan hollarda esa 105 baravarigacha bir martalik subsidiya ajratish tizimini nazarda tutuvchi dasturdir"
+    "description": "\"IT Talents\" dasturi - nodavlat ta'lim tashkilotlariga bitiruvchisi IT-xizmatlarni eksport qiluvchi tashkilotga ishga joylashganda bazaviy hisoblash miqdorining 75 baravarigacha, nogironligi bo'lgan yosh bitiruvchisi bunday tashkilotga ishga joylashgan hollarda esa 105 baravarigacha bir martalik subsidiya ajratish tizimini nazarda tutuvchi dasturdir"
   },
   "decisions": {
     "title": "Dasturga oid qarorlar",
@@ -360,8 +360,8 @@
     "courses": "O'quv kurslar soni"
   },
   "itTalentsStudyCenters": {
-    "title": "O‘quv markazlari reytingi qanday shakllanadi?",
-    "title2": "IT-Park rezidenti bo‘lgan nodavlat ta’lim tashkilotlarining reytingi"
+    "title": "O'quv markazlari reytingi qanday shakllanadi?",
+    "title2": "IT-Park rezidenti bo'lgan nodavlat ta'lim tashkilotlarining reytingi"
   },
   "stats": {
     "platformCourses": {
@@ -400,8 +400,17 @@
       "total": "ball"
     }
   },
-  "one_million_uzbek_coders_title": "O‘z o‘quv markazingizni ochib, <br /> dasturda ishtirok eting",
-  "one_million_uzbek_coders_description": "Quyidagi qo‘llanmamiz siz uchun",
+  "one_million_uzbek_coders_title": "O'z o'quv markazingizni ochib, <br /> dasturda ishtirok eting",
+  "one_million_uzbek_coders_description": "Quyidagi qo'llanmamiz siz uchun",
   "one_million_uzbek_coders_events": "Yuklash",
-  "moreDetails": "Batafsil ma'lumot"
+  "moreDetails": "Batafsil ma'lumot",
+  "accessibility": {
+    "menu": "Kirish imkoniyati menyusi",
+    "darkMode": "Qorong'i mavzu",
+    "lightMode": "Yorug' mavzu",
+    "increaseFont": "Shriftni kattalashtirish",
+    "decreaseFont": "Shriftni kichiklashtirish",
+    "startSpeech": "O'qishni boshlash",
+    "stopSpeech": "O'qishni to'xtatish"
+  }
 }

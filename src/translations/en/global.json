@@ -136,7 +136,7 @@
       "desc": "How to Become a Senior Developer During Your Student Years"
     },
     "mohira": {
-      "fullName": "Mohira To’laganova",
+      "fullName": "Mohira To'laganova",
       "desc": "How to Become a Senior Developer During Your Student Years"
     },
     "sevinch": {
@@ -369,5 +369,14 @@
   },
   "one_million_uzbek_coders_title": "Open your own learning center and participate in the program.",
   "one_million_uzbek_coders_description": "Our following guide is for you.",
-  "one_million_uzbek_coders_events": "Download"
+  "one_million_uzbek_coders_events": "Download",
+  "accessibility": {
+    "menu": "Accessibility Menu",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "increaseFont": "Increase Font Size",
+    "decreaseFont": "Decrease Font Size",
+    "startSpeech": "Start Reading",
+    "stopSpeech": "Stop Reading"
+  }
 }
