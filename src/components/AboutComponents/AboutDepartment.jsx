@@ -9,7 +9,7 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
           alt=""
           className="rounded-t-[12px] max-h-[280px] w-full object-cover object-top"
           style={{
-            objectPosition: `${idx === 2 || idx === 8 || idx === 5 ? "0 0px" : "0 -70px"}`,
+            objectPosition: `${idx === 2 || idx === 4 || idx === 11 ? "0 0px" : "0 -70px"}`,
           }}
         />
       </div>

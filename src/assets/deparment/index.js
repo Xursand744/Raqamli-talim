@@ -18,6 +18,7 @@ import DeparmentImage18 from "./018.jpg";
 import DeparmentImage19 from "./019.jpg";
 import DeparmentImage20 from "./020.jpg";
 import DeparmentImage21 from "./021.jpg";
+import DeparmentImage22 from "./022.jpg";
 
 export {
   DeparmentImage2,
@@ -39,4 +40,5 @@ export {
   DeparmentImage19,
   DeparmentImage20,
   DeparmentImage21,
+  DeparmentImage22,
 };

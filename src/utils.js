@@ -19,6 +19,7 @@ import {
   DeparmentImage18,
   DeparmentImage20,
   DeparmentImage21,
+  DeparmentImage22,
   DeparmentImage8,
 } from "./assets/deparment";
 import First from "./assets/1.jpg";
@@ -279,8 +280,8 @@ export const departmentsInformations = [
   },
   {
     position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
-    image: VacancyImage,
-    fullname: "Vakant",
+    image: DeparmentImage22,
+    fullname: "Ermatov Shaxzod",
     email: "",
     number: "+998 71 203 03 43 (888)",
   },
@@ -291,14 +292,14 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (111)",
     position: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo‘limi boshlig‘i",
   },
-  {
-    image: DeparmentImage10,
-    fullname: "Mirabbos Anvarov",
-    email: "m.anvarov@digital.uz",
-    number: "+998 71 203 03 43 (112) ",
-    position:
-      "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
-  },
+  // {
+  //   image: DeparmentImage10,
+  //   fullname: "Mirabbos Anvarov",
+  //   email: "m.anvarov@digital.uz",
+  //   number: "+998 71 203 03 43 (112) ",
+  //   position:
+  //     "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo‘limi boshlig‘i",
+  // },
   {
     image: DeparmentImage16,
     fullname: "Farrux Abduvohidov",
@@ -322,10 +323,10 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (107)",
   },
   {
-    image: VacancyImage,
-    fullname: "Vakant",
+    image: DeparmentImage10,
+    fullname: "Mirabbos Anvarov",
     position: "Frilanserlar bilan ishlash bo‘limi boshlig‘i",
-    email: "",
+    email: "m.anvarov@digital.uz",
     number: "+998 71 203 03 43",
   },
   {
@@ -351,9 +352,9 @@ export const departmentsInformations = [
   },
   {
     position: 'Buxgalteriya bo’limi boshlig‘i',
-    image: DeparmentImage21,
-    fullname: "Zafar Boymatov",
-    email: "z.boymatov@digital.uz",
+    image: VacancyImage,
+    fullname: "Vakant",
+    email: "digital.uz",
     number: "+998 71 203 03 43 (119) ",
   },
 ];
