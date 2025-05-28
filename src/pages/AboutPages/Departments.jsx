@@ -30,6 +30,7 @@ export default function Departments() {
           departmentsInformations.map((info, idx) => {
             return <AboutDepartment key={idx} {...info} idx={idx} />;
           })}
+          <div className="max-w-[382px] w-full mb-[20px]"></div>
       </div>
     </div>
   );
