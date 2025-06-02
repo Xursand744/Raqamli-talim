@@ -40,7 +40,6 @@ export const Menus = [
   },
   { name: "menu.studyCenters", link: "study-centers" },
   // { name: "menu.itUniversities", link: "/universities" },
-  // { name: "menu.news", link: "/news" },
   { name: "menu.courses", link: "/courses" },
   {
     name: "menu.center",
@@ -84,6 +83,7 @@ export const Menus = [
     ],
     gridCols: 1,
   },
+  { name: "menu.news", link: "/news" },
   // { name: "menu.itTips", link: "/tips" },
   { name: "menu.contact", link: "/contact" },
 ];
@@ -281,7 +281,7 @@ export const departmentsInformations = [
   {
     position: "Raqamli texnologiyalar bo‘limi boshlig‘i",
     image: DeparmentImage22,
-    fullname: "Ermatov Shaxzod",
+    fullname: "Shaxzod Ermatov",
     email: "",
     number: "+998 71 203 03 43 (888)",
   },
@@ -346,9 +346,23 @@ export const departmentsInformations = [
   {
     position: 'Bosh yuristkonsult',
     image: DeparmentImage18,
-    fullname: "Karimov Muhammadsodiq",
+    fullname: "Muhammadsodiq Karimov",
     email: "m.karimov@digital.uz",
     number: "+998 71 203 03 43 (118) ",
+  },
+  {
+    position: 'Komplayns xizmati bo‘yicha bosh mutaxassis ',
+    image: VacancyImage,
+    fullname: "Iskandar Turayev",
+    email: "digital.uz",
+    number: "+998 71 203 03 43",
+  },
+  {
+    position: 'Axborot tahlil bo‘limi',
+    image: VacancyImage,
+    fullname: "Yayra Ibragimova",
+    email: "@digital.uz",
+    number: "+998 71 203 03 43",
   },
   {
     position: 'Buxgalteriya bo’limi boshlig‘i',
