@@ -164,18 +164,11 @@ export default function Structure() {
   const departments = [
     {
       title:
-        "Muhammad al-Xorazmiy vorislari tizimini joriy etishni muvofiqlashtirish bo'limi",
+        "'Muhammad al-Xorazmiy vorislari' tizimini joriy etishni muvofiqlashtirish bo'limi",
       image: DeparmentImage11,
       fullname: "Saidmurod Abdujabborov",
       email: "s.abdujabborov@digital.uz",
       number: "+998 71 203 03 43 (109)",
-    },
-    {
-      title: "Raqamli ko'nikmalarni shakllantirish bo'limi",
-      fullname: "Vakant",
-      email: "",
-      number: "",
-      image: VacancyImage,
     },
     {
       title: "Kadrlar bo'lim",
@@ -205,6 +198,13 @@ export default function Structure() {
       number: "+998 71 203 03 43 (107)",
       image: DeparmentImage13,
     },
+    {
+      title: "Komplayns xizmati bo‘yicha bosh mutaxassis",
+      fullname: "Iskandar Turayev",
+      email: "digital.uz",
+      number: "+998 71 203 03 43",
+      image: VacancyImage,
+    },
   ];
 
   const firstDeputyDepartments = [
@@ -223,7 +223,14 @@ export default function Structure() {
       image: DeparmentImage14,
     },
     {
-      title: "Ta'lim tashkilotlari bilan ishlash bo'limi",
+      title: "Ta'lim tashkilotlari va masofaviy ta'limni rivojlantirish bo'limi",
+      image: DeparmentImage12,
+      fullname: "Alisher Rapiyev",
+      email: "a.rapiyev@digital.uz",
+      number: "+998 71 203 03 43 (104) ",
+    },
+    {
+      title: "Raqamli texnologiyalar bo'limi",
       image: DeparmentImage12,
       fullname: "Alisher Rapiyev",
       email: "a.rapiyev@digital.uz",
@@ -231,7 +238,7 @@ export default function Structure() {
     },
     {
       title:
-        "Xalqaro sertifikatlar va masofaviy ta'limni rivojlantirish bo'limi",
+        "Frilanserlar bilan ishlash bo'limi",
       image: DeparmentImage10,
       fullname: "Mirabbos Anvarov",
       email: "m.anvarov@digital.uz",
@@ -244,13 +251,13 @@ export default function Structure() {
     //   email: "f.boltayev@digital.uz",
     //   number: "+998 71 203 03 43 (888)",
     // },
-    {
-      title: '"IT shaharcha"lar faoliyatini tashkil etish boshqarmasi',
-      image: DeparmentImage8,
-      fullname: "Akbarxo'ja Anvarxonov",
-      email: "a.anvarxonov@digital.uz",
-      number: "+998 71 203 03 43 (117) ",
-    },
+    // {
+    //   title: '"IT shaharcha"lar faoliyatini tashkil etish boshqarmasi',
+    //   image: DeparmentImage8,
+    //   fullname: "Akbarxo'ja Anvarxonov",
+    //   email: "a.anvarxonov@digital.uz",
+    //   number: "+998 71 203 03 43 (117) ",
+    // },
   ];
 
   const deputyDepartments = [
@@ -275,6 +282,20 @@ export default function Structure() {
       number: "+998 71 203 03 43 (115)",
       image: DeparmentImage21,
     },
+    {
+      title: "Hududlar bilan ishlash va IT-shaharchalar faoliyatini muvofiqlashtirish boshqarmasi",
+      fullname: "Boymatov Zafar",
+      email: "z.boymatov@digital.uz",
+      number: "+998 71 203 03 43 (115)",
+      image: DeparmentImage21,
+    },
+    {
+      title: "Hududlardagi IT-shaharcha bo'linmalari",
+      fullname: "Boymatov Zafar",
+      email: "z.boymatov@digital.uz",
+      number: "+998 71 203 03 43 (115)",
+      image: DeparmentImage21,
+    },
   ];
 
   const secondDeputyDepartments = [
@@ -287,6 +308,13 @@ export default function Structure() {
     },
     {
       title: "Investitsiya loyiha ofisi",
+      fullname: "Farrux Abduvohidov",
+      email: "invest@digital.uz",
+      number: "+998 78 238 41 76",
+      image: DeparmentImage16,
+    },
+    {
+      title: "Ahborot tahlil bo'limi",
       fullname: "Farrux Abduvohidov",
       email: "invest@digital.uz",
       number: "+998 78 238 41 76",
