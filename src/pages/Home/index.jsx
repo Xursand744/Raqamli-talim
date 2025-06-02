@@ -23,7 +23,6 @@ export default function HomePage() {
       <Plan />
       <Compensation />
       <Counts />
-      <Rate />
       <Darection />
 
       <div className="container">
