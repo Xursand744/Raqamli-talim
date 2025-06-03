@@ -330,7 +330,7 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43",
   },
   {
-    position: '"IT shaharcha"lar faoliyatini tashkil etish boshqarma boshlig‘i',
+    position: "Hududlar bilan ishlash va IT-shaharchalar faoliyatini muvofiqlashtirish boshqarmasi boshlig'i",
     image: DeparmentImage8,
     fullname: "Akbarxo‘ja Anvarxonov",
     email: "a.anvarxonov@digital.uz",
