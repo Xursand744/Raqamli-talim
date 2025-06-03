@@ -56,12 +56,6 @@ function SuccessHistory() {
           />
         ))}
       </div>
-
-      <div className="text-center mt-[40px]">
-        <Button className="bg-blue-500 rounded-3xl hover:bg-blue-600 text-white px-8">
-          {t("successHistory.allEvents")}
-        </Button>
-      </div>
     </div>
   );
 }

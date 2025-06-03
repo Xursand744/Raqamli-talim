@@ -31,7 +31,7 @@ const NewsCard = ({ id, date, title, description, image, tags }) => {
         <p className="text-sm sm:text-base text-gray-600 line-clamp-2 mb-3 sm:mb-4">
           {description}
         </p>
-        <div className="flex flex-wrap gap-2">
+        {/* <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
               key={index}
@@ -40,7 +40,7 @@ const NewsCard = ({ id, date, title, description, image, tags }) => {
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );

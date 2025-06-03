@@ -309,10 +309,10 @@ export const departmentsInformations = [
   },
 
   {
-    image: DeparmentImage17,
-    fullname: "Akmal Yoqubov",
+    image: VacancyImage,
+    fullname: "",
     position: "Kadrlar bo‘limi boshlig‘i",
-    email: "a.yoqubov@digital.uz",
+    email: "@digital.uz",
     number: "+998 71 203 03 43 (105)",
   },
   {
@@ -351,7 +351,7 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (118) ",
   },
   {
-    position: 'Komplayns xizmati bo‘yicha bosh mutaxassis ',
+    position: 'Komplayns xizmati bo‘yicha bosh mutaxassis',
     image: VacancyImage,
     fullname: "Iskandar Turayev",
     email: "digital.uz",

@@ -126,13 +126,16 @@ function News() {
                       ))}
                     </div>
                   ) : hasMore ? (
-                    <button
-                      onClick={handleLoadMore}
-                      className="w-full sm:w-auto group relative inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 font-medium text-white bg-blue-600 rounded-full overflow-hidden transition-all duration-300 hover:bg-blue-700"
-                    >
-                      <span className="relative z-10">Yana yuklash</span>
-                      <div className="absolute inset-0 bg-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-                    </button>
+                    <div>
+                      
+                    </div>
+                    // <button
+                    //   onClick={handleLoadMore}
+                    //   className="w-full sm:w-auto group relative inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3 font-medium text-white bg-blue-600 rounded-full overflow-hidden transition-all duration-300 hover:bg-blue-700"
+                    // >
+                    //   <span className="relative z-10">Yana yuklash</span>
+                    //   <div className="absolute inset-0 bg-blue-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                    // </button>
                   ) : news.length > 0 ? (
                     <p className="text-gray-500">Barcha yangiliklar yuklandi</p>
                   ) : (

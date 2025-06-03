@@ -30,12 +30,6 @@ export default function Chances() {
         type: "robot",
         image: ChanceImage,
       },
-      {
-        title: t("chances.walletTitle"),
-        desc: t("chances.walletDesc"),
-        image: ChanceImage,
-        type: "wallet",
-      },
     ]);
   }, 1000);
 
@@ -45,7 +39,7 @@ export default function Chances() {
         {t("chances.title")}
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px] w-full max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[15px] w-full max-w-7xl">
         {data &&
           data.map((item, index) => {
             return (

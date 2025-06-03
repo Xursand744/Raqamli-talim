@@ -55,12 +55,6 @@ function School() {
           <Card key={center.id} {...center} />
         ))}
       </div>
-
-      <div className="text-center">
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition-colors">
-          {t("school.viewAll")}
-        </button>
-      </div>
     </div>
   );
 }

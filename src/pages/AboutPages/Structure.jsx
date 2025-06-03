@@ -19,6 +19,7 @@ import {
   DeparmentImage21,
   DeparmentImage3,
   DeparmentImage8,
+  DeparmentImage22,
 } from "../../assets/deparment";
 import { VacancyImage } from "../../assets";
 import { motion } from "framer-motion";
@@ -121,6 +122,7 @@ export default function Structure() {
   };
 
   const handleDivClick = (item) => {
+    console.log(item);
     if (!isDragging) {
       setModalContent({
         title: item.title,
@@ -172,10 +174,10 @@ export default function Structure() {
     },
     {
       title: "Kadrlar bo'lim",
-      fullname: "Akmal Yoqubov",
-      email: "a.yoqubov@digital.uz",
+      fullname: "",
+      email: "@digital.uz",
       number: "+998 71 203 03 43 (105)",
-      image: DeparmentImage17,
+      image: VacancyImage,
     },
     {
       title: "Bosh yuristkonsult",
@@ -231,9 +233,9 @@ export default function Structure() {
     },
     {
       title: "Raqamli texnologiyalar bo'limi",
-      image: DeparmentImage12,
-      fullname: "Alisher Rapiyev",
-      email: "a.rapiyev@digital.uz",
+      image: DeparmentImage22,
+      fullname: "Shaxzod Ermatov",
+      email: "@digital.uz",
       number: "+998 71 203 03 43 (104) ",
     },
     {
@@ -277,24 +279,24 @@ export default function Structure() {
     },
     {
       title: "Buxgalteriya bo'limi",
-      fullname: "Boymatov Zafar",
-      email: "z.boymatov@digital.uz",
-      number: "+998 71 203 03 43 (115)",
-      image: DeparmentImage21,
+      fullname: "Vakant",
+      email: "@digital.uz",
+      number: "",
+      image: VacancyImage,
     },
     {
       title: "Hududlar bilan ishlash va IT-shaharchalar faoliyatini muvofiqlashtirish boshqarmasi",
-      fullname: "Boymatov Zafar",
-      email: "z.boymatov@digital.uz",
+      fullname: "Anvarxonov Akbarxo‘ja",
+      email: "@digital.uz",
       number: "+998 71 203 03 43 (115)",
-      image: DeparmentImage21,
+      image: DeparmentImage8,
     },
     {
       title: "Hududlardagi IT-shaharcha bo'linmalari",
-      fullname: "Boymatov Zafar",
-      email: "z.boymatov@digital.uz",
-      number: "+998 71 203 03 43 (115)",
-      image: DeparmentImage21,
+      fullname: "",
+      email: "@digital.uz",
+      number: "+998 71 203 03 43",
+      image: VacancyImage,
     },
   ];
 
@@ -315,10 +317,10 @@ export default function Structure() {
     },
     {
       title: "Ahborot tahlil bo'limi",
-      fullname: "Farrux Abduvohidov",
-      email: "invest@digital.uz",
-      number: "+998 78 238 41 76",
-      image: DeparmentImage16,
+      fullname: "Yayra Ibragimova",
+      email: "digital.uz",
+      number: "+998 71 203 03 43",
+      image: VacancyImage,
     },
   ];
 

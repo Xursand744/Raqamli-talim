@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { mainLogo2 } from "../assets/logos/logos";
 
 const Footer = () => {
   const { t } = useTranslation("global");
+  const navigate = useNavigate();
 
   const contactInfo = [
     {
@@ -32,14 +34,14 @@ const Footer = () => {
   ];
 
   const entrepreneurLinks = [
-    { text: t("footer.contact") },
-    { text: t("footer.faq") },
+    { text: t("footer.contact"), link: "/contact" },
+    { text: t("footer.faq"), link: "/faq" },
   ];
 
   return (
     <footer className="bg-[#06306D]">
       <div className="container pt-10 pb-8">
-        <div className="flex flex-col lg:flex-row gap-[50px] md:items-start border-b pb-11">
+        <div className="flex flex-col lg:flex-row gap-[50px] md:items-start pb-11">
           {/* Map and Links */}
           <div className="flex flex-col md:flex-row w-full gap-3 sm:gap-[40px] md:gap-[80px]">
             <div>
@@ -90,17 +92,31 @@ const Footer = () => {
                   {t("footer.forEntrepreneurs")}
                 </li>
                 {entrepreneurLinks.map((link, idx) => (
-                  <li key={idx} className="cursor-pointer">
+                  <li key={idx} className="cursor-pointer" onClick={() => navigate(link.link)}>
                     {link.text}
                   </li>
                 ))}
+
+                <li className="mt-auto">
+                  <div className="space-x-3 text-[20px]">
+                    <a href="https://www.facebook.com/uzdigitaledu?mibextid=LQQJ4d" target="_blank">
+                      <i className="bx bxl-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/digital.eduuz" target="_blank">
+                      <i className="bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/digital-eduuz" target="_blank">
+                      <i className="bx bxl-linkedin-square"></i>
+                    </a>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="text-white mt-[34px] flex flex-col-reverse md:flex-row items-center justify-between">
+        {/* <div className="text-white mt-[34px] flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="flex items-center gap-[52px]">
             <h5 className="text-[14px]">{t("footer.copyright")}</h5>
             <ul className="flex gap-5 text-[14px] underline">
@@ -115,7 +131,7 @@ const Footer = () => {
             <i className="bx bxl-twitter"></i>
             <i className="bx bxl-linkedin-square"></i>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
