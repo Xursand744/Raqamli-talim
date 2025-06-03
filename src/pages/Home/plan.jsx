@@ -154,7 +154,7 @@ export default function EventsSection() {
             {t("events.title")}
           </h2>
 
-          {events.length > 0 ? (
+          {/* {events.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {events.map((event) => (
                 <Card 
@@ -195,7 +195,7 @@ export default function EventsSection() {
             <div className="text-center text-gray-500 py-8">
               {t("events.noEvents")}
             </div>
-          )}
+          )} */}
 
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-16">
             <div className="relative w-full overflow-hidden rounded-xl" style={{ paddingTop: "56.25%" }}>
