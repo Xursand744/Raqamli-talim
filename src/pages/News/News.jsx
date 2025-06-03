@@ -90,7 +90,7 @@ function News() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8">
-      <div className="mt-[40px] sm:mt-[60px] lg:mt-[100px] w-full max-w-[1200px] mx-auto">
+      <div className="mt-[90px] sm:mt-[60px] lg:mt-[130px] w-full max-w-[1200px] mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <h1 className="text-[#222] text-2xl sm:text-3xl lg:text-[44px] font-bold">
             Yangiliklar

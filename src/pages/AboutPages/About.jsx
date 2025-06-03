@@ -70,22 +70,8 @@ function About() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
-        <div className="flex justify-center mt-[27px]">
+        <div className="flex justify-center my-[27px]">
           <p className="max-w-[790px] desc">{t("about.finalMessage")}</p>
-        </div>
-
-        <div className="flex justify-between items-center mt-[100px] about-images-section">
-          <div className="flex flex-col justify-between gap-[24px]">
-            <img src={about1} alt="" />
-            <img src={about3} alt="" />
-          </div>
-          <div>
-            <img src={about2} alt="" />
-          </div>
-          <div className="flex flex-col justify-between gap-[24px]">
-            <img src={about4} alt="" />
-            <img src={about5} alt="" />
-          </div>
         </div>
 
         {/* <Join /> */}

@@ -25,18 +25,25 @@ const Footer = () => {
   ];
 
   const studentLinks = [
-    { text: t("footer.courses") },
-    { text: t("footer.centers") },
-    { text: t("footer.programs") },
-    { text: t("footer.aboutUs") },
-    { text: t("footer.contact") },
-    { text: t("footer.faq") },
+    { text: t("footer.courses"), link: "/courses" },
+    { text: t("footer.centers"), link: "/study-centers" },
+    { text: t("footer.aboutUs"), link: "/about" },
+    // { text: t("footer.faq") },
   ];
 
   const entrepreneurLinks = [
     { text: t("footer.contact"), link: "/contact" },
-    { text: t("footer.faq"), link: "/faq" },
+    // { text: t("footer.faq"), link: "/faq" },
   ];
+
+  const scrollToTopOnClick = (link) => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    navigate(link);
+  };
 
   return (
     <footer className="bg-[#06306D]">
@@ -79,7 +86,7 @@ const Footer = () => {
                     {t("footer.forStudents")}
                   </li>
                   {studentLinks.map((link, idx) => (
-                    <li key={idx} className="cursor-pointer">
+                    <li key={idx} className="cursor-pointer" onClick={() => scrollToTopOnClick(link.link)}>
                       {link.text}
                     </li>
                   ))}
@@ -92,7 +99,7 @@ const Footer = () => {
                   {t("footer.forEntrepreneurs")}
                 </li>
                 {entrepreneurLinks.map((link, idx) => (
-                  <li key={idx} className="cursor-pointer" onClick={() => navigate(link.link)}>
+                  <li key={idx} className="cursor-pointer" onClick={() => scrollToTopOnClick(link.link)}>
                     {link.text}
                   </li>
                 ))}

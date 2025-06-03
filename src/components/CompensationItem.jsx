@@ -8,7 +8,7 @@ const CompensationBannerItem = ({ data }) => {
           <div className="flex flex-col justify-between">
             <div>
               <h1 className="text-[30px] md:text-[40px] font-semibold text-blue-600 relative">
-                {data.span} <span className="text-[#222]">{data.title}?</span>
+                {data.span} <span className="text-[#222]">{data.title}</span>
               </h1>
               <p className="mt-2 text-gray-700 text-[24px]">{data.desc}</p>
             </div>
