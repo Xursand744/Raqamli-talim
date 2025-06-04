@@ -37,6 +37,59 @@ function NewsSinglePage() {
     }
   };
 
+  const convertTextToLinks = (text) => {
+    // URL regex pattern
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    
+    // Split text by URLs
+    const parts = text.split(urlPattern);
+    
+    const getDisplayText = (url) => {
+      try {
+        const urlObj = new URL(url);
+        // Handle different types of URLs
+        if (urlObj.hostname.includes('t.me')) {
+          return `@${urlObj.pathname.slice(1)}`;
+        } else if (urlObj.hostname.includes('instagram.com')) {
+          return `@${urlObj.pathname.slice(1)}`;
+        } else if (urlObj.hostname.includes('facebook.com')) {
+          return `Facebook`;
+        } else if (urlObj.hostname.includes('linkedin.com')) {
+          return `LinkedIn`;
+        } else if (urlObj.hostname.includes('youtube.com')) {
+          return `YouTube`;
+        } else if (urlObj.hostname.includes('uzbekcoders.uz')) {
+          return 'UzbekCoders';
+        } else {
+          // For other URLs, show domain name without www and protocol
+          return urlObj.hostname.replace('www.', '');
+        }
+      } catch {
+        // If URL parsing fails, return the original URL
+        return url.replace(/^https?:\/\//, '');
+      }
+    };
+    
+    return parts.map((part, index) => {
+      // Check if this part is a URL
+      if (part.match(urlPattern)) {
+        const displayText = getDisplayText(part);
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+          >
+            {displayText}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -133,7 +186,7 @@ function NewsSinglePage() {
           </p>
         </div>
         <p className="text-[20px] font-medium text-black mt-[24px]">
-          {news.body[language]}
+          {convertTextToLinks(news.body[language])}
         </p>
 
         <div className="max-w-full min-h-[380px] mt-[24px]">
@@ -149,7 +202,7 @@ function NewsSinglePage() {
             <p key={index} className="mb-4">
               {paragraph.split("\r\n").map((line, lineIndex) => (
                 <React.Fragment key={lineIndex}>
-                  {line}
+                  {convertTextToLinks(line)}
                   {lineIndex < paragraph.split("\r\n").length - 1 && <br />}
                 </React.Fragment>
               ))}
