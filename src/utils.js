@@ -49,11 +49,11 @@ export const Menus = [
         // icon: CircleHelp,
         link: "/about",
       },
-      {
-        name: "menu.openData",
-        // icon: CircleHelp,
-        link: "/open-informations",
-      },
+      // {
+      //   name: "menu.openData",
+      //   // icon: CircleHelp,
+      //   link: "/open-informations",
+      // },
       {
         name: "menu.leadership",
         // icon: CircleHelp,
@@ -89,10 +89,10 @@ export const Menus = [
 
 export const aboutFilters = [
   { title: "menu.aboutUs", link: "/about" },
-  {
-    title: "menu.openData",
-    link: "/open-informations",
-  },
+  // {
+  //   title: "menu.openData",
+  //   link: "/open-informations",
+  // },
   { title: "menu.leadership", link: "/leadership" },
   { title: "menu.structure", link: "/structure" },
   {

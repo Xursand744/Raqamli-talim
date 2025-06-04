@@ -19,10 +19,10 @@ function OpenInformations() {
       link: "/about",
       name: t("menu.center"),
     },
-    {
-      link: "/open-informations",
-      name: t("menu.openData"),
-    },
+    // {
+    //   link: "/open-informations",
+    //   name: t("menu.openData"),
+    // },
   ];
 
   return (
