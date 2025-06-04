@@ -74,7 +74,6 @@ export const Menus = [
         // icon: CircleHelp,
         link: "/anti-corruption",
       },
-      { name: "menu.significantDatasets", link: doc },
       {
         name: "menu.higherOrganization",
         // icon: CircleHelp,

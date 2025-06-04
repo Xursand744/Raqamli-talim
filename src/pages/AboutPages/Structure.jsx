@@ -156,11 +156,6 @@ export default function Structure() {
       time: "Juma, 9:00-11:00",
       image: DeparmentImage15,
     },
-    {
-      title: "Maslahatchi",
-      fullname: "Vakant",
-      image: VacancyImage,
-    },
   ];
 
   const departments = [
@@ -422,7 +417,7 @@ export default function Structure() {
         <div
           // ref={containerRef}
           // active:cursor-grabbing
-          className="max-w-[1400px] mx-auto justify-center mb-[50px] flex bg-white overflow-auto mt-[60px] cursor-grab "
+          className="max-w-[1500px] mx-auto justify-center mb-[50px] flex bg-white overflow-auto mt-[60px] cursor-grab "
           // onMouseDown={handleMouseDown}
           // onMouseLeave={handleMouseLeave}
           // onMouseUp={handleMouseUp}
@@ -441,7 +436,6 @@ export default function Structure() {
                 <TransformComponent>
                   <div className="flex justify-center w-full">
                     <div className="relative">
-                      <div className="min-w-[100px] absolute top-[36px] left-1/2 w-[360px] h-[2px] bg-blue-500 -translate-x-1/2" />
 
                       <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
                         {topManagement.map((item, index) => (
