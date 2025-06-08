@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 import "./about.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Clock, Mail, Phone, X } from "lucide-react";
 import {
   DeparmentImage10,
@@ -11,12 +11,10 @@ import {
   DeparmentImage14,
   DeparmentImage15,
   DeparmentImage16,
-  DeparmentImage17,
   DeparmentImage18,
   DeparmentImage19,
   DeparmentImage2,
   DeparmentImage20,
-  DeparmentImage21,
   DeparmentImage3,
   DeparmentImage8,
   DeparmentImage22,
@@ -25,50 +23,12 @@ import { VacancyImage } from "../../assets";
 import { motion } from "framer-motion";
 import {
   TransformWrapper,
-  TransformComponent,
-  useControls,
+  TransformComponent
 } from "react-zoom-pan-pinch";
-import { div } from "framer-motion/client";
-
-const Controls = () => {
-  const { zoomIn, zoomOut, resetTransform } = useControls();
-
-  return (
-    <div className="absolute right-0 top-0">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => zoomIn()}
-            className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
-          >
-            +
-          </button>
-          <button
-            onClick={() => zoomOut()}
-            className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
-          >
-            -
-          </button>
-        </div>
-        <button
-          onClick={() => resetTransform()}
-          className="transition hover:bg-blue-600 px-[15px] py-[8px] flex items-center justify-center bg-blue-500 text-white rounded-md"
-        >
-          O'z holiga qaytarish
-        </button>
-      </div>
-    </div>
-  );
-};
 
 export default function Structure() {
   const { t } = useTranslation("global");
   const [showModal, setShowModal] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const containerRef = useRef(null);
-
   const [modalContent, setModalContent] = useState({
     title: "",
     image: "",
@@ -86,12 +46,10 @@ export default function Structure() {
         e.preventDefault();
       }
     };
-
     const container = document.querySelector(".overflow-auto");
     if (container) {
       container.addEventListener("wheel", handleWheel, { passive: false });
     }
-
     return () => {
       if (container) {
         container.removeEventListener("wheel", handleWheel);
@@ -99,41 +57,16 @@ export default function Structure() {
     };
   }, []);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   const handleDivClick = (item) => {
-    console.log(item);
-    if (!isDragging) {
-      setModalContent({
-        title: item.title,
-        image: item.image || VacancyImage,
-        fullname: item.fullname || "Vakant",
-        phone: item.number || "",
-        email: item.email || "",
-        time: item.time || "",
-      });
-      setShowModal(true);
-    }
+    setModalContent({
+      title: item.title,
+      image: item.image || VacancyImage,
+      fullname: item.fullname || "Vakant",
+      phone: item.number || "",
+      email: item.email || "",
+      time: item.time || "",
+    });
+    setShowModal(true);
   };
 
   const breadCrumps = [
@@ -149,7 +82,7 @@ export default function Structure() {
 
   const topManagement = [
     {
-      title: "Direktor",
+      title: "structure.director",
       fullname: "Azamat Eshankulov",
       email: "education@digital.uz",
       number: "+998 71 203 03 43 (101)",
@@ -160,43 +93,42 @@ export default function Structure() {
 
   const departments = [
     {
-      title:
-        "'Muhammad al-Xorazmiy vorislari' tizimini joriy etishni muvofiqlashtirish bo'limi",
+      title: "structure.muhammadAlXorazmiy",
       image: DeparmentImage11,
       fullname: "Saidmurod Abdujabborov",
       email: "s.abdujabborov@digital.uz",
       number: "+998 71 203 03 43 (109)",
     },
     {
-      title: "Kadrlar bo'lim",
+      title: "structure.hrDepartment",
       fullname: "",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (105)",
       image: VacancyImage,
     },
     {
-      title: "Bosh yuristkonsult",
+      title: "structure.chiefLawyer",
       fullname: "Karimov MuhammadSodiq",
       number: "+998 71 203 03 43 (110)",
       email: "",
       image: DeparmentImage18,
     },
     {
-      title: "Ijro intizomi va murojatlar bo'yicha bosh mutaxassis",
+      title: "structure.disciplineSpecialist",
       fullname: "Feruza Nematxonova",
       email: "feruzamaxmudova26@gmail.com",
       number: "+998 71 203 03 43 (116)",
       image: DeparmentImage19,
     },
     {
-      title: "Marketing va PR bo'limi",
+      title: "structure.marketingPr",
       fullname: "Moxira Nurullayeva",
       email: "m.nurullayeva@digital.uz",
       number: "+998 71 203 03 43 (107)",
       image: DeparmentImage13,
     },
     {
-      title: "Komplayns xizmati bo‘yicha bosh mutaxassis",
+      title: "structure.complianceSpecialist",
       fullname: "Iskandar Turayev",
       email: "digital.uz",
       number: "+998 71 203 03 43",
@@ -206,88 +138,73 @@ export default function Structure() {
 
   const firstDeputyDepartments = [
     {
-      title: "Direktorning birinchi o'rinbosari",
+      title: "structure.firstDeputy",
       fullname: "Vakant",
       email: "",
       number: "",
       image: VacancyImage,
     },
     {
-      title: "Iqtidorli yoshlarni IT sohasiga jalb qilish bo'limi",
+      title: "structure.talentedYouth",
       fullname: "Muhlisa Xudayberganova",
       email: "m.xudayberganova@digital.uz",
       number: "+998 71 203 03 43 (111)",
       image: DeparmentImage14,
     },
     {
-      title: "Ta'lim tashkilotlari va masofaviy ta'limni rivojlantirish bo'limi",
+      title: "structure.distanceEducation",
       image: DeparmentImage12,
       fullname: "Alisher Rapiyev",
       email: "a.rapiyev@digital.uz",
       number: "+998 71 203 03 43 (104) ",
     },
     {
-      title: "Raqamli texnologiyalar bo'limi",
+      title: "structure.digitalTech",
       image: DeparmentImage22,
       fullname: "Shaxzod Ermatov",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (104) ",
     },
     {
-      title:
-        "Frilanserlar bilan ishlash bo'limi",
+      title: "structure.freelancers",
       image: DeparmentImage10,
       fullname: "Mirabbos Anvarov",
       email: "m.anvarov@digital.uz",
       number: "+998 71 203 03 43 (112) ",
     },
-    // {
-    //   title: "Raqamli texnologiyalar bo'limi",
-    //   image: DeparmentImage7,
-    //   fullname: "Farrux Boltayev",
-    //   email: "f.boltayev@digital.uz",
-    //   number: "+998 71 203 03 43 (888)",
-    // },
-    // {
-    //   title: '"IT shaharcha"lar faoliyatini tashkil etish boshqarmasi',
-    //   image: DeparmentImage8,
-    //   fullname: "Akbarxo'ja Anvarxonov",
-    //   email: "a.anvarxonov@digital.uz",
-    //   number: "+998 71 203 03 43 (117) ",
-    // },
   ];
 
   const deputyDepartments = [
     {
-      title: "Direktor o'rinbosari",
+      title: "structure.deputy",
       fullname: "Davronbek Adilbekov",
       email: "d.adilbekov@digital.uz",
       number: "+998 71 203 03 43 (103)",
       image: DeparmentImage3,
     },
     {
-      title: "Iqtisodiyot va moliya bo'limi",
+      title: "structure.economyFinance",
       fullname: "Soliyev Odiljon",
       email: "o.soliyev@digital.uz",
       number: "+998 71 203 03 43 (114)",
       image: DeparmentImage20,
     },
     {
-      title: "Buxgalteriya bo'limi",
+      title: "structure.accounting",
       fullname: "Vakant",
       email: "@digital.uz",
       number: "",
       image: VacancyImage,
     },
     {
-      title: "Hududlar bilan ishlash va IT-shaharchalar faoliyatini muvofiqlashtirish boshqarmasi",
-      fullname: "Anvarxonov Akbarxo‘ja",
+      title: "structure.regionsCoordination",
+      fullname: "Anvarxonov Akbarxo'ja",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (115)",
       image: DeparmentImage8,
     },
     {
-      title: "Hududlardagi IT-shaharcha bo'linmalari",
+      title: "structure.regionsBranches",
       fullname: "",
       email: "@digital.uz",
       number: "+998 71 203 03 43",
@@ -297,21 +214,21 @@ export default function Structure() {
 
   const secondDeputyDepartments = [
     {
-      title: "Direktor o'rinbosari",
+      title: "structure.secondDeputy",
       fullname: "Jasur Askarov",
       email: "invest@digital.uz",
       number: "+998 78 238-41-76",
       image: DeparmentImage2,
     },
     {
-      title: "Investitsiya loyiha ofisi",
+      title: "structure.investmentOffice",
       fullname: "Farrux Abduvohidov",
       email: "invest@digital.uz",
       number: "+998 78 238 41 76",
       image: DeparmentImage16,
     },
     {
-      title: "Ahborot tahlil bo'limi",
+      title: "structure.infoAnalytics",
       fullname: "Yayra Ibragimova",
       email: "digital.uz",
       number: "+998 71 203 03 43",
@@ -370,7 +287,7 @@ export default function Structure() {
                       <h2 className="text-2xl font-bold text-gray-800">
                         {modalContent.fullname}
                       </h2>
-                      <p className="text-gray-600 mt-1">{modalContent.title}</p>
+                      <p className="text-gray-600 mt-1">{t(modalContent.title)}</p>
                     </div>
 
                     <div className="space-y-4">
@@ -415,28 +332,18 @@ export default function Structure() {
 
       <div className="mx-[100px]">
         <div
-          // ref={containerRef}
-          // active:cursor-grabbing
           className="max-w-[1500px] mx-auto justify-center mb-[50px] flex bg-white overflow-auto mt-[60px] cursor-grab "
-          // onMouseDown={handleMouseDown}
-          // onMouseLeave={handleMouseLeave}
-          // onMouseUp={handleMouseUp}
-          // onMouseMove={handleMouseMove}
         >
           <TransformWrapper
             initialScale={1}
             initialPositionX={200}
             initialPositionY={100}
           >
-            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+            {() => (
               <>
-                {/* <div className="relative mx-auto">
-                  <Controls />
-                </div> */}
                 <TransformComponent>
                   <div className="flex justify-center w-full">
                     <div className="relative">
-
                       <div className="flex justify-center gap-[130px] mb-16 relative top-[15px]">
                         {topManagement.map((item, index) => (
                           <div
@@ -444,7 +351,7 @@ export default function Structure() {
                             onClick={() => handleDivClick(item)}
                             className="px-6 py-2 rounded-md border border-blue-500 bg-white text-center z-10 cursor-pointer hover:bg-blue-50"
                           >
-                            {item.title}
+                            {t(item.title)}
                           </div>
                         ))}
                       </div>
@@ -474,7 +381,7 @@ export default function Structure() {
                                   : "border border-blue-500 hover:bg-blue-50"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
-                              {item.title}
+                              {t(item.title)}
                             </div>
                           ))}
                         </div>
@@ -490,7 +397,7 @@ export default function Structure() {
                                   : "border border-blue-500 hover:bg-blue-50"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
-                              {item.title}
+                              {t(item.title)}
                             </div>
                           ))}
                         </div>
@@ -506,7 +413,7 @@ export default function Structure() {
                                   : "border border-blue-500 hover:bg-blue-50"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
-                              {item.title}
+                              {t(item.title)}
                             </div>
                           ))}
                         </div>
@@ -522,7 +429,7 @@ export default function Structure() {
                                   : "border border-blue-500 hover:bg-blue-50"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
-                              {item.title}
+                              {t(item.title)}
                             </div>
                           ))}
                         </div>

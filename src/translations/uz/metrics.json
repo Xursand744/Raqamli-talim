@@ -1,0 +1,24 @@
+{
+  "center": {
+    "title": "Markaz raqamlarda",
+    "description": "2023-yilda 14 300 dan ortiq talaba rezident kompaniyalarning o'quv kurslarini muvaffaqiyatli yakunladi va tayyorlangan IT mutaxassislari soni 5 190 kishidan oshdi. IT Park rezident kompaniyalari 400 dan ortiq IT kurslarini taklif qilmoqda."
+  },
+  "statistics": {
+    "activeProjects": "Faol loyihalar",
+    "itStudents": "Bitiruvchilar",
+    "employedStudents": "Ishga joylashgan bitiruvchilar",
+    "employedStudents2ForeignCompany": "Eksport kompaniyalarida ishlaydigan bitiruvchilar",
+    "males": "Erkak bitiruvchilar",
+    "females": "Ayol bitiruvchilar"
+  },
+  "school": {
+    "title": "Eng yaxshi o'quv markazlari",
+    "card": {
+      "pdpAcademy": "PDP Akademiyasi",
+      "studying": "O'quvchilar",
+      "graduated": "Bitiruvchilar",
+      "employed": "Ishga joylashganlar",
+      "exporters": "IT eksportchilar"
+    }
+  }
+} 

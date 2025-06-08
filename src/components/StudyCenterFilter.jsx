@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X, Search, ArrowUpDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Search, ArrowUpDown, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import res from "../assets/res.png";
 
-function Study() {
+function StudyCenterFilter() {
   const { t } = useTranslation("global");
 
   const [centers, setCenters] = useState([]);
@@ -25,7 +25,7 @@ function Study() {
         setCenters(res.data.data);
         setTotalPages(res.data.meta.last_page);
       } catch (error) {
-        console.error("Ошибка при загрузке центров:", error);
+        console.error(t("errors.fetchCenters"), error);
       } finally {
         setIsLoading(false);
       }
@@ -51,6 +51,7 @@ function Study() {
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               className="sm:hidden"
+              aria-label={isSidebarOpen ? t("common.closeFilters") : t("common.openFilters")}
             >
               {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -59,22 +60,25 @@ function Study() {
               <div className="relative hidden sm:block">
                 <input
                   type="text"
-                  placeholder={t("search_placeholder")}
+                  placeholder={t("search.placeholder")}
                   className="w-[300px] md:w-[400px] pl-10 pr-4 py-2 border rounded-lg"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  aria-label={t("search.placeholder")}
                 />
                 <Search
                   className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
                   size={20}
+                  aria-hidden="true"
                 />
               </div>
               <button
                 onClick={() => setSortAscending(!sortAscending)}
                 className="flex items-center gap-2 px-4 py-2 border rounded-lg"
+                aria-label={t("search.sortByName")}
               >
-                {t("sort_by_name")}
-                <ArrowUpDown size={20} />
+                {t("search.sortByName")}
+                <ArrowUpDown size={20} aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -87,7 +91,7 @@ function Study() {
         </h2>
 
         {isLoading ? (
-          <p className="text-center">Загрузка...</p>
+          <p className="text-center">{t("common.loading")}</p>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             {filteredCenters.map((center) => (
@@ -105,7 +109,7 @@ function Study() {
                   </div>
                   <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
                     <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
-                      {t("courses")}: {center.courses_count}
+                      {t("courses.title")}: {center.courses_count}
                     </span>
                   </div>
                 </div>
@@ -118,12 +122,12 @@ function Study() {
                   </div>
                   {center.phone && (
                     <p className="text-sm text-gray-600 mb-1">
-                      {t("phone")}: {center.phone}
+                      {t("common.phone")}: {center.phone}
                     </p>
                   )}
                   {center.website && (
                     <p className="text-sm text-gray-600">
-                      {t("website")}: {center.website}
+                      {t("common.website")}: {center.website}
                     </p>
                   )}
                 </div>
@@ -138,9 +142,10 @@ function Study() {
             className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
+            aria-label={t("pagination.previous")}
           >
-            <i className="bx bx-chevron-left text-xl"></i>
-            <span>Предыдущая</span>
+            <i className="bx bx-chevron-left text-xl" aria-hidden="true"></i>
+            <span>{t("pagination.previous")}</span>
           </button>
           
           <div className="flex items-center space-x-2">
@@ -149,6 +154,7 @@ function Study() {
                 <button
                   className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
                   onClick={() => setCurrentPage(1)}
+                  aria-label={t("pagination.firstPage")}
                 >
                   1
                 </button>
@@ -177,6 +183,8 @@ function Study() {
                       : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
                   }`}
                   onClick={() => setCurrentPage(page)}
+                  aria-label={t("pagination.page", { page })}
+                  aria-current={currentPage === page ? "page" : undefined}
                 >
                   {page}
                 </button>
@@ -189,6 +197,7 @@ function Study() {
                 <button
                   className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
                   onClick={() => setCurrentPage(totalPages)}
+                  aria-label={t("pagination.lastPage")}
                 >
                   {totalPages}
                 </button>
@@ -200,9 +209,10 @@ function Study() {
             className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
+            aria-label={t("pagination.next")}
           >
-            <span>Следующая</span>
-            <i className="bx bx-chevron-right text-xl"></i>
+            <span>{t("pagination.next")}</span>
+            <i className="bx bx-chevron-right text-xl" aria-hidden="true"></i>
           </button>
         </div>
       </div>
@@ -210,4 +220,4 @@ function Study() {
   );
 }
 
-export default Study;
+export default StudyCenterFilter;

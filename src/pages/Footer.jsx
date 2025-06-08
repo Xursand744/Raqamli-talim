@@ -1,39 +1,67 @@
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { mainLogo2 } from "../assets/logos/logos";
+import Cookies from "js-cookie";
 
 const Footer = () => {
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
+
+  const [selectedLanguage, setSelectedLanguage] = useState("UZ");
+  useEffect(() => {
+    const savedLanguage = Cookies.get("lang") || "uz";
+    i18n.changeLanguage(savedLanguage);
+    setSelectedLanguage(savedLanguage.toUpperCase());
+  }, [i18n]);
 
   const contactInfo = [
     {
       icon: "bxs-phone",
       text: t("footer.phone"),
       marginTop: "mt-12",
+      ariaLabel: t("footer.phoneAriaLabel"),
     },
     {
       icon: "bxs-message-alt",
       text: t("footer.email"),
       marginTop: "mt-4 mb-4",
+      ariaLabel: t("footer.emailAriaLabel"),
     },
     {
       icon: "bxs-location-plus",
       text: t("footer.address"),
       marginTop: "",
+      ariaLabel: t("footer.addressAriaLabel"),
     },
   ];
 
   const studentLinks = [
-    { text: t("footer.courses"), link: "/courses" },
-    { text: t("footer.centers"), link: "/study-centers" },
-    { text: t("footer.aboutUs"), link: "/about" },
-    // { text: t("footer.faq") },
+    { text: t("footer.courses"), link: "/courses", ariaLabel: t("footer.coursesAriaLabel") },
+    { text: t("footer.centers"), link: "/study-centers", ariaLabel: t("footer.centersAriaLabel") },
+    { text: t("footer.aboutUs"), link: "/about", ariaLabel: t("footer.aboutUsAriaLabel") },
   ];
 
   const entrepreneurLinks = [
-    { text: t("footer.contact"), link: "/contact" },
-    // { text: t("footer.faq"), link: "/faq" },
+    { text: t("footer.contact"), link: "/contact", ariaLabel: t("footer.contactAriaLabel") },
+  ];
+
+  const socialLinks = [
+    { 
+      icon: "bxl-facebook", 
+      href: "https://www.facebook.com/uzdigitaledu?mibextid=LQQJ4d",
+      ariaLabel: t("footer.facebookAriaLabel")
+    },
+    { 
+      icon: "bxl-instagram", 
+      href: "https://www.instagram.com/digital.eduuz",
+      ariaLabel: t("footer.instagramAriaLabel")
+    },
+    { 
+      icon: "bxl-linkedin-square", 
+      href: "https://www.linkedin.com/company/digital-eduuz",
+      ariaLabel: t("footer.linkedinAriaLabel")
+    },
   ];
 
   const scrollToTopOnClick = (link) => {
@@ -41,12 +69,11 @@ const Footer = () => {
       top: 0,
       behavior: "smooth",
     });
-
     navigate(link);
   };
 
   return (
-    <footer className="bg-[#06306D]">
+    <footer className="bg-[#06306D]" role="contentinfo">
       <div className="container pt-10 pb-8">
         <div className="flex flex-col lg:flex-row gap-[50px] md:items-start pb-11">
           {/* Map and Links */}
@@ -60,6 +87,8 @@ const Footer = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title={t("footer.mapTitle")}
+                aria-label={t("footer.mapAriaLabel")}
               ></iframe>
             </div>
 
@@ -72,73 +101,72 @@ const Footer = () => {
                   <h4
                     key={idx}
                     className={`flex items-center gap-4 ${item.marginTop}`}
+                    aria-label={item.ariaLabel}
                   >
-                    <i className={`bx ${item.icon}`}></i>
+                    <i className={`bx ${item.icon}`} aria-hidden="true"></i>
                     {item.text}
                   </h4>
                 ))}
               </div>
 
               {/* For Students */}
-              <div>
+              <nav aria-label={t("footer.studentsNavAriaLabel")}>
                 <ul className="text-white flex flex-col gap-4">
                   <li className="text-[#B7B7B7]">
                     {t("footer.forStudents")}
                   </li>
                   {studentLinks.map((link, idx) => (
-                    <li key={idx} className="cursor-pointer" onClick={() => scrollToTopOnClick(link.link)}>
-                      {link.text}
+                    <li key={idx}>
+                      <button 
+                        onClick={() => scrollToTopOnClick(link.link)}
+                        className="cursor-pointer hover:text-blue-200 transition-colors"
+                        aria-label={link.ariaLabel}
+                      >
+                        {link.text}
+                      </button>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </nav>
 
               {/* For Entrepreneurs */}
-              <ul className="max-w-[205px] text-white flex flex-col gap-4 w-full">
-                <li className="text-[#B7B7B7]">
-                  {t("footer.forEntrepreneurs")}
-                </li>
-                {entrepreneurLinks.map((link, idx) => (
-                  <li key={idx} className="cursor-pointer" onClick={() => scrollToTopOnClick(link.link)}>
-                    {link.text}
+              <nav aria-label={t("footer.entrepreneursNavAriaLabel")}>
+                <ul className="max-w-[205px] text-white flex flex-col gap-4 w-full">
+                  <li className="text-[#B7B7B7]">
+                    {t("footer.forEntrepreneurs")}
                   </li>
-                ))}
+                  {entrepreneurLinks.map((link, idx) => (
+                    <li key={idx}>
+                      <button 
+                        onClick={() => scrollToTopOnClick(link.link)}
+                        className="cursor-pointer hover:text-blue-200 transition-colors"
+                        aria-label={link.ariaLabel}
+                      >
+                        {link.text}
+                      </button>
+                    </li>
+                  ))}
 
-                <li className="mt-auto">
-                  <div className="space-x-3 text-[20px]">
-                    <a href="https://www.facebook.com/uzdigitaledu?mibextid=LQQJ4d" target="_blank">
-                      <i className="bx bxl-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/digital.eduuz" target="_blank">
-                      <i className="bx bxl-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/digital-eduuz" target="_blank">
-                      <i className="bx bxl-linkedin-square"></i>
-                    </a>
-                  </div>
-                </li>
-              </ul>
+                  <li className="mt-auto">
+                    <div className="space-x-3 text-[20px]" role="list" aria-label={t("footer.socialLinksAriaLabel")}>
+                      {socialLinks.map((social, idx) => (
+                        <a 
+                          key={idx}
+                          href={social.href} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={social.ariaLabel}
+                        >
+                          <i className={`bx ${social.icon}`} aria-hidden="true"></i>
+                        </a>
+                      ))}
+                    </div>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
-
-        {/* Bottom Footer */}
-        {/* <div className="text-white mt-[34px] flex flex-col-reverse md:flex-row items-center justify-between">
-          <div className="flex items-center gap-[52px]">
-            <h5 className="text-[14px]">{t("footer.copyright")}</h5>
-            <ul className="flex gap-5 text-[14px] underline">
-              <li>{t("footer.privacyPolicy")}</li>
-              <li>{t("footer.termsOfService")}</li>
-              <li>{t("footer.cookieSettings")}</li>
-            </ul>
-          </div>
-          <div className="space-x-3 text-[20px]">
-            <i className="bx bxl-facebook"></i>
-            <i className="bx bxl-instagram"></i>
-            <i className="bx bxl-twitter"></i>
-            <i className="bx bxl-linkedin-square"></i>
-          </div>
-        </div> */}
       </div>
     </footer>
   );

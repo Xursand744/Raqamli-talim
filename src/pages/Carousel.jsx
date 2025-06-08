@@ -49,7 +49,7 @@ export default function App() {
   return (
     <>
       <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] mt-[100px]">
-        Raqamli ta&apos;lim loyihalari
+        {t("carousel.title")}
       </h1>
       <Swiper
         autoplay={{

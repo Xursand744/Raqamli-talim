@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "landing-1": {
+      "title": "Al-Xorazmiy",
+      "description": "IT sohasiga qiziqadigan 7-11-sinf o'quvchilari uchun bepul kurslar.",
+      "imageAlt": "Ta'lim dasturi emblemi",
+      "carouselAlt": "IT ta'lim imkoniyatlari"
+    },
+    "landing-2": {
+      "title": "IT-shaharcha",
+      "description": "O'z mintaqangizni tark etmasdan IT kasblarini o'rganing",
+      "imageAlt": "Ta'lim dasturi emblemi",
+      "carouselAlt": "IT ta'lim imkoniyatlari"
+    },
+    "landing-3": {
+      "title": "IT-Talents",
+      "description": "Zamonaviy loyihalarda qatnashing, faol bo'ling!",
+      "imageAlt": "Ta'lim dasturi emblemi",
+      "carouselAlt": "IT ta'lim imkoniyatlari"
+    },
+    "landing-4": {
+      "title": "Uzbekcoders",
+      "description": "IT sohasida bepul o'rganing",
+      "imageAlt": "Ta'lim dasturi emblemi",
+      "carouselAlt": "IT ta'lim imkoniyatlari"
+    }
+  },
+  "chances": {
+    "title": "Yoshlar uchun yaratilgan imkoniyatlar.",
+    "wallet": {
+      "title": "IT uchun kompensatsiya oling",
+      "desc": "IT uchun sarflangan pulni qaytaring"
+    },
+    "robot": {
+      "title": "Maktabda IT-ni o'rganing",
+      "desc": "IT uchun sarflangan pulni qaytaring"
+    }
+  },
+  "compensation": {
+    "wallet": {
+      "title": "Kompensatsiya",
+      "question": "Olishni xohlaysizmi?",
+      "desc": "IT sertifikatlashtirish uchun sarflangan mablag'ning 100% ni qaytaring"
+    },
+    "center": {
+      "title": "O'quv markazi",
+      "question": "Ochishni xohlaysizmi?",
+      "desc": "Yaxshiroq kelajak uchun o'z ko'nikmalaringizni ta'limga sarmoya kiring"
+    },
+    "more": "Ko'rsatmalarga o'tish"
+  },
+  "rate": {
+    "title": "IT bo'yicha bilimingizni baholang",
+    "buttonText": "Testdan o'tish"
+  }
+} 

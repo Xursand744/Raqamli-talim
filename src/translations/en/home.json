@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "landing-1": {
+      "title": "Al-Khorezmi",
+      "description": "Free courses for talented students in grades 7-11 interested in IT.",
+      "imageAlt": "Educational program emblem",
+      "carouselAlt": "IT learning opportunities"
+    },
+    "landing-2": {
+      "title": "IT Town",
+      "description": "Master IT professions without leaving your region",
+      "imageAlt": "Educational program emblem",
+      "carouselAlt": "IT learning opportunities"
+    },
+    "landing-3": {
+      "title": "IT-Talents",
+      "description": "Participate in modern projects, be active!",
+      "imageAlt": "Educational program emblem",
+      "carouselAlt": "IT learning opportunities"
+    },
+    "landing-4": {
+      "title": "Uzbekcoders",
+      "description": "Learn IT for free",
+      "imageAlt": "Educational program emblem",
+      "carouselAlt": "IT learning opportunities"
+    }
+  },
+  "chances": {
+    "title": "Opportunities created for youth.",
+    "wallet": {
+      "title": "Get IT compensation",
+      "desc": "Get back money spent on IT"
+    },
+    "robot": {
+      "title": "Learn IT at school",
+      "desc": "Get back money spent on IT"
+    }
+  },
+  "compensation": {
+    "wallet": {
+      "title": "Compensation",
+      "question": "Want to get it?",
+      "desc": "Get back 100% of IT certification costs"
+    },
+    "center": {
+      "title": "Training Center",
+      "question": "Want to open one?",
+      "desc": "Invest your skills in education for a better future"
+    },
+    "more": "Go to guide"
+  },
+  "rate": {
+    "title": "Rate your IT knowledge",
+    "buttonText": "Take the test"
+  }
+} 

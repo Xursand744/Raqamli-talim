@@ -1,0 +1,29 @@
+{
+  "successHistory": {
+    "title": "Success Stories",
+    "stories": {
+      "abror": {
+        "fullName": "Abror Juraev",
+        "desc": "How to become a senior developer while studying"
+      },
+      "mohira": {
+        "fullName": "Mohira Tulaganova",
+        "desc": "How to become a senior developer while studying"
+      },
+      "sevinch": {
+        "fullName": "Sevinch Mukimova",
+        "desc": "How to become a senior developer while studying"
+      }
+    }
+  },
+  "locations": {
+    "andijan": "Andijan",
+    "navoi": "Navoi",
+    "tashkent": "Tashkent"
+  },
+  "roles": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Design"
+  }
+} 

@@ -13,7 +13,7 @@ import i18next from "i18next";
 
 i18next.init({
   interploation: { escapeValue: false },
-  lng: "en",
+  lng: "uz",
   resources: {
     en: {
       global: global_en,

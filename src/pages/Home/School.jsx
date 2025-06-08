@@ -1,6 +1,7 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 import Card from "./schul";
+import Cookies from "js-cookie";
 
 const centers = [
   {
@@ -42,7 +43,14 @@ const centers = [
 ];
 
 function School() {
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
+
+  const [selectedLanguage, setSelectedLanguage] = useState("UZ");
+  useEffect(() => {
+    const savedLanguage = Cookies.get("lang") || "uz";
+    i18n.changeLanguage(savedLanguage);
+    setSelectedLanguage(savedLanguage.toUpperCase());
+  }, [i18n]);
 
   return (
     <div className="container mx-auto mt-[30px] md:mt-[50px] px-4 py-8 mb-[50px]">

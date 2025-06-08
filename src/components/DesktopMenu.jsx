@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 export default function DesktopMenu({ menu }) {
   const [isHover, setIsHover] = useState(false);
@@ -43,6 +44,8 @@ export default function DesktopMenu({ menu }) {
       animate={isHover ? "enter" : "exit"}
       variants={subMenuAnimate}
       style={{ background: "white" }}
+      role="menu"
+      aria-label={t("menu.submenu", { menu: t(menu.name) })}
     >
       <div className={`grid gap-7 ${getGridColumnsClass(menu.gridCols)}`}>
         {menu.subMenu.map((submenu, i) => (
@@ -50,18 +53,23 @@ export default function DesktopMenu({ menu }) {
             key={i}
             to={submenu.link}
             className="text-[#333] hover:bg-[#2675EB] hover:text-white transition my-[-5px] rounded-[10px] py-[10px] px-[15px] mx-[-5px]"
+            role="menuitem"
+            aria-label={t("menu.submenuItem", { 
+              menu: t(menu.name),
+              item: t(submenu.name)
+            })}
           >
             <div className="relative cursor-pointer">
               {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
                 <p className="text-sm mb-4 text-gray-500">
-                  {menu.subMenuHeading[i]}
+                  {t(menu.subMenuHeading[i])}
                 </p>
               )}
 
               <div className="flex-center gap-x-4 group/menubox">
                 <div>
                   <h6 className="font-semibold">{t(submenu.name)}</h6>
-                  <p className="text-sm">{submenu.desc}</p>
+                  <p className="text-sm">{t(submenu.desc)}</p>
                 </div>
               </div>
             </div>
@@ -72,10 +80,17 @@ export default function DesktopMenu({ menu }) {
   );
 
   const menuContent = (
-    <span className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
+    <span 
+      className="flex-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl"
+      aria-expanded={hasSubMenu ? isHover : undefined}
+      aria-controls={hasSubMenu ? `submenu-${menu.name}` : undefined}
+    >
       {t(menu.name)}
       {hasSubMenu && (
-        <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
+        <ChevronDown 
+          className="mt-[0.6px] group-hover/link:rotate-180 duration-200" 
+          aria-hidden="true"
+        />
       )}
     </span>
   );
@@ -83,7 +98,12 @@ export default function DesktopMenu({ menu }) {
   return (
     <div>
       {!hasSubMenu ? (
-        <NavLink to={menu.link} className="nav-item">
+        <NavLink 
+          to={menu.link} 
+          className="nav-item"
+          role="menuitem"
+          aria-label={t("menu.item", { item: t(menu.name) })}
+        >
           <motion.li
             className="group/link"
             onHoverStart={handleHoverStart}
@@ -99,6 +119,9 @@ export default function DesktopMenu({ menu }) {
           onHoverStart={handleHoverStart}
           onHoverEnd={handleHoverEnd}
           key={menu.name}
+          role="menuitem"
+          aria-haspopup="true"
+          aria-label={t("menu.itemWithSubmenu", { item: t(menu.name) })}
         >
           {menuContent}
           {hasSubMenu && renderSubMenu()}
@@ -107,3 +130,19 @@ export default function DesktopMenu({ menu }) {
     </div>
   );
 }
+
+DesktopMenu.propTypes = {
+  menu: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    subMenu: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        desc: PropTypes.string
+      })
+    ),
+    gridCols: PropTypes.number,
+    subMenuHeading: PropTypes.arrayOf(PropTypes.string)
+  }).isRequired
+};

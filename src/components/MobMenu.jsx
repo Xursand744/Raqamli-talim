@@ -2,15 +2,21 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 export default function MobMenu({ Menus }) {
-  const { t } = useTranslation("global");
-
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(null);
+
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
     setClicked(null);
+  };
+
+  const toggleSubmenu = (index) => {
+    setClicked(clicked === index ? null : index);
   };
 
   const subMenuDrawer = {
@@ -26,57 +32,101 @@ export default function MobMenu({ Menus }) {
 
   return (
     <div>
-      <button className="lg:hidden z-[999] relative" onClick={toggleDrawer}>
-        {isOpen ? <X /> : <Menu />}
+      <button 
+        className="lg:hidden z-[999] relative" 
+        onClick={toggleDrawer}
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu"
+        aria-label={isOpen ? t("menu.close") : t("menu.open")}
+      >
+        {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
       </button>
 
       <motion.div
+        id="mobile-menu"
         className="fixed left-0 right-0 top-16 overflow-y-auto h-full bg-[#18181A] backdrop-blur text-white p-6 pb-20"
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0%" : "-100%" }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        role="navigation"
+        aria-label={t("menu.mobileNavigation")}
       >
-        <ul>
-          {Menus.map(({ name, link, subMenu }, i) => {
-            const isClicked = clicked === i;
-            const hasSubMenu = subMenu?.length;
-            return (
-              <li key={name}>
-                <a
-                  href={link} // Asosiy menyu linki
-                  className="flex-center-between p-4 hover:bg-white/5 rounded-md cursor-pointer relative"
-                  onClick={() => setClicked(hasSubMenu && isClicked ? null : i)}
-                >
-                  {t(name)}
-                  {hasSubMenu && (
-                    <ChevronDown
-                      className={`ml-auto ${isClicked && "rotate-180"}`}
-                    />
-                  )}
-                </a>
-                {hasSubMenu && (
-                  <motion.ul
-                    initial="exit"
-                    animate={isClicked ? "enter" : "exit"}
-                    variants={subMenuDrawer}
-                    className="ml-5"
+        <ul className="space-y-4">
+          {Menus.map((menu, index) => (
+            <li key={menu.name}>
+              {menu.submenu ? (
+                <div>
+                  <button
+                    className="flex items-center justify-between w-full text-left"
+                    onClick={() => toggleSubmenu(index)}
+                    aria-expanded={clicked === index}
+                    aria-controls={`submenu-${index}`}
                   >
-                    {subMenu.map(({ name, link, icon: Icon }) => (
-                      <li key={name}>
-                        <a
-                          href={link}
-                          className="p-2 flex-center hover:bg-white/5 rounded-md gap-x-2 cursor-pointer font-medium"
-                        >
-                          {Icon && <Icon size={17} />} {t(name)}
-                        </a>
-                      </li>
+                    <span>{t(menu.name)}</span>
+                    <ChevronDown
+                      className={`transform transition-transform ${
+                        clicked === index ? "rotate-180" : ""
+                      }`}
+                      aria-hidden="true"
+                    />
+                  </button>
+                  <motion.div
+                    id={`submenu-${index}`}
+                    initial="exit"
+                    animate={clicked === index ? "enter" : "exit"}
+                    variants={subMenuDrawer}
+                    transition={{ duration: 0.2 }}
+                    className="pl-4 mt-2 space-y-2"
+                  >
+                    {menu.submenu.map((submenu) => (
+                      <NavLink
+                        key={submenu.name}
+                        to={submenu.link}
+                        className={({ isActive }) =>
+                          `block py-2 ${
+                            isActive ? "text-blue-500" : "text-gray-300"
+                          }`
+                        }
+                        onClick={() => {
+                          setIsOpen(false);
+                          setClicked(null);
+                        }}
+                      >
+                        {t(submenu.name)}
+                      </NavLink>
                     ))}
-                  </motion.ul>
-                )}
-              </li>
-            );
-          })}
+                  </motion.div>
+                </div>
+              ) : (
+                <NavLink
+                  to={menu.link}
+                  className={({ isActive }) =>
+                    `block py-2 ${isActive ? "text-blue-500" : "text-gray-300"}`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(menu.name)}
+                </NavLink>
+              )}
+            </li>
+          ))}
         </ul>
       </motion.div>
     </div>
   );
 }
+
+MobMenu.propTypes = {
+  Menus: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string,
+      submenu: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          link: PropTypes.string.isRequired
+        })
+      )
+    })
+  ).isRequired
+};

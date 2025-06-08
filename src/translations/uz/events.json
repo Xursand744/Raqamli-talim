@@ -1,0 +1,23 @@
+{
+  "title": "Tadbirlar rejasi",
+  "events": {
+    "itea": {
+      "title": "ITea: IT haqida choy ichib gaplashamiz",
+      "description": "IT-ga qiziqadigan yoshlar uchun malakali mutaxassislar bilan maslahat sessiyalari",
+      "date": "2025-yil 22-fevral",
+      "category": "InnoWomenWeek"
+    },
+    "olympiad": {
+      "title": "O'zbekistondagi talabalar uchun ICT4Girls informatika olimpiadasi",
+      "description": "IT-ga qiziqadigan yoshlar uchun malakali mutaxassislar bilan maslahat sessiyalari",
+      "date": "2025-yil mart-may",
+      "category": "InnoWomenWeek"
+    },
+    "devopsDays": {
+      "title": "Xalqaro DevOpsDays forumi",
+      "description": "2025-yil 24-may kuni Toshkent shahrida xalqaro DevOpsDays forumi bo'lib o'tadi. Forumda taxminan 10 ta xorijiy mamlakatdan mutaxassislar ishtirok etishi va o'z bilimlarini ulashishi kutilmoqda.",
+      "date": "2025-yil 24-may",
+      "category": "InnoWomenWeek"
+    }
+  }
+} 

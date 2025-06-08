@@ -1,15 +1,25 @@
 import CourseItemImage from "../assets/course-item.jpg";
 import pdp from "../assets/pdp.svg";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const Modal = ({ isOpen, onClose, course }) => {
+  const { t } = useTranslation();
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white rounded-[12px] shadow-lg   relative  max-w-[538px] w-full">
+    <div 
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div className="bg-white rounded-[12px] shadow-lg relative max-w-[538px] w-full">
         <button
-          className="absolute  bg-white right-0 top-0 z-20 rounded-full p-[5px] m-[15px] hover:text-gray-900"
+          className="absolute bg-white right-0 top-0 z-20 rounded-full p-[5px] m-[15px] hover:text-gray-900"
           onClick={onClose}
+          aria-label={t("common.close")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +27,7 @@ const Modal = ({ isOpen, onClose, course }) => {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
+            aria-hidden="true"
           >
             <path
               d="M6 6L18 18"
@@ -43,29 +54,38 @@ const Modal = ({ isOpen, onClose, course }) => {
               borderTopLeftRadius: "12px",
               borderTopRightRadius: "12px",
             }}
-            alt=""
+            alt={t("common.courseImage")}
           />
 
           <div className="flex gap-[10px] absolute bottom-[10px] left-[20px]">
             <div className="bg-[white] px-[12px] rounded-[12px]">
-              {course.duration}
+              {t(course.duration)}
             </div>
             <div className="bg-[white] px-[12px] rounded-[12px]">
-              {course.title}
+              {t(course.title)}
             </div>
           </div>
         </div>
 
         <div className="p-6">
-          <h2 className="text-xl font-bold">{course.name}</h2>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <img src={pdp} alt={t("common.centerLogo")} className="w-8 h-8" />
+              <span className="font-medium">{t(course.center)}</span>
+            </div>
+            <div className="text-lg font-semibold text-blue-600">
+              {course.price} {t("currency.perMonth")}
+            </div>
+          </div>
+          <h2 id="modal-title" className="text-xl font-bold">{t(course.name)}</h2>
           <p className="text-blue-500 text-lg font-semibold mt-2">
-            {course.price.toLocaleString("uz-UZ")} UZS/oyiga
+            {course.price.toLocaleString("uz-UZ")} {t("currency.perMonthShort")}
           </p>
 
           <div className="mt-4">
             <h3 className="font-semibold flex gap-[10px]">
-              <img src={pdp} alt="" />
-              {course.center}
+              <img src={pdp} alt={t("common.centerLogo")} />
+              {t(course.center)}
             </h3>
             <div className="mt-[20px]">
               <div className="flex justify-between">
@@ -76,6 +96,7 @@ const Modal = ({ isOpen, onClose, course }) => {
                     height="16"
                     viewBox="0 0 16 16"
                     fill="none"
+                    aria-hidden="true"
                   >
                     <path
                       fillRule="evenodd"
@@ -84,8 +105,7 @@ const Modal = ({ isOpen, onClose, course }) => {
                       fill="#2675EB"
                     />
                   </svg>
-
-                  {course.fullLocation}
+                  {t(course.fullLocation)}
                 </div>
                 <div className="flex items-center gap-[5px] w-1/3 text-[14px]">
                   <svg
@@ -94,6 +114,7 @@ const Modal = ({ isOpen, onClose, course }) => {
                     viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
                     <g id="phone">
                       <path
@@ -238,6 +259,22 @@ const Modal = ({ isOpen, onClose, course }) => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  course: PropTypes.shape({
+    duration: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    center: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    telegram: PropTypes.string,
+    fullLocation: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    website: PropTypes.string
+  }).isRequired
 };
 
 export default Modal;

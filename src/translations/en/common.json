@@ -1,0 +1,206 @@
+{
+  "logoAlt": "Digital Education Center logo",
+  "language": {
+    "selector": "Language selector",
+    "uz": "Uzbek",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "menu": {
+    "center": "About Center",
+    "aboutUs": "About Us",
+    "openData": "Open Data",
+    "leadership": "Leadership",
+    "structure": "Structure",
+    "departments": "Departments",
+    "antiCorruption": "Anti-Corruption",
+    "higherOrganization": "Higher Organization",
+    "projects": "Projects",
+    "alXorazmiyHeirs": "Al-Khorezmi Heirs",
+    "studyCenters": "Study Centers",
+    "itUniversities": "IT Universities",
+    "news": "News",
+    "courses": "Courses",
+    "itTips": "IT Tips",
+    "contact": "Contact",
+    "significantDatasets": "Significant Datasets",
+    "item": "Go to {{item}}",
+    "itemWithSubmenu": "{{item}} menu",
+    "submenu": "{{menu}} submenu",
+    "submenuItem": "{{item}} in {{menu}}",
+    "open": "Open menu",
+    "close": "Close menu",
+    "mobileNavigation": "Mobile navigation"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "itTips": "IT Tips",
+    "itDirections": "IT Directions",
+    "backend": "Backend"
+  },
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "buttons": {
+    "moreDetails": "More Details",
+    "viewMore": "View More",
+    "viewAll": "View All",
+    "allEvents": "All Events"
+  },
+  "messages": {
+    "testMode": "Test mode",
+    "loading": "Loading..."
+  },
+  "currency": {
+    "perMonth": "per month",
+    "perMonthShort": "UZS/month"
+  },
+  "search": {
+    "placeholder": "Search centers...",
+    "sortByName": "Sort by name"
+  },
+  "center": {
+    "count": "Found centers: {{count}}",
+    "courses": "Courses"
+  },
+  "breadcrumbs": {
+    "ariaLabel": "Breadcrumb navigation",
+    "home": "Home",
+    "homeIconAlt": "Home icon",
+    "about": "About",
+    "aboutCenter": "About Center",
+    "news": "News",
+    "courses": "Courses",
+    "contacts": "Contacts"
+  },
+  "filters": {
+    "price": {
+      "title": "Course Price Range",
+      "minLabel": "Minimum price",
+      "maxLabel": "Maximum price"
+    },
+    "title": "Filters",
+    "reset": "Reset",
+    "sorting": "Sorting"
+  },
+  "common": {
+    "unknown": "Unknown",
+    "months": "months",
+    "tashkent": "Tashkent",
+    "tashkentUzbekistan": "Tashkent, Uzbekistan",
+    "loading": "Loading...",
+    "closeFilters": "Close filters",
+    "openFilters": "Open filters",
+    "phone": "Phone",
+    "website": "Website",
+    "close": "Close",
+    "courseImage": "Course image",
+    "centerLogo": "Center logo",
+    "more": "More",
+    "collapse": "Collapse",
+    "noEmail": "No email",
+    "noPhone": "No phone",
+    "noHours": "No reception time"
+  },
+  "errors": {
+    "fetchCourses": "Error fetching courses:",
+    "fetchCenters": "Error loading centers:"
+  },
+  "courses": {
+    "title": "Courses",
+    "viewDetails": "View details for {{courseName}} course",
+    "courseImage": "Image for {{courseName}} course"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "firstPage": "First page",
+    "lastPage": "Last page",
+    "page": "Page {{page}}"
+  },
+  "accessibility": {
+    "title": "Accessibility",
+    "menu": "Accessibility menu",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "fontSize": "Font size",
+    "increaseFont": "Increase font size",
+    "decreaseFont": "Decrease font size",
+    "startSpeech": "Start reading",
+    "stopSpeech": "Stop reading"
+  },
+  "navigation": {
+    "main": "Main navigation"
+  },
+  "footer": {
+    "phone": "Phone",
+    "phoneAriaLabel": "Our phone number",
+    "email": "Email",
+    "emailAriaLabel": "Our email address",
+    "address": "Address",
+    "addressAriaLabel": "Our physical address",
+    "logoAlt": "Digital Education Center logo",
+    "mapTitle": "Digital Education Center location map",
+    "mapAriaLabel": "Interactive map showing the location of the Digital Education Center",
+    "forStudents": "For Students",
+    "studentsNavAriaLabel": "Student navigation",
+    "courses": "Courses",
+    "coursesAriaLabel": "Go to courses list",
+    "centers": "Centers",
+    "centersAriaLabel": "Go to centers list",
+    "aboutUs": "About Us",
+    "aboutUsAriaLabel": "Go to about us page",
+    "forEntrepreneurs": "For Entrepreneurs",
+    "entrepreneursNavAriaLabel": "Entrepreneur navigation",
+    "contact": "Contact",
+    "contactAriaLabel": "Go to contact page",
+    "socialLinksAriaLabel": "Social media",
+    "facebookAriaLabel": "Our Facebook page",
+    "instagramAriaLabel": "Our Instagram page",
+    "linkedinAriaLabel": "Our LinkedIn page"
+  },
+  "about": {
+    "filters": {
+      "ariaLabel": "Section filters",
+      "item": "Go to {{name}}"
+    },
+    "department": {
+      "imageAlt": "Photo of {{name}}",
+      "emailAriaLabel": "Send email to {{name}}",
+      "phoneAriaLabel": "Call {{name}}"
+    },
+    "leadership": {
+      "imageAlt": "Photo of {{name}}",
+      "emailAriaLabel": "Send email to {{name}}",
+      "phoneAriaLabel": "Call {{name}}",
+      "timeAriaLabel": "Reception time: {{time}}",
+      "title": {
+        "directorFirstDeputy": "First Deputy Director",
+        "directorDeputy": "Deputy Director"
+      },
+      "hours": {
+        "wednesday": "Wednesday 9:00-11:00",
+        "thursday": "Thursday 9:00-11:00"
+      }
+    },
+    "higherStandingOptimization": {
+      "text": "By the Decree of the President of the Republic of Uzbekistan dated December 24, 2022, No. PF-269, measures were implemented to carry out administrative reforms in New Uzbekistan. On the basis of the Ministry of Information Technologies and Communications, the Ministry of Digital Technologies was established. The main tasks and areas of activity of the ministry include: ensuring a unified state policy in the field of information technology and communications, introducing e-government, developing and implementing comprehensive programs for the development of the national information and communication system, modernizing telecommunications infrastructure, expanding broadband Internet access, transitioning to digital television and radio broadcasting systems, managing and licensing the radio frequency spectrum, coordinating and monitoring the activities of ministries and departments on digitalization, forming and using state information resources and databases, developing the national segment of the Internet, creating conditions for the development of modern web resources, promoting the development of domestic software and services, introducing modern information security technologies, training and advanced training of personnel, developing international cooperation and attracting investments.",
+      "views": "Views",
+      "lastUpdate": "Last update"
+    }
+  },
+  "carousel": {
+    "title": "Digital Education Projects"
+  }
+} 

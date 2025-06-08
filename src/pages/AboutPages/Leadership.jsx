@@ -10,25 +10,26 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import AboutPageHeader from "../../components/AboutComponents/AboutPageHeader";
 import "./about.css";
+import PropTypes from "prop-types";
 
 const Leadership = () => {
+  const { t } = useTranslation("global");
+
   const mainProfile = {
     name: "Azamat Eshankulov",
-    title: "Direktor",
-    description:
-      "2025-yil 10-fevraldagi Raqamli texnologiyalar vazirligi huzuridagi Raqamli ta'limni rivojlantirish markazi direktori lavozimida ishlab kelmoqda. Azamat Eshankulov raqamli texnologiyalar...",
-    fullDescription:
-      "2025-yil 10-fevraldagi Raqamli texnologiyalar vazirligi huzuridagi Raqamli ta'limni rivojlantirish markazi direktori lavozimida ishlab kelmoqda. Azamat Eshankulov raqamli texnologiyalar sohasida katta tajribaga ega bo'lib, bir qator muhim loyihalarni muvaffaqiyatli amalga oshirgan. U o'z faoliyati davomida zamonaviy ta'lim tizimini rivojlantirish va raqamlashtirish bo'yicha innovatsion g'oyalarni ilgari surgan.",
+    title: t("leadership.director.title"),
+    description: t("leadership.director.description"),
+    fullDescription: t("leadership.director.fullDescription"),
     email: "a.eshankulov@digital.uz",
     phone: "+998 71 203 03 43 (101)",
-    hours: "Juma 9:00-11:00",
+    hours: t("leadership.director.hours"),
     image: LeadershipImage1,
   };
 
   const teamMembers = [
     {
       name: "Vakant",
-      title: "Direktorning birinchi o‘rinbosari",
+      title: "about.leadership.title.directorFirstDeputy",
       email: "",
       phone: "",
       hours: "",
@@ -36,23 +37,21 @@ const Leadership = () => {
     },
     {
       name: "Davronbek Adilbekov",
-      title: "Direktor o'rinbosari",
+      title: "about.leadership.title.directorDeputy",
       email: "d.adilbekov@digital.uz",
       phone: "+998 71 203 03 43 (103)",
       image: LeadershipImage2,
-      hours: "Chorshanba 9:00-11:00",
+      hours: "about.leadership.hours.wednesday",
     },
     {
-      title: "Direktor o'rinbosari",
+      title: "about.leadership.title.directorDeputy",
       name: "Jasur Askarov",
       email: "invest@digital.uz",
       phone: "+998 78 238-41-76",
       image: LeadershipImage3,
-      hours: "Payshanba 9:00-11:00",
+      hours: "about.leadership.hours.thursday",
     },
   ];
-
-  const { t } = useTranslation("global");
 
   const breadCrumps = [
     {
@@ -73,22 +72,41 @@ const Leadership = () => {
     >
       <div className="flex items-center gap-2 text-gray-600">
         <img src={emailIcon} alt="Email icon" />
-        <a href={`mailto:${email}`} className="text-[14px] hover:text-blue-600">
-          {email}
-        </a>
+        {email ? (
+          <a href={`mailto:${email}`} className="text-[14px] hover:text-blue-600">
+            {email}
+          </a>
+        ) : (
+          <span className="text-[14px] text-gray-400">{t("noEmail")}</span>
+        )}
       </div>
       <div className="flex items-center gap-2 text-gray-600">
         <img src={phnoeIcon} alt="Phone icon" />
-        <a href={`tel:${phone}`} className="text-[14px] hover:text-blue-600">
-          {phone}
-        </a>
+        {phone ? (
+          <a href={`tel:${phone}`} className="text-[14px] hover:text-blue-600">
+            {phone}
+          </a>
+        ) : (
+          <span className="text-[14px] text-gray-400">{t("noPhone")}</span>
+        )}
       </div>
       <div className="flex items-center gap-2 text-gray-600">
         <img src={clockIcon} alt="Clock icon" />
-        <span className="text-[14px]">{hours}</span>
+        {hours ? (
+          <span className="text-[14px]">{t(hours)}</span>
+        ) : (
+          <span className="text-[14px] text-gray-400">{t("noHours")}</span>
+        )}
       </div>
     </div>
   );
+
+  ContactInfo.propTypes = {
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    hours: PropTypes.string,
+    mainProfile: PropTypes.bool
+  };
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -121,7 +139,7 @@ const Leadership = () => {
                     {mainProfile.name}
                   </h1>
                   <h2 className="text-xl text-gray-600 mb-4">
-                    {mainProfile.title}
+                    {t(mainProfile.title) || mainProfile.title}
                   </h2>
                   <p className="text-gray-700 mb-2">
                     {isExpanded
@@ -132,7 +150,7 @@ const Leadership = () => {
                     onClick={() => setIsExpanded(!isExpanded)}
                     className="text-blue-600 hover:text-blue-800 transition-colors duration-200 self-start mb-4"
                   >
-                    {isExpanded ? "Yopish" : "Batafsil"}
+                    {isExpanded ? t("common.collapse") : t("more")}
                   </button>
                   <ContactInfo
                     email={mainProfile.email}
@@ -167,7 +185,7 @@ const Leadership = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 mb-4">{member.title}</p>
+                  <p className="text-gray-600 mb-4">{t(member.title)}</p>
                   <ContactInfo
                     email={member.email}
                     phone={member.phone}

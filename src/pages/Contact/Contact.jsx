@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
-const Contact = ({ title = "Biz bilan bog'laning" }) => {
+const Contact = ({ title }) => {
+  const { t } = useTranslation("global");
   const [phone, setPhone] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const [name, setName] = useState("");
@@ -46,7 +49,7 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
           <div className="max-w-[1230px] mx-auto">
             <div className="flex justify-center">
               <h1 className="pb-[40px] font-bold text-[44px] leading-[64px] text-[#222222]">
-                {title}
+                {title || t("contact.title")}
               </h1>
             </div>
 
@@ -54,12 +57,12 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
               <div>
                 <div>
                   <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
-                    To'liq ismingiz
+                    {t("contact.nameLabel")}
                   </h1>
                   <input
                     className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
                     type="text"
-                    placeholder="To'liq ismingiz"
+                    placeholder={t("contact.namePlaceholder")}
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                   />
@@ -67,12 +70,12 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
 
                 <div>
                   <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
-                    Telefon raqamingiz
+                    {t("contact.phoneLabel")}
                   </h1>
                   <input
                     className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
                     type="text"
-                    placeholder={!isFocused ? "+998 XX XXX XX XX" : ""}
+                    placeholder={!isFocused ? t("contact.phonePlaceholder") : ""}
                     value={phone}
                     onChange={handlePhoneChange}
                     onFocus={() => setIsFocused(true)}
@@ -87,12 +90,12 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
 
                 <div>
                   <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
-                    Elektron pochta
+                    {t("contact.emailLabel")}
                   </h1>
                   <input
                     className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
                     type="text"
-                    placeholder="E-pochta manzili"
+                    placeholder={t("contact.emailPlaceholder")}
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                   />
@@ -100,11 +103,11 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
 
                 <div>
                   <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
-                    Biz qanday yordam bera olamiz?
+                    {t("contact.messageLabel")}
                   </h1>
                   <textarea
                     className="w-[300px] md:w-[500px] lg:w-[792px] h-[144px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
-                    placeholder="Xabaringizni shu yerga kiriting"
+                    placeholder={t("contact.messagePlaceholder")}
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                   ></textarea>
@@ -115,7 +118,7 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
                     className="px-[40px] py-[12px] bg-[#2675EB] font-medium text-[20px] text-white rounded-[27px]"
                     onClick={handleSubmit}
                   >
-                    Yuborish
+                    {t("contact.submit")}
                   </button>
                 </div>
               </div>
@@ -134,14 +137,14 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-semibold text-green-600 mb-2">
-              Muvaffaqiyatli yuborildi!
+              {t("contact.successTitle")}
             </h2>
-            <p className="text-gray-600">Tez orada siz bilan bog'lanamiz</p>
+            <p className="text-gray-600">{t("contact.successText")}</p>
           </div>
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -164,6 +167,10 @@ const Contact = ({ title = "Biz bilan bog'laning" }) => {
       `}</style>
     </div>
   );
+};
+
+Contact.propTypes = {
+  title: PropTypes.string
 };
 
 export default Contact;

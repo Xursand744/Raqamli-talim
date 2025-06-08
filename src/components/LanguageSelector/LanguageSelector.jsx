@@ -1,17 +1,13 @@
 import { useLanguage, languages } from '../../context/LanguageContext';
-
-const languageLabels = {
-  [languages.uz]: "O'zbekcha",
-  [languages.ru]: 'Русский',
-  [languages.en]: 'English'
-};
+import { useTranslation } from "react-i18next";
 
 export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation("global");
 
   return (
     <div className="flex items-center gap-2">
-      {Object.entries(languageLabels).map(([lang, label]) => (
+      {Object.values(languages).map((lang) => (
         <button
           key={lang}
           onClick={() => setLanguage(lang)}
@@ -21,7 +17,7 @@ export default function LanguageSelector() {
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
           }`}
         >
-          {label}
+          333{t(`language.${lang}`)}222
         </button>
       ))}
     </div>

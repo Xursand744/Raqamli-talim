@@ -1,0 +1,29 @@
+{
+  "successHistory": {
+    "title": "Muvaffaqiyat tarixlari",
+    "stories": {
+      "abror": {
+        "fullName": "Abror Juraev",
+        "desc": "O'qish davrida katta dasturchi bo'lish qanday"
+      },
+      "mohira": {
+        "fullName": "Mohira Tulaganova",
+        "desc": "O'qish davrida katta dasturchi bo'lish qanday"
+      },
+      "sevinch": {
+        "fullName": "Sevinch Mukimova",
+        "desc": "O'qish davrida katta dasturchi bo'lish qanday"
+      }
+    }
+  },
+  "locations": {
+    "andijan": "Andijon",
+    "navoi": "Navoiy",
+    "tashkent": "Toshkent"
+  },
+  "roles": {
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "design": "Dizayn"
+  }
+} 

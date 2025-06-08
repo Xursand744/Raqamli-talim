@@ -18,11 +18,11 @@
     "alXorazmiyHeirs": "Al Khwarizmi's Heirs",
     "studyCenters": "Study Centers",
     "itUniversities": "IT Universities",
-    "courses": "Courses",
     "news": "News",
     "itTips": "IT Tips",
     "contact": "Contact",
-    "significantDatasets": "Socially significant information"
+    "significantDatasets": "Socially significant information",
+    "courses": "Courses"
   },
   "landing-1": {
     "title": "Al-Khwarizmi",
@@ -209,8 +209,45 @@
       "IT product export volume to reach 5 billion dollars"
     ],
     "goal": "The center works to achieve the following results by 2030",
-    "finalMessage": "We are coding a brighter future with the youth!"
+    "finalMessage": "We are coding a brighter future with the youth!",
+    "higherStandingOptimization": {
+      "text": "By Decree No. PF-269 of December 24, 2022, of the President of the Republic of Uzbekistan 'On Measures to Implement the Administrative Reforms of New Uzbekistan,' the Ministry of Digital Technologies was established on the basis of the former Ministry for the Development of Information Technologies and Communications. The principal tasks and directions of the Ministry's work are as follows: Ensure implementation of a unified state policy in the field of information technologies and communications and in the rollout of 'e-government.' Develop and execute comprehensive programs for applying and advancing the national information and communication system in line with world-class IT standards. Further develop and modernize telecommunications infrastructure, including expanding broadband Internet access; ensure full transition of telephony, television, and radio broadcasting to digital systems; and carry out state functions of managing, licensing, and controlling communications activities and use of the radio-frequency spectrum. Coordinate across ministries, agencies, companies, organizations, and local government bodies to implement state programs for e-government, monitor, evaluate, and control their progress; and establish a unified system for the creation, storage, and use of state information resources and databases, as well as the development and management of interdepartmental information systems. Promote the further formation of the national segment of the Internet; create the technical and ergonomic conditions necessary to develop modern domestic web resources in various fields, meeting the information and intellectual needs of the population—especially the younger generation. Support and coordinate production of competitive software products within the country, foster their domestic market and related services, and drive the adoption of modern software solutions, information systems, and resources in the real sectors of the economy and among consumers. Implement measures to ensure information security and to apply modern protection technologies for communication networks, software products, information systems, and resources; and further develop the technical infrastructure for safeguarding information assets. Organize scientific research and development in modern communication tools; oversee training, retraining, and professional development of personnel; and support the design and implementation of software products, information systems, and databases, as well as information-security initiatives and related ICT projects. Establish international cooperation in communications and information-technology fields; carry out priority projects; and attract foreign investment for efficient use of the radio-frequency spectrum and other activities within the Ministry's remit.",
+      "views": "Views",
+      "lastUpdate": "Last Update"
+    },
+    "leadership": {
+      "title": {
+        "directorFirstDeputy": "First Deputy Director",
+        "directorDeputy": "Deputy Director"
+      },
+      "hours": {
+        "wednesday": "Wednesday 9:00-11:00",
+        "thursday": "Thursday 9:00-11:00"
+      },
+      "director": {
+        "title": "Director",
+        "description": "Since February 10, 2025, he has been serving as the Director of the Center for the Development of Digital Education under the Ministry of Digital Technologies. Azamat Eshankulov has extensive experience in digital technologies...",
+        "fullDescription": "Since February 10, 2025, he has been serving as the Director of the Center for the Development of Digital Education under the Ministry of Digital Technologies. Azamat Eshankulov has extensive experience in digital technologies and has successfully implemented a number of important projects. Throughout his career, he has promoted innovative ideas for the development and digitalization of the modern education system.",
+        "hours": "Friday 9:00-11:00"
+      }
+    }
   },
+  "leadership": {
+      "title": {
+        "directorFirstDeputy": "First Deputy Director",
+        "directorDeputy": "Deputy Director"
+      },
+      "hours": {
+        "wednesday": "Wednesday 9:00-11:00",
+        "thursday": "Thursday 9:00-11:00"
+      },
+      "director": {
+        "title": "Director",
+        "description": "Since February 10, 2025, he has been serving as the Director of the Center for the Development of Digital Education under the Ministry of Digital Technologies. Azamat Eshankulov has extensive experience in digital technologies...",
+        "fullDescription": "Since February 10, 2025, he has been serving as the Director of the Center for the Development of Digital Education under the Ministry of Digital Technologies. Azamat Eshankulov has extensive experience in digital technologies and has successfully implemented a number of important projects. Throughout his career, he has promoted innovative ideas for the development and digitalization of the modern education system.",
+        "hours": "Friday 9:00-11:00"
+      }
+    },
   "breadcrumbs": {
     "home": "Home",
     "about": "About the Center",
@@ -238,7 +275,6 @@
   "hybrid": "Hybrid",
   "view_courses": "{{count}} courses available",
   "center_count": "{{count}} centers",
-  "courses": "Courses",
   "tashkent": "Tashkent",
   "pdp_academy": "PDP Academy",
   "price_from": "From {{amount}}",
@@ -370,6 +406,7 @@
   "one_million_uzbek_coders_description": "Our following guide is for you.",
   "one_million_uzbek_coders_events": "Download",
   "accessibility": {
+    "title": "Special Opportunities",
     "menu": "Accessibility Menu",
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode",
@@ -377,5 +414,143 @@
     "decreaseFont": "Decrease Font Size",
     "startSpeech": "Start Reading",
     "stopSpeech": "Stop Reading"
+  },
+  "messages": {
+    "loading": "Loading...",
+    "testMode": "⚠️ Attention! This website is running in test mode. Information may be outdated."
+  },
+  "carousel": {
+    "title": "Digital Education Projects"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your full name",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+998 XX XXX XX XX",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Email address",
+    "messageLabel": "How can we help you?",
+    "messagePlaceholder": "Enter your message here",
+    "submit": "Send",
+    "successTitle": "Successfully sent!",
+    "successText": "We will contact you soon"
+  },
+  "structure": {
+    "director": "Director",
+    "firstDeputy": "First Deputy Director",
+    "deputy": "Deputy Director",
+    "secondDeputy": "Deputy Director",
+    "muhammadAlXorazmiy": "Department for Coordination of the 'Muhammad al-Khwarizmi Heirs' System",
+    "hrDepartment": "HR Department",
+    "chiefLawyer": "Chief Legal Counsel",
+    "disciplineSpecialist": "Chief Specialist for Executive Discipline and Appeals",
+    "marketingPr": "Marketing and PR Department",
+    "complianceSpecialist": "Chief Compliance Specialist",
+    "talentedYouth": "Department for Attracting Talented Youth to IT",
+    "distanceEducation": "Department for Development of Educational Institutions and Distance Learning",
+    "digitalTech": "Digital Technologies Department",
+    "freelancers": "Freelancers Department",
+    "economyFinance": "Economy and Finance Department",
+    "accounting": "Accounting Department",
+    "regionsCoordination": "Department for Regional Work and Coordination of IT Towns",
+    "regionsBranches": "IT Town Branches in Regions",
+    "investmentOffice": "Investment Project Office",
+    "infoAnalytics": "Information Analytics Department"
+  },
+  "noEmail": "No email",
+  "noPhone": "No phone",
+  "noHours": "No hours",
+  "more": "More",
+  "collapse": "Collapse",
+  "departments": {
+    "1": {
+      "fullname": "Saidmurod Abdujabborov",
+      "position": "Head of the Department for Coordination of the 'Muhammad al-Khwarizmi Heirs' System"
+    },
+    "2": {
+      "fullname": "Alisher Rapiyev",
+      "position": "Head of the Department for Work with Educational Institutions"
+    },
+    "3": {
+      "fullname": "Shaxzod Ermatov",
+      "position": "Head of the Digital Technologies Department"
+    },
+    "4": {
+      "fullname": "Muhlisa Khudayberganova",
+      "position": "Head of the Department for Attracting Talented Youth to IT"
+    },
+    "5": {
+      "fullname": "Farrukh Abduvohidov",
+      "position": "Head of the Investment Project Office"
+    },
+    "6": {
+      "fullname": "",
+      "position": "Head of the HR Department"
+    },
+    "7": {
+      "fullname": "Moxira Nurullayeva",
+      "position": "Head of the Marketing and PR Department"
+    },
+    "8": {
+      "fullname": "Mirabbos Anvarov",
+      "position": "Head of the Freelancers Department"
+    },
+    "9": {
+      "fullname": "Akbarkhoja Anvarkhanov",
+      "position": "Head of the Department for Regional Work and Coordination of IT Towns"
+    },
+    "10": {
+      "fullname": "Odil Soliyev",
+      "position": "Head of the Economy and Finance Department"
+    },
+    "11": {
+      "fullname": "Muhammadsodiq Karimov",
+      "position": "Chief Legal Counsel"
+    },
+    "12": {
+      "fullname": "Iskandar Turayev",
+      "position": "Chief Compliance Specialist"
+    },
+    "13": {
+      "fullname": "Yayra Ibragimova",
+      "position": "Information Analytics Department"
+    },
+    "14": {
+      "fullname": "Vacant",
+      "position": "Head of the Accounting Department"
+    }
+  },
+  "antiCorruption": {
+    "annualReport": "Annual report on the results of consideration of appeals regarding corruption cases of the Ministry of Digital Technologies of the Republic of Uzbekistan",
+    "info": "INFORMATION",
+    "appointedPersonnel": "On appointed (rotated) management personnel in the Ministry of Digital Technologies of the Republic of Uzbekistan during 2024",
+    "antiCorruptionReport": "On the implementation of measures provided for in the state program to combat corruption in the Ministry of Digital Technologies",
+    "report": "REPORT",
+    "generalReport": "GENERAL REPORT on the functioning of the anti-corruption system in the Ministry of Digital Technologies for 2024",
+    "conflictOfInterest": "Results of internal departmental control regarding conflict of interest cases",
+    "results": "results",
+    "antiCorruptionTraining": "General and",
+    "specialTraining": "special training on anti-corruption",
+    "antiCorruptionEvents": "Propaganda events organized on anti-corruption topics",
+    "propagandaEvents": "propaganda events",
+    "views": "Views",
+    "lastUpdate": "Last update"
+  },
+  "courses": {
+    "title": "Courses",
+    "viewDetails": "View course details",
+    "courseImage": "Course image"
+  },
+  "common": {
+    "tashkent": "Tashkent"
+  },
+  "pagination": {
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "search": {
+    "placeholder": "Search",
+    "sortByName": "Sort by name"
   }
 }

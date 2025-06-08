@@ -1,0 +1,23 @@
+{
+  "title": "Event Schedule",
+  "events": {
+    "itea": {
+      "title": "ITea: Let's talk about IT over a cup of tea",
+      "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+      "date": "February 22, 2025",
+      "category": "InnoWomenWeek"
+    },
+    "olympiad": {
+      "title": "ICT4Girls Informatics Olympiad for female students in Uzbekistan",
+      "description": "Mentoring sessions with qualified specialists for youth interested in IT",
+      "date": "March-May 2025",
+      "category": "InnoWomenWeek"
+    },
+    "devopsDays": {
+      "title": "International DevOpsDays Forum",
+      "description": "On May 24, 2025, the international DevOpsDays forum will be held in Tashkent. Specialists from about 10 foreign countries are expected to participate in the forum and share their knowledge.",
+      "date": "May 24, 2025",
+      "category": "InnoWomenWeek"
+    }
+  }
+} 

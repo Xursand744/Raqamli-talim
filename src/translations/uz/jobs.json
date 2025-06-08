@@ -1,0 +1,34 @@
+{
+  "topJobs": {
+    "title": "Eng yaxshi kasblar reytingi"
+  },
+  "jobTitles": {
+    "backend": "Backend dasturchi",
+    "frontend": "Frontend dasturchi",
+    "projectManager": "Loyiha menejeri",
+    "mobile": "Mobil dasturchi",
+    "design": "Dizayner",
+    "smm": "SMM mutaxassisi",
+    "animation3d": "3D animator"
+  },
+  "jobCourses": {
+    "backendCourses": "123 ta kurs mavjud",
+    "frontendCourses": "Oylik hisobotlar",
+    "projectManagerCourses": "Oylik hisobotlar",
+    "avgSalaryText": "O'rtacha maosh"
+  },
+  "metrics": {
+    "min": "Eng past maosh",
+    "avg": "O'rtacha maosh",
+    "max": "Eng yuqori maosh"
+  },
+  "chart": {
+    "title": "Talab grafigi"
+  },
+  "backends": {
+    "title": "Backend",
+    "description": "Bu foydalanuvchilar ko'rmaydigan, lekin ilova yoki veb-saytning to'g'ri ishlashini ta'minlovchi dasturiy ta'minotning yashirin qismidir.",
+    "rank": "#1",
+    "courses": "123 ta kurs"
+  }
+} 

@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { SearchIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 import PriceRange from "./PriceRange";
 
-export default function CourseFilter() {
+export default function CourseFilter({ onFilterChange }) {
+  const { t } = useTranslation();
   const [priceRange, setPriceRange] = useState([2500000, 5000000]);
-  const [selectedCenter, setSelectedCenter] = useState("PDP Adademy");
+  const [selectedCenter, setSelectedCenter] = useState("");
 
   const centers = [
     { name: "PDP Adademy", count: 77 },
@@ -34,50 +37,29 @@ export default function CourseFilter() {
     { name: "Gibrid", count: 16 },
   ];
 
-  const handleRangeChange = (e) => {
-    setPriceRange([e.target.value, priceRange[1]]);
+  const handleRangeChange = (newRange) => {
+    setPriceRange(newRange);
+    if (onFilterChange) {
+      onFilterChange({ priceRange: newRange });
+    }
+  };
+
+  const handleCenterChange = (centerName) => {
+    setSelectedCenter(centerName);
+    if (onFilterChange) {
+      onFilterChange({ center: centerName });
+    }
   };
 
   return (
-    <div className="max-w-sm mx-auto p-4 bg-white rounded-lg shadow">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-semibold">Saralash</h2>
-        <button className="text-blue-500">Tozzalash</button>
-      </div>
-
+    <div className="p-4 bg-white rounded-lg shadow-sm">
       <div className="mb-6">
-        <h3 className="text-lg mb-2">Kurslar narx oralig'i</h3>
-        <PriceRange />
-        {/* <div className="flex gap-4 items-center mb-2">
-          <input
-            type="number"
-            value={priceRange[0]}
-            className="w-32 p-2 border rounded"
-            onChange={handleRangeChange}
-          />
-          <input
-            type="number"
-            value={priceRange[1]}
-            className="w-32 p-2 border rounded"
-          />
-        </div>
-        <input
-          type="range"
-          min="0"
-          max="10000000"
-          value={priceRange[0]}
-          onChange={handleRangeChange}
-          className="w-full"
-        /> */}
-      </div>
-
-      <div className="mb-6">
-        <h3 className="text-lg mb-2">O'quv markaz bo'yicha</h3>
+        <h3 className="text-lg mb-2">{t("filters.centers.title")}</h3>
         <div className="relative mb-4">
           <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
           <input
             type="text"
-            placeholder="O'quv markaz nomi"
+            placeholder={t("filters.centers.placeholder")}
             className="w-full pl-10 p-2 border rounded"
           />
         </div>
@@ -91,9 +73,9 @@ export default function CourseFilter() {
                 type="checkbox"
                 className="w-4 h-4 mr-2"
                 checked={selectedCenter === center.name}
-                onChange={() => setSelectedCenter(center.name)}
+                onChange={() => handleCenterChange(center.name)}
               />
-              <span>{center.name}</span>
+              <span>{t(`centers.${center.name}`)}</span>
             </div>
             <span className="text-gray-500">{center.count}</span>
           </label>
@@ -101,33 +83,31 @@ export default function CourseFilter() {
       </div>
 
       <div className="mb-6">
-        <h3 className="text-lg mb-2">O'quv kurs yo'nalishi</h3>
+        <h3 className="text-lg mb-2">{t("filters.courses.title")}</h3>
         <div className="relative mb-4">
           <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
           <input
             type="text"
-            placeholder="O'quv kurs"
+            placeholder={t("filters.courses.placeholder")}
             className="w-full pl-10 p-2 border rounded"
           />
         </div>
-        {courses.map((course) => {
-          return (
-            <label
-              key={course.name}
-              className="flex items-center justify-between py-2"
-            >
-              <div className="flex items-center">
-                <input type="checkbox" className="w-4 h-4 mr-2" />
-                <span>{course.name}</span>
-              </div>
-              <span className="text-gray-500">{course.count}</span>
-            </label>
-          );
-        })}
+        {courses.map((course) => (
+          <label
+            key={course.name}
+            className="flex items-center justify-between py-2"
+          >
+            <div className="flex items-center">
+              <input type="checkbox" className="w-4 h-4 mr-2" />
+              <span>{t(`courses.${course.name}`)}</span>
+            </div>
+            <span className="text-gray-500">{course.count}</span>
+          </label>
+        ))}
       </div>
 
       <div className="mb-6">
-        <h3 className="text-lg mb-2">Kurslar davomiyligi</h3>
+        <h3 className="text-lg mb-2">{t("filters.duration.title")}</h3>
         {durations.map((duration) => (
           <label
             key={duration.name}
@@ -135,7 +115,7 @@ export default function CourseFilter() {
           >
             <div className="flex items-center">
               <input type="checkbox" className="w-4 h-4 mr-2" />
-              <span>{duration.name}</span>
+              <span>{t(`duration.${duration.name}`)}</span>
             </div>
             <span className="text-gray-500">{duration.count}</span>
           </label>
@@ -143,7 +123,7 @@ export default function CourseFilter() {
       </div>
 
       <div className="mb-6">
-        <h3 className="text-lg mb-2">Kurslar formati</h3>
+        <h3 className="text-lg mb-2">{t("filters.format.title")}</h3>
         {formats.map((format) => (
           <label
             key={format.name}
@@ -151,16 +131,22 @@ export default function CourseFilter() {
           >
             <div className="flex items-center">
               <input type="checkbox" className="w-4 h-4 mr-2" />
-              <span>{format.name}</span>
+              <span>{t(`format.${format.name}`)}</span>
             </div>
             <span className="text-gray-500">{format.count}</span>
           </label>
         ))}
       </div>
 
-      <button className="w-full bg-blue-500 text-white py-3 rounded-lg">
-        77 ta kursni ko'rish
+      <PriceRange priceRange={{ min: priceRange[0], max: priceRange[1] }} setPriceRange={handleRangeChange} />
+
+      <button className="w-full bg-blue-500 text-white py-3 rounded-lg mt-6">
+        {t("filters.showCourses", { count: 77 })}
       </button>
     </div>
   );
 }
+
+CourseFilter.propTypes = {
+  onFilterChange: PropTypes.func
+};

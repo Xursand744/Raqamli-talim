@@ -1,0 +1,34 @@
+{
+  "topJobs": {
+    "title": "Top Professions Ranking"
+  },
+  "jobTitles": {
+    "backend": "Backend Developer",
+    "frontend": "Frontend Developer",
+    "projectManager": "Project Manager",
+    "mobile": "Mobile Developer",
+    "design": "Designer",
+    "smm": "SMM Specialist",
+    "animation3d": "3D Animator"
+  },
+  "jobCourses": {
+    "backendCourses": "123 courses available",
+    "frontendCourses": "Monthly reports",
+    "projectManagerCourses": "Monthly reports",
+    "avgSalaryText": "Average salary"
+  },
+  "metrics": {
+    "min": "Lowest salary",
+    "avg": "Average salary",
+    "max": "Highest salary"
+  },
+  "chart": {
+    "title": "Demand chart"
+  },
+  "backends": {
+    "title": "Backend",
+    "description": "This is the hidden part of the software that users don't see but ensures the proper functioning of the application or website.",
+    "rank": "#1",
+    "courses": "123 courses"
+  }
+} 

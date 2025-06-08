@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import PriceRange from "./PriceRange";
 import CourseItem from "./CourseItem";
 import CourseItemImage from "../assets/course-item.jpg";
-import { useTranslation } from "react-i18next";
 
 export default function TipsFilter() {
   const { t } = useTranslation("global");
@@ -14,6 +14,7 @@ export default function TipsFilter() {
   const [totalPages, setTotalPages] = useState(1);
   const [coursesData, setCoursesData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 5000000 });
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -26,7 +27,7 @@ export default function TipsFilter() {
       setCoursesData(res.data.data);
       setTotalPages(res.data.meta.last_page);
     } catch (error) {
-      console.error("Ошибка при получении курсов:", error);
+      console.error(t("errors.fetchCourses"), error);
     } finally {
       setIsLoading(false);
     }
@@ -39,18 +40,23 @@ export default function TipsFilter() {
   const mapCourse = (course) => ({
     id: course.id,
     title: course.category.name_uz,
-    center: course.center?.name || "Неизвестно",
+    center: course.center?.name || t("common.unknown"),
     price: course.price,
-    duration: `${course.duration} oy`,
+    duration: `${course.duration} ${t("common.months")}`,
     format: course.type,
     name: course.name_uz || "",
     image: course.center?.logo || CourseItemImage,
-    location: "Toshkent",
-    fullLocation: "Toshkent, Uzbekistan",
+    location: t("common.tashkent"),
+    fullLocation: t("common.tashkentUzbekistan"),
     telegram: course.center?.telegram,
     number: course.center?.phone,
     website: course.center?.website,
   });
+
+  const handlePriceRangeChange = (newRange) => {
+    setPriceRange(newRange);
+    // Здесь можно добавить логику фильтрации по цене
+  };
 
   return (
     <div className="relative">
@@ -58,13 +64,14 @@ export default function TipsFilter() {
       <button
         className="absolute z-50 top-15 right-2 bg-blue-500 text-white p-3 rounded-full shadow-lg md:hidden"
         onClick={toggleSidebar}
+        aria-label={isSidebarOpen ? t("common.closeFilters") : t("common.openFilters")}
       >
         {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       <div className="flex flex-col md:flex-row">
         {/* Sidebar */}
-        <div className="flex flex-col md:flex-row">
+        {/* <div className="flex flex-col md:flex-row">
           <div
             className={`
               fixed inset-y-0 left-0 z-40 w-[60%] md:w-[50%] bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out transform
@@ -74,30 +81,33 @@ export default function TipsFilter() {
             <div className="space-y-6 h-full overflow-y-auto">
               <div className="flex justify-between items-center">
                 <h2 className="text-[#222] text-xl md:text-2xl font-medium">
-                  {t("filters.sorting")}
+                  {t("filters.title")}
                 </h2>
-                <p
+                <button
                   className="text-[#2675EB] text-sm md:text-base cursor-pointer"
                   onClick={() => {
-                    // В будущем можно сбросить фильтры
+                    setPriceRange({ min: 0, max: 5000000 });
+                    // Здесь можно добавить сброс других фильтров
                   }}
                 >
-                  {t("filters.clean")}
-                </p>
+                  {t("filters.reset")}
+                </button>
               </div>
               <hr />
-              <PriceRange priceRange={{ min: 0, max: 5000000 }} setPriceRange={() => {}} />
-              {/* Можно добавить фильтры позже */}
+              <PriceRange 
+                priceRange={priceRange} 
+                setPriceRange={handlePriceRangeChange} 
+              />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Course List */}
         <div className="flex-1 mt-12 md:mt-0 p-4 md:p-6">
-          <h2 className="text-2xl font-bold mb-4">Kurslar</h2>
+          <h2 className="text-2xl font-bold mb-4">{t("courses.title")}</h2>
 
           {isLoading ? (
-            <p>Загрузка...</p>
+            <p>{t("common.loading")}</p>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
               {coursesData.map((course) => (
@@ -112,9 +122,10 @@ export default function TipsFilter() {
               className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
+              aria-label={t("pagination.previous")}
             >
               <i className="bx bx-chevron-left text-xl"></i>
-              <span>Предыдущая</span>
+              <span>{t("pagination.previous")}</span>
             </button>
             
             <div className="flex items-center space-x-2">
@@ -123,6 +134,7 @@ export default function TipsFilter() {
                   <button
                     className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
                     onClick={() => setCurrentPage(1)}
+                    aria-label={t("pagination.firstPage")}
                   >
                     1
                   </button>
@@ -151,6 +163,8 @@ export default function TipsFilter() {
                         : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
                     }`}
                     onClick={() => setCurrentPage(page)}
+                    aria-label={t("pagination.page", { page })}
+                    aria-current={currentPage === page ? "page" : undefined}
                   >
                     {page}
                   </button>
@@ -163,6 +177,7 @@ export default function TipsFilter() {
                   <button
                     className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
                     onClick={() => setCurrentPage(totalPages)}
+                    aria-label={t("pagination.lastPage")}
                   >
                     {totalPages}
                   </button>
@@ -174,8 +189,9 @@ export default function TipsFilter() {
               className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
+              aria-label={t("pagination.next")}
             >
-              <span>Следующая</span>
+              <span>{t("pagination.next")}</span>
               <i className="bx bx-chevron-right text-xl"></i>
             </button>
           </div>

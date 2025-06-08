@@ -1,0 +1,24 @@
+{
+  "center": {
+    "title": "Center in Numbers",
+    "description": "In 2023, more than 14,300 students successfully completed resident company training courses, and the number of trained IT specialists exceeded 5,190 people. Resident companies of IT Park offer more than 400 IT courses."
+  },
+  "statistics": {
+    "activeProjects": "Active Projects",
+    "itStudents": "Graduates",
+    "employedStudents": "Employed Graduates",
+    "employedStudents2ForeignCompany": "Graduates Employed in Export Companies",
+    "males": "Male Graduates",
+    "females": "Female Graduates"
+  },
+  "school": {
+    "title": "Best Training Centers",
+    "card": {
+      "pdpAcademy": "PDP Academy",
+      "studying": "Students",
+      "graduated": "Graduates",
+      "employed": "Employed",
+      "exporters": "IT Exporters"
+    }
+  }
+} 
