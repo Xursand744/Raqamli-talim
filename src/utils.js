@@ -11,9 +11,10 @@ import talent from "./assets/images/projects/talent_1.jpg";
 import tot from "./assets/images/projects/5.jpg";
 import job from "./assets/images/projects/6.jpg";
 import ict from "./assets/images/projects/7.jpg";
-import api from "./assets/images/projects/8.jpg";
-import icpc from "./assets/images/projects/9.png";
-import aca from "./assets/images/projects/10.jpg";
+import api from "./assets/images/projects/9.png";
+import icpc from "./assets/images/projects/10.jpg";
+import aca from "./assets/images/projects/8.jpg";
+
 import {
   DeparmentImage10,
   DeparmentImage11,

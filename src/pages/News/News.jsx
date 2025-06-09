@@ -65,7 +65,7 @@ function News() {
       }
     } catch (error) {
       console.error('Error fetching news:', error);
-      setError(error.response?.data?.message || "Xatolik yuz berdi. Iltimos, qaytadan urinib ko&apos;ring.");
+      setError(error.response?.data?.message || "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring.");
     } finally {
       setIsLoading(false);
     }

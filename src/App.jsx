@@ -32,6 +32,12 @@ import SingleArticle from "./pages/Articles/SingleArticle";
 import JoinTeam from "./pages/AboutPages/JoinTeam";
 import ProjectStudyCenters from "./pages/Projects/StudyCenters";
 import Universities from "./pages/Projects/Universities";
+import Tot from "./pages/Projects/Tot";
+import JobEdu from "./pages/Projects/JobEdu";
+import Ict from "./pages/Projects/Ict";
+import Aca from "./pages/Projects/Aca";
+import Apio from "./pages/Projects/Apio";
+import Icpc from "./pages/Projects/ICPC";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -110,6 +116,30 @@ export default function App() {
             {
               path: "it-village",
               element: <ItVillage />,
+            },
+            {
+              path: "tot",
+              element: <Tot />,
+            },
+            {
+              path: "job-edu-fest",
+              element: <JobEdu />,
+            },
+            {
+              path: "ict4girls",
+              element: <Ict />,
+            },
+            {
+              path: "icpc-uzbekistan-olympiad",
+              element: <Icpc />,
+            },
+            {
+              path: "apio",
+              element: <Apio />,
+            },
+            {
+              path: "aca-navigator",
+              element: <Aca />,
             },
             {
               path: "study-centers",

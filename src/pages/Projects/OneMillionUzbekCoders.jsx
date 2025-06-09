@@ -45,12 +45,12 @@ function Courses() {
   return (
     <div className="max-w-[1300px] mx-auto px-4 py-8 sm:py-12">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-        Yo&apos;nalishlar
+        Yo'nalishlar
       </h2>
       <p className="mb-6 sm:mb-8 text-gray-600 text-sm sm:text-base md:text-base">
-        Loyihada yosh chegarasi mavjud emas barcha o&apos;qish istagida bo&apos;lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo&apos;nalish bo&apos;yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo&apos;ladi.
+        Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
+        uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
+        yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
       </p>
 
       <div className="flex flex-col gap-3 sm:gap-4">
@@ -120,9 +120,9 @@ const OneMillionUzbekCoders = () => {
             alt="Coursera Project"
           />
           <h1 className="pt-[40px] pb-[100px] font-semibold text-[18px]">
-            O&apos;zbekiston Respublikasida yoshlarni &quot;Bir million dasturchi&quot;
+            O'zbekiston Respublikasida yoshlarni &quot;Bir million dasturchi&quot;
             loyihasining navbatdagi bosqichi sifatida &quot;Coursera&quot; onlayn
-            platformasida o&apos;qitish maqsad qilingan.
+            platformasida o'qitish maqsad qilingan.
           </h1>
         </div>
       </div>
@@ -196,7 +196,7 @@ const OneMillionUzbekCoders = () => {
             1,000,000+
           </h1>
           <p className="font-medium text-[16px] text-[#222222]">
-            Ro&apos;yxatdan o&apos;tganlar soni
+            Ro'yxatdan o'tganlar soni
           </p>
         </div>
         <div className="w-[384] py-[22px] px-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]">
@@ -229,9 +229,9 @@ const OneMillionUzbekCoders = () => {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <p className="text-gray-800 text-sm sm:text-base">
-                  &quot;Ma&apos;muriy islohotlar doirasida raqamli texnologiyalar sohasida
+                  &quot;Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida
                   davlat boshqaruvini samarali tashkil etish chora-tadbirlari
-                  to&apos;g&apos;risida&quot;gi PF-75-son farmoni
+                  to'g'risida&quot;gi PF-75-son farmoni
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">
@@ -244,7 +244,7 @@ const OneMillionUzbekCoders = () => {
                 <p className="text-gray-800 text-sm sm:text-base">
                   &quot;Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha,
                   tarmoq va hududlarda raqamli transformatsiya qilish
-                  chora-tadbirlari to&apos;g&apos;risida&quot;gi PQ-182-son qarori
+                  chora-tadbirlari to'g'risida&quot;gi PQ-182-son qarori
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">

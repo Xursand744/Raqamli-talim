@@ -117,7 +117,7 @@ export default function ItTalents() {
     {
       icon: MoneyBag,
       value: 0,
-      label: "To&apos;lov jarayonida",
+      label: "To'lov jarayonida",
     },
     {
       icon: Document,
@@ -176,7 +176,7 @@ export default function ItTalents() {
 
               <div className="text-center space-y-3 md:space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900">
-                  O&apos;quv yo&apos;nalishlar ro&apos;yxati
+                  O'quv yo'nalishlar ro'yxati
                 </h1>
                 <p className="text-sm md:text-base text-gray-600">
                   Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
@@ -261,7 +261,7 @@ export default function ItTalents() {
                       }
                       className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]"
                     >
-                      Havolaga o&apos;tish
+                      Havolaga o'tish
                     </button>
                   </div>
                 </div>
@@ -284,11 +284,11 @@ export default function ItTalents() {
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
               <h1 className="text-[#222] font-bold text-[40px]">
-                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro&apos;yxatdan
-                o&apos;tish bo&apos;yicha yo&apos;riqnoma:
+                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro'yxatdan
+                o'tish bo'yicha yo'riqnoma:
               </h1>
               <p className="text-[#222] text-[20px]">
-                Quyidagi qo&apos;llanmamiz siz uchun
+                Quyidagi qo'llanmamiz siz uchun
               </p>
 
               <div>
@@ -299,7 +299,7 @@ export default function ItTalents() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    O&apos;zbek tilida
+                    O'zbek tilida
                   </button>
                   <button
                     className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"

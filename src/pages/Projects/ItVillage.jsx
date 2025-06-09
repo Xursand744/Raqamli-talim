@@ -49,12 +49,12 @@ const CoursesSection = () => (
   <div className="max-w-[1300px] mx-auto px-4 py-20 bg-gradient-to-b from-gray-50 to-white">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <h2 className="text-4xl font-bold mb-6 text-gray-900">
-        Yo&apos;nalishlar
+        Yo'nalishlar
       </h2>
       <p className="text-gray-600 text-lg leading-relaxed">
-        Loyihada yosh chegarasi mavjud emas barcha o&apos;qish istagida bo&apos;lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo&apos;nalish bo&apos;yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo&apos;ladi.
+        Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
+        uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
+        yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
       </p>
     </div>
 
@@ -100,7 +100,7 @@ const HeroSection = () => (
         alt="IT Village Project"
       />
       <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 text-center max-w-3xl">
-        &quot;IT shaharcha&quot; – bu nafaqat ta&apos;lim, balki raqamli ekotizim yaratishga yo&apos;naltirilgan yirik tashabbusdir
+        &quot;IT shaharcha&quot; – bu nafaqat ta'lim, balki raqamli ekotizim yaratishga yo'naltirilgan yirik tashabbusdir
       </h2>
     </div>
   </div>
@@ -110,9 +110,9 @@ const HeroSection = () => (
 const DescriptionSection = () => (
   <div className="max-w-[1230px] mx-auto px-4 py-20 bg-gradient-to-b from-white to-gray-50">
     <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-      &quot;IT shaharcha&quot; dasturi O&apos;zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo&apos;lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o&apos;qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O&apos;zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo&apos;lib, hududlarda innovatsion ta&apos;lim muhitini shakllantirishga yo&apos;naltirilgan.
-      Davlat tomonidan dastur doirasida o&apos;quvchilarni doimiy rag&apos;batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o&apos;rganish va global IT-bozorda o&apos;z o&apos;rnini topish uchun keng imkoniyatlar taqdim etadi.
-      Zamonaviy infratuzilmaga ega &quot;IT-shaharcha&quot;lar yoshlarni xalqaro mehnat bozoriga tayyorlash, ish bilan ta&apos;minlash va IT-xizmatlar eksportini rivojlantirishga xizmat qiladi. Loyiha doirasida yaratilayotgan sharoitlar tufayli hududlarda texnologik innovatsiyalar tezkor rivojlanib, yoshlar uchun yangi imkoniyatlar ochiladi.
+      &quot;IT shaharcha&quot; dasturi O'zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo'lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o'qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O'zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo'lib, hududlarda innovatsion ta'lim muhitini shakllantirishga yo'naltirilgan.
+      Davlat tomonidan dastur doirasida o'quvchilarni doimiy rag'batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o'rganish va global IT-bozorda o'z o'rnini topish uchun keng imkoniyatlar taqdim etadi.
+      Zamonaviy infratuzilmaga ega &quot;IT-shaharcha&quot;lar yoshlarni xalqaro mehnat bozoriga tayyorlash, ish bilan ta'minlash va IT-xizmatlar eksportini rivojlantirishga xizmat qiladi. Loyiha doirasida yaratilayotgan sharoitlar tufayli hududlarda texnologik innovatsiyalar tezkor rivojlanib, yoshlar uchun yangi imkoniyatlar ochiladi.
     </p>
   </div>
 );
@@ -141,10 +141,10 @@ const DecisionsSection = () => (
 
     <div className="grid md:grid-cols-2 gap-8">
       <DecisionCard 
-        text="Ma&apos;muriy islohotlar doirasida raqamli texnologiyalar sohasida davlat boshqaruvini samarali tashkil etish chora-tadbirlari to&apos;g&apos;risida&apos;gi PF-75-son farmoni"
+        text="Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida davlat boshqaruvini samarali tashkil etish chora-tadbirlari to'g'risida'gi PF-75-son farmoni"
       />
       <DecisionCard 
-        text="Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha, tarmoq va hududlarda raqamli transformatsiya qilish chora-tadbirlari to&apos;g&apos;risida&apos;gi PQ-182-son qarori"
+        text="Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha, tarmoq va hududlarda raqamli transformatsiya qilish chora-tadbirlari to'g'risida'gi PQ-182-son qarori"
       />
     </div>
   </div>
