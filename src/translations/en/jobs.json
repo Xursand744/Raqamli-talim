@@ -1,6 +1,6 @@
 {
   "topJobs": {
-    "title": "Top Professions Ranking"
+    "title": "Top Jobs Ranking"
   },
   "jobTitles": {
     "backend": "Backend Developer",
@@ -18,17 +18,49 @@
     "avgSalaryText": "Average salary"
   },
   "metrics": {
-    "min": "Lowest salary",
+    "min": "Minimum salary",
     "avg": "Average salary",
-    "max": "Highest salary"
+    "max": "Maximum salary"
   },
   "chart": {
     "title": "Demand chart"
   },
   "backends": {
     "title": "Backend",
-    "description": "This is the hidden part of the software that users don't see but ensures the proper functioning of the application or website.",
+    "description": "This is the hidden part of software that users don't see but ensures the proper functioning of the application or website.",
     "rank": "#1",
     "courses": "123 courses"
+  },
+  "jobEdu": {
+    "title": "Job&Edu Fest - IT Job and Education Fair",
+    "breadcrumb": "Job&Edu Fest - IT Job and Education Fair",
+    "mainGoal": "The main goal of the fair is to introduce young people to real opportunities in the IT market and establish effective integration between education and work.",
+    "aboutFair": "About the Fair",
+    "fairDescription1": "Job&Edu Fest - the largest job and education fair in the IT sector was organized on May 14th of this year at the Inha University and School 21 complex in Tashkent.",
+    "fairDescription2": "The exhibition was opened by Deputy Minister of Digital Technologies Rustam Karimjonov, who spoke about current IT market demands, job opportunities, and what to focus on when preparing resumes.",
+    "participants": "Participants and Opportunities",
+    "participantsDesc1": "About 100 companies and educational organizations operating in the IT sector participated in this organized job and education fair with their vacancies and educational opportunities.",
+    "participantsDesc2": "Local and international organizations visited the fair with more than 1,000 vacancies. Additionally, organizations participating in the event also offered about 800 internship positions for young people seeking practical experience.",
+    "attendees": "Attendees",
+    "attendeesDesc1": "The number of young people who applied and registered to participate in the exhibition reached 1,200. Among them are students and graduates of higher education institutions, as well as young people interested in the IT sector and wanting to work in this field.",
+    "attendeesDesc2": "Additionally, 700 school graduates interested in IT also visited the fair and gained information about opportunities provided by educational organizations and IT job market requirements.",
+    "presentations": "Presentations",
+    "statistics": "Fair Statistics",
+    "itJobMarket": "IT Job Market",
+    "itJobMarketDesc": "Introducing young people to real opportunities in the IT sector",
+    "learnMore": "Learn More",
+    "registration": "Registration for the next fair:",
+    "registrationDesc": "To explore opportunities in the IT sector",
+    "uzbekLanguage": "In Uzbek",
+    "russianLanguage": "In Russian",
+    "metrics": {
+      "registered": "Registered",
+      "companies": "Companies",
+      "vacancies": "Vacancies",
+      "internships": "Internships",
+      "graduates": "School Graduates",
+      "mayMonth": "May Month",
+      "presentations": "Presentations"
+    }
   }
 } 

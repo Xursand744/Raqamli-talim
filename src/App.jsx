@@ -37,7 +37,7 @@ import JobEdu from "./pages/Projects/JobEdu";
 import Ict from "./pages/Projects/Ict";
 import Aca from "./pages/Projects/Aca";
 import Apio from "./pages/Projects/Apio";
-import Icpc from "./pages/Projects/ICPC";
+import Icpc from "./pages/Projects/Icpc";
 
 export default function App() {
   const routes = createBrowserRouter([

@@ -30,5 +30,37 @@
     "description": "Bu foydalanuvchilar ko'rmaydigan, lekin ilova yoki veb-saytning to'g'ri ishlashini ta'minlovchi dasturiy ta'minotning yashirin qismidir.",
     "rank": "#1",
     "courses": "123 ta kurs"
+  },
+  "jobEdu": {
+    "title": "Job&Edu Fest - IT mehnat va ta'lim yarmarkasi",
+    "breadcrumb": "Job&Edu Fest - IT mehnat va ta'lim yarmarkasi",
+    "mainGoal": "Yarmarkaning asosiy maqsadi — yoshlarni IT bozoridagi real imkoniyatlar bilan tanishtirish hamda ta'lim va mehnat o'rtasida samarali integratsiyani yo'lga qo'yishdir.",
+    "aboutFair": "Yarmarka haqida",
+    "fairDescription1": "Job&Edu Fest - IT sohasidagi eng yirik mehnat va ta'lim yarmarkasi joriy yilning 14-may kuni Toshkent shahridagi Inha universiteti va School 21 majmuasida tashkil etildi.",
+    "fairDescription2": "Ko'rgazmani Raqamli texnologiyalar vaziri o'rinbosari Rustam Karimjonov ochib berib, IT bozoridagi dolzarb talablar, ish topish imkoniyatlari va rezyume tayyorlashda nimalarga e'tibor qaratish kerakligi haqida so'z yuritdi.",
+    "participants": "Ishtirokchilar va imkoniyatlar",
+    "participantsDesc1": "Tashkil etilgan ushbu mehnat va ta'lim yarmarkasida 100 ga yaqin IT sohasida faoliyat olib boruvchi kompaniya va ta'lim tashkilotlari o'zlarining bo'sh ish o'rinlari va ta'lim sohasidagi imkoniyatlari bilan ishtirok etdi.",
+    "participantsDesc2": "Mahalliy va xalqaro tashkilotlar jami 1000 dan ziyod bo'sh ish o'rinlari bilan tashrif buyurdi. Shuningdek, tadbirda ishtirok etgan tashkilotlar tomonidan amaliyot izlab kelgan yoshlar uchun ham qariyb 800 ta amaliyot o'rni ham taklif etildi.",
+    "attendees": "Qatnashuvchilar",
+    "attendeesDesc1": "Ko'rgazmada ishtirok etish uchun ariza bergan va ro'yxatdan o'tgan yoshlar soni 1200 nafarga yetdi. Ular orasida oliy ta'lim muassasalari talabalari va birituvchilar, shuningdek, IT sohasiga qiziqadigan va ushbu sohada faoliyat yuritmoqchi bo'lgan yoshlar mavjud.",
+    "attendeesDesc2": "Bundan tashqari, IT'ga qiziqqan 700 nafar maktab bitiruvchi sinf o'quvchilari ham yarmarkaga tashrif buyurib, ta'lim tashkilotlari taqdim etayotgan imkoniyatlar hamda IT mehnat bozoridagi talablar haqida ma'lumotga ega bo'ldi.",
+    "presentations": "Taqdimotlar",
+    "statistics": "Yarmarka statistikasi",
+    "itJobMarket": "IT Mehnat bozori",
+    "itJobMarketDesc": "Yoshlarni IT sohasidagi real imkoniyatlar bilan tanishtirish",
+    "learnMore": "Batafsil ma'lumot",
+    "registration": "Keyingi yarmarkaga ro'yxatdan o'tish:",
+    "registrationDesc": "IT sohasidagi imkoniyatlarni o'rganish uchun",
+    "uzbekLanguage": "O'zbek tilida",
+    "russianLanguage": "Rus tilida",
+    "metrics": {
+      "registered": "Ro'yxatdan o'tganlar",
+      "companies": "Kompaniyalar",
+      "vacancies": "Bo'sh ish o'rinlari",
+      "internships": "Amaliyot o'rinlari",
+      "graduates": "Maktab bitiruvchilari",
+      "mayMonth": "May oyi",
+      "presentations": "Taqdimotlar"
+    }
   }
 } 
