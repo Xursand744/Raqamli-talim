@@ -20,7 +20,7 @@ const CarouselItem = ({
   };
 
   return (
-    <div className="px-2 md:px-0 rounded-lg md:pl-5 flex items-center justify-between overflow-hidden">
+    <div className="px-2 md:px-0 rounded-lg h-[651px] md:pl-5 flex items-center justify-between overflow-hidden">
       <div className="flex flex-col-reverse w-full rounded-lg xl:flex-row gap-8 md:gap-16">
         {/* Text Section */}
         <div className="flex-1 text-white py-5 z-10 flex flex-col items-start justify-between flex-col gap-14">

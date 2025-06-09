@@ -52,6 +52,48 @@
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
+  "landing-5": {
+    "title": "ToT - The Training of Trainers",
+    "description": "By organizing online training sessions to teach IT mentors at educational centers modern professions, the opportunity is created to enhance their knowledge and skills in the most in-demand fields.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-6": {
+    "title": "Job&Edu Fest",
+    "description": "This platform offers young people, students, and graduates interested in the IT field the opportunity to secure employment, undertake internships, and identify their professional direction. The event features major local and international IT companies operating in our country, higher education institutions, and training centers.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-7": {
+    "title": "“ICT4Girls” – the Informatics Olympiad for schoolgirls in Uzbekistan.",
+    "description": "A project to boost schoolgirls’ interest in competitive programming, develop their knowledge and skills, and prepare them for international informatics olympiads.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-8": {
+    "title": "ACA Navigator",
+    "description": "A course that offers free online instruction in Python programming fundamentals and provides the opportunity to learn about high-demand professional specializations.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-9": {
+    "title": "APIO – Asia-Pacific Informatics Olympiad",
+    "description": "APIO – the Asia–Pacific Informatics Olympiad – is a prestigious programming competition in competitive programming held among students from countries in the Asia–Pacific region.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
+  "landing-10": {
+    "title": "ICPC Uzbekistan Olympiad",
+    "description": "An Olympiad in competitive programming held among students, where the winning teams earn the opportunity to participate in the semifinals of the prestigious ICPC competition.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
   "chances": {
     "title": "Special opportunities for youth",
     "walletTitle": "Get IT Compensation",

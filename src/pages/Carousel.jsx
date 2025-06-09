@@ -5,6 +5,12 @@ import CarouselImage from "../assets/carousel.jpg";
 import xorazmiy from "../assets/images/projects/xorazmiy_1.jpg";
 import talent from "../assets/images/projects/talent_1.jpg";
 import coding from "../assets/images/projects/coder_1.jpg";
+import tot from "../assets/images/projects/5.jpg";
+import job from "../assets/images/projects/6.jpg";
+import ict from "../assets/images/projects/7.jpg";
+import api from "../assets/images/projects/8.jpg";
+import icpc from "../assets/images/projects/9.png";
+import aca from "../assets/images/projects/10.jpg";
 import { useTranslation } from "react-i18next";
 // Import Swiper styles
 import "swiper/css";
@@ -43,7 +49,49 @@ export default function App() {
       buttonText: t(`landing-4.moreDetails`),
       image: coding,
       link: "bir-million-dasturchi-loyihasi",
-    }
+    },
+    {
+      title: t(`landing-5.title`),
+      description: t(`landing-5.description`),
+      buttonText: t(`landing-5.moreDetails`),
+      image: tot,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
+      title: t(`landing-6.title`),
+      description: t(`landing-6.description`),
+      buttonText: t(`landing-6.moreDetails`),
+      image: job,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
+      title: t(`landing-7.title`),
+      description: t(`landing-7.description`),
+      buttonText: t(`landing-7.moreDetails`),
+      image: ict,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
+      title: t(`landing-8.title`),
+      description: t(`landing-8.description`),
+      buttonText: t(`landing-8.moreDetails`),
+      image: api,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
+      title: t(`landing-9.title`),
+      description: t(`landing-9.description`),
+      buttonText: t(`landing-9.moreDetails`),
+      image: icpc,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
+      title: t(`landing-10.title`),
+      description: t(`landing-10.description`),
+      buttonText: t(`landing-10.moreDetails`),
+      image: aca,
+      link: "bir-million-dasturchi-loyihasi",
+    },
   ];
 
   return (

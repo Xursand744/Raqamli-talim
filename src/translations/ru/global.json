@@ -87,6 +87,48 @@
     "imageAlt": "Эмблема образовательной программы",
     "carouselAlt": "Возможности обучения в сфере IT"
   },
+  "landing-5": {
+    "title": "ToT - The Training of Trainers",
+    "description": "Организация онлайн-тренингов для обучения IT-менторов в учебных центрах современным профессиям создаёт возможность повысить их знания и навыки в наиболее востребованных направлениях.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-6": {
+    "title": "Job&Edu Fest",
+    "description": "Эта платформа предоставляет молодым людям, студентам и выпускникам, интересующимся сферой IT, возможность найти работу, пройти стажировку и определить своё профессиональное направление. В мероприятии участвуют ведущие местные и международные IT-компании, работающие в нашей стране, а также высшие учебные заведения и учебные центры.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-7": {
+    "title": "ICT4Girls — олимпиада по информатике для школьниц Узбекистана.",
+    "description": "Проект по повышению интереса школьниц к спортивному программированию, развитию их знаний и навыков, а также подготовке к международным олимпиадам по информатике.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-8": {
+    "title": "ACA Navigator",
+    "description": "Курс, который предоставляет бесплатное онлайн-обучение основам программирования на Python и даёт возможность получить информацию о наиболее востребованных специальностях.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-9": {
+    "title": "APIO — Азиатско-Тихоокеанская олимпиада по информатике",
+    "description": "APIO — Азиатско-Тихоокеанская олимпиада по информатике — это престижная олимпиада по спортивному программированию среди школьников стран Азиатско-Тихоокеанского региона.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-10": {
+    "title": "Олимпиада ICPC Uzbekistan",
+    "description": "Олимпиада по спортивному программированию среди студентов, победители которой получают возможность участвовать в полуфинале престижной олимпиады ICPC.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
   "chances": {
     "title": "Возможности, созданные для молодежи.",
     "walletTitle": "Получай компенсацию за ИТ",

@@ -68,7 +68,7 @@
   },
   "landing-2": {
     "title": "IT-shaharcha",
-    "description": "O'z hududingizdan chiqmastan turib IT kasblarni organing",
+    "description": "O'z hududingizdan chiqmasdan turib IT kasblarni organing",
     "moreDetails": "Batafsil",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
@@ -83,6 +83,48 @@
   "landing-4": {
     "title": "Uzbekcoders",
     "description": "Talabgir sohani bepul o'rganing",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-5": {
+    "title": "ToT - The Training of Trainers",
+    "description": "O‘quv markazlardagi IT mentorlarini zamonaviy kasblarga o‘qitish uchun onlayn treninglar tashkil etish orqali eng talabgir yo‘nalishlarda ularning bilim va malakalarini oshirish imkoniyati yaratiladi.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-6": {
+    "title": "Job&Edu Fest",
+    "description": "Bu platforma IT sohasiga qiziqqan yoshlar, talabalar va bitiruvchilarga ishga joylashish, amaliyot o‘tash hamda kasbiy yo‘nalishni aniqlash imkonini beradi. Tadbirda yurtimizda faoliyat yuritayotgan yirik mahalliy va xalqaro IT kompaniyalari, oliy ta’lim muassasalari va o‘quv markazlari ishtirok etadi.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-7": {
+    "title": "“Informatika bo‘yicha “ICT4Girls” – O‘zbekistondagi o‘quvchi qizlar olimpiadasi.”",
+    "description": "Maktab yoshidagi o‘quvchi qizlarning sport dasturlashga bo‘lgan qiziqishini oshirish, ularning bilim va ko‘nikmalarini rivojlantirish hamda xalqaro informatika olimpiadalariga tayyorlash loyihasi.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-8": {
+    "title": "ACA Navigator",
+    "description": "Python dasturlash asoslarini bepul onlayn o‘rgatadigan va yuqori talabga ega mutaxassisliklar to‘g‘risida ma’lumot olish imkonini beruvchi kurs.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-9": {
+    "title": "APIO — Osiyo–Tinch okeani informatika olimpiadasi",
+    "description": "APIO — Osiyo–Tinch okeani mintaqasidagi mamlakatlar o‘quvchilari o‘rtasida sport dasturlash bo‘yicha o‘tkaziladigan nufuzli informatika olimpiadasidir.",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
+  "landing-10": {
+    "title": "ICPC Uzbekistan olimpiadasi",
+    "description": "Talabalar o‘rtasida sport dasturlash bo‘yicha o‘tkaziladigan olimpiada bo‘lib, g‘olib jamoalar nufuzli ICPC olimpiadasining yarim final bosqichida ishtirok etish imkoniyatini qo‘lga kiritadi.",
     "moreDetails": "Batafsil",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"

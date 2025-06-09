@@ -17,7 +17,7 @@ export default function LanguageSelector() {
               : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
           }`}
         >
-          333{t(`language.${lang}`)}222
+          {t(`language.${lang}`)}
         </button>
       ))}
     </div>
