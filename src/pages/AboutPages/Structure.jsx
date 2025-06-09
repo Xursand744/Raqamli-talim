@@ -412,8 +412,8 @@ export default function Structure() {
                                   ? "bg-blue-500 text-white hover:bg-blue-600"
                                   : "border border-blue-500 hover:bg-blue-50"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
+                              dangerouslySetInnerHTML={{ __html: t(item.title) }}
                             >
-                              {t(item.title)}
                             </div>
                           ))}
                         </div>
