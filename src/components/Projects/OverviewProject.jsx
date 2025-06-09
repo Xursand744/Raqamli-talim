@@ -15,9 +15,9 @@ function OverviewProject({ title, image, link, className }) {
       }}
       transition={{ duration: 0.3 }}
       onClick={() => navigate(`/projects/${link}`)}
-      className={`cursor-pointer rounded-xl overflow-hidden ${className || ""}`}
+      className={`cursor-pointer rounded-xl overflow-hidden h-[384px] ${className || ""}`}
     >
-      <div className="w-full min-h-[264px] relative group">
+      <div className="w-full min-h-[264px] h-full relative group">
         <img
           src={image}
           alt={title}

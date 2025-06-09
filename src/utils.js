@@ -8,6 +8,12 @@ import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
 import CarouselImage from "./assets/carousel.jpg";
 import coding from "./assets/images/projects/coder_1.jpg";
 import talent from "./assets/images/projects/talent_1.jpg";
+import tot from "./assets/images/projects/5.jpg";
+import job from "./assets/images/projects/6.jpg";
+import ict from "./assets/images/projects/7.jpg";
+import api from "./assets/images/projects/8.jpg";
+import icpc from "./assets/images/projects/9.png";
+import aca from "./assets/images/projects/10.jpg";
 import {
   DeparmentImage10,
   DeparmentImage11,
@@ -624,6 +630,42 @@ export const projectsOverview = [
     title: "It Village",
     image: talent,
     link: "it-village",
+  },
+  {
+    id: 5,
+    title: "ToT - The Training of Trainers",
+    image: tot,
+    link: "tot",
+  },
+  {
+    id: 6,
+    title: "Job&Edu Fest",
+    image: job,
+    link: "job-edu-fest",
+  },
+  {
+    id: 7,
+    title: "ICT4Girls",
+    image: ict,
+    link: "ict4girls",
+  },
+  {
+    id: 8,
+    title: "APIO",
+    image: api,
+    link: "apio",
+  },
+  {
+    id: 9,
+    title: "ICPC Uzbekistan Olympiad",
+    image: icpc,
+    link: "icpc-uzbekistan-olympiad",
+  },
+  {
+    id: 10,
+    title: "ACA Navigator",
+    image: aca,
+    link: "aca-navigator",
   },
   // {
   //   id: 6,
