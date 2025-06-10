@@ -23,6 +23,13 @@ export default function App() {
   const { t } = useTranslation("global");
   const carouselData = [
     {
+      title: t(`landing-4.title`),
+      description: t(`landing-4.description`),
+      buttonText: t(`landing-4.moreDetails`),
+      image: coding,
+      link: "bir-million-dasturchi-loyihasi",
+    },
+    {
       title: t(`landing-1.title`),
       description: t(`landing-1.description`),
       buttonText: t(`landing-1.moreDetails`),
@@ -42,13 +49,6 @@ export default function App() {
       buttonText: t(`landing-3.moreDetails`),
       image: CarouselImage,
       link: "it-talents-dasturi",
-    },
-    {
-      title: t(`landing-4.title`),
-      description: t(`landing-4.description`),
-      buttonText: t(`landing-4.moreDetails`),
-      image: coding,
-      link: "bir-million-dasturchi-loyihasi",
     },
     {
       title: t(`landing-5.title`),
