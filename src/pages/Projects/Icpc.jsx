@@ -130,7 +130,7 @@ export default function Icpc() {
     {
       icon: UserDelete,
       value: 0,
-      label: "G&apos;oliblar",
+      label: "G`oliblar",
     },
     {
       icon: MoneyBag,
@@ -147,28 +147,28 @@ export default function Icpc() {
   const stages = [
     {
       title: "Hududiy bosqich",
-      description: "Har bir hududda o&apos;tkazilib, mahalliy iqtidorlar aniqlanadi. Ushbu bosqichda jamoalar Respublika bosqichiga yo&apos;llanma uchun kurashadi.",
+      description: "Har bir hududda o`tkazilib, mahalliy iqtidorlar aniqlanadi. Ushbu bosqichda jamoalar Respublika bosqichiga yo`llanma uchun kurashadi.",
       icon: "🏆",
       location: "Mahalliy hududlar",
       participants: "Barcha jamoalar"
     },
     {
       title: "Respublika bosqichi",
-      description: "Hududiy bosqich g&apos;oliblari mamlakat miqyosidagi eng kuchli jamoalarni aniqlash uchun bellashadi. Ushbu bosqichda yuqori o&apos;rinlarni egallagan jamoalar keyingi bosqichga yo&apos;llanma oladi.",
+      description: "Hududiy bosqich g`oliblari mamlakat miqyosidagi eng kuchli jamoalarni aniqlash uchun bellashadi. Ushbu bosqichda yuqori o`rinlarni egallagan jamoalar keyingi bosqichga yo`llanma oladi.",
       icon: "👑",
       location: "Toshkent",
-      participants: "Hududiy g&apos;oliblar"
+      participants: "Hududiy g`oliblar"
     },
     {
       title: "Yarim final",
-      description: "Yarim final musobaqasi Qozog&apos;istonning Astana shahrida o&apos;tkaziladi. O&apos;zbekistondan 15-20 ta jamoa qatnashish uchun taklif etiladi.",
+      description: "Yarim final musobaqasi Qozog`istonning Astana shahrida o`tkaziladi. O`zbekistondan 15-20 ta jamoa qatnashish uchun taklif etiladi.",
       icon: "🌍",
-      location: "Astana, Qozog&apos;iston",
+      location: "Astana, Qozog`iston",
       participants: "15-20 jamoa"
     },
     {
       title: "Final",
-      description: "Yarim finalda yuqori natija ko&apos;rsatgan jamoalar dunyoning eng kuchli dasturchi jamoalari bilan bellashish uchun jahon finaliga yo&apos;llanma oladi.",
+      description: "Yarim finalda yuqori natija ko`rsatgan jamoalar dunyoning eng kuchli dasturchi jamoalari bilan bellashish uchun jahon finaliga yo`llanma oladi.",
       icon: "🏅",
       location: "Jahon finali",
       participants: "Eng kuchli jamoalar"
@@ -178,7 +178,7 @@ export default function Icpc() {
   const goals = [
     {
       title: "Jamoaviy ishlash",
-      description: "Jamoaviy ishlash ko&apos;nikmalarini rivojlantirish",
+      description: "Jamoaviy ishlash ko`nikmalarini rivojlantirish",
       icon: "🤝"
     },
     {
@@ -188,7 +188,7 @@ export default function Icpc() {
     },
     {
       title: "Tayyorgarlik",
-      description: "Real muhandislik muammolarini hal qilish uchun talabalarga tayyorgarlik ko&apos;rish imkoniyati",
+      description: "Real muhandislik muammolarini hal qilish uchun talabalarga tayyorgarlik ko`rish imkoniyati",
       icon: "⚙️"
     },
   ];
@@ -211,7 +211,7 @@ export default function Icpc() {
         </div>
 
         <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          ICPC (International Collegiate Programming Contest) — bu har yili talabalar o&apos;rtasida tashkil etiladigan dunyodagi eng yirik va nufuzli sport dasturlash bo&apos;yicha xalqaro olimpiada bo&apos;lib, 1970-yildan beri o&apos;tkazib kelinmoqda. Mazkur olimpiada butun dunyo bo&apos;ylab minglab jamoalarni birlashtiradi.
+          ICPC (International Collegiate Programming Contest) — bu har yili talabalar o`rtasida tashkil etiladigan dunyodagi eng yirik va nufuzli sport dasturlash bo`yicha xalqaro olimpiada bo`lib, 1970-yildan beri o`tkazib kelinmoqda. Mazkur olimpiada butun dunyo bo`ylab minglab jamoalarni birlashtiradi.
         </p>
 
         <section className="mb-16">
@@ -245,10 +245,10 @@ export default function Icpc() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Jamoa tarkibi: 3 nafar talaba va bir nafar murabbiy. Jamoalar bir kompyuterda 5 soat ichida bir necha algoritmik masalalarni yechishlari kerak bo&apos;ladi.
+              Jamoa tarkibi: 3 nafar talaba va bir nafar murabbiy. Jamoalar bir kompyuterda 5 soat ichida bir necha algoritmik masalalarni yechishlari kerak bo`ladi.
             </DocumentCard>
             <DocumentCard>
-              Masalalar muvaffaqiyatli yechish uchun qatnashchilardan chuqur matematik bilim, algoritmik tafakkur va dasturlash ko&apos;nikmalari talab etiladi.
+              Masalalar muvaffaqiyatli yechish uchun qatnashchilardan chuqur matematik bilim, algoritmik tafakkur va dasturlash ko`nikmalari talab etiladi.
             </DocumentCard>
           </div>
         </section>
@@ -279,10 +279,10 @@ export default function Icpc() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              ICPC Google, IBM, Microsoft kabi yirik IT-kompaniyalar tomonidan qo&apos;llab-quvvatlanadi. Bu olimpiada dunyodagi eng nufuzli dasturlash musobaqalaridan biri hisoblanadi.
+              ICPC Google, IBM, Microsoft kabi yirik IT-kompaniyalar tomonidan qo`llab-quvvatlanadi. Bu olimpiada dunyodagi eng nufuzli dasturlash musobaqalaridan biri hisoblanadi.
             </DocumentCard>
             <DocumentCard>
-              ICPC olimpiadasida qatnashish nufuzli yutuq hisoblanadi va kelajakdagi karyera uchun keng imkoniyatlar ochadi. Bu talabalar uchun xalqaro darajada o&apos;z qobiliyatlarini ko&apos;rsatish imkoniyati.
+              ICPC olimpiadasida qatnashish nufuzli yutuq hisoblanadi va kelajakdagi karyera uchun keng imkoniyatlar ochadi. Bu talabalar uchun xalqaro darajada o`z qobiliyatlarini ko`rsatish imkoniyati.
             </DocumentCard>
           </div>
         </section>

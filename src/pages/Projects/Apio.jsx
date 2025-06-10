@@ -130,7 +130,7 @@ export default function Apio() {
     {
       icon: UserDelete,
       value: 0,
-      label: "G&apos;oliblar",
+      label: "G`oliblar",
     },
     {
       icon: MoneyBag,
@@ -155,7 +155,7 @@ export default function Apio() {
       title: "Mantiqiy fikrlash",
       description: "Muammolarni tahlil qilish, mantiqiy xulosa chiqarish va samarali yechimlar topish.",
       icon: "⚡",
-      level: "Kritik ko&apos;nikma"
+      level: "Kritik ko`nikma"
     },
     {
       title: "Ijodiy yondashuv",
@@ -183,7 +183,7 @@ export default function Apio() {
         </div>
 
         <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          APIO – bu yuqori algoritmik bilimlarga ega yoshlar uchun mo&apos;ljallangan onlayn olimpiada bo&apos;lib, u ko&apos;plab davlatlar uchun sport dasturlash olamidagi eng nufuzli xalqaro musobaqa – Xalqaro informatika olimpiadasi (International Olympiad in Informatics, IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi.
+          APIO – bu yuqori algoritmik bilimlarga ega yoshlar uchun mo`ljallangan onlayn olimpiada bo`lib, u ko`plab davlatlar uchun sport dasturlash olamidagi eng nufuzli xalqaro musobaqa – Xalqaro informatika olimpiadasi (International Olympiad in Informatics, IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi.
         </p>
 
         <section className="mb-16">
@@ -193,17 +193,17 @@ export default function Apio() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              APIO Osiyo-Tinch okeani mintaqasidagi eng nufuzli informatika olimpiadalaridan biri hisoblanadi. U yuqori darajadagi algoritmik bilimlarga ega yoshlar uchun mo&apos;ljallangan.
+              APIO Osiyo-Tinch okeani mintaqasidagi eng nufuzli informatika olimpiadalaridan biri hisoblanadi. U yuqori darajadagi algoritmik bilimlarga ega yoshlar uchun mo`ljallangan.
             </DocumentCard>
             <DocumentCard>
-              Bu turdagi musobaqalar yosh avlodga mantiqiy va algoritmik fikrlash, ijodiy yondashuv va murakkab muammolarni hal qilish bo&apos;yicha ko&apos;nikmalarini rivojlantirishga yordam beradi.
+              Bu turdagi musobaqalar yosh avlodga mantiqiy va algoritmik fikrlash, ijodiy yondashuv va murakkab muammolarni hal qilish bo`yicha ko`nikmalarini rivojlantirishga yordam beradi.
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Rivojlanadigan ko&apos;nikmalar
+            Rivojlanadigan ko`nikmalar
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -226,10 +226,10 @@ export default function Apio() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              APIO Xalqaro informatika olimpiadasi (IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi. Bu olimpiada orqali talabalar xalqaro darajadagi musobaqalarga tayyorgarlik ko&apos;rishadi.
+              APIO Xalqaro informatika olimpiadasi (IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi. Bu olimpiada orqali talabalar xalqaro darajadagi musobaqalarga tayyorgarlik ko`rishadi.
             </DocumentCard>
             <DocumentCard>
-              IOI - bu sport dasturlash olamidagi eng nufuzli xalqaro musobaqa bo&apos;lib, unda dunyoning eng yaxshi yosh dasturchilari ishtirok etadi.
+              IOI - bu sport dasturlash olamidagi eng nufuzli xalqaro musobaqa bo`lib, unda dunyoning eng yaxshi yosh dasturchilari ishtirok etadi.
             </DocumentCard>
           </div>
         </section>
@@ -241,10 +241,10 @@ export default function Apio() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Olimpiadada faqat yuqori algoritmik bilimlarga ega yoshlar ishtirok etishi mumkin. Qatnashuvchilar murakkab dasturlash muammolarini hal qilish qobiliyatiga ega bo&apos;lishlari kerak.
+              Olimpiadada faqat yuqori algoritmik bilimlarga ega yoshlar ishtirok etishi mumkin. Qatnashuvchilar murakkab dasturlash muammolarini hal qilish qobiliyatiga ega bo`lishlari kerak.
             </DocumentCard>
             <DocumentCard>
-              Musobaqa onlayn formatda o&apos;tkaziladi va 5 soat davom etadi. Qatnashuvchilar berilgan masalalarga yechim ishlab chiqishadi.
+              Musobaqa onlayn formatda o`tkaziladi va 5 soat davom etadi. Qatnashuvchilar berilgan masalalarga yechim ishlab chiqishadi.
             </DocumentCard>
           </div>
         </section>

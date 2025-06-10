@@ -160,7 +160,7 @@ export default function Aca() {
     },
     {
       title: "Karyera tayyorgarligi",
-      description: "Karyerada muvaffaqiyatli boshlashga yordam beradigan samarali rezyume yaratadilar va ish beruvchilarni o&apos;ziga jalb qilishadi!",
+      description: "Karyerada muvaffaqiyatli boshlashga yordam beradigan samarali rezyume yaratadilar va ish beruvchilarni o`ziga jalb qilishadi!",
       icon: "📈",
       benefits: "Rezyume va ish topish"
     },
@@ -184,7 +184,7 @@ export default function Aca() {
         </div>
 
         <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          &quot;ACA Navigator&quot; loyihasini Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi.
+          &quot;ACA Navigator&quot; loyihasini Armanistonning &quot;Armenian Code Academy&quot; ta`lim markazi bilan birgalikda amalga oshiriladi.
         </p>
 
         <section className="mb-16">
@@ -194,7 +194,7 @@ export default function Aca() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha ishtirokchilari quyidagi bilimlarga ega bo&apos;ladilar o&apos;rganadilar? Ishtirokchilarga nega Python bu qadar mashhur va u bilan bog&apos;liq qanday talab qilinadigan kasblar mavjudligini haqida tushuncha va ma&apos;lumotlar beriladi.
+              Loyiha ishtirokchilari quyidagi bilimlarga ega bo`ladilar o`rganadilar? Ishtirokchilarga nega Python bu qadar mashhur va u bilan bog`liq qanday talab qilinadigan kasblar mavjudligini haqida tushuncha va ma`lumotlar beriladi.
             </DocumentCard>
             <DocumentCard>
               Python asoslari bilan tanishadilar va eng mashhur dasturlash tillaridan birida dasturlash! Birinchi kodlarini yozib, nazariyani amaliyotda mustahkamlash!
@@ -204,7 +204,7 @@ export default function Aca() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            O&apos;rganish modullari
+            O`rganish modullari
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -227,10 +227,10 @@ export default function Aca() {
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi. Bu xalqaro hamkorlik orqali sifatli ta&apos;lim imkoniyatlari yaratiladi.
+              Loyiha Armanistonning &quot;Armenian Code Academy&quot; ta`lim markazi bilan birgalikda amalga oshiriladi. Bu xalqaro hamkorlik orqali sifatli ta`lim imkoniyatlari yaratiladi.
             </DocumentCard>
             <DocumentCard>
-              Hamkorlik doirasida zamonaviy dasturlash metodlari, amaliy tajriba va xalqaro standartlar asosida ta&apos;lim beriladi.
+              Hamkorlik doirasida zamonaviy dasturlash metodlari, amaliy tajriba va xalqaro standartlar asosida ta`lim beriladi.
             </DocumentCard>
           </div>
         </section>
@@ -245,7 +245,7 @@ export default function Aca() {
               Python dasturlash tili hozirgi kunda eng mashhur va talab qilinadigan dasturlash tillaridan biri hisoblanadi. Uning yordamida turli sohalarda ishlash imkoniyati mavjud.
             </DocumentCard>
             <DocumentCard>
-              Kursni tugatgandan so&apos;ng talabalar samarali rezyume yaratish va ish beruvchilarni o&apos;ziga jalb qilish ko&apos;nikmalariga ega bo&apos;ladilar.
+              Kursni tugatgandan so`ng talabalar samarali rezyume yaratish va ish beruvchilarni o`ziga jalb qilish ko`nikmalariga ega bo`ladilar.
             </DocumentCard>
           </div>
         </section>
