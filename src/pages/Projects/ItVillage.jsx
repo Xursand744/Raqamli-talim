@@ -89,7 +89,7 @@ const HeroSection = () => (
   <div className="max-w-[1230px] mx-auto px-4">
     <div className="flex justify-center mt-24 mb-16">
       <h1 className="font-bold text-5xl md:text-6xl text-gray-900 max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-        It Village
+        IT Shaharcha
       </h1>
     </div>
 
@@ -97,7 +97,7 @@ const HeroSection = () => (
       <img
         src={talent}
         className="rounded-2xl w-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
-        alt="IT Village Project"
+        alt="IT Shaharcha Project"
       />
       <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 text-center max-w-3xl">
         &quot;IT shaharcha&quot; – bu nafaqat ta'lim, balki raqamli ekotizim yaratishga yo'naltirilgan yirik tashabbusdir

@@ -628,7 +628,7 @@ export const projectsOverview = [
   },
   {
     id: 4,
-    title: "It Village",
+    title: "IT Shaharcha",
     image: talent,
     link: "it-village",
   },
