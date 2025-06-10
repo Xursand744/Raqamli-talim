@@ -42,8 +42,8 @@ export const Menus = [
     gridCols: 1,
   },
   { name: "menu.studyCenters", link: "study-centers" },
-  // { name: "menu.itUniversities", link: "/universities" },
   { name: "menu.courses", link: "/courses" },
+  { name: "menu.itUniversities", link: "/universities" },
   {
     name: "menu.center",
     subMenu: [

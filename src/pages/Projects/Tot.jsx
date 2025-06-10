@@ -7,7 +7,7 @@ import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import Sl from "../../assets/s_left.png";
 import Sr from "../../assets/s-right.png";
-import Video from "../../assets/videos/it-talents.mp4";
+import Video from "../../assets/videos/1.mp4";
 import {
   Document,
   MoneyBag,

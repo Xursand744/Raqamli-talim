@@ -4,9 +4,17 @@ import UniversitiesStatistics from "../../components/Projects/UniversitiesStatis
 import UzbekistanMap from "../../components/Projects/UzbekistanMap";
 import univerImg from "../../assets/univer.png";
 import inhaimg from "../../assets/inha.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import universitiesData from "../../data/universities.json";
 
 function Universities() {
+  const [universities, setUniversities] = useState([]);
+  const [filteredUniversities, setFilteredUniversities] = useState([]);
+  const [selectedRegion, setSelectedRegion] = useState("Barchasi");
+  const [selectedSpecialization, setSelectedSpecialization] = useState("Barchasi");
+  const [searchTerm, setSearchTerm] = useState("");
+
   const breadCrumps = [
     {
       link: "/projects",
@@ -18,44 +26,59 @@ function Universities() {
     },
   ];
 
-  const filteredUniversities = [
-    {
-      id: 1,
-      name: "Inha University",
-      location: "in Tashkent",
-      programs: ["ICE", "CSE", "Business", "Logistics"],
-      phone: "+998 70 200 00 00",
-      type: "EduTech",
-      status: "Offline",
-      specialty: "Frontend",
-      studyDuration: "4Years",
-      studyFormat: "Offline",
-    },
-    {
-      id: 2,
-      name: "Webster University",
-      location: "in Tashkent",
-      programs: ["ICE", "CSE", "Business", "Logistics"],
-      phone: "+998 71 238 58 21",
-      type: "Liberal Arts",
-      status: "Offline",
-      specialty: "Frontend",
-      studyDuration: "4Years",
-      studyFormat: "Hybrid",
-    },
-    {
-      id: 3,
-      name: "Turin Polytechnic University",
-      location: "in Tashkent",
-      programs: ["ICE", "CSE", "Business", "Logistics"],
-      phone: "+998 71 246 95 00",
-      type: "Engineering",
-      status: "Offline",
-      specialty: "Frontend",
-      studyDuration: "3Years",
-      studyFormat: "Online",
-    },
-  ];
+  console.log(universitiesData);
+
+  // Очищаем данные от пустых записей и форматируем
+  useEffect(() => {
+    const cleanData = universitiesData
+      .filter(uni => uni["OTM (Oliy ta'lim muassasasi nomi)"] && uni["OTM (Oliy ta'lim muassasasi nomi)"].trim() !== "")
+      .map(uni => ({
+        id: uni["T/r"] || Math.random().toString(),
+        name: uni["OTM (Oliy ta'lim muassasasi nomi)"],
+        region: uni["OTM joylashgan hudud"],
+        website: uni["Veb-sayti"],
+        telegram: uni["Telegram kanallar"],
+        email: uni["Elektron pochta/exat manzili"],
+        phone: uni["Bog'lanish uchun tel. raqam"],
+        responsible: uni["OTMdan mas'ul ma'lumotlari"],
+        specialization: uni["IT ga ixtisoslashgan\n/ixtisoslashmagan"],
+        directions: uni["IT yo'nalish nomi"],
+        admission: uni["Qabul 2024"]
+      }));
+    
+    setUniversities(cleanData);
+    setFilteredUniversities(cleanData);
+  }, []);
+
+  // Получаем уникальные регионы для фильтра
+  const regions = ["Barchasi", ...new Set(universities.map(uni => uni.region).filter(Boolean))];
+  const specializations = ["Barchasi", ...new Set(universities.map(uni => uni.specialization).filter(Boolean))];
+
+  // Фильтрация
+  useEffect(() => {
+    let filtered = universities;
+
+    console.log(filtered);
+
+    // Фильтр по региону
+    if (selectedRegion !== "Barchasi") {
+      filtered = filtered.filter(uni => uni.region === selectedRegion);
+    }
+
+    // Фильтр по специализации
+    if (selectedSpecialization !== "Barchasi") {
+      filtered = filtered.filter(uni => uni.specialization === selectedSpecialization);
+    }
+
+    // Поиск по названию
+    if (searchTerm) {
+      filtered = filtered.filter(uni => 
+        uni.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    setFilteredUniversities(filtered);
+  }, [universities, selectedRegion, selectedSpecialization, searchTerm]);
 
   const FAQItem = ({ question, answer, isOpen, onClick }) => {
     return (
@@ -107,6 +130,13 @@ function Universities() {
     );
   };
 
+  FAQItem.propTypes = {
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+  };
+
   const FAQ = () => {
     const [openItems, setOpenItems] = useState({});
 
@@ -127,7 +157,7 @@ function Universities() {
       {
         id: 3,
         question:
-          "IT-sohasidagi kasblarni profesional darajada egallash uchun o'quv markazida offline mashg'ulitlarga qatnashish afzalmi yoki online o'qisa ham bo'ladimi?",
+          "IT-sohasidagi kasblarni professional darajada egallash uchun o'quv markazida offline mashg'ulitlarga qatnashish afzalmi yoki online o'qisa ham bo'ladimi?",
         answer:
           "Albatta bize xalijimizda yaxshi bir gap bor ya'ni \"Har bir sohada ustoz tutgan afzaldir\" shunung uchun o'quv markazida offline mashg'ulitlarga qatnashib kasb egallash maqsadga muvofiq",
       },
@@ -164,7 +194,7 @@ function Universities() {
         <BreadCrumps breadCrumps={breadCrumps} />
 
         <h1 className="text-[56px] text-center font-bold text-[#222222] mb-8 mt-[80px]">
-          Oliy Ta’lim Muassasalari
+          Oliy Ta&apos;lim Muassasalari
         </h1>
 
         <div className="max-w-[792px] w-full mx-auto">
@@ -174,10 +204,10 @@ function Universities() {
         <div className="pt-[100px] max-w-3xl mx-auto w-full mb-[100px]">
           <div className="px-[50px] rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-400 p-10 text-center text-white">
             <h1 className="text-3xl font-bold mb-4">
-              Tizim universitetlarida ta’lim oluvchilar bo‘yicha ma’lumot
+              Tizim universitetlarida ta&apos;lim oluvchilar bo&apos;yicha ma&apos;lumot
             </h1>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full transition duration-300 mt-[30px]">
-              Jadvalni ko‘rish
+              Jadvalni ko&apos;rish
             </button>
           </div>
         </div>
@@ -186,7 +216,7 @@ function Universities() {
       </div>
 
       <div className="mt-[50px]">
-        <UzbekistanMap title="Hudud bo‘yicha OTM lar" />
+        <UzbekistanMap title="Hudud bo&apos;yicha OTM lar" />
       </div>
 
       <div className="max-w-[1250px] mx-auto my-[80px]">
@@ -194,22 +224,73 @@ function Universities() {
           IT universitetlar
         </h1>
 
+        {/* Фильтры */}
+        <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-4xl">
+            {/* Поиск */}
+            <input
+              type="text"
+              placeholder="Universitet nomini qidirish..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1"
+            />
+            
+            {/* Фильтр по региону */}
+            <select
+              value={selectedRegion}
+              onChange={(e) => setSelectedRegion(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {regions.map((region) => (
+                <option key={region} value={region}>
+                  {region}
+                </option>
+              ))}
+            </select>
+
+            {/* Фильтр по специализации */}
+            <select
+              value={selectedSpecialization}
+              onChange={(e) => setSelectedSpecialization(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {specializations.map((spec) => (
+                <option key={spec} value={spec}>
+                  {spec}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Статистика */}
+        <div className="mb-6 text-center">
+          <p className="text-gray-600">
+            Topildi: <span className="font-semibold text-blue-600">{filteredUniversities.length}</span> ta universitet
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filteredUniversities.map((university) => (
             <div
               key={university.id}
-              className="overflow-hidden max-w-[282px] w-full bg-white border rounded-lg shadow-sm"
+              className="overflow-hidden max-w-[400px] w-full bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="relative">
-                <img src={univerImg} alt={university.name} className="w-full" />
+                <img src={univerImg} alt={university.name} className="w-full h-48 object-cover" />
                 <div className="absolute bottom-2 left-2">
                   <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
-                    {university.location}
+                    {university.region}
                   </span>
                 </div>
                 <div className="absolute bottom-2 left-24">
-                  <span className="px-2 py-1 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-                    {university.status}
+                  <span className={`px-2 py-1 text-xs text-white rounded-full ${
+                    university.specialization === "Ixtisoslashgan" 
+                      ? "bg-gradient-to-r from-green-500 to-blue-500" 
+                      : "bg-gradient-to-r from-gray-500 to-gray-600"
+                  }`}>
+                    {university.specialization}
                   </span>
                 </div>
               </div>
@@ -223,36 +304,70 @@ function Universities() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-medium text-sm">{university.name}</h3>
+                    <h3 className="font-medium text-sm line-clamp-2">{university.name}</h3>
                     <p className="text-xs text-gray-500">
-                      {university.location}
+                      {university.region}
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {university.programs.map((program) => (
-                    <span
-                      key={program}
-                      className="px-2 py-1 text-xs bg-gray-100 rounded"
-                    >
-                      {program}
-                    </span>
-                  ))}
+                
+                {/* Контактная информация */}
+                <div className="space-y-2 text-xs text-gray-600">
+                  {university.website && (
+                    <div className="flex items-center space-x-1">
+                      <span className="font-medium">🌐</span>
+                      <a href={`https://${university.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                        {university.website}
+                      </a>
+                    </div>
+                  )}
+                  {university.telegram && (
+                    <div className="flex items-center space-x-1">
+                      <span className="font-medium">📱</span>
+                      <a href={`https://${university.telegram}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                        Telegram
+                      </a>
+                    </div>
+                  )}
+                  {university.phone && (
+                    <div className="flex items-center space-x-1">
+                      <span className="font-medium">📞</span>
+                      <a href={`tel:${university.phone}`} className="text-blue-500 hover:underline">
+                        {university.phone}
+                      </a>
+                    </div>
+                  )}
                 </div>
-                <div className="text-xs text-gray-500">{university.type}</div>
-                <div className="mt-2 text-sm text-blue-500">
-                  {university.phone}
-                </div>
+
+                {/* IT направления */}
+                {university.directions && (
+                  <div className="mt-3">
+                    <p className="text-xs font-medium text-gray-700 mb-1">IT yo&apos;nalishlari:</p>
+                    <div className="text-xs text-gray-600 line-clamp-3">
+                      {university.directions}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex justify-center mt-[40px]">
-          <button className="py-[12px] px-[40px] rounded-[27px] bg-[#2675EB] text-white transition hover:opacity-[0.8]">
-            Barchasini ko’rish
-          </button>
-        </div>
+        {filteredUniversities.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">Hech qanday universitet topilmadi</p>
+            <button 
+              onClick={() => {
+                setSelectedRegion("Barchasi");
+                setSelectedSpecialization("Barchasi");
+                setSearchTerm("");
+              }}
+              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Filtrlarni tozalash
+            </button>
+          </div>
+        )}
 
         <FAQ />
       </div>

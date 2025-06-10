@@ -129,7 +129,7 @@ export default function Structure() {
     },
     {
       title: "structure.complianceSpecialist",
-      fullname: "Iskandar Turayev",
+      fullname: "Vakant",
       email: "digital.uz",
       number: "+998 71 203 03 43",
       image: VacancyImage,
