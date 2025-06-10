@@ -25,30 +25,30 @@
     "courses": "Courses"
   },
   "landing-1": {
-    "title": "Al-Khwarizmi",
-    "description": "Free courses for talented 7th–11th grade students interested in the IT field.",
-    "moreDetails": "More information",
+    "title": "Muhammad al-Khwarizmi’s Legacy",
+    "description": "A completely free educational program specially designed for students in grades 7–11, offering modern, high-quality knowledge in relevant fields such as logistics, business management, and advanced technologies. The project aims to prepare the younger generation for the demands of the digital age by creating extensive opportunities to enhance their knowledge and skills.",
+    "moreDetails": "More Details",
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
   "landing-2": {
     "title": "IT Town",
-    "description": "Learn IT professions without leaving your region",
-    "moreDetails": "More information",
+    "description": "This project is designed for talented young people living in remote rural areas of Uzbekistan. It identifies those interested in modern information technologies and provides them with free training in IT skills, foreign languages, and in-demand professions to unlock their potential.",
+    "moreDetails": "More Details",
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
   "landing-3": {
-    "title": "IT-Talents",
-    "description": "Participate in modern projects, be active!",
-    "moreDetails": "More information",
+    "title": "IT Talents",
+    "description": "A project launched to train and support qualified specialists in the export of IT services. Non-governmental educational institutions can receive a one-time subsidy of up to 105 times the base calculation amount.",
+    "moreDetails": "More Details",
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
   "landing-4": {
-    "title": "Uzbekcoders",
-    "description": "Learn IT for free in the field of IT",
-    "moreDetails": "More information",
+    "title": "One Million Uzbek Developers",
+    "description": "A major educational initiative that provides the youth of Uzbekistan with the opportunity to secure a prominent place in the digital world by offering free education in IT and modern technologies.",
+    "moreDetails": "More Details",
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },

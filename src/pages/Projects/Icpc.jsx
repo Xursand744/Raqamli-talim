@@ -14,7 +14,6 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
-import { useNavigate } from "react-router-dom";
 
 const Breadcrumb = () => {
   return (
@@ -106,7 +105,6 @@ StageCard.propTypes = {
 };
 
 export default function Icpc() {
-  const navigate = useNavigate();
 
   const metrics = [
     {
