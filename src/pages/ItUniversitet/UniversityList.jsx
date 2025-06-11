@@ -285,7 +285,7 @@ export default function UniversityList() {
                   {/* IT направления */}
                   {university.directions && (
                     <div className="mt-3">
-                      <p className="text-xs font-medium text-gray-700 mb-1">IT yo&apos;nalishlari:</p>
+                      <p className="text-xs font-medium text-gray-700 mb-1">IT yo'nalishlari:</p>
                       <div className="text-xs text-gray-600 line-clamp-3">
                         {university.directions}
                       </div>

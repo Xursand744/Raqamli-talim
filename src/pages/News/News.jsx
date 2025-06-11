@@ -56,7 +56,7 @@ function News() {
       }
     } catch (error) {
       console.error('Error fetching news:', error);
-      setError(error.response?.data?.message || "Xatolik yuz berdi. Iltimos, qaytadan urinib ko&apos;ring.");
+      setError(error.response?.data?.message || "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring.");
     } finally {
       setIsLoading(false);
     }
@@ -97,7 +97,7 @@ function News() {
                   onClick={handleRetry}
                   className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
                 >
-                  Qaytadan urinib ko&apos;rish
+                  Qaytadan urinib ko'rish
                 </button>
               </div>
             ) : (

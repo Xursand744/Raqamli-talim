@@ -194,7 +194,7 @@ function Universities() {
         <BreadCrumps breadCrumps={breadCrumps} />
 
         <h1 className="text-[56px] text-center font-bold text-[#222222] mb-8 mt-[80px]">
-          Oliy Ta&apos;lim Muassasalari
+          Oliy Ta'lim Muassasalari
         </h1>
 
         <div className="max-w-[792px] w-full mx-auto">
@@ -204,10 +204,10 @@ function Universities() {
         <div className="pt-[100px] max-w-3xl mx-auto w-full mb-[100px]">
           <div className="px-[50px] rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-400 p-10 text-center text-white">
             <h1 className="text-3xl font-bold mb-4">
-              Tizim universitetlarida ta&apos;lim oluvchilar bo&apos;yicha ma&apos;lumot
+              Tizim universitetlarida ta'lim oluvchilar bo'yicha ma'lumot
             </h1>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full transition duration-300 mt-[30px]">
-              Jadvalni ko&apos;rish
+              Jadvalni ko'rish
             </button>
           </div>
         </div>
@@ -216,7 +216,7 @@ function Universities() {
       </div>
 
       <div className="mt-[50px]">
-        <UzbekistanMap title="Hudud bo&apos;yicha OTM lar" />
+        <UzbekistanMap title="Hudud bo'yicha OTM lar" />
       </div>
 
       <div className="max-w-[1250px] mx-auto my-[80px]">
@@ -342,7 +342,7 @@ function Universities() {
                 {/* IT направления */}
                 {university.directions && (
                   <div className="mt-3">
-                    <p className="text-xs font-medium text-gray-700 mb-1">IT yo&apos;nalishlari:</p>
+                    <p className="text-xs font-medium text-gray-700 mb-1">IT yo'nalishlari:</p>
                     <div className="text-xs text-gray-600 line-clamp-3">
                       {university.directions}
                     </div>

@@ -252,7 +252,7 @@ function UniversitiesStatistics() {
                   Rasm
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-medium">
-                  OTM (Oliy ta&apos;lim muassasasi nomi)
+                  OTM (Oliy ta'lim muassasasi nomi)
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-medium">
                   OTM joylashgan hudud

@@ -8,6 +8,7 @@ import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 import { RegionsMap } from "../../components/RegionMap";
 import { useState } from "react";
 import { regionsPathArray } from "../../components/mapArray";
+import RTRM from "../../assets/images/RTRM.svg";
 
 // Courses data
 const courses = [
@@ -171,62 +172,60 @@ const MapSection = () => {
           IT Shaharcha joylashgan hududlar
         </h2>
         <p className="text-gray-600 text-lg leading-relaxed">
-          IT Shaharcha dasturi O&apos;zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
-          Har bir hududda yoshlar uchun zamonaviy ta&apos;lim imkoniyatlari yaratiladi.
+          IT Shaharcha dasturi O'zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
+          Har bir hududda yoshlar uchun zamonaviy ta'lim imkoniyatlari yaratiladi.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 items-stretch">
+      <div className="flex flex-col lg:flex-row gap-8 items-stretch relative">
+        {/* SVG фон под картой */}
+        {/* <img src={RTRM} alt="background" className="absolute left-0 top-0 w-2/3 h-full opacity-10 pointer-events-none z-0" /> */}
         {/* Карта */}
-        <div className="flex-1 flex items-center justify-center min-h-[400px]">
-          <RegionsMap
-            width="100%"
-            height="500"
-            defaultFillColor="#e5e7eb"
-            selectedFillColor="#043b87"
-            hoverFillColor="#7b7f94"
-            handleClick={handleRegionClick}
-            className="w-full max-w-xl"
-          />
+        <div className="flex-1 flex items-center justify-center min-h-[400px] relative z-10">
+          <div className="relative w-full max-w-xl">
+            <RegionsMap
+              width="100%"
+              height="500"
+              viewBox="0 0 1000 700"
+              defaultFillColor="#e5e7eb"
+              selectedFillColor="#043b87"
+              hoverFillColor="#7b7f94"
+              handleClick={handleRegionClick}
+              className="w-full h-auto"
+            />
+            {selectedRegion && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 px-6 py-2 rounded-full shadow text-blue-900 font-bold text-lg">
+                {selectedRegion.name}
+              </div>
+            )}
+          </div>
         </div>
-        {/* Инфо-карточка */}
-        <div className="flex-1 flex items-center justify-center">
-          {selectedRegion ? (
-            <div className="bg-white border rounded-xl shadow-lg p-8 flex flex-col justify-center max-w-xl w-full">
-              <div className="mb-2 text-blue-900 font-bold text-lg uppercase tracking-wide">
-                REGIONAL DEPARTMENTS
+        {/* Панель */}
+        <div className="flex-1 flex items-center justify-center relative z-10">
+          <div className="bg-white border rounded-xl shadow-lg p-8 max-w-xl w-full" style={{ color: '#043b87', position: 'relative' }}>
+            <h3 className="font-bold text-lg mb-2 uppercase">Hududiy ma'lumotlar</h3>
+            <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion?.name}</h4>
+            <div className="mb-4 space-y-2 text-black">
+              <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion?.address || ''-''}</span>
+                {selectedRegion?.address && (
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRegion.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold hover:bg-blue-200 transition"
+                  >
+                    Xaritada ochish
+                  </a>
+                )}
               </div>
-              <div className="mb-4 text-xs text-blue-800 font-semibold uppercase">
-                TERRITORIAL ADMINISTRATION OF {selectedRegion.name.toUpperCase()}
-              </div>
-              <div className="mb-4 text-2xl font-bold text-gray-900">
-                {selectedRegion.fullName || 'No info'}
-              </div>
-              <div className="grid grid-cols-2 gap-y-2 text-gray-700 text-base mb-4">
-                <div className="font-medium text-blue-900">Job title:</div>
-                <div>{selectedRegion.position || 'Chief'}</div>
-                <div className="font-medium text-blue-900">Address:</div>
-                <div>{selectedRegion.address || selectedRegion.location || '—'}</div>
-                <div className="font-medium text-blue-900">Telephone:</div>
-                <div>
-                  {selectedRegion.phoneNumber ? (
-                    <a href={`tel:${selectedRegion.phoneNumber.replace(/[^\d+]/g, '')}`} className="text-blue-700 underline">{selectedRegion.phoneNumber}</a>
-                  ) : '—'}
-                </div>
-                <div className="font-medium text-blue-900">Reception days:</div>
-                <div>{selectedRegion.receptionDays || 'Monday - Friday 09:00 - 12:00'}</div>
-              </div>
-              <div className="font-bold text-blue-800 text-base">
-                {selectedRegion.email ? (
-                  <a href={`mailto:${selectedRegion.email}`}>{selectedRegion.email}</a>
-                ) : '—'}
-              </div>
+              <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion?.area || ''-''}</span></div>
+              <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion?.directions || ''-''}</span></div>
+              <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion?.mentorsCount ?? ''-''}</span></div>
+              <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion?.classroomsCount ?? ''-''}</span></div>
+              <div><span className="font-semibold">O'quvchilar soni:</span> <span className="font-normal">{selectedRegion?.studentsCount ?? ''-''}</span></div>
             </div>
-          ) : (
-            <div className="bg-white border rounded-xl shadow-lg p-8 flex flex-col justify-center max-w-xl w-full text-center text-gray-500">
-              <div className="text-lg mb-2">Kartadan hududni tanlang</div>
-              <div className="text-sm">Hudud haqida batafsil ma&apos;lumot shu yerda chiqadi</div>
-            </div>
-          )}
+            {/* SVG фон сбоку */}
+            <img src={RTRM} alt="background" className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none" />
+          </div>
         </div>
       </div>
     </div>
