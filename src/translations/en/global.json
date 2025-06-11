@@ -466,6 +466,8 @@
   },
   "contact": {
     "title": "Contact Us",
+    "website": "Website",
+    "phone": "Phone",
     "nameLabel": "Full Name",
     "namePlaceholder": "Your full name",
     "phoneLabel": "Phone Number",

@@ -526,6 +526,8 @@
   },
   "contact": {
     "title": "Связаться с нами",
+    "website": "Веб-сайт",
+    "phone": "Телефон",
     "nameLabel": "Полное имя",
     "namePlaceholder": "Ваше полное имя",
     "phoneLabel": "Ваш телефон",

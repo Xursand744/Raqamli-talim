@@ -519,6 +519,8 @@
   },
   "contact": {
     "title": "Biz bilan bog'laning",
+    "website": "Veb-sayt",
+    "phone": "Telefon raqam",
     "nameLabel": "To'liq ismingiz",
     "namePlaceholder": "To'liq ismingiz",
     "phoneLabel": "Telefon raqamingiz",

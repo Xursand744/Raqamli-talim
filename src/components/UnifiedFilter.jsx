@@ -275,12 +275,12 @@ export default function UnifiedFilter() {
                       </div>
                       {center.phone && (
                         <p className="text-sm text-gray-600 mb-1">
-                          {t("common.phone")}: {center.phone}
+                          {t("contact.phone")}: {center.phone}
                         </p>
                       )}
                       {center.website && (
                         <p className="text-sm text-gray-600">
-                          {t("common.website")}: {center.website}
+                          {t("contact.website")}: {center.website}
                         </p>
                       )}
                     </div>
