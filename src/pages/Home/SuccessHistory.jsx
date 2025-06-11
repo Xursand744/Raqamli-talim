@@ -9,16 +9,16 @@ function SuccessHistory() {
 
   const data = [
     {
-      id: "zarnigor-raximova",
+      id: "abror-juraev",
       studyCenter: "PDP",
-      fullName: "Zarnigor Raximova",
+      fullName: "Abror Juraev",
       desc: t("successHistory.abror.desc"),
       tags: [t("locations.andijan"), t("roles.frontend")],
       image: SuccessHistory1,
       clickable: false,
     },
     {
-      id: "mohira-tulaganova",
+      id: "zarnigor-raximova",
       studyCenter: "Mohirdev",
       fullName: t("successHistory.mohira.fullName"),
       desc: t("successHistory.mohira.desc"),

@@ -84,7 +84,7 @@ export default function SuccessStoryDetail() {
       ]
     },
     "mohira-tulaganova": {
-      fullName: "Mohira Tulaganova",
+      fullName: "Zarnigor Raximova",
       studyCenter: "Mohirdev",
       image: "/src/assets/success-history-2.jpg",
       videoSrc: "/src/assets/videos/5.mp4",
