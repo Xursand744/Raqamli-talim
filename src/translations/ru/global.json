@@ -648,7 +648,10 @@
     "reset": "Сбросить"
   },
   "common": {
-    "tashkent": "Ташкент"
+    "tashkent": "Ташкент",
+    "months": "месяцев",
+    "perMonth": "в месяц",
+    "perMonthShort": "в месяц"
   },
   "pagination": {
     "next": "Следующая",
@@ -657,5 +660,6 @@
   "search": {
     "placeholder": "Поиск",
     "sortByName": "Сортировать по названию"
-  }
+  },
+  "perMonthShort": "в месяц"
 }

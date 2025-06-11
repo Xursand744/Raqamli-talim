@@ -640,7 +640,10 @@
     "courseImage": "Kurs rasmi"
   },
   "common": {
-    "tashkent": "Toshkent"
+    "tashkent": "Toshkent",
+    "months": "oy",
+    "perMonth": "oyiga",
+    "perMonthShort": "oyiga"
   },
   "pagination": {
     "next": "Keyingi",
@@ -649,5 +652,6 @@
   "search": {
     "placeholder": "Qidirish",
     "sortByName": "Ism bo'yicha saralash"
-  }
+  },
+  "perMonthShort": "oyiga"
 }

@@ -47,7 +47,7 @@ export default function TipsFilter() {
     name: course.name_uz || "",
     image: course.center?.logo || CourseItemImage,
     location: t("common.tashkent"),
-    fullLocation: t("common.tashkentUzbekistan"),
+    fullLocation: t("common.tashkent"),
     telegram: course.center?.telegram,
     number: course.center?.phone,
     website: course.center?.website,

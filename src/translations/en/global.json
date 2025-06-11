@@ -587,7 +587,10 @@
     "courseImage": "Course image"
   },
   "common": {
-    "tashkent": "Tashkent"
+    "tashkent": "Tashkent",
+    "months": "months",
+    "perMonth": "per month",
+    "perMonthShort": "per month"
   },
   "pagination": {
     "next": "Next",
@@ -596,5 +599,7 @@
   "search": {
     "placeholder": "Search",
     "sortByName": "Sort by name"
-  }
+  },
+  "perMonthShort": "per month",
+  "months": "months"
 }

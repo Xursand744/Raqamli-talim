@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 
 const Modal = ({ isOpen, onClose, course }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("global");
 
   if (!isOpen) return null;
 
@@ -74,12 +74,12 @@ const Modal = ({ isOpen, onClose, course }) => {
               <span className="font-medium">{t(course.center)}</span>
             </div>
             <div className="text-lg font-semibold text-blue-600">
-              {course.price} {t("currency.perMonth")}
+              {course.price} {t("common.perMonth")}
             </div>
           </div>
           <h2 id="modal-title" className="text-xl font-bold">{t(course.name)}</h2>
           <p className="text-blue-500 text-lg font-semibold mt-2">
-            {course.price.toLocaleString("uz-UZ")} {t("currency.perMonthShort")}
+            {course.price.toLocaleString("uz-UZ")} {t("common.perMonthShort")}
           </p>
 
           <div className="mt-4">

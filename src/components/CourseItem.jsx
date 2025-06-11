@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export default function CourseItem({ course }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useTranslation("global");
 
   const handleClick = () => {
     setIsModalOpen(true);
@@ -50,7 +50,7 @@ export default function CourseItem({ course }) {
           <p className="text-lg font-bold text-gray-800 line-clamp-2 mb-3">{t(course.name)}</p>
           <div className="mb-4">
             <span className="text-xl font-bold text-blue-600">
-              {course.price.toLocaleString("uz-UZ")} {t("currency.perMonthShort")}
+              {course.price.toLocaleString("uz-UZ")} {t("perMonthShort")}
             </span>
           </div>
           <div className="flex items-center space-x-4 text-gray-600 text-sm">
