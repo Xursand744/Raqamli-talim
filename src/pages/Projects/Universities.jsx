@@ -221,7 +221,7 @@ function Universities() {
 
       <div className="max-w-[1250px] mx-auto my-[80px]">
         <h1 className="text-[56px] text-center font-bold text-[#222222] mb-8 mt-[80px]">
-          IT universitetlar
+          Universitetlar
         </h1>
 
         {/* Фильтры */}
