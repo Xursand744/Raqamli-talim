@@ -231,7 +231,7 @@ export default function UniversityList() {
               >
                 <div className="relative">
                   {university.image ? (
-                    <div className="w-full h-48 bg-cover bg-center bg-auto bg-no-repeat" style={{ backgroundImage: `url(${university.image})`, backgroundPosition: 'center', backgroundSize: 'auto 100%', backgroundRepeat: 'no-repeat' }}>
+                    <div className="w-full h-48 bg-cover bg-center bg-auto bg-no-repeat" style={{ backgroundImage: `url(${university.image})`, backgroundPosition: 'center', backgroundSize: 'auto 60%', backgroundRepeat: 'no-repeat' }}>
                     </div>
                   ) : (
                     <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
