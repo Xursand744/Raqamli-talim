@@ -143,8 +143,6 @@ export default function SuccessStoryDetail() {
           />
         </div>
 
-        {story.image}
-
         <div className="mb-12">
           {story.content.map((paragraph, index) => (
             <p key={index} className="text-lg text-gray-700 mb-6 leading-relaxed">
