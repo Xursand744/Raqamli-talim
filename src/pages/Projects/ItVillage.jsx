@@ -5,12 +5,15 @@ import { rightIcon } from "../../assets/icons/icon";
 import { useTranslation } from "react-i18next";
 import { BackgroundIcon } from "../../assets/icons/icon";
 import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
+import { RegionsMap } from "../../components/RegionMap";
+import { useState } from "react";
+import { regionsPathArray } from "../../components/mapArray";
 
 // Courses data
 const courses = [
     { id: 1, title: "Axborot texnologiyalari (IT)" },
     { id: 2, title: "Chet tillari" },
-    { id: 3, title: "Shaxsiy rivojlanish va biznes ko‘nikmalari" },
+    { id: 3, title: "Shaxsiy rivojlanish va biznes ko'nikmalari" },
     { id: 4, title: "Zamonaviy amaliy kasblar" },
     { id: 5, title: "Davlat xizmatlaridan foydalanish" },
   ];
@@ -150,6 +153,86 @@ const DecisionsSection = () => (
   </div>
 );
 
+// Map Section Component
+const MapSection = () => {
+  const [selectedRegion, setSelectedRegion] = useState(null);
+
+  const handleRegionClick = (regionId) => {
+    const region = regionsPathArray.find(r => r.id === regionId);
+    if (region) {
+      setSelectedRegion(region);
+    }
+  };
+
+  return (
+    <div className="max-w-[1230px] mx-auto px-4 py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-3xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-bold mb-6 text-gray-900">
+          IT Shaharcha joylashgan hududlar
+        </h2>
+        <p className="text-gray-600 text-lg leading-relaxed">
+          IT Shaharcha dasturi O&apos;zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
+          Har bir hududda yoshlar uchun zamonaviy ta&apos;lim imkoniyatlari yaratiladi.
+        </p>
+      </div>
+      <div className="flex flex-col lg:flex-row gap-8 items-stretch">
+        {/* Карта */}
+        <div className="flex-1 flex items-center justify-center min-h-[400px]">
+          <RegionsMap
+            width="100%"
+            height="500"
+            defaultFillColor="#e5e7eb"
+            selectedFillColor="#043b87"
+            hoverFillColor="#7b7f94"
+            handleClick={handleRegionClick}
+            className="w-full max-w-xl"
+          />
+        </div>
+        {/* Инфо-карточка */}
+        <div className="flex-1 flex items-center justify-center">
+          {selectedRegion ? (
+            <div className="bg-white border rounded-xl shadow-lg p-8 flex flex-col justify-center max-w-xl w-full">
+              <div className="mb-2 text-blue-900 font-bold text-lg uppercase tracking-wide">
+                REGIONAL DEPARTMENTS
+              </div>
+              <div className="mb-4 text-xs text-blue-800 font-semibold uppercase">
+                TERRITORIAL ADMINISTRATION OF {selectedRegion.name.toUpperCase()}
+              </div>
+              <div className="mb-4 text-2xl font-bold text-gray-900">
+                {selectedRegion.fullName || 'No info'}
+              </div>
+              <div className="grid grid-cols-2 gap-y-2 text-gray-700 text-base mb-4">
+                <div className="font-medium text-blue-900">Job title:</div>
+                <div>{selectedRegion.position || 'Chief'}</div>
+                <div className="font-medium text-blue-900">Address:</div>
+                <div>{selectedRegion.address || selectedRegion.location || '—'}</div>
+                <div className="font-medium text-blue-900">Telephone:</div>
+                <div>
+                  {selectedRegion.phoneNumber ? (
+                    <a href={`tel:${selectedRegion.phoneNumber.replace(/[^\d+]/g, '')}`} className="text-blue-700 underline">{selectedRegion.phoneNumber}</a>
+                  ) : '—'}
+                </div>
+                <div className="font-medium text-blue-900">Reception days:</div>
+                <div>{selectedRegion.receptionDays || 'Monday - Friday 09:00 - 12:00'}</div>
+              </div>
+              <div className="font-bold text-blue-800 text-base">
+                {selectedRegion.email ? (
+                  <a href={`mailto:${selectedRegion.email}`}>{selectedRegion.email}</a>
+                ) : '—'}
+              </div>
+            </div>
+          ) : (
+            <div className="bg-white border rounded-xl shadow-lg p-8 flex flex-col justify-center max-w-xl w-full text-center text-gray-500">
+              <div className="text-lg mb-2">Kartadan hududni tanlang</div>
+              <div className="text-sm">Hudud haqida batafsil ma&apos;lumot shu yerda chiqadi</div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Bottom Section Component
 const BottomSection = () => {
   const { t } = useTranslation("global");
@@ -185,6 +268,7 @@ const ItVillage = () => {
       <HeroSection />
       <DescriptionSection />
       <CoursesSection />
+      <MapSection />
     </div>
   );
 };
