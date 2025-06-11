@@ -62,7 +62,7 @@ export default function SuccessStoryDetail() {
     "zarnigor-raximova": {
       fullName: "Zarnigor Raximova",
       studyCenter: "PDP",
-      image: "/src/assets/success-history-1.png",
+      image: "/src/assets/success-history-2.jpg",
       videoSrc: "/src/assets/videos/5.mp4",
       content: [
         "Zarnigor Raximova Niderlandiyaning Eyndxoven shahrida 2024-yil 21–27-iyul kunlari bo'lib o'tgan nufuzli olimpiadada Yevropa qizlar olimpiadasida (EGOI) O'zbekiston terma jamoasi safida ishtirok etdi.",
@@ -142,6 +142,8 @@ export default function SuccessStoryDetail() {
             className="w-full h-[400px] object-contain rounded-lg"
           />
         </div>
+
+        {story.image}
 
         <div className="mb-12">
           {story.content.map((paragraph, index) => (
