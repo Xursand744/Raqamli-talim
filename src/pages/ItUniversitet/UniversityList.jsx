@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from "react";
-import univerImg from "../../assets/univer.png";
 import inhaimg from "../../assets/inha.png";
 import universitiesData from "../../data/universities.json";
 
@@ -201,11 +200,11 @@ export default function UniversityList() {
                 className="overflow-hidden max-w-[400px] w-full bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="relative">
-                  <img
-                    src={univerImg}
-                    alt={university.name}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">
+                      {university.name.charAt(0)}
+                    </span>
+                  </div>
                   <div className="absolute bottom-2 left-2">
                     <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
                       {university.region}
