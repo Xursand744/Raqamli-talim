@@ -1,4 +1,3 @@
-import React from "react";
 import StudyCenterFilter from "../components/StudyCenterFilter";
 
 function StudyCenters() {

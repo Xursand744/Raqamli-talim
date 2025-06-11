@@ -1,4 +1,3 @@
-import CourseFilter from "../components/CourseFilter";
 import TipsFilter from "../components/TipsFilter";
 
 function Tips() {

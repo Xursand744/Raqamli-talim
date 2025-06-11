@@ -10,9 +10,9 @@ import RootLayout from "./layouts/RootLayout";
 import HomePage from "./pages/Home/index";
 import About from "./pages/AboutPages/About";
 import Project from "./pages/Project";
-import Tips from "./pages/Tip";
+import RedirectToEducation from "./pages/RedirectToEducation";
 import University from "./pages/ItUniversitet/UniversityList";
-import StudyCenters from "./pages/StudyCenters";
+import UnifiedPage from "./pages/UnifiedPage";
 import JobSearch from "./pages/ITFields_list/IT_fields_list";
 import Dashboard from "./pages/Analitic/Analitic";
 import OpenInformations from "./pages/AboutPages/OpenInformations";
@@ -88,11 +88,15 @@ export default function App() {
         },
         {
           path: "/courses",
-          element: <Tips />,
+          element: <RedirectToEducation />,
         },
         {
           path: "/join-team",
           element: <JoinTeam />,
+        },
+        {
+          path: "/education",
+          element: <UnifiedPage />,
         },
         {
           path: "/projects",
@@ -166,7 +170,7 @@ export default function App() {
         },
         {
           path: "/study-centers",
-          element: <StudyCenters />,
+          element: <RedirectToEducation />,
         },
         {
           path: "/news",
