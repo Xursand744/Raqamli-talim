@@ -1,6 +1,11 @@
 import { useState, useMemo, useEffect } from "react";
-import inhaimg from "../../assets/inha.png";
 import universitiesData from "../../data/universities.json";
+import University1 from "../../assets/universities/1.png";
+import University2 from "../../assets/universities/2.png";
+import University3 from "../../assets/universities/3.png";
+import University4 from "../../assets/universities/4.png";
+import University5 from "../../assets/universities/5.png";
+import University6 from "../../assets/universities/6.png";
 
 export default function UniversityList() {
   const [universities, setUniversities] = useState([]);
@@ -17,19 +22,31 @@ export default function UniversityList() {
   useEffect(() => {
     const cleanData = universitiesData
       .filter(uni => uni["OTM (Oliy ta'lim muassasasi nomi)"] && uni["OTM (Oliy ta'lim muassasasi nomi)"].trim() !== "")
-      .map(uni => ({
-        id: uni["T/r"] || Math.random().toString(),
-        name: uni["OTM (Oliy ta'lim muassasasi nomi)"],
-        region: uni["OTM joylashgan hudud"],
-        website: uni["Veb-sayti"],
-        telegram: uni["Telegram kanallar"],
-        email: uni["Elektron pochta/exat manzili"],
-        phone: uni["Bog'lanish uchun tel. raqam"],
-        responsible: uni["OTMdan mas'ul ma'lumotlari"],
-        specialization: uni["IT ga ixtisoslashgan\n/ixtisoslashmagan"],
-        directions: uni["IT yo'nalish nomi"],
-        admission: uni["Qabul 2024"]
-      }));
+      .map((uni, index) => {
+        // Add university photos for the first 6 universities
+        const universityPhotos = [University1, University2, University3, University4, University5, University6];
+        const image = index < 6 ? universityPhotos[index] : null;
+        
+        // Debug: log image information
+        if (index < 6) {
+          console.log(`University ${index + 1}: ${uni["OTM (Oliy ta'lim muassasasi nomi)"]} - Image:`, image);
+        }
+        
+        return {
+          id: uni["T/r"] || Math.random().toString(),
+          name: uni["OTM (Oliy ta'lim muassasasi nomi)"],
+          region: uni["OTM joylashgan hudud"],
+          website: uni["Veb-sayti"],
+          telegram: uni["Telegram kanallar"],
+          email: uni["Elektron pochta/exat manzili"],
+          phone: uni["Bog'lanish uchun tel. raqam"],
+          responsible: uni["OTMdan mas'ul ma'lumotlari"],
+          specialization: uni["IT ga ixtisoslashgan\n/ixtisoslashmagan"],
+          directions: uni["IT yo'nalish nomi"],
+          admission: uni["Qabul 2024"],
+          image: image
+        };
+      });
     
     setUniversities(cleanData);
   }, []);
@@ -213,11 +230,16 @@ export default function UniversityList() {
                 className="overflow-hidden max-w-[400px] w-full bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="relative">
-                  <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">
-                      {university.name.charAt(0)}
-                    </span>
-                  </div>
+                  {university.image ? (
+                    <div className="w-full h-48 bg-cover bg-center" style={{ backgroundImage: `url(${university.image})` }}>
+                    </div>
+                  ) : (
+                    <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                      <span className="text-white text-2xl font-bold">
+                        {university.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                   <div className="absolute bottom-2 left-2">
                     <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
                       {university.region}
@@ -225,20 +247,11 @@ export default function UniversityList() {
                   </div>
                 </div>
                 <div className="p-4">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-8 h-8 bg-gray-200 rounded-full overflow-hidden">
-                      <img
-                        src={inhaimg}
-                        alt={university.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-sm line-clamp-2">{university.name}</h3>
-                      <p className="text-xs text-gray-500">
-                        {university.region}
-                      </p>
-                    </div>
+                  <div className="mb-2">
+                    <h3 className="font-medium text-sm line-clamp-2">{university.name}</h3>
+                    <p className="text-xs text-gray-500">
+                      {university.region}
+                    </p>
                   </div>
                   
                   {/* Контактная информация */}

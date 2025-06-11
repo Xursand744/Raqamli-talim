@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import University1 from "../../assets/universities/1.png";
+import University2 from "../../assets/universities/2.png";
+import University3 from "../../assets/universities/3.png";
+import University4 from "../../assets/universities/4.png";
+import University5 from "../../assets/universities/5.png";
+import University6 from "../../assets/universities/6.png";
 
 function UniversitiesStatistics() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,6 +36,7 @@ function UniversitiesStatistics() {
         region: "Toshkent shahar",
         website: "newuz.uz/en",
         itDepartment: "Ixtisoslashgan",
+        image: University1,
       },
       {
         id: 2,
@@ -37,6 +44,7 @@ function UniversitiesStatistics() {
         region: "Qoraqalpog'iston Respublikasi",
         website: "ndpi.uz",
         itDepartment: "Ixtisoslashgan",
+        image: University2,
       },
       {
         id: 3,
@@ -44,6 +52,7 @@ function UniversitiesStatistics() {
         region: "Toshkent shahar",
         website: "afu.uz",
         itDepartment: "Ixtisoslashmagan",
+        image: University3,
       },
       {
         id: 4,
@@ -51,6 +60,7 @@ function UniversitiesStatistics() {
         region: "Andijon viloyati",
         website: "adu.uz",
         itDepartment: "Ixtisoslashmagan",
+        image: University4,
       },
       {
         id: 5,
@@ -58,6 +68,7 @@ function UniversitiesStatistics() {
         region: "Andijon viloyati",
         website: "adpi.uz",
         itDepartment: "Ixtisoslashmagan",
+        image: University5,
       },
       {
         id: 6,
@@ -65,6 +76,7 @@ function UniversitiesStatistics() {
         region: "Andijon viloyati",
         website: "web.andmiedu.uz/uz",
         itDepartment: "Ixtisoslashmagan",
+        image: University6,
       },
       {
         id: 7,
@@ -237,7 +249,10 @@ function UniversitiesStatistics() {
               <tr>
                 <th className="px-4 py-3 text-left text-sm font-medium">#</th>
                 <th className="px-4 py-3 text-left text-sm font-medium">
-                  OTM (Oliy ta'lim muassasasi nomi)
+                  Rasm
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium">
+                  OTM (Oliy ta&apos;lim muassasasi nomi)
                 </th>
                 <th className="px-4 py-3 text-left text-sm font-medium">
                   OTM joylashgan hudud
@@ -255,6 +270,19 @@ function UniversitiesStatistics() {
                 <tr key={institution.id} className="hover:bg-gray-50">
                   <td className="px-4 py-3 text-sm text-gray-900">
                     {institution.id}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-900">
+                    {institution.image ? (
+                      <img
+                        src={institution.image}
+                        alt={institution.name}
+                        className="w-12 h-12 object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <span className="text-gray-500 text-xs">No image</span>
+                      </div>
+                    )}
                   </td>
                   <td className="px-4 py-3 text-sm text-gray-900 font-medium">
                     {institution.name}
