@@ -25,7 +25,7 @@
     "courses": "Courses"
   },
   "landing-1": {
-    "title": "Muhammad al-Khwarizmi’s Legacy",
+    "title": "Muhammad al-Khwarizmi's Legacy",
     "description": "A completely free educational program specially designed for students in grades 7–11, offering modern, high-quality knowledge in relevant fields such as logistics, business management, and advanced technologies. The project aims to prepare the younger generation for the demands of the digital age by creating extensive opportunities to enhance their knowledge and skills.",
     "moreDetails": "More Details",
     "imageAlt": "Educational program emblem",
@@ -67,8 +67,8 @@
     "carouselAlt": "Educational opportunities in the IT field"
   },
   "landing-7": {
-    "title": "“ICT4Girls” – the Informatics Olympiad for schoolgirls in Uzbekistan.",
-    "description": "A project to boost schoolgirls’ interest in competitive programming, develop their knowledge and skills, and prepare them for international informatics olympiads.",
+    "title": "'ICT4Girls' – the Informatics Olympiad for schoolgirls in Uzbekistan.",
+    "description": "A project to boost schoolgirls' interest in competitive programming, develop their knowledge and skills, and prepare them for international informatics olympiads.",
     "moreDetails": "More information",
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
@@ -173,6 +173,7 @@
   "successHistory": {
     "title": "Success Stories",
     "allEvents": "All Events",
+    "videoTitle": "Video Material",
     "abror": {
       "fullName": "Abror Jurayev",
       "desc": "How to Become a Senior Developer During Your Student Years"
@@ -599,6 +600,10 @@
   "search": {
     "placeholder": "Search",
     "sortByName": "Sort by name"
+  },
+  "errors": {
+    "storyNotFound": "Success story not found",
+    "storyNotFoundDesc": "The success story you are looking for does not exist or has been removed."
   },
   "perMonthShort": "per month",
   "months": "months"

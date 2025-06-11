@@ -38,6 +38,7 @@ import Ict from "./pages/Projects/Ict";
 import Aca from "./pages/Projects/Aca";
 import Apio from "./pages/Projects/Apio";
 import Icpc from "./pages/Projects/Icpc";
+import SuccessStoryDetail from "./pages/SuccessStory/SuccessStoryDetail";
 
 export default function App() {
   const routes = createBrowserRouter([
@@ -97,6 +98,10 @@ export default function App() {
         {
           path: "/education",
           element: <UnifiedPage />,
+        },
+        {
+          path: "/success-story/:id",
+          element: <SuccessStoryDetail />,
         },
         {
           path: "/projects",

@@ -208,6 +208,7 @@
   "successHistory": {
     "title": "Muvaffaqiyat tarixi",
     "allEvents": "Barcha tadbirlar",
+    "videoTitle": "Video material",
     "abror": {
       "fullName": "Shohrux",
       "desc": "Coursera platformasidagi Python bo'yicha onlayn o'quv kursini tugatib, xalqaro IT sertifikat qo'lga kiritdi va u xarajatlarini qoplab berish uchun murojaat qildi. Unda IELTS B2 sertifikati ham mavjudligi bois uning xalqaro IT sertifikat bilan bog'liq xarajatlari 100% qoplab berildi."
@@ -652,6 +653,10 @@
   "search": {
     "placeholder": "Qidirish",
     "sortByName": "Ism bo'yicha saralash"
+  },
+  "errors": {
+    "storyNotFound": "Muvaffaqiyat tarixi topilmadi",
+    "storyNotFoundDesc": "Siz qidirayotgan muvaffaqiyat tarixi mavjud emas yoki o'chirilgan."
   },
   "perMonthShort": "oyiga"
 }

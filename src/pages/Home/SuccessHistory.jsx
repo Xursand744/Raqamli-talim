@@ -9,36 +9,33 @@ function SuccessHistory() {
 
   const data = [
     {
+      id: "zarnigor-raximova",
       studyCenter: "PDP",
-      fullName: t("successHistory.abror.fullName"),
+      fullName: "Zarnigor Raximova",
       desc: t("successHistory.abror.desc"),
       tags: [t("locations.andijan"), t("roles.frontend")],
       image: SuccessHistory1,
+      clickable: false,
     },
     {
+      id: "mohira-tulaganova",
       studyCenter: "Mohirdev",
       fullName: t("successHistory.mohira.fullName"),
       desc: t("successHistory.mohira.desc"),
       tags: [t("locations.navoi"), t("roles.backend")],
       image: SuccessHistory2,
+      clickable: true,
     },
     {
+      id: "sevinch-mukimova",
       studyCenter: "Alloma",
       fullName: t("successHistory.sevinch.fullName"),
       desc: t("successHistory.sevinch.desc"),
       tags: [t("locations.tashkent"), t("roles.design")],
       image: SuccessHistory3,
+      clickable: false,
     },
   ];
-
-  const Button = ({ children, className, ...props }) => (
-    <button
-      className={`px-4 py-2 rounded font-semibold ${className}`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
 
   return (
     <div>
@@ -48,11 +45,13 @@ function SuccessHistory() {
         {data.map((item, index) => (
           <SuccessHistoryItem
             key={index}
+            id={item.id}
             studyCenter={item.studyCenter}
             fullname={item.fullName}
             desc={item.desc}
             tags={item.tags}
             image={item.image}
+            clickable={item.clickable}
           />
         ))}
       </div>
