@@ -94,6 +94,13 @@
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
+  "landing-11": {
+    "title": "IT Iste'dod",
+    "description": "The project was introduced to reimburse the expenses incurred by young people for obtaining international IT certificates, as well as the costs of obtaining international professional IT certificates for those who already hold a B2 level or higher certificate.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
   "chances": {
     "title": "Special opportunities for youth",
     "walletTitle": "Get IT Compensation",

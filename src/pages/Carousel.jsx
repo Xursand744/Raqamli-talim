@@ -11,6 +11,7 @@ import ict from "../assets/images/projects/7.jpg";
 import api from "../assets/images/projects/8.jpg";
 import icpc from "../assets/images/projects/9.png";
 import aca from "../assets/images/projects/10.jpg";
+import istedod from "../assets/projects/istedod.png";
 import { useTranslation } from "react-i18next";
 // Import Swiper styles
 import "swiper/css";
@@ -56,6 +57,13 @@ export default function App() {
       buttonText: t(`landing-5.moreDetails`),
       image: tot,
       link: "tot",
+    },
+    {
+      title: t(`landing-11.title`),
+      description: t(`landing-11.description`),
+      buttonText: t(`landing-11.moreDetails`),
+      image: istedod,
+      link: "it-sertifikatlar",
     },
     {
       title: t(`landing-6.title`),

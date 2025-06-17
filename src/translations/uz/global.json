@@ -129,6 +129,13 @@
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
+  "landing-11": {
+    "title": "IT Iste'dod",
+    "description": "Loyiha yoshlarning xalqaro IT-sertifikatlar uchun sarf qilgan xarajatlarining hamda B2 va undan yuqori darajadagi sertifikatga ega yoshlarning xalqaro Professional IT-sertifikatlar uchun sarf qilgan xarajatlarini qoplab berish maqsadida joriy qilingan",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
   "chances": {
     "title": "Yoshlar uchun yaratilingan imkoniyatlar",
     "walletTitle": "IT kompensatsiya ol",

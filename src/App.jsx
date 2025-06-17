@@ -38,6 +38,7 @@ import Ict from "./pages/Projects/Ict";
 import Aca from "./pages/Projects/Aca";
 import Apio from "./pages/Projects/Apio";
 import Icpc from "./pages/Projects/Icpc";
+import ItCertificates from "./pages/Projects/ItCertificates";
 import SuccessStoryDetail from "./pages/SuccessStory/SuccessStoryDetail";
 
 export default function App() {
@@ -149,6 +150,10 @@ export default function App() {
             {
               path: "aca-navigator",
               element: <Aca />,
+            },
+            {
+              path: "it-sertifikatlar",
+              element: <ItCertificates />,
             },
             {
               path: "study-centers",
