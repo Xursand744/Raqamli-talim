@@ -144,7 +144,7 @@ export const projectCounts = [
   },
   {
     icon: brain,
-    value: 59,
+    value: 137,
     desc: "nafar mentor",
   },
   {
