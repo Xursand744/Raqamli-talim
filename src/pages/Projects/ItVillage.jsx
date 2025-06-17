@@ -172,7 +172,7 @@ const MapSection = () => {
           IT Shaharcha joylashgan hududlar
         </h2>
         <p className="text-gray-600 text-lg leading-relaxed">
-          IT Shaharcha dasturi O'zbekistonning 14 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
+          IT Shaharcha dasturi O'zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
           Har bir hududda yoshlar uchun zamonaviy ta'lim imkoniyatlari yaratiladi.
         </p>
       </div>
