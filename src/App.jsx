@@ -34,6 +34,7 @@ import ProjectStudyCenters from "./pages/Projects/StudyCenters";
 import Universities from "./pages/Projects/Universities";
 import Tot from "./pages/Projects/Tot";
 import JobEdu from "./pages/Projects/JobEdu";
+import Olimpiads from "./pages/Projects/Olimpiads";
 import Ict from "./pages/Projects/Ict";
 import Aca from "./pages/Projects/Aca";
 import Apio from "./pages/Projects/Apio";
@@ -134,6 +135,10 @@ export default function App() {
             {
               path: "job-edu-fest",
               element: <JobEdu />,
+            },
+            {
+              path: "olimpiads",
+              element: <Olimpiads />,
             },
             {
               path: "ict4girls",

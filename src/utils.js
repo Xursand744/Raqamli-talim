@@ -11,10 +11,8 @@ import talent from "./assets/images/projects/talent_1.jpg";
 import istedod from "./assets/projects/istedod.png";
 import tot from "./assets/images/projects/5.jpg";
 import job from "./assets/images/projects/6.jpg";
-import ict from "./assets/images/projects/7.jpg";
-import api from "./assets/images/projects/9.png";
-import icpc from "./assets/images/projects/10.jpg";
 import aca from "./assets/images/projects/8.jpg";
+import olimpiads from "./assets/projects/olimpiads.png";
 
 import {
   DeparmentImage10,
@@ -651,29 +649,35 @@ export const projectsOverview = [
     image: job,
     link: "job-edu-fest",
   },
-  {
-    id: 7,
-    title: "ICT4Girls",
-    image: ict,
-    link: "ict4girls",
-  },
-  {
-    id: 8,
-    title: "APIO",
-    image: api,
-    link: "apio",
-  },
-  {
-    id: 9,
-    title: "ICPC Uzbekistan Olympiad",
-    image: icpc,
-    link: "icpc-uzbekistan-olympiad",
-  },
+  // {
+  //   id: 7,
+  //   title: "ICT4Girls",
+  //   image: ict,
+  //   link: "ict4girls",
+  // },
+  // {
+  //   id: 8,
+  //   title: "APIO",
+  //   image: api,
+  //   link: "apio",
+  // },
+  // {
+  //   id: 9,
+  //   title: "ICPC Uzbekistan Olympiad",
+  //   image: icpc,
+  //   link: "icpc-uzbekistan-olympiad",
+  // },
   {
     id: 10,
     title: "ACA Navigator",
     image: aca,
     link: "aca-navigator",
+  },
+  {
+    id: 11,
+    title: "Olimpiadlar",
+    image: olimpiads,
+    link: "olimpiads",
   },
   // {
   //   id: 6,

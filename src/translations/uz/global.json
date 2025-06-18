@@ -136,6 +136,13 @@
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
+  "landing-12": {
+    "title": "Olimpiadalar",
+    "description": "Yoshlar o'rtasida axborot texnologiyalari va dasturlash yo'nalishi bo'yicha o'tkaziladigan mahalliy hamda nufuzli xalqaro olimpiadalar",
+    "moreDetails": "Batafsil",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
   "chances": {
     "title": "Yoshlar uchun yaratilingan imkoniyatlar",
     "walletTitle": "IT kompensatsiya ol",

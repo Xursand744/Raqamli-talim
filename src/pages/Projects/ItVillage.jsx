@@ -2,9 +2,6 @@ import talent from "../../assets/images/projects/talent_2.jpg";
 import "swiper/css";
 import PropTypes from "prop-types";
 import { rightIcon } from "../../assets/icons/icon";
-import { useTranslation } from "react-i18next";
-import { BackgroundIcon } from "../../assets/icons/icon";
-import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 import { RegionsMap } from "../../components/RegionMap";
 import { useState } from "react";
 import { regionsPathArray } from "../../components/mapArray";
@@ -50,7 +47,7 @@ CourseCard.propTypes = {
 
 // Courses Section Component
 const CoursesSection = () => (
-  <div className="max-w-[1300px] mx-auto px-4 py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div className="max-w-[1300px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 my-8 p-6">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <h2 className="text-4xl font-bold mb-6 text-gray-900">
         Yo'nalishlar
@@ -112,7 +109,7 @@ const HeroSection = () => (
 
 // Description Section Component
 const DescriptionSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4 py-20 bg-gradient-to-b from-white to-gray-50">
+  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50">
     <p className="text-lg text-gray-700 leading-relaxed mx-auto">
       &quot;IT shaharcha&quot; dasturi O'zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo'lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o'qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O'zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo'lib, hududlarda innovatsion ta'lim muhitini shakllantirishga yo'naltirilgan.
       Davlat tomonidan dastur doirasida o'quvchilarni doimiy rag'batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o'rganish va global IT-bozorda o'z o'rnini topish uchun keng imkoniyatlar taqdim etadi.
@@ -121,52 +118,25 @@ const DescriptionSection = () => (
   </div>
 );
 
-// Video Section Component
-const VideoSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4 py-20">
-    <div className="flex justify-center">
-      <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-        <video className="w-full" controls>
-          <source src={Video} type="video/mp4" />
-          <source src={Video} type="video/ogg" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-);
-
-// Decisions Section Component
-const DecisionsSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4 py-20 bg-gradient-to-b from-gray-50 to-white">
-    <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">
-      Dasturga oid qarorlar
-    </h2>
-
-    <div className="grid md:grid-cols-2 gap-8">
-      <DecisionCard 
-        text="Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida davlat boshqaruvini samarali tashkil etish chora-tadbirlari to'g'risida'gi PF-75-son farmoni"
-      />
-      <DecisionCard 
-        text="Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha, tarmoq va hududlarda raqamli transformatsiya qilish chora-tadbirlari to'g'risida'gi PQ-182-son qarori"
-      />
-    </div>
-  </div>
-);
-
 // Map Section Component
 const MapSection = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
 
   const handleRegionClick = (regionId) => {
-    const region = regionsPathArray.find(r => r.id === regionId);
-    if (region) {
-      setSelectedRegion(region);
+    if (regionId === null) {
+      // Сброс выбора
+      setSelectedRegion(null);
+    } else {
+      // Выбор нового региона
+      const region = regionsPathArray.find(r => r.id === regionId);
+      if (region) {
+        setSelectedRegion(region);
+      }
     }
   };
 
   return (
-    <div className="max-w-[1230px] mx-auto px-4 py-20 bg-gradient-to-b from-white to-gray-50">
+    <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">
           IT Shaharcha joylashgan hududlar
@@ -203,56 +173,37 @@ const MapSection = () => {
         <div className="flex-1 flex items-center justify-center relative z-10">
           <div className="bg-white border rounded-xl shadow-lg p-8 max-w-xl w-full" style={{ color: '#043b87', position: 'relative' }}>
             <h3 className="font-bold text-lg mb-2 uppercase">Hududiy ma'lumotlar</h3>
-            <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion?.name}</h4>
-            <div className="mb-4 space-y-2 text-black">
-              <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion?.address || ''-''}</span>
-                {selectedRegion?.address && (
-                  <a
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRegion.address)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-2 inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold hover:bg-blue-200 transition"
-                  >
-                    Xaritada ochish
-                  </a>
-                )}
+            {selectedRegion ? (
+              <>
+                <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion.name}</h4>
+                <div className="mb-4 space-y-2 text-black">
+                  <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion.address || '-'}</span>
+                    {selectedRegion.address && (
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRegion.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold hover:bg-blue-200 transition"
+                      >
+                        Xaritada ochish
+                      </a>
+                    )}
+                  </div>
+                  <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
+                  <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
+                  <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
+                  <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
+                  <div><span className="font-semibold">O'quvchilar soni:</span> <span className="font-normal">{selectedRegion.studentsCount ?? '-'}</span></div>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-8">
+                <p className="text-gray-500 text-lg">Hududni tanlang</p>
+                <p className="text-gray-400 text-sm mt-2">Ma'lumotlarni ko'rish uchun xaritadan hududni bosing</p>
               </div>
-              <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion?.area || ''-''}</span></div>
-              <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion?.directions || ''-''}</span></div>
-              <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion?.mentorsCount ?? ''-''}</span></div>
-              <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion?.classroomsCount ?? ''-''}</span></div>
-              <div><span className="font-semibold">O'quvchilar soni:</span> <span className="font-normal">{selectedRegion?.studentsCount ?? ''-''}</span></div>
-            </div>
+            )}
             {/* SVG фон сбоку */}
             <img src={RTRM} alt="background" className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Bottom Section Component
-const BottomSection = () => {
-  const { t } = useTranslation("global");
-  
-  return (
-    <div className="bg-gradient-to-b from-[#F8F8F8] to-white w-full py-20">
-      <div className="max-w-[1230px] mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="lg:w-2/3">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              <div dangerouslySetInnerHTML={{ __html: t("one_million_uzbek_coders_title") }} />
-            </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              <div dangerouslySetInnerHTML={{ __html: t("one_million_uzbek_coders_description") }} />
-            </p>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              <div dangerouslySetInnerHTML={{ __html: t("one_million_uzbek_coders_events") }} />
-            </Button>
-          </div>
-          <div className="lg:w-1/3">
-            <img src={BackgroundIcon} alt="Background Icon" className="w-full hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
       </div>

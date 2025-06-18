@@ -12,6 +12,7 @@ import api from "../assets/images/projects/8.jpg";
 import icpc from "../assets/images/projects/9.png";
 import aca from "../assets/images/projects/10.jpg";
 import istedod from "../assets/projects/istedod.png";
+import olimpiads from "../assets/projects/olimpiads.png";
 import { useTranslation } from "react-i18next";
 // Import Swiper styles
 import "swiper/css";
@@ -66,19 +67,26 @@ export default function App() {
       link: "it-sertifikatlar",
     },
     {
+      title: t(`landing-12.title`),
+      description: t(`landing-12.description`),
+      buttonText: t(`landing-12.moreDetails`),
+      image: olimpiads,
+      link: "olimpiads",
+    },
+    {
       title: t(`landing-6.title`),
       description: t(`landing-6.description`),
       buttonText: t(`landing-6.moreDetails`),
       image: job,
       link: "job-edu-fest",
     },
-    {
-      title: t(`landing-7.title`),
-      description: t(`landing-7.description`),
-      buttonText: t(`landing-7.moreDetails`),
-      image: ict,
-      link: "ict4girls",
-    },
+    // {
+    //   title: t(`landing-7.title`),
+    //   description: t(`landing-7.description`),
+    //   buttonText: t(`landing-7.moreDetails`),
+    //   image: ict,
+    //   link: "ict4girls",
+    // },
     {
       title: t(`landing-8.title`),
       description: t(`landing-8.description`),
@@ -86,20 +94,20 @@ export default function App() {
       image: api,
       link: "aca-navigator",
     },
-    {
-      title: t(`landing-9.title`),
-      description: t(`landing-9.description`),
-      buttonText: t(`landing-9.moreDetails`),
-      image: icpc,
-      link: "apio",
-    },
-    {
-      title: t(`landing-10.title`),
-      description: t(`landing-10.description`),
-      buttonText: t(`landing-10.moreDetails`),
-      image: aca,
-      link: "icpc-uzbekistan-olympiad",
-    },
+    // {
+    //   title: t(`landing-9.title`),
+    //   description: t(`landing-9.description`),
+    //   buttonText: t(`landing-9.moreDetails`),
+    //   image: icpc,
+    //   link: "apio",
+    // },
+    // {
+    //   title: t(`landing-10.title`),
+    //   description: t(`landing-10.description`),
+    //   buttonText: t(`landing-10.moreDetails`),
+    //   image: aca,
+    //   link: "icpc-uzbekistan-olympiad",
+    // },
   ];
 
   return (

@@ -136,6 +136,13 @@
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
   },
+  "landing-12": {
+    "title": "Олимпиады",
+    "description": "Местные и престижные международные олимпиады по информационным технологиям и программированию среди молодежи.",
+    "moreDetails": "Подробнее",
+    "imageAlt": "Ta'lim dasturi belgisi",
+    "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
+  },
   "chances": {
     "title": "Возможности, созданные для молодежи.",
     "walletTitle": "Получай компенсацию за ИТ",

@@ -15,18 +15,25 @@ export const RegionsMap = ({
   const [hoverRegionId, setHoverRegionId] = useState(null);
 
   const handleClickRegion = (region) => {
-    setCurRegion(region);
-    if (handleClick) handleClick(region.id);
+    // Если нажимаем на уже выбранный регион - сбрасываем выбор
+    if (curRegion?.id === region.id) {
+      setCurRegion(null);
+      if (handleClick) handleClick(null);
+    } else {
+      // Иначе выбираем новый регион
+      setCurRegion(region);
+      if (handleClick) handleClick(region.id);
+    }
   };
 
   const renderRegion = (region) => {
     const { id, name, path } = region;
-    const isCurrentRegion = curRegion.id === id;
+    const isCurrentRegion = curRegion && curRegion.id === id;
     const isHovered = hoverRegionId === id;
   
     const isSpecialRegion = name === "Samarqand viloyati" || name === "Sirdaryo viloyati";
   
-    // ✅ Yashil faqat maxsus regionlarga va ular tanlangan yoki hover bo‘lganda qo‘llaniladi
+    // ✅ Yashil faqat maxsus regionlarga va ular tanlangan yoki hover bo'lganda qo'llaniladi
     const fillColor =
       isSpecialRegion && (isCurrentRegion || isHovered)
         ? "#3cb371" // yashil

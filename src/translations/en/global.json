@@ -101,6 +101,13 @@
     "imageAlt": "Educational program emblem",
     "carouselAlt": "Educational opportunities in the IT field"
   },
+  "landing-12": {
+    "title": "Olympiads",
+    "description": "Local and prestigious international Olympiads in information technology and programming for youth.",
+    "moreDetails": "More information",
+    "imageAlt": "Educational program emblem",
+    "carouselAlt": "Educational opportunities in the IT field"
+  },
   "chances": {
     "title": "Special opportunities for youth",
     "walletTitle": "Get IT Compensation",
