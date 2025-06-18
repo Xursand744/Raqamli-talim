@@ -16,6 +16,11 @@ const courses = [
     // { id: 5, title: "Davlat xizmatlaridan foydalanish" },
   ];
 
+const togaraklar = [
+    { id: 1, title: "Shaxmat" },
+    { id: 2, title: "Kitobxonlik" },
+  ];
+
 // Reusable Button Component
 const Button = ({ children, className = "", ...props }) => (
   <button 
@@ -33,7 +38,7 @@ Button.propTypes = {
 
 // Course Card Component
 const CourseCard = ({ title }) => (
-  <div className="group p-6 rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg cursor-pointer transition-all duration-300 bg-white">
+  <div className="group p-6 rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg cursor-pointer transition-all duration-300 bg-white w-[378px]">
     <div className="w-4 h-4 rounded-full bg-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></div>
     <h3 className="font-medium text-lg text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
       {title}
@@ -59,8 +64,20 @@ const CoursesSection = () => (
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
       {courses.map((course) => (
+        <CourseCard key={course.id} title={course.title} />
+      ))}
+    </div>
+
+    <div className="max-w-3xl mx-auto text-center my-16">
+      <h2 className="text-4xl font-bold mb-6 text-gray-900">
+        To'garaklar
+      </h2>
+    </div>
+
+    <div className="flex flex-wrap gap-8 justify-center items-center">
+      {togaraklar.map((course) => (
         <CourseCard key={course.id} title={course.title} />
       ))}
     </div>
