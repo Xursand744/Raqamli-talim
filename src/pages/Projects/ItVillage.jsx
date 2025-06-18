@@ -11,9 +11,9 @@ import RTRM from "../../assets/images/RTRM.svg";
 const courses = [
     { id: 1, title: "Axborot texnologiyalari (IT)" },
     { id: 2, title: "Chet tillari" },
-    { id: 3, title: "Shaxsiy rivojlanish va biznes ko'nikmalari" },
+    // { id: 3, title: "Shaxsiy rivojlanish va biznes ko'nikmalari" },
     { id: 4, title: "Zamonaviy amaliy kasblar" },
-    { id: 5, title: "Davlat xizmatlaridan foydalanish" },
+    // { id: 5, title: "Davlat xizmatlaridan foydalanish" },
   ];
 
 // Reusable Button Component
@@ -47,7 +47,7 @@ CourseCard.propTypes = {
 
 // Courses Section Component
 const CoursesSection = () => (
-  <div className="max-w-[1300px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 my-8 p-6">
+  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 my-8 p-6">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <h2 className="text-4xl font-bold mb-6 text-gray-900">
         Yo'nalishlar
@@ -109,7 +109,7 @@ const HeroSection = () => (
 
 // Description Section Component
 const DescriptionSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50">
+  <div className="max-w-[1230px] mx-auto">
     <p className="text-lg text-gray-700 leading-relaxed mx-auto">
       &quot;IT shaharcha&quot; dasturi O'zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo'lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o'qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O'zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo'lib, hududlarda innovatsion ta'lim muhitini shakllantirishga yo'naltirilgan.
       Davlat tomonidan dastur doirasida o'quvchilarni doimiy rag'batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o'rganish va global IT-bozorda o'z o'rnini topish uchun keng imkoniyatlar taqdim etadi.

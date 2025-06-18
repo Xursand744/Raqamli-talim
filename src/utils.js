@@ -675,7 +675,7 @@ export const projectsOverview = [
   },
   {
     id: 11,
-    title: "Olimpiadlar",
+    title: "Olimpiadalar",
     image: olimpiads,
     link: "olimpiads",
   },
