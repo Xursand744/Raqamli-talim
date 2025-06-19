@@ -608,22 +608,16 @@ export const newsBigCardRight = [
 
 export const projectsOverview = [
   {
-    id: 1,
-    title: "Muhammad Al-Xorazmiy vorislari",
-    image: xorazmiy,
-    link: "al-xorazmiy",
-  },
-  {
-    id: 2,
-    title: "It Talents dasturi",
-    image: CarouselImage,
-    link: "it-talents-dasturi",
-  },
-  {
     id: 3,
     title: "Bir million dasturchi loyihasi",
     image: coding,
     link: "bir-million-dasturchi-loyihasi",
+  },
+  {
+    id: 1,
+    title: "Muhammad Al-Xorazmiy vorislari",
+    image: xorazmiy,
+    link: "al-xorazmiy",
   },
   {
     id: 4,
@@ -638,17 +632,35 @@ export const projectsOverview = [
     link: "it-sertifikatlar",
   },
   {
+    id: 2,
+    title: "It Talents dasturi",
+    image: CarouselImage,
+    link: "it-talents-dasturi",
+  },
+  {
+    id: 11,
+    title: "Olimpiadalar",
+    image: olimpiads,
+    link: "olimpiads",
+  },
+  {
+    id: 10,
+    title: "ACA Navigator",
+    image: aca,
+    link: "aca-navigator",
+  },
+  {
     id: 5,
     title: "ToT - The Training of Trainers",
     image: tot,
     link: "tot",
   },
-  {
-    id: 6,
-    title: "Job&Edu Fest",
-    image: job,
-    link: "job-edu-fest",
-  },
+  // {
+  //   id: 6,
+  //   title: "Job&Edu Fest",
+  //   image: job,
+  //   link: "job-edu-fest",
+  // },
   // {
   //   id: 7,
   //   title: "ICT4Girls",
@@ -667,18 +679,6 @@ export const projectsOverview = [
   //   image: icpc,
   //   link: "icpc-uzbekistan-olympiad",
   // },
-  {
-    id: 10,
-    title: "ACA Navigator",
-    image: aca,
-    link: "aca-navigator",
-  },
-  {
-    id: 11,
-    title: "Olimpiadalar",
-    image: olimpiads,
-    link: "olimpiads",
-  },
   // {
   //   id: 6,
   //   title: "Muhammad Al-Xorazmiy vorislari",
