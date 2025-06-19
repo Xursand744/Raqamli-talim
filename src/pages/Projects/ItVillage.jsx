@@ -105,7 +105,7 @@ DecisionCard.propTypes = {
 // Hero Section Component
 const HeroSection = () => (
   <div className="max-w-[1230px] mx-auto px-4">
-    <div className="flex justify-center mt-24 mb-16">
+    <div className="flex justify-center mt-24 mb-16 mt-[10em]">
       <h1 className="font-bold text-5xl md:text-6xl text-gray-900 max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
         IT Shaharcha
       </h1>
