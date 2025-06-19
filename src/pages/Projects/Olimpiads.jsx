@@ -30,7 +30,7 @@ function JobEduFestProjects() {
 
   return (
     <>
-      <div className="max-w-[1230px] mx-auto mt-[120px] mb-[20em]">
+      <div className="max-w-[1230px] mx-auto mt-[120px] mb-[10em]">
         <h1 className="font-medium text-[28px] mb-[30px]">Olimpiadalar</h1>
         <div className="flex justify-between items-center flex-wrap gap-[30px]">
           {jobEduProjects &&
