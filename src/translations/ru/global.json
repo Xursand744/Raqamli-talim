@@ -673,8 +673,12 @@
     "previous": "Предыдущая"
   },
   "search": {
-    "placeholder": "Поиск",
-    "sortByName": "Сортировать по названию"
+    "placeholder": "Поиск по названию центра...",
+    "sortByName": "Сортировать по имени",
+    "centerNameLabel": "Название учебного центра",
+    "sort": {
+      "label": "Сортировка"
+    }
   },
   "errors": {
     "storyNotFound": "История успеха не найдена",

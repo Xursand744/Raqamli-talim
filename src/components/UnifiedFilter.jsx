@@ -134,35 +134,6 @@ export default function UnifiedFilter() {
               </button>
             </div>
 
-            {/* Поиск и сортировка для центров */}
-            {activeTab === "centers" && (
-              <div className="flex items-center gap-4">
-                <div className="relative hidden sm:block">
-                  <input
-                    type="text"
-                    placeholder={t("search.placeholder")}
-                    className="w-[300px] md:w-[400px] pl-10 pr-4 py-2 border rounded-lg"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    aria-label={t("search.placeholder")}
-                  />
-                  <Search
-                    className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                    size={20}
-                    aria-hidden="true"
-                  />
-                </div>
-                <button
-                  onClick={() => setSortAscending(!sortAscending)}
-                  className="flex items-center gap-2 px-4 py-2 border rounded-lg"
-                  aria-label={t("search.sortByName")}
-                >
-                  {t("search.sortByName")}
-                  <ArrowUpDown size={20} aria-hidden="true" />
-                </button>
-              </div>
-            )}
-
             {/* Кнопка фильтров для мобильных устройств */}
             <button
               className="sm:hidden bg-blue-500 text-white p-2 rounded-lg"
@@ -176,37 +147,80 @@ export default function UnifiedFilter() {
       </div>
 
       <div className="flex flex-col md:flex-row">
-        {/* Боковая панель с фильтрами (только для курсов) */}
-        {/* {activeTab === "courses" && (
-          <div
-            className={`
+        {/* Боковая панель с фильтрами */}
+        <div
+          className={`
               fixed inset-y-0 left-0 z-40 w-[60%] md:w-[50%] bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out transform
               ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
               md:relative md:translate-x-0 md:w-1/4 md:min-w-[250px] md:max-w-[300px]`}
-          >
-            <div className="space-y-6 h-full overflow-y-auto">
-              <div className="flex justify-between items-center">
-                <h2 className="text-[#222] text-xl md:text-2xl font-medium">
-                  {t("filters.title")}
-                </h2>
-                <button
-                  className="text-[#2675EB] text-sm md:text-base cursor-pointer"
-                  onClick={() => {
+        >
+          <div className="space-y-6 h-full overflow-y-auto">
+            <div className="flex justify-between items-center">
+              <h2 className="text-[#222] text-xl md:text-2xl font-medium">
+                {t("filters.title")}
+              </h2>
+              <button
+                className="text-[#2675EB] text-sm md:text-base cursor-pointer"
+                onClick={() => {
+                  if (activeTab === "courses") {
                     setPriceRange({ min: 0, max: 5000000 });
-                    // Здесь можно добавить сброс других фильтров
-                  }}
-                >
-                  {t("filters.reset")}
-                </button>
-              </div>
-              <hr />
+                  } else {
+                    setSearchQuery("");
+                  }
+                  // Здесь можно добавить сброс других фильтров
+                }}
+              >
+                {t("filters.reset")}
+              </button>
+            </div>
+            <hr />
+
+            {activeTab === "courses" && (
               <PriceRange 
                 priceRange={priceRange} 
                 setPriceRange={handlePriceRangeChange} 
               />
-            </div>
+            )}
+
+            {activeTab === "centers" && (
+              <div className="space-y-4">
+                <div>
+                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                    {t("search.centerNameLabel")}
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder={t("search.placeholder")}
+                      className="w-full pl-10 pr-4 py-2 border rounded-lg"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      aria-label={t("search.placeholder")}
+                    />
+                    <Search
+                      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                      size={20}
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                    {t("search.sort.label")}
+                  </label>
+                  <button
+                    onClick={() => setSortAscending(!sortAscending)}
+                    className="w-full flex items-center justify-between gap-2 px-4 py-2 border rounded-lg bg-white"
+                    aria-label={t("search.sortByName")}
+                  >
+                    <span>{t("search.sortByName")}</span>
+                    <ArrowUpDown size={20} aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
-        )} */}
+        </div>
 
         {/* Основной контент */}
         <div className="flex-1 p-4 md:p-6">
@@ -220,25 +234,6 @@ export default function UnifiedFilter() {
             <h3 className="text-lg font-medium mb-4">
               {t("center_count", { count: filteredCenters.length })}
             </h3>
-          )}
-
-          {/* Поиск для мобильных устройств (только для центров) */}
-          {activeTab === "centers" && (
-            <div className="relative mb-4 sm:hidden">
-              <input
-                type="text"
-                placeholder={t("search.placeholder")}
-                className="w-full pl-10 pr-4 py-2 border rounded-lg"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                aria-label={t("search.placeholder")}
-              />
-              <Search
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                size={20}
-                aria-hidden="true"
-              />
-            </div>
           )}
 
           {isLoading ? (

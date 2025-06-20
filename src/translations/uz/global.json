@@ -428,7 +428,9 @@
     "courseDirection": "Kurs yo'nalishi",
     "courseName": "Kurs nomi",
     "courseDurations": "Kurs davomiyligi",
-    "courseFormats": "Kurs formati"
+    "courseFormats": "Kurs formati",
+    "title": "Saralash",
+    "reset": "Tozalash"
   },
   "home": "Bosh sahifa",
   "it_advice": "IT-maslahatlar",
@@ -665,12 +667,17 @@
     "previous": "Oldingi"
   },
   "search": {
-    "placeholder": "Qidirish",
-    "sortByName": "Ism bo'yicha saralash"
+    "placeholder": "Markaz nomi bo'yicha qidirish...",
+    "sortByName": "Nomi bo'yicha saralash",
+    "centerNameLabel": "O'quv markazi nomi",
+    "sort": {
+      "label": "Saralash"
+    }
   },
   "errors": {
     "storyNotFound": "Muvaffaqiyat tarixi topilmadi",
     "storyNotFoundDesc": "Siz qidirayotgan muvaffaqiyat tarixi mavjud emas yoki o'chirilgan."
   },
-  "perMonthShort": "oyiga"
+  "perMonthShort": "oyiga",
+  "unknown": "Noma'lum"
 }

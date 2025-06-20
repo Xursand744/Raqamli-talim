@@ -612,13 +612,18 @@
     "previous": "Previous"
   },
   "search": {
-    "placeholder": "Search",
-    "sortByName": "Sort by name"
+    "placeholder": "Search by center name...",
+    "sortByName": "Sort by name",
+    "centerNameLabel": "Study center name",
+    "sort": {
+      "label": "Sort"
+    }
   },
   "errors": {
     "storyNotFound": "Success story not found",
     "storyNotFoundDesc": "The success story you are looking for does not exist or has been removed."
   },
   "perMonthShort": "per month",
-  "months": "months"
+  "months": "months",
+  "unknown": "Unknown"
 }
