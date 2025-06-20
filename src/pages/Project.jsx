@@ -123,11 +123,11 @@ function Project() {
   return (
     <section className="project-section project-body relative text-white">
       <div className="max-w-[791px] my-0 mx-auto pb-[50px]">
-        <div className="pt-[100px]">
+        {/* <div className="pt-[100px]">
           <Breadcrumbs projectName={projectName} />
-        </div>
+        </div> */}
 
-        <h1 className="project-title mt-[80px]">{t("project_title")}</h1>
+        <h1 className="project-title pt-[2em]">{t("project_title")}</h1>
 
         {/* Hero Image */}
         <div className="max-w-[791px] mt-[40px]">

@@ -129,9 +129,8 @@ export default function ItTalents() {
   return (
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
-        <Breadcrumb />
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[3em]">
           {t("hero.title")}
         </h1>
 
