@@ -247,10 +247,10 @@ export default function UnifiedFilter() {
                     key={center.id}
                     className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
                   >
-                    <div className="relative h-48 bg-gradient-to-r from-blue-400 to-purple-500">
+                    <div className="relative h-48">
                       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
                         <img
-                          className="w-[80px] h-[80%] object-contain"
+                          className="w-[80px] h-[95%] object-contain"
                           src={center.logo || res}
                           alt={center.name}
                         />

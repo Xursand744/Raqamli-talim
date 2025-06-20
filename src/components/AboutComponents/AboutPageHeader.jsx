@@ -8,8 +8,8 @@ function AboutPageHeader({ title, breadCrumps = [] }) {
   const { t } = useTranslation("global");
 
   return (
-    <div className="mt-[100px]" role="banner">
-      <nav 
+    <div className="mt-[7em]" role="banner">
+      {/* <nav 
         className="breadcrumbs" 
         aria-label={t("breadcrumbs.ariaLabel")}
       >
@@ -43,7 +43,7 @@ function AboutPageHeader({ title, breadCrumps = [] }) {
             </div>
           ))}
         </div>
-      </nav>
+      </nav> */}
 
       {aboutFilters && (
         <div 

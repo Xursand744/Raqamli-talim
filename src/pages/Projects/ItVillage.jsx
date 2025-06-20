@@ -189,7 +189,6 @@ const MapSection = () => {
         {/* Панель */}
         <div className="flex-1 flex items-center justify-center relative z-10">
           <div className="bg-white border rounded-xl shadow-lg p-8 max-w-xl w-full" style={{ color: '#043b87', position: 'relative' }}>
-            <h3 className="font-bold text-lg mb-2 uppercase">Hududiy ma'lumotlar</h3>
             {selectedRegion ? (
               <>
                 <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion.name}</h4>
