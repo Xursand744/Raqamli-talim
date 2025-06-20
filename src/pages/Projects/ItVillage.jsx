@@ -206,23 +206,31 @@ const MapSection = () => {
                     )}
                   </div>
                   {
-                    selectedRegion.area && (
+                    selectedRegion.area ? (
                       <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
+                    ) : (
+                      <div><span className="font-semibold">Maydon</span> <span className="font-normal">Tez kunda</span></div>
                     )
                   }
                   {
-                    selectedRegion.directions && (
+                    selectedRegion.directions ? (
                       <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
+                    ) : (
+                      <div><span className="font-semibold">Ta'lim yo'nalishlari</span> <span className="font-normal">Tez kunda</span></div>
                     )
                   }
                   {
-                    selectedRegion.mentorsCount && (
+                    selectedRegion.mentorsCount ? (
                       <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
+                    ) : (
+                      <div><span className="font-semibold">Mentorlar soni</span> <span className="font-normal">Tez kunda</span></div>
                     )
                   }
                   {
-                    selectedRegion.classroomsCount && (
+                    selectedRegion.classroomsCount ? (
                       <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
+                    ) : (
+                      <div><span className="font-semibold">Sinfxonalar soni</span> <span className="font-normal">Tez kunda</span></div>
                     )
                   }
                 </div>
