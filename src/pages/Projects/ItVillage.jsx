@@ -206,11 +206,26 @@ const MapSection = () => {
                       </a>
                     )}
                   </div>
-                  <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
-                  <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
-                  <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
-                  <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
-                  <div><span className="font-semibold">O'quvchilar soni:</span> <span className="font-normal">{selectedRegion.studentsCount ?? '-'}</span></div>
+                  {
+                    selectedRegion.area && (
+                      <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
+                    )
+                  }
+                  {
+                    selectedRegion.directions && (
+                      <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
+                    )
+                  }
+                  {
+                    selectedRegion.mentorsCount && (
+                      <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
+                    )
+                  }
+                  {
+                    selectedRegion.classroomsCount && (
+                      <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
+                    )
+                  }
                 </div>
               </>
             ) : (

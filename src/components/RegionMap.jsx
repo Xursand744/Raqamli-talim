@@ -41,7 +41,7 @@ export const RegionsMap = ({
         ? selectedFillColor
         : isHovered
         ? hoverFillColor
-        : region.address ? '#3cb371' : defaultFillColor;
+        : region.mentorsCount ? '#3cb371' : defaultFillColor;
   
     const style = isCurrentRegion ? selectedStyle : {};
   

@@ -2,7 +2,7 @@ export const regionsPathArray = [
   {
     id: "UZB354",
     name: "Buxoro viloyati",
-    address: '',
+    address: 'G‘ijduvon tumani “Oqrabot” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -14,7 +14,7 @@ export const regionsPathArray = [
   {
     id: "UZB355",
     name: "Xorazm viloyati",
-    address: '',
+    address: 'Tuproqqal\'a tumani “Sarimoy” mahallasi',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -25,8 +25,8 @@ export const regionsPathArray = [
   },
   {
     id: "UZB356",
-    name: "Qoraqalpogʻiston Respublikasi",
-    address: '',
+    name: "Qoraqalpog'iston Respublikasi",
+    address: 'Chimboy tumani "Kenes" OFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -39,7 +39,7 @@ export const regionsPathArray = [
   {
     id: "UZB357",
     name: "Navoiy viloyati",
-    address: '',
+    address: 'Xatirchi tumani “Farovon” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -64,7 +64,7 @@ export const regionsPathArray = [
   {
     id: "UZB361",
     name: "Qashqadaryo viloyati",
-    address: '',
+    address: 'Shahrisabz tumani “Uloch” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -76,7 +76,7 @@ export const regionsPathArray = [
   {
     id: "UZB362",
     name: "Surxondaryo viloyati",
-    address: '',
+    address: 'Sariosiyo tumani “Sangardak” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -88,7 +88,7 @@ export const regionsPathArray = [
   {
     id: "UZB363",
     name: "Andijon viloyati",
-    address: '',
+    address: 'Xonobod shahri “Kampirrovot” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -100,7 +100,7 @@ export const regionsPathArray = [
   {
     id: "UZB364",
     name: "Fargʻona viloyati",
-    address: '',
+    address: 'Toshloq tumani “Yangiyo‘l” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -112,7 +112,7 @@ export const regionsPathArray = [
   {
     id: "UZB365",
     name: "Namangan viloyati",
-    address: '',
+    address: 'Pop tumani “Mirishkor” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -124,7 +124,7 @@ export const regionsPathArray = [
   {
     id: "UZB370",
     name: "Jizzax viloyati",
-    address: '',
+    address: 'Sharof Rashidov tumani “Yangiobod” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
@@ -148,7 +148,7 @@ export const regionsPathArray = [
   {
     id: "UZB372",
     name: "Toshkent viloyati",
-    address: '',
+    address: 'Parkent tumani “Samsarak” MFY',
     area: 0,
     directions: '',
     mentorsCount: 0,
