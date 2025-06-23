@@ -22,7 +22,8 @@
     "itTips": "IT-maslahatlar",
     "courses": "Kurslar",
     "contact": "Bog'lanish",
-    "significantDatasets": "Ijtimoiy ahamiyatga oid ma'lumotlar"
+    "significantDatasets": "Ijtimoiy ahamiyatga oid ma'lumotlar",
+    "topStudyCenters": "Reyting bo'yicha TOP o'quv markazlari"
   },
   "sort_by_name": "Ism bo'yicha",
   "breadcrumb": {
@@ -61,7 +62,7 @@
   ],
   "landing-1": {
     "title": "Muhammad al-Xorazmiy vorsilari ",
-    "description": "7–11-sinf o‘quvchilari uchun maxsus ishlab chiqilgan, logistika, biznes boshqaruvi va ilg‘or texnologiyalar kabi dolzarb sohalar bo‘yicha zamonaviy va yuqori sifatli bilimlarni taqdim etuvchi mutlaqo bepul o‘quv dasturidir. Loyiha yosh avlodni raqamli asrning talablariga mos ravishda tayyorlash, ularning bilim va ko‘nikmalarini oshirishga qaratilgan keng ko‘lamli ta’lim imkoniyatlarini yaratadi.",
+    "description": "7–11-sinf o‘quvchilari uchun maxsus ishlab chiqilgan, logistika, biznes boshqaruvi va ilg‘or texnologiyalar kabi dolzarb sohalar bo‘yicha zamonaviy va yuqori sifatli bilimlarni taqdim etuvchi mutlaqo bepul o‘quv dasturidir. Loyiha yosh avlodni raqamli asrning talablariga mos ravishda tayyorlash, ularning bilim va ko‘nikmalarini oshirishga qaratilgan keng ko‘lamli ta'lim imkoniyatlarini yaratadi.",
     "moreDetails": "Batafsil",
     "imageAlt": "Ta'lim dasturi belgisi",
     "carouselAlt": "IT sohasidagi ta'lim imkoniyatlari"
@@ -691,5 +692,8 @@
     "storyNotFoundDesc": "Siz qidirayotgan muvaffaqiyat tarixi mavjud emas yoki o'chirilgan."
   },
   "perMonthShort": "oyiga",
-  "unknown": "Noma'lum"
+  "unknown": "Noma'lum",
+  "vacancy": "Vakansiya",
+  "seeAll": "Barchasini ko'rish",
+  "topStudyCenters": "Reyting bo'yicha TOP o'quv markazlari"
 }

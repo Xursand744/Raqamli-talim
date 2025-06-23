@@ -22,7 +22,8 @@
     "news": "Новости",
     "itTips": "IT советы",
     "contact": "Контакты",
-    "significantDatasets": "Информация социального значения"
+    "significantDatasets": "Информация социального значения",
+    "topStudyCenters": "ТОП учебные центры по рейтингам"
   },
   "sort_by_name": "Сортировать по имени",
   "breadcrumb": {
@@ -660,7 +661,10 @@
     "title": "Курсы",
     "viewDetails": "Просмотреть детали курса {{courseName}}",
     "courseImage": "Изображение курса {{courseName}}",
-    "reset": "Сбросить"
+    "reset": "Сбросить",
+    "vacancy": "Vakansiya",
+    "seeAll": "Barchasini ko'rish",
+    "topStudyCenters": "ТОП учебные центры по рейтингам"
   },
   "common": {
     "tashkent": "Ташкент",

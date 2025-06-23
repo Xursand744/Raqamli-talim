@@ -22,7 +22,8 @@
     "itTips": "IT Tips",
     "contact": "Contact",
     "significantDatasets": "Socially significant information",
-    "courses": "Courses"
+    "courses": "Courses",
+    "topStudyCenters": "Top study centers by rating"
   },
   "landing-1": {
     "title": "Muhammad al-Khwarizmi's Legacy",
@@ -625,5 +626,8 @@
   },
   "perMonthShort": "per month",
   "months": "months",
-  "unknown": "Unknown"
+  "unknown": "Unknown",
+  "vacancy": "Vacancy",
+  "seeAll": "See All",
+  "topStudyCenters": "TOP rated training centers"
 }
