@@ -9,29 +9,29 @@ export default function MetricsSection() {
       label: t("metrics.activeProjects"),
     },
     {
-      value: "14 131",
+      value: "52 271",
       label: t("metrics.itStudents"),
     },
   ];
 
   const detailedMetrics = [
     {
-      count: "5 597",
+      count: "22 267",
       percent: "39.61%",
       label: t("metrics.employedStudents"),
     },
     {
-      count: "175",
+      count: "1 018",
       percent: "1.24%",
       label: t("metrics.employedStudents2ForeignCompany"),
     },
     {
-      count: "9 399",
+      count: "33 513",
       percent: "66.51%",
       label: t("metrics.males"),
     },
     {
-      count: "4 732",
+      count: "18 758",
       percent: "33.49%",
       label: t("metrics.females"),
     },
