@@ -101,7 +101,7 @@ export default function Structure() {
     },
     {
       title: "structure.hrDepartment",
-      fullname: "",
+      fullname: "Aziza Raximova",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (105)",
       image: VacancyImage,
@@ -191,7 +191,7 @@ export default function Structure() {
     },
     {
       title: "structure.accounting",
-      fullname: "Vakant",
+      fullname: "Axrorjon Azamjonov",
       email: "@digital.uz",
       number: "",
       image: VacancyImage,

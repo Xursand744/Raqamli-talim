@@ -37,7 +37,7 @@ export default function UnifiedFilter() {
   const fetchCourses = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.get(`https://api.crm.digital.uz/v1/courses?page=${currentPage}`);
+      const res = await axios.get(`https://api.crm.digital.uz/v1/courses?page=${currentPage}&per_page=6`);
       setCoursesData(res.data.data);
       setTotalPages(res.data.meta.last_page);
     } catch (error) {
@@ -51,7 +51,7 @@ export default function UnifiedFilter() {
   const fetchCenters = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.get(`https://api.crm.digital.uz/v1/centers?page=${currentPage}`);
+      const res = await axios.get(`https://api.crm.digital.uz/v1/centers?page=${currentPage}&per_page=6`);
       setCenters(res.data.data);
       setTotalPages(res.data.meta.last_page);
     } catch (error) {
