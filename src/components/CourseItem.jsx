@@ -26,7 +26,7 @@ export default function CourseItem({ course }) {
         }}
         aria-label={t("courses.viewDetails", { courseName: t(course.name) })}
       >
-        <div className="relative bg-gradient-to-tr from-blue-500 to-teal-400 h-[180px] flex items-center justify-center">
+        <div className="relative h-[180px] flex items-center justify-center">
           <img 
             className="w-[280px] h-[170px] object-contain transition-transform duration-300 hover:scale-105" 
             src={course.image} 
