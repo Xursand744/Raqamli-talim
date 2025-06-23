@@ -184,7 +184,19 @@
     "centerTitle": "O'quv markaz",
     "centerQuestion": "ochishni xohlaysizmi?",
     "centerDesc": "Yaxshi kelajak uchun ta'limga o'z ko'nikmalaringizni sarmoya qiling",
-    "more": "Qo'llanmaga o'tish"
+    "more": "Qo'llanmaga o'tish",
+    "span-1": "IT kompensatsiya ol",
+    "title-1": "ITga sarflagan pullaringni qaytarib ol",
+    "desc-1": "ITga sarflagan pullaringni qaytarib ol",
+    "span-2": "Maktabda ITni o'rgan",
+    "title-2": "ITga sarflagan pullaringni qaytarib ol",
+    "desc-2": "ITga sarflagan pullaringni qaytarib ol",
+    "span-3": "ITga sarflagan pullaringni qaytarib ol",
+    "title-3": "ITga sarflagan pullaringni qaytarib ol",
+    "desc-3": "ITga sarflagan pullaringni qaytarib ol",
+    "span-4": "ITga sarflagan pullaringni qaytarib ol",
+    "title-4": "ITga sarflagan pullaringni qaytarib ol",
+    "desc-4": "ITga sarflagan pullaringni qaytarib ol"
   },
   "metrics": {
     "centerTitle": "Markaz raqamlarda",
@@ -599,7 +611,7 @@
       "position": "Investitsiya loyiha ofisi boshlig'i"
     },
     "6": {
-      "fullname": "",
+      "fullname": "Aziza Raximova",
       "position": "Kadrlar bo'limi boshlig'i"
     },
     "7": {
@@ -631,7 +643,7 @@
       "position": "Axborot tahlil bo'limi"
     },
     "14": {
-      "fullname": "Vakant",
+      "fullname": "Axrorjon Azamjonov",
       "position": "Buxgalteriya bo'limi boshlig'i"
     }
   },
