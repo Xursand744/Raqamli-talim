@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { mainLogo2 } from "../assets/logos/logos";
@@ -8,11 +8,9 @@ const Footer = () => {
   const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
 
-  const [selectedLanguage, setSelectedLanguage] = useState("UZ");
   useEffect(() => {
     const savedLanguage = Cookies.get("lang") || "uz";
     i18n.changeLanguage(savedLanguage);
-    setSelectedLanguage(savedLanguage.toUpperCase());
   }, [i18n]);
 
   const contactInfo = [
@@ -73,14 +71,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#06306D]" role="contentinfo">
+    <footer className="bg-[#06306D] dark:bg-gray-900 transition-colors duration-200" role="contentinfo">
       <div className="container pt-10 pb-8">
         <div className="flex flex-col lg:flex-row gap-[50px] md:items-start pb-11">
           {/* Map and Links */}
           <div className="flex flex-col md:flex-row w-full gap-3 sm:gap-[40px] md:gap-[80px]">
             <div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.462986299251!2d69.3368565!3d41.3422894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5a58c63cbfd%3A0xcb882f0ad7acf773!2sRaqamli%20texnologiyalar%20vazirligi!5e0!3m2!1sru!2s!4v1740069542648!5m2!1sru!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.462986299251!2d69.3368565!3d41.3422894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5a58c63cbfd%3Axcb882f0ad7acf773!2sRaqamli%20texnologiyalar%20vazirligi!5e0!3m2!1sru!2s!4v1740069542648!5m2!1sru!2s"
                 width="384"
                 height="224"
                 style={{ border: 0 }}
@@ -89,6 +87,7 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title={t("footer.mapTitle")}
                 aria-label={t("footer.mapAriaLabel")}
+                className="rounded-lg shadow-lg"
               ></iframe>
             </div>
 
@@ -96,14 +95,14 @@ const Footer = () => {
             <div className="flex flex-wrap w-full justify-between">
               {/* Logo and Contact */}
               <div className="text-white flex flex-col gap-5 max-w-[200px] w-full">
-                <img src={mainLogo2} alt={t("footer.logoAlt")} />
+                <img src={mainLogo2} alt={t("footer.logoAlt")} className="filter brightness-0 invert dark:filter-none" />
                 {contactInfo.map((item, idx) => (
                   <h4
                     key={idx}
-                    className={`flex items-center gap-4 ${item.marginTop}`}
+                    className={`flex items-center gap-4 ${item.marginTop} text-white dark:text-gray-200`}
                     aria-label={item.ariaLabel}
                   >
-                    <i className={`bx ${item.icon}`} aria-hidden="true"></i>
+                    <i className={`bx ${item.icon} text-blue-300 dark:text-blue-400`} aria-hidden="true"></i>
                     {item.text}
                   </h4>
                 ))}
@@ -112,14 +111,14 @@ const Footer = () => {
               {/* For Students */}
               <nav aria-label={t("footer.studentsNavAriaLabel")}>
                 <ul className="text-white flex flex-col gap-4">
-                  <li className="text-[#B7B7B7]">
+                  <li className="text-[#B7B7B7] dark:text-gray-400 font-semibold">
                     {t("footer.forStudents")}
                   </li>
                   {studentLinks.map((link, idx) => (
                     <li key={idx}>
                       <button 
                         onClick={() => scrollToTopOnClick(link.link)}
-                        className="cursor-pointer hover:text-blue-200 transition-colors"
+                        className="cursor-pointer text-white dark:text-gray-200 hover:text-blue-200 dark:hover:text-blue-300 transition-colors duration-200"
                         aria-label={link.ariaLabel}
                       >
                         {link.text}
@@ -132,14 +131,14 @@ const Footer = () => {
               {/* For Entrepreneurs */}
               <nav aria-label={t("footer.entrepreneursNavAriaLabel")}>
                 <ul className="max-w-[205px] text-white flex flex-col gap-4 w-full">
-                  <li className="text-[#B7B7B7]">
+                  <li className="text-[#B7B7B7] dark:text-gray-400 font-semibold">
                     {t("footer.forEntrepreneurs")}
                   </li>
                   {entrepreneurLinks.map((link, idx) => (
                     <li key={idx}>
                       <button 
                         onClick={() => scrollToTopOnClick(link.link)}
-                        className="cursor-pointer hover:text-blue-200 transition-colors"
+                        className="cursor-pointer text-white dark:text-gray-200 hover:text-blue-200 dark:hover:text-blue-300 transition-colors duration-200"
                         aria-label={link.ariaLabel}
                       >
                         {link.text}
@@ -156,6 +155,7 @@ const Footer = () => {
                           target="_blank" 
                           rel="noopener noreferrer"
                           aria-label={social.ariaLabel}
+                          className="text-white dark:text-gray-200 hover:text-blue-200 dark:hover:text-blue-300 transition-colors duration-200"
                         >
                           <i className={`bx ${social.icon}`} aria-hidden="true"></i>
                         </a>

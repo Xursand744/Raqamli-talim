@@ -1,11 +1,8 @@
 import "../../index.css";
 import { useTranslation } from "react-i18next";
-import { ChevronRight } from "react-feather";
 import PropTypes from "prop-types";
-import talent from "../../assets/images/projects/talent_2.jpg";
 import CarouselImage from "../../assets/carousel.jpg";
 import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
-import HomeIcon from "../../assets/home-icon.svg";
 import Sl from "../../assets/s_left.png";
 import Sr from "../../assets/s-right.png";
 import Video from "../../assets/videos/it-talents.mp4";
@@ -21,28 +18,9 @@ import {
 import ItTalentsDocs from "../../assets/it-talents-docs";
 import { useNavigate } from "react-router-dom";
 
-const Breadcrumb = () => {
-  const { t } = useTranslation("global");
-
-  return (
-    <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-      <a href="/" className="hover:text-gray-900 flex items-center gap-[10px]">
-        <img src={HomeIcon} alt="" />
-        {t("itTalentBreadcrump.home")}
-      </a>
-      <ChevronRight size={16} />
-      <a href="/projects" className="hover:text-gray-900">
-        {t("itTalentBreadcrump.projects")}
-      </a>
-      <ChevronRight size={16} />
-      <span className="text-gray-900">{t("itTalentBreadcrump.itTalents")}</span>
-    </div>
-  );
-};
-
 const DocumentCard = ({ children }) => (
-  <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
-    <p className="text-gray-700">{children}</p>
+  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-900/50 p-6 hover:shadow-lg dark:hover:shadow-gray-900/70 transition-shadow duration-200">
+    <p className="text-gray-700 dark:text-gray-300 transition-colors duration-200">{children}</p>
     <div className="flex justify-end mt-[20px]">
       <img src={rightIcon} alt="Toggle" className="w-8 h-8" />
     </div>
@@ -56,18 +34,18 @@ DocumentCard.propTypes = {
 const MetricsCard = ({ icon, value, label, isActive }) => (
   <div
     className={`${
-      isActive ? "bg-[#2675EB]" : "bg-white"
-    } rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
+      isActive ? "bg-[#2675EB]" : "bg-white dark:bg-gray-800"
+    } rounded-lg p-6 shadow-sm dark:shadow-gray-900/50 hover:shadow-md dark:hover:shadow-gray-900/70 transition-shadow duration-200`}
   >
     <img src={icon || "/placeholder.svg"} alt="" className="w-[48px] mb-4" />
     <div
       className={`${
-        isActive ? "text-[#fff]" : "text-[#2563EB]"
-      } text-[40px] font-bold mb-2`}
+        isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"
+      } text-[40px] font-bold mb-2 transition-colors duration-200`}
     >
       {value.toLocaleString()}
     </div>
-    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB]"} text-sm`}>
+    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"} text-sm transition-colors duration-200`}>
       {label}
     </div>
   </div>
@@ -117,7 +95,7 @@ export default function ItTalents() {
     {
       icon: MoneyBag,
       value: 0,
-      label: "To'lov jarayonida",
+      label: "To&apos;lov jarayonida",
     },
     {
       icon: Document,
@@ -130,7 +108,7 @@ export default function ItTalents() {
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[3em]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[3em] transition-colors duration-200">
           {t("hero.title")}
         </h1>
 
@@ -142,10 +120,10 @@ export default function ItTalents() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-12">{t("hero.description")}</p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 transition-colors duration-200">{t("hero.description")}</p>
 
         <section>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-200">
             {t("decisions.title")}
           </h2>
 
@@ -162,7 +140,7 @@ export default function ItTalents() {
           </video>
         </div>
 
-        <div className="h-[300px] bg-gray-50 flex items-center justify-center px-4 relative mt-[100px]">
+        <div className="h-[300px] bg-gray-50 dark:bg-gray-800 flex items-center justify-center px-4 relative mt-[100px] transition-colors duration-200">
           <div className="max-w-[1230px] w-full mx-auto">
             <div className="flex items-center justify-center max-md:flex-col max-md:gap-8">
               <div className="max-w-[231px] bottom-0 left-0 absolute max-[830px]:hidden">
@@ -174,23 +152,23 @@ export default function ItTalents() {
               </div>
 
               <div className="text-center space-y-3 md:space-y-4">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900">
-                  O'quv yo'nalishlar ro'yxati
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900 dark:text-white transition-colors duration-200">
+                  O&apos;quv yo&apos;nalishlar ro&apos;yxati
                 </h1>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 transition-colors duration-200">
                   Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
                 </p>
                 <a
                   href={ItTalentsDocs}
                   download
-                  className="mt-4 md:mt-6 px-6 md:px-8 py-2 bg-white border border-gray-300 rounded-full text-gray-700 hover:bg-gray-50 transition-colors inline-block"
+                  className="mt-4 md:mt-6 px-6 md:px-8 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors inline-block"
                 >
                   Yuklab olish
                 </a>
               </div>
 
               <div className="max-w-[231px] absolute bottom-0 right-0 max-[830px]:hidden">
-                <div className="max-w-full h-full text-blue-600">
+                <div className="max-w-full h-full text-blue-600 dark:text-blue-400">
                   <img
                     src={Sr}
                     alt="Ministry icon"
@@ -204,7 +182,7 @@ export default function ItTalents() {
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+            <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
               {t("itTalentsMetrics.title")}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -260,7 +238,7 @@ export default function ItTalents() {
                       }
                       className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]"
                     >
-                      Havolaga o'tish
+                      Havolaga o&apos;tish
                     </button>
                   </div>
                 </div>
@@ -278,30 +256,30 @@ export default function ItTalents() {
         </section>
       </div>
 
-      <div className="bg-[#F8F8F8] w-full py-[40px] project-section-bottom">
+      <div className="bg-[#F8F8F8] dark:bg-gray-900 w-full py-[40px] project-section-bottom transition-colors duration-200">
         <div className="max-w-[1230px] mx-auto">
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
-              <h1 className="text-[#222] font-bold text-[40px]">
-                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro'yxatdan
-                o'tish bo'yicha yo'riqnoma:
+              <h1 className="text-[#222] dark:text-white font-bold text-[40px] transition-colors duration-200">
+                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro&apos;yxatdan
+                o&apos;tish bo&apos;yicha yo&apos;riqnoma:
               </h1>
-              <p className="text-[#222] text-[20px]">
-                Quyidagi qo'llanmamiz siz uchun
+              <p className="text-[#222] dark:text-gray-300 text-[20px] transition-colors duration-200">
+                Quyidagi qo&apos;llanmamiz siz uchun
               </p>
 
               <div>
                 <div className="flex gap-4">
                   <button
-                    className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"
+                    className="px-[50px] py-[12px] bg-[#E3EEFF] dark:bg-blue-900 hover:bg-[#E3EEF3] dark:hover:bg-blue-800 text-[#2F2F2F] dark:text-white rounded-3xl font-medium transition-colors duration-200"
                     onClick={() =>
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    O'zbek tilida
+                    O&apos;zbek tilida
                   </button>
                   <button
-                    className="px-[50px] py-[12px] bg-[#E3EEFF] hover:bg-[#E3EEF3] text-[#2F2F2F] rounded-3xl font-medium"
+                    className="px-[50px] py-[12px] bg-[#E3EEFF] dark:bg-blue-900 hover:bg-[#E3EEF3] dark:hover:bg-blue-800 text-[#2F2F2F] dark:text-white rounded-3xl font-medium transition-colors duration-200"
                     onClick={() =>
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }

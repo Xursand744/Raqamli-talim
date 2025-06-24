@@ -266,8 +266,8 @@ function Universities() {
 
         {/* Статистика */}
         <div className="mb-6 text-center">
-          <p className="text-gray-600">
-            Topildi: <span className="font-semibold text-blue-600">{filteredUniversities.length}</span> ta universitet
+          <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">
+            Topildi: <span className="font-semibold text-blue-600 dark:text-blue-400 transition-colors duration-200">{filteredUniversities.length}</span> ta universitet
           </p>
         </div>
 

@@ -34,7 +34,7 @@ const CarouselItem = ({
 
             <p 
               onClick={handleClick}
-              className="font-medium text-lg md:text-xl text-black leading-relaxed cursor-pointer hover:text-blue-600 transition-colors duration-300"
+              className="font-medium text-lg md:text-xl text-black dark:text-gray-200 leading-relaxed cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
             >
               {description}
             </p>

@@ -237,16 +237,16 @@ export default function UniversityList() {
   };
 
   return (
-    <div className="bg-gray-50 pt-[20px]">
+    <div className="bg-gray-50 dark:bg-gray-900 pt-[20px] transition-colors duration-200">
       <div className="flex mt-[100px] max-w-[1230px] mx-auto ">
         <div
-          className={`fixed inset-y-25 left-0 z-30 w-64 bg-white transform ${
+          className={`fixed inset-y-25 left-0 z-30 w-64 bg-white dark:bg-gray-800 transform ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:relative md:translate-x-0 rounded-[12px]`}
         >
           <div className="p-4">
             <div className="flex items-center justify-between mb-6">
-              <h1 className="text-xl font-medium">Filtrlash</h1>
+              <h1 className="text-xl font-medium dark:text-white transition-colors duration-200">Filtrlash</h1>
               <button
                 className="text-blue-500 hover:text-blue-700"
                 onClick={clearFilters}
@@ -281,7 +281,7 @@ export default function UniversityList() {
                 placeholder="Universitet nomini qidirish..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-400 transition-colors duration-200"
               />
             </div>
 
@@ -289,7 +289,7 @@ export default function UniversityList() {
             <div className="space-y-6">
               {filters.map((section) => (
                 <div key={section.name} className="space-y-2">
-                  <h2 className="font-medium">
+                  <h2 className="font-medium dark:text-gray-200 transition-colors duration-200">
                     {section.name === "region" ? "Hudud" : "Ixtisoslashish"}
                   </h2>
                   {section.items.map((item) => (
@@ -299,7 +299,7 @@ export default function UniversityList() {
                     >
                       <input
                         type="checkbox"
-                        className="rounded border-gray-300"
+                        className="rounded border-gray-300 dark:border-gray-600 dark:bg-gray-900 dark:checked:bg-blue-600 dark:checked:border-blue-600 transition-colors duration-200"
                         checked={selectedFilters[section.name].includes(
                           item.key
                         )}
@@ -307,8 +307,8 @@ export default function UniversityList() {
                           handleFilterClick(section.name, item.key)
                         }
                       />
-                      <span className="text-sm">{item.name}</span>
-                      <span className="text-sm text-gray-500">
+                      <span className="text-sm dark:text-gray-200 transition-colors duration-200">{item.name}</span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-200">
                         ({item.count})
                       </span>
                     </label>
@@ -321,14 +321,14 @@ export default function UniversityList() {
 
         {/* Main content */}
         <div className="flex-1 px-4 md:px-6">
-          <h2 className="mb-4 text-lg font-semibold">
+          <h2 className="mb-4 text-lg font-semibold dark:text-white transition-colors duration-200">
             Topildi: {filteredUniversities.length} ta universitet
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {currentUniversities.map((university) => (
               <div
                 key={university.id}
-                className="overflow-hidden max-w-[400px] w-full bg-white border rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="overflow-hidden max-w-[400px] w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <div className="relative">
                   {university.image ? (
@@ -342,25 +342,25 @@ export default function UniversityList() {
                     </div>
                   )}
                   <div className="absolute bottom-2 left-2">
-                    <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                    <span className="px-2 py-1 text-xs text-black dark:text-white bg-white/90 dark:bg-gray-900/80 rounded-full transition-colors duration-200">
                       {university.region}
                     </span>
                   </div>
                 </div>
                 <div className="p-4">
                   <div className="mb-2">
-                    <h3 className="font-medium text-sm line-clamp-2">{university.name}</h3>
-                    <p className="text-xs text-gray-500">
+                    <h3 className="font-medium text-sm line-clamp-2 dark:text-white transition-colors duration-200">{university.name}</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 transition-colors duration-200">
                       {university.region}
                     </p>
                   </div>
                   
                   {/* Контактная информация */}
-                  <div className="space-y-2 text-xs text-gray-600">
+                  <div className="space-y-2 text-xs text-gray-600 dark:text-gray-300 transition-colors duration-200">
                     {university.website && (
                       <div className="flex items-center space-x-1">
                         <span className="font-medium">🌐</span>
-                        <a href={`https://${university.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                        <a href={`https://${university.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline transition-colors duration-200">
                           {university.website}
                         </a>
                       </div>
@@ -368,7 +368,7 @@ export default function UniversityList() {
                     {university.telegram && (
                       <div className="flex items-center space-x-1">
                         <span className="font-medium">📱</span>
-                        <a href={`https://${university.telegram}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                        <a href={`https://${university.telegram}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline transition-colors duration-200">
                           Telegram
                         </a>
                       </div>
@@ -376,7 +376,7 @@ export default function UniversityList() {
                     {university.phone && (
                       <div className="flex items-center space-x-1">
                         <span className="font-medium">📞</span>
-                        <a href={`tel:${university.phone}`} className="text-blue-500 hover:underline">
+                        <a href={`tel:${university.phone}`} className="text-blue-500 dark:text-blue-400 hover:underline transition-colors duration-200">
                           {university.phone}
                         </a>
                       </div>
@@ -386,8 +386,8 @@ export default function UniversityList() {
                   {/* IT направления */}
                   {university.directions && (
                     <div className="mt-3">
-                      <p className="text-xs font-medium text-gray-700 mb-1">IT yo'nalishlari:</p>
-                      <div className="text-xs text-gray-600 line-clamp-3">
+                      <p className="text-xs font-medium text-gray-700 dark:text-gray-200 mb-1 transition-colors duration-200">IT yo'nalishlari:</p>
+                      <div className="text-xs text-gray-600 dark:text-gray-300 line-clamp-3 transition-colors duration-200">
                         {university.directions}
                       </div>
                     </div>
@@ -399,10 +399,10 @@ export default function UniversityList() {
 
           {filteredUniversities.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">Hech qanday universitet topilmadi</p>
+              <p className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">Hech qanday universitet topilmadi</p>
               <button 
                 onClick={clearFilters}
-                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="mt-4 px-6 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-400 transition-colors duration-200"
               >
                 Filtrlarni tozalash
               </button>
@@ -413,7 +413,7 @@ export default function UniversityList() {
           {totalPages > 1 && (
             <div className="flex justify-center items-center my-8 space-x-2">
               <button
-                className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+                className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
               >
@@ -425,12 +425,12 @@ export default function UniversityList() {
                 {currentPage > 3 && (
                   <>
                     <button
-                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                       onClick={() => setCurrentPage(1)}
                     >
                       1
                     </button>
-                    {currentPage > 4 && <span className="text-gray-400">...</span>}
+                    {currentPage > 4 && <span className="text-gray-400 dark:text-gray-500">...</span>}
                   </>
                 )}
 
@@ -451,8 +451,8 @@ export default function UniversityList() {
                       key={page}
                       className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-200 ${
                         currentPage === page
-                          ? "bg-blue-600 text-white"
-                          : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
+                          ? "bg-blue-600 dark:bg-blue-500 text-white"
+                          : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700"
                       }`}
                       onClick={() => setCurrentPage(page)}
                     >
@@ -463,9 +463,9 @@ export default function UniversityList() {
 
                 {currentPage < totalPages - 2 && (
                   <>
-                    {currentPage < totalPages - 3 && <span className="text-gray-400">...</span>}
+                    {currentPage < totalPages - 3 && <span className="text-gray-400 dark:text-gray-500">...</span>}
                     <button
-                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                      className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                       onClick={() => setCurrentPage(totalPages)}
                     >
                       {totalPages}
@@ -475,7 +475,7 @@ export default function UniversityList() {
               </div>
 
               <button
-                className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+                className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
                 onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
               >

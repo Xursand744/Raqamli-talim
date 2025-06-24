@@ -107,18 +107,18 @@ export default function UnifiedFilter() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-white dark:bg-gray-900 transition-colors duration-200">
       {/* Переключатель вкладок */}
-      <div className="bg-white border-b sticky top-0 z-40">
+      <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-40 transition-colors duration-200">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+            <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg transition-colors duration-200">
               <button
                 onClick={() => setActiveTab("centers")}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeTab === "centers"
-                    ? "bg-white text-blue-600 shadow-sm"
-                    : "text-gray-600 hover:text-gray-900"
+                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
                 {t("menu.studyCenters")}
@@ -127,8 +127,8 @@ export default function UnifiedFilter() {
                 onClick={() => setActiveTab("courses")}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeTab === "courses"
-                    ? "bg-white text-blue-600 shadow-sm"
-                    : "text-gray-600 hover:text-gray-900"
+                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
                 {t("courses.title")}
@@ -137,8 +137,8 @@ export default function UnifiedFilter() {
                 onClick={() => setActiveTab("top-centers")}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   activeTab === "top-centers"
-                    ? "bg-white text-blue-600 shadow-sm"
-                    : "text-gray-600 hover:text-gray-900"
+                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
                 {t("menu.topStudyCenters")}
@@ -161,13 +161,13 @@ export default function UnifiedFilter() {
         {/* Боковая панель с фильтрами */}
         <div
           className={`
-              fixed inset-y-0 left-0 z-40 w-[60%] md:w-[50%] bg-white p-4 shadow-lg transition-transform duration-300 ease-in-out transform
+              fixed inset-y-0 left-0 z-40 w-[60%] md:w-[50%] bg-white dark:bg-gray-800 p-4 shadow-lg transition-transform duration-300 ease-in-out transform
               ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-              md:relative md:translate-x-0 md:w-1/4 md:min-w-[250px] md:max-w-[300px]`}
+              md:relative md:translate-x-0 md:w-1/4 md:min-w-[250px] md:max-w-[300px] transition-colors duration-200`}
         >
           <div className="space-y-6 h-full overflow-y-auto">
             <div className="flex justify-between items-center">
-              <h2 className="text-[#222] text-xl md:text-2xl font-medium">
+              <h2 className="text-[#222] dark:text-white text-xl md:text-2xl font-medium transition-colors duration-200">
                 {t("filters.title")}
               </h2>
               <button
@@ -184,7 +184,7 @@ export default function UnifiedFilter() {
                 {t("filters.reset")}
               </button>
             </div>
-            <hr />
+            <hr className="border-gray-200 dark:border-gray-700 transition-colors duration-200" />
 
             {activeTab === "courses" && (
               <PriceRange 
@@ -196,32 +196,32 @@ export default function UnifiedFilter() {
             {activeTab === "centers" && (
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                  <label className="text-sm font-medium text-gray-700 dark:text-gray-200 block mb-2 transition-colors duration-200">
                     {t("search.centerNameLabel")}
                   </label>
                   <div className="relative">
                     <input
                       type="text"
                       placeholder={t("search.placeholder")}
-                      className="w-full pl-10 pr-4 py-2 border rounded-lg"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg dark:bg-gray-900 dark:text-gray-100 dark:placeholder-gray-400 transition-colors duration-200"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       aria-label={t("search.placeholder")}
                     />
                     <Search
-                      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                      className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 transition-colors duration-200"
                       size={20}
                       aria-hidden="true"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                  <label className="text-sm font-medium text-gray-700 dark:text-gray-200 block mb-2 transition-colors duration-200">
                     {t("search.sort.label")}
                   </label>
                   <button
                     onClick={() => setSortAscending(!sortAscending)}
-                    className="w-full flex items-center justify-between gap-2 px-4 py-2 border rounded-lg bg-white"
+                    className="w-full flex items-center justify-between gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200"
                     aria-label={t("search.sortByName")}
                   >
                     <span>{t("search.sortByName")}</span>
@@ -236,7 +236,7 @@ export default function UnifiedFilter() {
         {/* Основной контент */}
         <div className="flex-1 p-4 md:p-6">
           {/* Заголовок */}
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 dark:text-white transition-colors duration-200">
             {activeTab === "centers"
               ? t("menu.studyCenters")
               : activeTab === "courses"
@@ -246,13 +246,13 @@ export default function UnifiedFilter() {
 
           {/* Счетчик для центров */}
           {activeTab === "centers" && (
-            <h3 className="text-lg font-medium mb-4">
+            <h3 className="text-lg font-medium mb-4 dark:text-gray-200 transition-colors duration-200">
               {t("center_count", { count: filteredCenters.length })}
             </h3>
           )}
 
           {isLoading ? (
-            <div className="text-center py-10">{t("loading")}...</div>
+            <div className="text-center py-10 dark:text-gray-200 transition-colors duration-200">{t("loading")}...</div>
           ) : (
             <div>
               <div
@@ -266,7 +266,7 @@ export default function UnifiedFilter() {
                   filteredCenters.map((center) => (
                     <div
                       key={center.id}
-                      className="bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow"
+                      className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200"
                     >
                       <div className="relative h-48">
                         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
@@ -277,7 +277,7 @@ export default function UnifiedFilter() {
                           />
                         </div>
                         <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
-                          <span className="px-2 py-1 text-xs text-black bg-white/90 rounded-full">
+                          <span className="px-2 py-1 text-xs text-black dark:text-white bg-white/90 dark:bg-gray-900/80 rounded-full transition-colors duration-200">
                             {t("courses.title")}: {center.courses_count}
                           </span>
                         </div>
@@ -285,17 +285,17 @@ export default function UnifiedFilter() {
 
                       <div className="p-4">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="font-medium text-sm md:text-base">
+                          <h3 className="font-medium text-sm md:text-base dark:text-white transition-colors duration-200">
                             {center.name}
                           </h3>
                         </div>
                         {center.phone && (
-                          <p className="text-sm text-gray-600 mb-1">
+                          <p className="text-sm text-gray-600 dark:text-gray-300 mb-1 transition-colors duration-200">
                             {t("contact.phone")}: {center.phone}
                           </p>
                         )}
                         {center.website && (
-                          <p className="text-sm text-gray-600">
+                          <p className="text-sm text-gray-600 dark:text-gray-300 transition-colors duration-200">
                             {t("contact.website")}: {center.website}
                           </p>
                         )}
@@ -315,7 +315,7 @@ export default function UnifiedFilter() {
               {activeTab !== "top-centers" && (
                 <div className="flex justify-center items-center mt-8 space-x-2">
                   <button
-                    className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+                    className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
                     onClick={() =>
                       setCurrentPage((prev) => Math.max(prev - 1, 1))
                     }
@@ -333,14 +333,14 @@ export default function UnifiedFilter() {
                     {currentPage > 3 && (
                       <>
                         <button
-                          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                           onClick={() => setCurrentPage(1)}
                           aria-label={t("pagination.firstPage")}
                         >
                           1
                         </button>
                         {currentPage > 4 && (
-                          <span className="text-gray-400">...</span>
+                          <span className="text-gray-400 dark:text-gray-500">...</span>
                         )}
                       </>
                     )}
@@ -364,8 +364,8 @@ export default function UnifiedFilter() {
                             key={page}
                             className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-200 ${
                               currentPage === page
-                                ? "bg-blue-600 text-white"
-                                : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
+                                ? "bg-blue-600 dark:bg-blue-500 text-white"
+                                : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700"
                             }`}
                             onClick={() => setCurrentPage(page)}
                             aria-label={t("pagination.page", { page })}
@@ -382,10 +382,10 @@ export default function UnifiedFilter() {
                     {currentPage < totalPages - 2 && (
                       <>
                         {currentPage < totalPages - 3 && (
-                          <span className="text-gray-400">...</span>
+                          <span className="text-gray-400 dark:text-gray-500">...</span>
                         )}
                         <button
-                          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                          className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                           onClick={() => setCurrentPage(totalPages)}
                           aria-label={t("pagination.lastPage")}
                         >
@@ -396,7 +396,7 @@ export default function UnifiedFilter() {
                   </div>
 
                   <button
-                    className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+                    className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
                     onClick={() =>
                       setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                     }

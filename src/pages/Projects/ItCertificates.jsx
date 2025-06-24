@@ -189,7 +189,7 @@ export default function ItCertificates() {
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumb />
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
           IT-sertifikatlar - Xalqaro IT-sertifikatlar uchun kompensatsiya
         </h1>
 
@@ -201,12 +201,12 @@ export default function ItCertificates() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          Loyiha IT sohasidagi iqtidorli yoshlar haqida ma'lumotlarni birlashtirish maqsadida yaratilgan. Loyiha doirasida 2024-yil 1-mart kunidan boshlab yoshlarning xalqaro IT-sertifikatlar uchun sarf qilgan xarajatlarining 60% gacha hamda B2 va undan yuqori darajadagi sertifikatga ega yoshlarning xalqaro Professional IT-sertifikatlar uchun sarf qilgan xarajatlarini 100% qismi qoplab berilishi tartibi joriy etilgan.
+        <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
+          Loyiha IT sohasidagi iqtidorli yoshlar haqida ma&apos;lumotlarni birlashtirish maqsadida yaratilgan. Loyiha doirasida 2024-yil 1-mart kunidan boshlab yoshlarning xalqaro IT-sertifikatlar uchun sarf qilgan xarajatlarining 60% gacha hamda B2 va undan yuqori darajadagi sertifikatga ega yoshlarning xalqaro Professional IT-sertifikatlar uchun sarf qilgan xarajatlarini 100% qismi qoplab berilishi tartibi joriy etilgan.
         </p>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-200">
             Qatnashish shartlari
           </h2>
 

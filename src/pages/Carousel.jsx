@@ -6,11 +6,7 @@ import xorazmiy from "../assets/images/projects/xorazmiy_1.jpg";
 import talent from "../assets/images/projects/talent_1.jpg";
 import coding from "../assets/images/projects/coder_1.jpg";
 import tot from "../assets/images/projects/5.jpg";
-import job from "../assets/images/projects/6.jpg";
-import ict from "../assets/images/projects/7.jpg";
 import api from "../assets/images/projects/8.jpg";
-import icpc from "../assets/images/projects/9.png";
-import aca from "../assets/images/projects/10.jpg";
 import istedod from "../assets/projects/istedod.png";
 import olimpiads from "../assets/projects/olimpiads.png";
 import { useTranslation } from "react-i18next";
@@ -112,7 +108,7 @@ export default function App() {
 
   return (
     <>
-      <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] mt-[100px]">
+      <h1 className="font-bold text-[56px] text-center roboto-font text-['#222222'] dark:text-white mt-[100px] transition-colors duration-200">
         {t("carousel.title")}
       </h1>
       <Swiper
@@ -147,7 +143,7 @@ export default function App() {
         {carouselData.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="bg-[#F8F8F8] carousel-slide"
+            className="bg-[#F8F8F8] dark:bg-gray-800 carousel-slide transition-colors duration-200"
             style={{ width: '600px', maxWidth: '95vw' }}
           >
             <CarouselItem 
@@ -162,7 +158,7 @@ export default function App() {
       </Swiper>
       <style>{`
         .carousel-slide {
-          transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s;
+          transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s, background-color 0.2s;
         }
         .swiper-slide-active.carousel-slide {
           transform: scale(1.12);

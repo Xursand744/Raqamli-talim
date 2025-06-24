@@ -1,5 +1,5 @@
 .about-title {
-  @apply text-[46px] font-bold text-[#222222] text-left;
+  @apply text-[46px] font-bold text-[#222222] text-left dark:text-white transition-colors duration-200;
 }
 
 .anti-corruption a {

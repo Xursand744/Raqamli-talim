@@ -106,7 +106,7 @@ DecisionCard.propTypes = {
 const HeroSection = () => (
   <div className="max-w-[1230px] mx-auto px-4">
     <div className="flex justify-center mt-24 mb-16 mt-[10em]">
-      <h1 className="font-bold text-5xl md:text-6xl text-gray-900 max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+      <h1 className="font-bold text-5xl md:text-6xl text-gray-900 dark:text-white max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
         IT Shaharcha
       </h1>
     </div>
@@ -117,8 +117,8 @@ const HeroSection = () => (
         className="rounded-2xl w-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
         alt="IT Shaharcha Project"
       />
-      <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 text-center max-w-3xl">
-        &quot;IT shaharcha&quot; – bu nafaqat ta'lim, balki raqamli ekotizim yaratishga yo'naltirilgan yirik tashabbusdir
+      <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 dark:text-gray-200 text-center max-w-3xl transition-colors duration-200">
+        &quot;IT shaharcha&quot; – bu nafaqat ta&apos;lim, balki raqamli ekotizim yaratishga yo&apos;naltirilgan yirik tashabbusdir
       </h2>
     </div>
   </div>
@@ -127,10 +127,10 @@ const HeroSection = () => (
 // Description Section Component
 const DescriptionSection = () => (
   <div className="max-w-[1230px] mx-auto">
-    <p className="text-lg text-gray-700 leading-relaxed mx-auto text-justify leading-relaxed">
-      &quot;IT shaharcha&quot; dasturi O'zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo'lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o'qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O'zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo'lib, hududlarda innovatsion ta'lim muhitini shakllantirishga yo'naltirilgan.
-      Davlat tomonidan dastur doirasida o'quvchilarni doimiy rag'batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o'rganish va global IT-bozorda o'z o'rnini topish uchun keng imkoniyatlar taqdim etadi.
-      Zamonaviy infratuzilmaga ega &quot;IT-shaharcha&quot;lar yoshlarni xalqaro mehnat bozoriga tayyorlash, ish bilan ta'minlash va IT-xizmatlar eksportini rivojlantirishga xizmat qiladi. Loyiha doirasida yaratilayotgan sharoitlar tufayli hududlarda texnologik innovatsiyalar tezkor rivojlanib, yoshlar uchun yangi imkoniyatlar ochiladi.
+    <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mx-auto text-justify leading-relaxed transition-colors duration-200">
+      &quot;IT shaharcha&quot; dasturi O&apos;zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo&apos;lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o&apos;qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O&apos;zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo&apos;lib, hududlarda innovatsion ta&apos;lim muhitini shakllantirishga yo&apos;naltirilgan.
+      Davlat tomonidan dastur doirasida o&apos;quvchilarni doimiy rag&apos;batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o&apos;rganish va global IT-bozorda o&apos;z o&apos;rnini topish uchun keng imkoniyatlar taqdim etadi.
+      Zamonaviy infratuzilmaga ega &quot;IT-shaharcha&quot;lar yoshlarni xalqaro mehnat bozoriga tayyorlash, ish bilan ta&apos;minlash va IT-xizmatlar eksportini rivojlantirishga xizmat qiladi. Loyiha doirasida yaratilayotgan sharoitlar tufayli hududlarda texnologik innovatsiyalar tezkor rivojlanib, yoshlar uchun yangi imkoniyatlar ochiladi.
     </p>
   </div>
 );

@@ -39,11 +39,10 @@ export default function DesktopMenu({ menu }) {
 
   const renderSubMenu = () => (
     <motion.div
-      className="sub-menu"
+      className="sub-menu bg-white dark:bg-gray-900 transition-colors duration-200"
       initial="exit"
       animate={isHover ? "enter" : "exit"}
       variants={subMenuAnimate}
-      style={{ background: "white" }}
       role="menu"
       aria-label={t("menu.submenu", { menu: t(menu.name) })}
     >
@@ -52,7 +51,7 @@ export default function DesktopMenu({ menu }) {
           <NavLink
             key={i}
             to={submenu.link}
-            className="text-[#333] hover:bg-[#2675EB] hover:text-white transition my-[-5px] rounded-[10px] py-[10px] px-[15px] mx-[-5px]"
+            className="text-[#333] dark:text-gray-200 hover:bg-[#2675EB] hover:text-white dark:hover:bg-blue-700 dark:hover:text-white transition my-[-5px] rounded-[10px] py-[10px] px-[15px] mx-[-5px]"
             role="menuitem"
             aria-label={t("menu.submenuItem", { 
               menu: t(menu.name),
@@ -61,15 +60,15 @@ export default function DesktopMenu({ menu }) {
           >
             <div className="relative cursor-pointer">
               {menu.gridCols > 1 && menu?.subMenuHeading?.[i] && (
-                <p className="text-sm mb-4 text-gray-500">
+                <p className="text-sm mb-4 text-gray-500 dark:text-gray-400 transition-colors duration-200">
                   {t(menu.subMenuHeading[i])}
                 </p>
               )}
 
               <div className="flex-center gap-x-4 group/menubox">
                 <div>
-                  <h6 className="font-semibold">{t(submenu.name)}</h6>
-                  <p className="text-sm">{t(submenu.desc)}</p>
+                  <h6 className="font-semibold text-gray-900 dark:text-white transition-colors duration-200">{t(submenu.name)}</h6>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 transition-colors duration-200">{t(submenu.desc)}</p>
                 </div>
               </div>
             </div>

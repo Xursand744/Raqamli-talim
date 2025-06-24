@@ -26,8 +26,8 @@ function OverviewProject({ title, image, link, className }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80"></div>
         
         <div className="absolute bottom-0 left-0 w-full p-5">
-          <h2 className="text-lg font-medium text-white drop-shadow-md">{title}</h2>
-          <div className="h-1 w-16 bg-blue-500 mt-2 rounded-full"></div>
+          <h2 className="text-lg font-medium text-white drop-shadow-md transition-colors duration-200">{title}</h2>
+          <div className="h-1 w-16 bg-blue-500 dark:bg-blue-400 mt-2 rounded-full transition-colors duration-200"></div>
         </div>
       </div>
     </motion.div>

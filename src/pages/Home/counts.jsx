@@ -41,20 +41,20 @@ export default function MetricsSection() {
     <div className="container mt-[50px] md:mt-[100px] p-6 counts-section">
       {/* Intro block */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <div className="bg-gray-100 py-5 p-4 rounded-lg lg:col-span-2">
-          <h2 className="text-2xl font-medium text-gray-900 mb-4">
+        <div className="bg-gray-100 dark:bg-gray-800 py-5 p-4 rounded-lg lg:col-span-2 transition-colors duration-200">
+          <h2 className="text-2xl font-medium text-gray-900 dark:text-white mb-4 transition-colors duration-200">
             {t("metrics.centerTitle")}
           </h2>
-          <p className="text-gray-600">{t("metrics.centerDescription")}</p>
+          <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">{t("metrics.centerDescription")}</p>
         </div>
 
         {highlightMetrics.map((item, idx) => (
           <div
             key={idx}
-            className="bg-[#E3EEFF] rounded-lg p-6 flex flex-col items-center justify-center"
+            className="bg-[#E3EEFF] dark:bg-blue-900/20 rounded-lg p-6 flex flex-col items-center justify-center transition-colors duration-200"
           >
-            <div className="text-5xl font-bold mb-2">{item.value}</div>
-            <div className="text-gray-600 text-center">{item.label}</div>
+            <div className="text-5xl font-bold mb-2 text-gray-900 dark:text-white transition-colors duration-200">{item.value}</div>
+            <div className="text-gray-600 dark:text-gray-300 text-center transition-colors duration-200">{item.label}</div>
           </div>
         ))}
       </div>
@@ -64,15 +64,15 @@ export default function MetricsSection() {
         {detailedMetrics.map((metric, index) => (
           <div
             key={index}
-            className="bg-[#E3EEFF] rounded-lg p-6 flex flex-col items-center justify-center"
+            className="bg-[#E3EEFF] dark:bg-blue-900/20 rounded-lg p-6 flex flex-col items-center justify-center transition-colors duration-200"
           >
-            <div className="text-5xl font-bold mb-2">
+            <div className="text-5xl font-bold mb-2 text-gray-900 dark:text-white transition-colors duration-200">
               {metric.count}
-              <span className="text-blue-500 font-bold text-xl ml-2">
+              <span className="text-blue-500 dark:text-blue-400 font-bold text-xl ml-2 transition-colors duration-200">
                 {metric.percent}
               </span>
             </div>
-            <div className="text-gray-600 text-center">{metric.label}</div>
+            <div className="text-gray-600 dark:text-gray-300 text-center transition-colors duration-200">{metric.label}</div>
           </div>
         ))}
       </div>

@@ -10,6 +10,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 
 @layer components {
   .sub-menu {
-    @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur bg-white/[0.04];
+    @apply absolute top-[4.2rem] p-[15px] rounded-[6px] origin-[50%_-170px] backdrop-blur bg-white/[0.04] dark:bg-gray-800/[0.04];
   }
 }
 
@@ -43,7 +44,7 @@ body {
 
 .title {
   font-family: "Roboto", sans-serif;
-  @apply text-[44px] font-bold text-center mt-[120px] text-['#222222'];
+  @apply text-[44px] font-bold text-center mt-[120px] text-['#222222'] dark:text-white transition-colors duration-200;
 }
 
 .roboto-font {

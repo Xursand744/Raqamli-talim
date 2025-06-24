@@ -33,7 +33,7 @@ export default function MobMenu({ Menus }) {
   return (
     <div>
       <button 
-        className="lg:hidden z-[999] relative" 
+        className="lg:hidden z-[999] relative text-black dark:text-white" 
         onClick={toggleDrawer}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
@@ -44,7 +44,7 @@ export default function MobMenu({ Menus }) {
 
       <motion.div
         id="mobile-menu"
-        className="fixed left-0 right-0 top-16 overflow-y-auto h-full bg-[#18181A] backdrop-blur text-white p-6 pb-20"
+        className="fixed left-0 right-0 top-16 overflow-y-auto h-full bg-[#18181A] dark:bg-gray-900 backdrop-blur text-white p-6 pb-20"
         initial={{ x: "-100%" }}
         animate={{ x: isOpen ? "0%" : "-100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -57,14 +57,14 @@ export default function MobMenu({ Menus }) {
               {menu.submenu ? (
                 <div>
                   <button
-                    className="flex items-center justify-between w-full text-left"
+                    className="flex items-center justify-between w-full text-left text-white dark:text-gray-200"
                     onClick={() => toggleSubmenu(index)}
                     aria-expanded={clicked === index}
                     aria-controls={`submenu-${index}`}
                   >
                     <span>{t(menu.name)}</span>
                     <ChevronDown
-                      className={`transform transition-transform ${
+                      className={`transform transition-transform text-white dark:text-gray-300 ${
                         clicked === index ? "rotate-180" : ""
                       }`}
                       aria-hidden="true"
@@ -84,7 +84,7 @@ export default function MobMenu({ Menus }) {
                         to={submenu.link}
                         className={({ isActive }) =>
                           `block py-2 ${
-                            isActive ? "text-blue-500" : "text-gray-300"
+                            isActive ? "text-blue-400 dark:text-blue-300" : "text-gray-300 dark:text-gray-400"
                           }`
                         }
                         onClick={() => {
@@ -101,7 +101,7 @@ export default function MobMenu({ Menus }) {
                 <NavLink
                   to={menu.link}
                   className={({ isActive }) =>
-                    `block py-2 ${isActive ? "text-blue-500" : "text-gray-300"}`
+                    `block py-2 ${isActive ? "text-blue-400 dark:text-blue-300" : "text-gray-300 dark:text-gray-400"}`
                   }
                   onClick={() => setIsOpen(false)}
                 >

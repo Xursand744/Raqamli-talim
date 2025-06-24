@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 import { Menus } from "../utils";
 import PropTypes from "prop-types";
+import { useTheme } from "../context/ThemeContext";
 
 const languages = ["uz", "ru", "en"];
 
@@ -21,18 +22,7 @@ function AccessibilityControls() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const dropdownRef = useRef(null);
   const { t } = useTranslation("global");
-
-  // Theme state with light theme as default
-  const [theme, setTheme] = useState(() => {
-    localStorage.removeItem('theme');
-    document.documentElement.classList.remove('dark');
-    return 'light';
-  });
-
-  useEffect(() => {
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  }, []);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -44,13 +34,6 @@ function AccessibilityControls() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', newTheme);
-  };
 
   const increaseFontSize = () => {
     if (fontSize < 200) {
@@ -88,7 +71,7 @@ function AccessibilityControls() {
         <div className="text-sm font-semibold">{t("accessibility.title")}</div>
       </div>
       <button
-        className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100"
+        className="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
         onClick={() => setIsOpen(!isOpen)}
         aria-label={t("accessibility.menu")}
         aria-expanded={isOpen}
@@ -240,15 +223,15 @@ function LanguageSelector({ onLanguageSelect }) {
         aria-label={t("language.selector")}
       >
         <div className="flex items-center gap-x-2">
-          <span className="text-md font-semibold">{selectedLanguage}</span>
-          <Globe className="text-black" aria-hidden="true" />
+          <span className="text-md font-semibold text-black dark:text-white">{selectedLanguage}</span>
+          <Globe className="text-black dark:text-white" aria-hidden="true" />
         </div>
       </div>
 
       {isOpen && (
         <div 
           id="language-menu"
-          className="absolute z-10 mt-8 w-24 rounded-md bg-white shadow-lg animate-fade-in"
+          className="absolute z-10 mt-8 w-24 rounded-md bg-white dark:bg-gray-800 shadow-lg animate-fade-in"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="language-selector-button"
@@ -257,7 +240,7 @@ function LanguageSelector({ onLanguageSelect }) {
             {languages.map((lang) => (
               <button
                 key={lang}
-                className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                 onClick={() => handleLanguageSelect(lang)}
                 role="menuitem"
                 aria-selected={selectedLanguage === lang.toUpperCase()}
@@ -290,7 +273,7 @@ export default function Navbar() {
         {i18n.language}
       </div>
       <header 
-        className="py-[18px] z-[9999] text-[15px] fixed top-[36px] w-full justify-between items-center flex-center bg-white transition-colors duration-200"
+        className="py-[18px] z-[9999] text-[15px] fixed top-[36px] w-full justify-between items-center flex-center bg-white dark:bg-gray-900 transition-colors duration-200"
         role="banner"
       >
         <nav 
@@ -309,7 +292,7 @@ export default function Navbar() {
           </NavLink>
 
           <ul 
-            className="gap-x-1 lg:flex-center hidden text-black"
+            className="gap-x-1 lg:flex-center hidden text-black dark:text-white"
             role="menubar"
           >
             {Menus.map((menu) => (

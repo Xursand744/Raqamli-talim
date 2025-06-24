@@ -80,7 +80,7 @@ function NewsSinglePage() {
             href={part}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200"
           >
             {displayText}
           </a>
@@ -136,13 +136,13 @@ function NewsSinglePage() {
     return (
       <div className="max-w-[1250px] mx-auto px-4 py-8">
         <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="h-12 bg-gray-200 rounded w-3/4 mb-4"></div>
-          <div className="h-64 bg-gray-200 rounded mb-4"></div>
+          <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-4"></div>
+          <div className="h-12 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+          <div className="h-64 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
           <div className="space-y-3">
-            <div className="h-4 bg-gray-200 rounded w-full"></div>
-            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6"></div>
           </div>
         </div>
       </div>
@@ -152,10 +152,10 @@ function NewsSinglePage() {
   if (error) {
     return (
       <div className="max-w-[1250px] mx-auto px-4 py-8 text-center">
-        <p className="text-red-600 mb-4">{error}</p>
+        <p className="text-red-600 dark:text-red-400 mb-4 transition-colors duration-200">{error}</p>
         <button
           onClick={() => navigate("/news")}
-          className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+          className="px-6 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-full hover:bg-blue-700 dark:hover:bg-blue-400 transition-colors duration-200"
         >
           {language === "uz" ? "Orqaga qaytish" : language === "ru" ? "Вернуться назад" : "Go back"}
         </button>
@@ -168,24 +168,24 @@ function NewsSinglePage() {
   }
 
   return (
-    <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row justify-between mb-[72px] gap-[20px] single-news-page px-4">
+    <div className="max-w-[1250px] mx-auto flex flex-col lg:flex-row justify-between mb-[72px] gap-[20px] single-news-page px-4 bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="max-w-[792px] w-full">
         <BreadCrumps breadCrumps={breadCrumps} />
 
-        <h1 className="text-[#222] text-[32px] lg:text-[44px] font-medium mt-[40px] roboto-font">
+        <h1 className="text-[#222] dark:text-white text-[32px] lg:text-[44px] font-medium mt-[40px] roboto-font transition-colors duration-200">
           {news.title[language]}
         </h1>
         <div className="flex items-center gap-[12px] mt-[10px]">
-          <p className="text-[14px] font-medium text-[#2675EB]">
+          <p className="text-[14px] font-medium text-[#2675EB] dark:text-blue-400 transition-colors duration-200">
             {formatDate(news.createdAt)}
           </p>
-          <p className="flex items-center gap-[6.5px]">
+          <p className="flex items-center gap-[6.5px] text-gray-700 dark:text-gray-300 transition-colors duration-200">
             <EyeIcon width={"15px"} />
             {/* TODO: Add view count when API provides it */}
             0
           </p>
         </div>
-        <p className="text-[20px] font-medium text-black mt-[24px]">
+        <p className="text-[20px] font-medium text-black dark:text-gray-200 mt-[24px] transition-colors duration-200">
           {convertTextToLinks(news.body[language])}
         </p>
 
@@ -197,7 +197,7 @@ function NewsSinglePage() {
           />
         </div>
 
-        <div className="mt-[24px] prose prose-lg max-w-none">
+        <div className="mt-[24px] prose prose-lg max-w-none dark:prose-invert">
           {news.body2[language].split("\r\n\r\n").map((paragraph, index) => (
             <p key={index} className="mb-4">
               {paragraph.split("\r\n").map((line, lineIndex) => (
@@ -212,7 +212,7 @@ function NewsSinglePage() {
       </div>
 
       <div className="max-w-[384px] w-full mt-[40px] lg:mt-[100px]">
-        <h2 className="font-bold text-[20px]">
+        <h2 className="font-bold text-[20px] dark:text-white transition-colors duration-200">
           {language === "uz" ? "So'nggi yangiliklar" : language === "ru" ? "Последние новости" : "Latest news"}
         </h2>
         <div className="mt-[20px]">

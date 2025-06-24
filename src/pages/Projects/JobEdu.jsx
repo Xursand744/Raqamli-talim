@@ -120,7 +120,7 @@ export default function JobEdu() {
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumb />
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
           Job&Edu Fest - IT mehnat va ta`lim yarmarkasi
         </h1>
 
@@ -132,15 +132,15 @@ export default function JobEdu() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
           Yarmarkaning asosiy maqsadi — yoshlarni IT bozoridagi real imkoniyatlar bilan tanishtirish hamda ta`lim va mehnat o`rtasida samarali integratsiyani yo`lga qo`yishdir.
         </p>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
           Tashkil etilgan ushbu mehnat va ta`lim yarmarkasida IT sohasida faoliyat olib boruvchi kompaniya va ta`lim tashkilotlari o`zlarining bo`sh ish o`rinlari va ta`lim sohasidagi imkoniyatlari bilan ishtirok etadi.
         </p>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
           Yarmarkada raqamli texnologiyalar sohasida faoliyat olib boruvchi mahalliy va xalqaro kompaniya vakillari, ta`lim tashkilotlari, xususan, oliy o`quv yurtlari va IT o`quv markazlari tomonidan yarmarkada ishtirok etgan yoshlarga tashkilotlarda yaratilgan sharoitlar, bo`sh ish o`rinlari, shuningdek, mavjud ta`lim dasturlari haqida ma`lumotlar beriladi.
         </p>
 

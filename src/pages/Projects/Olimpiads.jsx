@@ -1,12 +1,9 @@
 import OverviewProject from "../../components/Projects/OverviewProject";
-import { useTranslation } from "react-i18next";
 import api from "../../assets/images/projects/9.png";
 import icpc from "../../assets/images/projects/10.jpg";
 import ict from "../../assets/images/projects/7.jpg";
 
 function JobEduFestProjects() {
-  const { t } = useTranslation("global");
-
   const jobEduProjects = [
     {
       id: 7,
@@ -31,7 +28,7 @@ function JobEduFestProjects() {
   return (
     <>
       <div className="max-w-[1230px] mx-auto mt-[120px] mb-[10em]">
-        <h1 className="font-medium text-[28px] mb-[30px]">Olimpiadalar</h1>
+        <h1 className="font-medium text-[28px] mb-[30px] text-gray-900 dark:text-white transition-colors duration-200">Olimpiadalar</h1>
         <div className="flex justify-between items-center flex-wrap gap-[30px]">
           {jobEduProjects &&
             jobEduProjects.map((item) => (

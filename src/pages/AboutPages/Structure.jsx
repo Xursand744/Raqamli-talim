@@ -266,9 +266,9 @@ export default function Structure() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: "-100%", opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-2xl shadow-xl max-w-2xl w-full overflow-hidden relative"
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl max-w-2xl w-full overflow-hidden relative transition-colors duration-200"
             >
-              <button className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 transition-colors">
+              <button className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-white transition-colors">
                 <X size={24} onClick={() => setShowModal(false)} />
               </button>
 
@@ -284,19 +284,19 @@ export default function Structure() {
                 <div className="w-full md:w-2/3 p-6 md:p-8">
                   <div className="space-y-6">
                     <div className="mb-[100px]">
-                      <h2 className="text-2xl font-bold text-gray-800">
+                      <h2 className="text-2xl font-bold text-gray-800 dark:text-white transition-colors duration-200">
                         {modalContent.fullname}
                       </h2>
-                      <p className="text-gray-600 mt-1">{t(modalContent.title)}</p>
+                      <p className="text-gray-600 dark:text-gray-300 mt-1 transition-colors duration-200">{t(modalContent.title)}</p>
                     </div>
 
                     <div className="space-y-4">
                       {modalContent.email && (
-                        <div className="flex items-center space-x-3 text-gray-700">
+                        <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition-colors duration-200">
                           <Mail className="text-blue-400" size={20} />
                           <a
                             href={`mailto:${modalContent.email}`}
-                            className="hover:text-blue-500"
+                            className="hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
                           >
                             {modalContent.email}
                           </a>
@@ -304,11 +304,11 @@ export default function Structure() {
                       )}
 
                       {modalContent.phone && (
-                        <div className="flex items-center space-x-3 text-gray-700">
+                        <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition-colors duration-200">
                           <Phone className="text-blue-400" size={20} />
                           <a
                             href={`tel:${modalContent.phone}`}
-                            className="hover:text-blue-500"
+                            className="hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
                           >
                             {modalContent.phone}
                           </a>
@@ -316,7 +316,7 @@ export default function Structure() {
                       )}
 
                       {modalContent.time && (
-                        <div className="flex items-center space-x-3 text-gray-700">
+                        <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition-colors duration-200">
                           <Clock className="text-blue-400" size={20} />
                           <span>{modalContent.time}</span>
                         </div>
@@ -332,7 +332,7 @@ export default function Structure() {
 
       <div className="mx-[100px]">
         <div
-          className="max-w-[1500px] mx-auto justify-center mb-[50px] flex bg-white overflow-auto mt-[60px] cursor-grab "
+          className="max-w-[1500px] mx-auto justify-center mb-[50px] flex bg-white dark:bg-gray-900 overflow-auto mt-[60px] cursor-grab transition-colors duration-200"
         >
           <TransformWrapper
             initialScale={1}
@@ -349,7 +349,7 @@ export default function Structure() {
                           <div
                             key={index}
                             onClick={() => handleDivClick(item)}
-                            className="px-6 py-2 rounded-md border border-blue-500 bg-white text-center z-10 cursor-pointer hover:bg-blue-50"
+                            className={`px-6 py-2 rounded-md border border-blue-500 bg-white dark:bg-gray-900 dark:border-blue-400 text-center z-10 cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white transition-colors duration-200`}
                           >
                             {t(item.title)}
                           </div>
@@ -378,7 +378,7 @@ export default function Structure() {
                               className={`p-4 ${
                                 item.isHeader
                                   ? "bg-blue-500 text-white hover:bg-blue-600"
-                                  : "border border-blue-500 hover:bg-blue-50"
+                                  : "border border-blue-500 dark:border-blue-400 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white transition-colors duration-200"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
                               {t(item.title)}
@@ -394,7 +394,7 @@ export default function Structure() {
                               className={`p-4 ${
                                 item.isHeader
                                   ? "bg-blue-500 text-white hover:bg-blue-600"
-                                  : "border border-blue-500 hover:bg-blue-50"
+                                  : "border border-blue-500 dark:border-blue-400 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white transition-colors duration-200"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
                               {t(item.title)}
@@ -410,10 +410,10 @@ export default function Structure() {
                               className={`p-4 ${
                                 item.isHeader
                                   ? "bg-blue-500 text-white hover:bg-blue-600"
-                                  : "border border-blue-500 hover:bg-blue-50"
+                                  : "border border-blue-500 dark:border-blue-400 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white transition-colors duration-200"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
-                              dangerouslySetInnerHTML={{ __html: t(item.title) }}
                             >
+                              {t(item.title)}
                             </div>
                           ))}
                         </div>
@@ -426,7 +426,7 @@ export default function Structure() {
                               className={`p-4 ${
                                 item.isHeader
                                   ? "bg-blue-500 text-white hover:bg-blue-600"
-                                  : "border border-blue-500 hover:bg-blue-50"
+                                  : "border border-blue-500 dark:border-blue-400 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white transition-colors duration-200"
                               } bg-white rounded-md text-center text-sm min-h-[80px] flex items-center justify-center cursor-pointer`}
                             >
                               {t(item.title)}

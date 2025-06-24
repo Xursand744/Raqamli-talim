@@ -124,7 +124,7 @@ const Leadership = () => {
           whileHover={{ y: -5 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="bg-white rounded-lg overflow-hidden mb-8 border border-[#ccc] shadow-xl mt-[30px]">
+          <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden mb-8 border border-[#ccc] dark:border-gray-700 shadow-xl mt-[30px] transition-colors duration-200">
             <div className="flex flex-col md:flex-row h-full">
               <div className="w-1/3 relative min-h-[400px] main-director-image-wrapper">
                 <img
@@ -133,22 +133,22 @@ const Leadership = () => {
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="md:w-2/3 p-6 bg-white">
+              <div className="md:w-2/3 p-6 bg-white dark:bg-gray-900 transition-colors duration-200">
                 <div className="flex flex-col">
-                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
                     {mainProfile.name}
                   </h1>
-                  <h2 className="text-xl text-gray-600 mb-4">
+                  <h2 className="text-xl text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
                     {t(mainProfile.title) || mainProfile.title}
                   </h2>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-gray-700 dark:text-gray-200 mb-2 transition-colors duration-200">
                     {isExpanded
                       ? mainProfile.fullDescription
                       : mainProfile.description}
                   </p>
                   <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-blue-600 hover:text-blue-800 transition-colors duration-200 self-start mb-4"
+                    className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors duration-200 self-start mb-4"
                   >
                     {isExpanded ? t("common.collapse") : t("more")}
                   </button>
@@ -173,7 +173,7 @@ const Leadership = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white rounded-lg overflow-hidden border border-[#ccc] shadow-xl h-[520px]">
+              <div className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden border border-[#ccc] dark:border-gray-700 shadow-xl h-[520px] transition-colors duration-200">
                 <div className="aspect-w-4 aspect-h-3 max-h-[300px] min-h-[280px] overflow-hidden leadership-card-image-wrapper">
                   <img
                     src={member.image || "/placeholder.svg"}
@@ -181,11 +181,11 @@ const Leadership = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-6 bg-white">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                <div className="p-6 bg-white dark:bg-gray-900 transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 mb-4">{t(member.title)}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">{t(member.title)}</p>
                   <ContactInfo
                     email={member.email}
                     phone={member.phone}

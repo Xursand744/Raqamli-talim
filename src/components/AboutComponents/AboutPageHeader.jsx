@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-import HomeIcon from "../../assets/home-icon.svg";
 import { useTranslation } from "react-i18next";
 import { aboutFilters } from "../../utils";
 import PropTypes from "prop-types";
 
-function AboutPageHeader({ title, breadCrumps = [] }) {
+function AboutPageHeader({ title }) {
   const { t } = useTranslation("global");
 
   return (
@@ -55,7 +54,7 @@ function AboutPageHeader({ title, breadCrumps = [] }) {
             <NavLink
               key={index}
               to={`${item.link}`}
-              className="py-[8px] px-[32px] rounded-[27px] border-[1px] border-[#B7B7B7] bg-[#F8F8F8] about-filter-link hover:bg-blue-50 hover:border-blue-500 transition-colors"
+              className="py-[8px] px-[32px] rounded-[27px] border-[1px] border-[#B7B7B7] dark:border-gray-600 bg-[#F8F8F8] dark:bg-gray-800 about-filter-link hover:bg-blue-50 dark:hover:bg-blue-700 hover:border-blue-500 dark:hover:border-blue-400 text-gray-700 dark:text-white transition-colors duration-200"
               aria-label={t("about.filters.item", { name: t(`about.filters.${index}`) })}
             >
               {t(`about.filters.${index}`)}
@@ -73,12 +72,6 @@ function AboutPageHeader({ title, breadCrumps = [] }) {
 
 AboutPageHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  breadCrumps: PropTypes.arrayOf(
-    PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    })
-  )
 };
 
 export default AboutPageHeader;

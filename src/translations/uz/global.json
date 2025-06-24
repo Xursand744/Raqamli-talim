@@ -542,7 +542,7 @@
   },
   "messages": {
     "loading": "Yuklanmoqda...",
-    "testMode": "⚠️ E'tibor! Bu sayt sinov rejimida ishlaydi. Ma'lumotlar eskirishi mumkin."
+    "testMode": "Diqqat! Bu sayt test rejimida ishlamoqda. Ma'lumotlar eskirishi mumkin."
   },
   "carousel": {
     "title": "Raqamli ta'lim loyihalari"

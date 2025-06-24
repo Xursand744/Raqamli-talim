@@ -48,7 +48,7 @@ const Contact = ({ title }) => {
         <section className="py-[180px]">
           <div className="max-w-[1230px] mx-auto">
             <div className="flex justify-center">
-              <h1 className="pb-[40px] font-bold text-[44px] leading-[64px] text-[#222222]">
+              <h1 className="pb-[40px] font-bold text-[44px] leading-[64px] text-[#222222] dark:text-white transition-colors duration-200">
                 {title || t("contact.title")}
               </h1>
             </div>
@@ -56,11 +56,11 @@ const Contact = ({ title }) => {
             <div className="flex justify-center items-center">
               <div>
                 <div>
-                  <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
+                  <h1 className="text-[16px] text-[#222222] dark:text-gray-200 mb-[8px] mt-[40px] transition-colors duration-200">
                     {t("contact.nameLabel")}
                   </h1>
                   <input
-                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
+                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] dark:border-gray-700 rounded-[8px] focus:border-[#2675EB] dark:focus:border-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors duration-200"
                     type="text"
                     placeholder={t("contact.namePlaceholder")}
                     onChange={(e) => setName(e.target.value)}
@@ -69,11 +69,11 @@ const Contact = ({ title }) => {
                 </div>
 
                 <div>
-                  <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
+                  <h1 className="text-[16px] text-[#222222] dark:text-gray-200 mb-[8px] mt-[40px] transition-colors duration-200">
                     {t("contact.phoneLabel")}
                   </h1>
                   <input
-                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
+                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] dark:border-gray-700 rounded-[8px] focus:border-[#2675EB] dark:focus:border-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors duration-200"
                     type="text"
                     placeholder={!isFocused ? t("contact.phonePlaceholder") : ""}
                     value={phone}
@@ -89,11 +89,11 @@ const Contact = ({ title }) => {
                 </div>
 
                 <div>
-                  <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
+                  <h1 className="text-[16px] text-[#222222] dark:text-gray-200 mb-[8px] mt-[40px] transition-colors duration-200">
                     {t("contact.emailLabel")}
                   </h1>
                   <input
-                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
+                    className="w-[300px] md:w-[500px] lg:w-[792px] p-[12px] outline-none border-[1px] border-[#E0E0E0] dark:border-gray-700 rounded-[8px] focus:border-[#2675EB] dark:focus:border-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors duration-200"
                     type="text"
                     placeholder={t("contact.emailPlaceholder")}
                     onChange={(e) => setEmail(e.target.value)}
@@ -102,11 +102,11 @@ const Contact = ({ title }) => {
                 </div>
 
                 <div>
-                  <h1 className="text-[16px] text-[#222222] mb-[8px] mt-[40px]">
+                  <h1 className="text-[16px] text-[#222222] dark:text-gray-200 mb-[8px] mt-[40px] transition-colors duration-200">
                     {t("contact.messageLabel")}
                   </h1>
                   <textarea
-                    className="w-[300px] md:w-[500px] lg:w-[792px] h-[144px] p-[12px] outline-none border-[1px] border-[#E0E0E0] rounded-[8px] focus:border-[#2675EB]"
+                    className="w-[300px] md:w-[500px] lg:w-[792px] h-[144px] p-[12px] outline-none border-[1px] border-[#E0E0E0] dark:border-gray-700 rounded-[8px] focus:border-[#2675EB] dark:focus:border-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 transition-colors duration-200"
                     placeholder={t("contact.messagePlaceholder")}
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
@@ -115,7 +115,7 @@ const Contact = ({ title }) => {
 
                 <div className="pt-[40px] flex justify-center">
                   <button
-                    className="px-[40px] py-[12px] bg-[#2675EB] font-medium text-[20px] text-white rounded-[27px]"
+                    className="px-[40px] py-[12px] bg-[#2675EB] dark:bg-blue-500 hover:bg-[#3b82f6] dark:hover:bg-blue-400 font-medium text-[20px] text-white rounded-[27px] shadow-md dark:shadow-blue-900/40 transition-colors duration-200"
                     onClick={handleSubmit}
                   >
                     {t("contact.submit")}
@@ -133,13 +133,13 @@ const Contact = ({ title }) => {
           onClick={() => setShowModal(false)}
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg animate-[scaleIn_0.3s_ease-in-out]"
+            className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg animate-[scaleIn_0.3s_ease-in-out] transition-colors duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-semibold text-green-600 mb-2">
               {t("contact.successTitle")}
             </h2>
-            <p className="text-gray-600">{t("contact.successText")}</p>
+            <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">{t("contact.successText")}</p>
           </div>
         </div>
       )}

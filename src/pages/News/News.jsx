@@ -80,10 +80,10 @@ function News() {
   };
 
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 min-h-screen transition-colors duration-200">
       <div className="mt-[90px] sm:mt-[60px] lg:mt-[130px] w-full max-w-[1200px] mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <h1 className="text-[#222] text-2xl sm:text-3xl lg:text-[44px] font-bold">
+          <h1 className="text-[#222] dark:text-white text-2xl sm:text-3xl lg:text-[44px] font-bold transition-colors duration-200">
             Yangiliklar
           </h1>
         </div>
@@ -92,10 +92,10 @@ function News() {
           <div className="container mx-auto px-2 sm:px-4 py-8 sm:py-12">
             {error ? (
               <div className="text-center py-8">
-                <p className="text-red-600 mb-4">{error}</p>
+                <p className="text-red-600 dark:text-red-400 mb-4 transition-colors duration-200">{error}</p>
                 <button
                   onClick={handleRetry}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+                  className="px-6 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-full hover:bg-blue-700 dark:hover:bg-blue-400 transition-colors duration-200"
                 >
                   Qaytadan urinib ko'rish
                 </button>

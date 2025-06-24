@@ -222,13 +222,13 @@ const OneMillionUzbekCoders = () => {
 
         <div>
           <div className="max-w-[1230px] mx-auto px-4 py-12 mt-[100px]">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-8">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-gray-900 dark:text-white transition-colors duration-200">
               Dasturga oid qarorlar
             </h2>
 
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
-                <p className="text-gray-800 text-sm sm:text-base">
+                <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base transition-colors duration-200">
                   &quot;Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida
                   davlat boshqaruvini samarali tashkil etish chora-tadbirlari
                   to'g'risida&quot;gi PF-75-son farmoni
@@ -241,7 +241,7 @@ const OneMillionUzbekCoders = () => {
               </div>
 
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
-                <p className="text-gray-800 text-sm sm:text-base">
+                <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base transition-colors duration-200">
                   &quot;Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha,
                   tarmoq va hududlarda raqamli transformatsiya qilish
                   chora-tadbirlari to'g'risida&quot;gi PQ-182-son qarori
@@ -263,14 +263,14 @@ const OneMillionUzbekCoders = () => {
         <div className="max-w-[1230px] mx-auto">
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
-              <h1 className="text-[#222] font-bold text-[40px]">
+              <h1 className="text-[#222] dark:text-white font-bold text-[40px] transition-colors duration-200">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: t("one_million_uzbek_coders_title"),
                   }}
                 />
               </h1>
-              <p className="text-[#222] text-[20px]">
+              <p className="text-[#222] dark:text-gray-200 text-[20px] transition-colors duration-200">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: t("one_million_uzbek_coders_description"),

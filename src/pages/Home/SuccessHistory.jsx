@@ -39,7 +39,7 @@ function SuccessHistory() {
 
   return (
     <div>
-      <h1 className="title mb-[40px]">{t("successHistory.title")}</h1>
+      <h1 className="title mb-[40px] text-gray-900 dark:text-white transition-colors duration-200">{t("successHistory.title")}</h1>
 
       <div className="flex justify-center gap-6 lg:gap-0 lg:justify-between flex-wrap">
         {data.map((item, index) => (

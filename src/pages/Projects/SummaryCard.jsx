@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 function SummaryCard({ totalBalls }) {
   return (
-    <div className="bg-blue-500 text-white rounded-lg shadow-md p-6 flex flex-col h-full">
+    <div className="bg-blue-500 dark:bg-blue-600 text-white rounded-lg shadow-md dark:shadow-gray-900/50 p-6 flex flex-col h-full transition-colors duration-200">
       <div className="flex items-center mb-2">
         <div className="w-8 h-8 rounded-full bg-white text-blue-500 flex items-center justify-center font-bold text-lg">
           <svg
@@ -18,11 +20,15 @@ function SummaryCard({ totalBalls }) {
         </div>
       </div>
       <h3 className="mt-[5px]">
-        Ushbu ko'rsatkichlarning barchasini qo'shib, umumiy ballni olamiz:{" "}
+        Ushbu ko&apos;rsatkichlarning barchasini qo&apos;shib, umumiy ballni olamiz:{" "}
         {totalBalls}
       </h3>
     </div>
   );
 }
+
+SummaryCard.propTypes = {
+  totalBalls: PropTypes.string.isRequired,
+};
 
 export default SummaryCard;
