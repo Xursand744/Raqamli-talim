@@ -52,12 +52,12 @@ CourseCard.propTypes = {
 
 // Courses Section Component
 const CoursesSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 my-8 p-6">
+  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 my-8 p-6 transition-colors duration-200">
     <div className="max-w-3xl mx-auto text-center mb-16">
-      <h2 className="text-4xl font-bold mb-6 text-gray-900">
+      <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
         Yo'nalishlar
       </h2>
-      <p className="text-gray-600 text-lg leading-relaxed">
+      <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
         Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
         uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
         yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
@@ -71,7 +71,7 @@ const CoursesSection = () => (
     </div>
 
     <div className="max-w-3xl mx-auto text-center my-16">
-      <h2 className="text-4xl font-bold mb-6 text-gray-900">
+      <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
         To'garaklar
       </h2>
     </div>
@@ -153,7 +153,7 @@ const MapSection = () => {
   };
 
   return (
-    <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50">
+    <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">
           IT Shaharcha joylashgan hududlar
@@ -187,12 +187,12 @@ const MapSection = () => {
           </div>
         </div>
         {/* Панель */}
-        <div className="flex-1 flex items-center justify-center relative z-10">
-          <div className="bg-white border rounded-xl shadow-lg p-8 max-w-xl w-full" style={{ color: '#043b87', position: 'relative' }}>
+        <div className="flex-1 flex items-center justify-center relative z-10 transition-colors duration-200">
+          <div className="bg-gray-100 dark:bg-gray-800 border rounded-xl shadow-lg p-8 max-w-xl w-full transition-colors duration-200" style={{ color: '#043b87', position: 'relative' }}>
             {selectedRegion ? (
               <>
                 <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion.name}</h4>
-                <div className="mb-4 space-y-2 text-black">
+                <div className="mb-4 space-y-2 text-black dark:text-gray-200 transition-colors duration-200">
                   <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion.address || '-'}</span>
                     {selectedRegion.address && (
                       <a

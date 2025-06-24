@@ -193,7 +193,7 @@ function Universities() {
       <div className="max-w-[1250px] w-full mx-auto">
         <BreadCrumps breadCrumps={breadCrumps} />
 
-        <h1 className="text-[56px] text-center font-bold text-[#222222] mb-8 mt-[80px]">
+        <h1 className="text-[56px] text-center font-bold text-[#222222] dark:text-white mb-8 mt-[80px] transition-colors duration-200">
           Oliy Ta'lim Muassasalari
         </h1>
 
@@ -220,7 +220,7 @@ function Universities() {
       </div>
 
       <div className="max-w-[1250px] mx-auto my-[80px]">
-        <h1 className="text-[56px] text-center font-bold text-[#222222] mb-8 mt-[80px]">
+        <h1 className="text-[56px] text-center font-bold text-[#222222] dark:text-white mb-8 mt-[80px] transition-colors duration-200">
           Universitetlar
         </h1>
 

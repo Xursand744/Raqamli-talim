@@ -12,7 +12,7 @@ function Rate() {
   const { t } = useTranslation("global");
 
   return (
-    <div className="hidden relative bg-[#F0F3FF] mt-[50px] md:mt-[100px] h-[500px] md:flex justify-center items-center flex-col rate-section">
+    <div className="hidden relative bg-[#F0F3FF] dark:bg-gray-800 mt-[50px] md:mt-[100px] h-[500px] md:flex justify-center items-center flex-col rate-section transition-colors duration-200">
       <div className="relative z-40 max-w-[600px] w-full">
         <h1
           className="mb-[80px] text-center text-[44px] font-semibold"

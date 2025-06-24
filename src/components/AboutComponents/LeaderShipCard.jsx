@@ -21,7 +21,7 @@ function LeaderShipCard({ image, fullname, desc, email, number, time }) {
       <div className="p-[10px]">
         <h2 
           id={`leadership-name-${fullname.replace(/\s+/g, '-').toLowerCase()}`}
-          className="text-[#222] text-[20px] font-bold"
+          className="text-[#222] dark:text-white text-[20px] font-bold transition-colors duration-200"
         >
           {fullname}
         </h2>

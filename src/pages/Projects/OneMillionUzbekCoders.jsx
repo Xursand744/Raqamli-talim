@@ -108,7 +108,7 @@ const OneMillionUzbekCoders = () => {
     <div className="overflow-hidden">
       <div className="max-w-[1230px] mx-auto">
         <div className="flex justify-center mt-[100px]">
-          <h1 className="font-bold text-[56px] text-[#222222] mb-[40px] w-[792px] text-center">
+          <h1 className="font-bold text-[56px] text-[#222222] dark:text-white mb-[40px] w-[792px] text-center transition-colors duration-200">
             Bir million dasturchi loyihasi
           </h1>
         </div>
@@ -195,7 +195,7 @@ const OneMillionUzbekCoders = () => {
           <h1 className="font-extrabold text-[40px] py-[16px] text-[#2675EB] leading-[48px]">
             1,000,000+
           </h1>
-          <p className="font-medium text-[16px] text-[#222222]">
+          <p className="font-medium text-[16px] text-[#222222] dark:text-gray-200 transition-colors duration-200">
             Ro'yxatdan o'tganlar soni
           </p>
         </div>
@@ -204,7 +204,7 @@ const OneMillionUzbekCoders = () => {
           <h1 className="font-extrabold text-[40px] py-[16px] text-[#2675EB] leading-[48px]">
             450,000+
           </h1>
-          <p className="font-medium text-[16px] text-[#222222]">
+          <p className="font-medium text-[16px] text-[#222222] dark:text-gray-200 transition-colors duration-200">
             Sertifikat olganlar
           </p>
         </div>
@@ -259,7 +259,7 @@ const OneMillionUzbekCoders = () => {
 
       <Contact />
 
-      <div className="bg-[#F8F8F8] w-full py-[40px] project-section-bottom">
+      <div className="bg-[#F8F8F8] dark:bg-gray-800 w-full py-[40px] project-section-bottom">
         <div className="max-w-[1230px] mx-auto">
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
