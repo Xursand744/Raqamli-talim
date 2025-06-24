@@ -86,12 +86,12 @@ function StudyCenterFilter() {
       </header>
 
       <div className="max-w-[1400px] mx-auto px-4 py-6">
-        <h2 className="text-lg font-medium mb-4">
+        <h2 className="text-lg font-medium mb-4 text-gray-900 dark:text-white transition-colors duration-200">
           {t("center_count", { count: filteredCenters.length })}
         </h2>
 
         {isLoading ? (
-          <p className="text-center">{t("common.loading")}</p>
+          <p className="text-center text-gray-700 dark:text-gray-300 transition-colors duration-200">{t("common.loading")}</p>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             {filteredCenters.map((center) => (
@@ -139,7 +139,7 @@ function StudyCenterFilter() {
         {/* Pagination */}
         <div className="flex justify-center items-center mt-8 space-x-2">
           <button
-            className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+            className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
             aria-label={t("pagination.previous")}
@@ -152,13 +152,13 @@ function StudyCenterFilter() {
             {currentPage > 3 && (
               <>
                 <button
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                   onClick={() => setCurrentPage(1)}
                   aria-label={t("pagination.firstPage")}
                 >
                   1
                 </button>
-                {currentPage > 4 && <span className="text-gray-400">...</span>}
+                {currentPage > 4 && <span className="text-gray-400 dark:text-gray-500">...</span>}
               </>
             )}
 
@@ -180,7 +180,7 @@ function StudyCenterFilter() {
                   className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-200 ${
                     currentPage === page
                       ? "bg-blue-600 text-white"
-                      : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
+                      : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700"
                   }`}
                   onClick={() => setCurrentPage(page)}
                   aria-label={t("pagination.page", { page })}
@@ -193,9 +193,9 @@ function StudyCenterFilter() {
 
             {currentPage < totalPages - 2 && (
               <>
-                {currentPage < totalPages - 3 && <span className="text-gray-400">...</span>}
+                {currentPage < totalPages - 3 && <span className="text-gray-400 dark:text-gray-500">...</span>}
                 <button
-                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                  className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                   onClick={() => setCurrentPage(totalPages)}
                   aria-label={t("pagination.lastPage")}
                 >
@@ -206,7 +206,7 @@ function StudyCenterFilter() {
           </div>
 
           <button
-            className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+            className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
             aria-label={t("pagination.next")}

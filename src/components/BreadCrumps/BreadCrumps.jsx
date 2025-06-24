@@ -9,7 +9,7 @@ const BreadCrumbs = ({ breadCrumps = [] }) => {
   return (
     <nav className="mt-[100px] w-full" aria-label={t("breadcrumbs.ariaLabel")}>
       <div className="breadcrumbs">
-        <div className="container flex items-center gap-[10px]">
+        <div className="container flex items-center gap-[10px] pt-[1em]">
           <NavLink 
             className="flex items-center gap-[10px]" 
             to="/"

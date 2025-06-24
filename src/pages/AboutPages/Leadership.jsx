@@ -70,32 +70,32 @@ const Leadership = () => {
         !mainProfile ? "flex-col" : "justify-between"
       } space-y-2 mt-4`}
     >
-      <div className="flex items-center gap-2 text-gray-600">
+      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 transition-colors duration-200">
         <img src={emailIcon} alt="Email icon" />
         {email ? (
-          <a href={`mailto:${email}`} className="text-[14px] hover:text-blue-600">
+          <a href={`mailto:${email}`} className="text-[14px] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
             {email}
           </a>
         ) : (
-          <span className="text-[14px] text-gray-400">{t("noEmail")}</span>
+          <span className="text-[14px] text-gray-400 dark:text-gray-500 transition-colors duration-200">{t("noEmail")}</span>
         )}
       </div>
-      <div className="flex items-center gap-2 text-gray-600">
+      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 transition-colors duration-200">
         <img src={phnoeIcon} alt="Phone icon" />
         {phone ? (
-          <a href={`tel:${phone}`} className="text-[14px] hover:text-blue-600">
+          <a href={`tel:${phone}`} className="text-[14px] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
             {phone}
           </a>
         ) : (
-          <span className="text-[14px] text-gray-400">{t("noPhone")}</span>
+          <span className="text-[14px] text-gray-400 dark:text-gray-500 transition-colors duration-200">{t("noPhone")}</span>
         )}
       </div>
-      <div className="flex items-center gap-2 text-gray-600">
+      <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 transition-colors duration-200">
         <img src={clockIcon} alt="Clock icon" />
         {hours ? (
-          <span className="text-[14px]">{t(hours)}</span>
+          <span className="text-[14px] transition-colors duration-200">{t(hours)}</span>
         ) : (
-          <span className="text-[14px] text-gray-400">{t("noHours")}</span>
+          <span className="text-[14px] text-gray-400 dark:text-gray-500 transition-colors duration-200">{t("noHours")}</span>
         )}
       </div>
     </div>

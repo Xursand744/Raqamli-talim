@@ -132,13 +132,13 @@ export default function TipsFilter() {
               {currentPage > 3 && (
                 <>
                   <button
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                     onClick={() => setCurrentPage(1)}
                     aria-label={t("pagination.firstPage")}
                   >
                     1
                   </button>
-                  {currentPage > 4 && <span className="text-gray-400">...</span>}
+                  {currentPage > 4 && <span className="text-gray-400 dark:text-gray-500">...</span>}
                 </>
               )}
 
@@ -160,7 +160,7 @@ export default function TipsFilter() {
                     className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors duration-200 ${
                       currentPage === page
                         ? "bg-blue-600 text-white"
-                        : "bg-white text-gray-600 hover:bg-blue-50 border border-blue-200"
+                        : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700"
                     }`}
                     onClick={() => setCurrentPage(page)}
                     aria-label={t("pagination.page", { page })}
@@ -173,9 +173,9 @@ export default function TipsFilter() {
 
               {currentPage < totalPages - 2 && (
                 <>
-                  {currentPage < totalPages - 3 && <span className="text-gray-400">...</span>}
+                  {currentPage < totalPages - 3 && <span className="text-gray-400 dark:text-gray-500">...</span>}
                   <button
-                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white text-gray-600 hover:bg-blue-50 border border-blue-200 transition-colors duration-200"
+                    className="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-blue-200 dark:border-blue-700 transition-colors duration-200"
                     onClick={() => setCurrentPage(totalPages)}
                     aria-label={t("pagination.lastPage")}
                   >
@@ -186,7 +186,7 @@ export default function TipsFilter() {
             </div>
 
             <button
-              className="px-4 py-2 bg-white text-blue-600 rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
+              className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-lg border border-blue-200 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 disabled:opacity-50 disabled:hover:bg-white flex items-center space-x-1"
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
               aria-label={t("pagination.next")}

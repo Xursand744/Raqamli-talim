@@ -6,7 +6,7 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
 
   return (
     <article 
-      className="max-w-[382px] w-full mb-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]"
+      className="max-w-[382px] w-full mb-[20px] rounded-[12px] border-[1px] border-[#E0E0E0] dark:border-gray-700 transition-colors duration-200"
       aria-labelledby={`department-name-${idx}`}
     >
       <div>
@@ -23,11 +23,11 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
       <div className="p-[16px] flex flex-col gap-[12px]">
         <h2 
           id={`department-name-${idx}`}
-          className="text-[#222222] text-[24px] font-bold"
+          className="text-[#222222] dark:text-white text-[24px] font-bold transition-colors duration-200"
         >
           {t(`${fullname}`)}
         </h2>
-        <p>{t(`${position}`)}</p>
+        <p className="text-gray-700 dark:text-gray-300 transition-colors duration-200">{t(`${position}`)}</p>
         <div>
           <p className="flex gap-[8px] items-center">
             <svg
@@ -47,7 +47,7 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
             </svg>
             <a 
               href={`mailto:${email}`}
-              className="hover:text-blue-600 transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               aria-label={t('about.department.emailAriaLabel', { name: fullname })}
             >
               {email}
@@ -71,7 +71,7 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
             </svg>
             <a 
               href={`tel:${number}`}
-              className="hover:text-blue-600 transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               aria-label={t('about.department.phoneAriaLabel', { name: fullname })}
             >
               {number}
