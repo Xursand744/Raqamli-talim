@@ -8,7 +8,7 @@ import xorazmiy from "./assets/images/projects/xorazmiy_1.jpg";
 import CarouselImage from "./assets/carousel.jpg";
 import coding from "./assets/images/projects/coder_1.jpg";
 import talent from "./assets/images/projects/talent_1.jpg";
-import istedod from "./assets/projects/istedod.png";
+import istedod from "./assets/projects/istedod.jpg";
 import tot from "./assets/images/projects/5.jpg";
 import job from "./assets/images/projects/6.jpg";
 import aca from "./assets/images/projects/8.jpg";
