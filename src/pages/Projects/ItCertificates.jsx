@@ -3,7 +3,7 @@ import { ChevronRight } from "react-feather";
 import PropTypes from "prop-types";
 import { rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
-import CarouselImage from "../../assets/projects/istedod2.png";
+import CarouselImage from "../../assets/projects/istedod2.jpg";
 import {
   Document,
   MoneyBag,

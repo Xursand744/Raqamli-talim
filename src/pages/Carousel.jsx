@@ -7,7 +7,7 @@ import talent from "../assets/images/projects/talent_1.jpg";
 import coding from "../assets/images/projects/coder_1.jpg";
 import tot from "../assets/images/projects/5.jpg";
 import api from "../assets/images/projects/8.jpg";
-import istedod from "../assets/projects/istedod.png";
+import istedod from "../assets/projects/istedod.jpg";
 import olimpiads from "../assets/projects/olimpiads.png";
 import { useTranslation } from "react-i18next";
 // Import Swiper styles
