@@ -8,17 +8,17 @@ const Breadcrumb = ({ fullName }) => {
   const { t } = useTranslation("global");
   
   return (
-    <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-      <NavLink to="/" className="hover:text-gray-900 flex items-center gap-[10px]">
+    <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6 transition-colors duration-200">
+      <NavLink to="/" className="hover:text-gray-900 dark:hover:text-gray-100 flex items-center gap-[10px] transition-colors duration-200">
         <img src={HomeIcon} alt="" />
         {t("breadcrumbs.home")}
       </NavLink>
       <ChevronRight size={16} />
-      <NavLink to="/" className="hover:text-gray-900">
+      <NavLink to="/" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">
         {t("successHistory.title")}
       </NavLink>
       <ChevronRight size={16} />
-      <span className="text-gray-900">{fullName}</span>
+      <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200">{fullName}</span>
     </div>
   );
 };
@@ -29,11 +29,11 @@ Breadcrumb.propTypes = {
 
 const VideoSection = ({ videoSrc, title }) => (
   <section className="mb-16">
-    <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+    <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
       {title}
     </h2>
     <div className="max-w-4xl mx-auto">
-      <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-200 border border-gray-200 dark:border-gray-600">
         <video 
           className="w-full aspect-video rounded-lg mb-4"
           controls
@@ -42,7 +42,7 @@ const VideoSection = ({ videoSrc, title }) => (
           <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-gray-700 text-sm text-center">Muvaffaqiyat tarixi haqida video material</p>
+        <p className="text-gray-700 dark:text-gray-300 text-sm text-center transition-colors duration-200">Muvaffaqiyat tarixi haqida video material</p>
       </div>
     </div>
   </section>
@@ -65,11 +65,11 @@ export default function SuccessStoryDetail() {
       image: "/src/assets/success-history-2.jpg",
       videoSrc: "/src/assets/videos/5.mp4",
       content: [
-        "Zarnigor Raximova Niderlandiyaning Eyndxoven shahrida 2024-yil 21–27-iyul kunlari bo'lib o'tgan nufuzli olimpiadada Yevropa qizlar olimpiadasida (EGOI) O'zbekiston terma jamoasi safida ishtirok etdi.",
-        "57 davlatdan 200 ga yaqin vakil ishtirok etgan mazkur nufuzli musobaqada O'zbekiston jamoasidan Zarnigor Raximova 329 ball bilan bronza medalini qo'lga kiritdi.",
-        "Zarnigor Buxoro viloyati Kogon tumani 12-umumta'lim maktabi bitiruvchisi hisoblanadi.",
-        "Shunga ko'ra, Zarnigor Raximova Xalqaro IT olimpiada sovrindori sifatida Amity universiteti taʼlim granti bilan taqdirlandi.",
-        "Amity universiteti Raximova Zarnigorni \"Eng yaxshi dasturchi\" tanlovida erishgan ajoyib muvaffaqiyati, uni dasturlashdagi ajoyib mahorati va innovatsion yondashuvini e'tirof etib, \"Eng omadli dasturchi\" nominatsiyasi bilan taqdirladi."
+        "Zarnigor Raximova Niderlandiyaning Eyndxoven shahrida 2024-yil 21–27-iyul kunlari bo&apos;lib o&apos;tgan nufuzli olimpiadada Yevropa qizlar olimpiadasida (EGOI) O&apos;zbekiston terma jamoasi safida ishtirok etdi.",
+        "57 davlatdan 200 ga yaqin vakil ishtirok etgan mazkur nufuzli musobaqada O&apos;zbekiston jamoasidan Zarnigor Raximova 329 ball bilan bronza medalini qo&apos;lga kiritdi.",
+        "Zarnigor Buxoro viloyati Kogon tumani 12-umumta&apos;lim maktabi bitiruvchisi hisoblanadi.",
+        "Shunga ko&apos;ra, Zarnigor Raximova Xalqaro IT olimpiada sovrindori sifatida Amity universiteti taʼlim granti bilan taqdirlandi.",
+        "Amity universiteti Raximova Zarnigorni &quot;Eng yaxshi dasturchi&quot; tanlovida erishgan ajoyib muvaffaqiyati, uni dasturlashdagi ajoyib mahorati va innovatsion yondashuvini e&apos;tirof etib, &quot;Eng omadli dasturchi&quot; nominatsiyasi bilan taqdirladi."
       ]
     },
     "abror-juraev": {
@@ -78,9 +78,9 @@ export default function SuccessStoryDetail() {
       image: "/src/assets/success-history-1.png",
       videoSrc: "/src/assets/videos/5.mp4",
       content: [
-        "Abror Juraev PDP Academy bitiruvchisi bo'lib, o'qish davrida katta dasturchi bo'lishga erishdi.",
-        "U frontend texnologiyalari bo'yicha chuqur bilimga ega bo'lib, joriy loyihalarda faol ishlaydi.",
-        "Andijon viloyatida joylashgan bo'lib, mahalliy IT hamjamiyatiga katta hissa qo'shmoqda."
+        "Abror Juraev PDP Academy bitiruvchisi bo&apos;lib, o&apos;qish davrida katta dasturchi bo&apos;lishga erishdi.",
+        "U frontend texnologiyalari bo&apos;yicha chuqur bilimga ega bo&apos;lib, joriy loyihalarda faol ishlaydi.",
+        "Andijon viloyatida joylashgan bo&apos;lib, mahalliy IT hamjamiyatiga katta hissa qo&apos;shmoqda."
       ]
     },
     "mohira-tulaganova": {
@@ -89,11 +89,11 @@ export default function SuccessStoryDetail() {
       image: "/src/assets/success-history-2.jpg",
       videoSrc: "/src/assets/videos/5.mp4",
       content: [
-        "Zarnigor Raximova Niderlandiyaning Eyndxoven shahrida 2024-yil 21–27-iyul kunlari bo'lib o'tgan nufuzli olimpiadada Yevropa qizlar olimpiadasida (EGOI) O'zbekiston terma jamoasi safida ishtirok etdi.",
-        "57 davlatdan 200 ga yaqin vakil ishtirok etgan mazkur nufuzli musobaqada O'zbekiston jamoasidan Zarnigor Raximova 329 ball bilan bronza medalini qo'lga kiritdi.",
-        "Zarnigor Buxoro viloyati Kogon tumani 12-umumta'lim maktabi bitiruvchisi hisoblanadi.",
-        "Shunga ko'ra, Zarnigor Raximova Xalqaro IT olimpiada sovrindori sifatida Amity universiteti taʼlim granti bilan taqdirlandi.",
-        "Amity universiteti Raximova Zarnigorni \"Eng yaxshi dasturchi\" tanlovida erishgan ajoyib muvaffaqiyati, uni dasturlashdagi ajoyib mahorati va innovatsion yondashuvini e'tirof etib, \"Eng omadli dasturchi\" nominatsiyasi bilan taqdirladi."
+        "Zarnigor Raximova Niderlandiyaning Eyndxoven shahrida 2024-yil 21–27-iyul kunlari bo&apos;lib o&apos;tgan nufuzli olimpiadada Yevropa qizlar olimpiadasida (EGOI) O&apos;zbekiston terma jamoasi safida ishtirok etdi.",
+        "57 davlatdan 200 ga yaqin vakil ishtirok etgan mazkur nufuzli musobaqada O&apos;zbekiston jamoasidan Zarnigor Raximova 329 ball bilan bronza medalini qo&apos;lga kiritdi.",
+        "Zarnigor Buxoro viloyati Kogon tumani 12-umumta&apos;lim maktabi bitiruvchisi hisoblanadi.",
+        "Shunga ko&apos;ra, Zarnigor Raximova Xalqaro IT olimpiada sovrindori sifatida Amity universiteti taʼlim granti bilan taqdirlandi.",
+        "Amity universiteti Raximova Zarnigorni &quot;Eng yaxshi dasturchi&quot; tanlovida erishgan ajoyib muvaffaqiyati, uni dasturlashdagi ajoyib mahorati va innovatsion yondashuvini e&apos;tirof etib, &quot;Eng omadli dasturchi&quot; nominatsiyasi bilan taqdirladi."
       ]
     },
     "sevinch-mukimova": {
@@ -102,9 +102,9 @@ export default function SuccessStoryDetail() {
       image: "/src/assets/success-history-3.jpg",
       videoSrc: "/src/assets/videos/5.mp4",
       content: [
-        "Sevinch Mukimova Alloma o'quv markazi bitiruvchisi bo'lib, dizayn sohasida muvaffaqiyat qozondi.",
-        "Toshkent shahrida joylashgan bo'lib, UI/UX dizayn bo'yicha mutaxassis.",
-        "O'z ijodiy qobiliyatlarini rivojlantirib, zamonaviy dizayn trendlarini o'rganmoqda."
+        "Sevinch Mukimova Alloma o&apos;quv markazi bitiruvchisi bo&apos;lib, dizayn sohasida muvaffaqiyat qozondi.",
+        "Toshkent shahrida joylashgan bo&apos;lib, UI/UX dizayn bo&apos;yicha mutaxassis.",
+        "O&apos;z ijodiy qobiliyatlarini rivojlantirib, zamonaviy dizayn trendlarini o&apos;rganmoqda."
       ]
     }
   };
@@ -115,10 +115,10 @@ export default function SuccessStoryDetail() {
     return (
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="text-center py-20">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-200">
             {t("errors.storyNotFound")}
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">
             {t("errors.storyNotFoundDesc")}
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function SuccessStoryDetail() {
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumb fullName={story.fullName} />
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
           {story.fullName}
         </h1>
 
@@ -145,7 +145,7 @@ export default function SuccessStoryDetail() {
 
         <div className="mb-12">
           {story.content.map((paragraph, index) => (
-            <p key={index} className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p key={index} className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-200">
               {paragraph}
             </p>
           ))}
