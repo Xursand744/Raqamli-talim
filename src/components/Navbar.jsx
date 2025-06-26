@@ -270,7 +270,6 @@ export default function Navbar() {
         aria-live="polite"
       >
         {t("messages.testMode")}
-        {i18n.language}
       </div>
       <header 
         className="py-[18px] z-[9999] text-[15px] fixed top-[36px] w-full justify-between items-center flex-center bg-white dark:bg-gray-900 transition-colors duration-200"
