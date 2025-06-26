@@ -12,7 +12,7 @@ function SuccessHistoryItem({ fullname, desc, image, id, clickable = true }) {
 
   return (
     <div 
-      className={`max-w-[384px] rounded-lg overflow-hidden shadow-lg dark:shadow-gray-900/50 transition-shadow duration-300 ${
+      className={`max-w-[384px] rounded-lg overflow-hidden shadow-lg dark:shadow-gray-900/50 transition-shadow duration-300 dark:bg-gray-800 ${
         clickable ? 'cursor-pointer hover:shadow-xl dark:hover:shadow-gray-900/70' : 'cursor-default'
       }`}
       onClick={handleClick}
