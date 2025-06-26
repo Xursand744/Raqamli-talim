@@ -2,7 +2,7 @@ import "../../index.css";
 import { ChevronRight } from "react-feather";
 import PropTypes from "prop-types";
 import CarouselImage from "../../assets/images/projects/7.jpg";
-import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
+import { rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import {
   Document,
@@ -13,28 +13,27 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
-import { useNavigate } from "react-router-dom";
 
 const Breadcrumb = () => {
   return (
-    <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-      <a href="/" className="hover:text-gray-900 flex items-center gap-[10px]">
+    <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6 transition-colors duration-200">
+      <a href="/" className="hover:text-gray-900 dark:hover:text-gray-100 flex items-center gap-[10px] transition-colors duration-200">
         <img src={HomeIcon} alt="" />
         Bosh sahifa
       </a>
       <ChevronRight size={16} />
-      <a href="/projects" className="hover:text-gray-900">
+      <a href="/projects" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">
         Loyihalar
       </a>
       <ChevronRight size={16} />
-      <span className="text-gray-900">ICT4Girls - Sport dasturlash olimpiadasi</span>
+      <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200">ICT4Girls - Sport dasturlash olimpiadasi</span>
     </div>
   );
 };
 
 const DocumentCard = ({ children }) => (
-  <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
-    <p className="text-gray-700">{children}</p>
+  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-200 border border-gray-200 dark:border-gray-600">
+    <p className="text-gray-700 dark:text-gray-300 transition-colors duration-200">{children}</p>
     <div className="flex justify-end mt-[20px]">
       <img src={rightIcon} alt="Toggle" className="w-8 h-8" />
     </div>
@@ -48,18 +47,18 @@ DocumentCard.propTypes = {
 const MetricsCard = ({ icon, value, label, isActive }) => (
   <div
     className={`${
-      isActive ? "bg-[#2675EB]" : "bg-white"
-    } rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
+      isActive ? "bg-[#2675EB]" : "bg-white dark:bg-gray-800"
+    } rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 dark:border-gray-600`}
   >
     <img src={icon || "/placeholder.svg"} alt="" className="w-[48px] mb-4" />
     <div
       className={`${
-        isActive ? "text-[#fff]" : "text-[#2563EB]"
-      } text-[40px] font-bold mb-2`}
+        isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"
+      } text-[40px] font-bold mb-2 transition-colors duration-200`}
     >
       {value.toLocaleString()}
     </div>
-    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB]"} text-sm`}>
+    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"} text-sm transition-colors duration-200`}>
       {label}
     </div>
   </div>
@@ -77,18 +76,18 @@ MetricsCard.defaultProps = {
 };
 
 const StageCard = ({ title, description, icon, participants }) => (
-  <div className="bg-gradient-to-br from-pink-50 to-purple-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-pink-200">
+  <div className="bg-gradient-to-br from-pink-50 to-purple-100 dark:from-pink-900/20 dark:to-purple-900/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-pink-200 dark:border-pink-700/30">
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0">
-        <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center">
+        <div className="w-12 h-12 bg-pink-600 dark:bg-pink-500 rounded-lg flex items-center justify-center">
           <span className="text-white text-xl font-bold">{icon}</span>
         </div>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm mb-3">{description}</p>
-        <div className="bg-pink-100 rounded-lg p-3">
-          <p className="text-pink-800 text-sm font-medium">{participants}</p>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-200">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 transition-colors duration-200">{description}</p>
+        <div className="bg-pink-100 dark:bg-pink-900/30 rounded-lg p-3">
+          <p className="text-pink-800 dark:text-pink-200 text-sm font-medium transition-colors duration-200">{participants}</p>
         </div>
       </div>
     </div>
@@ -103,8 +102,6 @@ StageCard.propTypes = {
 };
 
 export default function Ict() {
-  const navigate = useNavigate();
-
   const metrics = [
     {
       icon: UsersGroup,
@@ -129,12 +126,12 @@ export default function Ict() {
     {
       icon: UserDelete,
       value: 0,
-      label: "G'oliblar",
+      label: "G&apos;oliblar",
     },
     {
       icon: MoneyBag,
       value: 100,
-      label: "Sovg'alar",
+      label: "Sovg&apos;alar",
     },
     {
       icon: Document,
@@ -146,21 +143,21 @@ export default function Ict() {
   const stages = [
     {
       title: "Hududiy bosqich",
-      description: "Barcha hududlar – 12 viloyat, Qoraqalpog'iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to'playdi.",
+      description: "Barcha hududlar – 12 viloyat, Qoraqalpog&apos;iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to&apos;playdi.",
       icon: "🏆",
-      participants: "12 viloyat + Qoraqalpog'iston + Toshkent"
+      participants: "12 viloyat + Qoraqalpog&apos;iston + Toshkent"
     },
     {
       title: "Respublika bosqichi",
-      description: "Hududiy bosqichda eng yuqori natija ko'rsatgan qizlar Respublika bosqichiga yo'llanma qo'lga kiritadi.",
+      description: "Hududiy bosqichda eng yuqori natija ko&apos;rsatgan qizlar Respublika bosqichiga yo&apos;llanma qo&apos;lga kiritadi.",
       icon: "👑",
       participants: "Eng yaxshi natijalar"
     },
     {
-      title: "G'oliblar",
-      description: "Respublika bosqichida eng yuqori natija ko'rsatgan qizlar ICT4Girls olimpiadasi g'olibi deb topilib, qimmatbaho sovg'alar bilan taqdirlanadi.",
+      title: "G&apos;oliblar",
+      description: "Respublika bosqichida eng yuqori natija ko&apos;rsatgan qizlar ICT4Girls olimpiadasi g&apos;olibi deb topilib, qimmatbaho sovg&apos;alar bilan taqdirlanadi.",
       icon: "💎",
-      participants: "Qimmatbaho sovg'alar"
+      participants: "Qimmatbaho sovg&apos;alar"
     },
   ];
 
@@ -169,7 +166,7 @@ export default function Ict() {
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <Breadcrumb />
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
           ICT4Girls - Sport dasturlash olimpiadasi
         </h1>
 
@@ -181,27 +178,27 @@ export default function Ict() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          &quot;ICT4Girls&quot; - 20 yoshgacha bo'lgan qizlar orasida sport dasturlash bo'yicha hududiy va respublika bosqichlarida bo'lib o'tadigan olimpiada.
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
+          &quot;ICT4Girls&quot; - 20 yoshgacha bo&apos;lgan qizlar orasida sport dasturlash bo&apos;yicha hududiy va respublika bosqichlarida bo&apos;lib o&apos;tadigan olimpiada.
         </p>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Olimpiada haqida
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              O'zbekistoning turli hududlarida istiqomat qiluvchi o'quvchi qizlar tomonidan &quot;ICT4Girls&quot; olimpiadasida ishtirok etish uchun hamda birlamchi saralashdan o'tish ariza yo'llanadi.
+              O&apos;zbekistoning turli hududlarida istiqomat qiluvchi o&apos;quvchi qizlar tomonidan &quot;ICT4Girls&quot; olimpiadasida ishtirok etish uchun hamda birlamchi saralashdan o&apos;tish ariza yo&apos;llanadi.
             </DocumentCard>
             <DocumentCard>
-              &quot;ICT4Girls&quot; olimpiadasining hududiy bosqichi barcha hududlar – 12 viloyat, Qoraqalpog'iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to'playi.
+              &quot;ICT4Girls&quot; olimpiadasining hududiy bosqichi barcha hududlar – 12 viloyat, Qoraqalpog&apos;iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to&apos;playi.
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Olimpiada bosqichlari
           </h2>
 
@@ -219,23 +216,23 @@ export default function Ict() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Qatnashish shartlari
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Olimpiadada faqat 20 yoshgacha bo'lgan qizlar ishtirok etishi mumkin. Barcha qatnashuvchilar sport dasturlash bo'yicha bilim va ko'nikmalarini ko'rsatish imkoniyatiga ega.
+              Olimpiadada faqat 20 yoshgacha bo&apos;lgan qizlar ishtirok etishi mumkin. Barcha qatnashuvchilar sport dasturlash bo&apos;yicha bilim va ko&apos;nikmalarini ko&apos;rsatish imkoniyatiga ega.
             </DocumentCard>
             <DocumentCard>
-              Hududiy bosqichda eng yuqori natija ko'rsatgan qizlar Respublika bosqichiga yo'llanma qo'lga kiritadi va keyingi bosqichda raqobat qilish huquqiga ega bo'ladi.
+              Hududiy bosqichda eng yuqori natija ko&apos;rsatgan qizlar Respublika bosqichiga yo&apos;llanma qo&apos;lga kiritadi va keyingi bosqichda raqobat qilish huquqiga ega bo&apos;ladi.
             </DocumentCard>
           </div>
         </section>
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+            <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
               Olimpiada statistikasi
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
