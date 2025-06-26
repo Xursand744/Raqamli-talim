@@ -286,13 +286,13 @@ export default function Navbar() {
               <img
                 src={blueLogo}
                 alt={t("logoAlt")}
-                className="size-8 w-[130px]"
+                className="h-auto w-[130px]"
               />
             ) : ( 
               <img
                 src={whiteLogo}
                 alt={t("logoAlt")}
-                className="size-8 w-[130px]"
+                className="h-auto w-[130px]"
               />
             )}
           </NavLink>
