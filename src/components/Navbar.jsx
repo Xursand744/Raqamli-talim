@@ -3,6 +3,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobMenu from "./MobMenu";
 import { Globe, Sun, Moon, ZoomIn, ZoomOut, Volume2, VolumeX } from "lucide-react";
 import { blueLogo } from "../assets/logos/logos";
+import whiteLogo from "../assets/logos/mainLogoBlueWhite.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
@@ -260,8 +261,8 @@ LanguageSelector.propTypes = {
 };
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation("global");
-  
+  const { t } = useTranslation("global");
+  const { theme } = useTheme();
   return (
     <div>
       <div 
@@ -281,13 +282,19 @@ export default function Navbar() {
           aria-label={t("navigation.main")}
         >
           <NavLink to="/" className="cursor-pointer">
-            <div className="flex-center gap-x-3 z-[999] relative">
+            {theme === 'light' ? (
               <img
                 src={blueLogo}
                 alt={t("logoAlt")}
                 className="size-8 w-[130px]"
               />
-            </div>
+            ) : ( 
+              <img
+                src={whiteLogo}
+                alt={t("logoAlt")}
+                className="size-8 w-[130px]"
+              />
+            )}
           </NavLink>
 
           <ul 
