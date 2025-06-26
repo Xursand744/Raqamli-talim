@@ -1,9 +1,7 @@
 import "../../index.css";
-import { ChevronRight } from "react-feather";
 import PropTypes from "prop-types";
 // import CarouselImage from "../../assets/carousel.jpg";
-import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
-import HomeIcon from "../../assets/home-icon.svg";
+import { rightIcon } from "../../assets/icons/icon";
 import CarouselImage from "../../assets/images/projects/8.jpg";
 
 import {
@@ -15,28 +13,10 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
-import { useNavigate } from "react-router-dom";
-
-const Breadcrumb = () => {
-  return (
-    <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-      <a href="/" className="hover:text-gray-900 flex items-center gap-[10px]">
-        <img src={HomeIcon} alt="" />
-        Bosh sahifa
-      </a>
-      <ChevronRight size={16} />
-      <a href="/projects" className="hover:text-gray-900">
-        Loyihalar
-      </a>
-      <ChevronRight size={16} />
-      <span className="text-gray-900">ACA Navigator - Python dasturlash kursi</span>
-    </div>
-  );
-};
 
 const DocumentCard = ({ children }) => (
-  <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
-    <p className="text-gray-700">{children}</p>
+  <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-200 border border-gray-200 dark:border-gray-600">
+    <p className="text-gray-700 dark:text-gray-300 transition-colors duration-200">{children}</p>
     <div className="flex justify-end mt-[20px]">
       <img src={rightIcon} alt="Toggle" className="w-8 h-8" />
     </div>
@@ -50,18 +30,18 @@ DocumentCard.propTypes = {
 const MetricsCard = ({ icon, value, label, isActive }) => (
   <div
     className={`${
-      isActive ? "bg-[#2675EB]" : "bg-white"
-    } rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
+      isActive ? "bg-[#2675EB]" : "bg-white dark:bg-gray-800"
+    } rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 dark:border-gray-600`}
   >
     <img src={icon || "/placeholder.svg"} alt="" className="w-[48px] mb-4" />
     <div
       className={`${
-        isActive ? "text-[#fff]" : "text-[#2563EB]"
-      } text-[40px] font-bold mb-2`}
+        isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"
+      } text-[40px] font-bold mb-2 transition-colors duration-200`}
     >
       {value.toLocaleString()}
     </div>
-    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB]"} text-sm`}>
+    <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB] dark:text-blue-400"} text-sm transition-colors duration-200`}>
       {label}
     </div>
   </div>
@@ -79,18 +59,18 @@ MetricsCard.defaultProps = {
 };
 
 const LearningCard = ({ title, description, icon, benefits }) => (
-  <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-green-200">
+  <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-green-200 dark:border-green-700/30">
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0">
-        <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+        <div className="w-12 h-12 bg-green-600 dark:bg-green-500 rounded-lg flex items-center justify-center">
           <span className="text-white text-xl font-bold">{icon}</span>
         </div>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm mb-3">{description}</p>
-        <div className="bg-green-100 rounded-lg p-3">
-          <p className="text-green-800 text-sm font-medium">{benefits}</p>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 transition-colors duration-200">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3 transition-colors duration-200">{description}</p>
+        <div className="bg-green-100 dark:bg-green-900/30 rounded-lg p-3">
+          <p className="text-green-800 dark:text-green-200 text-sm font-medium transition-colors duration-200">{benefits}</p>
         </div>
       </div>
     </div>
@@ -105,8 +85,6 @@ LearningCard.propTypes = {
 };
 
 export default function Aca() {
-  const navigate = useNavigate();
-
   const metrics = [
     {
       icon: UsersGroup,
@@ -160,7 +138,7 @@ export default function Aca() {
     },
     {
       title: "Karyera tayyorgarligi",
-      description: "Karyerada muvaffaqiyatli boshlashga yordam beradigan samarali rezyume yaratadilar va ish beruvchilarni o`ziga jalb qilishadi!",
+      description: "Karyerada muvaffaqiyatli boshlashga yordam beradigan samarali rezyume yaratadilar va ish beruvchilarni o&apos;ziga jalb qilishadi!",
       icon: "📈",
       benefits: "Rezyume va ish topish"
     },
@@ -170,7 +148,7 @@ export default function Aca() {
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
-        <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[3em]">
+        <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[3em] transition-colors duration-200">
           ACA Navigator - Python dasturlash kursi
         </h1>
 
@@ -182,18 +160,18 @@ export default function Aca() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-          &quot;ACA Navigator&quot; loyihasini Armanistonning &quot;Armenian Code Academy&quot; ta`lim markazi bilan birgalikda amalga oshiriladi.
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
+          &quot;ACA Navigator&quot; loyihasini Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi.
         </p>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Loyiha haqida
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha ishtirokchilari quyidagi bilimlarga ega bo`ladilar o`rganadilar? Ishtirokchilarga nega Python bu qadar mashhur va u bilan bog`liq qanday talab qilinadigan kasblar mavjudligini haqida tushuncha va ma`lumotlar beriladi.
+              Loyiha ishtirokchilari quyidagi bilimlarga ega bo&apos;ladilar o&apos;rganadilar? Ishtirokchilarga nega Python bu qadar mashhur va u bilan bog&apos;liq qanday talab qilinadigan kasblar mavjudligini haqida tushuncha va ma&apos;lumotlar beriladi.
             </DocumentCard>
             <DocumentCard>
               Python asoslari bilan tanishadilar va eng mashhur dasturlash tillaridan birida dasturlash! Birinchi kodlarini yozib, nazariyani amaliyotda mustahkamlash!
@@ -202,8 +180,8 @@ export default function Aca() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            O`rganish modullari
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
+            O&apos;rganish modullari
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -220,22 +198,22 @@ export default function Aca() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Hamkorlik
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha Armanistonning &quot;Armenian Code Academy&quot; ta`lim markazi bilan birgalikda amalga oshiriladi. Bu xalqaro hamkorlik orqali sifatli ta`lim imkoniyatlari yaratiladi.
+              Loyiha Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi. Bu xalqaro hamkorlik orqali sifatli ta&apos;lim imkoniyatlari yaratiladi.
             </DocumentCard>
             <DocumentCard>
-              Hamkorlik doirasida zamonaviy dasturlash metodlari, amaliy tajriba va xalqaro standartlar asosida ta`lim beriladi.
+              Hamkorlik doirasida zamonaviy dasturlash metodlari, amaliy tajriba va xalqaro standartlar asosida ta&apos;lim beriladi.
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
             Karyera imkoniyatlari
           </h2>
 
@@ -244,14 +222,14 @@ export default function Aca() {
               Python dasturlash tili hozirgi kunda eng mashhur va talab qilinadigan dasturlash tillaridan biri hisoblanadi. Uning yordamida turli sohalarda ishlash imkoniyati mavjud.
             </DocumentCard>
             <DocumentCard>
-              Kursni tugatgandan so`ng talabalar samarali rezyume yaratish va ish beruvchilarni o`ziga jalb qilish ko`nikmalariga ega bo`ladilar.
+              Kursni tugatgandan so&apos;ng talabalar samarali rezyume yaratish va ish beruvchilarni o&apos;ziga jalb qilish ko&apos;nikmalariga ega bo&apos;ladilar.
             </DocumentCard>
           </div>
         </section>
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
+            <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
               Kurs statistikasi
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

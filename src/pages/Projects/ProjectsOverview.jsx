@@ -14,7 +14,7 @@ function ProjectsOverview() {
               {...item}
             />
           ))}
-          <div className="cursor-pointer rounded-xl overflow-hidden h-[384px] w-96 bg-gray-100 dark:bg-gray-800 transition-colors duration-200"></div>
+          <div className="cursor-pointer rounded-xl overflow-hidden h-[384px] w-96"></div>
       </div>
     </div>
   );
