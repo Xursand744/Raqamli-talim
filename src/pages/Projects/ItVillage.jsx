@@ -38,9 +38,9 @@ Button.propTypes = {
 
 // Course Card Component
 const CourseCard = ({ title }) => (
-  <div className="group p-6 rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg cursor-pointer transition-all duration-300 bg-white w-[378px]">
+  <div className="group p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-lg cursor-pointer transition-all duration-300 bg-white dark:bg-gray-800 w-[378px]">
     <div className="w-4 h-4 rounded-full bg-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-    <h3 className="font-medium text-lg text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+    <h3 className="font-medium text-lg text-gray-800 dark:text-gray-200 group-hover:text-blue-600 transition-colors duration-300">
       {title}
     </h3>
   </div>
@@ -55,12 +55,12 @@ const CoursesSection = () => (
   <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 my-8 p-6 transition-colors duration-200">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
-        Yo'nalishlar
+        Yo&apos;nalishlar
       </h2>
       <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
-        Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
+        Loyihada yosh chegarasi mavjud emas barcha o&apos;qish istagida bo&apos;lganlar
+        uchun. Loyiha doirasida yoshlar 5 ta yo&apos;nalish bo&apos;yicha dunyoning
+        yetakchi mentorlaridan bilim olishlari mumkin bo&apos;ladi.
       </p>
     </div>
 
@@ -72,7 +72,7 @@ const CoursesSection = () => (
 
     <div className="max-w-3xl mx-auto text-center my-16">
       <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
-        To'garaklar
+        To&apos;garaklar
       </h2>
     </div>
 
@@ -86,12 +86,12 @@ const CoursesSection = () => (
 
 // Decision Card Component
 const DecisionCard = ({ text }) => (
-  <div className="group flex-1 p-8 rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 bg-white">
-    <p className="text-gray-800 text-lg leading-relaxed group-hover:text-blue-600 transition-colors duration-300">
+  <div className="group flex-1 p-8 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-blue-500 hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800">
+    <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed group-hover:text-blue-600 transition-colors duration-300">
       {text}
     </p>
     <div className="flex justify-end mt-6">
-      <button className="p-3 rounded-full hover:bg-blue-50 transition-colors duration-300">
+      <button className="p-3 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors duration-300">
         <img src={rightIcon} width="24" height="24" alt="View more" className="group-hover:scale-110 transition-transform duration-300" />
       </button>
     </div>
@@ -155,12 +155,12 @@ const MapSection = () => {
   return (
     <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-bold mb-6 text-gray-900">
+        <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
           IT Shaharcha joylashgan hududlar
         </h2>
-        <p className="text-gray-600 text-lg leading-relaxed">
-          IT Shaharcha dasturi O'zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
-          Har bir hududda yoshlar uchun zamonaviy ta'lim imkoniyatlari yaratiladi.
+        <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
+          IT Shaharcha dasturi O&apos;zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
+          Har bir hududda yoshlar uchun zamonaviy ta&apos;lim imkoniyatlari yaratiladi.
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 items-stretch relative">
@@ -180,7 +180,7 @@ const MapSection = () => {
               className="w-full h-auto"
             />
             {selectedRegion && (
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 px-6 py-2 rounded-full shadow text-blue-900 font-bold text-lg">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 dark:bg-gray-800/90 px-6 py-2 rounded-full shadow text-blue-900 dark:text-blue-100 font-bold text-lg transition-colors duration-200">
                 {selectedRegion.name}
               </div>
             )}
@@ -188,10 +188,10 @@ const MapSection = () => {
         </div>
         {/* Панель */}
         <div className="flex-1 flex items-center justify-center relative z-10 transition-colors duration-200">
-          <div className="bg-gray-100 dark:bg-gray-800 border rounded-xl shadow-lg p-8 max-w-xl w-full transition-colors duration-200" style={{ color: '#043b87', position: 'relative' }}>
+          <div className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl shadow-lg p-8 max-w-xl w-full transition-colors duration-200" style={{ color: '#043b87', position: 'relative' }}>
             {selectedRegion ? (
               <>
-                <h4 className="font-semibold text-xs mb-4 uppercase">{selectedRegion.name}</h4>
+                <h4 className="font-semibold text-xs mb-4 uppercase text-blue-900 dark:text-blue-100 transition-colors duration-200">{selectedRegion.name}</h4>
                 <div className="mb-4 space-y-2 text-black dark:text-gray-200 transition-colors duration-200">
                   <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion.address || '-'}</span>
                     {selectedRegion.address && (
@@ -199,7 +199,7 @@ const MapSection = () => {
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRegion.address)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="ml-2 inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold hover:bg-blue-200 transition"
+                        className="ml-2 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors duration-200"
                       >
                         Xaritada ochish
                       </a>
@@ -214,9 +214,9 @@ const MapSection = () => {
                   }
                   {
                     selectedRegion.directions ? (
-                      <div><span className="font-semibold">Ta'lim yo'nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
+                      <div><span className="font-semibold">Ta&apos;lim yo&apos;nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
                     ) : (
-                      <div><span className="font-semibold">Ta'lim yo'nalishlari</span> <span className="font-normal">Tez kunda</span></div>
+                      <div><span className="font-semibold">Ta&apos;lim yo&apos;nalishlari</span> <span className="font-normal">Tez kunda</span></div>
                     )
                   }
                   {
@@ -237,8 +237,8 @@ const MapSection = () => {
               </>
             ) : (
               <div className="text-center py-8">
-                <p className="text-gray-500 text-lg">Hududni tanlang</p>
-                <p className="text-gray-400 text-sm mt-2">Ma'lumotlarni ko'rish uchun xaritadan hududni bosing</p>
+                <p className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">Hududni tanlang</p>
+                <p className="text-gray-400 dark:text-gray-500 text-sm mt-2 transition-colors duration-200">Ma&apos;lumotlarni ko&apos;rish uchun xaritadan hududni bosing</p>
               </div>
             )}
             {/* SVG фон сбоку */}
