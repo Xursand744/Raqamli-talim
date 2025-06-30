@@ -379,7 +379,13 @@
     "courseDurations": "Course Durations",
     "courseFormats": "Course Formats"
   },
-  "home": "Home",
+  "home": {
+    "seo": {
+      "title": "Raqamli Ta'lim — Home Page",
+      "description": "Raqamli Ta'lim — The latest news, projects, and opportunities in IT and digital technologies in Uzbekistan. The best platform for learning, working, and growing in IT.",
+      "keywords": "raqamli ta'lim, IT, technology, learning, courses, study centers, programming, Uzbekistan"
+    }
+  },
   "it_advice": "IT Advice",
   "it_directions": "IT Directions",
   "description": "This is the hidden part of the software that users cannot see but ensures the functioning of an application or website. Backend works with databases, implements business logic, and interacts with the user interface (frontend).",

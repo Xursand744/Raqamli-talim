@@ -445,7 +445,13 @@
     "title": "Saralash",
     "reset": "Tozalash"
   },
-  "home": "Bosh sahifa",
+  "home": {
+    "seo": {
+      "title": "Raqamli Ta'lim — Bosh sahifa",
+      "description": "Raqamli Ta'lim — O'zbekistondagi IT va raqamli texnologiyalar bo'yicha eng so'nggi yangiliklar, loyihalar va imkoniyatlar. IT sohasida o'qish, ishlash va rivojlanish uchun eng yaxshi platforma.",
+      "keywords": "raqamli ta'lim, IT, texnologiyalar, o'qish, kurslar, o'quv markazlar, dasturlash, Uzbekistan"
+    }
+  },
   "it_advice": "IT-maslahatlar",
   "it_directions": "IT yo'nalishlar",
   "description": "Bu dasturiy ta'minotning yashirin qismi bo'lib, foydalanuvchilar ko'ra olmaydigan, lekin dastur yoki veb-saytning ishlashini ta'minlaydigan mexanizmlarni o'z ichiga oladi. Backend ma'lumotlar bazasi bilan ishlaydi, biznes mantiqlarni amalga oshiradi va foydalanuvchi interfeysi (frontend) bilan o'zaro aloqa qiladi.",
