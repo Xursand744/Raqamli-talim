@@ -135,6 +135,26 @@ const DescriptionSection = () => (
   </div>
 );
 
+// Video Section Component
+const VideoSection = () => (
+  <div className="max-w-[1230px] mx-auto px-4 my-16">
+    <div className="max-w-4xl mx-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-600 overflow-hidden">
+        <div className="aspect-video w-full">
+          <video 
+            className="w-full h-full object-cover"
+            controls
+            poster=""
+          >
+            <source src="/src/assets/videos/4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 // Map Section Component
 const MapSection = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -256,6 +276,7 @@ const ItVillage = () => {
     <div className="overflow-hidden">
       <HeroSection />
       <DescriptionSection />
+      <VideoSection />
       <CoursesSection />
       <MapSection />
     </div>
