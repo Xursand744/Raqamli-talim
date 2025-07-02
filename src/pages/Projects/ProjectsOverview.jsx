@@ -35,7 +35,7 @@ function ProjectsOverview() {
   }));
 
   return (
-    <div className="max-w-[1230px] mx-auto mt-[100px] mb-[50px]">
+    <div className="max-w-[1230px] mx-auto mt-[120px] mb-[50px]">
       <h1 className="font-medium text-[20px] mb-[30px] text-gray-900 dark:text-white transition-colors duration-200">
         {t('projectsOverview.title')}
       </h1>
