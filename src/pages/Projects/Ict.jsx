@@ -13,20 +13,23 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = () => {
+  const { t } = useTranslation("global");
+  
   return (
     <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mb-6 transition-colors duration-200">
       <a href="/" className="hover:text-gray-900 dark:hover:text-gray-100 flex items-center gap-[10px] transition-colors duration-200">
         <img src={HomeIcon} alt="" />
-        Bosh sahifa
+        {t('ict4girls.breadcrumb.home')}
       </a>
       <ChevronRight size={16} />
       <a href="/projects" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">
-        Loyihalar
+        {t('ict4girls.breadcrumb.projects')}
       </a>
       <ChevronRight size={16} />
-      <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200">ICT4Girls - Sport dasturlash olimpiadasi</span>
+      <span className="text-gray-900 dark:text-gray-100 transition-colors duration-200">{t('ict4girls.breadcrumb.current')}</span>
     </div>
   );
 };
@@ -102,64 +105,54 @@ StageCard.propTypes = {
 };
 
 export default function Ict() {
+  const { t } = useTranslation("global");
+
   const metrics = [
     {
       icon: UsersGroup,
       value: 500,
-      label: "Qatnashuvchilar",
+      label: t('ict4girls.metrics.participants'),
     },
     {
       icon: StickerAdd,
       value: 14,
-      label: "Hududlar",
+      label: t('ict4girls.metrics.regions'),
     },
     {
       icon: UserLoad,
       value: 20,
-      label: "Yosh chegarasi",
+      label: t('ict4girls.metrics.ageLimit'),
     },
     {
       icon: UserVerify,
       value: 2,
-      label: "Bosqichlar",
+      label: t('ict4girls.metrics.stages'),
     },
     {
       icon: UserDelete,
       value: 0,
-      label: "G&apos;oliblar",
+      label: t('ict4girls.metrics.winners'),
     },
     {
       icon: MoneyBag,
       value: 100,
-      label: "Sovg&apos;alar",
+      label: t('ict4girls.metrics.prizes'),
     },
     {
       icon: Document,
       value: 50,
-      label: "Masalalar",
+      label: t('ict4girls.metrics.problems'),
     },
   ];
 
-  const stages = [
-    {
-      title: "Hududiy bosqich",
-      description: "Barcha hududlar – 12 viloyat, Qoraqalpog&apos;iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to&apos;playdi.",
-      icon: "🏆",
-      participants: "12 viloyat + Qoraqalpog&apos;iston + Toshkent"
-    },
-    {
-      title: "Respublika bosqichi",
-      description: "Hududiy bosqichda eng yuqori natija ko&apos;rsatgan qizlar Respublika bosqichiga yo&apos;llanma qo&apos;lga kiritadi.",
-      icon: "👑",
-      participants: "Eng yaxshi natijalar"
-    },
-    {
-      title: "G&apos;oliblar",
-      description: "Respublika bosqichida eng yuqori natija ko&apos;rsatgan qizlar ICT4Girls olimpiadasi g&apos;olibi deb topilib, qimmatbaho sovg&apos;alar bilan taqdirlanadi.",
-      icon: "💎",
-      participants: "Qimmatbaho sovg&apos;alar"
-    },
-  ];
+  const stages = t('ict4girls.stages', { returnObjects: true });
+  const about = t('ict4girls.about', { returnObjects: true });
+  const conditions = t('ict4girls.conditions', { returnObjects: true });
+
+  // Ensure all arrays are actually arrays
+  const safeStages = Array.isArray(stages) ? stages : [];
+  const safeAbout = Array.isArray(about) ? about : [];
+  const safeConditions = Array.isArray(conditions) ? conditions : [];
 
   return (
     <div className="">
@@ -167,7 +160,7 @@ export default function Ict() {
         <Breadcrumb />
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-          ICT4Girls - Sport dasturlash olimpiadasi
+          {t('ict4girls.title')}
         </h1>
 
         <div className="relative mb-12">
@@ -179,31 +172,30 @@ export default function Ict() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
-          &quot;ICT4Girls&quot; - 20 yoshgacha bo&apos;lgan qizlar orasida sport dasturlash bo&apos;yicha hududiy va respublika bosqichlarida bo&apos;lib o&apos;tadigan olimpiada.
+          {t('ict4girls.description')}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Olimpiada haqida
+            {t('ict4girls.sections.about')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              O&apos;zbekistoning turli hududlarida istiqomat qiluvchi o&apos;quvchi qizlar tomonidan &quot;ICT4Girls&quot; olimpiadasida ishtirok etish uchun hamda birlamchi saralashdan o&apos;tish ariza yo&apos;llanadi.
-            </DocumentCard>
-            <DocumentCard>
-              &quot;ICT4Girls&quot; olimpiadasining hududiy bosqichi barcha hududlar – 12 viloyat, Qoraqalpog&apos;iston Respublikasi va Toshkent ishtirok etuvchi qizlar berilgan masalalarga yechim ishlab, ball to&apos;playi.
-            </DocumentCard>
+            {safeAbout.map((text, index) => (
+              <DocumentCard key={index}>
+                {text}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Olimpiada bosqichlari
+            {t('ict4girls.sections.stages')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
-            {stages.map((stage, index) => (
+            {safeStages.map((stage, index) => (
               <StageCard
                 key={index}
                 title={stage.title}
@@ -217,23 +209,22 @@ export default function Ict() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Qatnashish shartlari
+            {t('ict4girls.sections.conditions')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              Olimpiadada faqat 20 yoshgacha bo&apos;lgan qizlar ishtirok etishi mumkin. Barcha qatnashuvchilar sport dasturlash bo&apos;yicha bilim va ko&apos;nikmalarini ko&apos;rsatish imkoniyatiga ega.
-            </DocumentCard>
-            <DocumentCard>
-              Hududiy bosqichda eng yuqori natija ko&apos;rsatgan qizlar Respublika bosqichiga yo&apos;llanma qo&apos;lga kiritadi va keyingi bosqichda raqobat qilish huquqiga ega bo&apos;ladi.
-            </DocumentCard>
+            {safeConditions.map((text, index) => (
+              <DocumentCard key={index}>
+                {text}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-              Olimpiada statistikasi
+              {t('ict4girls.sections.statistics')}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

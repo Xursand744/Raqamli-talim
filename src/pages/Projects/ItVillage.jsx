@@ -6,20 +6,7 @@ import { RegionsMap } from "../../components/RegionMap";
 import { useState } from "react";
 import { regionsPathArray } from "../../components/mapArray";
 import RTRM from "../../assets/images/RTRM.svg";
-
-// Courses data
-const courses = [
-    { id: 1, title: "Axborot texnologiyalari (IT)" },
-    { id: 2, title: "Chet tillari" },
-    // { id: 3, title: "Shaxsiy rivojlanish va biznes ko'nikmalari" },
-    { id: 4, title: "Zamonaviy amaliy kasblar" },
-    // { id: 5, title: "Davlat xizmatlaridan foydalanish" },
-  ];
-
-const togaraklar = [
-    { id: 1, title: "Shaxmat" },
-    { id: 2, title: "Kitobxonlik" },
-  ];
+import { useTranslation } from "react-i18next";
 
 // Reusable Button Component
 const Button = ({ children, className = "", ...props }) => (
@@ -51,38 +38,47 @@ CourseCard.propTypes = {
 };
 
 // Courses Section Component
-const CoursesSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 my-8 p-6 transition-colors duration-200">
-    <div className="max-w-3xl mx-auto text-center mb-16">
-      <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
-        Yo&apos;nalishlar
-      </h2>
-      <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
-        Loyihada yosh chegarasi mavjud emas barcha o&apos;qish istagida bo&apos;lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo&apos;nalish bo&apos;yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo&apos;ladi.
-      </p>
-    </div>
+const CoursesSection = () => {
+  const { t } = useTranslation("global");
+  
+  const courses = t('itVillage.courses', { returnObjects: true });
+  const circles = t('itVillage.circles', { returnObjects: true });
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-      {courses.map((course) => (
-        <CourseCard key={course.id} title={course.title} />
-      ))}
-    </div>
+  // Ensure courses and circles are arrays
+  const safeCourses = Array.isArray(courses) ? courses : [];
+  const safeCircles = Array.isArray(circles) ? circles : [];
 
-    <div className="max-w-3xl mx-auto text-center my-16">
-      <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
-        To&apos;garaklar
-      </h2>
-    </div>
+  return (
+    <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900 my-8 p-6 transition-colors duration-200">
+      <div className="max-w-3xl mx-auto text-center mb-16">
+        <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
+          {t('itVillage.sections.directions')}
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
+          {t('itVillage.sections.directionsDesc')}
+        </p>
+      </div>
 
-    <div className="flex flex-wrap gap-8 justify-center items-center">
-      {togaraklar.map((course) => (
-        <CourseCard key={course.id} title={course.title} />
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        {safeCourses.map((course) => (
+          <CourseCard key={course.id} title={course.title} />
+        ))}
+      </div>
+
+      <div className="max-w-3xl mx-auto text-center my-16">
+        <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
+          {t('itVillage.sections.circles')}
+        </h2>
+      </div>
+
+      <div className="flex flex-wrap gap-8 justify-center items-center">
+        {safeCircles.map((circle) => (
+          <CourseCard key={circle.id} title={circle.title} />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Decision Card Component
 const DecisionCard = ({ text }) => (
@@ -103,37 +99,43 @@ DecisionCard.propTypes = {
 };
 
 // Hero Section Component
-const HeroSection = () => (
-  <div className="max-w-[1230px] mx-auto px-4">
-    <div className="flex justify-center mt-24 mb-16 mt-[10em]">
-      <h1 className="font-bold text-5xl md:text-6xl text-gray-900 dark:text-white max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-        IT Shaharcha
-      </h1>
-    </div>
+const HeroSection = () => {
+  const { t } = useTranslation("global");
+  
+  return (
+    <div className="max-w-[1230px] mx-auto px-4">
+      <div className="flex justify-center mt-24 mb-16 mt-[10em]">
+        <h1 className="font-bold text-5xl md:text-6xl text-gray-900 dark:text-white max-w-3xl text-center leading-tight bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+          {t('itVillage.title')}
+        </h1>
+      </div>
 
-    <div className="flex flex-col items-center">
-      <img
-        src={talent}
-        className="rounded-2xl w-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
-        alt="IT Shaharcha Project"
-      />
-      <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 dark:text-gray-200 text-center max-w-3xl transition-colors duration-200">
-        &quot;IT shaharcha&quot; – bu nafaqat ta&apos;lim, balki raqamli ekotizim yaratishga yo&apos;naltirilgan yirik tashabbusdir
-      </h2>
+      <div className="flex flex-col items-center">
+        <img
+          src={talent}
+          className="rounded-2xl w-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          alt="IT Village Project"
+        />
+        <h2 className="pt-10 pb-10 font-semibold text-xl text-gray-700 dark:text-gray-200 text-center max-w-3xl transition-colors duration-200">
+          {t('itVillage.subtitle')}
+        </h2>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Description Section Component
-const DescriptionSection = () => (
-  <div className="max-w-[1230px] mx-auto">
-    <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mx-auto text-justify leading-relaxed transition-colors duration-200">
-      &quot;IT shaharcha&quot; dasturi O&apos;zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladigan loyiha bo&apos;lib, yoshlarni raqamli texnologiyalar, xorijiy tillar va zamonaviy kasblarga bepul o&apos;qitish uchun yaratilgan muhim tashabbusdir. Ushbu loyiha O&apos;zbekiston Respublikasi Prezidenti tomonidan 2024-yil 15-maydagi PQ-178-son qaror asosida tasdiqlangan bo&apos;lib, hududlarda innovatsion ta&apos;lim muhitini shakllantirishga yo&apos;naltirilgan.
-      Davlat tomonidan dastur doirasida o&apos;quvchilarni doimiy rag&apos;batlantirish hamda yuqori malakali mutaxassis va mentorlarni jalb qilish rejalashtirilgan. &quot;IT shaharcha&quot;lar yoshlarga zamonaviy kasblarni o&apos;rganish va global IT-bozorda o&apos;z o&apos;rnini topish uchun keng imkoniyatlar taqdim etadi.
-      Zamonaviy infratuzilmaga ega &quot;IT-shaharcha&quot;lar yoshlarni xalqaro mehnat bozoriga tayyorlash, ish bilan ta&apos;minlash va IT-xizmatlar eksportini rivojlantirishga xizmat qiladi. Loyiha doirasida yaratilayotgan sharoitlar tufayli hududlarda texnologik innovatsiyalar tezkor rivojlanib, yoshlar uchun yangi imkoniyatlar ochiladi.
-    </p>
-  </div>
-);
+const DescriptionSection = () => {
+  const { t } = useTranslation("global");
+  
+  return (
+    <div className="max-w-[1230px] mx-auto">
+      <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed mx-auto text-justify leading-relaxed transition-colors duration-200">
+        {t('itVillage.description')}
+      </p>
+    </div>
+  );
+};
 
 // Video Section Component
 const VideoSection = () => (
@@ -158,6 +160,7 @@ const VideoSection = () => (
 // Map Section Component
 const MapSection = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
+  const { t } = useTranslation("global");
 
   const handleRegionClick = (regionId) => {
     if (regionId === null) {
@@ -176,11 +179,10 @@ const MapSection = () => {
     <div className="max-w-[1230px] mx-auto px-4  bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-200">
-          IT Shaharcha joylashgan hududlar
+          {t('itVillage.sections.regions')}
         </h2>
         <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-200">
-          IT Shaharcha dasturi O&apos;zbekistonning 13 ta chekka tumani va 1 ta shahrida tashkil etiladi. 
-          Har bir hududda yoshlar uchun zamonaviy ta&apos;lim imkoniyatlari yaratiladi.
+          {t('itVillage.sections.regionsDesc')}
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 items-stretch relative">
@@ -213,7 +215,7 @@ const MapSection = () => {
               <>
                 <h4 className="font-semibold text-xs mb-4 uppercase text-blue-900 dark:text-blue-100 transition-colors duration-200">{selectedRegion.name}</h4>
                 <div className="mb-4 space-y-2 text-black dark:text-gray-200 transition-colors duration-200">
-                  <div><span className="font-semibold">Manzil:</span> <span className="font-normal">{selectedRegion.address || '-'}</span>
+                  <div><span className="font-semibold">{t('itVillage.map.address')}:</span> <span className="font-normal">{selectedRegion.address || '-'}</span>
                     {selectedRegion.address && (
                       <a
                         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedRegion.address)}`}
@@ -221,44 +223,44 @@ const MapSection = () => {
                         rel="noopener noreferrer"
                         className="ml-2 inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors duration-200"
                       >
-                        Xaritada ochish
+                        {t('itVillage.map.viewOnMap')}
                       </a>
                     )}
                   </div>
                   {
                     selectedRegion.area ? (
-                      <div><span className="font-semibold">Maydon:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.area')}:</span> <span className="font-normal">{selectedRegion.area || '-'}</span></div>
                     ) : (
-                      <div><span className="font-semibold">Maydon</span> <span className="font-normal">Tez kunda</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.area')}</span> <span className="font-normal">{t('itVillage.map.comingSoon')}</span></div>
                     )
                   }
                   {
                     selectedRegion.directions ? (
-                      <div><span className="font-semibold">Ta&apos;lim yo&apos;nalishlari:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.directions')}:</span> <span className="font-normal">{selectedRegion.directions || '-'}</span></div>
                     ) : (
-                      <div><span className="font-semibold">Ta&apos;lim yo&apos;nalishlari</span> <span className="font-normal">Tez kunda</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.directions')}</span> <span className="font-normal">{t('itVillage.map.comingSoon')}</span></div>
                     )
                   }
                   {
                     selectedRegion.mentorsCount ? (
-                      <div><span className="font-semibold">Mentorlar soni:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.mentorsCount')}:</span> <span className="font-normal">{selectedRegion.mentorsCount ?? '-'}</span></div>
                     ) : (
-                      <div><span className="font-semibold">Mentorlar soni</span> <span className="font-normal">Tez kunda</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.mentorsCount')}</span> <span className="font-normal">{t('itVillage.map.comingSoon')}</span></div>
                     )
                   }
                   {
                     selectedRegion.classroomsCount ? (
-                      <div><span className="font-semibold">Sinfxonalar soni:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.classroomsCount')}:</span> <span className="font-normal">{selectedRegion.classroomsCount ?? '-'}</span></div>
                     ) : (
-                      <div><span className="font-semibold">Sinfxonalar soni</span> <span className="font-normal">Tez kunda</span></div>
+                      <div><span className="font-semibold">{t('itVillage.map.classroomsCount')}</span> <span className="font-normal">{t('itVillage.map.comingSoon')}</span></div>
                     )
                   }
                 </div>
               </>
             ) : (
               <div className="text-center py-8">
-                <p className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">Hududni tanlang</p>
-                <p className="text-gray-400 dark:text-gray-500 text-sm mt-2 transition-colors duration-200">Ma&apos;lumotlarni ko&apos;rish uchun xaritadan hududni bosing</p>
+                <p className="text-gray-500 dark:text-gray-400 text-lg transition-colors duration-200">{t('itVillage.map.selectRegion')}</p>
+                <p className="text-gray-400 dark:text-gray-500 text-sm mt-2 transition-colors duration-200">{t('itVillage.map.selectRegionDesc')}</p>
               </div>
             )}
             {/* SVG фон сбоку */}

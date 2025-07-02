@@ -30,7 +30,7 @@ const Breadcrumb = () => {
         {t("itTalentBreadcrump.projects")}
       </a>
       <ChevronRight size={16} />
-      <span className="text-gray-900">TOT - O&apos;qituvchilar uchun treninglar</span>
+      <span className="text-gray-900">{t('tot.breadcrumb.current')}</span>
     </div>
   );
 };
@@ -59,7 +59,7 @@ const MetricsCard = ({ icon, value, label, isActive }) => (
       className={`${
         isActive ? "text-[#fff]" : "text-[#2563EB]"
       } text-[40px] font-bold mb-2`}
-    >
+    > 
       {value.toLocaleString()}
     </div>
     <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB]"} text-sm`}>
@@ -102,71 +102,52 @@ TrainingDirectionCard.propTypes = {
 };
 
 export default function TOT() {
+  const { t } = useTranslation("global");
+  
   const metrics = [
     {
       icon: UsersGroup,
       value: 150,
-      label: "Qatnashuvchilar",
+      label: t('tot.metrics.participants'),
     },
     {
       icon: StickerAdd,
       value: 25,
-      label: "Trenerlar",
+      label: t('tot.metrics.trainers'),
     },
     {
       icon: UserLoad,
       value: 3,
-      label: "Oylar",
+      label: t('tot.metrics.months'),
     },
     {
       icon: UserVerify,
       value: 5,
-      label: "Yo&apos;nalishlar",
+      label: t('tot.metrics.directions'),
     },
     {
       icon: UserDelete,
       value: 0,
-      label: "Tugatganlar",
+      label: t('tot.metrics.completed'),
     },
     {
       icon: MoneyBag,
       value: 100,
-      label: "Sertifikatlar",
+      label: t('tot.metrics.certificates'),
     },
     {
       icon: Document,
       value: 250,
-      label: "Jami darslar",
+      label: t('tot.metrics.totalLessons'),
     },
   ];
 
-  const trainingDirections = [
-    {
-      title: "Sun&apos;iy intellekt va mashinaviy ta&apos;lim",
-      description: "Zamonaviy AI va ML texnologiyalarini o&apos;rganish",
-      icon: "🤖",
-    },
-    {
-      title: "Kiberxavfsizlik",
-      description: "Siber xavfsizlik va ma&apos;lumotlarni himoya qilish",
-      icon: "🔒",
-    },
-    {
-      title: "Bulutli texnologiyalar",
-      description: "Cloud computing va bulutli xizmatlar",
-      icon: "☁️",
-    },
-    {
-      title: "Kompyuter tarmoqlari",
-      description: "Tarmoq arxitekturasi va protokollar",
-      icon: "🌐",
-    },
-    {
-      title: "Ma&apos;lumotlar tahlili",
-      description: "Data Analysis va statistika",
-      icon: "📊",
-    },
-  ];
+  const trainingInfo = t('tot.trainingInfo', { returnObjects: true });
+  const trainingDirections = t('tot.trainingDirections', { returnObjects: true });
+
+  // Ensure arrays are actually arrays
+  const safeTrainingInfo = Array.isArray(trainingInfo) ? trainingInfo : [];
+  const safeTrainingDirections = Array.isArray(trainingDirections) ? trainingDirections : [];
 
   return (
     <div className="">
@@ -174,7 +155,7 @@ export default function TOT() {
         <Breadcrumb />
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-          O&apos;qituvchilar uchun IT treninglar (TOT)
+          {t('tot.title')}
         </h1>
 
         <div className="relative mb-12">
@@ -186,26 +167,20 @@ export default function TOT() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
-          Loyiha doirasida Respublikamizning xususiy IT ta&apos;lim markazlarining
-          o&apos;qituvchilari uchun onlayn treninglar tashkil qilinadi.
+          {t('tot.description')}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-200">
-            Trening haqida
+            {t('tot.sections.aboutTraining')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              3 oy davomida tashkil etiladigan treninglarda markazlarning IT
-              yo&apos;nalishidagi o&apos;qituvchi-mentorlariga tajribali trenerlar tomonidan
-              dars beriladi.
-            </DocumentCard>
-            <DocumentCard>
-              Mashg&apos;ulotlar xalqaro standartlar asosida tashkil etilib,
-              o&apos;qituvchi-mentorlar raqamli texnologiyalar bo&apos;yicha ilg&apos;or
-              yondashuvlarni o&apos;zlashtirish imkoniyatiga ega bo&apos;ladilar.
-            </DocumentCard>
+            {safeTrainingInfo.map((info, index) => (
+              <DocumentCard key={index}>
+                {info}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
@@ -218,10 +193,10 @@ export default function TOT() {
 
         <section className="py-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center transition-colors duration-200">
-            Trening yo&apos;nalishlari
+            {t('tot.sections.trainingDirections')}
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {trainingDirections.map((direction, index) => (
+            {safeTrainingDirections.map((direction, index) => (
               <TrainingDirectionCard
                 key={index}
                 title={direction.title}
@@ -235,7 +210,7 @@ export default function TOT() {
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-              Trening statistikasi
+              {t('tot.sections.trainingStatistics')}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

@@ -70,37 +70,37 @@ export default function ItTalents() {
     {
       icon: UsersGroup,
       value: 23,
-      label: "Potensial nomzodlar",
+      label: t("itTalents.metrics.potentialCandidates"),
     },
     {
       icon: StickerAdd,
       value: 0,
-      label: "Yangi arizalar",
+      label: t("itTalents.metrics.newApplications"),
     },
     {
       icon: UserLoad,
       value: 0,
-      label: "Jarayonda",
+      label: t("itTalents.metrics.inProcess"),
     },
     {
       icon: UserVerify,
       value: 6,
-      label: "Tugallanganlar",
+      label: t("itTalents.metrics.completed"),
     },
     {
       icon: UserDelete,
       value: 167,
-      label: "Rad etilganlar",
+      label: t("itTalents.metrics.rejected"),
     },
     {
       icon: MoneyBag,
       value: 0,
-      label: "To&apos;lov jarayonida",
+      label: t("itTalents.metrics.paymentInProcess"),
     },
     {
       icon: Document,
       value: 173,
-      label: "Barcha arizalar",
+      label: t("itTalents.metrics.allApplications"),
     },
   ];
 
@@ -109,7 +109,7 @@ export default function ItTalents() {
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[3em] transition-colors duration-200">
-          {t("hero.title")}
+          {t("itTalents.title")}
         </h1>
 
         <div className="relative mb-12">
@@ -120,7 +120,7 @@ export default function ItTalents() {
           />
         </div>
 
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 transition-colors duration-200">{t("hero.description")}</p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 transition-colors duration-200">{t("itTalents.description")}</p>
 
         <section>
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-200">
@@ -153,17 +153,17 @@ export default function ItTalents() {
 
               <div className="text-center space-y-3 md:space-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900 dark:text-white transition-colors duration-200">
-                  O&apos;quv yo&apos;nalishlar ro&apos;yxati
+                  {t("itTalents.sections.studyDirections")}
                 </h1>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 transition-colors duration-200">
-                  Raqamli texnologiyalar vazirligi tomonidan tasdiqlangan
+                  {t("itTalents.sections.studyDirectionsSubtitle")}
                 </p>
                 <a
                   href={ItTalentsDocs}
                   download
                   className="mt-4 md:mt-6 px-6 md:px-8 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors inline-block"
                 >
-                  Yuklab olish
+                  {t("itTalents.sections.download")}
                 </a>
               </div>
 
@@ -223,10 +223,10 @@ export default function ItTalents() {
               <div className="w-full flex justify-between items-center">
                 <div className="flex flex-col gap-4">
                   <h1 className="text-white text-3xl font-bold">
-                    IT Park rezidentlari
+                    {t("itTalents.sections.itParkResidents")}
                   </h1>
                   <p className="text-white/90 text-lg max-w-xl">
-                    IT Park tomonidan taqdim etilgan yagona reyestr
+                    {t("itTalents.sections.itParkDescription")}
                   </p>
                   <div>
                     <button
@@ -238,7 +238,7 @@ export default function ItTalents() {
                       }
                       className="mt-4 px-6 py-2 bg-white text-blue-600 hover:bg-blue-50 transition-colors rounded-[27px]"
                     >
-                      Havolaga o&apos;tish
+                      {t("itTalents.sections.goToLink")}
                     </button>
                   </div>
                 </div>
@@ -261,11 +261,10 @@ export default function ItTalents() {
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
               <h1 className="text-[#222] dark:text-white font-bold text-[40px] transition-colors duration-200">
-                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro&apos;yxatdan
-                o&apos;tish bo&apos;yicha yo&apos;riqnoma:
+                {t("itTalents.sections.crmGuide")}
               </h1>
               <p className="text-[#222] dark:text-gray-300 text-[20px] transition-colors duration-200">
-                Quyidagi qo&apos;llanmamiz siz uchun
+                {t("itTalents.sections.crmGuideSubtitle")}
               </p>
 
               <div>
@@ -276,7 +275,7 @@ export default function ItTalents() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    O&apos;zbek tilida
+                    {t("itTalents.sections.uzbekLanguage")}
                   </button>
                   <button
                     className="px-[50px] py-[12px] bg-[#E3EEFF] dark:bg-blue-900 hover:bg-[#E3EEF3] dark:hover:bg-blue-800 text-[#2F2F2F] dark:text-white rounded-3xl font-medium transition-colors duration-200"
@@ -284,7 +283,7 @@ export default function ItTalents() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    Rus tilida
+                    {t("itTalents.sections.russianLanguage")}
                   </button>
                 </div>
               </div>

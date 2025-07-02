@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 // import CarouselImage from "../../assets/carousel.jpg";
 import { rightIcon } from "../../assets/icons/icon";
 import CarouselImage from "../../assets/images/projects/9.png";
+import { useTranslation } from "react-i18next";
 import {
   Document,
   MoneyBag,
@@ -84,71 +85,53 @@ SkillCard.propTypes = {
 };
 
 export default function Apio() {
+  const { t } = useTranslation("global");
 
   const metrics = [
     {
       icon: UsersGroup,
       value: 300,
-      label: "Qatnashuvchilar",
+      label: t("apio.metrics.participants"),
     },
     {
       icon: StickerAdd,
       value: 25,
-      label: "Mamlakatlar",
+      label: t("apio.metrics.countries"),
     },
     {
       icon: UserLoad,
       value: 20,
-      label: "Yosh chegarasi",
+      label: t("apio.metrics.ageLimit"),
     },
     {
       icon: UserVerify,
       value: 1,
-      label: "Bosqich",
+      label: t("apio.metrics.stage"),
     },
     {
       icon: UserDelete,
       value: 0,
-      label: "G&apos;oliblar",
+      label: t("apio.metrics.winners"),
     },
     {
       icon: MoneyBag,
       value: 100,
-      label: "Masalalar",
+      label: t("apio.metrics.problems"),
     },
     {
       icon: Document,
       value: 5,
-      label: "Soat",
+      label: t("apio.metrics.hours"),
     },
   ];
 
-  const skills = [
-    {
-      title: "Algoritmik fikrlash",
-      description: "Murakkab muammolarni hal qilish uchun algoritmik yondashuvlar ishlab chiqish va optimallashtirish.",
-      icon: "🧠",
-      level: "Yuqori daraja"
-    },
-    {
-      title: "Mantiqiy fikrlash",
-      description: "Muammolarni tahlil qilish, mantiqiy xulosa chiqarish va samarali yechimlar topish.",
-      icon: "⚡",
-      level: "Kritik ko&apos;nikma"
-    },
-    {
-      title: "Ijodiy yondashuv",
-      description: "Muammolarni yangi va innovatsion usullar bilan hal qilish, ijodiy fikrlashni rivojlantirish.",
-      icon: "💡",
-      level: "Ixtirochilik"
-    },
-  ];
+  const skills = t("apio.skills", { returnObjects: true });
 
   return (
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-          APIO - Osiyo-Tinch okeani informatika olimpiadasi
+          {t("apio.title")}
         </h1>
 
         <div className="relative mb-12">
@@ -160,27 +143,27 @@ export default function Apio() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
-          APIO – bu yuqori algoritmik bilimlarga ega yoshlar uchun mo&apos;ljallangan onlayn olimpiada bo&apos;lib, u ko&apos;plab davlatlar uchun sport dasturlash olamidagi eng nufuzli xalqaro musobaqa – Xalqaro informatika olimpiadasi (International Olympiad in Informatics, IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi.
+          {t("apio.description")}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Olimpiada haqida
+            {t("apio.sections.about")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              APIO Osiyo-Tinch okeani mintaqasidagi eng nufuzli informatika olimpiadalaridan biri hisoblanadi. U yuqori darajadagi algoritmik bilimlarga ega yoshlar uchun mo&apos;ljallangan.
+              {t("apio.cards.about1")}
             </DocumentCard>
             <DocumentCard>
-              Bu turdagi musobaqalar yosh avlodga mantiqiy va algoritmik fikrlash, ijodiy yondashuv va murakkab muammolarni hal qilish bo&apos;yicha ko&apos;nikmalarini rivojlantirishga yordam beradi.
+              {t("apio.cards.about2")}
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Rivojlanadigan ko&apos;nikmalar
+            {t("apio.sections.developingSkills")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -198,30 +181,30 @@ export default function Apio() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            IOI tayyorgarligi
+            {t("apio.sections.ioiPreparation")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              APIO Xalqaro informatika olimpiadasi (IOI) uchun tayyorgarlikning muhim bosqichi hisoblanadi. Bu olimpiada orqali talabalar xalqaro darajadagi musobaqalarga tayyorgarlik ko&apos;rishadi.
+              {t("apio.cards.ioi1")}
             </DocumentCard>
             <DocumentCard>
-              IOI - bu sport dasturlash olamidagi eng nufuzli xalqaro musobaqa bo&apos;lib, unda dunyoning eng yaxshi yosh dasturchilari ishtirok etadi.
+              {t("apio.cards.ioi2")}
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Qatnashish shartlari
+            {t("apio.sections.participationConditions")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Olimpiadada faqat yuqori algoritmik bilimlarga ega yoshlar ishtirok etishi mumkin. Qatnashuvchilar murakkab dasturlash muammolarini hal qilish qobiliyatiga ega bo&apos;lishlari kerak.
+              {t("apio.cards.participation1")}
             </DocumentCard>
             <DocumentCard>
-              Musobaqa onlayn formatda o&apos;tkaziladi va 5 soat davom etadi. Qatnashuvchilar berilgan masalalarga yechim ishlab chiqishadi.
+              {t("apio.cards.participation2")}
             </DocumentCard>
           </div>
         </section>
@@ -229,7 +212,7 @@ export default function Apio() {
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-              Olimpiada statistikasi
+              {t("apio.sections.statistics")}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

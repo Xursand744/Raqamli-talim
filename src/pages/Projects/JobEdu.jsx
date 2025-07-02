@@ -13,20 +13,23 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
       <a href="/" className="hover:text-gray-900 flex items-center gap-[10px]">
         <img src={HomeIcon} alt="" />
-        Bosh sahifa
+        {t('jobEdu.breadcrumb.home')}
       </a>
       <ChevronRight size={16} />
       <a href="/projects" className="hover:text-gray-900">
-        Loyihalar
+        {t('jobEdu.breadcrumb.projects')}
       </a>
       <ChevronRight size={16} />
-      <span className="text-gray-900">Job&Edu Fest - IT mehnat va ta`lim yarmarkasi</span>
+      <span className="text-gray-900">{t('jobEdu.breadcrumb.current')}</span>
     </div>
   );
 };
@@ -76,42 +79,43 @@ MetricsCard.defaultProps = {
 };
 
 export default function JobEdu() {
+  const { t } = useTranslation();
 
   const metrics = [
     {
       icon: UsersGroup,
       value: 1200,
-      label: "Ro`yxatdan o`tganlar",
+      label: t('jobEdu.metrics.registered'),
     },
     {
       icon: StickerAdd,
       value: 100,
-      label: "Kompaniyalar",
+      label: t('jobEdu.metrics.companies'),
     },
     {
       icon: UserLoad,
       value: 1000,
-      label: "Bo`sh ish o`rinlari",
+      label: t('jobEdu.metrics.vacancies'),
     },
     {
       icon: UserVerify,
       value: 800,
-      label: "Amaliyot o`rinlari",
+      label: t('jobEdu.metrics.internships'),
     },
     {
       icon: UserDelete,
       value: 700,
-      label: "Maktab bitiruvchilari",
+      label: t('jobEdu.metrics.graduates'),
     },
     {
       icon: MoneyBag,
       value: 14,
-      label: "May oyi",
+      label: t('jobEdu.metrics.mayMonth'),
     },
     {
       icon: Document,
       value: 6,
-      label: "Taqdimotlar",
+      label: t('jobEdu.metrics.presentations'),
     },
   ];
 
@@ -121,7 +125,7 @@ export default function JobEdu() {
         <Breadcrumb />
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-          Job&Edu Fest - IT mehnat va ta`lim yarmarkasi
+          {t('jobEdu.title')}
         </h1>
 
         <div className="relative mb-12">
@@ -133,20 +137,20 @@ export default function JobEdu() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
-          Yarmarkaning asosiy maqsadi — yoshlarni IT bozoridagi real imkoniyatlar bilan tanishtirish hamda ta`lim va mehnat o`rtasida samarali integratsiyani yo`lga qo`yishdir.
+          {t('jobEdu.description')}
         </p>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
-          Tashkil etilgan ushbu mehnat va ta`lim yarmarkasida IT sohasida faoliyat olib boruvchi kompaniya va ta`lim tashkilotlari o`zlarining bo`sh ish o`rinlari va ta`lim sohasidagi imkoniyatlari bilan ishtirok etadi.
+          {t('jobEdu.description2')}
         </p>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
-          Yarmarkada raqamli texnologiyalar sohasida faoliyat olib boruvchi mahalliy va xalqaro kompaniya vakillari, ta`lim tashkilotlari, xususan, oliy o`quv yurtlari va IT o`quv markazlari tomonidan yarmarkada ishtirok etgan yoshlarga tashkilotlarda yaratilgan sharoitlar, bo`sh ish o`rinlari, shuningdek, mavjud ta`lim dasturlari haqida ma`lumotlar beriladi.
+          {t('jobEdu.description3')}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Video material
+            {t('jobEdu.sections.videoMaterial')}
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
@@ -158,7 +162,7 @@ export default function JobEdu() {
                 <source src="/src/assets/videos/Job&Edu.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <p className="text-gray-700 text-sm text-center">Yarmarka haqida video material</p>
+              <p className="text-gray-700 text-sm text-center">{t('jobEdu.sections.videoDescription')}</p>
             </div>
           </div>
         </section>
@@ -166,7 +170,7 @@ export default function JobEdu() {
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 mb-8 mt-[80px]">
-              Yarmarka statistikasi
+              {t('jobEdu.sections.statistics')}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

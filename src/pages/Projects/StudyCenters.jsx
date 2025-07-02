@@ -74,29 +74,9 @@ FAQItem.propTypes = {
 
 const FAQ = () => {
   const [openItems, setOpenItems] = useState({});
+  const { t } = useTranslation("global");
 
-  const faqData = [
-    {
-      id: 1,
-      question:
-        "ITga ixtisoslashtirilgan universitetlar qanday afzalliklarga ega?",
-      answer:
-        "IT-sohasidagi eng yaxshi o&apos;quv markazlari markaz haqidagi ma&apos;lumotlar va ko&apos;rsatiladigan xizmatlarni ijtimoiy tarmoqlarda keng yoritib boradilar",
-    },
-    {
-      id: 2,
-      question:
-        "ITga ixtisoslashgan universitetlarda qanday yo&apos;nalishlar mavjud?",
-      answer: "Markazning saytlasidan olsangiz bo&apos;ladi",
-    },
-    {
-      id: 3,
-      question:
-        "IT-sohasidagi kasblarni profesional darajada egallash uchun o&apos;quv markazida offline mashg&apos;ulitlarga qatnashish afzalmi yoki online o&apos;qisa ham bo&apos;ladimi?",
-      answer:
-        "Albatta bize xalijimizda yaxshi bir gap bor ya&apos;ni &quot;Har bir sohada ustoz tutgan afzaldir&quot; shunung uchun o&apos;quv markazida offline mashg&apos;ulitlarga qatnashib kasb egallash maqsadga muvofiq",
-    },
-  ];
+  const faqData = t("studyCenters.faq.questions", { returnObjects: true });
 
   const toggleItem = (id) => {
     setOpenItems((prev) => ({
@@ -107,7 +87,7 @@ const FAQ = () => {
 
   return (
     <div className="max-w-[800px] mt-[50px] mx-auto px-4">
-      <h1 className="text-[32px] font-bold text-left mb-8 text-gray-900 dark:text-white transition-colors duration-200">FAQ</h1>
+      <h1 className="text-[32px] font-bold text-left mb-8 text-gray-900 dark:text-white transition-colors duration-200">{t("studyCenters.faq.title")}</h1>
       <div className="space-y-4">
         {faqData.map((item) => (
           <FAQItem
@@ -130,11 +110,11 @@ function StudyCenters() {
   const breadCrumps = [
     {
       link: "/projects",
-      title: "Loyihalar",
+      title: t("studyCenters.breadcrumbs.projects"),
     },
     {
       link: "/projects/study-centers",
-      title: "O&apos;quv markazlar",
+      title: t("studyCenters.breadcrumbs.studyCenters"),
     },
   ];
 
@@ -142,102 +122,38 @@ function StudyCenters() {
     {
       icon: UserDelete,
       number: 522,
-      title: "Ta&apos;lim rezidentlar soni",
+      title: t("studyCenters.metrics.educationResidents"),
     },
     {
       icon: MoneyBag,
       number: "1,426",
-      title: "O&apos;quv kurslar soni",
+      title: t("studyCenters.metrics.courses"),
     },
     {
       icon: MoneyBag,
       number: "9,042",
-      title: "O&apos;quvchilar soni (nafar)",
+      title: t("studyCenters.metrics.students"),
     },
     {
       icon: UserDelete,
       number: "34,584",
-      title: "Bitiruvchilar soni (nafar)",
+      title: t("studyCenters.metrics.graduates"),
     },
     {
       icon: UserDelete,
       number: "13,570",
-      title: "Ishga joylashgan bitiruvchilar soni (nafar)",
+      title: t("studyCenters.metrics.employedGraduates"),
     },
     {
       icon: MoneyBag,
       number: "780",
-      title: "IT eksportga ishga joylashgan bitiruvchilar (nafar)",
+      title: t("studyCenters.metrics.exportGraduates"),
     },
   ];
 
-  const stats = [
-    {
-      id: 1,
-      title: "Platformadagi kurslar soni:",
-      count: "62 ta",
-      description: "Har bir kurs 0.10 ball beradi.",
-      total: "Kurslar uchun 6.2 ball.",
-    },
-    {
-      id: 2,
-      title: "Platformadagi talabalar soni:",
-      count: "952 nafar",
-      description: "Har bir talaba 0.10 ball qo&apos;shadi.",
-      total: "Talabalar uchun 95.2 ball.",
-    },
-    {
-      id: 3,
-      title: "Bitiruvchilar soni:",
-      count: "1671 nafar",
-      description: "Har bir bitiruvchi 0.20 ball qo&apos;shadi.",
-      total: "Bitiruvchilar uchun 334.2 ball.",
-    },
-    {
-      id: 4,
-      title: "Ish bilan ta&apos;minlangan bitiruvchilar:",
-      count: "729 nafar",
-      description: "Har bir ishga joylashish 0.20 ball qo&apos;shadi.",
-      total: "Ish bilan ta&apos;minlangan bitiruvchilar uchun 145.8 ball.",
-    },
-    {
-      id: 5,
-      title: "IT eksport kompaniyalariga ishga joylashgan bitiruvchilar:",
-      count: "106 nafar",
-      description: "Har bir shunday bitiruvchi 0.40 ball olib keladi.",
-      total: "Eksport kompaniyalariga ishga joylashganlar uchun 42.4 ball.",
-    },
-  ];
-
-  const totalBalls = "6.2 + 95.2 + 334.2 + 145.8 + 42.4 = 623.8 ball";
-
-  const courses = [
-    {
-      id: 1,
-      title: "PDP Akademiya",
-      price: "1,500,000 dan boshlab",
-      tags: ["Loyiha boshqaruvi", "Dizayn"],
-      location: "Toshkent",
-      status: ["Oflayn"],
-    },
-    {
-      id: 2,
-      title: "PDP Akademiya",
-      price: "1,500,000 dan boshlab",
-      tags: ["Loyiha boshqaruvi", "Dizayn"],
-      location: "Toshkent",
-      status: ["Oflayn"],
-    },
-    {
-      id: 3,
-      title: "PDP Akademiya",
-      price: "1,500,000 dan boshlab",
-      location: "Toshkent",
-      status: ["Oflayn", "Onlayn"],
-      tags: ["Loyiha boshqaruvi", "Dizayn"],
-      design: "+5",
-    },
-  ];
+  const stats = t("studyCenters.stats", { returnObjects: true });
+  const totalBalls = t("studyCenters.totalBalls");
+  const courses = t("studyCenters.courses", { returnObjects: true });
 
   return (
     <>
@@ -246,7 +162,7 @@ function StudyCenters() {
           <BreadCrumps breadCrumps={breadCrumps} />
 
           <h1 className="text-[56px] font-bold text-[#222222] dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-            O&apos;quv markazlar
+            {t("studyCenters.title")}
           </h1>
 
           <div className="max-w-[792px] w-full">
@@ -254,7 +170,7 @@ function StudyCenters() {
           </div>
 
           <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-            O&apos;quv markazlar sonlarda
+            {t("studyCenters.titleInNumbers")}
           </h1>
           <div className="flex justify-between gap-4 flex-wrap mb-[100px]">
             {studyCenterNumbers.map((item) => {
@@ -263,7 +179,7 @@ function StudyCenters() {
           </div>
 
           <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-            O&apos;quv markazlari reytingi qanday shakllanadi?
+            {t("studyCenters.ratingTitle")}
           </h1>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             {stats.map((stat) => (
@@ -283,8 +199,7 @@ function StudyCenters() {
         <div>
           <div className="max-w-[792px] w-full mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-              IT-Park rezidenti bo&apos;lgan nodavlat ta&apos;lim tashkilotlarining
-              reytingi
+              {t("studyCenters.residentRatingTitle")}
             </h1>
           </div>
           <StudyCentersTable />
@@ -293,15 +208,13 @@ function StudyCenters() {
         <div className="container pt-[100px] max-w-6xl mx-auto w-full">
           <div className="w-full w-3xl px-[200px] rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-400 p-10 text-center text-white">
             <h1 className="text-3xl font-bold mb-4">
-              O&apos;quv markazlar ro&apos;yxati
+              {t("studyCenters.listTitle")}
             </h1>
             <p className="mb-8 text-lg">
-              O&apos;z hududingizdagi o&apos;quv markazlarni va ularning kurslari
-              to&apos;g&apos;risidagi ma&apos;lumotlarni bilish uchun quyidagi havola orqali
-              o&apos;ting
+              {t("studyCenters.listDescription")}
             </p>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-full transition duration-300">
-              Ro&apos;yxatni ko&apos;rish
+              {t("studyCenters.viewList")}
             </button>
           </div>
         </div>
@@ -366,7 +279,7 @@ function StudyCenters() {
 
         <div className="flex justify-center mt-[40px]">
           <button className="py-[12px] px-[40px] rounded-[27px] bg-[#2675EB] text-white transition hover:opacity-[0.8]">
-            Barchasini ko&apos;rish
+            {t("studyCenters.viewAll")}
           </button>
         </div>
 
@@ -378,11 +291,10 @@ function StudyCenters() {
           <div className="flex justify-between gap-[20px] ">
             <div className="w-2/3 flex flex-col gap-[20px]">
               <h1 className="text-[#222] dark:text-white font-bold text-[40px] transition-colors duration-200">
-                Loyiha doirasida maxsus tizim (crm.digital.uz)dan ro&apos;yxatdan
-                o&apos;tish bo&apos;yicha yo&apos;riqnoma:
+                {t("studyCenters.guide.title")}
               </h1>
               <p className="text-[#222] dark:text-gray-300 text-[20px] transition-colors duration-200">
-                Quyidagi qo&apos;llanmamiz siz uchun
+                {t("studyCenters.guide.description")}
               </p>
 
               <div>
@@ -393,7 +305,7 @@ function StudyCenters() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    O&apos;zbek tilida
+                    {t("studyCenters.guide.uzbek")}
                   </button>
                   <button
                     className="px-[50px] py-[12px] bg-[#E3EEFF] dark:bg-blue-900 hover:bg-[#E3EEF3] dark:hover:bg-blue-800 text-[#2F2F2F] dark:text-white rounded-3xl font-medium transition-colors duration-200"
@@ -401,7 +313,7 @@ function StudyCenters() {
                       navigate("https://crm.digital.uz/login?redirect_url=/")
                     }
                   >
-                    Rus tilida
+                    {t("studyCenters.guide.russian")}
                   </button>
                 </div>
               </div>

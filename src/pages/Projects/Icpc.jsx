@@ -12,6 +12,7 @@ import {
   UsersGroup,
   UserVerify,
 } from "../../assets/it-talents-images";
+import { useTranslation } from "react-i18next";
 
 const DocumentCard = ({ children }) => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-200 border border-gray-200 dark:border-gray-600">
@@ -86,100 +87,63 @@ StageCard.propTypes = {
 };
 
 export default function Icpc() {
+  const { t } = useTranslation("global");
 
   const metrics = [
     {
       icon: UsersGroup,
       value: 50000,
-      label: "Qatnashuvchilar",
+      label: t('icpc.metrics.participants'),
     },
     {
       icon: StickerAdd,
       value: 100,
-      label: "Mamlakatlar",
+      label: t('icpc.metrics.countries'),
     },
     {
       icon: UserLoad,
       value: 1970,
-      label: "Boshlangan yili",
+      label: t('icpc.metrics.startYear'),
     },
     {
       icon: UserVerify,
       value: 4,
-      label: "Bosqichlar",
+      label: t('icpc.metrics.stages'),
     },
     {
       icon: UserDelete,
       value: 0,
-      label: "G&apos;oliblar",
+      label: t('icpc.metrics.winners'),
     },
     {
       icon: MoneyBag,
       value: 5,
-      label: "Soat",
+      label: t('icpc.metrics.hours'),
     },
     {
       icon: Document,
       value: 10,
-      label: "Masalalar",
+      label: t('icpc.metrics.problems'),
     },
   ];
 
-  const stages = [
-    {
-      title: "Hududiy bosqich",
-      description: "Har bir hududda o&apos;tkazilib, mahalliy iqtidorlar aniqlanadi. Ushbu bosqichda jamoalar Respublika bosqichiga yo&apos;llanma uchun kurashadi.",
-      icon: "🏆",
-      location: "Mahalliy hududlar",
-      participants: "Barcha jamoalar"
-    },
-    {
-      title: "Respublika bosqichi",
-      description: "Hududiy bosqich g&apos;oliblari mamlakat miqyosidagi eng kuchli jamoalarni aniqlash uchun bellashadi. Ushbu bosqichda yuqori o&apos;rinlarni egallagan jamoalar keyingi bosqichga yo&apos;llanma oladi.",
-      icon: "👑",
-      location: "Toshkent",
-      participants: "Hududiy g&apos;oliblar"
-    },
-    {
-      title: "Yarim final",
-      description: "Yarim final musobaqasi Qozog&apos;istonning Astana shahrida o&apos;tkaziladi. O&apos;zbekistondan 15-20 ta jamoa qatnashish uchun taklif etiladi.",
-      icon: "🌍",
-      location: "Astana, Qozog&apos;iston",
-      participants: "15-20 jamoa"
-    },
-    {
-      title: "Final",
-      description: "Yarim finalda yuqori natija ko&apos;rsatgan jamoalar dunyoning eng kuchli dasturchi jamoalari bilan bellashish uchun jahon finaliga yo&apos;llanma oladi.",
-      icon: "🏅",
-      location: "Jahon finali",
-      participants: "Eng kuchli jamoalar"
-    },
-  ];
+  const goals = t('icpc.goals', { returnObjects: true });
+  const format = t('icpc.format', { returnObjects: true });
+  const stages = t('icpc.stages', { returnObjects: true });
+  const importance = t('icpc.importance', { returnObjects: true });
 
-  const goals = [
-    {
-      title: "Jamoaviy ishlash",
-      description: "Jamoaviy ishlash ko&apos;nikmalarini rivojlantirish",
-      icon: "🤝"
-    },
-    {
-      title: "Qiziqishni oshirish",
-      description: "Talabalar orasida algoritmlar va dasturlashga qiziqishni oshirish",
-      icon: "📈"
-    },
-    {
-      title: "Tayyorgarlik",
-      description: "Real muhandislik muammolarini hal qilish uchun talabalarga tayyorgarlik ko&apos;rish imkoniyati",
-      icon: "⚙️"
-    },
-  ];
+  // Ensure all arrays are actually arrays
+  const safeGoals = Array.isArray(goals) ? goals : [];
+  const safeFormat = Array.isArray(format) ? format : [];
+  const safeStages = Array.isArray(stages) ? stages : [];
+  const safeImportance = Array.isArray(importance) ? importance : [];
 
   return (
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-          ICPC - Xalqaro talabalar dasturlash musobaqasi
+          {t('icpc.title')}
         </h1>
 
         <div className="relative mb-12">
@@ -191,16 +155,16 @@ export default function Icpc() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
-          ICPC (International Collegiate Programming Contest) — bu har yili talabalar o&apos;rtasida tashkil etiladigan dunyodagi eng yirik va nufuzli sport dasturlash bo&apos;yicha xalqaro olimpiada bo&apos;lib, 1970-yildan beri o&apos;tkazib kelinmoqda. Mazkur olimpiada butun dunyo bo&apos;ylab minglab jamoalarni birlashtiradi.
+          {t('icpc.description')}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Olimpiada maqsadlari
+            {t('icpc.sections.goals')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
-            {goals.map((goal, index) => (
+            {safeGoals.map((goal, index) => (
               <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-purple-200 dark:border-purple-700/30">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -220,26 +184,25 @@ export default function Icpc() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Musobaqa formati
+            {t('icpc.sections.format')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              Jamoa tarkibi: 3 nafar talaba va bir nafar murabbiy. Jamoalar bir kompyuterda 5 soat ichida bir necha algoritmik masalalarni yechishlari kerak bo&apos;ladi.
-            </DocumentCard>
-            <DocumentCard>
-              Masalalar muvaffaqiyatli yechish uchun qatnashchilardan chuqur matematik bilim, algoritmik tafakkur va dasturlash ko&apos;nikmalari talab etiladi.
-            </DocumentCard>
+            {safeFormat.map((text, index) => (
+              <DocumentCard key={index}>
+                {text}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Musobaqa bosqichlari
+            {t('icpc.sections.stages')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
-            {stages.map((stage, index) => (
+            {safeStages.map((stage, index) => (
               <StageCard
                 key={index}
                 title={stage.title}
@@ -254,23 +217,22 @@ export default function Icpc() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Olimpiadaning ahamiyati
+            {t('icpc.sections.importance')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              ICPC Google, IBM, Microsoft kabi yirik IT-kompaniyalar tomonidan qo&apos;llab-quvvatlanadi. Bu olimpiada dunyodagi eng nufuzli dasturlash musobaqalaridan biri hisoblanadi.
-            </DocumentCard>
-            <DocumentCard>
-              ICPC olimpiadasida qatnashish nufuzli yutuq hisoblanadi va kelajakdagi karyera uchun keng imkoniyatlar ochadi. Bu talabalar uchun xalqaro darajada o&apos;z qobiliyatlarini ko&apos;rsatish imkoniyati.
-            </DocumentCard>
+            {safeImportance.map((text, index) => (
+              <DocumentCard key={index}>
+                {text}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-              Olimpiada statistikasi
+              {t('icpc.sections.statistics')}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

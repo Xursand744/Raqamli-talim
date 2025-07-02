@@ -18,64 +18,45 @@ import { Autoplay } from "swiper/modules";
 
 import Video from "../../assets/videos/Uzbekcoders.Uz.mp4";
 
-const courses = [
-  {
-    id: 1,
-    title: "Data Science Math Skills",
-  },
-  {
-    id: 2,
-    title: "Code yourself",
-  },
-  {
-    id: 3,
-    title: "Excel Fundamentals for Data Analysis",
-  },
-  {
-    id: 4,
-    title: "Introduction to Generative AI",
-  },
-  {
-    id: 5,
-    title: "Introduction to User Experience Design",
-  },
-];
-
 function Courses() {
+  const { t } = useTranslation();
+  const coursesList = t('oneMillionUzbekCoders.courses.coursesList', { returnObjects: true });
+  
+  // Ensure coursesList is an array
+  const safeCoursesList = Array.isArray(coursesList) ? coursesList : [];
+  
   return (
     <div className="max-w-[1300px] mx-auto px-4 py-8 sm:py-12">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-        Yo'nalishlar
+        {t('oneMillionUzbekCoders.courses.title')}
       </h2>
       <p className="mb-6 sm:mb-8 text-gray-600 text-sm sm:text-base md:text-base">
-        Loyihada yosh chegarasi mavjud emas barcha o'qish istagida bo'lganlar
-        uchun. Loyiha doirasida yoshlar 5 ta yo'nalish bo'yicha dunyoning
-        yetakchi mentorlaridan bilim olishlari mumkin bo'ladi.
+        {t('oneMillionUzbekCoders.courses.description')}
       </p>
 
       <div className="flex flex-col gap-3 sm:gap-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          {courses.slice(0, 3).map((course) => (
+          {safeCoursesList.slice(0, 3).map((course, index) => (
             <div
-              key={course.id}
+              key={index}
               className="p-3 sm:p-4 md:p-6 rounded-lg border border-gray-200 hover:border-blue-500 cursor-pointer transition-all duration-300"
             >
               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full bg-blue-500 mb-2 sm:mb-3 md:mb-4"></div>
               <h3 className="font-medium text-sm sm:text-base md:text-lg">
-                {course.title}
+                {course}
               </h3>
             </div>
           ))}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          {courses.slice(3, 5).map((course) => (
+          {safeCoursesList.slice(3, 5).map((course, index) => (
             <div
-              key={course.id}
+              key={index + 3}
               className="p-3 sm:p-4 md:p-6 rounded-lg border border-gray-200 hover:border-blue-500 cursor-pointer transition-all duration-300"
             >
               <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full bg-blue-500 mb-2 sm:mb-3 md:mb-4"></div>
               <h3 className="font-medium text-sm sm:text-base md:text-lg">
-                {course.title}
+                {course}
               </h3>
             </div>
           ))}
@@ -109,7 +90,7 @@ const OneMillionUzbekCoders = () => {
       <div className="max-w-[1230px] mx-auto">
         <div className="flex justify-center mt-[100px]">
           <h1 className="font-bold text-[56px] text-[#222222] dark:text-white mb-[40px] w-[792px] text-center transition-colors duration-200">
-            Bir million dasturchi loyihasi
+            {t('oneMillionUzbekCoders.title')}
           </h1>
         </div>
 
@@ -120,9 +101,7 @@ const OneMillionUzbekCoders = () => {
             alt="Coursera Project"
           />
           <h1 className="pt-[40px] pb-[100px] font-semibold text-[18px]">
-            O'zbekiston Respublikasida yoshlarni &quot;Bir million dasturchi&quot;
-            loyihasining navbatdagi bosqichi sifatida &quot;Coursera&quot; onlayn
-            platformasida o'qitish maqsad qilingan.
+            {t('oneMillionUzbekCoders.subtitle')}
           </h1>
         </div>
       </div>
@@ -130,7 +109,7 @@ const OneMillionUzbekCoders = () => {
       <div className="max-w-[1230px] mx-auto">
         <div className="flex justify-center">
           <h1 className="pb-[24px] font-semibold text-[32px]">
-            Kelajak kasblarini egallang!
+            {t('oneMillionUzbekCoders.futureCareers')}
           </h1>
         </div>
       </div>
@@ -168,7 +147,7 @@ const OneMillionUzbekCoders = () => {
                       onClick={() => navigate(`/articles/${index + 1}`)}
                       className="px-6 py-2 font-medium rounded-[24px] border border-[#2F2F2F] hover:bg-[#2F2F2F] hover:text-white transition-all w-max"
                     >
-                      Batafsil
+                      {t('oneMillionUzbekCoders.moreDetails')}
                     </button>
                   </div>
                 </div>
@@ -186,7 +165,7 @@ const OneMillionUzbekCoders = () => {
       </div>
 
       <div className="max-w-[1230px] mx-auto">
-        <h1 className="pb-[24px] font-semibold text-[32px]">Dastur sonlarda</h1>
+        <h1 className="pb-[24px] font-semibold text-[32px]">{t('oneMillionUzbekCoders.programInNumbers')}</h1>
       </div>
 
       <div className="max-w-[1230px] mx-auto pb-[100px] gap-[24px] grid grid-cols-1 lg:grid-cols-2">
@@ -196,7 +175,7 @@ const OneMillionUzbekCoders = () => {
             1,000,000+
           </h1>
           <p className="font-medium text-[16px] text-[#222222] dark:text-gray-200 transition-colors duration-200">
-            Ro'yxatdan o'tganlar soni
+            {t('oneMillionUzbekCoders.registeredCount')}
           </p>
         </div>
         <div className="w-[384] py-[22px] px-[20px] rounded-[12px] border-[1px] border-[#E0E0E0]">
@@ -205,7 +184,7 @@ const OneMillionUzbekCoders = () => {
             450,000+
           </h1>
           <p className="font-medium text-[16px] text-[#222222] dark:text-gray-200 transition-colors duration-200">
-            Sertifikat olganlar
+            {t('oneMillionUzbekCoders.certificateHolders')}
           </p>
         </div>
       </div>
@@ -223,15 +202,13 @@ const OneMillionUzbekCoders = () => {
         <div>
           <div className="max-w-[1230px] mx-auto px-4 py-12 mt-[100px]">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-gray-900 dark:text-white transition-colors duration-200">
-              Dasturga oid qarorlar
+              {t('oneMillionUzbekCoders.decisions.title')}
             </h2>
 
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base transition-colors duration-200">
-                  &quot;Ma'muriy islohotlar doirasida raqamli texnologiyalar sohasida
-                  davlat boshqaruvini samarali tashkil etish chora-tadbirlari
-                  to'g'risida&quot;gi PF-75-son farmoni
+                  {t('oneMillionUzbekCoders.decisions.decision1')}
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">
@@ -242,9 +219,7 @@ const OneMillionUzbekCoders = () => {
 
               <div className="flex-1 p-6 rounded-lg border border-gray-200 hover:border-blue-500 transition-all duration-300">
                 <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base transition-colors duration-200">
-                  &quot;Raqamli xizmatlar qamrovi va sifatini oshirish hamda soha,
-                  tarmoq va hududlarda raqamli transformatsiya qilish
-                  chora-tadbirlari to'g'risida&quot;gi PQ-182-son qarori
+                  {t('oneMillionUzbekCoders.decisions.decision2')}
                 </p>
                 <div className="flex justify-end mt-4">
                   <button className="p-2 rounded-full hover:bg-gray-100">

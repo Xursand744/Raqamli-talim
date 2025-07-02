@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 // import CarouselImage from "../../assets/carousel.jpg";
 import { rightIcon } from "../../assets/icons/icon";
 import CarouselImage from "../../assets/images/projects/8.jpg";
+import { useTranslation } from "react-i18next";
 
 import {
   Document,
@@ -85,71 +86,54 @@ LearningCard.propTypes = {
 };
 
 export default function Aca() {
+  const { t } = useTranslation("global");
+  
   const metrics = [
     {
       icon: UsersGroup,
       value: 200,
-      label: "Talabalar",
+      label: t("aca.metrics.students"),
     },
     {
       icon: StickerAdd,
       value: 1,
-      label: "Hamkor",
+      label: t("aca.metrics.partner"),
     },
     {
       icon: UserLoad,
       value: 3,
-      label: "Oylar",
+      label: t("aca.metrics.months"),
     },
     {
       icon: UserVerify,
       value: 100,
-      label: "Python asoslari",
+      label: t("aca.metrics.pythonBasics"),
     },
     {
       icon: UserDelete,
       value: 0,
-      label: "Bitiruvchilar",
+      label: t("aca.metrics.graduates"),
     },
     {
       icon: MoneyBag,
       value: 50,
-      label: "Darslar",
+      label: t("aca.metrics.lessons"),
     },
     {
       icon: Document,
       value: 10,
-      label: "Loyihalar",
+      label: t("aca.metrics.projects"),
     },
   ];
 
-  const learningModules = [
-    {
-      title: "Python asoslari",
-      description: "Ishtirokchilar Python asoslari bilan tanishadilar va eng mashhur dasturlash tillaridan birida dasturlash!",
-      icon: "🐍",
-      benefits: "Birinchi kodlaringizni yozing"
-    },
-    {
-      title: "Nazariya va amaliyot",
-      description: "Birinchi kodlarini yozib, nazariyani amaliyotda mustahkamlash!",
-      icon: "💻",
-      benefits: "Amaliy tajriba"
-    },
-    {
-      title: "Karyera tayyorgarligi",
-      description: "Karyerada muvaffaqiyatli boshlashga yordam beradigan samarali rezyume yaratadilar va ish beruvchilarni o&apos;ziga jalb qilishadi!",
-      icon: "📈",
-      benefits: "Rezyume va ish topish"
-    },
-  ];
+  const learningModules = t("aca.learningModules", { returnObjects: true });
 
   return (
     <div className="">
       <div className="max-w-[1230px] w-full my-0 mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[3em] transition-colors duration-200">
-          ACA Navigator - Python dasturlash kursi
+          {t("aca.title")}
         </h1>
 
         <div className="relative mb-12">
@@ -161,27 +145,27 @@ export default function Aca() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 leading-relaxed transition-colors duration-200">
-          &quot;ACA Navigator&quot; loyihasini Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi.
+          {t("aca.description")}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Loyiha haqida
+            {t("aca.sections.about")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha ishtirokchilari quyidagi bilimlarga ega bo&apos;ladilar o&apos;rganadilar? Ishtirokchilarga nega Python bu qadar mashhur va u bilan bog&apos;liq qanday talab qilinadigan kasblar mavjudligini haqida tushuncha va ma&apos;lumotlar beriladi.
+              {t("aca.cards.about1")}
             </DocumentCard>
             <DocumentCard>
-              Python asoslari bilan tanishadilar va eng mashhur dasturlash tillaridan birida dasturlash! Birinchi kodlarini yozib, nazariyani amaliyotda mustahkamlash!
+              {t("aca.cards.about2")}
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            O&apos;rganish modullari
+            {t("aca.sections.learningModules")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
@@ -199,30 +183,30 @@ export default function Aca() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Hamkorlik
+            {t("aca.sections.partnership")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Loyiha Armanistonning &quot;Armenian Code Academy&quot; ta&apos;lim markazi bilan birgalikda amalga oshiriladi. Bu xalqaro hamkorlik orqali sifatli ta&apos;lim imkoniyatlari yaratiladi.
+              {t("aca.cards.partnership1")}
             </DocumentCard>
             <DocumentCard>
-              Hamkorlik doirasida zamonaviy dasturlash metodlari, amaliy tajriba va xalqaro standartlar asosida ta&apos;lim beriladi.
+              {t("aca.cards.partnership2")}
             </DocumentCard>
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-6 transition-colors duration-200">
-            Karyera imkoniyatlari
+            {t("aca.sections.careerOpportunities")}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <DocumentCard>
-              Python dasturlash tili hozirgi kunda eng mashhur va talab qilinadigan dasturlash tillaridan biri hisoblanadi. Uning yordamida turli sohalarda ishlash imkoniyati mavjud.
+              {t("aca.cards.career1")}
             </DocumentCard>
             <DocumentCard>
-              Kursni tugatgandan so&apos;ng talabalar samarali rezyume yaratish va ish beruvchilarni o&apos;ziga jalb qilish ko&apos;nikmalariga ega bo&apos;ladilar.
+              {t("aca.cards.career2")}
             </DocumentCard>
           </div>
         </section>
@@ -230,7 +214,7 @@ export default function Aca() {
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-[32px] font-bold text-gray-900 dark:text-gray-100 mb-8 mt-[80px] transition-colors duration-200">
-              Kurs statistikasi
+              {t("aca.sections.statistics")}
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {metrics.slice(0, 4).map((metric, index) => (

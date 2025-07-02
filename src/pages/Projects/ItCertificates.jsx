@@ -4,29 +4,23 @@ import PropTypes from "prop-types";
 import { rightIcon } from "../../assets/icons/icon";
 import HomeIcon from "../../assets/home-icon.svg";
 import CarouselImage from "../../assets/projects/istedod2.jpg";
-import {
-  Document,
-  MoneyBag,
-  StickerAdd,
-  UserDelete,
-  UserLoad,
-  UsersGroup,
-  UserVerify,
-} from "../../assets/it-talents-images";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = () => {
+  const { t } = useTranslation("global");
+  
   return (
     <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
       <a href="/" className="hover:text-gray-900 flex items-center gap-[10px]">
         <img src={HomeIcon} alt="" />
-        Bosh sahifa
+        {t('itCertificates.breadcrumb.home')}
       </a>
       <ChevronRight size={16} />
       <a href="/projects" className="hover:text-gray-900">
-        Loyihalar
+        {t('itCertificates.breadcrumb.projects')}
       </a>
       <ChevronRight size={16} />
-      <span className="text-gray-900">IT-sertifikatlar - Xalqaro IT-sertifikatlar uchun kompensatsiya</span>
+      <span className="text-gray-900">{t('itCertificates.breadcrumb.current')}</span>
     </div>
   );
 };
@@ -102,87 +96,18 @@ RequirementCard.propTypes = {
 };
 
 export default function ItCertificates() {
-  const metrics = [
-    {
-      icon: UsersGroup,
-      value: 1000,
-      label: "Arizachilar",
-    },
-    {
-      icon: StickerAdd,
-      value: 60,
-      label: "Kompensatsiya %",
-    },
-    {
-      icon: UserLoad,
-      value: 14,
-      label: "Minimal yosh",
-    },
-    {
-      icon: UserVerify,
-      value: 30,
-      label: "Maksimal yosh",
-    },
-    {
-      icon: UserDelete,
-      value: 100,
-      label: "B2+ kompensatsiya %",
-    },
-    {
-      icon: MoneyBag,
-      value: 2024,
-      label: "Boshlangan yili",
-    },
-    {
-      icon: Document,
-      value: 4,
-      label: "Kerakli hujjatlar",
-    },
-  ];
+  const { t } = useTranslation("global");
 
-  const requirements = [
-    {
-      title: "Yosh chegarasi",
-      description: "Loyihada qatnashish uchun yosh chegarasi belgilangan. Faqat belgilangan yosh oralig'idagi fuqarolar ariza bera oladi.",
-      icon: "📅",
-      requirement: "14-30 yosh oralig'i"
-    },
-    {
-      title: "Fuqarolik",
-      description: "Loyiha faqat O'zbekiston Respublikasi fuqarolari uchun mo'ljallangan. Boshqa davlat fuqarolari qatnasha olmaydi.",
-      icon: "🇺🇿",
-      requirement: "O'zbekiston fuqarosi"
-    },
-    {
-      title: "Ro'yxatdan o'tish",
-      description: "Ariza berish uchun Yagona interaktiv davlat xizmatlari portal orqali ro'yxatdan o'tish majburiy.",
-      icon: "💻",
-      requirement: "my.gov.uz portalida ro'yxat"
-    },
-  ];
+  const requirements = t('itCertificates.requirements', { returnObjects: true });
+  const compensationTypes = t('itCertificates.compensationTypes', { returnObjects: true });
+  const documents = t('itCertificates.documents', { returnObjects: true });
+  const applicationProcess = t('itCertificates.applicationProcess', { returnObjects: true });
 
-  const documents = [
-    {
-      title: "To'lov kvitansiyasi",
-      description: "Xalqaro IT-sertifikatni olish xarajatlarini tasdiqlovchi to'lov kvitansiyasi nusxasi (PDF shaklida)",
-      icon: "💰"
-    },
-    {
-      title: "Bank ma'lumotlari",
-      description: "Kompensatsiya mablag'lari yo'naltiriladigan aktiv holatdagi milliy valyutadagi bank plastik kartasiga oid ma'lumotlar",
-      icon: "💳"
-    },
-    {
-      title: "Ingliz tili sertifikati",
-      description: "B2 va undan yuqori darajaga egaligini tasdiqlovchi xalqaro sertifikat nusxasi (PDF shaklida)",
-      icon: "📜"
-    },
-    {
-      title: "O'quv kursi hujjati",
-      description: "IT-sertifikatni olish uchun o'quv kursini tamomlaganligini tasdiqlovchi hujjatlar nusxasi (PDF shaklida)",
-      icon: "🎓"
-    },
-  ];
+  // Ensure all arrays are actually arrays
+  const safeRequirements = Array.isArray(requirements) ? requirements : [];
+  const safeCompensationTypes = Array.isArray(compensationTypes) ? compensationTypes : [];
+  const safeDocuments = Array.isArray(documents) ? documents : [];
+  const safeApplicationProcess = Array.isArray(applicationProcess) ? applicationProcess : [];
 
   return (
     <div className="">
@@ -190,7 +115,7 @@ export default function ItCertificates() {
         <Breadcrumb />
 
         <h1 className="text-[32px] font-bold text-gray-900 dark:text-white mb-8 mt-[80px] transition-colors duration-200">
-          IT-sertifikatlar - Xalqaro IT-sertifikatlar uchun kompensatsiya
+          {t('itCertificates.title')}
         </h1>
 
         <div className="relative mb-12">
@@ -202,16 +127,16 @@ export default function ItCertificates() {
         </div>
 
         <p className="text-lg text-gray-700 dark:text-gray-200 mb-12 leading-relaxed transition-colors duration-200">
-          Loyiha IT sohasidagi iqtidorli yoshlar haqida ma&apos;lumotlarni birlashtirish maqsadida yaratilgan. Loyiha doirasida 2024-yil 1-mart kunidan boshlab yoshlarning xalqaro IT-sertifikatlar uchun sarf qilgan xarajatlarining 60% gacha hamda B2 va undan yuqori darajadagi sertifikatga ega yoshlarning xalqaro Professional IT-sertifikatlar uchun sarf qilgan xarajatlarini 100% qismi qoplab berilishi tartibi joriy etilgan.
+          {t('itCertificates.description')}
         </p>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 transition-colors duration-200">
-            Qatnashish shartlari
+            {t('itCertificates.sections.requirements')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-3">
-            {requirements.map((req, index) => (
+            {safeRequirements.map((req, index) => (
               <RequirementCard
                 key={index}
                 title={req.title}
@@ -225,26 +150,25 @@ export default function ItCertificates() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Kompensatsiya turlari
+            {t('itCertificates.sections.compensationTypes')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              <strong>Oddiy kompensatsiya:</strong> Xalqaro IT-sertifikatlar uchun sarf qilgan xarajatlarining 60% gacha qoplab beriladi. Bu turdagi kompensatsiya barcha qatnashuvchilar uchun mavjud.
-            </DocumentCard>
-            <DocumentCard>
-              <strong>To'liq kompensatsiya:</strong> B2 va undan yuqori darajadagi ingliz tili sertifikatiga ega yoshlar uchun Professional IT-sertifikatlar xarajatlarining 100% qismi qoplab beriladi.
-            </DocumentCard>
+            {safeCompensationTypes.map((type, index) => (
+              <DocumentCard key={index}>
+                <strong>{type.title}</strong> {type.description}
+              </DocumentCard>
+            ))}
           </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Kerakli hujjatlar
+            {t('itCertificates.sections.documents')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2">
-            {documents.map((doc, index) => (
+            {safeDocuments.map((doc, index) => (
               <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
@@ -264,16 +188,15 @@ export default function ItCertificates() {
 
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            Ariza berish tartibi
+            {t('itCertificates.sections.applicationProcess')}
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <DocumentCard>
-              Ushbu imkoniyatga ega bo'lish istagidagi o'n to'rt yoshga to'lgan va o'ttiz yoshdan oshmagan O'zbekiston Respublikasining fuqarolari Yagona interaktiv davlat xizmatlari portal orqali ro'yxatdan o'tgan holda ariza topshirishlari mumkin.
-            </DocumentCard>
-            <DocumentCard>
-              Ariza beruvchi xalqaro IT-sertifikatni olish uchun o'quv kursiga sarflagan xarajatlarni qoplash bo'yicha so'rovnoma to'ldirayotgan bo'lsa, xalqaro IT-sertifikatni olish uchun o'qiganligini va o'quv kursini tamomlaganligini tasdiqlovchi hujjatlar nusxasi (PDF shaklida) taqdim etilishi kerak.
-            </DocumentCard>
+            {safeApplicationProcess.map((text, index) => (
+              <DocumentCard key={index}>
+                {text}
+              </DocumentCard>
+            ))}
           </div>
         </section>
       </div>

@@ -635,5 +635,761 @@
   "unknown": "Unknown",
   "vacancy": "Vacancy",
   "seeAll": "See All",
-  "topStudyCenters": "TOP rated training centers"
+  "topStudyCenters": "Top study centers by rating",
+  "universities": {
+    "title": "Higher Education Institutions",
+    "breadcrumb": {
+      "projects": "Projects",
+      "universities": "Universities"
+    },
+    "statistics": {
+      "title": "Information about students in system universities",
+      "viewTable": "View Table"
+    },
+    "mapTitle": "HEIs by Region",
+    "universitiesList": "Universities",
+    "search": {
+      "placeholder": "Search university name..."
+    },
+    "filters": {
+      "all": "All",
+      "region": "Region",
+      "specialization": "Specialization"
+    },
+    "found": "Found",
+    "universitiesCount": "universities",
+    "noResults": "No universities found",
+    "clearFilters": "Clear Filters",
+    "specialization": {
+      "specialized": "Specialized",
+      "notSpecialized": "Not Specialized"
+    },
+    "contactInfo": {
+      "website": "🌐",
+      "telegram": "📱",
+      "phone": "📞",
+      "directions": "IT Directions:"
+    },
+    "faq": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "question": "What advantages do IT-specialized universities have?",
+          "answer": "The best educational centers in the IT field widely cover information about the center and services provided on social networks"
+        },
+        {
+          "question": "What directions are available in IT-specialized universities?",
+          "answer": "You can get it from the center's website"
+        },
+        {
+          "question": "Is it preferable to attend offline classes at an educational center to master IT professions at a professional level, or can you study online?",
+          "answer": "Of course, we have a good saying in our country: \"It is better to have a mentor in every field\", so attending offline classes at an educational center to master a profession is appropriate for the purpose"
+        }
+      ]
+    }
+  },
+  "aca": {
+    "title": "ACA Navigator - Python Programming Course",
+    "description": "The \"ACA Navigator\" project is implemented in partnership with the \"Armenian Code Academy\" educational center from Armenia.",
+    "sections": {
+      "about": "About the Project",
+      "learningModules": "Learning Modules",
+      "partnership": "Partnership",
+      "careerOpportunities": "Career Opportunities",
+      "statistics": "Course Statistics"
+    },
+    "cards": {
+      "about1": "What knowledge will project participants gain? Participants are given an understanding and information about why Python is so popular and what in-demand professions are available related to it.",
+      "about2": "They will learn Python basics and program in one of the most popular programming languages! Write their first code and strengthen theory through practice!",
+      "partnership1": "The project is implemented in partnership with the \"Armenian Code Academy\" educational center from Armenia. This international partnership creates quality educational opportunities.",
+      "partnership2": "Within the framework of cooperation, education is provided based on modern programming methods, practical experience, and international standards.",
+      "career1": "Python programming language is currently one of the most popular and in-demand programming languages. With its help, there are opportunities to work in various fields.",
+      "career2": "After completing the course, students will have skills in creating effective resumes and attracting employers."
+    },
+    "learningModules": [
+      {
+        "title": "Python Basics",
+        "description": "Participants will learn Python basics and program in one of the most popular programming languages!",
+        "icon": "🐍",
+        "benefits": "Write your first code"
+      },
+      {
+        "title": "Theory and Practice",
+        "description": "Write your first code and strengthen theory through practice!",
+        "icon": "💻",
+        "benefits": "Practical experience"
+      },
+      {
+        "title": "Career Preparation",
+        "description": "They will create effective resumes and attract employers to help them start their careers successfully!",
+        "icon": "📈",
+        "benefits": "Resume and job search"
+      }
+    ],
+    "metrics": {
+      "students": "Students",
+      "partner": "Partner",
+      "months": "Months",
+      "pythonBasics": "Python Basics",
+      "graduates": "Graduates",
+      "lessons": "Lessons",
+      "projects": "Projects"
+    }
+  },
+  "apio": {
+    "title": "APIO - Asia-Pacific Informatics Olympiad",
+    "description": "APIO is an online olympiad designed for young people with high algorithmic knowledge, which serves as an important preparation stage for the most prestigious international competition in the world of competitive programming for many countries - the International Olympiad in Informatics (IOI).",
+    "sections": {
+      "about": "About the Olympiad",
+      "developingSkills": "Developing Skills",
+      "ioiPreparation": "IOI Preparation",
+      "participationConditions": "Participation Conditions",
+      "statistics": "Olympiad Statistics"
+    },
+    "cards": {
+      "about1": "APIO is considered one of the most prestigious informatics olympiads in the Asia-Pacific region. It is designed for young people with high-level algorithmic knowledge.",
+      "about2": "This type of competition helps the younger generation develop skills in logical and algorithmic thinking, creative approaches, and solving complex problems.",
+      "ioi1": "APIO is considered an important preparation stage for the International Olympiad in Informatics (IOI). Through this olympiad, students prepare for international-level competitions.",
+      "ioi2": "IOI is the most prestigious international competition in the world of competitive programming, where the world's best young programmers participate.",
+      "participation1": "Only young people with high algorithmic knowledge can participate in the olympiad. Participants must have the ability to solve complex programming problems.",
+      "participation2": "The competition is held in online format and lasts 5 hours. Participants develop solutions to given problems."
+    },
+    "skills": [
+      {
+        "title": "Algorithmic Thinking",
+        "description": "Developing and optimizing algorithmic approaches to solve complex problems.",
+        "icon": "🧠",
+        "level": "High Level"
+      },
+      {
+        "title": "Logical Thinking",
+        "description": "Analyzing problems, drawing logical conclusions, and finding effective solutions.",
+        "icon": "⚡",
+        "level": "Critical Skill"
+      },
+      {
+        "title": "Creative Approach",
+        "description": "Solving problems with new and innovative methods, developing creative thinking.",
+        "icon": "💡",
+        "level": "Innovation"
+      }
+    ],
+    "metrics": {
+      "participants": "Participants",
+      "countries": "Countries",
+      "ageLimit": "Age Limit",
+      "stage": "Stage",
+      "winners": "Winners",
+      "problems": "Problems",
+      "hours": "Hours"
+    }
+  },
+  "itVillage": {
+    "title": "IT Village",
+    "subtitle": "\"IT Village\" is not just education, but a major initiative aimed at creating a digital ecosystem",
+    "description": "The \"IT Village\" program is an important initiative created for free education of youth in digital technologies, foreign languages, and modern professions in 13 remote districts and 1 city of Uzbekistan. This project was approved by the President of the Republic of Uzbekistan by Decree PQ-178 of May 15, 2024, and is aimed at forming an innovative educational environment in the regions. The state plans continuous motivation of students within the program, as well as attracting highly qualified specialists and mentors. \"IT Villages\" provide youth with broad opportunities to study modern professions and find their place in the global IT market. \"IT-Villages\" with modern infrastructure serve to prepare youth for the international labor market, employment, and development of IT services export. Thanks to the conditions being created within the project, technological innovations are rapidly developing in the regions and new opportunities are opening up for youth.",
+    "sections": {
+      "directions": "Directions",
+      "directionsDesc": "There are no age restrictions in the project for all those who want to study. Within the project, youth can gain knowledge from leading mentors of the world in 5 directions.",
+      "circles": "Circles",
+      "regions": "Regions where IT Villages are located",
+      "regionsDesc": "The IT Village program is being created in 13 remote districts and 1 city of Uzbekistan. In each region, modern educational opportunities are being created for youth."
+    },
+    "courses": [
+      {
+        "id": 1,
+        "title": "Information Technologies (IT)"
+      },
+      {
+        "id": 2,
+        "title": "Foreign Languages"
+      },
+      {
+        "id": 4,
+        "title": "Modern Practical Professions"
+      }
+    ],
+    "circles": [
+      {
+        "id": 1,
+        "title": "Chess"
+      },
+      {
+        "id": 2,
+        "title": "Reading"
+      }
+    ],
+    "map": {
+      "selectRegion": "Select a region",
+      "selectRegionDesc": "Click on a region on the map to view information",
+      "address": "Address",
+      "area": "Area",
+      "directions": "Educational directions",
+      "mentorsCount": "Number of mentors",
+      "classroomsCount": "Number of classrooms",
+      "comingSoon": "Coming soon",
+      "viewOnMap": "Open on map"
+    }
+  },
+  "icpc": {
+    "title": "ICPC - International Collegiate Programming Contest",
+    "description": "ICPC (International Collegiate Programming Contest) is the world's largest and most prestigious international olympiad in competitive programming among students, held annually since 1970. This olympiad unites thousands of teams worldwide.",
+    "sections": {
+      "goals": "Olympiad Goals",
+      "format": "Competition Format",
+      "stages": "Competition Stages",
+      "importance": "Importance of the Olympiad",
+      "statistics": "Olympiad Statistics"
+    },
+    "goals": [
+      {
+        "title": "Teamwork",
+        "description": "Development of teamwork skills",
+        "icon": "🤝"
+      },
+      {
+        "title": "Increasing Interest",
+        "description": "Increasing interest in algorithms and programming among students",
+        "icon": "📈"
+      },
+      {
+        "title": "Preparation",
+        "description": "Opportunity to prepare students for solving real engineering problems",
+        "icon": "⚙️"
+      }
+    ],
+    "format": [
+      "Team composition: 3 students and one coach. Teams must solve several algorithmic problems on one computer within 5 hours.",
+      "Successful problem solving requires participants to have deep mathematical knowledge, algorithmic thinking, and programming skills."
+    ],
+    "stages": [
+      {
+        "title": "Regional Stage",
+        "description": "Held in each region, local talents are identified. At this stage, teams compete for a ticket to the Republican stage.",
+        "icon": "🏆",
+        "location": "Local regions",
+        "participants": "All teams"
+      },
+      {
+        "title": "Republican Stage",
+        "description": "Regional stage winners compete to identify the strongest teams at the national level. Teams that achieve high rankings at this stage receive a ticket to the next stage.",
+        "icon": "👑",
+        "location": "Tashkent",
+        "participants": "Regional winners"
+      },
+      {
+        "title": "Semi-final",
+        "description": "Semi-final competitions are held in Astana, Kazakhstan. 15-20 teams from Uzbekistan are invited to participate.",
+        "icon": "🌍",
+        "location": "Astana, Kazakhstan",
+        "participants": "15-20 teams"
+      },
+      {
+        "title": "Final",
+        "description": "Teams that show high results in the semi-final receive a ticket to the world final to compete with the world's strongest programming teams.",
+        "icon": "🏅",
+        "location": "World Final",
+        "participants": "Strongest teams"
+      }
+    ],
+    "importance": [
+      "ICPC is supported by major IT companies such as Google, IBM, Microsoft. This olympiad is considered one of the most prestigious programming competitions in the world.",
+      "Participation in the ICPC olympiad is considered a prestigious achievement and opens wide opportunities for future careers. This is an opportunity for students to demonstrate their abilities at the international level."
+    ],
+    "metrics": {
+      "participants": "Participants",
+      "countries": "Countries",
+      "startYear": "Year Founded",
+      "stages": "Stages",
+      "winners": "Winners",
+      "hours": "Hours",
+      "problems": "Problems"
+    }
+  },
+  "ict4girls": {
+    "title": "ICT4Girls - Competitive Programming Olympiad",
+    "description": "\"ICT4Girls\" - an olympiad in competitive programming among girls under 20 years old, held at regional and republican stages.",
+    "breadcrumb": {
+      "home": "Home",
+      "projects": "Projects",
+      "current": "ICT4Girls - Competitive Programming Olympiad"
+    },
+    "sections": {
+      "about": "About the Olympiad",
+      "stages": "Olympiad Stages",
+      "conditions": "Participation Conditions",
+      "statistics": "Olympiad Statistics"
+    },
+    "about": [
+      "Applications are submitted by female students from various regions of Uzbekistan to participate in the \"ICT4Girls\" olympiad and pass the primary selection.",
+      "The regional stage of the \"ICT4Girls\" olympiad is held in all regions – 12 provinces, Republic of Karakalpakstan and Tashkent, where participants develop solutions to given problems and earn points."
+    ],
+    "stages": [
+      {
+        "title": "Regional Stage",
+        "description": "All regions – 12 provinces, Republic of Karakalpakstan and Tashkent, participants develop solutions to given problems and earn points.",
+        "icon": "🏆",
+        "participants": "12 provinces + Karakalpakstan + Tashkent"
+      },
+      {
+        "title": "Republican Stage",
+        "description": "Girls who show the highest results at the regional stage receive a ticket to the Republican stage.",
+        "icon": "👑",
+        "participants": "Best results"
+      },
+      {
+        "title": "Winners",
+        "description": "Girls who show the highest results at the Republican stage are recognized as winners of the ICT4Girls olympiad and are awarded valuable prizes.",
+        "icon": "💎",
+        "participants": "Valuable prizes"
+      }
+    ],
+    "conditions": [
+      "Only girls under 20 years old can participate in the olympiad. All participants have the opportunity to demonstrate their knowledge and skills in competitive programming.",
+      "Girls who show the highest results at the regional stage receive a ticket to the Republican stage and have the right to compete at the next stage."
+    ],
+    "metrics": {
+      "participants": "Participants",
+      "regions": "Regions",
+      "ageLimit": "Age Limit",
+      "stages": "Stages",
+      "winners": "Winners",
+      "prizes": "Prizes",
+      "problems": "Problems"
+    }
+  },
+  "itCertificates": {
+    "title": "IT Certificates - Compensation for International IT Certificates",
+    "description": "The project was created to unite information about talented youth in the IT field. Within the framework of the project, from March 1, 2024, a procedure has been introduced to compensate up to 60% of youth expenses for international IT certificates, as well as 100% of expenses for youth with B2 and higher level certificates for international professional IT certificates.",
+    "breadcrumb": {
+      "home": "Home",
+      "projects": "Projects",
+      "current": "IT Certificates - Compensation for International IT Certificates"
+    },
+    "sections": {
+      "requirements": "Participation Requirements",
+      "compensationTypes": "Types of Compensation",
+      "documents": "Required Documents",
+      "applicationProcess": "Application Process"
+    },
+    "requirements": [
+      {
+        "title": "Age Restrictions",
+        "description": "Age restrictions are set for participation in the project. Only citizens within the specified age range can apply.",
+        "icon": "📅",
+        "requirement": "Age range 14-30 years"
+      },
+      {
+        "title": "Citizenship",
+        "description": "The project is intended only for citizens of the Republic of Uzbekistan. Citizens of other states cannot participate.",
+        "icon": "🇺🇿",
+        "requirement": "Uzbekistan citizen"
+      },
+      {
+        "title": "Registration",
+        "description": "Registration through the Unified Portal of Interactive State Services is mandatory for applying.",
+        "icon": "💻",
+        "requirement": "Registration on my.gov.uz portal"
+      }
+    ],
+    "compensationTypes": [
+      {
+        "title": "Regular Compensation:",
+        "description": "Up to 60% of expenses for international IT certificates are compensated. This type of compensation is available to all participants."
+      },
+      {
+        "title": "Full Compensation:",
+        "description": "For youth with B2 and higher level English language certificates, 100% of expenses for professional IT certificates are compensated."
+      }
+    ],
+    "documents": [
+      {
+        "title": "Payment Receipt",
+        "description": "Copy of payment receipt confirming expenses for obtaining international IT certificate (in PDF format)",
+        "icon": "💰"
+      },
+      {
+        "title": "Bank Information",
+        "description": "Information about active national currency bank plastic card to which compensation funds will be directed",
+        "icon": "💳"
+      },
+      {
+        "title": "English Language Certificate",
+        "description": "Copy of international certificate confirming B2 and higher level proficiency (in PDF format)",
+        "icon": "📜"
+      },
+      {
+        "title": "Training Document",
+        "description": "Copy of documents confirming completion of training course for obtaining IT certificate (in PDF format)",
+        "icon": "🎓"
+      }
+    ],
+    "applicationProcess": [
+      "Citizens of the Republic of Uzbekistan who have reached the age of fourteen and are not older than thirty years, wishing to take advantage of this opportunity, can submit an application by registering through the Unified Portal of Interactive State Services.",
+      "If the applicant is filling out a questionnaire for compensation of expenses for a training course to obtain an international IT certificate, it is necessary to provide a copy of documents confirming training for obtaining an international IT certificate and completion of the training course (in PDF format)."
+    ],
+    "metrics": {
+      "applicants": "Applicants",
+      "compensationPercent": "Compensation %",
+      "minAge": "Minimum Age",
+      "maxAge": "Maximum Age",
+      "b2Compensation": "B2+ Compensation %",
+      "startYear": "Start Year",
+      "requiredDocuments": "Required Documents"
+    }
+  },
+  "itTalents": {
+    "title": "IT Talents - Talented Youth in IT Field",
+    "description": "Project for identifying and supporting talented youth in the IT field. Through this project, youth get the opportunity to develop their knowledge and skills.",
+    "sections": {
+      "studyDirections": "List of Study Directions",
+      "studyDirectionsSubtitle": "Approved by the Ministry of Digital Technologies",
+      "download": "Download",
+      "itParkResidents": "IT Park Residents",
+      "itParkDescription": "Unified registry provided by IT Park",
+      "goToLink": "Go to Link",
+      "crmGuide": "Guide for registration in special system (crm.digital.uz) within the project:",
+      "crmGuideSubtitle": "The following guides are for you",
+      "uzbekLanguage": "In Uzbek",
+      "russianLanguage": "In Russian"
+    },
+    "metrics": {
+      "potentialCandidates": "Potential Candidates",
+      "newApplications": "New Applications",
+      "inProcess": "In Process",
+      "completed": "Completed",
+      "rejected": "Rejected",
+      "paymentInProcess": "Payment in Process",
+      "allApplications": "All Applications"
+    }
+  },
+  "jobEdu": {
+    "title": "Job&Edu Fest - IT Job and Education Fair",
+    "description": "The main goal of the fair is to introduce youth to real opportunities in the IT market and establish effective integration between education and employment.",
+    "description2": "In this organized job and education fair, companies and educational organizations working in the IT field participate with their job vacancies and educational opportunities.",
+    "description3": "At the fair, representatives of local and international companies working in the digital technology sector, educational organizations, especially higher education institutions and IT training centers, provide youth participating in the fair with information about conditions created in organizations, job vacancies, as well as existing educational programs.",
+    "breadcrumb": {
+      "home": "Home",
+      "projects": "Projects",
+      "current": "Job&Edu Fest - IT Job and Education Fair"
+    },
+    "sections": {
+      "videoMaterial": "Video Material",
+      "videoDescription": "Video material about the fair",
+      "statistics": "Fair Statistics"
+    },
+    "metrics": {
+      "registered": "Registered",
+      "companies": "Companies",
+      "vacancies": "Job Vacancies",
+      "internships": "Internship Positions",
+      "graduates": "School Graduates",
+      "mayMonth": "May Month",
+      "presentations": "Presentations"
+    }
+  },
+  "olimpiads": {
+    "title": "Olympiads",
+    "projects": [
+      {
+        "id": 7,
+        "title": "ICT4Girls",
+        "link": "ict4girls"
+      },
+      {
+        "id": 8,
+        "title": "APIO",
+        "link": "apio"
+      },
+      {
+        "id": 9,
+        "title": "ICPC Uzbekistan Olympiad",
+        "link": "icpc-uzbekistan-olympiad"
+      }
+    ]
+  },
+  "oneMillionUzbekCoders": {
+    "title": "One Million Programmers Project",
+    "subtitle": "In the Republic of Uzbekistan, the goal is to train youth on the \"Coursera\" online platform as the next stage of the \"One Million Programmers\" project.",
+    "futureCareers": "Master Future Careers!",
+    "programInNumbers": "Program in Numbers",
+    "registeredCount": "Number of registered participants",
+    "certificateHolders": "Certificate holders",
+    "courses": {
+      "title": "Directions",
+      "description": "There are no age restrictions in the project for all those who want to study. Within the framework of the project, youth can gain knowledge from world-leading mentors in 5 directions.",
+      "coursesList": [
+        "Data Science Math Skills",
+        "Code yourself",
+        "Excel Fundamentals for Data Analysis",
+        "Introduction to Generative AI",
+        "Introduction to User Experience Design"
+      ]
+    },
+    "decisions": {
+      "title": "Program Decisions",
+      "decision1": "Decree PF-75 \"On measures for effective organization of state administration in the field of digital technologies within the framework of administrative reforms\"",
+      "decision2": "Resolution PQ-182 \"On measures to expand coverage and improve the quality of digital services, as well as digital transformation in sectors, networks and regions\""
+    },
+    "moreDetails": "More Details"
+  },
+  "projectsOverview": {
+    "title": "Projects"
+  },
+  "tot": {
+    "title": "IT Training for Teachers (TOT)",
+    "description": "Within the framework of the project, online trainings are organized for teachers of private IT educational centers of our Republic.",
+    "breadcrumb": {
+      "current": "TOT - Training for Teachers"
+    },
+    "sections": {
+      "aboutTraining": "About Training",
+      "trainingDirections": "Training Directions",
+      "trainingStatistics": "Training Statistics"
+    },
+    "trainingInfo": [
+      "In trainings organized over 3 months, experienced trainers conduct classes for teacher-mentors of centers in the IT direction.",
+      "Classes are organized based on international standards, and teacher-mentors have the opportunity to master advanced approaches in digital technologies."
+    ],
+    "trainingDirections": [
+      {
+        "title": "Artificial Intelligence and Machine Learning",
+        "description": "Study of modern AI and ML technologies",
+        "icon": "🤖"
+      },
+      {
+        "title": "Cybersecurity",
+        "description": "Cybersecurity and data protection",
+        "icon": "🔒"
+      },
+      {
+        "title": "Cloud Technologies",
+        "description": "Cloud computing and cloud services",
+        "icon": "☁️"
+      },
+      {
+        "title": "Computer Networks",
+        "description": "Network architecture and protocols",
+        "icon": "🌐"
+      },
+      {
+        "title": "Data Analysis",
+        "description": "Data Analysis and statistics",
+        "icon": "📊"
+      }
+    ],
+    "metrics": {
+      "participants": "Participants",
+      "trainers": "Trainers",
+      "months": "Months",
+      "directions": "Directions",
+      "completed": "Completed",
+      "certificates": "Certificates",
+      "totalLessons": "Total Lessons"
+    }
+  },
+  "studyCenters": {
+    "title": "Study Centers",
+    "titleInNumbers": "Study Centers in Numbers",
+    "ratingTitle": "How is the rating of study centers formed?",
+    "residentRatingTitle": "Rating of non-governmental educational organizations that are residents of IT-Park",
+    "listTitle": "List of Study Centers",
+    "listDescription": "To learn about study centers in your region and their courses, follow the link below",
+    "viewList": "View List",
+    "viewAll": "View All",
+    "faq": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What advantages do specialized universities in IT have?",
+          "answer": "The best educational centers in the IT field widely cover information about the center and services provided on social networks"
+        },
+        {
+          "id": 2,
+          "question": "What directions are available in specialized IT universities?",
+          "answer": "You can find out from the center's website"
+        },
+        {
+          "id": 3,
+          "question": "For professional mastery of IT professions, is it preferable to attend offline classes at an educational center or can you study online?",
+          "answer": "Of course, we have a good saying: \"It's better to have a mentor in every field\", so attending offline classes at an educational center to master a profession is appropriate"
+        }
+      ]
+    },
+    "breadcrumbs": {
+      "projects": "Projects",
+      "studyCenters": "Study Centers"
+    },
+    "metrics": {
+      "educationResidents": "Number of educational residents",
+      "courses": "Number of training courses",
+      "students": "Number of students (persons)",
+      "graduates": "Number of graduates (persons)",
+      "employedGraduates": "Number of employed graduates (persons)",
+      "exportGraduates": "Graduates employed in IT export (persons)"
+    },
+    "stats": [
+      {
+        "id": 1,
+        "title": "Number of courses on the platform:",
+        "count": "62 pcs.",
+        "description": "Each course gives 0.10 points.",
+        "total": "For courses 6.2 points."
+      },
+      {
+        "id": 2,
+        "title": "Number of students on the platform:",
+        "count": "952 people",
+        "description": "Each student adds 0.10 points.",
+        "total": "For students 95.2 points."
+      },
+      {
+        "id": 3,
+        "title": "Number of graduates:",
+        "count": "1671 people",
+        "description": "Each graduate adds 0.20 points.",
+        "total": "For graduates 334.2 points."
+      },
+      {
+        "id": 4,
+        "title": "Employed graduates:",
+        "count": "729 people",
+        "description": "Each employment adds 0.20 points.",
+        "total": "For employed graduates 145.8 points."
+      },
+      {
+        "id": 5,
+        "title": "Graduates employed in IT export companies:",
+        "count": "106 people",
+        "description": "Each such graduate brings 0.40 points.",
+        "total": "For those employed in export companies 42.4 points."
+      }
+    ],
+    "totalBalls": "6.2 + 95.2 + 334.2 + 145.8 + 42.4 = 623.8 points",
+    "summaryText": "Adding all these indicators, we get the total score:",
+    "courses": [
+      {
+        "id": 1,
+        "title": "PDP Academy",
+        "price": "from 1,500,000",
+        "tags": ["Project Management", "Design"],
+        "location": "Tashkent",
+        "status": ["Offline"]
+      },
+      {
+        "id": 2,
+        "title": "PDP Academy",
+        "price": "from 1,500,000",
+        "tags": ["Project Management", "Design"],
+        "location": "Tashkent",
+        "status": ["Offline"]
+      },
+      {
+        "id": 3,
+        "title": "PDP Academy",
+        "price": "from 1,500,000",
+        "location": "Tashkent",
+        "status": ["Offline", "Online"],
+        "tags": ["Project Management", "Design"],
+        "design": "+5"
+      }
+    ],
+    "guide": {
+      "title": "Guide for registration in the special system (crm.digital.uz) within the framework of the project:",
+      "description": "The following guide is for you",
+      "uzbek": "In Uzbek",
+      "russian": "In Russian"
+    }
+  },
+  "successStory": {
+    "videoDescription": "Video material about success story",
+    "stories": {
+      "zarnigor-raximova": {
+        "fullName": "Zarnigor Rakhimova",
+        "studyCenter": "PDP",
+        "content": [
+          "Zarnigor Rakhimova participated in the European Girls' Olympiad (EGOI) as part of the Uzbekistan national team at the prestigious olympiad held in Eindhoven, Netherlands, July 21-27, 2024.",
+          "In this prestigious competition, which was attended by about 200 representatives from 57 countries, Zarnigor Rakhimova from the Uzbekistan team won a bronze medal with 329 points.",
+          "Zarnigor is a graduate of the 12th general education school of Kogon district, Bukhara region.",
+          "Accordingly, Zarnigor Rakhimova was awarded an educational grant from Amity University as the winner of the International IT Olympiad.",
+          "Amity University awarded Zarnigor Rakhimova the nomination \"Most Fortunate Programmer\", recognizing her outstanding success in the \"Best Programmer\" competition, her outstanding programming skills and innovative approach."
+        ]
+      },
+      "abror-juraev": {
+        "fullName": "Abror Juraev",
+        "studyCenter": "PDP",
+        "content": [
+          "Abror Juraev is a graduate of PDP Academy and achieved great success in programming during his studies.",
+          "He has deep knowledge in frontend technologies and actively works in current projects.",
+          "Located in Andijan region and makes a great contribution to the local IT community."
+        ]
+      },
+      "mohira-tulaganova": {
+        "fullName": "Zarnigor Rakhimova",
+        "studyCenter": "Mohirdev",
+        "content": [
+          "Zarnigor Rakhimova participated in the European Girls' Olympiad (EGOI) as part of the Uzbekistan national team at the prestigious olympiad held in Eindhoven, Netherlands, July 21-27, 2024.",
+          "In this prestigious competition, which was attended by about 200 representatives from 57 countries, Zarnigor Rakhimova from the Uzbekistan team won a bronze medal with 329 points.",
+          "Zarnigor is a graduate of the 12th general education school of Kogon district, Bukhara region.",
+          "Accordingly, Zarnigor Rakhimova was awarded an educational grant from Amity University as the winner of the International IT Olympiad.",
+          "Amity University awarded Zarnigor Rakhimova the nomination \"Most Fortunate Programmer\", recognizing her outstanding success in the \"Best Programmer\" competition, her outstanding programming skills and innovative approach."
+        ]
+      },
+      "sevinch-mukimova": {
+        "fullName": "Sevinch Mukimova",
+        "studyCenter": "Alloma",
+        "content": [
+          "Sevinch Mukimova is a graduate of Alloma Study Center and achieved success in the field of design.",
+          "Located in Tashkent city, specialist in UI/UX design.",
+          "Develops her creative abilities and studies modern design trends."
+        ]
+      }
+    }
+  },
+  "projectsOverview": {
+    "title": "Projects",
+    "projects": [
+      {
+        "id": 3,
+        "title": "One Million Programmers Project",
+        "link": "bir-million-dasturchi-loyihasi"
+      },
+      {
+        "id": 1,
+        "title": "Muhammad Al-Khwarizmi's Heirs",
+        "link": "al-xorazmiy"
+      },
+      {
+        "id": 4,
+        "title": "IT Village",
+        "link": "it-village"
+      },
+      {
+        "id": 20,
+        "title": "IT Talents",
+        "link": "it-sertifikatlar"
+      },
+      {
+        "id": 2,
+        "title": "IT Talents Program",
+        "link": "it-talents-dasturi"
+      },
+      {
+        "id": 11,
+        "title": "Olympiads",
+        "link": "olimpiads"
+      },
+      {
+        "id": 10,
+        "title": "ACA Navigator",
+        "link": "aca-navigator"
+      },
+      {
+        "id": 5,
+        "title": "ToT - The Training of Trainers",
+        "link": "tot"
+      }
+    ]
+  }
 }
