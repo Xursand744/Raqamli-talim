@@ -67,15 +67,36 @@ function NewsSinglePage() {
       }
     };
     
-    // Replace URLs with HTML anchor tags
+    // If text contains HTML tags, only convert URLs that are not inside HTML attributes
+    if (/<[^>]*>/.test(text)) {
+      // Split text into HTML tags and text content
+      const parts = text.split(/(<[^>]*>)/);
+      
+      return parts.map(part => {
+        // If this part is an HTML tag, return it as-is
+        if (part.startsWith('<') && part.endsWith('>')) {
+          return part;
+        }
+        // If this part is text content, convert URLs in it
+        return part.replace(urlPattern, (url) => {
+          try {
+            new URL(url);
+            const displayText = getDisplayText(url);
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200">${displayText}</a>`;
+          } catch {
+            return url;
+          }
+        });
+      }).join('');
+    }
+    
+    // For plain text, convert URLs normally
     return text.replace(urlPattern, (url) => {
-      // Additional validation to ensure it's a real URL
       try {
         new URL(url);
         const displayText = getDisplayText(url);
         return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200">${displayText}</a>`;
       } catch {
-        // If URL parsing fails, return the original text
         return url;
       }
     });
