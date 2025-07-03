@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { format } from "date-fns";
@@ -41,9 +41,6 @@ function NewsSinglePage() {
     // URL regex pattern
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     
-    // Split text by URLs
-    const parts = text.split(urlPattern);
-    
     const getDisplayText = (url) => {
       try {
         const urlObj = new URL(url);
@@ -70,23 +67,10 @@ function NewsSinglePage() {
       }
     };
     
-    return parts.map((part, index) => {
-      // Check if this part is a URL
-      if (part.match(urlPattern)) {
-        const displayText = getDisplayText(part);
-        return (
-          <a
-            key={index}
-            href={part}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200"
-          >
-            {displayText}
-          </a>
-        );
-      }
-      return part;
+    // Replace URLs with HTML anchor tags
+    return text.replace(urlPattern, (url) => {
+      const displayText = getDisplayText(url);
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200">${displayText}</a>`;
     });
   };
 
@@ -197,18 +181,12 @@ function NewsSinglePage() {
           />
         </div>
 
-        <div className="mt-[24px] prose prose-lg max-w-none dark:prose-invert">
-          {news.body2[language].split("\r\n\r\n").map((paragraph, index) => (
-            <p key={index} className="mb-4">
-              {paragraph.split("\r\n").map((line, lineIndex) => (
-                <React.Fragment key={lineIndex}>
-                  {convertTextToLinks(line)}
-                  {lineIndex < paragraph.split("\r\n").length - 1 && <br />}
-                </React.Fragment>
-              ))}
-            </p>
-          ))}
-        </div>
+        <div 
+          className="mt-[24px] prose prose-lg max-w-none dark:prose-invert"
+          dangerouslySetInnerHTML={{
+            __html: convertTextToLinks(news.body2[language])
+          }}
+        />
       </div>
 
       <div className="max-w-[384px] w-full mt-[40px] lg:mt-[100px]">
