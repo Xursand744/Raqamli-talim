@@ -38,8 +38,8 @@ function NewsSinglePage() {
   };
 
   const convertTextToLinks = (text) => {
-    // URL regex pattern
-    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    // URL regex pattern - more precise to avoid false matches
+    const urlPattern = /(https?:\/\/[^\s<>"']+)/g;
     
     const getDisplayText = (url) => {
       try {
@@ -69,8 +69,15 @@ function NewsSinglePage() {
     
     // Replace URLs with HTML anchor tags
     return text.replace(urlPattern, (url) => {
-      const displayText = getDisplayText(url);
-      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200">${displayText}</a>`;
+      // Additional validation to ensure it's a real URL
+      try {
+        new URL(url);
+        const displayText = getDisplayText(url);
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200">${displayText}</a>`;
+      } catch {
+        // If URL parsing fails, return the original text
+        return url;
+      }
     });
   };
 
