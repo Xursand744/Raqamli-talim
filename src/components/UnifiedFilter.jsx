@@ -110,36 +110,36 @@ export default function UnifiedFilter() {
     <div className="relative bg-white dark:bg-gray-900 transition-colors duration-200">
       {/* Переключатель вкладок */}
       <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-40 transition-colors duration-200">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg transition-colors duration-200">
+        <div className="container mx-auto px-4 pt-6">
+          <div className="flex items-center justify-end h-16 w-full mb-6">
+            <div className="flex gap-4 bg-transparent p-0 rounded-none transition-colors duration-200 justify-end">
               <button
                 onClick={() => setActiveTab("centers")}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  activeTab === "centers"
-                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                className={`px-8 py-4 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
+                  ${activeTab === "centers"
+                    ? "bg-black text-white shadow"
+                    : "bg-white text-gray-800 hover:bg-gray-100"}
+                `}
               >
                 {t("menu.studyCenters")}
               </button>
               <button
                 onClick={() => setActiveTab("courses")}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  activeTab === "courses"
-                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                className={`px-6 py-2 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
+                  ${activeTab === "courses"
+                    ? "bg-black text-white shadow"
+                    : "bg-white text-gray-800 hover:bg-gray-100"}
+                `}
               >
                 {t("courses.title")}
               </button>
               <button
                 onClick={() => setActiveTab("top-centers")}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  activeTab === "top-centers"
-                    ? "bg-white dark:bg-gray-900 text-blue-600 shadow-sm"
-                    : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                className={`px-6 py-2 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
+                  ${activeTab === "top-centers"
+                    ? "bg-black text-white shadow"
+                    : "bg-white text-gray-800 hover:bg-gray-100"}
+                `}
               >
                 {t("menu.topStudyCenters")}
               </button>
