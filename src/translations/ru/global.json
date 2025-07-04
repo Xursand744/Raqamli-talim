@@ -424,7 +424,10 @@
     "courseName": "Название курса",
     "courseDurations": "Продолжительность курсов",
     "courseFormats": "Форматы курсов",
-    "reset": "Сбросить"
+    "reset": "Сбросить",
+    "price": {
+      "title": "Цена"
+    }
   },
   "home": {
     "seo": {

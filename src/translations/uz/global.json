@@ -449,7 +449,10 @@
     "courseDurations": "Kurs davomiyligi",
     "courseFormats": "Kurs formati",
     "title": "Saralash",
-    "reset": "Tozalash"
+    "reset": "Tozalash",
+    "price": {
+      "title": "Narx"
+    }
   },
   "home": {
     "seo": {

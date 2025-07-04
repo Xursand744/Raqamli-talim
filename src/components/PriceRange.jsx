@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 
 export default function PriceRange({ priceRange, setPriceRange }) {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("global");
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat(i18n.language === "uz" ? "uz-UZ" : i18n.language, {

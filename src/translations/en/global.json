@@ -377,7 +377,12 @@
     "courseDirection": "Course Direction",
     "courseName": "Course Name",
     "courseDurations": "Course Durations",
-    "courseFormats": "Course Formats"
+    "courseFormats": "Course Formats",
+    "title": "Sorting",
+    "reset": "Reset",
+    "price": {
+      "title": "Price"
+    }
   },
   "home": {
     "seo": {
