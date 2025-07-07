@@ -157,7 +157,7 @@ export default function ItCertificates() {
             {safeCompensationTypes.map((type, index) => (
               <DocumentCard key={index}>
                 <strong>{type.title}</strong> {type.description}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>
@@ -195,7 +195,7 @@ export default function ItCertificates() {
             {safeApplicationProcess.map((text, index) => (
               <DocumentCard key={index}>
                 {text}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>

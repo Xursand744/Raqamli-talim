@@ -185,7 +185,7 @@ export default function App() {
         },
         {
           path: "/study-centers",
-          element: <RedirectToEducation />,
+          element: <UnifiedPage />,
         },
         {
           path: "/news",

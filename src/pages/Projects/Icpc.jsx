@@ -191,7 +191,7 @@ export default function Icpc() {
             {safeFormat.map((text, index) => (
               <DocumentCard key={index}>
                 {text}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>
@@ -224,7 +224,7 @@ export default function Icpc() {
             {safeImportance.map((text, index) => (
               <DocumentCard key={index}>
                 {text}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>

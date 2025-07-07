@@ -29,26 +29,26 @@ export default function HomePage() {
         <meta name="twitter:title" content={t('home.seo.title')} />
         <meta name="twitter:description" content={t('home.seo.description')} />
       </Helmet>
-      <div>
-        <Carousel />
-        <div className="w-full">
-          {/* <JobAnalytics /> */}
-        </div>
-        <div className="max-w-[1440px] mx-auto mt-[100px]">
-          {/* <Chances /> */}
-        </div>
-        <Plan />
-        <Compensation />
-        <Counts />
-        <Darection />
-
-        <div className="container">
-          <SuccessHistory />
-        </div>
-
-        <School />
-        {/* <Join /> */}
+    <div>
+      <Carousel />
+      <div className="w-full">
+        {/* <JobAnalytics /> */}
       </div>
+      <div className="max-w-[1440px] mx-auto mt-[100px]">
+        {/* <Chances /> */}
+      </div>
+      <Plan />
+      <Compensation />
+      <Counts />
+      <Darection />
+
+      <div className="container">
+        <SuccessHistory />
+      </div>
+
+      <School />
+      {/* <Join /> */}
+    </div>
     </>
   );
 }

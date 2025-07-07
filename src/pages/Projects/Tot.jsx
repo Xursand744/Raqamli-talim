@@ -59,7 +59,7 @@ const MetricsCard = ({ icon, value, label, isActive }) => (
       className={`${
         isActive ? "text-[#fff]" : "text-[#2563EB]"
       } text-[40px] font-bold mb-2`}
-    > 
+    >
       {value.toLocaleString()}
     </div>
     <div className={`${isActive ? "text-[#fff]" : "text-[#2563EB]"} text-sm`}>
@@ -179,7 +179,7 @@ export default function TOT() {
             {safeTrainingInfo.map((info, index) => (
               <DocumentCard key={index}>
                 {info}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>

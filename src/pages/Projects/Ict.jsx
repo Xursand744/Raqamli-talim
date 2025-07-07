@@ -184,7 +184,7 @@ export default function Ict() {
             {safeAbout.map((text, index) => (
               <DocumentCard key={index}>
                 {text}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>
@@ -216,7 +216,7 @@ export default function Ict() {
             {safeConditions.map((text, index) => (
               <DocumentCard key={index}>
                 {text}
-              </DocumentCard>
+            </DocumentCard>
             ))}
           </div>
         </section>
