@@ -110,14 +110,14 @@ export default function UnifiedFilter() {
     <div className="relative bg-white dark:bg-gray-900 transition-colors duration-200">
       {/* Переключатель вкладок */}
       <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-40 transition-colors duration-200">
-        <div className="container mx-auto px-4 pt-6">
-          <div className="flex items-center justify-end h-16 w-full mb-6">
+        <div className="mx-auto pt-6">
+          <div className="flex items-center justify-start h-16 w-full mb-6">
             <div className="flex gap-4 bg-transparent p-0 rounded-none transition-colors duration-200 justify-end">
               <button
                 onClick={() => setActiveTab("centers")}
-                className={`px-8 py-4 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
+                className={`px-6 py-2 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
                   ${activeTab === "centers"
-                    ? "bg-black text-white shadow"
+                    ? "bg-[#2675EB] text-white shadow"
                     : "bg-white text-gray-800 hover:bg-gray-100"}
                 `}
               >
@@ -127,7 +127,7 @@ export default function UnifiedFilter() {
                 onClick={() => setActiveTab("courses")}
                 className={`px-6 py-2 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
                   ${activeTab === "courses"
-                    ? "bg-black text-white shadow"
+                    ? "bg-[#2675EB] text-white shadow"
                     : "bg-white text-gray-800 hover:bg-gray-100"}
                 `}
               >
@@ -137,7 +137,7 @@ export default function UnifiedFilter() {
                 onClick={() => setActiveTab("top-centers")}
                 className={`px-6 py-2 rounded-full text-base font-medium transition-colors duration-200 border border-gray-300
                   ${activeTab === "top-centers"
-                    ? "bg-black text-white shadow"
+                    ? "bg-[#2675EB] text-white shadow"
                     : "bg-white text-gray-800 hover:bg-gray-100"}
                 `}
               >
@@ -270,11 +270,11 @@ export default function UnifiedFilter() {
                     >
                       <div className="relative h-48">
                         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center gap-2">
-                          <img
+                          {center.logo && <img
                             className="w-[80px] h-[95%] object-contain"
-                            src={center.logo || res}
+                            src={center.logo}
                             alt={center.name}
-                          />
+                          />}
                         </div>
                         <div className="absolute bottom-2 left-4 flex flex-wrap gap-2">
                           <span className="px-2 py-1 text-xs text-black dark:text-white bg-white/90 dark:bg-gray-900/80 rounded-full transition-colors duration-200">
