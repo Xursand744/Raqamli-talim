@@ -110,6 +110,7 @@ function Compensation() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
+        pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={() => {}}
         onSlideChange={() => {}}
