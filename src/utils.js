@@ -51,11 +51,11 @@ export const Menus = [
         // icon: CircleHelp,
         link: "/about",
       },
-      // {
-      //   name: "menu.openData",
-      //   // icon: CircleHelp,
-      //   link: "/open-informations",
-      // },
+      {
+        name: "menu.openData",
+        // icon: CircleHelp,
+        link: "/open-informations",
+      },
       {
         name: "menu.leadership",
         // icon: CircleHelp,
