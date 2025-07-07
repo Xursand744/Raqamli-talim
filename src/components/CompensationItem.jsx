@@ -10,7 +10,7 @@ const CompensationBannerItem = ({ data }) => {
         <div className="text-center sm:text-left">
           <div className="flex flex-col justify-between">
             <div>
-              <h1 className="text-[30px] md:text-[40px] font-semibold text-blue-600 dark:text-blue-400 relative">
+              <h1 className="text-[30px] md:text-[26px] font-semibold text-blue-600 dark:text-blue-400 relative">
                 {t(data.span)} <span className="text-[#222] dark:text-white transition-colors duration-200">{t(data.title)}</span>
               </h1>
               <p className="mt-2 text-gray-700 dark:text-gray-300 text-[24px] transition-colors duration-200">{t(data.desc)}</p>
@@ -26,7 +26,7 @@ const CompensationBannerItem = ({ data }) => {
           </div>
         </div>
         <div className="relative mt-4 sm:mt-0 sm:ml-6">
-          <img src={data.image} alt={t(data.title)} className="w-[284px] h-[284px]" />
+          <img src={data.image} alt={t(data.title)} className="min-w-[284px] max-w-[284px] h-auto" />
         </div>
       </div>
     </div>
