@@ -2,7 +2,7 @@ import OverviewProject from "../../components/Projects/OverviewProject";
 import { useTranslation } from "react-i18next";
 import coding from "../../assets/images/projects/coder_1.jpg";
 import xorazmiy from "../../assets/images/projects/xorazmiy_1.jpg";
-import talent from "../../assets/images/projects/talent_1.jpg";
+import talent from "../../assets/images/talent_1.jpg";
 import istedod from "../../assets/projects/istedod.jpg";
 import CarouselImage from "../../assets/carousel.jpg";
 import olimpiads from "../../assets/projects/olimpiads.png";
@@ -23,7 +23,7 @@ function ProjectsOverview() {
     1: xorazmiy, // Al-Khwarizmi
     4: talent, // IT Village
     20: istedod, // IT Talents
-    2: CarouselImage, // IT Talents Program
+    2: talent, // IT Talents Program
     11: olimpiads, // Olympiads
     10: aca, // ACA Navigator
     5: tot, // ToT

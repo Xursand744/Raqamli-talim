@@ -1,4 +1,4 @@
-import talent from "../../assets/images/projects/talent_2.jpg";
+import talent from "../../assets/images/talent_2.jpg";
 import "swiper/css";
 import PropTypes from "prop-types";
 import { rightIcon } from "../../assets/icons/icon";
