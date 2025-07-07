@@ -179,14 +179,14 @@ export default function EventsSection() {
                     <h3 className="font-bold text-xl text-gray-800 line-clamp-2 group-hover:text-blue-600 transition-colors mb-4">
                       {event.title}
                     </h3>
-                    <div className="mt-auto flex items-center justify-between">
+                    {/* <div className="mt-auto flex items-center justify-between">
                       <span className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors">
                         {t("events.viewMore")}
                       </span>
                       <ArrowRight 
                         className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" 
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </Card>
               ))}
