@@ -14,9 +14,6 @@ function AboutDepartment({ image, fullname, position, email, number, idx }) {
           src={image}
           alt={t('about.department.imageAlt', { name: fullname })}
           className="rounded-t-[12px] max-h-[280px] w-full object-cover object-top"
-          style={{
-            objectPosition: `${idx === 2 || idx === 4 || idx === 5 || idx === 11 || idx === 12 || idx === 13 ? "0 0px" : "0 -70px"}`,
-          }}
         />
       </div>
 

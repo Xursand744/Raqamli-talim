@@ -10,12 +10,10 @@ import coding from "./assets/images/projects/coder_1.jpg";
 import talent from "./assets/images/projects/talent_1.jpg";
 import istedod from "./assets/projects/istedod.jpg";
 import tot from "./assets/images/projects/5.jpg";
-import job from "./assets/images/projects/6.jpg";
 import aca from "./assets/images/projects/8.jpg";
 import olimpiads from "./assets/projects/olimpiads.png";
 
 import {
-  DeparmentImage10,
   DeparmentImage11,
   DeparmentImage12,
   DeparmentImage13,
@@ -24,7 +22,10 @@ import {
   DeparmentImage18,
   DeparmentImage20,
   DeparmentImage22,
-  DeparmentImage8,
+  DeparmentImage23,
+  DeparmentImage24,
+  DeparmentImage25,
+  DeparmentImage26,
 } from "./assets/deparment";
 import First from "./assets/1.jpg";
 import Second from "./assets/2.jpg";
@@ -300,7 +301,7 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (117) ",
   },
   {
-    image: VacancyImage,
+    image: DeparmentImage23,
     fullname: "departments.6.fullname",
     position: "departments.6.position",
     email: "@digital.uz",
@@ -314,15 +315,15 @@ export const departmentsInformations = [
     number: "+998 71 203 03 43 (107)",
   },
   {
-    image: DeparmentImage10,
+    image: VacancyImage,
     fullname: "departments.8.fullname",
     position: "departments.8.position",
-    email: "m.anvarov@digital.uz",
+    email: "",
     number: "+998 71 203 03 43",
   },
   {
     position: "departments.9.position",
-    image: DeparmentImage8,
+    image: DeparmentImage26,
     fullname: "departments.9.fullname",
     email: "a.anvarxonov@digital.uz",
     number: "+998 71 203 03 43 (117) ",
@@ -350,14 +351,14 @@ export const departmentsInformations = [
   },
   {
     position: "departments.13.position",
-    image: VacancyImage,
+    image: DeparmentImage24,
     fullname: "departments.13.fullname",
     email: "@digital.uz",
     number: "+998 71 203 03 43",
   },
   {
     position: "departments.14.position",
-    image: VacancyImage,
+    image: DeparmentImage25,
     fullname: "departments.14.fullname",
     email: "digital.uz",
     number: "+998 71 203 03 43 (119) ",

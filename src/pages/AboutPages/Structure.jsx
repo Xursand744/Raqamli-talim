@@ -4,7 +4,6 @@ import "./about.css";
 import { useState, useEffect } from "react";
 import { Clock, Mail, Phone, X } from "lucide-react";
 import {
-  DeparmentImage10,
   DeparmentImage11,
   DeparmentImage12,
   DeparmentImage13,
@@ -16,8 +15,11 @@ import {
   DeparmentImage2,
   DeparmentImage20,
   DeparmentImage3,
-  DeparmentImage8,
   DeparmentImage22,
+  DeparmentImage23,
+  DeparmentImage24,
+  DeparmentImage25,
+  DeparmentImage26,
 } from "../../assets/deparment";
 import { VacancyImage } from "../../assets";
 import { motion } from "framer-motion";
@@ -104,7 +106,7 @@ export default function Structure() {
       fullname: "Aziza Raximova",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (105)",
-      image: VacancyImage,
+      image: DeparmentImage23,
     },
     {
       title: "structure.chiefLawyer",
@@ -167,9 +169,9 @@ export default function Structure() {
     },
     {
       title: "structure.freelancers",
-      image: DeparmentImage10,
-      fullname: "Mirabbos Anvarov",
-      email: "m.anvarov@digital.uz",
+      image: VacancyImage,
+      fullname: "Vakant",
+      email: "",
       number: "+998 71 203 03 43 (112) ",
     },
   ];
@@ -194,14 +196,14 @@ export default function Structure() {
       fullname: "Axrorjon Azamjonov",
       email: "@digital.uz",
       number: "",
-      image: VacancyImage,
+      image: DeparmentImage25,
     },
     {
       title: "structure.regionsCoordination",
-      fullname: "Anvarxonov Akbarxo'ja",
+      fullname: "Ulug'bek Xaydarov",
       email: "@digital.uz",
       number: "+998 71 203 03 43 (115)",
-      image: DeparmentImage8,
+      image: DeparmentImage26,
     },
     {
       title: "structure.regionsBranches",
@@ -232,7 +234,7 @@ export default function Structure() {
       fullname: "Yayra Ibragimova",
       email: "digital.uz",
       number: "+998 71 203 03 43",
-      image: VacancyImage,
+      image: DeparmentImage24,
     },
   ];
 
