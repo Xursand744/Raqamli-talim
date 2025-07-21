@@ -325,7 +325,7 @@ export const departmentsInformations = [
     position: "departments.9.position",
     image: DeparmentImage26,
     fullname: "departments.9.fullname",
-    email: "a.anvarxonov@digital.uz",
+    email: "u.xaydarov@digital.uz",
     number: "+998 71 203 03 43 (117) ",
   },
   {
