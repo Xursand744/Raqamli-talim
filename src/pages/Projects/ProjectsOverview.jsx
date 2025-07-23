@@ -8,6 +8,7 @@ import CarouselImage from "../../assets/carousel.jpg";
 import olimpiads from "../../assets/projects/olimpiads.png";
 import aca from "../../assets/images/projects/8.jpg";
 import tot from "../../assets/images/projects/5.jpg";
+import stipendiya from "../../assets/images/projects/stipendiya_home.png";
 
 function ProjectsOverview() {
   const { t } = useTranslation("global");
@@ -27,6 +28,7 @@ function ProjectsOverview() {
     11: olimpiads, // Olympiads
     10: aca, // ACA Navigator
     5: tot, // ToT
+    21: stipendiya, // Stipendiya
   };
   
   const projectsWithImages = safeProjects.map((project) => ({

@@ -1412,7 +1412,36 @@
         "id": 5,
         "title": "ToT - The Training of Trainers",
         "link": "tot"
+      },
+      {
+        "id": 21,
+        "title": "Digital Technologies Ministry Scholarship",
+        "link": "raqamli-texnologiyalar-stipendiyasi"
       }
     ]
+  },
+  "scholarshipPage": {
+    "title": "Digital Technologies Ministry Scholarship of the Republic of Uzbekistan for IT Students in Higher Education Institutions",
+    "breadcrumb": {
+      "home": "Home",
+      "projects": "Projects",
+      "current": "Digital Technologies Ministry Scholarship"
+    },
+    "description": "In accordance with the Regulation \"On the Ministry of Information Technologies and Communications Development of the Republic of Uzbekistan\" approved by the Cabinet of Ministers Resolution No. 318 dated May 1, 2018, as well as in accordance with Order No. 62 of the Ministry of Digital Technologies dated February 28, 2023, the procedure for appointing and paying the \"Digital Technologies Ministry scholarship\" to students and pupils of educational institutions under the Ministry has been established.",
+    "eligibleUniversities": {
+      "title": "The following universities can participate and achieve success in the Ministry scholarship:",
+      "universities": [
+        "Tashkent University of Information Technologies named after Muhammad al-Khorezmi and its territorial branches,",
+        "Academic Lyceum under Tashkent University of Information Technologies named after Muhammad al-Khorezmi",
+        "INHA University in Tashkent",
+        "AMITY University in Tashkent",
+        "CYBER University"
+      ]
+    },
+    "applicationInfo": "To apply for the ministerial scholarship, documents must be submitted by registering and sending an application in accordance with the Regulation on the procedure for awarding the scholarship of the Ministry of Digital Technologies.",
+    "buttons": {
+      "nizom": "REGULATION",
+      "register": "REGISTER"
+    }
   }
 }
