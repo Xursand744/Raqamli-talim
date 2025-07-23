@@ -1,5 +1,6 @@
 import "../../index.css";
 import { ChevronRight } from "react-feather";
+import { GraduationCap, Award, FileText, ExternalLink } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import HomeIcon from "../../assets/home-icon.svg";
@@ -24,12 +25,12 @@ const Breadcrumb = () => {
   );
 };
 
-const UniversityCard = ({ university, index }) => (
+const UniversityCard = ({ university }) => (
   <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-blue-200">
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0">
         <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-          <span className="text-white text-xl font-bold">{index + 1}</span>
+          <GraduationCap className="text-white w-6 h-6" />
         </div>
       </div>
       <div>
@@ -41,7 +42,6 @@ const UniversityCard = ({ university, index }) => (
 
 UniversityCard.propTypes = {
   university: PropTypes.string.isRequired,
-  index: PropTypes.number.isRequired,
 };
 
 const ActionButton = ({ children, isPrimary = false, onClick }) => (
@@ -117,7 +117,6 @@ export default function DigitalScholarship() {
               <UniversityCard
                 key={index}
                 university={university}
-                index={index}
               />
             ))}
           </div>
@@ -128,7 +127,7 @@ export default function DigitalScholarship() {
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-xl">📋</span>
+                  <Award className="text-white w-6 h-6" />
                 </div>
               </div>
               <div>
@@ -143,10 +142,16 @@ export default function DigitalScholarship() {
         <section className="mb-16">
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <ActionButton isPrimary onClick={handleNizomClick}>
-              {t('scholarshipPage.buttons.nizom')}
+              <div className="flex items-center gap-2">
+                <FileText className="w-5 h-5" />
+                {t('scholarshipPage.buttons.nizom')}
+              </div>
             </ActionButton>
             <ActionButton onClick={handleRegisterClick}>
-              {t('scholarshipPage.buttons.register')}
+              <div className="flex items-center gap-2">
+                <ExternalLink className="w-5 h-5" />
+                {t('scholarshipPage.buttons.register')}
+              </div>
             </ActionButton>
           </div>
         </section>
