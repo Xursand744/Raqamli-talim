@@ -41,6 +41,7 @@ import Apio from "./pages/Projects/Apio";
 import Icpc from "./pages/Projects/Icpc";
 import ItCertificates from "./pages/Projects/ItCertificates";
 import DigitalScholarship from "./pages/Projects/DigitalScholarship";
+import StipendiyaRegistration from "./pages/Projects/StipendiyaRegistration";
 import SuccessStoryDetail from "./pages/SuccessStory/SuccessStoryDetail";
 
 export default function App() {
@@ -89,6 +90,10 @@ export default function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/stipendiya-registration",
+          element: <StipendiyaRegistration />,
         },
         {
           path: "/courses",

@@ -500,7 +500,10 @@
     "increaseFont": "Increase Font Size",
     "decreaseFont": "Decrease Font Size",
     "startSpeech": "Start Reading",
-    "stopSpeech": "Stop Reading"
+    "stopSpeech": "Stop Reading",
+    "grayscaleMode": "Grayscale Mode",
+    "highContrastMode": "High Contrast Mode",
+    "normalMode": "Normal Mode"
   },
   "messages": {
     "loading": "Loading...",
@@ -1442,6 +1445,44 @@
     "buttons": {
       "nizom": "REGULATION",
       "register": "REGISTER"
+    }
+  },
+  "stipendiyaRegistration": {
+    "title": "Application for Digital Technologies Ministry Scholarship",
+    "userInfo": {
+      "title": "User Information",
+      "fullName": "Full Name",
+      "birthDate": "Birth Date",
+      "passportNo": "Passport Number",
+      "pin": "PIN",
+      "address": "Address",
+      "userId": "User ID"
+    },
+    "uploadDocuments": {
+      "title": "Document Upload",
+      "description": "Upload the following documents (in PDF, JPEG, PNG, DOC, ZIP, RAR format, each maximum 10MB)",
+      "documents": [
+        "Based on the average score of the applicant's grades in subjects for the last two semesters",
+        "Applicant's articles in international scientific journals",
+        "Level of foreign language proficiency",
+        "Availability of international IT certificate",
+        "Participation in local and foreign hackathons or IT competitions",
+        "Participation in ICPC programming olympiad",
+        "For volunteer activities at Ministry events (if certificate is issued by the Ministry)"
+      ]
+    },
+    "form": {
+      "selectFile": "Select file",
+      "fileSelected": "File selected",
+      "submit": "Submit application",
+      "loading": "Loading...",
+      "success": "Application submitted successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "validation": {
+      "maxSize": "File size should not exceed 10MB",
+      "invalidFormat": "Invalid file format. Upload only PDF, JPEG, PNG, DOC, ZIP, RAR files",
+      "required": "This field is required"
     }
   }
 }

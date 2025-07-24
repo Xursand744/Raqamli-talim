@@ -29,7 +29,7 @@ export default function HomePage() {
         <meta name="twitter:title" content={t('home.seo.title')} />
         <meta name="twitter:description" content={t('home.seo.description')} />
       </Helmet>
-    <div>
+    <div data-page="home">
       <Carousel />
       <div className="w-full">
         {/* <JobAnalytics /> */}

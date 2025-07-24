@@ -553,7 +553,10 @@
     "increaseFont": "Shriftni kattalashtirish",
     "decreaseFont": "Shriftni kichiklashtirish",
     "startSpeech": "O'qishni boshlash",
-    "stopSpeech": "O'qishni to'xtatish"
+    "stopSpeech": "O'qishni to'xtatish",
+    "grayscaleMode": "Oq-qora rejim",
+    "highContrastMode": "Yuqori kontrast rejim",
+    "normalMode": "Oddiy rejim"
   },
   "messages": {
     "loading": "Yuklanmoqda...",
@@ -1494,6 +1497,44 @@
     "buttons": {
       "nizom": "NIZOM",
       "register": "RO'YXATDAN O'TISH"
+    }
+  },
+  "stipendiyaRegistration": {
+    "title": "Raqamli texnologiyalar vazirligi stipendiyasi uchun ariza",
+    "userInfo": {
+      "title": "Foydalanuvchi ma'lumotlari",
+      "fullName": "To'liq ismi",
+      "birthDate": "Tug'ilgan sanasi",
+      "passportNo": "Pasport raqami",
+      "pin": "JSHSHIR",
+      "address": "Manzili",
+      "userId": "Foydalanuvchi ID"
+    },
+    "uploadDocuments": {
+      "title": "Hujjatlarni yuklash",
+      "description": "Quyidagi hujjatlarni yuklang (PDF, JPEG, PNG, DOC, ZIP, RAR formatida, har biri maksimal 10MB)",
+      "documents": [
+        "Talabgorning so'ngi ikki semestrda fanlardan olgan baholarining o'rtacha miqdoriga ko'ra",
+        "Talabgorning xalqaro ilmiy jurnallardagi maqolalari",
+        "Xorijiy tillarni bilish darajasi",
+        "Xalqaro IT-sertifikat mavjudligi",
+        "Mahalliy va xorijiy hakaton yoki IT-tanlovlardagi ishtiroki",
+        "ICPC dasturlash olimpiadasida qatnashish",
+        "Vazirlik tadbirlarida volontyorlik faoliyati uchun (vazirlik tomonidan sertifikat taqdim etilgan bo'lsa)"
+      ]
+    },
+    "form": {
+      "selectFile": "Faylni tanlang",
+      "fileSelected": "Fayl tanlandi",
+      "submit": "Arizani yuborish",
+      "loading": "Yuklanmoqda...",
+      "success": "Ariza muvaffaqiyatli yuborildi!",
+      "error": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring."
+    },
+    "validation": {
+      "maxSize": "Fayl hajmi 10MB dan oshmasligi kerak",
+      "invalidFormat": "Noto'g'ri fayl formati. Faqat PDF, JPEG, PNG, DOC, ZIP, RAR fayllarini yuklang",
+      "required": "Bu maydon majburiy"
     }
   }
 }

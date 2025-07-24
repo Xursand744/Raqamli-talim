@@ -23,7 +23,14 @@ function AccessibilityControls() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const dropdownRef = useRef(null);
   const { t } = useTranslation("global");
-  const { theme, toggleTheme } = useTheme();
+  const { 
+    theme, 
+    toggleTheme, 
+    setGrayscaleMode, 
+    setHighContrastMode,
+    isGrayscale,
+    isHighContrast
+  } = useTheme();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -166,6 +173,36 @@ function AccessibilityControls() {
                   {t("accessibility.startSpeech")}
                 </>
               )}
+            </button>
+
+            {/* Grayscale Mode Toggle */}
+            <button
+              onClick={setGrayscaleMode}
+              className={`flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                isGrayscale 
+                  ? 'bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200' 
+                  : 'text-gray-700 dark:text-gray-200'
+              }`}
+              role="menuitem"
+              aria-pressed={isGrayscale}
+            >
+              <span className="w-4 h-4 mr-2 bg-gray-400 rounded" aria-hidden="true"></span>
+              {t("accessibility.grayscaleMode")}
+            </button>
+
+            {/* High Contrast Mode Toggle */}
+            <button
+              onClick={setHighContrastMode}
+              className={`flex items-center w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                isHighContrast 
+                  ? 'bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-200' 
+                  : 'text-gray-700 dark:text-gray-200'
+              }`}
+              role="menuitem"
+              aria-pressed={isHighContrast}
+            >
+              <span className="w-4 h-4 mr-2 bg-black border border-white rounded" aria-hidden="true"></span>
+              {t("accessibility.highContrastMode")}
             </button>
           </div>
         </div>

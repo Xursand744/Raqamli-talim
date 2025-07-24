@@ -1,6 +1,6 @@
 import "../../index.css";
 import { ChevronRight } from "react-feather";
-import { GraduationCap, Award, FileText, ExternalLink } from "lucide-react";
+import { GraduationCap, Award, ExternalLink } from "lucide-react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import HomeIcon from "../../assets/home-icon.svg";
@@ -73,14 +73,9 @@ export default function DigitalScholarship() {
   const universities = t('scholarshipPage.eligibleUniversities.universities', { returnObjects: true });
   const safeUniversities = Array.isArray(universities) ? universities : [];
 
-  const handleNizomClick = () => {
-    // Открыть ссылку на положение
-    window.open('#', '_blank');
-  };
-
   const handleRegisterClick = () => {
     // Открыть ссылку на регистрацию
-    window.open('https://sso.egov.uz/sso/oauth/Authorization.do?response_type=one_code&client_id=it-istedod_uz&scope=it-istedod_uz&state=niAq4mNGDWVMdNj0XGh0bUl8&redirect_uri=https://edu.digital.uz/', '_blank');
+    window.open('https://sso.egov.uz/sso/oauth/Authorization.do?response_type=one_code&client_id=it-istedod_uz&scope=it-istedod_uz&state=niAq4mNGDWVMdNj0XGh0bUl8&redirect_uri=https://edu.digital.uz/stipendiya-registration', '_blank');
   };
 
   return (
@@ -141,12 +136,12 @@ export default function DigitalScholarship() {
 
         <section className="mb-16">
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <ActionButton isPrimary onClick={handleNizomClick}>
+            {/* <ActionButton isPrimary onClick={handleNizomClick}>
               <div className="flex items-center gap-2">
                 <FileText className="w-5 h-5" />
                 {t('scholarshipPage.buttons.nizom')}
               </div>
-            </ActionButton>
+            </ActionButton> */}
             <ActionButton onClick={handleRegisterClick}>
               <div className="flex items-center gap-2">
                 <ExternalLink className="w-5 h-5" />

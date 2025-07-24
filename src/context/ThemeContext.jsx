@@ -19,6 +19,12 @@ export function ThemeProvider({ children }) {
     return 'light';
   });
 
+  // Новые состояния для режимов доступности
+  const [accessibilityMode, setAccessibilityMode] = useState(() => {
+    const savedMode = localStorage.getItem('accessibilityMode');
+    return savedMode || 'normal';
+  });
+
   useEffect(() => {
     // Применяем тему к DOM
     if (theme === 'dark') {
@@ -31,15 +37,49 @@ export function ThemeProvider({ children }) {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    // Удаляем все предыдущие accessibility классы
+    document.documentElement.classList.remove('grayscale-mode', 'high-contrast-mode');
+    
+    // Применяем новый режим доступности
+    if (accessibilityMode === 'grayscale') {
+      document.documentElement.classList.add('grayscale-mode');
+    } else if (accessibilityMode === 'high-contrast') {
+      document.documentElement.classList.add('high-contrast-mode');
+    }
+    
+    // Сохраняем в localStorage
+    localStorage.setItem('accessibilityMode', accessibilityMode);
+  }, [accessibilityMode]);
+
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+  };
+
+  const setGrayscaleMode = () => {
+    setAccessibilityMode(accessibilityMode === 'grayscale' ? 'normal' : 'grayscale');
+  };
+
+  const setHighContrastMode = () => {
+    setAccessibilityMode(accessibilityMode === 'high-contrast' ? 'normal' : 'high-contrast');
+  };
+
+  const resetAccessibilityMode = () => {
+    setAccessibilityMode('normal');
   };
 
   const value = {
     theme,
     setTheme,
     toggleTheme,
-    isDark: theme === 'dark'
+    isDark: theme === 'dark',
+    accessibilityMode,
+    setAccessibilityMode,
+    setGrayscaleMode,
+    setHighContrastMode,
+    resetAccessibilityMode,
+    isGrayscale: accessibilityMode === 'grayscale',
+    isHighContrast: accessibilityMode === 'high-contrast'
   };
 
   return (

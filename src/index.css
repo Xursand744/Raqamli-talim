@@ -300,3 +300,78 @@ body {
     padding: 20px 0 20px 0;
   }
 }
+
+/* Accessibility Modes */
+/* Grayscale Mode - применяется только на главной странице */
+html.grayscale-mode [data-page="home"] {
+  filter: grayscale(100%);
+}
+
+html.grayscale-mode [data-page="home"] img,
+html.grayscale-mode [data-page="home"] video,
+html.grayscale-mode [data-page="home"] svg {
+  filter: grayscale(100%);
+}
+
+/* High Contrast Mode - применяется только на главной странице */
+html.high-contrast-mode [data-page="home"] {
+  filter: contrast(150%) brightness(1.1);
+}
+
+html.high-contrast-mode [data-page="home"] .bg-blue-500 {
+  background-color: #000080 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .bg-blue-600 {
+  background-color: #000066 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .text-blue-500 {
+  color: #0000ff !important;
+}
+
+html.high-contrast-mode [data-page="home"] .text-blue-600 {
+  color: #0000cc !important;
+}
+
+html.high-contrast-mode [data-page="home"] .text-gray-500 {
+  color: #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .text-gray-600 {
+  color: #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .text-gray-700 {
+  color: #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .bg-gray-100 {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .bg-gray-200 {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] .bg-white {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+html.high-contrast-mode [data-page="home"] button {
+  border: 2px solid #000000 !important;
+  font-weight: bold !important;
+}
+
+html.high-contrast-mode [data-page="home"] a {
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+html.high-contrast-mode [data-page="home"] img,
+html.high-contrast-mode [data-page="home"] video {
+  border: 3px solid #000000 !important;
+}
