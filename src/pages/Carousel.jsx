@@ -1,9 +1,9 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import CarouselItem from "./CarouselItem";
-import CarouselImage from "../assets/carousel.jpg";
+import CarouselImage from "../assets/images/projects/talent_1.jpg";
 import xorazmiy from "../assets/images/projects/xorazmiy_1.jpg";
-import talent from "../assets/images/projects/talent_1.jpg";
+import talent from "../assets/images/talent_1.jpg";
 import coding from "../assets/images/projects/coder_1.jpg";
 import tot from "../assets/images/projects/5.jpg";
 import api from "../assets/images/projects/8.jpg";

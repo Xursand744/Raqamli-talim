@@ -1,7 +1,7 @@
 import "../../index.css";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-import CarouselImage from "../../assets/carousel.jpg";
+import CarouselImage from "../../assets/images/projects/talent_2.jpg";
 import { BackgroundIcon, rightIcon } from "../../assets/icons/icon";
 import Sl from "../../assets/s_left.png";
 import Sr from "../../assets/s-right.png";
