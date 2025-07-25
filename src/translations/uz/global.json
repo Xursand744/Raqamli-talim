@@ -1510,6 +1510,20 @@
       "address": "Manzili",
       "userId": "Foydalanuvchi ID"
     },
+    "universityInfo": {
+      "title": "Universitet ma'lumotlari",
+      "universityName": "Universitet nomi",
+      "facultyName": "Fakultet nomi",
+      "specialityName": "Mutaxassislik nomi",
+      "course": "Kurs",
+      "groupName": "Guruh nomi",
+      "educationForm": "Ta'lim shakli",
+      "educationType": "Ta'lim turi",
+      "paymentType": "To'lov turi",
+      "loading": "Universitet ma'lumotlari yuklanmoqda...",
+      "notFound": "Universitet ma'lumotlari topilmadi",
+      "notFoundDescription": "Sizning universitet ma'lumotlaringiz tizimda topilmadi. Iltimos, ta'lim muassasasi bilan bog'laning."
+    },
     "uploadDocuments": {
       "title": "Hujjatlarni yuklash",
       "description": "Quyidagi hujjatlarni yuklang (PDF, JPEG, PNG, DOC, ZIP, RAR formatida, har biri maksimal 10MB)",
@@ -1535,6 +1549,10 @@
       "maxSize": "Fayl hajmi 10MB dan oshmasligi kerak",
       "invalidFormat": "Noto'g'ri fayl formati. Faqat PDF, JPEG, PNG, DOC, ZIP, RAR fayllarini yuklang",
       "required": "Bu maydon majburiy"
+    },
+    "warning": {
+      "title": "Diqqat: Universitet ma'lumotlari mavjud emas",
+      "description": "Sizning universitet ma'lumotlaringiz tizimda topilmadi, lekin siz hali ham stipendiya uchun ariza berishingiz mumkin. Ariza ko'rib chiqilayotganda qo'shimcha ma'lumotlar so'ralishi mumkin."
     }
   }
 }

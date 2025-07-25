@@ -102,6 +102,7 @@ export default function StipendiyaRegistration() {
   const { t } = useTranslation("global");
   const [searchParams] = useSearchParams();
   const [userInfo, setUserInfo] = useState(null);
+  const [universityInfo, setUniversityInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
@@ -174,7 +175,15 @@ export default function StipendiyaRegistration() {
         const data = await response.json();
         
         if (response.ok) {
-          setUserInfo(data);
+          // Новая структура ответа содержит userInfo и universityInfo
+          setUserInfo(data.userInfo || data);
+          
+          // Проверяем наличие и валидность universityInfo
+          if (data.universityInfo) {
+            setUniversityInfo(data.universityInfo);
+          } else {
+            setUniversityInfo(null);
+          }
         } else {
           setError('Ошибка при получении данных пользователя');
         }
@@ -211,9 +220,12 @@ export default function StipendiyaRegistration() {
     try {
       const formData = new FormData();
       
-      // Add user info
+      // Add user info and university info
       if (userInfo) {
         formData.append('user_info', JSON.stringify(userInfo));
+      }
+      if (universityInfo && universityInfo.success && universityInfo.data) {
+        formData.append('university_info', JSON.stringify(universityInfo));
       }
       
       // Add files
@@ -324,6 +336,87 @@ export default function StipendiyaRegistration() {
           </div>
         )}
 
+        {/* University Information Section */}
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-8 transition-colors duration-200">
+          <div className="flex items-center mb-6">
+            <svg className="w-6 h-6 text-green-600 dark:text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h3M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+              {t('stipendiyaRegistration.universityInfo.title')}
+            </h2>
+          </div>
+          
+          {universityInfo && universityInfo.success && universityInfo.data ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.universityName')} 
+                value={universityInfo.data.university_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.facultyName')} 
+                value={universityInfo.data.faculty_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.specialityName')} 
+                value={universityInfo.data.speciality_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.course')} 
+                value={universityInfo.data.course} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.groupName')} 
+                value={universityInfo.data.group_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.educationForm')} 
+                value={universityInfo.data.education_form_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.educationType')} 
+                value={universityInfo.data.education_type_name} 
+              />
+              <UserInfoCard 
+                label={t('stipendiyaRegistration.universityInfo.paymentType')} 
+                value={universityInfo.data.payment_type_name} 
+              />
+            </div>
+          ) : (
+            <div className="text-center py-8">
+              {!universityInfo ? (
+                <div className="text-gray-500 dark:text-gray-400">
+                  <Loader className="w-6 h-6 animate-spin mx-auto mb-2" />
+                  <p>{t('stipendiyaRegistration.universityInfo.loading')}</p>
+                </div>
+              ) : (
+                <div className="text-amber-600 dark:text-amber-400">
+                  <AlertCircle className="w-8 h-8 mx-auto mb-2" />
+                  <p className="font-medium mb-1">{t('stipendiyaRegistration.universityInfo.notFound')}</p>
+                  <p className="text-sm">{t('stipendiyaRegistration.universityInfo.notFoundDescription')}</p>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Warning if university info is not available */}
+        {(!universityInfo || !universityInfo.success || !universityInfo.data) && userInfo && (
+          <div className="mb-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4">
+            <div className="flex items-start">
+              <AlertCircle className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-yellow-800 dark:text-yellow-200 font-medium mb-1">
+                  {t('stipendiyaRegistration.warning.title')}
+                </p>
+                <p className="text-yellow-700 dark:text-yellow-300 text-sm">
+                  {t('stipendiyaRegistration.warning.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Document Upload Section */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 transition-colors duration-200">
           <div className="flex items-center mb-6">
@@ -353,7 +446,7 @@ export default function StipendiyaRegistration() {
             <div className="pt-6">
               <button
                 type="submit"
-                disabled={submitting || files.some(file => file === null) || fileErrors.some(error => error !== null)}
+                disabled={submitting || !userInfo || files.some(file => file === null) || fileErrors.some(error => error !== null)}
                 className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
               >
                 {submitting ? (

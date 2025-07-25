@@ -1458,6 +1458,20 @@
       "address": "Address",
       "userId": "User ID"
     },
+    "universityInfo": {
+      "title": "University Information",
+      "universityName": "University Name",
+      "facultyName": "Faculty Name",
+      "specialityName": "Specialty Name",
+      "course": "Course",
+      "groupName": "Group Name",
+      "educationForm": "Education Form",
+      "educationType": "Education Type",
+      "paymentType": "Payment Type",
+      "loading": "Loading university information...",
+      "notFound": "University information not found",
+      "notFoundDescription": "Your university information was not found in the system. Please contact your educational institution."
+    },
     "uploadDocuments": {
       "title": "Document Upload",
       "description": "Upload the following documents (in PDF, JPEG, PNG, DOC, ZIP, RAR format, each maximum 10MB)",
@@ -1483,6 +1497,10 @@
       "maxSize": "File size should not exceed 10MB",
       "invalidFormat": "Invalid file format. Upload only PDF, JPEG, PNG, DOC, ZIP, RAR files",
       "required": "This field is required"
+    },
+    "warning": {
+      "title": "Warning: University information not available",
+      "description": "Your university information was not found in the system, but you can still submit a scholarship application. Additional information may be required during the review process."
     }
   }
 }
